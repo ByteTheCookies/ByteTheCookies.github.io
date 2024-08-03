@@ -1,4 +1,4 @@
-baseURL = 'https://bytethecookies.github.io/'
+baseURL = 'https://bytethecookies.github.io/hugo-theme-monochrome'
 languageCode = 'en-us'
 title = 'ByteTheCookies'
 theme = "hugo-theme-monochrome"
