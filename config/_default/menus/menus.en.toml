@@ -1,0 +1,30 @@
+[[navbar]]
+identifier = "about"
+name = "About"
+url = "/"
+weight = 1
+[[navbar]]
+identifier = "events"
+name = "Events"
+url = "/events/"
+weight = 2
+[[navbar]]
+identifier = "news"
+name = "News"
+url = "/news/"
+weight = 3
+[[navbar]]
+identifier = "writeups"
+name = "Writeups"
+url = "/writeups/"
+weight = 4
+[[navbar]]
+identifier = "contacts"
+name = "Contacts"
+url = "/Contacts/"
+weight = 5
+[[navbar]]
+identifier = "changelog"
+name = "Changelog"
+url = "/changelog/"
+weight = 6

@@ -1,0 +1,30 @@
+[[navbar]]
+identifier = "about"
+name = "Chi siamo"
+url = "/it/"
+weight = 1
+[[navbar]]
+identifier = "events"
+name = "Eventi"
+url = "/it/events/"
+weight = 2
+[[navbar]]
+identifier = "news"
+name = "Novità"
+url = "/it/news/"
+weight = 3
+[[navbar]]
+identifier = "writeups"
+name = "Writeups"
+url = "/it/writeups/"
+weight = 4
+[[navbar]]
+identifier = "contacts"
+name = "Contatti"
+url = "/it/Contacts/"
+weight = 5
+[[navbar]]
+identifier = "changelog"
+name = "Changelog"
+url = "/it/changelog/"
+weight = 6

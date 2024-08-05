@@ -1,4 +1,0 @@
-baseURL = 'https://bytethecookies.github.io/'
-languageCode = 'en-us'
-title = 'ByteTheCookies'
-theme = "hugo-theme-monochrome"
