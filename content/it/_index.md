@@ -1,7 +1,7 @@
 ---
 type: 'balloon'
-balloon_img_src: "icons/vase.svg"
-balloon_img_src_dark: "icons/vase_dark.svg"
+balloon_img_src: "/icons/cookie.svg"
+balloon_img_src_dark: "/icons/cookie.svg"
 balloon_circle: false
 balloon_resources: "/about"
 description: "Demo site of hugo-theme-monochrome"
@@ -14,7 +14,3 @@ keywords:
 - responsive
 - programmer-friendly
 ---
-
-
-
-# ueueueueu
