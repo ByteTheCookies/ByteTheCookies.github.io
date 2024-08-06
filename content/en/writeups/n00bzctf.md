@@ -13,8 +13,6 @@ type = 'list'
 
 # N00bz CTF 2024
 
-
-
 ## Description
 
 A 48 hours CTF hosted by n00bz for n00bz. Organized with beginner friendly challenges (and some hard ones), n00bzCTF is dedicated to make cyber security more friendly and approachable for complete n00bz.
@@ -35,5 +33,3 @@ A 48 hours CTF hosted by n00bz for n00bz. Organized with beginner friendly chall
 #### Misc
 
 - [Waas](/writeups/noobzctf/waas/)
-
-
