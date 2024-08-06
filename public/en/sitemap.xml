@@ -2,21 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2024-08-05T18:26:54+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="http://localhost:1313/it/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/"
-                />
+    <loc>http://localhost:1313/writeups/noobzctf/random/</loc>
+    <lastmod>2024-08-06T11:27:07+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/writeups/n00bzctf/</loc>
-    <lastmod>2024-08-05T18:26:54+02:00</lastmod>
+    <lastmod>2024-08-05T18:30:24+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="it"
@@ -29,7 +19,7 @@
                 />
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2024-08-05T18:26:54+02:00</lastmod>
+    <lastmod>2024-08-05T18:30:24+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="it"
@@ -42,7 +32,7 @@
                 />
   </url><url>
     <loc>http://localhost:1313/tags/test/</loc>
-    <lastmod>2024-08-05T18:26:54+02:00</lastmod>
+    <lastmod>2024-08-05T18:30:24+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="it"
@@ -54,30 +44,17 @@
                 href="http://localhost:1313/tags/test/"
                 />
   </url><url>
-    <loc>http://localhost:1313/writeups/</loc>
-    <lastmod>2024-08-05T18:26:54+02:00</lastmod>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2024-08-05T18:30:24+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="it"
-                href="http://localhost:1313/it/writeups/"
+                href="http://localhost:1313/it/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/writeups/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/writeups/mocactf/</loc>
-    <lastmod>2024-08-05T12:57:19+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="http://localhost:1313/it/writeups/mocactf/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/writeups/mocactf/"
+                href="http://localhost:1313/"
                 />
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
@@ -102,6 +79,19 @@
                 rel="alternate"
                 hreflang="en"
                 href="http://localhost:1313/series/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/writeups/</loc>
+    <lastmod>2024-08-05T18:30:24+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="http://localhost:1313/it/writeups/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/writeups/"
                 />
   </url>
 </urlset>

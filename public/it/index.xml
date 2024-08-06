@@ -5,8 +5,7 @@
     <link>http://localhost:1313/it/</link>
     <description>Recent content on ByteTheCookies</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>it</language>
-    <lastBuildDate>Mon, 05 Aug 2024 18:26:54 +0200</lastBuildDate><atom:link href="http://localhost:1313/it/index.xml" rel="self" type="application/rss+xml" />
+    <language>it</language><atom:link href="http://localhost:1313/it/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>N00bzCTF</title>
       <link>http://localhost:1313/it/writeups/n00bzctf/</link>
