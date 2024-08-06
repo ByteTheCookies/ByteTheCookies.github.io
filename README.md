@@ -68,3 +68,4 @@ draft = true #Important
 +++
 
 ```
+4. Run ``` hugo server --buildDrafts ```
