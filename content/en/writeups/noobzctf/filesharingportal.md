@@ -176,4 +176,4 @@ if __name__ == '__main__':
 $ flag: n00bz{n3v3r_7rus71ng_t4r_4g41n!_b3506983087e}
 ```
 
-<p align='right'>Author: Akiidjk </p>
+<p align='right'>Author: akiidjk </p>
