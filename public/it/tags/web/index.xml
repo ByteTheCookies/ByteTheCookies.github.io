@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web on ByteTheCookies</title>
+    <link>http://localhost:1313/it/tags/web/</link>
+    <description>Recent content in Web on ByteTheCookies</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>it</language>
+    <lastBuildDate>Tue, 06 Aug 2024 11:27:07 +0200</lastBuildDate><atom:link href="http://localhost:1313/it/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>File Sharing Portal</title>
+      <link>http://localhost:1313/it/writeups/noobzctf/filesharingportal/</link>
+      <pubDate>Tue, 06 Aug 2024 11:27:07 +0200</pubDate>
+      
+      <guid>http://localhost:1313/it/writeups/noobzctf/filesharingportal/</guid>
+      <description>File Sharing Portal Descrizione: Benvenuti nel portale di condivisione dei file! Supportiamo solo file tar!
+Autori: NoobMaster + NoobHacker
+Punti: 478
+Soluzioni: 119
+Introduction Il ctf ha una struttura molto semplice: abbiamo un form in cui ci viene chiesto di inserire un file tar; una volta inserito il file tar, questo viene decompresso e ci viene mostrato il nome dei file che contiene; cliccando sui diversi file, possiamo leggerne il contenuto.</description>
+    </item>
+    
+  </channel>
+</rss>

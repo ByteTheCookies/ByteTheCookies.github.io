@@ -15,6 +15,8 @@
       <guid>http://localhost:1313/writeups/noobzctf/filesharingportal/</guid>
       <description>File Sharing Portal Description: Welcome to the file sharing portal! We only support tar files!
 Authors: NoobMaster + NoobHacker
+Points: 478
+Solve: 119
 Introduction The ctf has a very simple structure: we have a form in which we are asked to insert a tar file; once the tar file has been inserted, it is unzipped and we are shown the name of files it contains; by clicking on the different files, we can read their contents.</description>
     </item>
     
@@ -26,8 +28,10 @@ Introduction The ctf has a very simple structure: we have a form in which we are
       <guid>http://localhost:1313/writeups/noobzctf/waas/</guid>
       <description>Waas Desc: Writing as a Service!
 Authors: NoobMaster + NoobHacker
+Points: 491
+Solve: 78
 Introduction WaaS (Writing as a Service) allows us to overwrite a file on the system (after some input validation) and insert anything (until a newline is met) we want in it.
-import subprocess from base64 import b64decode as d while True: print(&amp;quot;[1] Write to a file\n[2] Get the flag\n[3] Exit&amp;quot;) try: inp = int(input(&amp;quot;Choice: &amp;quot;).strip()) except: print(&amp;quot;Invalid input!&amp;quot;) exit(0) if inp == 1: file = input(&amp;quot;Enter file name: &amp;quot;).</description>
+import subprocess from base64 import b64decode as d while True: print(&amp;quot;[1] Write to a file\n[2] Get the flag\n[3] Exit&amp;quot;) try: inp = int(input(&amp;quot;Choice: &amp;quot;).strip()) except: print(&amp;quot;Invalid input!</description>
     </item>
     
   </channel>

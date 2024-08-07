@@ -2,6 +2,123 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/it/writeups/noobzctf/filesharingportal/</loc>
+    <lastmod>2024-08-06T11:27:07+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/writeups/noobzctf/filesharingportal/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="http://localhost:1313/it/writeups/noobzctf/filesharingportal/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/it/tags/misc/</loc>
+    <lastmod>2024-08-06T11:27:07+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/tags/misc/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="http://localhost:1313/it/tags/misc/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/it/tags/python/</loc>
+    <lastmod>2024-08-06T11:27:07+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/tags/python/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="http://localhost:1313/it/tags/python/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/it/tags/</loc>
+    <lastmod>2024-08-06T11:27:07+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="http://localhost:1313/it/tags/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/it/tags/template-injection/</loc>
+    <lastmod>2024-08-06T11:27:07+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/tags/template-injection/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="http://localhost:1313/it/tags/template-injection/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/it/writeups/noobzctf/waas/</loc>
+    <lastmod>2024-08-06T11:27:07+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/writeups/noobzctf/waas/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="http://localhost:1313/it/writeups/noobzctf/waas/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/it/tags/web/</loc>
+    <lastmod>2024-08-06T11:27:07+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/tags/web/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="http://localhost:1313/it/tags/web/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/it/tags/ctf/</loc>
+    <lastmod>2024-08-05T18:30:24+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/tags/ctf/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="http://localhost:1313/it/tags/ctf/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/it/tags/n00bz/</loc>
+    <lastmod>2024-08-05T18:30:24+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/tags/n00bz/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="http://localhost:1313/it/tags/n00bz/"
+                />
+  </url><url>
     <loc>http://localhost:1313/it/writeups/n00bzctf/</loc>
     <lastmod>2024-08-05T18:30:24+02:00</lastmod>
     <xhtml:link
@@ -14,22 +131,6 @@
                 hreflang="it"
                 href="http://localhost:1313/it/writeups/n00bzctf/"
                 />
-  </url><url>
-    <loc>http://localhost:1313/it/tags/</loc>
-    <lastmod>2024-08-05T18:30:24+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="http://localhost:1313/it/tags/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/it/tags/test/</loc>
-    <lastmod>2024-08-05T18:30:24+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/it/changelog/</loc>
     <lastmod>2024-08-05T18:30:24+02:00</lastmod>
@@ -82,9 +183,6 @@
                 hreflang="it"
                 href="http://localhost:1313/it/events/"
                 />
-  </url><url>
-    <loc>http://localhost:1313/it/writeups/mocactf/</loc>
-    <lastmod>2024-08-05T18:30:24+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/it/</loc>
     <lastmod>2024-08-05T18:30:24+02:00</lastmod>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CTF on ByteTheCookies</title>
+    <link>http://localhost:1313/it/tags/ctf/</link>
+    <description>Recent content in CTF on ByteTheCookies</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>it</language>
+    <lastBuildDate>Mon, 05 Aug 2024 18:26:54 +0200</lastBuildDate><atom:link href="http://localhost:1313/it/tags/ctf/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>N00bzCTF</title>
+      <link>http://localhost:1313/it/writeups/n00bzctf/</link>
+      <pubDate>Mon, 05 Aug 2024 18:26:54 +0200</pubDate>
+      
+      <guid>http://localhost:1313/it/writeups/n00bzctf/</guid>
+      <description> N00bz CTF 2024 Description Un CTF di 48 ore ospitato da n00bz per n00bz. Organizzato con sfide facili per i principianti (e alcune difficili), n00bzCTF è dedicato a rendere la sicurezza informatica più amichevole e avvicinabile per i n00bz completi.
+Performance Summary CTFs: 31/32 Punti totali: 9794.000 Posizione: 24 Punti di valutazione: 24.067 Writeups Web File Sharing Portal Misc Waas </description>
+    </item>
+    
+  </channel>
+</rss>

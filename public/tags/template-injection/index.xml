@@ -15,6 +15,8 @@
       <guid>http://localhost:1313/writeups/noobzctf/filesharingportal/</guid>
       <description>File Sharing Portal Description: Welcome to the file sharing portal! We only support tar files!
 Authors: NoobMaster + NoobHacker
+Points: 478
+Solve: 119
 Introduction The ctf has a very simple structure: we have a form in which we are asked to insert a tar file; once the tar file has been inserted, it is unzipped and we are shown the name of files it contains; by clicking on the different files, we can read their contents.</description>
     </item>
     

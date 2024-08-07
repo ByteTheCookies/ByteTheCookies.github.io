@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Misc on ByteTheCookies</title>
+    <link>http://localhost:1313/it/tags/misc/</link>
+    <description>Recent content in Misc on ByteTheCookies</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>it</language>
+    <lastBuildDate>Tue, 06 Aug 2024 11:27:07 +0200</lastBuildDate><atom:link href="http://localhost:1313/it/tags/misc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>WaaS</title>
+      <link>http://localhost:1313/it/writeups/noobzctf/waas/</link>
+      <pubDate>Tue, 06 Aug 2024 11:27:07 +0200</pubDate>
+      
+      <guid>http://localhost:1313/it/writeups/noobzctf/waas/</guid>
+      <description>Waas Descrizione: Writing as a Service!
+Autori: NoobMaster + NoobHacker
+Punti: 491
+Soluzioni: 78
+Introduction WaaS (Writing as a Service) ci permette di sovrascrivere un file sul sistema (dopo un certo controllo dell&amp;rsquo;input) e di inserirvi tutto ciò che vogliamo (fino a quando non si incontra un newline).
+import subprocess from base64 import b64decode as d while True: print(&amp;quot;[1] Write to a file\n[2] Get the flag\n[3] Exit&amp;quot;) try: inp = int(input(&amp;quot;Choice: &amp;quot;).</description>
+    </item>
+    
+  </channel>
+</rss>
