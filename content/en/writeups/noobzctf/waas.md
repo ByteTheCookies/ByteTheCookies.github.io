@@ -10,7 +10,7 @@ draft = true
 
 # Waas
 
-**Desc**: Writing as a Service!
+**Description**: Writing as a Service!
 
 **Authors**: NoobMaster + NoobHacker
 
