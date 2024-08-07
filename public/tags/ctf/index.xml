@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>CTF on ByteTheCookies</title>
-    <link>http://localhost:1313/tags/ctf/</link>
+    <link>https://bytethecookies.github.io/tags/ctf/</link>
     <description>Recent content in CTF on ByteTheCookies</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 05 Aug 2024 18:26:54 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/ctf/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Aug 2024 18:26:54 +0200</lastBuildDate><atom:link href="https://bytethecookies.github.io/tags/ctf/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>N00bzCTF</title>
-      <link>http://localhost:1313/writeups/n00bzctf/</link>
+      <link>https://bytethecookies.github.io/writeups/n00bzctf/</link>
       <pubDate>Mon, 05 Aug 2024 18:26:54 +0200</pubDate>
       
-      <guid>http://localhost:1313/writeups/n00bzctf/</guid>
+      <guid>https://bytethecookies.github.io/writeups/n00bzctf/</guid>
       <description> N00bz CTF 2024 Description A 48 hours CTF hosted by n00bz for n00bz. Organized with beginner friendly challenges (and some hard ones), n00bzCTF is dedicated to make cyber security more friendly and approachable for complete n00bz.
 Performance Summary CTFs: 31/32 Total point: 9794.000 Position: 24 Rating points: 24.067 Writeups Web File Sharing Portal Misc Waas </description>
     </item>

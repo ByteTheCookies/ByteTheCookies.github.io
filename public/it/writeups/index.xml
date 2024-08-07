@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Writeup on ByteTheCookies</title>
-    <link>http://localhost:1313/it/writeups/</link>
+    <link>https://bytethecookies.github.io/it/writeups/</link>
     <description>Recent content in Writeup on ByteTheCookies</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>it</language><atom:link href="http://localhost:1313/it/writeups/index.xml" rel="self" type="application/rss+xml" />
+    <language>it</language><atom:link href="https://bytethecookies.github.io/it/writeups/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>File Sharing Portal</title>
-      <link>http://localhost:1313/it/writeups/noobzctf/filesharingportal/</link>
+      <link>https://bytethecookies.github.io/it/writeups/noobzctf/filesharingportal/</link>
       <pubDate>Tue, 06 Aug 2024 11:27:07 +0200</pubDate>
       
-      <guid>http://localhost:1313/it/writeups/noobzctf/filesharingportal/</guid>
+      <guid>https://bytethecookies.github.io/it/writeups/noobzctf/filesharingportal/</guid>
       <description>File Sharing Portal Descrizione: Benvenuti nel portale di condivisione dei file! Supportiamo solo file tar!
 Autori: NoobMaster + NoobHacker
 Punti: 478
@@ -21,10 +21,10 @@ Introduction Il ctf ha una struttura molto semplice: abbiamo un form in cui ci v
     
     <item>
       <title>WaaS</title>
-      <link>http://localhost:1313/it/writeups/noobzctf/waas/</link>
+      <link>https://bytethecookies.github.io/it/writeups/noobzctf/waas/</link>
       <pubDate>Tue, 06 Aug 2024 11:27:07 +0200</pubDate>
       
-      <guid>http://localhost:1313/it/writeups/noobzctf/waas/</guid>
+      <guid>https://bytethecookies.github.io/it/writeups/noobzctf/waas/</guid>
       <description>Waas Descrizione: Writing as a Service!
 Autori: NoobMaster + NoobHacker
 Punti: 491
@@ -35,10 +35,10 @@ import subprocess from base64 import b64decode as d while True: print(&amp;quot;
     
     <item>
       <title>N00bzCTF</title>
-      <link>http://localhost:1313/it/writeups/n00bzctf/</link>
+      <link>https://bytethecookies.github.io/it/writeups/n00bzctf/</link>
       <pubDate>Mon, 05 Aug 2024 18:26:54 +0200</pubDate>
       
-      <guid>http://localhost:1313/it/writeups/n00bzctf/</guid>
+      <guid>https://bytethecookies.github.io/it/writeups/n00bzctf/</guid>
       <description> N00bz CTF 2024 Description Un CTF di 48 ore ospitato da n00bz per n00bz. Organizzato con sfide facili per i principianti (e alcune difficili), n00bzCTF è dedicato a rendere la sicurezza informatica più amichevole e avvicinabile per i n00bz completi.
 Performance Summary CTFs: 31/32 Punti totali: 9794.000 Posizione: 24 Punti di valutazione: 24.067 Writeups Web File Sharing Portal Misc Waas </description>
     </item>

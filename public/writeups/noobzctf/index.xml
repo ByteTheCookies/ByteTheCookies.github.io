@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>N00bzCTF on ByteTheCookies</title>
-    <link>http://localhost:1313/writeups/noobzctf/</link>
+    <link>https://bytethecookies.github.io/writeups/noobzctf/</link>
     <description>Recent content in N00bzCTF on ByteTheCookies</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 06 Aug 2024 11:27:07 +0200</lastBuildDate><atom:link href="http://localhost:1313/writeups/noobzctf/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 Aug 2024 11:27:07 +0200</lastBuildDate><atom:link href="https://bytethecookies.github.io/writeups/noobzctf/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

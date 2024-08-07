@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Writeup on ByteTheCookies</title>
-    <link>http://localhost:1313/it/writeup/</link>
+    <link>https://bytethecookies.github.io/it/writeup/</link>
     <description>Recent content in Writeup on ByteTheCookies</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>it</language><atom:link href="http://localhost:1313/it/writeup/index.xml" rel="self" type="application/rss+xml" />
+    <language>it</language><atom:link href="https://bytethecookies.github.io/it/writeup/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

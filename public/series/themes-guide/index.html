@@ -1,328 +1,348 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
-<html lang='en'><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-    <meta charset="utf-8">
-    <link rel="shortcut icon" href='http://localhost:1313/favicon.ico' type="image/x-icon">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
+  <head>
+    <script
+      src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload"
+      data-no-instant
+      defer
+    ></script>
+    <meta charset="utf-8" />
+    <link
+      rel="shortcut icon"
+      href="https://bytethecookies.github.io/favicon.ico"
+      type="image/x-icon"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Themes Guide - ByteTheCookies</title>
 
-    
-
-    
-
-    
     <meta name="author" content="ByteTheCookies" />
-    
 
-    
-        <meta property="og:url" content="http://localhost:1313/series/themes-guide/">
-  <meta property="og:site_name" content="ByteTheCookies">
-  <meta property="og:title" content="Themes Guide">
-  <meta property="og:locale" content="en">
-  <meta property="og:type" content="website">
+    <meta
+      property="og:url"
+      content="https://bytethecookies.github.io/series/themes-guide/"
+    />
+    <meta property="og:site_name" content="ByteTheCookies" />
+    <meta property="og:title" content="Themes Guide" />
+    <meta property="og:locale" content="en" />
+    <meta property="og:type" content="website" />
 
-    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Themes Guide" />
 
-    
-        
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Themes Guide">
+    <link rel="stylesheet" href="/style.css" integrity="" />
 
-    <link rel="stylesheet" href="/style.css" integrity="">
-
-
-
-
-
-    
     <script>
-        if (!('theme' in localStorage)) {
-            localStorage.theme = 'dark';
-        }
+      if (!("theme" in localStorage)) {
+        localStorage.theme = "dark";
+      }
 
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.setAttribute("data-theme", "dark");
-        } else {
-            document.documentElement.setAttribute("data-theme", "light");
-        }
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      } else {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
     </script>
-<script defer src="/js/header.js" integrity=""></script>
-
-
+    <script defer src="/js/header.js" integrity=""></script>
 
     <script defer src="/js/zooming.js" integrity=""></script>
 
-
-
-
-
-
-
-
-
-    
-    
-    
     <script defer src="/js/search-en.js" integrity=""></script>
-
-
-
-
-
-
-    
-</head>
-<body><header>
-  <div id="header_left">
-    <div id="sidebar_btn">
-      <input type="checkbox" id="sidebar_btn_input" class="hidden" />
-      <label id="sidebar_btn_label" for="sidebar_btn_input">
-        <svg id="menu_icon" width="26px" height="26px" viewBox="0 0 24 24">
-<svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24" height="24" viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-    stroke-linejoin="round">
-    <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
-</svg>
-
-</svg>
-      </label>
-      <label id="sidebar_canvas_overlay_wrapper" for="sidebar_btn_input">
-        <div id="sidebar_canvas_overlay"></div>
-      </label>
-      <div id="sidebar">
-        <ul><li>
-            <a href="/">About</a></li><li>
-            <a href="/events/">Events</a></li><li>
-            <a href="/news/">News</a></li><li>
-            <a href="/writeups/">Writeups</a></li><li>
-            <a href="/contacts/">Contacts</a></li><li>
-            <a href="/changelog/">Changelog</a></li></ul>
-      </div>
-    </div>
-
-    <div class="brand">
-      <div>
-        <a href="/">ByteTheCookies</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="toolbox">
-    <div id="theme_tool">
-      <svg
-        id="dark_mode_btn"
-        class="toolbox-btn"
-        width="18px"
-        height="18px"
-        viewBox="0 0 24 24"
-      >
-<svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24" height="24" viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-    stroke-linejoin="round">
-    <circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-</svg>
-
-</svg>
-      <svg
-        id="light_mode_btn"
-        class="toolbox-btn"
-        width="18px"
-        height="18px"
-        viewBox="0 0 24 24"
-      >
-<svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24" height="24" viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-    stroke-linejoin="round">
-    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-</svg>
-
-</svg>
-    </div>
-
-    
-    <div id="search_tool">
-      <svg
-        id="search_btn"
-        class="toolbox-btn"
-        width="18px"
-        height="18px"
-        viewBox="0 0 24 24"
-      >
-<svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24" height="24" viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-    stroke-linejoin="round">
-    <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-</svg>
-
-</svg><div id="search_menu_wrapper" class="hidden">
-    <div id="search_menu">
-        <div id="search_menu_toolbar">
-            <div id="search_menu_input_wrapper">
-                <input id="search_menu_input" type="text" placeholder='Search Posts'>
-            </div>
-            <div id="search_menu_close_btn">
-                <svg width="18px" height="18px" viewBox="0 0 24 24">
-<svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24" height="24" viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-    stroke-linejoin="round">
-    <line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>
-</svg>
-
-</svg>
-            </div>
-        </div>
-        <div id="search_menu_results">
-        </div>
-    </div>
-</div>
-</div>
-     
-    <div
-      id="translation_tool"
-      class="dropdown-wrapper pure-menu pure-menu-horizontal toolbox-btn"
-      onclick="void(0)"
-    >
-      <ul class="pure-menu-list">
-        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
-          <div class="dropdown-btn pure-menu-link">
-            <svg width="18px" height="18px" viewBox="0 0 24 24">
-<svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24" height="24" viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-    stroke-linejoin="round">
-    <circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-</svg>
-
-</svg>
-            <span class="dropdown-desc">English</span>
+  </head>
+  <body>
+    <header>
+      <div id="header_left">
+        <div id="sidebar_btn">
+          <input type="checkbox" id="sidebar_btn_input" class="hidden" />
+          <label id="sidebar_btn_label" for="sidebar_btn_input">
+            <svg id="menu_icon" width="26px" height="26px" viewBox="0 0 24 24">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+              </svg>
+            </svg>
+          </label>
+          <label id="sidebar_canvas_overlay_wrapper" for="sidebar_btn_input">
+            <div id="sidebar_canvas_overlay"></div>
+          </label>
+          <div id="sidebar">
+            <ul>
+              <li>
+                <a href="/">About</a>
+              </li>
+              <li>
+                <a href="/events/">Events</a>
+              </li>
+              <li>
+                <a href="/news/">News</a>
+              </li>
+              <li>
+                <a href="/writeups/">Writeups</a>
+              </li>
+              <li>
+                <a href="/contacts/">Contacts</a>
+              </li>
+              <li>
+                <a href="/changelog/">Changelog</a>
+              </li>
+            </ul>
           </div>
-          <ul class="pure-menu-children">
-            
-            <li class="pure-menu-item">
-              <a href="http://localhost:1313/" class="pure-menu-link"
-                >English</a
-              >
+        </div>
+
+        <div class="brand">
+          <div>
+            <a href="/">ByteTheCookies</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="toolbox">
+        <div id="theme_tool">
+          <svg
+            id="dark_mode_btn"
+            class="toolbox-btn"
+            width="18px"
+            height="18px"
+            viewBox="0 0 24 24"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </svg>
+          <svg
+            id="light_mode_btn"
+            class="toolbox-btn"
+            width="18px"
+            height="18px"
+            viewBox="0 0 24 24"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </svg>
+        </div>
+
+        <div id="search_tool">
+          <svg
+            id="search_btn"
+            class="toolbox-btn"
+            width="18px"
+            height="18px"
+            viewBox="0 0 24 24"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </svg>
+          <div id="search_menu_wrapper" class="hidden">
+            <div id="search_menu">
+              <div id="search_menu_toolbar">
+                <div id="search_menu_input_wrapper">
+                  <input
+                    id="search_menu_input"
+                    type="text"
+                    placeholder="Search Posts"
+                  />
+                </div>
+                <div id="search_menu_close_btn">
+                  <svg width="18px" height="18px" viewBox="0 0 24 24">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <line x1="18" y1="6" x2="6" y2="18"></line>
+                      <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                  </svg>
+                </div>
+              </div>
+              <div id="search_menu_results"></div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="translation_tool"
+          class="dropdown-wrapper pure-menu pure-menu-horizontal toolbox-btn"
+          onclick="void(0)"
+        >
+          <ul class="pure-menu-list">
+            <li
+              class="pure-menu-item pure-menu-has-children pure-menu-allow-hover"
+            >
+              <div class="dropdown-btn pure-menu-link">
+                <svg width="18px" height="18px" viewBox="0 0 24 24">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path
+                      d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                    ></path>
+                  </svg>
+                </svg>
+                <span class="dropdown-desc">English</span>
+              </div>
+              <ul class="pure-menu-children">
+                <li class="pure-menu-item">
+                  <a
+                    href="https://bytethecookies.github.io/"
+                    class="pure-menu-link"
+                    >English</a
+                  >
+                </li>
+
+                <li class="pure-menu-item">
+                  <a
+                    href="https://bytethecookies.github.io/it/"
+                    class="pure-menu-link"
+                    >Italiano</a
+                  >
+                </li>
+              </ul>
             </li>
-            
-            <li class="pure-menu-item">
-              <a href="http://localhost:1313/it/" class="pure-menu-link"
-                >Italiano</a
-              >
-            </li>
-            
           </ul>
+        </div>
+      </div>
+    </header>
+    <nav id="navbar" class="pure-menu">
+      <ul class="pure-menu-list">
+        <li class="navbar-item pure-menu-item">
+          <a href="/" class="pure-menu-link">About</a>
+        </li>
+        <li class="navbar-item pure-menu-item">
+          <a href="/events/" class="pure-menu-link">Events</a>
+        </li>
+        <li class="navbar-item pure-menu-item">
+          <a href="/news/" class="pure-menu-link">News</a>
+        </li>
+        <li class="navbar-item pure-menu-item">
+          <a href="/writeups/" class="pure-menu-link">Writeups</a>
+        </li>
+        <li class="navbar-item pure-menu-item">
+          <a href="/contacts/" class="pure-menu-link">Contacts</a>
+        </li>
+        <li class="navbar-item pure-menu-item">
+          <a href="/changelog/" class="pure-menu-link">Changelog</a>
         </li>
       </ul>
-    </div>
-    
-  </div>
-</header>
-<nav id="navbar" class="pure-menu">
-    <ul class="pure-menu-list"><li class="navbar-item pure-menu-item ">
-                    
-                        <a href="/" class="pure-menu-link">About</a>
-                    
-                </li><li class="navbar-item pure-menu-item ">
-                    
-                        <a href="/events/" class="pure-menu-link">Events</a>
-                    
-                </li><li class="navbar-item pure-menu-item ">
-                    
-                        <a href="/news/" class="pure-menu-link">News</a>
-                    
-                </li><li class="navbar-item pure-menu-item ">
-                    
-                        <a href="/writeups/" class="pure-menu-link">Writeups</a>
-                    
-                </li><li class="navbar-item pure-menu-item ">
-                    
-                        <a href="/contacts/" class="pure-menu-link">Contacts</a>
-                    
-                </li><li class="navbar-item pure-menu-item ">
-                    
-                        <a href="/changelog/" class="pure-menu-link">Changelog</a>
-                    
-                </li></ul>
-</nav>
-<main>
-            <div id="content" class="content-margin">
-                <div>
-    <div class="term-title">
-        <h1>Themes Guide</h1>
-        
-                <div class="icon">
-                    <a rel="noopener" target="_blank" href="http://localhost:1313/series/themes-guide/index.xml"> 
-                        
-<svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24" height="24" viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-    stroke-linejoin="round">
-    <path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle>
-</svg>
+    </nav>
+    <main>
+      <div id="content" class="content-margin">
+        <div>
+          <div class="term-title">
+            <h1>Themes Guide</h1>
 
-
-                    </a>
-                </div>
-            
-        </div>
-    
-        
-            <div class="content-margin">
-                <h1>2019</h1>
-
-<ul class="list-layout">
-    
-        <li>
-            <a href="/writeups/n00bzctf/">Markdown Syntax Guide</a>
-            
-                <span>
-                    03/11
-                </span>
-            
-        </li>
-    
-</ul></div>
-        
-        
-    
-</div>
-
-                
-                    
-                
+            <div class="icon">
+              <a
+                rel="noopener"
+                target="_blank"
+                href="https://bytethecookies.github.io/series/themes-guide/index.xml"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M4 11a9 9 0 0 1 9 9"></path>
+                  <path d="M4 4a16 16 0 0 1 16 16"></path>
+                  <circle cx="5" cy="19" r="1"></circle>
+                </svg>
+              </a>
             </div>
-        </main>
-<footer>
-    <article>Copyright © 2024 by ByteTheCookies Team</article>
-</footer>
+          </div>
 
-</body>
+          <div class="content-margin">
+            <h1>2019</h1>
+
+            <ul class="list-layout">
+              <li>
+                <a href="/writeups/n00bzctf/">Markdown Syntax Guide</a>
+
+                <span> 03/11 </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <article>Copyright © 2024 by ByteTheCookies Team</article>
+    </footer>
+  </body>
 </html>
