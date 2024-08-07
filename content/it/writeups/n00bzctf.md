@@ -28,8 +28,8 @@ Un CTF di 48 ore ospitato da n00bz per n00bz. Organizzato con sfide facili per i
 
 #### Web
 
-- [File Sharing Portal](/writeups/noobzctf/filesharingportal/)
+- [File Sharing Portal](/it/writeups/noobzctf/filesharingportal/)
 
 #### Misc
 
-- [Waas](/writeups/noobzctf/waas/)
+- [Waas](/it/writeups/noobzctf/waas/)
