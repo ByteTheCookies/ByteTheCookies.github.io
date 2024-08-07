@@ -332,14 +332,40 @@ import subprocess from base64 import b64decode as d while True: print(&#34;[1] W
         
     
     
-<h1>Waas</h1>
+<h1 id="waas" class="header-anchor-wrapper">Waas
+  <a href="#waas" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h1>
 
 <p><strong>Descrizione</strong>: Writing as a Service!</p>
 <p><strong>Autori</strong>: NoobMaster + NoobHacker</p>
 <p><strong>Punti</strong>: 491</p>
 <p><strong>Soluzioni</strong>: 78</p>
 
-<h2>Introduction</h2>
+<h2 id="introduction" class="header-anchor-wrapper">Introduction
+  <a href="#introduction" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
 
 <p>WaaS (Writing as a Service) ci permette di sovrascrivere un file sul sistema (dopo un certo controllo dell&rsquo;input) e di inserirvi tutto ciò che vogliamo (fino a quando non si incontra un newline).</p>
 <pre  class="mc-prism hide language-text" ><code class="language-python">import subprocess
@@ -372,17 +398,30 @@ while True:
                 print(flag.stdout.strip())
 </code></pre>
 
-<h2>Solution</h2>
+<h2 id="solution" class="header-anchor-wrapper">Solution
+  <a href="#solution" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
 
 <p>In un primo momento si potrebbe pensare di provare a bypassare la validazione dell&rsquo;input, magari riscrivendo il funzionamento del comando cat o del file di sfida stesso, ma questo non è possibile.
 Una cosa molto bizzarra è l&rsquo;importato ma inutilizzato <code>b64decode</code> dal modulo <code>base64</code>, che è ciò che ci permette di risolvere la sfida.</p>
 <p>Quando python importa i moduli, guarda in <code>sys.path</code>, che ha un elenco di directory valide da cui importare i moduli. Dopo una rapida ricerca nei <a href="https://docs.python.org/3/library/sys_path_init.html">python3 docs</a>, scopriamo che la prima directory in cui cerca è la stessa directory in cui si trova il file, il che significa che se abbiamo un file <code>base64.py</code> nella directory, allora python cercherà di importare un simbolo <code>b64decode</code> da quel file, invece del comune modulo conosciuto.
 Un&rsquo;altra caratteristica del comportamento di importazione di python che possiamo usare è che tutto il codice di un modulo importato sarà eseguito. Per esempio, se un file <code>test.py</code> ha <code>print('Hello, World!')</code> e può essere eseguito (per esempio se è al livello di indentazione più basso), un file con <code>import test</code> vedrà effettivamente <code>Hello, World!</code> stampato su <code>stdout</code>.
-Pertanto, poiché la funzione <code>open</code> con un flag <code>'w' creerà un file se non esiste, possiamo semplicemente creare un file chiamato</code>base64.py` e scriverci dentro il nostro codice malevolo.</p>
+Pertanto, poiché la funzione <code>open</code> con una flag <code>'w' creerà un file se non esiste, possiamo semplicemente creare un file chiamato base64.py</code> e scriverci dentro il nostro codice malevolo.</p>
 <p>Qualcosa del genere farà al caso vostro:</p>
 <pre  class="mc-prism hide language-text" ><code class="language-python">import os; b64decode = 0; os.system(&quot;cat flag.txt&quot;)
 </code></pre>
-<p>Ma il flag non è ancora nostro; dobbiamo sfruttare il fatto che l&rsquo;istanza non resetta i suoi file ogni volta che ci si connette, il che significa che il nostro <code>base64.py</code> rimarrà nella cartella per tutta la durata dell&rsquo;istanza. Questo significa che dobbiamo semplicemente riconnetterci e ottenere il nostro flag.</p>
+<p>Ma la flag non è ancora nostro; dobbiamo sfruttare il fatto che l&rsquo;istanza non resetta i suoi file ogni volta che ci si connette, il che significa che il nostro <code>base64.py</code> rimarrà nella cartella per tutta la durata dell&rsquo;istanza. Questo significa che dobbiamo semplicemente riconnetterci e ottenere la flag.</p>
 <p><code>solve.py</code></p>
 <pre  class="mc-prism hide language-text" ><code class="language-python">from pwn import *
 

@@ -60,7 +60,7 @@ Una cosa molto bizzarra è l'importato ma inutilizzato `b64decode` dal modulo `b
 
 Quando python importa i moduli, guarda in `sys.path`, che ha un elenco di directory valide da cui importare i moduli. Dopo una rapida ricerca nei [python3 docs](https://docs.python.org/3/library/sys_path_init.html), scopriamo che la prima directory in cui cerca è la stessa directory in cui si trova il file, il che significa che se abbiamo un file `base64.py` nella directory, allora python cercherà di importare un simbolo `b64decode` da quel file, invece del comune modulo conosciuto.
 Un'altra caratteristica del comportamento di importazione di python che possiamo usare è che tutto il codice di un modulo importato sarà eseguito. Per esempio, se un file `test.py` ha `print('Hello, World!')` e può essere eseguito (per esempio se è al livello di indentazione più basso), un file con `import test` vedrà effettivamente `Hello, World!` stampato su `stdout`.
-Pertanto, poiché la funzione `open` con un flag `'w' creerà un file se non esiste, possiamo semplicemente creare un file chiamato`base64.py` e scriverci dentro il nostro codice malevolo.
+Pertanto, poiché la funzione `open` con una flag `'w' creerà un file se non esiste, possiamo semplicemente creare un file chiamato base64.py` e scriverci dentro il nostro codice malevolo.
 
 Qualcosa del genere farà al caso vostro:
 
@@ -68,7 +68,7 @@ Qualcosa del genere farà al caso vostro:
 import os; b64decode = 0; os.system("cat flag.txt")
 ```
 
-Ma il flag non è ancora nostro; dobbiamo sfruttare il fatto che l'istanza non resetta i suoi file ogni volta che ci si connette, il che significa che il nostro `base64.py` rimarrà nella cartella per tutta la durata dell'istanza. Questo significa che dobbiamo semplicemente riconnetterci e ottenere il nostro flag.
+Ma la flag non è ancora nostro; dobbiamo sfruttare il fatto che l'istanza non resetta i suoi file ogni volta che ci si connette, il che significa che il nostro `base64.py` rimarrà nella cartella per tutta la durata dell'istanza. Questo significa che dobbiamo semplicemente riconnetterci e ottenere la flag.
 
 `solve.py`
 
