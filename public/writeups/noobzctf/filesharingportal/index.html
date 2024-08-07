@@ -343,7 +343,20 @@ Introduction The ctf has a very simple structure: we have a form in which we are
 
 <p>The ctf has a very simple structure: we have a form in which we are asked to insert a <a href="https://en.wikipedia.org/wiki/Tar_(computing)">tar</a> file; once the tar file has been inserted, it is unzipped and we are shown the <code>name</code> of files it contains; by clicking on the different files, we can read their contents.</p>
 
-<h2>Source</h2>
+<h2 id="source" class="header-anchor-wrapper">Source
+  <a href="#source" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
 
 <p><strong>The source has comments added later to allow a better understanding of the code in the writeups</strong></p>
 <pre  class="mc-prism hide language-text" ><code class="language-python"># filename: server.py
@@ -410,7 +423,20 @@ if __name__ == '__main__':
 </code></pre>
 <p>We can therefore see that there are several parameter checks, and at first one might think that the code is <code>100%</code> safe.</p>
 
-<h2>Solution</h2>
+<h2 id="solution" class="header-anchor-wrapper">Solution
+  <a href="#solution" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
 
 <p>The first thing that came to mind was to create a <a href="https://www.futurelearn.com/info/courses/linux-for-bioinformatics/0/steps/201767">symbolic link</a> to access the flag, and indeed this works (try with server.py), the problem is that the filename of the flag is unknown and this does not allow us to create a valid symbolic link.</p>
 <p>Once we realised this, we did a thorough analysis of the code and came to the conclusion that the only thing that was not being checked was the name of the unpacked tar file allowing us to insert anything. By combining this with the &lsquo;<code>render_template_string</code>&rsquo; function (a vulnerable function of flask), it is possible to perform a <a href="https://book.hacktricks.xyz/pentesting-web/ssti-server-side-template-injection#what-is-ssti-server-side-template-injection">template injection</a>.</p>
