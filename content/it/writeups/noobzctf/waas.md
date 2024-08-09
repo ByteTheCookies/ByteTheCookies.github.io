@@ -4,6 +4,9 @@ date = 2024-08-06T11:27:07+02:00
 tags = [
   "Misc",
   "Python",
+  "491 points",
+  "78 solves",
+  "NoobMaster + NoobHacker"
 ]
 draft = true
 +++
