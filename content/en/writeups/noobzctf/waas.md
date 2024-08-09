@@ -4,19 +4,16 @@ date = 2024-08-06T11:27:07+02:00
 tags = [
   "Misc",
   "Python",
+  "491 points",
+  "78 solves",
+  "NoobMaster + NoobHacker"
 ]
 draft = true
 +++
 
-# Waas
+<h1 style='text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;'>Waas</h1>
 
 **Description**: Writing as a Service!
-
-**Authors**: NoobMaster + NoobHacker
-
-**Points**: 491
-
-**Solve**: 78
 
 ## Introduction
 

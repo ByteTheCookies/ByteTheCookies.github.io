@@ -3,21 +3,18 @@ title = 'File Sharing Portal'
 tags = [
   "Web",
   "Python",
-  "Template Injection"
+  "Template Injection",
+  "498 points",
+  "119 solves",
+  "NoobMaster + NoobHacker"
 ]
 date = 2024-08-06T11:27:07+02:00
 draft = true
 +++
 
-# File Sharing Portal
+<h1 style='text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;'>File Sharing Portal</h1>
 
 **Description**: Welcome to the file sharing portal! We only support tar files!
-
-**Authors**: NoobMaster + NoobHacker
-
-**Points**: 478
-
-**Solve**: 119
 
 ## Introduction
 
