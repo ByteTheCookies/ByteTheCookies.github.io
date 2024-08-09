@@ -4,12 +4,32 @@
   <url>
     <loc>http://localhost:1313/tags/119-solves/</loc>
     <lastmod>2024-08-09T14:22:57+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="http://localhost:1313/it/tags/119-solves/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/tags/119-solves/"
+                />
   </url><url>
     <loc>http://localhost:1313/tags/491-points/</loc>
     <lastmod>2024-08-09T14:22:57+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/498-points/</loc>
     <lastmod>2024-08-09T14:22:57+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="http://localhost:1313/it/tags/498-points/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/tags/498-points/"
+                />
   </url><url>
     <loc>http://localhost:1313/tags/78-solves/</loc>
     <lastmod>2024-08-09T14:22:57+02:00</lastmod>
@@ -42,6 +62,16 @@
   </url><url>
     <loc>http://localhost:1313/tags/noobmaster-&#43;-noobhacker/</loc>
     <lastmod>2024-08-09T14:22:57+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="http://localhost:1313/it/tags/noobmaster-&#43;-noobhacker/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/tags/noobmaster-&#43;-noobhacker/"
+                />
   </url><url>
     <loc>http://localhost:1313/tags/python/</loc>
     <lastmod>2024-08-09T14:22:57+02:00</lastmod>

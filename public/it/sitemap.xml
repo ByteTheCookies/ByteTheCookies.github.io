@@ -2,6 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/it/tags/119-solves/</loc>
+    <lastmod>2024-08-07T10:34:11+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/tags/119-solves/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="http://localhost:1313/it/tags/119-solves/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/it/tags/498-points/</loc>
+    <lastmod>2024-08-07T10:34:11+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/tags/498-points/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="http://localhost:1313/it/tags/498-points/"
+                />
+  </url><url>
     <loc>http://localhost:1313/it/writeups/noobzctf/filesharingportal/</loc>
     <lastmod>2024-08-07T10:34:11+02:00</lastmod>
     <xhtml:link
@@ -26,6 +52,19 @@
                 rel="alternate"
                 hreflang="it"
                 href="http://localhost:1313/it/tags/misc/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/it/tags/noobmaster-&#43;-noobhacker/</loc>
+    <lastmod>2024-08-07T10:34:11+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/tags/noobmaster-&#43;-noobhacker/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="http://localhost:1313/it/tags/noobmaster-&#43;-noobhacker/"
                 />
   </url><url>
     <loc>http://localhost:1313/it/tags/python/</loc>

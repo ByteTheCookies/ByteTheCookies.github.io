@@ -8,15 +8,9 @@ tags = [
 draft = true
 +++
 
-# Waas
+<h1 style='text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;'>Waas</h1>
 
 **Descrizione**: Writing as a Service!
-
-**Autori**: NoobMaster + NoobHacker
-
-**Punti**: 491
-
-**Soluzioni**: 78
 
 ## Introduction
 

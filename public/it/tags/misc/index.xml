@@ -14,11 +14,8 @@
       
       <guid>http://localhost:1313/it/writeups/noobzctf/waas/</guid>
       <description>Waas Descrizione: Writing as a Service!
-Autori: NoobMaster + NoobHacker
-Punti: 491
-Soluzioni: 78
 Introduction WaaS (Writing as a Service) ci permette di sovrascrivere un file sul sistema (dopo un certo controllo dell&amp;rsquo;input) e di inserirvi tutto ciò che vogliamo (fino a quando non si incontra un newline).
-import subprocess from base64 import b64decode as d while True: print(&amp;quot;[1] Write to a file\n[2] Get the flag\n[3] Exit&amp;quot;) try: inp = int(input(&amp;quot;Choice: &amp;quot;).</description>
+import subprocess from base64 import b64decode as d while True: print(&amp;quot;[1] Write to a file\n[2] Get the flag\n[3] Exit&amp;quot;) try: inp = int(input(&amp;quot;Choice: &amp;quot;).strip()) except: print(&amp;quot;Invalid input!&amp;quot;) exit(0) if inp == 1: file = input(&amp;quot;Enter file name: &amp;quot;).</description>
     </item>
     
   </channel>
