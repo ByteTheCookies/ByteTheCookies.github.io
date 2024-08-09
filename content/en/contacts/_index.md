@@ -7,11 +7,17 @@ draft = true
 
 # Contacts
 
+To contact us we recommend using email but you can also use our discord
+
 **Email:** `bytethecookies@proton.me`
+
+**Discord:** [Click me]()
+
+## Other social
 
 <div>
   <ul style='display: flex;'>
-    <li class='icon_contacts'>
+    <li class='icon_contacts' style='margin: 0px 10px 0px 0px'>
       {{< icon vendor="feather" name="github" link="https://github.com/ByteTheCookies" >}}
     </li>
     <li class='icon_contacts'>
