@@ -1,7 +1,22 @@
-               
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!DOCTYPE html>
-<html lang="it"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<html lang='it'><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <link rel="shortcut icon" href='http://localhost:1313/favicon.ico' type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -74,11 +89,11 @@
     
 </head>
 <body><header>
-  <div id="header_left">
-    <div id="sidebar_btn">
-      <input type="checkbox" id="sidebar_btn_input" class="hidden" />
-      <label id="sidebar_btn_label" for="sidebar_btn_input">
-        <svg id="menu_icon" width="26px" height="26px" viewBox="0 0 24 24">
+    <div id="header_left">
+        <div id="sidebar_btn">
+            <input type="checkbox" id="sidebar_btn_input" class="hidden" />
+            <label id="sidebar_btn_label" for="sidebar_btn_input">
+                <svg id="menu_icon" width="26px" height="26px" viewBox="0 0 24 24">
 <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -88,35 +103,29 @@
 </svg>
 
 </svg>
-      </label>
-      <label id="sidebar_canvas_overlay_wrapper" for="sidebar_btn_input">
-        <div id="sidebar_canvas_overlay"></div>
-      </label>
-      <div id="sidebar">
-        <ul><li>
-            <a href="/it/">Chi siamo</a></li><li>
-            <a href="/it/news/">Novità</a></li><li>
-            <a href="/it/writeups/">Writeups</a></li><li>
-            <a href="/it/contacts/">Contatti</a></li></ul>
-      </div>
+            </label>
+            <label id="sidebar_canvas_overlay_wrapper" for="sidebar_btn_input">
+                <div id="sidebar_canvas_overlay"></div>
+            </label>
+            <div id="sidebar">
+                <ul><li>
+                            <a href="/it/">Chi siamo</a></li><li>
+                            <a href="/it/news/">Novità</a></li><li>
+                            <a href="/it/writeups/">Writeups</a></li><li>
+                            <a href="/it/contacts/">Contatti</a></li></ul>
+            </div>
+        </div>
+    
+        <div class="brand">
+            <div>
+                <a href="/it/">ByteTheCookies</a>
+            </div>
+        </div>
     </div>
 
-    <div class="brand">
-      <div>
-        <a href="/it/">ByteTheCookies</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="toolbox">
-    <div id="theme_tool">
-      <svg
-        id="dark_mode_btn"
-        class="toolbox-btn"
-        width="18px"
-        height="18px"
-        viewBox="0 0 24 24"
-      >
+    <div class="toolbox">
+        <div id="theme_tool">
+            <svg id="dark_mode_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
 <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -126,13 +135,7 @@
 </svg>
 
 </svg>
-      <svg
-        id="light_mode_btn"
-        class="toolbox-btn"
-        width="18px"
-        height="18px"
-        viewBox="0 0 24 24"
-      >
+            <svg id="light_mode_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
 <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -142,17 +145,11 @@
 </svg>
 
 </svg>
-    </div>
+        </div>
 
-    
-    <div id="search_tool">
-      <svg
-        id="search_btn"
-        class="toolbox-btn"
-        width="18px"
-        height="18px"
-        viewBox="0 0 24 24"
-      >
+        
+            <div id="search_tool">
+                <svg id="search_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
 <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -185,16 +182,14 @@
     </div>
 </div>
 </div>
-     
-    <div
-      id="translation_tool"
-      class="dropdown-wrapper pure-menu pure-menu-horizontal toolbox-btn"
-      onclick="void(0)"
-    >
-      <ul class="pure-menu-list">
-        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
-          <div class="dropdown-btn pure-menu-link">
-            <svg width="18px" height="18px" viewBox="0 0 24 24">
+        
+
+        
+            <div id="translation_tool" class="dropdown-wrapper pure-menu pure-menu-horizontal toolbox-btn" onclick="void(0)">
+                <ul class="pure-menu-list">
+                    <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+                        <div class="dropdown-btn pure-menu-link">
+                            <svg width="18px" height="18px" viewBox="0 0 24 24">
 <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -204,28 +199,24 @@
 </svg>
 
 </svg>
-            <span class="dropdown-desc">Italiano</span>
-          </div>
-          <ul class="pure-menu-children">
-            
-            <li class="pure-menu-item">
-              <a href="http://localhost:1313/" class="pure-menu-link"
-                >English</a
-              >
-            </li>
-            
-            <li class="pure-menu-item">
-              <a href="http://localhost:1313/it/" class="pure-menu-link"
-                >Italiano</a
-              >
-            </li>
-            
-          </ul>
-        </li>
-      </ul>
+                            <span class="dropdown-desc">Italiano</span>
+                        </div>
+                        <ul class="pure-menu-children">
+                            
+                            <li class="pure-menu-item">
+                                <a href="http://localhost:1313/" class="pure-menu-link">English</a>
+                            </li>
+                            
+                            <li class="pure-menu-item">
+                                <a href="http://localhost:1313/it/" class="pure-menu-link">Italiano</a>
+                            </li>
+                            
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        
     </div>
-    
-  </div>
 </header>
 <nav id="navbar" class="pure-menu">
     <ul class="pure-menu-list"><li class="navbar-item pure-menu-item insection">
@@ -247,11 +238,67 @@
                 </li></ul>
 </nav>
 <main>
-      <div id="content" class="content-margin">
-          
+            <div id="content" class="content-margin">
+                
+
+
+
+
 
 
 <div class="postcard-layout content-margin">
+    
+        <a href="http://localhost:1313/it/writeups/noobzctf/filesharingportal/">
+            <div class="postcard-item">
+                <div class="postcard-title">
+                    <span>File Sharing Portal</span>
+                </div>
+                <div class="postcard-summary">
+                    <span>File Sharing Portal Descrizione: Benvenuti nel portale di condivisione dei file! Supportiamo solo file tar!
+Introduction Il ctf ha una struttura molto semplice: abbiamo un form in cui ci viene chiesto di inserire un file tar; una volta inserito il file tar, questo viene decompresso e ci viene mostrato il nome dei file che contiene; cliccando sui diversi file, possiamo leggerne il contenuto.
+Source Il sorgente ha commenti aggiunti in seguito per consentire una migliore comprensione del codice nei writeup</span>
+                </div>
+                <div class="postcard-metadata">
+                    <span>2024/08/06 · 
+    
+        
+    
+
+    
+        
+            <span>Writeup</span>
+        
+    
+</span>
+                </div>
+            </div>
+        </a>
+    
+        <a href="http://localhost:1313/it/writeups/noobzctf/waas/">
+            <div class="postcard-item">
+                <div class="postcard-title">
+                    <span>WaaS</span>
+                </div>
+                <div class="postcard-summary">
+                    <span>Waas Descrizione: Writing as a Service!
+Introduction WaaS (Writing as a Service) ci permette di sovrascrivere un file sul sistema (dopo un certo controllo dell&amp;rsquo;input) e di inserirvi tutto ciò che vogliamo (fino a quando non si incontra un newline).
+import subprocess from base64 import b64decode as d while True: print(&amp;quot;[1] Write to a file\n[2] Get the flag\n[3] Exit&amp;quot;) try: inp = int(input(&amp;quot;Choice: &amp;quot;).strip()) except: print(&amp;quot;Invalid input!&amp;quot;) exit(0) if inp == 1: file = input(&amp;quot;Enter file name: &amp;quot;).</span>
+                </div>
+                <div class="postcard-metadata">
+                    <span>2024/08/06 · 
+    
+        
+    
+
+    
+        
+            <span>Writeup</span>
+        
+    
+</span>
+                </div>
+            </div>
+        </a>
     
         <a href="http://localhost:1313/it/writeups/n00bzctf/">
             <div class="postcard-item">
@@ -282,9 +329,15 @@ Performance Summary CTFs: 31/32 Punti totali: 9794.000 Posizione: 24 Punti di va
 </div>
 
 
-    
-      </div>
-    </main>
+
+
+
+
+                
+                    
+                
+            </div>
+        </main>
 <footer>
     <article>Copyright © 2024 by ByteTheCookies Team</article>
 </footer>

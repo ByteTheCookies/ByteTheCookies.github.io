@@ -496,6 +496,10 @@ h6 {
   font-family: "JetBrainsMonoNerd", sans-serif;
   font-size: 0.8em; }
 
+.icon_contacts {
+  list-style: none;
+  padding: 10; }
+
 article {
   line-height: 1.7;
   width: 100%; }
