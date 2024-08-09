@@ -7,7 +7,7 @@ enable_zooming_js = true
 enable_header_anchor = true
 enable_toc = true
 enable_site_search = true
-enable_math = true
+enable_math = false
 
 # SEO
 enable_open_graph = true

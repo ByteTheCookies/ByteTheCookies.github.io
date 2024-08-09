@@ -2,38 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Writeup on ByteTheCookies</title>
-    <link>http://localhost:37645/writeups/</link>
+    <link>http://localhost:1313/writeups/</link>
     <description>Recent content in Writeup on ByteTheCookies</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="http://localhost:37645/writeups/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>File Sharing Portal</title>
-      <link>http://localhost:37645/writeups/noobzctf/filesharingportal/</link>
-      <pubDate>Tue, 06 Aug 2024 11:27:07 +0200</pubDate>
-      
-      <guid>http://localhost:37645/writeups/noobzctf/filesharingportal/</guid>
-      <description>File Sharing Portal Description: Welcome to the file sharing portal! We only support tar files!
-Introduction The ctf has a very simple structure: we have a form in which we are asked to insert a tar file; once the tar file has been inserted, it is unzipped and we are shown the name of files it contains; by clicking on the different files, we can read their contents.
-Source The source has comments added later to allow a better understanding of the code in the writeups</description>
-    </item>
-    
-    <item>
-      <title>WaaS</title>
-      <link>http://localhost:37645/writeups/noobzctf/waas/</link>
-      <pubDate>Tue, 06 Aug 2024 11:27:07 +0200</pubDate>
-      
-      <guid>http://localhost:37645/writeups/noobzctf/waas/</guid>
-      <description>Waas Description: Writing as a Service!
-Introduction WaaS (Writing as a Service) allows us to overwrite a file on the system (after some input validation) and insert anything (until a newline is met) we want in it.
-import subprocess from base64 import b64decode as d while True: print(&amp;quot;[1] Write to a file\n[2] Get the flag\n[3] Exit&amp;quot;) try: inp = int(input(&amp;quot;Choice: &amp;quot;).strip()) except: print(&amp;quot;Invalid input!&amp;quot;) exit(0) if inp == 1: file = input(&amp;quot;Enter file name: &amp;quot;).</description>
-    </item>
-    
+    <language>en</language><atom:link href="http://localhost:1313/writeups/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>N00bzCTF</title>
-      <link>http://localhost:37645/writeups/n00bzctf/</link>
+      <link>http://localhost:1313/writeups/n00bzctf/</link>
       <pubDate>Mon, 05 Aug 2024 18:26:54 +0200</pubDate>
       
-      <guid>http://localhost:37645/writeups/n00bzctf/</guid>
+      <guid>http://localhost:1313/writeups/n00bzctf/</guid>
       <description> N00bz CTF 2024 Description A 48 hours CTF hosted by n00bz for n00bz. Organized with beginner friendly challenges (and some hard ones), n00bzCTF is dedicated to make cyber security more friendly and approachable for complete n00bz.
 Performance Summary CTFs: 31/32 Total point: 9794.000 Position: 24 Rating points: 24.067 Writeups Web File Sharing Portal Misc Waas </description>
     </item>
