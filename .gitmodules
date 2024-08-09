@@ -1,3 +1,6 @@
 [submodule "themes/bytethecookies-theme"]
 	path = themes/bytethecookies-theme
 	url = https://github.com/akiidjk/bytethecookies-theme.git
+[submodule "themes/themes/bytethecookies-theme"]
+	path = themes/themes/bytethecookies-theme
+	url = https://github.com/akiidjk/bytethecookies-theme.git
