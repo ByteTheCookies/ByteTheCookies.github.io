@@ -419,6 +419,14 @@ h6 {
 figure {
   margin: 0; }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "JetBrainsMonoNerd", sans-serif; }
+
 img {
   max-width: 100%;
   border-radius: 3px; }
@@ -464,6 +472,41 @@ details[open] > summary {
 @media screen and (min-width: 120rem) {
   body {
     width: 55%; } }
+
+@font-face {
+  font-family: "JetBrainsMonoNerd";
+  src: url("/fonts/JetBrainsMonoNLNerdFont-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+.tag-badge {
+  background-color: #9e8c6c;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 0.8em;
+  font-weight: 200;
+  font-family: "JetBrainsMonoNerd", sans-serif;
+  display: inline-block;
+  margin-right: 5px;
+  margin-top: 5px; }
+
+.date {
+  padding-top: 6px;
+  font-family: "JetBrainsMonoNerd", sans-serif;
+  font-size: 0.8em; }
+
+.badge {
+  background-color: #9e8c6c;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 0.8em;
+  font-weight: 200;
+  font-family: "JetBrainsMonoNerd", sans-serif;
+  display: inline-block;
+  margin-right: 5px;
+  margin-top: 5px; }
 
 article {
   line-height: 1.7;
