@@ -40,7 +40,7 @@ The images/icons and more are located in the "static" directory (it is not neces
 
 ### Writeups creations
 
-1. Run `hugo new content --kink ctf writeups/namectf.md`
+1. Run `hugo new content --kind ctf writeups/namectf.md`
 2. Create a directory with the name of CTF
-3. Run `hugo new content --kink writeup writeups/namectf/namechallange.md`
+3. Run `hugo new content --kind writeup writeups/namectf/namechallange.md`
 4. Run ``` hugo server --buildDrafts ```
