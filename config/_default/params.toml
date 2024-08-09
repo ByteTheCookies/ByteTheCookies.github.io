@@ -7,20 +7,20 @@ enable_zooming_js = true
 enable_header_anchor = true
 enable_toc = true
 enable_site_search = true
-enable_math = false
+enable_math = true
 
 # SEO
 enable_open_graph = true
 enable_twitter_cards = true
 
 # Collapsible Menu
-enable_collapsible_toc = false
+enable_collapsible_toc = true
 enable_collapsible_changelogs = true
 
 [list_layout]
 enable_group_by_year = true
 enable_show_date = true
-enable_pagination = false
+enable_pagination = true
 
 # syntax highlight settings
 [syntax_highlight]
