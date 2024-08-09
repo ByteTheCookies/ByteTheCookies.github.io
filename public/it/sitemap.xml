@@ -2,106 +2,275 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/it/tags/ctf/</loc>
-    <lastmod>2024-08-07T10:55:38+02:00</lastmod>
+    <loc>http://localhost:37645/it/tags/119-solves/</loc>
+    <lastmod>2024-08-09T14:28:30+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/tags/ctf/"
+                href="http://localhost:37645/tags/119-solves/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="it"
-                href="http://localhost:1313/it/tags/ctf/"
+                href="http://localhost:37645/it/tags/119-solves/"
                 />
   </url><url>
-    <loc>http://localhost:1313/it/tags/n00bz/</loc>
-    <lastmod>2024-08-07T10:55:38+02:00</lastmod>
+    <loc>http://localhost:37645/it/tags/498-points/</loc>
+    <lastmod>2024-08-09T14:28:30+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/tags/n00bz/"
+                href="http://localhost:37645/tags/498-points/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="it"
-                href="http://localhost:1313/it/tags/n00bz/"
+                href="http://localhost:37645/it/tags/498-points/"
                 />
   </url><url>
-    <loc>http://localhost:1313/it/writeups/n00bzctf/</loc>
-    <lastmod>2024-08-07T10:55:38+02:00</lastmod>
+    <loc>http://localhost:37645/it/writeups/noobzctf/filesharingportal/</loc>
+    <lastmod>2024-08-09T14:28:30+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/writeups/n00bzctf/"
+                href="http://localhost:37645/writeups/noobzctf/filesharingportal/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="it"
-                href="http://localhost:1313/it/writeups/n00bzctf/"
+                href="http://localhost:37645/it/writeups/noobzctf/filesharingportal/"
                 />
   </url><url>
-    <loc>http://localhost:1313/it/tags/</loc>
-    <lastmod>2024-08-07T10:55:38+02:00</lastmod>
+    <loc>http://localhost:37645/it/tags/misc/</loc>
+    <lastmod>2024-08-09T14:28:30+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/tags/"
+                href="http://localhost:37645/tags/misc/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="it"
-                href="http://localhost:1313/it/tags/"
+                href="http://localhost:37645/it/tags/misc/"
                 />
   </url><url>
-    <loc>http://localhost:1313/it/</loc>
+    <loc>http://localhost:37645/it/tags/noobmaster-&#43;-noobhacker/</loc>
+    <lastmod>2024-08-09T14:28:30+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:37645/tags/noobmaster-&#43;-noobhacker/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="http://localhost:37645/it/tags/noobmaster-&#43;-noobhacker/"
+                />
+  </url><url>
+    <loc>http://localhost:37645/it/tags/python/</loc>
+    <lastmod>2024-08-09T14:28:30+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:37645/tags/python/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="http://localhost:37645/it/tags/python/"
+                />
+  </url><url>
+    <loc>http://localhost:37645/it/tags/</loc>
+    <lastmod>2024-08-09T14:28:30+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:37645/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="http://localhost:37645/it/tags/"
+                />
+  </url><url>
+    <loc>http://localhost:37645/it/tags/template-injection/</loc>
+    <lastmod>2024-08-09T14:28:30+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:37645/tags/template-injection/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="http://localhost:37645/it/tags/template-injection/"
+                />
+  </url><url>
+    <loc>http://localhost:37645/it/writeups/noobzctf/waas/</loc>
+    <lastmod>2024-08-09T14:28:30+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:37645/writeups/noobzctf/waas/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="http://localhost:37645/it/writeups/noobzctf/waas/"
+                />
+  </url><url>
+    <loc>http://localhost:37645/it/tags/web/</loc>
+    <lastmod>2024-08-09T14:28:30+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:37645/tags/web/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="http://localhost:37645/it/tags/web/"
+                />
+  </url><url>
+    <loc>http://localhost:37645/it/tags/ctf/</loc>
+    <lastmod>2024-08-07T10:55:38+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:37645/tags/ctf/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="http://localhost:37645/it/tags/ctf/"
+                />
+  </url><url>
+    <loc>http://localhost:37645/it/tags/n00bz/</loc>
+    <lastmod>2024-08-07T10:55:38+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:37645/tags/n00bz/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="http://localhost:37645/it/tags/n00bz/"
+                />
+  </url><url>
+    <loc>http://localhost:37645/it/writeups/n00bzctf/</loc>
+    <lastmod>2024-08-07T10:55:38+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:37645/writeups/n00bzctf/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="http://localhost:37645/it/writeups/n00bzctf/"
+                />
+  </url><url>
+    <loc>http://localhost:37645/it/changelog/</loc>
     <lastmod>2024-08-05T18:30:24+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/"
+                href="http://localhost:37645/changelog/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="it"
-                href="http://localhost:1313/it/"
+                href="http://localhost:37645/it/changelog/"
                 />
   </url><url>
-    <loc>http://localhost:1313/it/categories/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="http://localhost:1313/it/categories/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/it/series/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/series/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="http://localhost:1313/it/series/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/it/writeups/</loc>
+    <loc>http://localhost:37645/it/contacts/</loc>
     <lastmod>2024-08-05T18:30:24+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/writeups/"
+                href="http://localhost:37645/contacts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="it"
-                href="http://localhost:1313/it/writeups/"
+                href="http://localhost:37645/it/contacts/"
+                />
+  </url><url>
+    <loc>http://localhost:37645/it/news/</loc>
+    <lastmod>2024-08-05T18:30:24+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:37645/news/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="http://localhost:37645/it/news/"
+                />
+  </url><url>
+    <loc>http://localhost:37645/it/events/</loc>
+    <lastmod>2024-08-05T18:30:24+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:37645/events/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="http://localhost:37645/it/events/"
+                />
+  </url><url>
+    <loc>http://localhost:37645/it/</loc>
+    <lastmod>2024-08-05T18:30:24+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:37645/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="http://localhost:37645/it/"
+                />
+  </url><url>
+    <loc>http://localhost:37645/it/categories/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:37645/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="http://localhost:37645/it/categories/"
+                />
+  </url><url>
+    <loc>http://localhost:37645/it/series/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:37645/series/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="http://localhost:37645/it/series/"
+                />
+  </url><url>
+    <loc>http://localhost:37645/it/writeups/</loc>
+    <lastmod>2024-08-05T18:30:24+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:37645/writeups/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="http://localhost:37645/it/writeups/"
                 />
   </url>
 </urlset>

@@ -2,16 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Writeup on ByteTheCookies</title>
-    <link>http://localhost:1313/it/writeups/</link>
+    <link>http://localhost:37645/it/writeups/</link>
     <description>Recent content in Writeup on ByteTheCookies</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>it</language><atom:link href="http://localhost:1313/it/writeups/index.xml" rel="self" type="application/rss+xml" />
+    <language>it</language><atom:link href="http://localhost:37645/it/writeups/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>File Sharing Portal</title>
+      <link>http://localhost:37645/it/writeups/noobzctf/filesharingportal/</link>
+      <pubDate>Tue, 06 Aug 2024 11:27:07 +0200</pubDate>
+      
+      <guid>http://localhost:37645/it/writeups/noobzctf/filesharingportal/</guid>
+      <description>File Sharing Portal Descrizione: Benvenuti nel portale di condivisione dei file! Supportiamo solo file tar!
+Introduction Il ctf ha una struttura molto semplice: abbiamo un form in cui ci viene chiesto di inserire un file tar; una volta inserito il file tar, questo viene decompresso e ci viene mostrato il nome dei file che contiene; cliccando sui diversi file, possiamo leggerne il contenuto.
+Source Il sorgente ha commenti aggiunti in seguito per consentire una migliore comprensione del codice nei writeup</description>
+    </item>
+    
+    <item>
+      <title>WaaS</title>
+      <link>http://localhost:37645/it/writeups/noobzctf/waas/</link>
+      <pubDate>Tue, 06 Aug 2024 11:27:07 +0200</pubDate>
+      
+      <guid>http://localhost:37645/it/writeups/noobzctf/waas/</guid>
+      <description>Waas Descrizione: Writing as a Service!
+Introduction WaaS (Writing as a Service) ci permette di sovrascrivere un file sul sistema (dopo un certo controllo dell&amp;rsquo;input) e di inserirvi tutto ciò che vogliamo (fino a quando non si incontra un newline).
+import subprocess from base64 import b64decode as d while True: print(&amp;quot;[1] Write to a file\n[2] Get the flag\n[3] Exit&amp;quot;) try: inp = int(input(&amp;quot;Choice: &amp;quot;).strip()) except: print(&amp;quot;Invalid input!&amp;quot;) exit(0) if inp == 1: file = input(&amp;quot;Enter file name: &amp;quot;).</description>
+    </item>
+    
     <item>
       <title>N00bzCTF</title>
-      <link>http://localhost:1313/it/writeups/n00bzctf/</link>
+      <link>http://localhost:37645/it/writeups/n00bzctf/</link>
       <pubDate>Mon, 05 Aug 2024 18:26:54 +0200</pubDate>
       
-      <guid>http://localhost:1313/it/writeups/n00bzctf/</guid>
+      <guid>http://localhost:37645/it/writeups/n00bzctf/</guid>
       <description> N00bz CTF 2024 Description Un CTF di 48 ore ospitato da n00bz per n00bz. Organizzato con sfide facili per i principianti (e alcune difficili), n00bzCTF è dedicato a rendere la sicurezza informatica più amichevole e avvicinabile per i n00bz completi.
 Performance Summary CTFs: 31/32 Punti totali: 9794.000 Posizione: 24 Punti di valutazione: 24.067 Writeups Web File Sharing Portal Misc Waas </description>
     </item>
