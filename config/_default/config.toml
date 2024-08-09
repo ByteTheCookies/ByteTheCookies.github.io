@@ -1,7 +1,7 @@
 baseURL = "https://bytethecookies.github.io/"
 languageCode = "en"
 title = "ByteTheCookies"
-theme = "hugo-theme-monochrome"
+theme = "bytethecookies-theme"
 defaultContentLanguage = "en"
 enableEmoji = true
 paginate = 5
