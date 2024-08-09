@@ -1,450 +1,364 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
-<html lang="it">
-  <head>
-    <script
-      src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload"
-      data-no-instant
-      defer
-    ></script>
-    <meta charset="utf-8" />
-    <link
-      rel="shortcut icon"
-      href="https://bytethecookies.github.io/favicon.ico"
-      type="image/x-icon"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<html lang='it'><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href='http://localhost:1313/favicon.ico' type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>File Sharing Portal - ByteTheCookies</title>
 
+    
+
+    
+
+    
     <meta name="author" content="ByteTheCookies" />
+    
 
-    <meta
-      property="og:url"
-      content="https://bytethecookies.github.io/it/writeups/noobzctf/filesharingportal/"
-    />
-    <meta property="og:site_name" content="ByteTheCookies" />
-    <meta property="og:title" content="File Sharing Portal" />
-    <meta
-      property="og:description"
-      content="File Sharing Portal Descrizione: Benvenuti nel portale di condivisione dei file! Supportiamo solo file tar!
+    
+        <meta property="og:url" content="http://localhost:1313/it/writeups/noobzctf/filesharingportal/">
+  <meta property="og:site_name" content="ByteTheCookies">
+  <meta property="og:title" content="File Sharing Portal">
+  <meta property="og:description" content="File Sharing Portal Descrizione: Benvenuti nel portale di condivisione dei file! Supportiamo solo file tar!
 Autori: NoobMaster &#43; NoobHacker
 Punti: 478
 Soluzioni: 119
-Introduction Il ctf ha una struttura molto semplice: abbiamo un form in cui ci viene chiesto di inserire un file tar; una volta inserito il file tar, questo viene decompresso e ci viene mostrato il nome dei file che contiene; cliccando sui diversi file, possiamo leggerne il contenuto."
-    />
-    <meta property="og:locale" content="it" />
-    <meta property="og:type" content="article" />
-    <meta property="article:section" content="writeups" />
-    <meta
-      property="article:published_time"
-      content="2024-08-06T11:27:07+02:00"
-    />
-    <meta
-      property="article:modified_time"
-      content="2024-08-07T10:34:11+02:00"
-    />
-    <meta property="article:tag" content="Web" />
-    <meta property="article:tag" content="Python" />
-    <meta property="article:tag" content="Template Injection" />
+Introduction Il ctf ha una struttura molto semplice: abbiamo un form in cui ci viene chiesto di inserire un file tar; una volta inserito il file tar, questo viene decompresso e ci viene mostrato il nome dei file che contiene; cliccando sui diversi file, possiamo leggerne il contenuto.">
+  <meta property="og:locale" content="it">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="writeups">
+    <meta property="article:published_time" content="2024-08-06T11:27:07+02:00">
+    <meta property="article:modified_time" content="2024-08-07T10:34:11+02:00">
+    <meta property="article:tag" content="Web">
+    <meta property="article:tag" content="Python">
+    <meta property="article:tag" content="Template Injection">
 
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="File Sharing Portal" />
-    <meta
-      name="twitter:description"
-      content="File Sharing Portal Descrizione: Benvenuti nel portale di condivisione dei file! Supportiamo solo file tar!
+    
+
+    
+        
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="File Sharing Portal">
+  <meta name="twitter:description" content="File Sharing Portal Descrizione: Benvenuti nel portale di condivisione dei file! Supportiamo solo file tar!
 Autori: NoobMaster &#43; NoobHacker
 Punti: 478
 Soluzioni: 119
-Introduction Il ctf ha una struttura molto semplice: abbiamo un form in cui ci viene chiesto di inserire un file tar; una volta inserito il file tar, questo viene decompresso e ci viene mostrato il nome dei file che contiene; cliccando sui diversi file, possiamo leggerne il contenuto."
-    />
+Introduction Il ctf ha una struttura molto semplice: abbiamo un form in cui ci viene chiesto di inserire un file tar; una volta inserito il file tar, questo viene decompresso e ci viene mostrato il nome dei file che contiene; cliccando sui diversi file, possiamo leggerne il contenuto.">
 
-    <link rel="stylesheet" href="/style.css" integrity="" />
+    <link rel="stylesheet" href="/style.css" integrity="">
 
-    <link rel="stylesheet" href="/lib/css/prism.css" integrity="" />
 
+
+    <link rel="stylesheet" href="/lib/css/prism.css" integrity="">
+
+
+
+    
     <script>
-      if (!("theme" in localStorage)) {
-        localStorage.theme = "dark";
-      }
+        if (!('theme' in localStorage)) {
+            localStorage.theme = 'dark';
+        }
 
-      if (
-        localStorage.theme === "dark" ||
-        (!("theme" in localStorage) &&
-          window.matchMedia("(prefers-color-scheme: dark)").matches)
-      ) {
-        document.documentElement.setAttribute("data-theme", "dark");
-      } else {
-        document.documentElement.setAttribute("data-theme", "light");
-      }
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.setAttribute("data-theme", "dark");
+        } else {
+            document.documentElement.setAttribute("data-theme", "light");
+        }
     </script>
-    <script defer src="/js/header.js" integrity=""></script>
+<script defer src="/js/header.js" integrity=""></script>
+
+
 
     <script defer src="/js/zooming.js" integrity=""></script>
 
-    <script defer src="/js/prism.js" integrity="" data-manual></script>
 
+
+
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0-beta.3/tex-mml-chtml.js"></script>
+    <script defer src="/js/math.js" integrity=""></script>
+
+
+
+
+    
+        
+
+        
+        
+
+        
+        
+            
+        
+
+        <script defer src="/js/prism.js" integrity="" data-manual></script>
+    
+
+
+
+    
+    
+    
     <script defer src="/js/search-it.js" integrity=""></script>
-  </head>
-  <body>
-    <header>
-      <div id="header_left">
-        <div id="sidebar_btn">
-          <input type="checkbox" id="sidebar_btn_input" class="hidden" />
-          <label id="sidebar_btn_label" for="sidebar_btn_input">
-            <svg id="menu_icon" width="26px" height="26px" viewBox="0 0 24 24">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <line x1="3" y1="12" x2="21" y2="12"></line>
-                <line x1="3" y1="6" x2="21" y2="6"></line>
-                <line x1="3" y1="18" x2="21" y2="18"></line>
-              </svg>
-            </svg>
-          </label>
-          <label id="sidebar_canvas_overlay_wrapper" for="sidebar_btn_input">
-            <div id="sidebar_canvas_overlay"></div>
-          </label>
-          <div id="sidebar">
-            <ul>
-              <li>
-                <a href="/it/">Chi siamo</a>
-              </li>
-              <li>
-                <a href="/it/events/">Eventi</a>
-              </li>
-              <li>
-                <a href="/it/news/">Novità</a>
-              </li>
-              <li>
-                <a href="/it/writeups/">Writeups</a>
-              </li>
-              <li>
-                <a href="/it/contacts/">Contatti</a>
-              </li>
-              <li>
-                <a href="/it/changelog/">Changelog</a>
-              </li>
-            </ul>
-          </div>
-        </div>
 
-        <div class="brand">
-          <div>
-            <a href="/it/">ByteTheCookies</a>
-          </div>
-        </div>
+
+
+
+<link rel="stylesheet" href="http://localhost:1313/user.css">
+
+    
+</head>
+<body><header>
+  <div id="header_left">
+    <div id="sidebar_btn">
+      <input type="checkbox" id="sidebar_btn_input" class="hidden" />
+      <label id="sidebar_btn_label" for="sidebar_btn_input">
+        <svg id="menu_icon" width="26px" height="26px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+</svg>
+
+</svg>
+      </label>
+      <label id="sidebar_canvas_overlay_wrapper" for="sidebar_btn_input">
+        <div id="sidebar_canvas_overlay"></div>
+      </label>
+      <div id="sidebar">
+        <ul><li>
+            <a href="/it/">Chi siamo</a></li><li>
+            <a href="/it/news/">Novità</a></li><li>
+            <a href="/it/writeups/">Writeups</a></li><li>
+            <a href="/it/contacts/">Contatti</a></li></ul>
       </div>
+    </div>
 
-      <div class="toolbox">
-        <div id="theme_tool">
-          <svg
-            id="dark_mode_btn"
-            class="toolbox-btn"
-            width="18px"
-            height="18px"
-            viewBox="0 0 24 24"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <circle cx="12" cy="12" r="5"></circle>
-              <line x1="12" y1="1" x2="12" y2="3"></line>
-              <line x1="12" y1="21" x2="12" y2="23"></line>
-              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-              <line x1="1" y1="12" x2="3" y2="12"></line>
-              <line x1="21" y1="12" x2="23" y2="12"></line>
-              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-            </svg>
-          </svg>
-          <svg
-            id="light_mode_btn"
-            class="toolbox-btn"
-            width="18px"
-            height="18px"
-            viewBox="0 0 24 24"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-            </svg>
-          </svg>
-        </div>
+    <div class="brand">
+      <div>
+        <a href="/it/">ByteTheCookies</a>
+      </div>
+    </div>
+  </div>
 
-        <div id="search_tool">
-          <svg
-            id="search_btn"
-            class="toolbox-btn"
-            width="18px"
-            height="18px"
-            viewBox="0 0 24 24"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <circle cx="11" cy="11" r="8"></circle>
-              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            </svg>
-          </svg>
-          <div id="search_menu_wrapper" class="hidden">
-            <div id="search_menu">
-              <div id="search_menu_toolbar">
-                <div id="search_menu_input_wrapper">
-                  <input
-                    id="search_menu_input"
-                    type="text"
-                    placeholder="Search Posts"
-                  />
-                </div>
-                <div id="search_menu_close_btn">
-                  <svg width="18px" height="18px" viewBox="0 0 24 24">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <line x1="18" y1="6" x2="6" y2="18"></line>
-                      <line x1="6" y1="6" x2="18" y2="18"></line>
-                    </svg>
-                  </svg>
-                </div>
-              </div>
-              <div id="search_menu_results"></div>
+  <div class="toolbox">
+    <div id="theme_tool">
+      <svg
+        id="dark_mode_btn"
+        class="toolbox-btn"
+        width="18px"
+        height="18px"
+        viewBox="0 0 24 24"
+      >
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+</svg>
+
+</svg>
+      <svg
+        id="light_mode_btn"
+        class="toolbox-btn"
+        width="18px"
+        height="18px"
+        viewBox="0 0 24 24"
+      >
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+</svg>
+
+</svg>
+    </div>
+
+    
+    <div id="search_tool">
+      <svg
+        id="search_btn"
+        class="toolbox-btn"
+        width="18px"
+        height="18px"
+        viewBox="0 0 24 24"
+      >
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+</svg>
+
+</svg><div id="search_menu_wrapper" class="hidden">
+    <div id="search_menu">
+        <div id="search_menu_toolbar">
+            <div id="search_menu_input_wrapper">
+                <input id="search_menu_input" type="text" placeholder='Search Posts'>
             </div>
-          </div>
-        </div>
-
-        <div
-          id="translation_tool"
-          class="dropdown-wrapper pure-menu pure-menu-horizontal toolbox-btn"
-          onclick="void(0)"
-        >
-          <ul class="pure-menu-list">
-            <li
-              class="pure-menu-item pure-menu-has-children pure-menu-allow-hover"
-            >
-              <div class="dropdown-btn pure-menu-link">
+            <div id="search_menu_close_btn">
                 <svg width="18px" height="18px" viewBox="0 0 24 24">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <line x1="2" y1="12" x2="22" y2="12"></line>
-                    <path
-                      d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
-                    ></path>
-                  </svg>
-                </svg>
-                <span class="dropdown-desc">Italiano</span>
-              </div>
-              <ul class="pure-menu-children">
-                <li class="pure-menu-item">
-                  <a
-                    href="https://bytethecookies.github.io/"
-                    class="pure-menu-link"
-                    >English</a
-                  >
-                </li>
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>
+</svg>
 
-                <li class="pure-menu-item">
-                  <a
-                    href="https://bytethecookies.github.io/it/"
-                    class="pure-menu-link"
-                    >Italiano</a
-                  >
-                </li>
-              </ul>
-            </li>
-          </ul>
+</svg>
+            </div>
         </div>
-      </div>
-    </header>
-    <nav id="navbar" class="pure-menu">
+        <div id="search_menu_results">
+        </div>
+    </div>
+</div>
+</div>
+     
+    <div
+      id="translation_tool"
+      class="dropdown-wrapper pure-menu pure-menu-horizontal toolbox-btn"
+      onclick="void(0)"
+    >
       <ul class="pure-menu-list">
-        <li class="navbar-item pure-menu-item insection">
-          <a href="/it/" class="pure-menu-link">Chi siamo</a>
-        </li>
-        <li class="navbar-item pure-menu-item">
-          <a href="/it/events/" class="pure-menu-link">Eventi</a>
-        </li>
-        <li class="navbar-item pure-menu-item">
-          <a href="/it/news/" class="pure-menu-link">Novità</a>
-        </li>
-        <li class="navbar-item pure-menu-item insection">
-          <a href="/it/writeups/" class="pure-menu-link">Writeups</a>
-        </li>
-        <li class="navbar-item pure-menu-item">
-          <a href="/it/contacts/" class="pure-menu-link">Contatti</a>
-        </li>
-        <li class="navbar-item pure-menu-item">
-          <a href="/it/changelog/" class="pure-menu-link">Changelog</a>
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+          <div class="dropdown-btn pure-menu-link">
+            <svg width="18px" height="18px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+</svg>
+
+</svg>
+            <span class="dropdown-desc">Italiano</span>
+          </div>
+          <ul class="pure-menu-children">
+            
+            <li class="pure-menu-item">
+              <a href="http://localhost:1313/" class="pure-menu-link"
+                >English</a
+              >
+            </li>
+            
+            <li class="pure-menu-item">
+              <a href="http://localhost:1313/it/" class="pure-menu-link"
+                >Italiano</a
+              >
+            </li>
+            
+          </ul>
         </li>
       </ul>
-    </nav>
-    <main>
-      <div id="content" class="content-margin">
-        <div class="collapsible-menu-wrapper">
-          <div class="collapsible-menu-type">
-            <span>Table of contents</span>
-          </div>
-          <div class="collapsible-menu">
+    </div>
+    
+  </div>
+</header>
+<nav id="navbar" class="pure-menu">
+    <ul class="pure-menu-list"><li class="navbar-item pure-menu-item insection">
+                    
+                        <a href="/it/" class="pure-menu-link">Chi siamo</a>
+                    
+                </li><li class="navbar-item pure-menu-item ">
+                    
+                        <a href="/it/news/" class="pure-menu-link">Novità</a>
+                    
+                </li><li class="navbar-item pure-menu-item insection">
+                    
+                        <a href="/it/writeups/" class="pure-menu-link">Writeups</a>
+                    
+                </li><li class="navbar-item pure-menu-item ">
+                    
+                        <a href="/it/contacts/" class="pure-menu-link">Contatti</a>
+                    
+                </li></ul>
+</nav>
+<main>
+            <div id="content" class="content-margin">
+                
+    
+    <details class="collapsible-menu-wrapper"><summary class="collapsible-menu-type"><span>Table of contents</span></summary><div class="collapsible-menu">
+        
             <nav id="TableOfContents">
-              <ul>
-                <li><a href="#introduction">Introduction</a></li>
-                <li><a href="#source">Source</a></li>
-                <li><a href="#solution">Solution</a></li>
-              </ul>
-            </nav>
-          </div>
-        </div>
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#source">Source</a></li>
+    <li><a href="#solution">Solution</a></li>
+  </ul>
+</nav>
+        
+    </div></details>
 
-        <div class="content-margin">
-          <article>
-            <h1 id="file-sharing-portal" class="header-anchor-wrapper">
-              File Sharing Portal
-              <a href="#file-sharing-portal" class="header-anchor-link">
-                <svg width="16px" height="16px" viewBox="0 0 24 24">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <line x1="4" y1="9" x2="20" y2="9"></line>
-                    <line x1="4" y1="15" x2="20" y2="15"></line>
-                    <line x1="10" y1="3" x2="8" y2="21"></line>
-                    <line x1="16" y1="3" x2="14" y2="21"></line>
-                  </svg>
-                </svg>
-              </a>
-            </h1>
 
-            <p>
-              <strong>Descrizione</strong>: Benvenuti nel portale di
-              condivisione dei file! Supportiamo solo file tar!
-            </p>
-            <p><strong>Autori</strong>: NoobMaster + NoobHacker</p>
-            <p><strong>Punti</strong>: 478</p>
-            <p><strong>Soluzioni</strong>: 119</p>
+<div class="tags">
+  
+    <div class="tag-badge">Web</div>
 
-            <h2 id="introduction" class="header-anchor-wrapper">
-              Introduction
-              <a href="#introduction" class="header-anchor-link">
-                <svg width="16px" height="16px" viewBox="0 0 24 24">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <line x1="4" y1="9" x2="20" y2="9"></line>
-                    <line x1="4" y1="15" x2="20" y2="15"></line>
-                    <line x1="10" y1="3" x2="8" y2="21"></line>
-                    <line x1="16" y1="3" x2="14" y2="21"></line>
-                  </svg>
-                </svg>
-              </a>
-            </h2>
+  
+    <div class="tag-badge">Python</div>
 
-            <p>
-              Il ctf ha una struttura molto semplice: abbiamo un form in cui ci
-              viene chiesto di inserire un file
-              <a href="https://en.wikipedia.org/wiki/Tar_(computing)">tar</a>;
-              una volta inserito il file tar, questo viene decompresso e ci
-              viene mostrato il <code>nome</code> dei file che contiene;
-              cliccando sui diversi file, possiamo leggerne il contenuto.
-            </p>
+  
+    <div class="tag-badge">Template Injection</div>
 
-            <h2 id="source" class="header-anchor-wrapper">
-              Source
-              <a href="#source" class="header-anchor-link">
-                <svg width="16px" height="16px" viewBox="0 0 24 24">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <line x1="4" y1="9" x2="20" y2="9"></line>
-                    <line x1="4" y1="15" x2="20" y2="15"></line>
-                    <line x1="10" y1="3" x2="8" y2="21"></line>
-                    <line x1="16" y1="3" x2="14" y2="21"></line>
-                  </svg>
-                </svg>
-              </a>
-            </h2>
+  
+</div>
 
-            <p>
-              <strong
-                >Il sorgente ha commenti aggiunti in seguito per consentire una
-                migliore comprensione del codice nei writeup</strong
-              >
-            </p>
-            <pre
-              class="mc-prism hide language-text"
-            ><code class="language-python"># filename: server.py
+<div>
+  <p class="date">
+    Last edit: 6 ago 2024
+  </p>
+</div>
+
+
+    <div class="content-margin">
+
+
+
+<article >
+    
+    
+        
+        
+    
+    
+<h1>File Sharing Portal</h1>
+
+<p><strong>Descrizione</strong>: Benvenuti nel portale di condivisione dei file! Supportiamo solo file tar!</p>
+<p><strong>Autori</strong>: NoobMaster + NoobHacker</p>
+<p><strong>Punti</strong>: 478</p>
+<p><strong>Soluzioni</strong>: 119</p>
+
+<h2>Introduction</h2>
+
+<p>Il ctf ha una struttura molto semplice: abbiamo un form in cui ci viene chiesto di inserire un file <a href="https://en.wikipedia.org/wiki/Tar_(computing)">tar</a>; una volta inserito il file tar, questo viene decompresso e ci viene mostrato il <code>nome</code> dei file che contiene; cliccando sui diversi file, possiamo leggerne il contenuto.</p>
+
+<h2>Source</h2>
+
+<p><strong>Il sorgente ha commenti aggiunti in seguito per consentire una migliore comprensione del codice nei writeup</strong></p>
+<pre  class="mc-prism hide language-text" ><code class="language-python"># filename: server.py
 
 #!/usr/bin/env python3
 from flask import Flask, request, redirect, render_template, render_template_string
@@ -506,63 +420,13 @@ if __name__ == '__main__':
 
 
 </code></pre>
-            <p>
-              Si può quindi notare che ci sono diversi controlli sui parametri
-              e, in un primo momento, si potrebbe pensare che il codice sia
-              sicuro al 100%.
-            </p>
+<p>Si può quindi notare che ci sono diversi controlli sui parametri e, in un primo momento, si potrebbe pensare che il codice sia sicuro al 100%.</p>
 
-            <h2 id="solution" class="header-anchor-wrapper">
-              Solution
-              <a href="#solution" class="header-anchor-link">
-                <svg width="16px" height="16px" viewBox="0 0 24 24">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <line x1="4" y1="9" x2="20" y2="9"></line>
-                    <line x1="4" y1="15" x2="20" y2="15"></line>
-                    <line x1="10" y1="3" x2="8" y2="21"></line>
-                    <line x1="16" y1="3" x2="14" y2="21"></line>
-                  </svg>
-                </svg>
-              </a>
-            </h2>
+<h2>Solution</h2>
 
-            <p>
-              La prima cosa che ci è venuta in mente è stata quella di creare un
-              <a
-                href="https://www.futurelearn.com/info/courses/linux-for-bioinformatics/0/steps/201767"
-                >link simbolico</a
-              >
-              per accedere alla flag, e in effetti questo funziona (provate con
-              server.py), il problema è che il nome del file della flag è
-              sconosciuto e questo non ci permette di creare un link simbolico
-              valido.
-            </p>
-            <p>
-              Una volta capito questo, abbiamo fatto un&rsquo;analisi
-              approfondita del codice e siamo giunti alla conclusione che
-              l&rsquo;unica cosa che non veniva controllata era il nome del file
-              tar scompattato, consentendoci di inserire qualsiasi cosa.
-              Combinando questo con la funzione
-              <code>render_template_string</code> (una funzione vulnerabile di
-              flask), è possibile eseguire una
-              <a
-                href="https://book.hacktricks.xyz/pentesting-web/ssti-server-side-template-injection#what-is-ssti-server-side-template-injection"
-                >template injection</a
-              >.
-            </p>
-            <pre
-              class="mc-prism hide language-text"
-            ><code class="language-python"># filename: exploit.py
+<p>La prima cosa che ci è venuta in mente è stata quella di creare un <a href="https://www.futurelearn.com/info/courses/linux-for-bioinformatics/0/steps/201767">link simbolico</a> per accedere alla flag, e in effetti questo funziona (provate con server.py), il problema è che il nome del file della flag è sconosciuto e questo non ci permette di creare un link simbolico valido.</p>
+<p>Una volta capito questo, abbiamo fatto un&rsquo;analisi approfondita del codice e siamo giunti alla conclusione che l&rsquo;unica cosa che non veniva controllata era il nome del file tar scompattato, consentendoci di inserire qualsiasi cosa. Combinando questo con la funzione <code>render_template_string</code> (una funzione vulnerabile di flask), è possibile eseguire una <a href="https://book.hacktricks.xyz/pentesting-web/ssti-server-side-template-injection#what-is-ssti-server-side-template-injection">template injection</a>.</p>
+<pre  class="mc-prism hide language-text" ><code class="language-python"># filename: exploit.py
 
 import requests
 import os
@@ -633,17 +497,22 @@ if __name__ == '__main__':
 
 
 </code></pre>
-            <pre
-              class="mc-prism hide language-text"
-            ><code class="language-stdout">flag: n00bz{n3v3r_7rus71ng_t4r_4g41n!_b3506983087e}
+<pre  class="mc-prism hide language-text" ><code class="language-stdout">flag: n00bz{n3v3r_7rus71ng_t4r_4g41n!_b3506983087e}
 </code></pre>
-            <p align="right">Author: akiidjk</p>
-          </article>
-        </div>
-      </div>
-    </main>
-    <footer>
-      <article>Copyright © 2024 by ByteTheCookies Team</article>
-    </footer>
-  </body>
+<p align='right'>Author: akiidjk </p>
+
+</article>
+</div>
+
+
+                
+                    
+                
+            </div>
+        </main>
+<footer>
+    <article>Copyright © 2024 by ByteTheCookies Team</article>
+</footer>
+
+</body>
 </html>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Python on ByteTheCookies</title>
-    <link>https://bytethecookies.github.io/it/tags/python/</link>
+    <link>http://localhost:1313/it/tags/python/</link>
     <description>Recent content in Python on ByteTheCookies</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it</language>
-    <lastBuildDate>Tue, 06 Aug 2024 11:27:07 +0200</lastBuildDate><atom:link href="https://bytethecookies.github.io/it/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 Aug 2024 11:27:07 +0200</lastBuildDate><atom:link href="http://localhost:1313/it/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>File Sharing Portal</title>
-      <link>https://bytethecookies.github.io/it/writeups/noobzctf/filesharingportal/</link>
+      <link>http://localhost:1313/it/writeups/noobzctf/filesharingportal/</link>
       <pubDate>Tue, 06 Aug 2024 11:27:07 +0200</pubDate>
       
-      <guid>https://bytethecookies.github.io/it/writeups/noobzctf/filesharingportal/</guid>
+      <guid>http://localhost:1313/it/writeups/noobzctf/filesharingportal/</guid>
       <description>File Sharing Portal Descrizione: Benvenuti nel portale di condivisione dei file! Supportiamo solo file tar!
 Autori: NoobMaster + NoobHacker
 Punti: 478
@@ -22,10 +22,10 @@ Introduction Il ctf ha una struttura molto semplice: abbiamo un form in cui ci v
     
     <item>
       <title>WaaS</title>
-      <link>https://bytethecookies.github.io/it/writeups/noobzctf/waas/</link>
+      <link>http://localhost:1313/it/writeups/noobzctf/waas/</link>
       <pubDate>Tue, 06 Aug 2024 11:27:07 +0200</pubDate>
       
-      <guid>https://bytethecookies.github.io/it/writeups/noobzctf/waas/</guid>
+      <guid>http://localhost:1313/it/writeups/noobzctf/waas/</guid>
       <description>Waas Descrizione: Writing as a Service!
 Autori: NoobMaster + NoobHacker
 Punti: 491

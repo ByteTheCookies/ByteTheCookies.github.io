@@ -2,236 +2,251 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://bytethecookies.github.io/writeups/noobzctf/filesharingportal/</loc>
-    <lastmod>2024-08-06T17:05:00+02:00</lastmod>
+    <loc>http://localhost:1313/tags/119-solves/</loc>
+    <lastmod>2024-08-09T14:22:57+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/491-points/</loc>
+    <lastmod>2024-08-09T14:22:57+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/498-points/</loc>
+    <lastmod>2024-08-09T14:22:57+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/78-solves/</loc>
+    <lastmod>2024-08-09T14:22:57+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/writeups/noobzctf/filesharingportal/</loc>
+    <lastmod>2024-08-09T14:22:57+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="it"
-                href="https://bytethecookies.github.io/it/writeups/noobzctf/filesharingportal/"
+                href="http://localhost:1313/it/writeups/noobzctf/filesharingportal/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://bytethecookies.github.io/writeups/noobzctf/filesharingportal/"
+                href="http://localhost:1313/writeups/noobzctf/filesharingportal/"
                 />
   </url><url>
-    <loc>https://bytethecookies.github.io/tags/misc/</loc>
-    <lastmod>2024-08-07T10:37:01+02:00</lastmod>
+    <loc>http://localhost:1313/tags/misc/</loc>
+    <lastmod>2024-08-09T14:22:57+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="it"
-                href="https://bytethecookies.github.io/it/tags/misc/"
+                href="http://localhost:1313/it/tags/misc/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://bytethecookies.github.io/tags/misc/"
+                href="http://localhost:1313/tags/misc/"
                 />
   </url><url>
-    <loc>https://bytethecookies.github.io/tags/python/</loc>
-    <lastmod>2024-08-07T10:37:01+02:00</lastmod>
+    <loc>http://localhost:1313/tags/noobmaster-&#43;-noobhacker/</loc>
+    <lastmod>2024-08-09T14:22:57+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/python/</loc>
+    <lastmod>2024-08-09T14:22:57+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="it"
-                href="https://bytethecookies.github.io/it/tags/python/"
+                href="http://localhost:1313/it/tags/python/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://bytethecookies.github.io/tags/python/"
+                href="http://localhost:1313/tags/python/"
                 />
   </url><url>
-    <loc>https://bytethecookies.github.io/tags/</loc>
-    <lastmod>2024-08-07T10:37:01+02:00</lastmod>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2024-08-09T14:22:57+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="it"
-                href="https://bytethecookies.github.io/it/tags/"
+                href="http://localhost:1313/it/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://bytethecookies.github.io/tags/"
+                href="http://localhost:1313/tags/"
                 />
   </url><url>
-    <loc>https://bytethecookies.github.io/tags/template-injection/</loc>
-    <lastmod>2024-08-06T17:05:00+02:00</lastmod>
+    <loc>http://localhost:1313/tags/template-injection/</loc>
+    <lastmod>2024-08-09T14:22:57+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="it"
-                href="https://bytethecookies.github.io/it/tags/template-injection/"
+                href="http://localhost:1313/it/tags/template-injection/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://bytethecookies.github.io/tags/template-injection/"
+                href="http://localhost:1313/tags/template-injection/"
                 />
   </url><url>
-    <loc>https://bytethecookies.github.io/writeups/noobzctf/waas/</loc>
-    <lastmod>2024-08-07T10:37:01+02:00</lastmod>
+    <loc>http://localhost:1313/writeups/noobzctf/waas/</loc>
+    <lastmod>2024-08-09T14:22:57+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="it"
-                href="https://bytethecookies.github.io/it/writeups/noobzctf/waas/"
+                href="http://localhost:1313/it/writeups/noobzctf/waas/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://bytethecookies.github.io/writeups/noobzctf/waas/"
+                href="http://localhost:1313/writeups/noobzctf/waas/"
                 />
   </url><url>
-    <loc>https://bytethecookies.github.io/tags/web/</loc>
-    <lastmod>2024-08-06T17:05:00+02:00</lastmod>
+    <loc>http://localhost:1313/tags/web/</loc>
+    <lastmod>2024-08-09T14:22:57+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="it"
-                href="https://bytethecookies.github.io/it/tags/web/"
+                href="http://localhost:1313/it/tags/web/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://bytethecookies.github.io/tags/web/"
+                href="http://localhost:1313/tags/web/"
                 />
   </url><url>
-    <loc>https://bytethecookies.github.io/tags/ctf/</loc>
+    <loc>http://localhost:1313/tags/ctf/</loc>
     <lastmod>2024-08-06T17:02:49+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="it"
-                href="https://bytethecookies.github.io/it/tags/ctf/"
+                href="http://localhost:1313/it/tags/ctf/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://bytethecookies.github.io/tags/ctf/"
+                href="http://localhost:1313/tags/ctf/"
                 />
   </url><url>
-    <loc>https://bytethecookies.github.io/tags/n00bz/</loc>
+    <loc>http://localhost:1313/tags/n00bz/</loc>
     <lastmod>2024-08-06T17:02:49+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="it"
-                href="https://bytethecookies.github.io/it/tags/n00bz/"
+                href="http://localhost:1313/it/tags/n00bz/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://bytethecookies.github.io/tags/n00bz/"
+                href="http://localhost:1313/tags/n00bz/"
                 />
   </url><url>
-    <loc>https://bytethecookies.github.io/writeups/n00bzctf/</loc>
+    <loc>http://localhost:1313/writeups/n00bzctf/</loc>
     <lastmod>2024-08-06T17:02:49+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="it"
-                href="https://bytethecookies.github.io/it/writeups/n00bzctf/"
+                href="http://localhost:1313/it/writeups/n00bzctf/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://bytethecookies.github.io/writeups/n00bzctf/"
+                href="http://localhost:1313/writeups/n00bzctf/"
                 />
   </url><url>
-    <loc>https://bytethecookies.github.io/changelog/</loc>
+    <loc>http://localhost:1313/changelog/</loc>
     <lastmod>2024-08-05T18:30:24+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="it"
-                href="https://bytethecookies.github.io/it/changelog/"
+                href="http://localhost:1313/it/changelog/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://bytethecookies.github.io/changelog/"
+                href="http://localhost:1313/changelog/"
                 />
   </url><url>
-    <loc>https://bytethecookies.github.io/contacts/</loc>
+    <loc>http://localhost:1313/contacts/</loc>
     <lastmod>2024-08-05T18:30:24+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="it"
-                href="https://bytethecookies.github.io/it/contacts/"
+                href="http://localhost:1313/it/contacts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://bytethecookies.github.io/contacts/"
+                href="http://localhost:1313/contacts/"
                 />
   </url><url>
-    <loc>https://bytethecookies.github.io/news/</loc>
+    <loc>http://localhost:1313/news/</loc>
     <lastmod>2024-08-05T18:30:24+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="it"
-                href="https://bytethecookies.github.io/it/news/"
+                href="http://localhost:1313/it/news/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://bytethecookies.github.io/news/"
+                href="http://localhost:1313/news/"
                 />
   </url><url>
-    <loc>https://bytethecookies.github.io/events/</loc>
+    <loc>http://localhost:1313/events/</loc>
     <lastmod>2024-08-05T18:30:24+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="it"
-                href="https://bytethecookies.github.io/it/events/"
+                href="http://localhost:1313/it/events/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://bytethecookies.github.io/events/"
+                href="http://localhost:1313/events/"
                 />
   </url><url>
-    <loc>https://bytethecookies.github.io/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2024-08-05T18:30:24+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="it"
-                href="https://bytethecookies.github.io/it/"
+                href="http://localhost:1313/it/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://bytethecookies.github.io/"
+                href="http://localhost:1313/"
                 />
   </url><url>
-    <loc>https://bytethecookies.github.io/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="it"
-                href="https://bytethecookies.github.io/it/categories/"
+                href="http://localhost:1313/it/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://bytethecookies.github.io/categories/"
+                href="http://localhost:1313/categories/"
                 />
   </url><url>
-    <loc>https://bytethecookies.github.io/series/</loc>
+    <loc>http://localhost:1313/series/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="it"
-                href="https://bytethecookies.github.io/it/series/"
+                href="http://localhost:1313/it/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://bytethecookies.github.io/series/"
+                href="http://localhost:1313/series/"
                 />
   </url><url>
-    <loc>https://bytethecookies.github.io/writeups/</loc>
+    <loc>http://localhost:1313/writeups/</loc>
     <lastmod>2024-08-05T18:30:24+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="it"
-                href="https://bytethecookies.github.io/it/writeups/"
+                href="http://localhost:1313/it/writeups/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://bytethecookies.github.io/writeups/"
+                href="http://localhost:1313/writeups/"
                 />
   </url>
 </urlset>

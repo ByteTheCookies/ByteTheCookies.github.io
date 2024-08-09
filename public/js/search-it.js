@@ -1,7 +1,7 @@
 (() => {
   // <stdin>
   (() => {
-    var index_url = "https://bytethecookies.github.io/it/index.json";
+    var index_url = "http://localhost:1313/it/index.json";
     var cmp = new Intl.Collator("en", { numeric: true, sensitivity: "base" }).compare;
     var inf = Infinity;
     var escapeRegExp = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");

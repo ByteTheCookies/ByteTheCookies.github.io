@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>News on ByteTheCookies</title>
-    <link>https://bytethecookies.github.io/it/news/</link>
+    <link>http://localhost:1313/it/news/</link>
     <description>Recent content in News on ByteTheCookies</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it</language>
-    <lastBuildDate>Mon, 05 Aug 2024 17:54:05 +0200</lastBuildDate><atom:link href="https://bytethecookies.github.io/it/news/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Aug 2024 17:54:05 +0200</lastBuildDate><atom:link href="http://localhost:1313/it/news/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
