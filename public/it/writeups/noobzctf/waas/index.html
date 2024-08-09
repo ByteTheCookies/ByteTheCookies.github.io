@@ -337,20 +337,7 @@ import subprocess from base64 import b64decode as d while True: print(&#34;[1] W
     <h1 style='text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;'>Waas</h1>
 <p><strong>Descrizione</strong>: Writing as a Service!</p>
 
-<h2 id="introduction" class="header-anchor-wrapper">Introduction
-  <a href="#introduction" class="header-anchor-link">
-    <svg width="16px" height="16px" viewBox="0 0 24 24">
-<svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24" height="24" viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-    stroke-linejoin="round">
-    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
-</svg>
-
-</svg>
-  </a>
-</h2>
+<h2>Introduction</h2>
 
 <p>WaaS (Writing as a Service) ci permette di sovrascrivere un file sul sistema (dopo un certo controllo dell&rsquo;input) e di inserirvi tutto ciò che vogliamo (fino a quando non si incontra un newline).</p>
 <pre  class="mc-prism hide language-text" ><code class="language-python">import subprocess
@@ -383,20 +370,7 @@ while True:
                 print(flag.stdout.strip())
 </code></pre>
 
-<h2 id="solution" class="header-anchor-wrapper">Solution
-  <a href="#solution" class="header-anchor-link">
-    <svg width="16px" height="16px" viewBox="0 0 24 24">
-<svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24" height="24" viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-    stroke-linejoin="round">
-    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
-</svg>
-
-</svg>
-  </a>
-</h2>
+<h2>Solution</h2>
 
 <p>In un primo momento si potrebbe pensare di provare a bypassare la validazione dell&rsquo;input, magari riscrivendo il funzionamento del comando cat o del file di sfida stesso, ma questo non è possibile.
 Una cosa molto bizzarra è l&rsquo;importato ma inutilizzato <code>b64decode</code> dal modulo <code>base64</code>, che è ciò che ci permette di risolvere la sfida.</p>

@@ -1,13 +1,10 @@
+// USER
 @font-face {
   font-family: "JetBrainsMonoNerd";
   src: url("/fonts/JetBrainsMonoNLNerdFont-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
-
-/* p {
-  font-family: "NomeFontParagrafi", mono;
-} */
 
 h1,
 h2,
