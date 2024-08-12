@@ -1,0 +1,79 @@
+[[members]]
+image = "icons/cookie.svg"
+name = "Davide Amoruso"
+github = "https://github.com/Dabi1290"
+handle = "@bl4ck_sky"
+role = "University of Salerno"
+categories = ["Osint", "Crypto", "Web"]
+
+[[members]]
+image = "icons/cookie.svg"
+name = "Francesco Memoli"
+github = "https://github.com/akiidjk"
+handle = "@akiidjk"
+role = "HighSchool student"
+categories = ["Web", "Pwn"]
+
+[[members]]
+image = "icons/cookie.svg"
+name = "Vito Altieri"
+github = "https://github.com/vympel7"
+handle = "@vympel"
+role = "University of Salerno"
+categories = ["Crypto", "Pwn"]
+
+[[members]]
+image = "icons/cookie.svg"
+name = "Alessandro Cavaliere"
+github = "https://github.com/Alessandro-Cavaliere"
+handle = "@galexela"
+role = "University of Salerno"
+categories = ["Web", "Block"]
+
+[[members]]
+image = "icons/cookie.svg"
+name = "Marco Santoriello"
+github = "https://github.com/marcosantoriello"
+handle = "@marcus"
+role = "University of Salerno"
+categories = ["Web"]
+
+[[members]]
+image = "icons/cookie.svg"
+name = "Daniele Migliore"
+github = "https://github.com/danmig06"
+handle = "@the_dann"
+role = "HighSchool student"
+categories = ["Rev", "Pwn"]
+
+[[members]]
+image = "icons/cookie.svg"
+name = "Jose Sgariglia"
+github = "https://github.com/jose-sgariglia"
+handle = "@josekonpyuta"
+role = "University of Salerno"
+categories = ["Crypto"]
+
+[[members]]
+image = "icons/cookie.svg"
+name = "Salvatore Russo"
+github = "https://github.com/sasa71"
+handle = "@sasy"
+role = "University of Salerno"
+categories = ["Web"]
+
+[[members]]
+image = "icons/cookie.svg"
+name = "Salvatore Ruocco"
+github = "https://github.com/tatore02"
+handle = "@tatore"
+role = "University of Salerno"
+categories = ["Web", "Pwn"]
+
+[[members]]
+image = "icons/cookie.svg"
+name = "@Daniele Liquori"
+github = "https://github.com/danlig"
+handle = "@danlig"
+role = "University of Salerno"
+categories = ["Web"]
