@@ -1,19 +1,15 @@
 +++
 title = 'Contacts'
 date = 2024-08-05T17:54:09+02:00
-draft = true
 +++
 
+# Contacts
 
-# Contatti
-
-Per contattarci consigliamo di usare l'email ma puoi usare anche il nostro discord
+To contact us we recommend using email but you can also use our discord
 
 **Email:** `bytethecookies@proton.me`
 
-**Discord:** [Cliccami]()
-
-## Altri social
+## Other social
 
 <div>
   <ul style='display: flex;'>

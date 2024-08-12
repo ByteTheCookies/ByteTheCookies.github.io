@@ -1,4 +1,0 @@
-+++
-title = 'Writeup'
-type = 'postcard'
-+++
