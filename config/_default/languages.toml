@@ -1,11 +1,5 @@
 [en]
-contentDir = "content/en"
+contentDir = "content"
 languageName = "English"
 languageCode = "en"
 weight = 1
-
-[it]
-contentDir = "content/it"
-languageName = "Italiano"
-languageCode = "it"
-weight = 2
