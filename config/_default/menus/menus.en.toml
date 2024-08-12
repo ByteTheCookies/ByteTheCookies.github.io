@@ -1,20 +1,20 @@
 [[navbar]]
 identifier = "about"
-name = "About"
+name = "💻 About"
 url = "/"
 weight = 1
 [[navbar]]
 identifier = "news"
-name = "News"
+name = "📰 News"
 url = "/news/"
 weight = 2
 [[navbar]]
 identifier = "writeups"
-name = "Writeups"
+name = "📑 Writeups"
 url = "/writeups/"
 weight = 3
 [[navbar]]
 identifier = "contacts"
-name = "Contacts"
+name = "✉️ Contacts"
 url = "/Contacts/"
 weight = 4
