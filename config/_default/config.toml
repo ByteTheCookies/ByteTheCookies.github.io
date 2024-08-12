@@ -14,3 +14,14 @@ series = "series"
 
 [outputs]
 home = ["HTML", "RSS", "JSON"]
+
+
+[params.categoryEmojis]
+Web = "🌐"
+Pwn = "💻"
+Crypto = "🔐"
+Forensic = "🕵️"
+Osint = "🔍"
+Misc = "🔧"
+Rev = "🔨"
+Block = "🔗"
