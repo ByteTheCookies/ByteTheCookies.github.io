@@ -72,7 +72,7 @@ categories = ["Web", "Pwn"]
 
 [[members]]
 image = "icons/cookie.svg"
-name = "@Daniele Liquori"
+name = "@Daniele Liguori"
 github = "https://github.com/danlig"
 handle = "@danlig"
 role = "University of Salerno"
