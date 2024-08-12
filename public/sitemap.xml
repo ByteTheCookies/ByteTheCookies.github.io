@@ -53,9 +53,6 @@
     <loc>http://localhost:1313/contacts/</loc>
     <lastmod>2024-08-12T21:34:10+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/news/</loc>
-    <lastmod>2024-08-12T21:34:10+02:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/events/</loc>
     <lastmod>2024-08-12T21:34:10+02:00</lastmod>
   </url><url>
@@ -63,6 +60,9 @@
     <lastmod>2024-08-12T21:34:10+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
+  </url><url>
+    <loc>http://localhost:1313/news/</loc>
+    <lastmod>2024-08-12T21:34:10+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/series/</loc>
   </url><url>
