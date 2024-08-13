@@ -6,7 +6,17 @@
     <description>Recent content in CTF on ByteTheCookies</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 05 Aug 2024 18:26:54 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/ctf/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 13 Aug 2024 12:20:57 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/ctf/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lexington Informatics Tournament CTF 2024</title>
+      <link>http://localhost:1313/writeups/litctf/</link>
+      <pubDate>Tue, 13 Aug 2024 12:20:57 +0200</pubDate>
+      
+      <guid>http://localhost:1313/writeups/litctf/</guid>
+      <description> Lexington Informatics Tournament CTF Description Lexington Informatics Tournament CTF 2024 is a Jeopardy-style, beginner-friendly online CTF that&amp;rsquo;s open to everyone.
+Performance Summary CTFs: 18/32 Total point: 2068 Position: 95 Rating points: ? Writeups Web Kirbytime </description>
+    </item>
+    
     <item>
       <title>N00bzCTF</title>
       <link>http://localhost:1313/writeups/n00bzctf/</link>

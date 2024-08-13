@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/tags/125-points/</loc>
+    <lastmod>2024-08-13T13:01:07+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/218-solves/</loc>
+    <lastmod>2024-08-13T13:01:07+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/writeups/litctf/kirbytime/</loc>
+    <lastmod>2024-08-13T13:01:07+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/python/</loc>
+    <lastmod>2024-08-13T13:01:07+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/stephanie/</loc>
+    <lastmod>2024-08-13T13:01:07+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2024-08-13T13:01:07+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/web/</loc>
+    <lastmod>2024-08-13T13:01:07+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/ctf/</loc>
+    <lastmod>2024-08-13T12:20:57+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/writeups/litctf/</loc>
+    <lastmod>2024-08-13T12:20:57+02:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/119-solves/</loc>
     <lastmod>2024-08-12T21:34:10+02:00</lastmod>
   </url><url>
@@ -23,22 +50,10 @@
     <loc>http://localhost:1313/tags/noobmaster-&#43;-noobhacker/</loc>
     <lastmod>2024-08-12T21:34:10+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/python/</loc>
-    <lastmod>2024-08-12T21:34:10+02:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2024-08-12T21:34:10+02:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/template-injection/</loc>
     <lastmod>2024-08-12T21:34:10+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/writeups/noobzctf/waas/</loc>
-    <lastmod>2024-08-12T21:34:10+02:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/web/</loc>
-    <lastmod>2024-08-12T21:34:10+02:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/ctf/</loc>
     <lastmod>2024-08-12T21:34:10+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/n00bz/</loc>
@@ -62,7 +77,7 @@
     <loc>http://localhost:1313/categories/</loc>
   </url><url>
     <loc>http://localhost:1313/news/</loc>
-    <lastmod>2024-08-12T21:34:10+02:00</lastmod>
+    <lastmod>2024-08-12T22:52:23+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/series/</loc>
   </url><url>
