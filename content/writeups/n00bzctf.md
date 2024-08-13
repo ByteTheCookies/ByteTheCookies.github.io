@@ -10,7 +10,6 @@ tags = [
 type = 'list'
 +++
 
-
 # N00bz CTF 2024
 
 ## Description
