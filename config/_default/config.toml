@@ -1,6 +1,7 @@
 baseURL = "https://bytethecookies.github.io/"
 languageCode = "en"
 title = "ByteTheCookies"
+description = "ByteTheCookies is a blog about ctf team, programming, and other tech-related topics."
 theme = "bytethecookies-theme"
 defaultContentLanguage = "en"
 enableEmoji = true

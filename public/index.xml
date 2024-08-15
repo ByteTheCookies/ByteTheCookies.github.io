@@ -24,7 +24,7 @@ Source # filename: main.py import sqlite3 from flask import Flask, request, redi
       
       <guid>http://localhost:1313/writeups/litctf/</guid>
       <description> Lexington Informatics Tournament CTF Description Lexington Informatics Tournament CTF 2024 is a Jeopardy-style, beginner-friendly online CTF that&amp;rsquo;s open to everyone.
-Performance Summary CTFs: 18/32 Total point: 2068 Position: 95 Rating points: ? Writeups Web Kirbytime </description>
+Performance Summary CTFs: 18/32 Total point: 2068 Position: 95 Rating points: 19.095 Writeups Web Kirbytime </description>
     </item>
     
     <item>
