@@ -24,6 +24,6 @@ Lexington Informatics Tournament CTF 2024 is a Jeopardy-style, beginner-friendly
 
 ## Writeups
 
-# Web
+#### Web
 
-- [Kirbytime](/writeups/litctf/kirbytime/)
+- [Kirbytime](/writeups/litctf2024/kirbytime/)
