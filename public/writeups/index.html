@@ -1,22 +1,7 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+               
 
 <!DOCTYPE html>
-<html lang='en'><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <link rel="shortcut icon" href='http://localhost:1313/favicon.ico' type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -207,8 +192,8 @@
                 </li></ul>
 </nav>
 <main>
-            <div id="content" class="content-margin">
-                
+      <div id="content" class="content-margin">
+        
 
 
 
@@ -217,7 +202,60 @@
 
 <div class="postcard-layout content-margin">
     
-        <a href="http://localhost:1313/writeups/litctf/kirbytime/">
+        <a href="http://localhost:1313/writeups/idekctf2024/hello/">
+            <div class="postcard-item">
+                <div class="postcard-title">
+                    <span>Hello</span>
+                </div>
+                <div class="postcard-summary">
+                    <span>Hello Description: Just to warm you up for the next Fight :&ldquo;D
+Introduction Then we have an apparently empty page, but where we can via a ?name= parameter enter some text, the page will then respond with hello, {text entered}
+The with an ngix server
+Moreover, ctf in general gives us the possibility of using an admin bot where the flag is set in the cookies
+Source # filename: index.py &lt;?</span>
+                </div>
+                <div class="postcard-metadata">
+                    <span>2024/08/18 · 
+    
+        
+    
+
+    
+        
+            <span>Writeup</span>
+        
+    
+</span>
+                </div>
+            </div>
+        </a>
+    
+        <a href="http://localhost:1313/writeups/idekctf2024/">
+            <div class="postcard-item">
+                <div class="postcard-title">
+                    <span>idekCTF 2024</span>
+                </div>
+                <div class="postcard-summary">
+                    <span> IdekCTF 2024 Description idekCTF is an information security CTF competition organized by the idek team and is aimed at the entire spectrum from high school and university students to experienced players. idekCTF will cover the standard Jeopardy-style CTF topics (binary exploitation, reverse engineering, cryptography, web exploitation, and forensics) as well as other, less standard categories.
+Performance Summary CTFs: &hellip; Total point: &hellip; Position: &hellip; Rating points: &hellip; Writeups Web Hello </span>
+                </div>
+                <div class="postcard-metadata">
+                    <span>2024/08/18 · 
+    
+        
+    
+
+    
+        
+            <span>Writeup</span>
+        
+    
+</span>
+                </div>
+            </div>
+        </a>
+    
+        <a href="http://localhost:1313/writeups/litctf2024/kirbytime/">
             <div class="postcard-item">
                 <div class="postcard-title">
                     <span>Kirbytime</span>
@@ -243,7 +281,7 @@ Source # filename: main.py import sqlite3 from flask import Flask, request, redi
             </div>
         </a>
     
-        <a href="http://localhost:1313/writeups/litctf/">
+        <a href="http://localhost:1313/writeups/litctf2024/">
             <div class="postcard-item">
                 <div class="postcard-title">
                     <span>Lexington Informatics Tournament CTF 2024</span>
@@ -268,7 +306,7 @@ Performance Summary CTFs: 18/32 Total point: 2068 Position: 95 Rating points: 19
             </div>
         </a>
     
-        <a href="http://localhost:1313/writeups/noobzctf/filesharingportal/">
+        <a href="http://localhost:1313/writeups/noobzctf2024/filesharingportal/">
             <div class="postcard-item">
                 <div class="postcard-title">
                     <span>File Sharing Portal</span>
@@ -294,70 +332,35 @@ Source The source has comments added later to allow a better understanding of th
             </div>
         </a>
     
-        <a href="http://localhost:1313/writeups/noobzctf/waas/">
-            <div class="postcard-item">
-                <div class="postcard-title">
-                    <span>WaaS</span>
-                </div>
-                <div class="postcard-summary">
-                    <span>Waas Description: Writing as a Service!
-Introduction WaaS (Writing as a Service) allows us to overwrite a file on the system (after some input validation) and insert anything (until a newline is met) we want in it.
-import subprocess from base64 import b64decode as d while True: print(&quot;[1] Write to a file\n[2] Get the flag\n[3] Exit&quot;) try: inp = int(input(&quot;Choice: &quot;).strip()) except: print(&quot;Invalid input!&quot;) exit(0) if inp == 1: file = input(&quot;Enter file name: &quot;).</span>
-                </div>
-                <div class="postcard-metadata">
-                    <span>2024/08/06 · 
     
-        
-    
-
-    
-        
-            <span>Writeup</span>
-        
-    
-</span>
-                </div>
-            </div>
-        </a>
-    
-        <a href="http://localhost:1313/writeups/n00bzctf/">
-            <div class="postcard-item">
-                <div class="postcard-title">
-                    <span>N00bzCTF</span>
-                </div>
-                <div class="postcard-summary">
-                    <span> N00bz CTF 2024 Description A 48 hours CTF hosted by n00bz for n00bz. Organized with beginner friendly challenges (and some hard ones), n00bzCTF is dedicated to make cyber security more friendly and approachable for complete n00bz.
-Performance Summary CTFs: 31/32 Total point: 9794.000 Position: 24 Rating points: 24.067 Writeups Web File Sharing Portal Misc Waas </span>
-                </div>
-                <div class="postcard-metadata">
-                    <span>2024/08/05 · 
-    
-        
-    
-
-    
-        
-            <span>Writeup</span>
-        
-    
-</span>
-                </div>
-            </div>
-        </a>
-    
-    
+    <ul class="pagination pagination-default">
+      <li class="page-item disabled">
+        <a aria-disabled="true" aria-label="First" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&laquo;&laquo;</span></a>
+      </li>
+      <li class="page-item disabled">
+        <a aria-disabled="true" aria-label="Previous" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&laquo;</span></a>
+      </li>
+      <li class="page-item active">
+        <a aria-current="page" aria-label="Page 1" class="page-link" role="button">1</a>
+      </li>
+      <li class="page-item">
+        <a href="/writeups/page/2/" aria-label="Page 2" class="page-link" role="button">2</a>
+      </li>
+      <li class="page-item">
+        <a href="/writeups/page/2/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/writeups/page/2/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+      </li>
+    </ul>
 </div>
 
 
 
 
-
-
-                
-                    
-                
-            </div>
-        </main>
+   
+      </div>
+    </main>
 <footer>
     <article>Copyright © 2024 by ByteTheCookies Team</article>
 </footer>

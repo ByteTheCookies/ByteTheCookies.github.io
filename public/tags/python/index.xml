@@ -9,10 +9,10 @@
     <lastBuildDate>Tue, 13 Aug 2024 13:01:07 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Kirbytime</title>
-      <link>http://localhost:1313/writeups/litctf/kirbytime/</link>
+      <link>http://localhost:1313/writeups/litctf2024/kirbytime/</link>
       <pubDate>Tue, 13 Aug 2024 13:01:07 +0200</pubDate>
       
-      <guid>http://localhost:1313/writeups/litctf/kirbytime/</guid>
+      <guid>http://localhost:1313/writeups/litctf2024/kirbytime/</guid>
       <description>Kirbytime Description: Welcome to Kirby&amp;rsquo;s Website.
 Introduction We find ourselves in front of a very pink Kirby-themed page, where we are asked to enter a password of 7 characters.
 Source # filename: main.py import sqlite3 from flask import Flask, request, redirect, render_template import time app = Flask(__name__) @app.route(&#39;/&#39;, methods=[&#39;GET&#39;, &#39;POST&#39;]) def login(): message = None if request.method == &#39;POST&#39;: password = request.form[&#39;password&#39;] real = &#39;REDACTED&#39; if len(password) != 7: return render_template(&#39;login.</description>
@@ -20,10 +20,10 @@ Source # filename: main.py import sqlite3 from flask import Flask, request, redi
     
     <item>
       <title>File Sharing Portal</title>
-      <link>http://localhost:1313/writeups/noobzctf/filesharingportal/</link>
+      <link>http://localhost:1313/writeups/noobzctf2024/filesharingportal/</link>
       <pubDate>Tue, 06 Aug 2024 11:27:07 +0200</pubDate>
       
-      <guid>http://localhost:1313/writeups/noobzctf/filesharingportal/</guid>
+      <guid>http://localhost:1313/writeups/noobzctf2024/filesharingportal/</guid>
       <description>File Sharing Portal Description: Welcome to the file sharing portal! We only support tar files!
 Introduction The ctf has a very simple structure: we have a form in which we are asked to insert a tar file; once the tar file has been inserted, it is unzipped and we are shown the name of files it contains; by clicking on the different files, we can read their contents.
 Source The source has comments added later to allow a better understanding of the code in the writeups</description>
@@ -31,10 +31,10 @@ Source The source has comments added later to allow a better understanding of th
     
     <item>
       <title>WaaS</title>
-      <link>http://localhost:1313/writeups/noobzctf/waas/</link>
+      <link>http://localhost:1313/writeups/noobzctf2024/waas/</link>
       <pubDate>Tue, 06 Aug 2024 11:27:07 +0200</pubDate>
       
-      <guid>http://localhost:1313/writeups/noobzctf/waas/</guid>
+      <guid>http://localhost:1313/writeups/noobzctf2024/waas/</guid>
       <description>Waas Description: Writing as a Service!
 Introduction WaaS (Writing as a Service) allows us to overwrite a file on the system (after some input validation) and insert anything (until a newline is met) we want in it.
 import subprocess from base64 import b64decode as d while True: print(&amp;quot;[1] Write to a file\n[2] Get the flag\n[3] Exit&amp;quot;) try: inp = int(input(&amp;quot;Choice: &amp;quot;).strip()) except: print(&amp;quot;Invalid input!&amp;quot;) exit(0) if inp == 1: file = input(&amp;quot;Enter file name: &amp;quot;).</description>

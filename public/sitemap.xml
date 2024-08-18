@@ -2,65 +2,92 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/tags/125-points/</loc>
-    <lastmod>2024-08-13T13:13:32+02:00</lastmod>
+    <loc>http://localhost:1313/writeups/idekctf2024/hello/</loc>
+    <lastmod>2024-08-18T12:58:59+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/218-solves/</loc>
-    <lastmod>2024-08-13T13:13:32+02:00</lastmod>
+    <loc>http://localhost:1313/tags/attack-type/</loc>
+    <lastmod>2024-08-18T12:58:59+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/writeups/litctf/kirbytime/</loc>
-    <lastmod>2024-08-13T13:13:32+02:00</lastmod>
+    <loc>http://localhost:1313/tags/authors/</loc>
+    <lastmod>2024-08-18T12:58:59+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/python/</loc>
-    <lastmod>2024-08-13T13:13:32+02:00</lastmod>
+    <loc>http://localhost:1313/tags/category/</loc>
+    <lastmod>2024-08-18T12:58:59+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/stephanie/</loc>
-    <lastmod>2024-08-13T13:13:32+02:00</lastmod>
+    <loc>http://localhost:1313/tags/language/</loc>
+    <lastmod>2024-08-18T12:58:59+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/n-points/</loc>
+    <lastmod>2024-08-18T12:58:59+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/n-solves/</loc>
+    <lastmod>2024-08-18T12:58:59+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2024-08-14T10:13:16+02:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/web/</loc>
-    <lastmod>2024-08-13T13:13:32+02:00</lastmod>
+    <lastmod>2024-08-18T12:58:59+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/ctf/</loc>
-    <lastmod>2024-08-14T10:13:16+02:00</lastmod>
+    <lastmod>2024-08-18T12:58:37+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/writeups/litctf/</loc>
-    <lastmod>2024-08-14T10:13:16+02:00</lastmod>
+    <loc>http://localhost:1313/tags/idek/</loc>
+    <lastmod>2024-08-18T12:58:37+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/writeups/idekctf2024/</loc>
+    <lastmod>2024-08-18T12:58:37+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/125-points/</loc>
+    <lastmod>2024-08-13T13:01:07+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/218-solves/</loc>
+    <lastmod>2024-08-13T13:01:07+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/writeups/litctf2024/kirbytime/</loc>
+    <lastmod>2024-08-13T13:01:07+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/python/</loc>
+    <lastmod>2024-08-13T13:01:07+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/stephanie/</loc>
+    <lastmod>2024-08-13T13:01:07+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/web/</loc>
+    <lastmod>2024-08-13T13:01:07+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/writeups/litctf2024/</loc>
+    <lastmod>2024-08-13T12:20:57+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/119-solves/</loc>
-    <lastmod>2024-08-12T21:34:10+02:00</lastmod>
+    <lastmod>2024-08-06T11:27:07+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/491-points/</loc>
-    <lastmod>2024-08-12T21:34:10+02:00</lastmod>
+    <lastmod>2024-08-06T11:27:07+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/498-points/</loc>
-    <lastmod>2024-08-12T21:34:10+02:00</lastmod>
+    <lastmod>2024-08-06T11:27:07+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/78-solves/</loc>
-    <lastmod>2024-08-12T21:34:10+02:00</lastmod>
+    <lastmod>2024-08-06T11:27:07+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/writeups/noobzctf/filesharingportal/</loc>
-    <lastmod>2024-08-12T21:34:10+02:00</lastmod>
+    <loc>http://localhost:1313/writeups/noobzctf2024/filesharingportal/</loc>
+    <lastmod>2024-08-06T11:27:07+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/misc/</loc>
-    <lastmod>2024-08-12T21:34:10+02:00</lastmod>
+    <lastmod>2024-08-06T11:27:07+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/noobmaster-&#43;-noobhacker/</loc>
-    <lastmod>2024-08-12T21:34:10+02:00</lastmod>
+    <lastmod>2024-08-06T11:27:07+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/template-injection/</loc>
-    <lastmod>2024-08-12T21:34:10+02:00</lastmod>
+    <lastmod>2024-08-06T11:27:07+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/writeups/noobzctf/waas/</loc>
-    <lastmod>2024-08-12T21:34:10+02:00</lastmod>
+    <loc>http://localhost:1313/writeups/noobzctf2024/waas/</loc>
+    <lastmod>2024-08-06T11:27:07+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/n00bz/</loc>
-    <lastmod>2024-08-13T13:13:38+02:00</lastmod>
+    <lastmod>2024-08-05T18:26:54+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/writeups/n00bzctf/</loc>
-    <lastmod>2024-08-13T13:13:38+02:00</lastmod>
+    <loc>http://localhost:1313/writeups/n00bzctf2024/</loc>
+    <lastmod>2024-08-05T18:26:54+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/changelog/</loc>
     <lastmod>2024-08-12T21:34:10+02:00</lastmod>
@@ -72,7 +99,7 @@
     <lastmod>2024-08-12T21:34:10+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2024-08-12T21:34:10+02:00</lastmod>
+    <lastmod>2024-08-15T19:35:46+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
   </url><url>
