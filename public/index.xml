@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ByteTheCookies</title>
-    <link>http://localhost:1313/</link>
+    <link>http://localhost:37991/</link>
     <description>Recent content on ByteTheCookies</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language><atom:link href="http://localhost:37991/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hello</title>
-      <link>http://localhost:1313/writeups/idekctf2024/hello/</link>
+      <link>http://localhost:37991/writeups/idekctf2024/hello/</link>
       <pubDate>Sun, 18 Aug 2024 12:58:59 +0200</pubDate>
       
-      <guid>http://localhost:1313/writeups/idekctf2024/hello/</guid>
+      <guid>http://localhost:37991/writeups/idekctf2024/hello/</guid>
       <description>Hello Description: Just to warm you up for the next Fight :&amp;ldquo;D
 Introduction Then we have an apparently empty page, but where we can via a ?name= parameter enter some text, the page will then respond with hello, {text entered}
 The with an ngix server
@@ -21,20 +21,20 @@ Source # filename: index.py &amp;lt;?</description>
     
     <item>
       <title>IdekCTF 2024</title>
-      <link>http://localhost:1313/writeups/idekctf2024/</link>
+      <link>http://localhost:37991/writeups/idekctf2024/</link>
       <pubDate>Sun, 18 Aug 2024 12:58:37 +0200</pubDate>
       
-      <guid>http://localhost:1313/writeups/idekctf2024/</guid>
+      <guid>http://localhost:37991/writeups/idekctf2024/</guid>
       <description> IdekCTF 2024 Description idekCTF is an information security CTF competition organized by the idek team and is aimed at the entire spectrum from high school and university students to experienced players. idekCTF will cover the standard Jeopardy-style CTF topics (binary exploitation, reverse engineering, cryptography, web exploitation, and forensics) as well as other, less standard categories.
 Performance Summary CTFs: 6/35 Total point: 732 Position: 101 Rating points: ? Writeups Web Hello </description>
     </item>
     
     <item>
       <title>Kirbytime</title>
-      <link>http://localhost:1313/writeups/litctf2024/kirbytime/</link>
+      <link>http://localhost:37991/writeups/litctf2024/kirbytime/</link>
       <pubDate>Tue, 13 Aug 2024 13:01:07 +0200</pubDate>
       
-      <guid>http://localhost:1313/writeups/litctf2024/kirbytime/</guid>
+      <guid>http://localhost:37991/writeups/litctf2024/kirbytime/</guid>
       <description>Kirbytime Description: Welcome to Kirby&amp;rsquo;s Website.
 Introduction We find ourselves in front of a very pink Kirby-themed page, where we are asked to enter a password of 7 characters.
 Source # filename: main.py import sqlite3 from flask import Flask, request, redirect, render_template import time app = Flask(__name__) @app.route(&#39;/&#39;, methods=[&#39;GET&#39;, &#39;POST&#39;]) def login(): message = None if request.method == &#39;POST&#39;: password = request.form[&#39;password&#39;] real = &#39;REDACTED&#39; if len(password) != 7: return render_template(&#39;login.</description>
@@ -42,20 +42,20 @@ Source # filename: main.py import sqlite3 from flask import Flask, request, redi
     
     <item>
       <title>Lexington Informatics Tournament CTF 2024</title>
-      <link>http://localhost:1313/writeups/litctf2024/</link>
+      <link>http://localhost:37991/writeups/litctf2024/</link>
       <pubDate>Tue, 13 Aug 2024 12:20:57 +0200</pubDate>
       
-      <guid>http://localhost:1313/writeups/litctf2024/</guid>
+      <guid>http://localhost:37991/writeups/litctf2024/</guid>
       <description> Lexington Informatics Tournament CTF Description Lexington Informatics Tournament CTF 2024 is a Jeopardy-style, beginner-friendly online CTF that&amp;rsquo;s open to everyone.
 Performance Summary CTFs: 18/32 Total point: 2068 Position: 95 Rating points: 19.095 Writeups Web Kirbytime </description>
     </item>
     
     <item>
       <title>File Sharing Portal</title>
-      <link>http://localhost:1313/writeups/noobzctf2024/filesharingportal/</link>
+      <link>http://localhost:37991/writeups/noobzctf2024/filesharingportal/</link>
       <pubDate>Tue, 06 Aug 2024 11:27:07 +0200</pubDate>
       
-      <guid>http://localhost:1313/writeups/noobzctf2024/filesharingportal/</guid>
+      <guid>http://localhost:37991/writeups/noobzctf2024/filesharingportal/</guid>
       <description>File Sharing Portal Description: Welcome to the file sharing portal! We only support tar files!
 Introduction The ctf has a very simple structure: we have a form in which we are asked to insert a tar file; once the tar file has been inserted, it is unzipped and we are shown the name of files it contains; by clicking on the different files, we can read their contents.
 Source The source has comments added later to allow a better understanding of the code in the writeups</description>
@@ -63,10 +63,10 @@ Source The source has comments added later to allow a better understanding of th
     
     <item>
       <title>WaaS</title>
-      <link>http://localhost:1313/writeups/noobzctf2024/waas/</link>
+      <link>http://localhost:37991/writeups/noobzctf2024/waas/</link>
       <pubDate>Tue, 06 Aug 2024 11:27:07 +0200</pubDate>
       
-      <guid>http://localhost:1313/writeups/noobzctf2024/waas/</guid>
+      <guid>http://localhost:37991/writeups/noobzctf2024/waas/</guid>
       <description>Waas Description: Writing as a Service!
 Introduction WaaS (Writing as a Service) allows us to overwrite a file on the system (after some input validation) and insert anything (until a newline is met) we want in it.
 import subprocess from base64 import b64decode as d while True: print(&amp;quot;[1] Write to a file\n[2] Get the flag\n[3] Exit&amp;quot;) try: inp = int(input(&amp;quot;Choice: &amp;quot;).strip()) except: print(&amp;quot;Invalid input!&amp;quot;) exit(0) if inp == 1: file = input(&amp;quot;Enter file name: &amp;quot;).</description>
@@ -74,10 +74,10 @@ import subprocess from base64 import b64decode as d while True: print(&amp;quot;
     
     <item>
       <title>N00bzCTF 2024</title>
-      <link>http://localhost:1313/writeups/n00bzctf2024/</link>
+      <link>http://localhost:37991/writeups/n00bzctf2024/</link>
       <pubDate>Mon, 05 Aug 2024 18:26:54 +0200</pubDate>
       
-      <guid>http://localhost:1313/writeups/n00bzctf2024/</guid>
+      <guid>http://localhost:37991/writeups/n00bzctf2024/</guid>
       <description> N00bz CTF 2024 Description A 48 hours CTF hosted by n00bz for n00bz. Organized with beginner friendly challenges (and some hard ones), n00bzCTF is dedicated to make cyber security more friendly and approachable for complete n00bz.
 Performance Summary CTFs: 31/32 Total point: 9794.000 Position: 24 Rating points: 24.067 Writeups Web File Sharing Portal Misc Waas </description>
     </item>

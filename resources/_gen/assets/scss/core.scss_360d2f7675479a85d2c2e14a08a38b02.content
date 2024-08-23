@@ -540,7 +540,9 @@ h6 {
 
 .div-img-members {
   padding: 10px;
-  margin: 0px; }
+  margin: 0px;
+  display: inline-block;
+  min-width: 30%; }
 
 .name-members {
   margin: 14px 0 0 0;
@@ -609,6 +611,21 @@ h6 {
 
 .categories-color-block {
   background-color: #8f22ce; }
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top: 4px solid #D4B783;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: auto; }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
 
 article {
   line-height: 1.7;

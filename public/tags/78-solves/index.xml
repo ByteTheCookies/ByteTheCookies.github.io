@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>78 Solves on ByteTheCookies</title>
-    <link>http://localhost:1313/tags/78-solves/</link>
+    <link>http://localhost:37991/tags/78-solves/</link>
     <description>Recent content in 78 Solves on ByteTheCookies</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 06 Aug 2024 11:27:07 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/78-solves/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 Aug 2024 11:27:07 +0200</lastBuildDate><atom:link href="http://localhost:37991/tags/78-solves/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>WaaS</title>
-      <link>http://localhost:1313/writeups/noobzctf2024/waas/</link>
+      <link>http://localhost:37991/writeups/noobzctf2024/waas/</link>
       <pubDate>Tue, 06 Aug 2024 11:27:07 +0200</pubDate>
       
-      <guid>http://localhost:1313/writeups/noobzctf2024/waas/</guid>
+      <guid>http://localhost:37991/writeups/noobzctf2024/waas/</guid>
       <description>Waas Description: Writing as a Service!
 Introduction WaaS (Writing as a Service) allows us to overwrite a file on the system (after some input validation) and insert anything (until a newline is met) we want in it.
 import subprocess from base64 import b64decode as d while True: print(&amp;quot;[1] Write to a file\n[2] Get the flag\n[3] Exit&amp;quot;) try: inp = int(input(&amp;quot;Choice: &amp;quot;).strip()) except: print(&amp;quot;Invalid input!&amp;quot;) exit(0) if inp == 1: file = input(&amp;quot;Enter file name: &amp;quot;).</description>

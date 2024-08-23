@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Abdelhameed Ghazy on ByteTheCookies</title>
-    <link>http://localhost:1313/tags/abdelhameed-ghazy/</link>
+    <link>http://localhost:37991/tags/abdelhameed-ghazy/</link>
     <description>Recent content in Abdelhameed Ghazy on ByteTheCookies</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 18 Aug 2024 12:58:59 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/abdelhameed-ghazy/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 18 Aug 2024 12:58:59 +0200</lastBuildDate><atom:link href="http://localhost:37991/tags/abdelhameed-ghazy/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hello</title>
-      <link>http://localhost:1313/writeups/idekctf2024/hello/</link>
+      <link>http://localhost:37991/writeups/idekctf2024/hello/</link>
       <pubDate>Sun, 18 Aug 2024 12:58:59 +0200</pubDate>
       
-      <guid>http://localhost:1313/writeups/idekctf2024/hello/</guid>
+      <guid>http://localhost:37991/writeups/idekctf2024/hello/</guid>
       <description>Hello Description: Just to warm you up for the next Fight :&amp;ldquo;D
 Introduction Then we have an apparently empty page, but where we can via a ?name= parameter enter some text, the page will then respond with hello, {text entered}
 The with an ngix server
