@@ -5,6 +5,7 @@ github = "https://github.com/Dabi1290"
 handle = "@bl4ck_sky"
 role = "University of Salerno"
 categories = ["Osint", "Crypto", "Web"]
+link_etherscan = ""
 
 [[members]]
 image = "icons/cookie.svg"
@@ -13,6 +14,7 @@ github = "https://github.com/akiidjk"
 handle = "@akiidjk"
 role = "HighSchool student"
 categories = ["Web", "Pwn"]
+link_etherscan = ""
 
 [[members]]
 image = "icons/cookie.svg"
@@ -21,6 +23,7 @@ github = "https://github.com/vympel7"
 handle = "@vympel"
 role = "University of Salerno"
 categories = ["Crypto", "Pwn"]
+link_etherscan = ""
 
 [[members]]
 image = "icons/cookie.svg"
@@ -29,6 +32,7 @@ github = "https://github.com/Alessandro-Cavaliere"
 handle = "@galexela"
 role = "University of Salerno"
 categories = ["Web", "Block"]
+link_etherscan = ""
 
 [[members]]
 image = "icons/cookie.svg"
@@ -37,6 +41,7 @@ github = "https://github.com/marcosantoriello"
 handle = "@marcus"
 role = "University of Salerno"
 categories = ["Web"]
+link_etherscan = ""
 
 [[members]]
 image = "icons/cookie.svg"
@@ -45,6 +50,7 @@ github = "https://github.com/danmig06"
 handle = "@the_dann"
 role = "HighSchool student"
 categories = ["Rev", "Pwn"]
+link_etherscan = ""
 
 [[members]]
 image = "icons/cookie.svg"
@@ -53,6 +59,7 @@ github = "https://github.com/jose-sgariglia"
 handle = "@josekonpyuta"
 role = "University of Salerno"
 categories = ["Crypto"]
+link_etherscan = ""
 
 [[members]]
 image = "icons/cookie.svg"
@@ -61,6 +68,7 @@ github = "https://github.com/sasa71"
 handle = "@sasy"
 role = "University of Salerno"
 categories = ["Web"]
+link_etherscan = ""
 
 [[members]]
 image = "icons/cookie.svg"
@@ -69,11 +77,13 @@ github = "https://github.com/tatore02"
 handle = "@tatore"
 role = "University of Salerno"
 categories = ["Web", "Pwn"]
+link_etherscan = ""
 
 [[members]]
 image = "icons/cookie.svg"
-name = "@Daniele Liguori"
+name = "Daniele Liguori"
 github = "https://github.com/danlig"
 handle = "@danlig"
 role = "University of Salerno"
 categories = ["Web"]
+link_etherscan = ""
