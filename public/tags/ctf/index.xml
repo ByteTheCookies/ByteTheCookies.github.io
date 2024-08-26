@@ -2,39 +2,49 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>CTF on ByteTheCookies</title>
-    <link>http://localhost:37991/tags/ctf/</link>
+    <link>http://localhost:1313/tags/ctf/</link>
     <description>Recent content in CTF on ByteTheCookies</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 18 Aug 2024 12:58:37 +0200</lastBuildDate><atom:link href="http://localhost:37991/tags/ctf/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 26 Aug 2024 16:58:34 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/ctf/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SekaiCTF 2024</title>
+      <link>http://localhost:1313/writeups/sekaictf/</link>
+      <pubDate>Mon, 26 Aug 2024 16:58:34 +0200</pubDate>
+      
+      <guid>http://localhost:1313/writeups/sekaictf/</guid>
+      <description>SekaiCTF 2024 Description SekaiCTF is back for its third iteration! This year’s competition will feature various categories designed to test participants’ skills and incentivize learning. Our CTF will have more difficult challenges, and are catered towards intermediate and advanced players—however, there will still be beginner-friendly challenges to welcome players on the newer side.
+Url Discord Performance Summary CTFs: 3 Total point: 369 Position: 136 Rating points: 2.721 Writeups Rev CrackMe Crypto Some trick PPC (Professional Programming &amp;amp; Coding) Miku vs.</description>
+    </item>
+    
     <item>
       <title>IdekCTF 2024</title>
-      <link>http://localhost:37991/writeups/idekctf2024/</link>
+      <link>http://localhost:1313/writeups/idekctf2024/</link>
       <pubDate>Sun, 18 Aug 2024 12:58:37 +0200</pubDate>
       
-      <guid>http://localhost:37991/writeups/idekctf2024/</guid>
+      <guid>http://localhost:1313/writeups/idekctf2024/</guid>
       <description> IdekCTF 2024 Description idekCTF is an information security CTF competition organized by the idek team and is aimed at the entire spectrum from high school and university students to experienced players. idekCTF will cover the standard Jeopardy-style CTF topics (binary exploitation, reverse engineering, cryptography, web exploitation, and forensics) as well as other, less standard categories.
-Performance Summary CTFs: 6/35 Total point: 732 Position: 101 Rating points: ? Writeups Web Hello </description>
+Url Telegram Performance Summary CTFs: 6/35 Total point: 732 Position: 101 Rating points: ? Writeups Web Hello </description>
     </item>
     
     <item>
       <title>Lexington Informatics Tournament CTF 2024</title>
-      <link>http://localhost:37991/writeups/litctf2024/</link>
+      <link>http://localhost:1313/writeups/litctf2024/</link>
       <pubDate>Tue, 13 Aug 2024 12:20:57 +0200</pubDate>
       
-      <guid>http://localhost:37991/writeups/litctf2024/</guid>
+      <guid>http://localhost:1313/writeups/litctf2024/</guid>
       <description> Lexington Informatics Tournament CTF Description Lexington Informatics Tournament CTF 2024 is a Jeopardy-style, beginner-friendly online CTF that&amp;rsquo;s open to everyone.
-Performance Summary CTFs: 18/32 Total point: 2068 Position: 95 Rating points: 19.095 Writeups Web Kirbytime </description>
+Url Discord Performance Summary CTFs: 18/32 Total point: 2068 Position: 95 Rating points: 19.095 Writeups Web Kirbytime </description>
     </item>
     
     <item>
       <title>N00bzCTF 2024</title>
-      <link>http://localhost:37991/writeups/n00bzctf2024/</link>
+      <link>http://localhost:1313/writeups/n00bzctf2024/</link>
       <pubDate>Mon, 05 Aug 2024 18:26:54 +0200</pubDate>
       
-      <guid>http://localhost:37991/writeups/n00bzctf2024/</guid>
+      <guid>http://localhost:1313/writeups/n00bzctf2024/</guid>
       <description> N00bz CTF 2024 Description A 48 hours CTF hosted by n00bz for n00bz. Organized with beginner friendly challenges (and some hard ones), n00bzCTF is dedicated to make cyber security more friendly and approachable for complete n00bz.
-Performance Summary CTFs: 31/32 Total point: 9794.000 Position: 24 Rating points: 24.067 Writeups Web File Sharing Portal Misc Waas </description>
+Url Discord Performance Summary CTFs: 31/32 Total point: 9794.000 Position: 24 Rating points: 24.067 Writeups Web File Sharing Portal Misc Waas </description>
     </item>
     
   </channel>

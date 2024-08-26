@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rev/Mobile on ByteTheCookies</title>
+    <link>http://localhost:1313/tags/rev/mobile/</link>
+    <description>Recent content in Rev/Mobile on ByteTheCookies</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 26 Aug 2024 17:04:19 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/rev/mobile/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Crack Me</title>
+      <link>http://localhost:1313/writeups/sekaictf2024/crackme/</link>
+      <pubDate>Mon, 26 Aug 2024 17:04:19 +0200</pubDate>
+      
+      <guid>http://localhost:1313/writeups/sekaictf2024/crackme/</guid>
+      <description>Crack Me Description: Developed for SekaiCTF 2022 but never got a chance to release it. Can you log in and claim the flag?
+Introduction &amp;hellip;
+Source &amp;hellip;
+# filename: file.py &amp;hellip;
+Solution &amp;hellip;
+# filename: file.py $ flag: SEKAI{15_React_N@71v3_R3v3rs3_H@RD???} Author: akiidjk </description>
+    </item>
+    
+  </channel>
+</rss>

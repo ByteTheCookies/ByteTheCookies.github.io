@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Javascript/Java on ByteTheCookies</title>
+    <link>http://localhost:1313/tags/javascript/java/</link>
+    <description>Recent content in Javascript/Java on ByteTheCookies</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 26 Aug 2024 17:04:19 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/javascript/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Crack Me</title>
+      <link>http://localhost:1313/writeups/sekaictf2024/crackme/</link>
+      <pubDate>Mon, 26 Aug 2024 17:04:19 +0200</pubDate>
+      
+      <guid>http://localhost:1313/writeups/sekaictf2024/crackme/</guid>
+      <description>Crack Me Description: Developed for SekaiCTF 2022 but never got a chance to release it. Can you log in and claim the flag?
+Introduction First rev ctf of Sekai 2024 with an apk attached, so we have a mobile challenge on our hands. The first thing to do (which I strongly advise against in a real environment) is to download and install the app to get a quick overview of what it does.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,568 @@
+               
+
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href='http://localhost:1313/favicon.ico' type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Miku vs. Machine - ByteTheCookies</title>
+
+    
+
+    
+
+    
+    <meta name="author" content="ByteTheCookies" />
+    
+
+    
+        <meta property="og:url" content="http://localhost:1313/writeups/sekaictf2024/mikuvsmachine/">
+  <meta property="og:site_name" content="ByteTheCookies">
+  <meta property="og:title" content="Miku vs. Machine">
+  <meta property="og:description" content="Miku vs. Machine Description: Time limit is 2 seconds for this challenge.
+Official resources of challenge
+Introduction The goal is to distribute the hours of n singers in m shows. Each show has a number of hours equal to l (unknown) and can only change singers once. We also want that each singer will have the same time on stage.
+Solution To solve this problem, I use a greedy strategy that iteratively divides the available singing time among the singers, ensuring that each singer fulfills their required hours.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="writeups">
+    <meta property="article:published_time" content="2024-08-26T17:04:29+02:00">
+    <meta property="article:modified_time" content="2024-08-26T17:04:29+02:00">
+    <meta property="article:tag" content="PPC">
+    <meta property="article:tag" content="Python">
+    <meta property="article:tag" content="100 Points">
+    <meta property="article:tag" content="176 Solves">
+    <meta property="article:tag" content="Null_awe">
+
+    
+
+    
+        
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Miku vs. Machine">
+  <meta name="twitter:description" content="Miku vs. Machine Description: Time limit is 2 seconds for this challenge.
+Official resources of challenge
+Introduction The goal is to distribute the hours of n singers in m shows. Each show has a number of hours equal to l (unknown) and can only change singers once. We also want that each singer will have the same time on stage.
+Solution To solve this problem, I use a greedy strategy that iteratively divides the available singing time among the singers, ensuring that each singer fulfills their required hours.">
+
+    <link rel="stylesheet" href="/style.css" integrity="">
+
+
+
+    <link rel="stylesheet" href="/lib/css/prism.css" integrity="">
+
+
+
+    
+    <script>
+        if (!('theme' in localStorage)) {
+            localStorage.theme = 'dark';
+        }
+
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.setAttribute("data-theme", "dark");
+        } else {
+            document.documentElement.setAttribute("data-theme", "light");
+        }
+    </script>
+<script defer src="/js/header.js" integrity=""></script>
+
+
+
+    <script defer src="/js/zooming.js" integrity=""></script>
+
+
+
+
+
+
+
+    
+        
+
+        
+        
+
+        
+        
+            
+        
+
+        <script defer src="/js/prism.js" integrity="" data-manual></script>
+    
+
+
+
+    
+    
+    
+    <script defer src="/js/search-en.js" integrity=""></script>
+
+
+
+
+<link rel="stylesheet" href="http://localhost:1313/user.css">
+
+    
+</head>
+<body><header>
+    <div id="header_left">
+        <div id="sidebar_btn">
+            <input type="checkbox" id="sidebar_btn_input" class="hidden" />
+            <label id="sidebar_btn_label" for="sidebar_btn_input">
+                <svg id="menu_icon" width="26px" height="26px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+</svg>
+
+</svg>
+            </label>
+            <label id="sidebar_canvas_overlay_wrapper" for="sidebar_btn_input">
+                <div id="sidebar_canvas_overlay"></div>
+            </label>
+            <div id="sidebar">
+                <ul><li>
+                            <a href="/">💻 About</a></li><li>
+                            <a href="/news/">📰 News</a></li><li>
+                            <a href="/writeups/">📑 Writeups</a></li><li>
+                            <a href="/contacts/">✉️ Contacts</a></li></ul>
+            </div>
+        </div>
+    
+        <div class="brand">
+            <div>
+                <a href="/">ByteTheCookies</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="toolbox">
+        <div id="theme_tool">
+            <svg id="dark_mode_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+</svg>
+
+</svg>
+            <svg id="light_mode_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+</svg>
+
+</svg>
+        </div>
+
+        
+            <div id="search_tool">
+                <svg id="search_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+</svg>
+
+</svg><div id="search_menu_wrapper" class="hidden">
+    <div id="search_menu">
+        <div id="search_menu_toolbar">
+            <div id="search_menu_input_wrapper">
+                <input id="search_menu_input" type="text" placeholder='Search Posts'>
+            </div>
+            <div id="search_menu_close_btn">
+                <svg width="18px" height="18px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>
+</svg>
+
+</svg>
+            </div>
+        </div>
+        <div id="search_menu_results">
+        </div>
+    </div>
+</div>
+</div>
+        
+
+        
+    </div>
+</header>
+<nav id="navbar" class="pure-menu">
+    <ul class="pure-menu-list"><li class="navbar-item pure-menu-item ">
+                    
+                        <a href="/" class="pure-menu-link">💻 About</a>
+                    
+                </li><li class="navbar-item pure-menu-item ">
+                    
+                        <a href="/news/" class="pure-menu-link">📰 News</a>
+                    
+                </li><li class="navbar-item pure-menu-item insection">
+                    
+                        <a href="/writeups/" class="pure-menu-link">📑 Writeups</a>
+                    
+                </li><li class="navbar-item pure-menu-item ">
+                    
+                        <a href="/contacts/" class="pure-menu-link">✉️ Contacts</a>
+                    
+                </li></ul>
+</nav>
+<main>
+      <div id="content" class="content-margin">
+        
+    
+    <details class="collapsible-menu-wrapper"><summary class="collapsible-menu-type"><span>Table of contents</span></summary><div class="collapsible-menu">
+        
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#solution">Solution</a></li>
+    <li><a href="#step-by-step-explanation">Step-by-Step Explanation</a></li>
+    <li><a href="#example-execution">Example Execution</a>
+      <ul>
+        <li><a href="#input">Input</a></li>
+        <li><a href="#execution">Execution</a></li>
+        <li><a href="#output">Output</a></li>
+      </ul>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+        
+    </div></details>
+
+
+
+<div class="tags">
+  
+    <div class="badge">PPC</div>
+
+  
+    <div class="badge">Python</div>
+
+  
+    <div class="badge">100 points</div>
+
+  
+    <div class="badge">176 solves</div>
+
+  
+    <div class="badge">null_awe</div>
+
+  
+</div>
+
+<div>
+  <p class="date">
+    Last edit: Aug 26, 2024
+  </p>
+</div>
+
+
+    <div class="content-margin">
+
+
+
+<article >
+    
+    
+        
+        
+    
+    <h1 style='text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;'>Miku vs. Machine</h1>
+<p><strong>Description</strong>: Time limit is 2 seconds for this challenge.</p>
+<p><a href="https://ppc.chals.sekai.team"><strong>Official resources of challenge</strong></a></p>
+
+<h2 id="introduction" class="header-anchor-wrapper">Introduction
+  <a href="#introduction" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
+
+<p>The goal is to distribute the hours of <code>n</code> singers in <code>m</code> shows.
+Each show has a number of hours equal to <code>l</code> (unknown) and can only change singers once.
+We also want that each singer will have the same time on stage.</p>
+
+<h2 id="solution" class="header-anchor-wrapper">Solution
+  <a href="#solution" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
+
+<p>To solve this problem, I use a <strong>greedy</strong> strategy that iteratively divides the available singing time among the singers, ensuring that each singer fulfills their required hours.</p>
+<pre  class="mc-prism hide language-text" ><code class="language-python">T = int(input())
+
+for _ in range(T):
+    n, m = map(int, input().split(' '))
+    l = n
+    print(l)
+    duration_for_singer = m
+    singers = [duration_for_singer] * n
+    for i in range(len(singers)):
+        while singers[i] &gt; 0:
+            show = []
+            if (singers[i] - l) &gt;= 0:
+                show.append((l//2, i+1))
+                show.append((l - l//2, i+1))
+                singers[i] -= l
+            elif singers[i] &lt; l:
+                show.append((singers[i], i+1))
+                show.append((l - singers[i], i+2))
+                singers[i+1] -= l - singers[i]
+                singers[i] = 0
+            print(f&quot;{show[0][0]} {show[0][1]} {show[1][0]} {show[1][1]}&quot;)
+</code></pre>
+
+<h2 id="step-by-step-explanation" class="header-anchor-wrapper">Step-by-Step Explanation
+  <a href="#step-by-step-explanation" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
+
+<ol>
+<li><strong>Initialization</strong></li>
+</ol>
+<ul>
+<li>The first input <code>T</code> represents the number of test cases.</li>
+<li>After some experimentation on pen and paper, I noticed that the minimum value of <code>l</code> is equal to the number of singers, so <code>l</code> is set to <code>n</code>.</li>
+<li>I initialize a list <code>singers</code> of length <code>n</code>, where each element is set to <code>m</code> to represent the remaining singing hours for each singer.</li>
+</ul>
+<ol start="2">
+<li><strong>Time Distribution Logic</strong></li>
+</ol>
+<ul>
+<li>I iterate over each singer using a loop. For each singer <code>i</code>, the following steps are performed:
+<ul>
+<li><strong>While Loop</strong>: Continue allocating time to the current singer as long as they have hours remaining (<code>singers[i] &gt; 0</code>).</li>
+<li><strong>Time Allocation</strong>:
+<ul>
+<li>If the current singer has <code>l</code> or more hours remaining, divide <code>l</code> hours into two chunks:
+<ul>
+<li>The first chunk is <code>l//2</code> hours, and the second chunk is <code>l - l//2</code> hours. Both chunks are allocated to the same singer.</li>
+<li>Subtract <code>l</code> from the singer&rsquo;s remaining hours.</li>
+</ul>
+</li>
+<li>If the current singer has less than <code>l</code> hours remaining:
+<ul>
+<li>Allocate all remaining hours to the current singer.</li>
+<li>Allocate the rest of <code>l</code> to the next singer in line (<code>i+2</code>).</li>
+<li>Subtract the hours from the next singer&rsquo;s total.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Output</strong>:
+<ul>
+<li>After each allocation, the result is stored in a list <code>show</code> and printed in the format <code>{hours1} {singer1} {hours2} {singer2}</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ol start="3">
+<li><strong>Output</strong></li>
+</ol>
+<ul>
+<li>The program prints the number <code>l</code> as the first line for each test case.</li>
+<li>For each show, the specific distribution of hours between the singers is printed.</li>
+</ul>
+
+<h2 id="example-execution" class="header-anchor-wrapper">Example Execution
+  <a href="#example-execution" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
+
+
+<h3 id="input" class="header-anchor-wrapper">Input
+  <a href="#input" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h3>
+
+<p><code>n</code> = 4 <br>
+<code>m</code> = 7</p>
+
+<h3 id="execution" class="header-anchor-wrapper">Execution
+  <a href="#execution" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h3>
+
+<p><code>l</code> = 4 <br>
+<code>singers</code> = [7, 7, 7, 7]</p>
+<ul>
+<li>
+<p><code>i</code> = 0</p>
+<ul>
+<li>
+<p><code>show</code> = (hours:2 singer:1 , hours:2 singer:1) <br>
+<code>singers</code> = [3, 7, 7, 7]</p>
+</li>
+<li>
+<p><code>show</code> = ( hours:3 singer:1 , hours:1 singer:2 ) <br>
+<code>singers</code> = [0, 6, 7, 7]</p>
+</li>
+</ul>
+</li>
+<li>
+<p><code>i</code> = 1</p>
+<ul>
+<li>
+<p><code>show</code> = ( hours:2 singer:2 , hours:2 singer:2 ) <br>
+<code>singers</code> = [0, 2, 7, 7]</p>
+</li>
+<li>
+<p><code>show</code> = ( hours:2 singer:2 , hours:2 singer:3 ) <br>
+<code>singers</code> = [0, 0, 5, 7]</p>
+</li>
+</ul>
+</li>
+<li>
+<p><code>i</code> = 2</p>
+<ul>
+<li>
+<p><code>show</code> = ( hours:2 singer:3 , hours:2 singer:3 ) <br>
+<code>singers</code> = [0, 0, 1, 7]</p>
+</li>
+<li>
+<p><code>show</code> = ( hours:1 singer:3 , hours:3 singer:4 ) <br>
+<code>singers</code> = [0, 0, 0, 4]</p>
+</li>
+</ul>
+</li>
+<li>
+<p><code>i</code> = 3</p>
+<ul>
+<li><code>show</code> = ( hours:2 singer:4 , hours:2 singer:4 ) <br>
+<code>singers</code> = [0, 0, 0, 0]</li>
+</ul>
+</li>
+</ul>
+
+<h3 id="output" class="header-anchor-wrapper">Output
+  <a href="#output" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h3>
+
+<pre  class="mc-prism hide language-text" ><code class="language-stdout">4
+2 1 2 1
+3 1 1 2
+2 2 2 2
+2 2 2 3
+2 3 2 3
+1 3 3 4
+2 4 2 4
+</code></pre>
+
+<h2 id="conclusion" class="header-anchor-wrapper">Conclusion
+  <a href="#conclusion" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
+
+<p>I don&rsquo;t consider this challenge difficult, it&rsquo;s just a greedy algorithm (it takes a lot more to scare a LeetCode boy), but it wasn&rsquo;t immediately clear that the output didn&rsquo;t necessarily have to be the same as that shown in the challenge&rsquo;s PDF , but it was enough to fit the constraints of the problem.</p>
+<pre  class="mc-prism hide language-text" ><code class="language-stdout">$ flag: SEKAI{t1nyURL_th1s:_6d696b75766d}
+</code></pre>
+<p align='right'>Author: Tatore </p>
+
+</article>
+</div>
+   
+      </div>
+    </main>
+<footer>
+    <article>Copyright © 2024 by ByteTheCookies Team | v1.0</article>
+</footer>
+
+</body>
+</html>

@@ -6,18 +6,47 @@
     <description>Recent content in Attack Type on ByteTheCookies</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 18 Aug 2024 12:58:59 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/attack-type/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 26 Aug 2024 17:04:29 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/attack-type/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>http://localhost:1313/writeups/idekctf2024/hello/</link>
-      <pubDate>Sun, 18 Aug 2024 12:58:59 +0200</pubDate>
+      <link>http://localhost:1313/writeups/sekaictf2024/mikuvsmachine/</link>
+      <pubDate>Mon, 26 Aug 2024 17:04:29 +0200</pubDate>
       
-      <guid>http://localhost:1313/writeups/idekctf2024/hello/</guid>
-      <description>Hello Description: Just to warm you up for the next Fight :&amp;ldquo;D
-Introduction Then we have an apparently empty page, but where we can via a ?name= parameter enter some text, the page will then respond with hello, {text entered}
-The with an ngix server
-Moreover, ctf in general gives us the possibility of using an admin bot where the flag is set in the cookies
-Source # filename: index.py &amp;lt;?</description>
+      <guid>http://localhost:1313/writeups/sekaictf2024/mikuvsmachine/</guid>
+      <description>Mikuvsmachine Description: &amp;hellip;
+Introduction &amp;hellip;
+Source &amp;hellip;
+# filename: file.py &amp;hellip;
+Solution &amp;hellip;
+# filename: file.py $ flag: flag{redacted} Author: ... </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/writeups/sekaictf2024/trickme/</link>
+      <pubDate>Mon, 26 Aug 2024 17:04:24 +0200</pubDate>
+      
+      <guid>http://localhost:1313/writeups/sekaictf2024/trickme/</guid>
+      <description>Trickme Description: &amp;hellip;
+Introduction &amp;hellip;
+Source &amp;hellip;
+# filename: file.py &amp;hellip;
+Solution &amp;hellip;
+# filename: file.py $ flag: flag{redacted} Author: ... </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/writeups/sekaictf2024/crackme/</link>
+      <pubDate>Mon, 26 Aug 2024 17:04:19 +0200</pubDate>
+      
+      <guid>http://localhost:1313/writeups/sekaictf2024/crackme/</guid>
+      <description>Crackme Description: &amp;hellip;
+Introduction &amp;hellip;
+Source &amp;hellip;
+# filename: file.py &amp;hellip;
+Solution &amp;hellip;
+# filename: file.py $ flag: flag{redacted} Author: ... </description>
     </item>
     
   </channel>

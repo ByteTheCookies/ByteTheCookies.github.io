@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Stephanie on ByteTheCookies</title>
-    <link>http://localhost:37991/tags/stephanie/</link>
+    <link>http://localhost:1313/tags/stephanie/</link>
     <description>Recent content in Stephanie on ByteTheCookies</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 13 Aug 2024 13:01:07 +0200</lastBuildDate><atom:link href="http://localhost:37991/tags/stephanie/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 13 Aug 2024 13:01:07 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/stephanie/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Kirbytime</title>
-      <link>http://localhost:37991/writeups/litctf2024/kirbytime/</link>
+      <link>http://localhost:1313/writeups/litctf2024/kirbytime/</link>
       <pubDate>Tue, 13 Aug 2024 13:01:07 +0200</pubDate>
       
-      <guid>http://localhost:37991/writeups/litctf2024/kirbytime/</guid>
+      <guid>http://localhost:1313/writeups/litctf2024/kirbytime/</guid>
       <description>Kirbytime Description: Welcome to Kirby&amp;rsquo;s Website.
 Introduction We find ourselves in front of a very pink Kirby-themed page, where we are asked to enter a password of 7 characters.
 Source # filename: main.py import sqlite3 from flask import Flask, request, redirect, render_template import time app = Flask(__name__) @app.route(&#39;/&#39;, methods=[&#39;GET&#39;, &#39;POST&#39;]) def login(): message = None if request.method == &#39;POST&#39;: password = request.form[&#39;password&#39;] real = &#39;REDACTED&#39; if len(password) != 7: return render_template(&#39;login.</description>
