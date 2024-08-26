@@ -15,6 +15,9 @@ type = 'list'
 
 Lexington Informatics Tournament CTF 2024 is a Jeopardy-style, beginner-friendly online CTF that's open to everyone.
 
+- [Url](https://lit.lhsmathcs.org/)
+- [Discord](https://discord.gg/k6yzFdZ)
+
 ## Performance Summary
 
 - **CTFs**: 18/32
