@@ -15,6 +15,9 @@ type = 'list'
 
 ...
 
+- [Url](https://url_to_ctf_website/)
+- [Discord](discord_link)
+
 ## Performance Summary
 
 - **CTFs**: ...
