@@ -21,8 +21,8 @@ Lexington Informatics Tournament CTF 2024 is a Jeopardy-style, beginner-friendly
 ## Performance Summary
 
 - **CTFs**: 18/32
-- **Total point**: 2068
-- **Position**: 95
+- **Total points**: 2068
+- **Position**: 95/830
 - **Rating points**: 19.095
 
 ## Writeups

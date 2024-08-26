@@ -22,9 +22,9 @@ idekCTF is an information security CTF competition organized by the idek team an
 ## Performance Summary
 
 - **CTFs**: 6/35
-- **Total point**: 732
-- **Position**: 101
-- **Rating points**: ?
+- **Total points**: 732
+- **Position**: 101/1070
+- **Rating points**: 5.405
 
 ## Writeups
 

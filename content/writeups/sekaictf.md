@@ -21,9 +21,9 @@ SekaiCTF is back for its third iteration! This year’s competition will feature
 
 ## Performance Summary
 
-- **CTFs**: 3
-- **Total point**: 369
-- **Position**: 136
+- **CTFs**: 3/34
+- **Total points**: 369
+- **Position**: 136/1230
 - **Rating points**: 2.721
 
 ## Writeups
