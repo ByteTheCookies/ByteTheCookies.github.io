@@ -245,7 +245,7 @@ email = "admin@sekai.team"
 
 def get_flag(email, password):
     process = subprocess.Popen(
-        ["node", "main.js", email, password],
+        ["node", "exploit.js", email, password],
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE
     )
