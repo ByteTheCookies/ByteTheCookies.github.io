@@ -13,7 +13,7 @@ name = "Francesco Memoli"
 github = "https://github.com/akiidjk"
 handle = "@akiidjk"
 role = "HighSchool student"
-categories = ["Web", "Pwn"]
+categories = ["Web"]
 link_etherscan = ""
 
 [[members]]
@@ -22,7 +22,7 @@ name = "Vito Altieri"
 github = "https://github.com/vympel7"
 handle = "@vympel"
 role = "University of Salerno"
-categories = ["Crypto", "Pwn"]
+categories = ["Crypto"]
 link_etherscan = ""
 
 [[members]]
