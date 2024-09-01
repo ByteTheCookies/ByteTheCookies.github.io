@@ -9,10 +9,10 @@
     <lastBuildDate>Mon, 26 Aug 2024 17:04:19 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/127-solves/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Some Trick</title>
-      <link>http://localhost:1313/writeups/sekaictf2024/trickme/</link>
+      <link>http://localhost:1313/writeups/sekaictf2024/sometrick/</link>
       <pubDate>Mon, 26 Aug 2024 17:04:19 +0200</pubDate>
       
-      <guid>http://localhost:1313/writeups/sekaictf2024/trickme/</guid>
+      <guid>http://localhost:1313/writeups/sekaictf2024/sometrick/</guid>
       <description>Some Trick Description: Bob and Alice found a futuristic version of opunssl and replaced all their needs for doofy wellmen.
 Introduction Some Trick was the first cryptography challenge in the 2024 edition of SekaiCTF. The challenge implements a key exchange based on a set of permutations and asks us to retrieve the flag that was used as a key in Bob&amp;rsquo;s first encryption.
 import random from secrets import randbelow, randbits from flag import FLAG CIPHER_SUITE = randbelow(2**256) print(f&amp;quot;oPUN_SASS_SASS_l version 4.</description>
