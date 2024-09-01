@@ -25,7 +25,7 @@ Introduction First rev ctf of Sekai 2024 with an apk attached, so we have a mobi
   <meta property="og:type" content="article">
     <meta property="article:section" content="writeups">
     <meta property="article:published_time" content="2024-08-26T17:04:19+02:00">
-    <meta property="article:modified_time" content="2024-08-26T17:04:19+02:00">
+    <meta property="article:modified_time" content="2024-08-27T15:04:40+02:00">
     <meta property="article:tag" content="Rev">
     <meta property="article:tag" content="Mobile">
     <meta property="article:tag" content="Javascript/Java">
@@ -289,20 +289,7 @@ Introduction First rev ctf of Sekai 2024 with an apk attached, so we have a mobi
     <h1 style='text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;'>Crack Me</h1>
 <p><strong>Description</strong>: Developed for SekaiCTF 2022 but never got a chance to release it. Can you log in and claim the flag?</p>
 
-<h2 id="introduction" class="header-anchor-wrapper">Introduction
-  <a href="#introduction" class="header-anchor-link">
-    <svg width="16px" height="16px" viewBox="0 0 24 24">
-<svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24" height="24" viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-    stroke-linejoin="round">
-    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
-</svg>
-
-</svg>
-  </a>
-</h2>
+<h2>Introduction</h2>
 
 <p>First rev ctf of Sekai 2024 with an apk attached, so we have a mobile challenge on our hands.
 The first thing to do (which I strongly advise against in a real environment) is to download and install the app to get a quick overview of what it does.</p>
@@ -312,38 +299,12 @@ The first thing to do (which I strongly advise against in a real environment) is
 </div>
 <p>As you can see, the app doesn&rsquo;t allow us to do much more than press the button and log in (without being able to register).</p>
 
-<h2 id="first-step" class="header-anchor-wrapper">First step
-  <a href="#first-step" class="header-anchor-link">
-    <svg width="16px" height="16px" viewBox="0 0 24 24">
-<svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24" height="24" viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-    stroke-linejoin="round">
-    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
-</svg>
-
-</svg>
-  </a>
-</h2>
+<h2>First step</h2>
 
 <p>The first thing I did was to analyse the apk using an online tool. <a href="https://sisik.eu/apk-tool">SISIK</a></p>
 <p>And two interesting pieces of information came up: the first was that it was a react-native app, which helps us a lot in reverse, and that the app was using firebase to handle the backend and probably authentication as well.</p>
 
-<h2 id="second-step" class="header-anchor-wrapper">Second Step
-  <a href="#second-step" class="header-anchor-link">
-    <svg width="16px" height="16px" viewBox="0 0 24 24">
-<svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24" height="24" viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-    stroke-linejoin="round">
-    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
-</svg>
-
-</svg>
-  </a>
-</h2>
+<h2>Second Step</h2>
 
 <p>The apk is actually a compressed set of java files like a zipper and tar, this then allows us to easily extract the contents with any tool like unzip or 7z (in my case I used extract which is a utils of zsh).</p>
 <p>Once we have extracted the contents we should find something like this</p>
@@ -605,7 +566,7 @@ email = &quot;admin@sekai.team&quot;
 
 def get_flag(email, password):
     process = subprocess.Popen(
-        [&quot;node&quot;, &quot;main.js&quot;, email, password],
+        [&quot;node&quot;, &quot;exploit.js&quot;, email, password],
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE
     )
