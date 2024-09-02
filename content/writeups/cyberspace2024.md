@@ -41,10 +41,10 @@ Get ready to dive into the cyberspace and tackle challenges across categories su
 
 #### Web
 
-- [ZipZone](/path/to/writeups/)
-- [FeatureUnlocked](/path/to/writeups/)
+- [ZipZone](/writeups/cyberspace2024/zipzone)
+- [FeatureUnlocked](/writeups/cyberspace2024/feature_unlocked)
 - [Trendz (part 1 and 2)](/path/to/writeups/)
 
 #### Rev
 
-- [Snake](/path/to/writeups/)
+- [Snake](/writeups/cyberspace2024/snake)
