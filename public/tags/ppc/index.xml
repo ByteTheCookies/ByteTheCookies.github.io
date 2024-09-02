@@ -19,5 +19,15 @@ Introduction The goal is to distribute the hours of n singers in m shows. Each s
 Solution To solve this problem, I use a greedy strategy that iteratively divides the available singing time among the singers, ensuring that each singer fulfills their required hours.</description>
     </item>
     
+    <item>
+      <title>SekaiCTF 2024</title>
+      <link>http://localhost:1313/writeups/sekaictf2024/</link>
+      <pubDate>Mon, 26 Aug 2024 16:58:34 +0200</pubDate>
+      
+      <guid>http://localhost:1313/writeups/sekaictf2024/</guid>
+      <description>SekaiCTF 2024 Description SekaiCTF is back for its third iteration! This year’s competition will feature various categories designed to test participants’ skills and incentivize learning. Our CTF will have more difficult challenges, and are catered towards intermediate and advanced players—however, there will still be beginner-friendly challenges to welcome players on the newer side.
+Url Discord Performance Summary CTFs: 3/34 Total points: 369 Position: 136/1230 Rating points: 2.721 Writeups Rev CrackMe Crypto Some trick PPC (Professional Programming &amp;amp; Coding) Miku vs.</description>
+    </item>
+    
   </channel>
 </rss>

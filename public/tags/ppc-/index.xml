@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PPC () on ByteTheCookies</title>
+    <link>http://localhost:1313/tags/ppc-/</link>
+    <description>Recent content in PPC () on ByteTheCookies</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 18 Aug 2024 12:58:37 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/ppc-/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>IdekCTF 2024</title>
+      <link>http://localhost:1313/writeups/idekctf2024/</link>
+      <pubDate>Sun, 18 Aug 2024 12:58:37 +0200</pubDate>
+      
+      <guid>http://localhost:1313/writeups/idekctf2024/</guid>
+      <description> IdekCTF 2024 Description idekCTF is an information security CTF competition organized by the idek team and is aimed at the entire spectrum from high school and university students to experienced players. idekCTF will cover the standard Jeopardy-style CTF topics (binary exploitation, reverse engineering, cryptography, web exploitation, and forensics) as well as other, less standard categories.
+Url Telegram Performance Summary CTFs: 6/35 Total points: 732 Position: 101/1070 Rating points: 5.405 Writeups Web Hello </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Osint on ByteTheCookies</title>
+    <link>http://localhost:1313/tags/osint/</link>
+    <description>Recent content in Osint on ByteTheCookies</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 13 Aug 2024 12:20:57 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/osint/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lexington Informatics Tournament CTF 2024</title>
+      <link>http://localhost:1313/writeups/litctf2024/</link>
+      <pubDate>Tue, 13 Aug 2024 12:20:57 +0200</pubDate>
+      
+      <guid>http://localhost:1313/writeups/litctf2024/</guid>
+      <description> Lexington Informatics Tournament CTF Description Lexington Informatics Tournament CTF 2024 is a Jeopardy-style, beginner-friendly online CTF that&amp;rsquo;s open to everyone.
+Url Discord Performance Summary CTFs: 18/32 Total points: 2068 Position: 95/830 Rating points: 19.095 Writeups Web Kirbytime </description>
+    </item>
+    
+    <item>
+      <title>N00bzCTF 2024</title>
+      <link>http://localhost:1313/writeups/n00bzctf2024/</link>
+      <pubDate>Mon, 05 Aug 2024 18:26:54 +0200</pubDate>
+      
+      <guid>http://localhost:1313/writeups/n00bzctf2024/</guid>
+      <description> N00bz CTF 2024 Description A 48 hours CTF hosted by n00bz for n00bz. Organized with beginner friendly challenges (and some hard ones), n00bzCTF is dedicated to make cyber security more friendly and approachable for complete n00bz.
+Url Discord Performance Summary CTFs: 31/32 Total points: 9794.000 Position: 24/967 Rating points: 24.067 Writeups Web File Sharing Portal Misc Waas </description>
+    </item>
+    
+  </channel>
+</rss>

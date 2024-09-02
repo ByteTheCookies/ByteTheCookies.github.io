@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Litc on ByteTheCookies</title>
+    <link>http://localhost:1313/tags/litc/</link>
+    <description>Recent content in Litc on ByteTheCookies</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 13 Aug 2024 12:20:57 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/litc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lexington Informatics Tournament CTF 2024</title>
+      <link>http://localhost:1313/writeups/litctf2024/</link>
+      <pubDate>Tue, 13 Aug 2024 12:20:57 +0200</pubDate>
+      
+      <guid>http://localhost:1313/writeups/litctf2024/</guid>
+      <description> Lexington Informatics Tournament CTF Description Lexington Informatics Tournament CTF 2024 is a Jeopardy-style, beginner-friendly online CTF that&amp;rsquo;s open to everyone.
+Url Discord Performance Summary CTFs: 18/32 Total points: 2068 Position: 95/830 Rating points: 19.095 Writeups Web Kirbytime </description>
+    </item>
+    
+  </channel>
+</rss>

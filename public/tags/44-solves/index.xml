@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>44 Solves on ByteTheCookies</title>
+    <link>http://localhost:1313/tags/44-solves/</link>
+    <description>Recent content in 44 Solves on ByteTheCookies</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 02 Sep 2024 10:58:30 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/44-solves/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>trendy windy trigonity</title>
+      <link>http://localhost:1313/writeups/cyberspace2024/trendy_windy_trigonity/</link>
+      <pubDate>Mon, 02 Sep 2024 10:58:30 +0200</pubDate>
+      
+      <guid>http://localhost:1313/writeups/cyberspace2024/trendy_windy_trigonity/</guid>
+      <description>Trendy windy trigonity Description: have you seen Tan challenge before? see maple version pi documentation!
+Introduction trendy windy trigonity was a crypto CTF CyberSpace CTF 2024 added during the second wave.
+from Crypto.Util.number import bytes_to_long flag = REDACTED print(len(flag)) R = RealField(1000) a, b = bytes_to_long(flag[:len(flag)//2]), bytes_to_long(flag[len(flag)//2:]) x = R(0.75872961153339387563860550178464795474547887323678173252494265684893323654606628651427151866818730100357590296863274236719073684620030717141521941211167282170567424114270941542016135979438271439047194028943997508126389603529160316379547558098144713802870753946485296790294770557302303874143106908193100) enc = a*cos(x)+b*sin(x) # 38 # 2.78332652222000091147933689155414792020338527644698903976732528036823470890155538913578083110732846416012108159157421703264608723649277363079905992717518852564589901390988865009495918051490722972227485851595410047572144567706501150041757189923387228097603575500648300998275877439215112961273516978501e45 The challenge uses sagemath to handle high precision floating point numbers, in this case a RealField with 1000 bits of precision.</description>
+    </item>
+    
+  </channel>
+</rss>
