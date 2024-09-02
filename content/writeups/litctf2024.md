@@ -5,6 +5,13 @@ description = "Lexington Informatics Tournament CTF 2024 is a Jeopardy-style, be
 date = 2024-08-13T12:20:57+02:00
 tags = [
     "CTF",
+    "Litc",
+    "Web",
+    "Crypto",
+    "Osint",
+    "Misc",
+    "Pwn",
+    "Reverse"
 ]
 type = 'list'
 +++
