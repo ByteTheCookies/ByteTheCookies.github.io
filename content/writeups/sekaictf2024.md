@@ -5,7 +5,14 @@ description = "SekaiCTF is back for its third iteration! This year’s competiti
 date = 2024-08-26T16:58:34+02:00
 tags = [
     "CTF",
-    "Sekai"
+    "Sekai",
+    "Crypto",
+    "Web",
+    "Reverse",
+    "Pwn",
+    "PPC",
+    "Blockchain",
+    "Misc",
 ]
 type = 'list'
 +++
