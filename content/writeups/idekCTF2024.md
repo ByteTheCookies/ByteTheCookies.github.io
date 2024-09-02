@@ -6,6 +6,11 @@ date = 2024-08-18T12:58:37+02:00
 tags = [
     "CTF",
     "Idek",
+    "Web",
+    "Crypto",
+    "Misc",
+    "Reverse",
+    "Pwn",
 ]
 type = 'list'
 +++
@@ -17,7 +22,7 @@ type = 'list'
 idekCTF is an information security CTF competition organized by the idek team and is aimed at the entire spectrum from high school and university students to experienced players. idekCTF will cover the standard Jeopardy-style CTF topics (binary exploitation, reverse engineering, cryptography, web exploitation, and forensics) as well as other, less standard categories.
 
 - [Url](https://ctf.idek.team/)
-- [Telegram](/)
+- [Discord](https://discord.gg/c7w4gKMnAX)
 
 ## Performance Summary
 
