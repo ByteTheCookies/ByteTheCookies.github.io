@@ -6,49 +6,7 @@
     <description>Recent content in Attack Type on ByteTheCookies</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 02 Sep 2024 10:59:36 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/attack-type/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title></title>
-      <link>http://localhost:1313/writeups/cyberspace2024/snake/</link>
-      <pubDate>Mon, 02 Sep 2024 10:59:36 +0200</pubDate>
-      
-      <guid>http://localhost:1313/writeups/cyberspace2024/snake/</guid>
-      <description>Snake Description: &amp;hellip;
-Introduction &amp;hellip;
-Source &amp;hellip;
-# filename: file.py &amp;hellip;
-Solution &amp;hellip;
-# filename: file.py $ flag: flag{redacted} Author: ... </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://localhost:1313/writeups/cyberspace2024/feature_unlocked/</link>
-      <pubDate>Mon, 02 Sep 2024 10:59:31 +0200</pubDate>
-      
-      <guid>http://localhost:1313/writeups/cyberspace2024/feature_unlocked/</guid>
-      <description>Feature unlocked Description: &amp;hellip;
-Introduction &amp;hellip;
-Source &amp;hellip;
-# filename: file.py &amp;hellip;
-Solution &amp;hellip;
-# filename: file.py $ flag: flag{redacted} Author: ... </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://localhost:1313/writeups/cyberspace2024/zipzone/</link>
-      <pubDate>Mon, 02 Sep 2024 10:59:17 +0200</pubDate>
-      
-      <guid>http://localhost:1313/writeups/cyberspace2024/zipzone/</guid>
-      <description>Zipzone Description: &amp;hellip;
-Introduction &amp;hellip;
-Source &amp;hellip;
-# filename: file.py &amp;hellip;
-Solution &amp;hellip;
-# filename: file.py $ flag: flag{redacted} Author: ... </description>
-    </item>
-    
+    <lastBuildDate>Mon, 02 Sep 2024 10:59:04 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/attack-type/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
       <link>http://localhost:1313/writeups/cyberspace2024/trendz/</link>

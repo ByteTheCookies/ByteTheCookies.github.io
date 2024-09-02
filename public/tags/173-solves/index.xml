@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>173 Solves on ByteTheCookies</title>
+    <link>http://localhost:1313/tags/173-solves/</link>
+    <description>Recent content in 173 Solves on ByteTheCookies</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 02 Sep 2024 10:59:17 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/173-solves/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ZipZone</title>
+      <link>http://localhost:1313/writeups/cyberspace2024/zipzone/</link>
+      <pubDate>Mon, 02 Sep 2024 10:59:17 +0200</pubDate>
+      
+      <guid>http://localhost:1313/writeups/cyberspace2024/zipzone/</guid>
+      <description>Zipzone Description: I was tired of trying to find a good file server for zip files, so I made my own! It&amp;rsquo;s still a work in progress, but I think it&amp;rsquo;s pretty good so far.
+Link: https://zipzone-web.challs.csc.tf/
+Introduction ZipZone is the only one web in the beginner&amp;rsquo;s category and, as the title suggests, you have to upload zip files that will be unzipped later, so you have to download the extracted files afterwards.</description>
+    </item>
+    
+  </channel>
+</rss>

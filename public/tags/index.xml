@@ -8,9 +8,135 @@
     <language>en</language>
     <lastBuildDate>Mon, 02 Sep 2024 10:59:36 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>0xM4hm0ud</title>
+      <link>http://localhost:1313/tags/0xm4hm0ud/</link>
+      <pubDate>Mon, 02 Sep 2024 10:59:36 +0200</pubDate>
+      
+      <guid>http://localhost:1313/tags/0xm4hm0ud/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>122 Solves</title>
+      <link>http://localhost:1313/tags/122-solves/</link>
+      <pubDate>Mon, 02 Sep 2024 10:59:36 +0200</pubDate>
+      
+      <guid>http://localhost:1313/tags/122-solves/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>50 Points</title>
+      <link>http://localhost:1313/tags/50-points/</link>
+      <pubDate>Mon, 02 Sep 2024 10:59:36 +0200</pubDate>
+      
+      <guid>http://localhost:1313/tags/50-points/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>File Patching</title>
+      <link>http://localhost:1313/tags/file-patching/</link>
+      <pubDate>Mon, 02 Sep 2024 10:59:36 +0200</pubDate>
+      
+      <guid>http://localhost:1313/tags/file-patching/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reverse</title>
+      <link>http://localhost:1313/tags/reverse/</link>
+      <pubDate>Mon, 02 Sep 2024 10:59:36 +0200</pubDate>
+      
+      <guid>http://localhost:1313/tags/reverse/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rust</title>
+      <link>http://localhost:1313/tags/rust/</link>
+      <pubDate>Mon, 02 Sep 2024 10:59:36 +0200</pubDate>
+      
+      <guid>http://localhost:1313/tags/rust/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>184 Solves</title>
+      <link>http://localhost:1313/tags/184-solves/</link>
+      <pubDate>Mon, 02 Sep 2024 10:59:31 +0200</pubDate>
+      
+      <guid>http://localhost:1313/tags/184-solves/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cryptocat</title>
+      <link>http://localhost:1313/tags/cryptocat/</link>
+      <pubDate>Mon, 02 Sep 2024 10:59:31 +0200</pubDate>
+      
+      <guid>http://localhost:1313/tags/cryptocat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>http://localhost:1313/tags/python/</link>
+      <pubDate>Mon, 02 Sep 2024 10:59:31 +0200</pubDate>
+      
+      <guid>http://localhost:1313/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SSRF</title>
+      <link>http://localhost:1313/tags/ssrf/</link>
+      <pubDate>Mon, 02 Sep 2024 10:59:31 +0200</pubDate>
+      
+      <guid>http://localhost:1313/tags/ssrf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Web</title>
+      <link>http://localhost:1313/tags/web/</link>
+      <pubDate>Mon, 02 Sep 2024 10:59:31 +0200</pubDate>
+      
+      <guid>http://localhost:1313/tags/web/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>173 Solves</title>
+      <link>http://localhost:1313/tags/173-solves/</link>
+      <pubDate>Mon, 02 Sep 2024 10:59:17 +0200</pubDate>
+      
+      <guid>http://localhost:1313/tags/173-solves/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rex</title>
+      <link>http://localhost:1313/tags/rex/</link>
+      <pubDate>Mon, 02 Sep 2024 10:59:17 +0200</pubDate>
+      
+      <guid>http://localhost:1313/tags/rex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Symlink</title>
+      <link>http://localhost:1313/tags/symlink/</link>
+      <pubDate>Mon, 02 Sep 2024 10:59:17 +0200</pubDate>
+      
+      <guid>http://localhost:1313/tags/symlink/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Attack Type</title>
       <link>http://localhost:1313/tags/attack-type/</link>
-      <pubDate>Mon, 02 Sep 2024 10:59:36 +0200</pubDate>
+      <pubDate>Mon, 02 Sep 2024 10:59:04 +0200</pubDate>
       
       <guid>http://localhost:1313/tags/attack-type/</guid>
       <description></description>
@@ -19,7 +145,7 @@
     <item>
       <title>Authors</title>
       <link>http://localhost:1313/tags/authors/</link>
-      <pubDate>Mon, 02 Sep 2024 10:59:36 +0200</pubDate>
+      <pubDate>Mon, 02 Sep 2024 10:59:04 +0200</pubDate>
       
       <guid>http://localhost:1313/tags/authors/</guid>
       <description></description>
@@ -28,7 +154,7 @@
     <item>
       <title>Category</title>
       <link>http://localhost:1313/tags/category/</link>
-      <pubDate>Mon, 02 Sep 2024 10:59:36 +0200</pubDate>
+      <pubDate>Mon, 02 Sep 2024 10:59:04 +0200</pubDate>
       
       <guid>http://localhost:1313/tags/category/</guid>
       <description></description>
@@ -37,7 +163,7 @@
     <item>
       <title>Language</title>
       <link>http://localhost:1313/tags/language/</link>
-      <pubDate>Mon, 02 Sep 2024 10:59:36 +0200</pubDate>
+      <pubDate>Mon, 02 Sep 2024 10:59:04 +0200</pubDate>
       
       <guid>http://localhost:1313/tags/language/</guid>
       <description></description>
@@ -46,7 +172,7 @@
     <item>
       <title>N Points</title>
       <link>http://localhost:1313/tags/n-points/</link>
-      <pubDate>Mon, 02 Sep 2024 10:59:36 +0200</pubDate>
+      <pubDate>Mon, 02 Sep 2024 10:59:04 +0200</pubDate>
       
       <guid>http://localhost:1313/tags/n-points/</guid>
       <description></description>
@@ -55,7 +181,7 @@
     <item>
       <title>N Solves</title>
       <link>http://localhost:1313/tags/n-solves/</link>
-      <pubDate>Mon, 02 Sep 2024 10:59:36 +0200</pubDate>
+      <pubDate>Mon, 02 Sep 2024 10:59:04 +0200</pubDate>
       
       <guid>http://localhost:1313/tags/n-solves/</guid>
       <description></description>
@@ -161,24 +287,6 @@
     </item>
     
     <item>
-      <title>Reverse</title>
-      <link>http://localhost:1313/tags/reverse/</link>
-      <pubDate>Mon, 02 Sep 2024 10:52:16 +0200</pubDate>
-      
-      <guid>http://localhost:1313/tags/reverse/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Web</title>
-      <link>http://localhost:1313/tags/web/</link>
-      <pubDate>Mon, 02 Sep 2024 10:52:16 +0200</pubDate>
-      
-      <guid>http://localhost:1313/tags/web/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>100 Points</title>
       <link>http://localhost:1313/tags/100-points/</link>
       <pubDate>Mon, 26 Aug 2024 17:04:29 +0200</pubDate>
@@ -211,15 +319,6 @@
       <pubDate>Mon, 26 Aug 2024 17:04:29 +0200</pubDate>
       
       <guid>http://localhost:1313/tags/ppc/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Python</title>
-      <link>http://localhost:1313/tags/python/</link>
-      <pubDate>Mon, 26 Aug 2024 17:04:29 +0200</pubDate>
-      
-      <guid>http://localhost:1313/tags/python/</guid>
       <description></description>
     </item>
     

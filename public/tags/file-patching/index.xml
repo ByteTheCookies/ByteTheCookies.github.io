@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>File Patching on ByteTheCookies</title>
+    <link>http://localhost:1313/tags/file-patching/</link>
+    <description>Recent content in File Patching on ByteTheCookies</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 02 Sep 2024 10:59:36 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/file-patching/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Snake</title>
+      <link>http://localhost:1313/writeups/cyberspace2024/snake/</link>
+      <pubDate>Mon, 02 Sep 2024 10:59:36 +0200</pubDate>
+      
+      <guid>http://localhost:1313/writeups/cyberspace2024/snake/</guid>
+      <description>Snake Description: Can you slither to the win?
+Link to the binary: Elf file
+Introduction We are faced with a binary file written in Rust (you can see it by simply running strings snake | grep rustc) where we are made to play Snake, the goal is to get PRECISELY to 16525 points.
+Solution The solutions were actually different, some people used tools to analyze the memory of a process in real time, I preferred a &amp;lsquo;slower&amp;rsquo; approach, or rather the first thing that came to mind, so I opened binary ninja despite the file being stripped and looked for a value for constant exactly 0xa (i.</description>
+    </item>
+    
+  </channel>
+</rss>

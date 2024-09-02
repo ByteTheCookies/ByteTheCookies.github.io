@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SSRF on ByteTheCookies</title>
+    <link>http://localhost:1313/tags/ssrf/</link>
+    <description>Recent content in SSRF on ByteTheCookies</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 02 Sep 2024 10:59:31 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/ssrf/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Feature Unlocked</title>
+      <link>http://localhost:1313/writeups/cyberspace2024/feature_unlocked/</link>
+      <pubDate>Mon, 02 Sep 2024 10:59:31 +0200</pubDate>
+      
+      <guid>http://localhost:1313/writeups/cyberspace2024/feature_unlocked/</guid>
+      <description>Feature unlocked Description: The world&amp;rsquo;s coolest app has a brand new feature! Too bad it&amp;rsquo;s not released until after the CTF..
+Link: https://feature-unlocked-web-challs.csc.tf/
+Introduction Feature unlocked is part of the first wave of the web and is one of the first challanges I solved. Made by cryptocat, who we salute, it is a fairly simple challange if you read the code correctly.
+Source # filename: main.py import subprocess import base64 import json import time import requests import os from flask import Flask, request, render_template, make_response, redirect, url_for from Crypto.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <link rel="shortcut icon" href='http://localhost:1313/favicon.ico' type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> - ByteTheCookies</title>
+    <title>Snake - ByteTheCookies</title>
 
     
 
@@ -18,37 +18,33 @@
     
         <meta property="og:url" content="http://localhost:1313/writeups/cyberspace2024/snake/">
   <meta property="og:site_name" content="ByteTheCookies">
-  <meta property="og:title" content="ByteTheCookies">
-  <meta property="og:description" content="Snake Description: …
-Introduction …
-Source …
-# filename: file.py …
-Solution …
-# filename: file.py $ flag: flag{redacted} Author: ... ">
+  <meta property="og:title" content="Snake">
+  <meta property="og:description" content="Snake Description: Can you slither to the win?
+Link to the binary: Elf file
+Introduction We are faced with a binary file written in Rust (you can see it by simply running strings snake | grep rustc) where we are made to play Snake, the goal is to get PRECISELY to 16525 points.
+Solution The solutions were actually different, some people used tools to analyze the memory of a process in real time, I preferred a ‘slower’ approach, or rather the first thing that came to mind, so I opened binary ninja despite the file being stripped and looked for a value for constant exactly 0xa (i.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="writeups">
     <meta property="article:published_time" content="2024-09-02T10:59:36+02:00">
-    <meta property="article:modified_time" content="2024-09-02T10:59:36+02:00">
-    <meta property="article:tag" content="Category">
-    <meta property="article:tag" content="Language">
-    <meta property="article:tag" content="Attack Type">
-    <meta property="article:tag" content="N Points">
-    <meta property="article:tag" content="N Solves">
-    <meta property="article:tag" content="Authors">
+    <meta property="article:modified_time" content="2024-09-02T11:17:58+02:00">
+    <meta property="article:tag" content="Reverse">
+    <meta property="article:tag" content="Rust">
+    <meta property="article:tag" content="File Patching">
+    <meta property="article:tag" content="50 Points">
+    <meta property="article:tag" content="122 Solves">
+    <meta property="article:tag" content="0xM4hm0ud">
 
     
 
     
         
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="ByteTheCookies">
-  <meta name="twitter:description" content="Snake Description: …
-Introduction …
-Source …
-# filename: file.py …
-Solution …
-# filename: file.py $ flag: flag{redacted} Author: ... ">
+  <meta name="twitter:title" content="Snake">
+  <meta name="twitter:description" content="Snake Description: Can you slither to the win?
+Link to the binary: Elf file
+Introduction We are faced with a binary file written in Rust (you can see it by simply running strings snake | grep rustc) where we are made to play Snake, the goal is to get PRECISELY to 16525 points.
+Solution The solutions were actually different, some people used tools to analyze the memory of a process in real time, I preferred a ‘slower’ approach, or rather the first thing that came to mind, so I opened binary ninja despite the file being stripped and looked for a value for constant exactly 0xa (i.">
 
     <link rel="stylesheet" href="/style.css" integrity="">
 
@@ -237,7 +233,6 @@ Solution …
             <nav id="TableOfContents">
   <ul>
     <li><a href="#introduction">Introduction</a></li>
-    <li><a href="#source">Source</a></li>
     <li><a href="#solution">Solution</a></li>
   </ul>
 </nav>
@@ -248,22 +243,22 @@ Solution …
 
 <div class="tags">
   
-    <div class="badge">category</div>
+    <div class="badge">Reverse</div>
 
   
-    <div class="badge">language</div>
+    <div class="badge">Rust</div>
 
   
-    <div class="badge">attack type</div>
+    <div class="badge">File patching</div>
 
   
-    <div class="badge">n points</div>
+    <div class="badge">50 points</div>
 
   
-    <div class="badge">n solves</div>
+    <div class="badge">122 solves</div>
 
   
-    <div class="badge">authors</div>
+    <div class="badge">0xM4hm0ud</div>
 
   
 </div>
@@ -286,33 +281,57 @@ Solution …
         
     
     <h1 style='text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;'>Snake</h1>
-<p><strong>Description</strong>: &hellip;</p>
+<p><strong>Description</strong>: Can you slither to the win?</p>
+<p><strong>Link to the binary</strong>: <a href="https://2024.csc.tf/files/263575efcd73ff01d2bf123993065b37/snake?token=eyJ1c2VyX2lkIjo3ODgsInRlYW1faWQiOjM5MCwiZmlsZV9pZCI6MTJ9.ZtWYng.7QVOp_u1X-NXMNS72mApiwM1GqU">Elf file</a></p>
 
-<h2>Introduction</h2>
+<h2 id="introduction" class="header-anchor-wrapper">Introduction
+  <a href="#introduction" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
 
-<p>&hellip;</p>
+</svg>
+  </a>
+</h2>
 
-<h2>Source</h2>
+<p>We are faced with a binary file written in Rust (you can see it by simply running <code>strings snake | grep rustc</code>) where we are made to play Snake, the goal is to get <strong>PRECISELY</strong> to <code>16525</code> points.</p>
+<p><img alt="alt text" src="/images/snake/image.png"></p>
 
-<p>&hellip;</p>
-<pre  class="mc-prism hide language-text" ><code class="language-python"># filename: file.py
+<h2 id="solution" class="header-anchor-wrapper">Solution
+  <a href="#solution" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
 
+</svg>
+  </a>
+</h2>
 
-
+<p>The solutions were actually different, some people used tools to analyze the memory of a process in real time, I preferred a &lsquo;slower&rsquo; approach, or rather the first thing that came to mind, so I opened binary ninja despite the file being stripped and looked for a value for constant exactly 0xa (i.e. the value that was added every time it ate a <code>#</code>).</p>
+<p>In a short time I managed to find this:</p>
+<p><img alt="alt text" src="/images/snake/image-1.png"></p>
+<p>After some trial and error, changing the value from 0xa to 0xb, I find the line of code I need, which is the last one in the screenshot above.</p>
+<p>At this point I switch to the assembly and notice that my initial approach was wrong this is because I was putting too high a value in a register that it did not support in fact analysing the binary in assembly we see:</p>
+<p><img alt="alt text" src="/images/snake/image-2.png"></p>
+<p>As we can see, before entering the constant into the dword register [rcx+0x7c], we first enter it into eax and if we enter too high a value, the programme simply crashes (as it should).</p>
+<p>So simply afterwards I chose to put the precise value in the correct register once I had made at least one point</p>
+<p><img alt="alt text" src="/images/snake/image-3.png"></p>
+<p>(the nop are automatically inserted by binary ninja)</p>
+<p>In this way, once we have scored at least one point, we will have the flag</p>
+<p><img alt="alt text" src="/images/snake/image-4.png"></p>
+<pre  class="mc-prism hide language-text" ><code class="language-stdout">$ flag: CSCTF{Y0u_b34T_My_Sl1th3r_G4m3!}
 </code></pre>
-<p>&hellip;</p>
-
-<h2>Solution</h2>
-
-<p>&hellip;</p>
-<pre  class="mc-prism hide language-text" ><code class="language-python"># filename: file.py
-
-
-
-</code></pre>
-<pre  class="mc-prism hide language-text" ><code class="language-stdout">$ flag: flag{redacted}
-</code></pre>
-<p align='right'>Author: ... </p>
+<p align='right'>Author: akiidjk </p>
 
 </article>
 </div>
