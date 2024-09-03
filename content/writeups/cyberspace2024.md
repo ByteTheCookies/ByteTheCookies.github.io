@@ -43,7 +43,7 @@ Get ready to dive into the cyberspace and tackle challenges across categories su
 
 - [ZipZone](/writeups/cyberspace2024/zipzone)
 - [FeatureUnlocked](/writeups/cyberspace2024/feature_unlocked)
-- [Trendz (part 1 and 2)](/path/to/writeups/)
+- [Trendz (part 1 and 2)](/writeups/cyberspace2024/trendz)
 
 #### Rev
 
