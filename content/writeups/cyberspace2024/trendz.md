@@ -339,8 +339,6 @@ func InitJWT() {
 
 We see that the function itself doesn't do much simply takes the key with which it will sign jwt's from a file well known to us in fact we have seen it in run.sh where it is created and where a secure value is put there
 
-## Solution
-
 But if we analyse the Docker file system locally, we see that jwt.secret is located in the same folder as static, which we saw in the ngix configuration create an alias to that path.
 
 ```json
