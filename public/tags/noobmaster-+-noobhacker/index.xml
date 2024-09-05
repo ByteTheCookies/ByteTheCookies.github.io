@@ -13,9 +13,25 @@
       <pubDate>Tue, 06 Aug 2024 11:27:07 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/noobzctf2024/filesharingportal/</guid>
-      <description>File Sharing Portal Description: Welcome to the file sharing portal! We only support tar files!
-Introduction The ctf has a very simple structure: we have a form in which we are asked to insert a tar file; once the tar file has been inserted, it is unzipped and we are shown the name of files it contains; by clicking on the different files, we can read their contents.
-Source The source has comments added later to allow a better understanding of the code in the writeups</description>
+      <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;File Sharing Portal&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Welcome to the file sharing portal! We only support tar files!&lt;/p&gt;
+
+&lt;h2 id=&#34;introduction&#34; class=&#34;header-anchor-wrapper&#34;&gt;Introduction
+  &lt;a href=&#34;#introduction&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
+
+&lt;p&gt;The ctf has a very simple structure: we have a form in which we are asked to insert a &lt;a href=&#34;https://en.wikipedia.org/wiki/Tar_(computing)&#34;&gt;tar&lt;/a&gt; file; once the tar file has been inserted, it is unzipped and we are shown the &lt;code&gt;name&lt;/code&gt; of files it contains; by clicking on the different files, we can read their contents.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -24,9 +40,25 @@ Source The source has comments added later to allow a better understanding of th
       <pubDate>Tue, 06 Aug 2024 11:27:07 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/noobzctf2024/waas/</guid>
-      <description>Waas Description: Writing as a Service!
-Introduction WaaS (Writing as a Service) allows us to overwrite a file on the system (after some input validation) and insert anything (until a newline is met) we want in it.
-import subprocess from base64 import b64decode as d while True: print(&amp;quot;[1] Write to a file\n[2] Get the flag\n[3] Exit&amp;quot;) try: inp = int(input(&amp;quot;Choice: &amp;quot;).strip()) except: print(&amp;quot;Invalid input!&amp;quot;) exit(0) if inp == 1: file = input(&amp;quot;Enter file name: &amp;quot;).</description>
+      <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;Waas&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Writing as a Service!&lt;/p&gt;
+
+&lt;h2 id=&#34;introduction&#34; class=&#34;header-anchor-wrapper&#34;&gt;Introduction
+  &lt;a href=&#34;#introduction&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
+
+&lt;p&gt;WaaS (Writing as a Service) allows us to overwrite a file on the system (after some input validation) and insert anything (until a newline is met) we want in it.&lt;/p&gt;</description>
     </item>
     
   </channel>

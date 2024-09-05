@@ -13,8 +13,26 @@
       <pubDate>Mon, 26 Aug 2024 17:04:19 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/sekaictf2024/crackme/</guid>
-      <description>Crack Me Description: Developed for SekaiCTF 2022 but never got a chance to release it. Can you log in and claim the flag?
-Introduction First rev ctf of Sekai 2024 with an apk attached, so we have a mobile challenge on our hands. The first thing to do (which I strongly advise against in a real environment) is to download and install the app to get a quick overview of what it does.</description>
+      <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;Crack Me&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Developed for SekaiCTF 2022 but never got a chance to release it. Can you log in and claim the flag?&lt;/p&gt;
+
+&lt;h2 id=&#34;introduction&#34; class=&#34;header-anchor-wrapper&#34;&gt;Introduction
+  &lt;a href=&#34;#introduction&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
+
+&lt;p&gt;First rev ctf of Sekai 2024 with an apk attached, so we have a mobile challenge on our hands.
+The first thing to do (which I strongly advise against in a real environment) is to download and install the app to get a quick overview of what it does.&lt;/p&gt;</description>
     </item>
     
   </channel>

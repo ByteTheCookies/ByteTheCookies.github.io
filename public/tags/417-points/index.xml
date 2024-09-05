@@ -13,9 +13,25 @@
       <pubDate>Mon, 02 Sep 2024 10:58:30 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/cyberspace2024/trendy_windy_trigonity/</guid>
-      <description>Trendy windy trigonity Description: have you seen Tan challenge before? see maple version pi documentation!
-Introduction trendy windy trigonity was a crypto CTF CyberSpace CTF 2024 added during the second wave.
-from Crypto.Util.number import bytes_to_long flag = REDACTED print(len(flag)) R = RealField(1000) a, b = bytes_to_long(flag[:len(flag)//2]), bytes_to_long(flag[len(flag)//2:]) x = R(0.75872961153339387563860550178464795474547887323678173252494265684893323654606628651427151866818730100357590296863274236719073684620030717141521941211167282170567424114270941542016135979438271439047194028943997508126389603529160316379547558098144713802870753946485296790294770557302303874143106908193100) enc = a*cos(x)+b*sin(x) # 38 # 2.78332652222000091147933689155414792020338527644698903976732528036823470890155538913578083110732846416012108159157421703264608723649277363079905992717518852564589901390988865009495918051490722972227485851595410047572144567706501150041757189923387228097603575500648300998275877439215112961273516978501e45 The challenge uses sagemath to handle high precision floating point numbers, in this case a RealField with 1000 bits of precision.</description>
+      <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;Trendy windy trigonity&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: have you seen Tan challenge before? see maple version pi documentation!&lt;/p&gt;
+
+&lt;h2 id=&#34;introduction&#34; class=&#34;header-anchor-wrapper&#34;&gt;Introduction
+  &lt;a href=&#34;#introduction&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
+
+&lt;p&gt;trendy windy trigonity was a crypto CTF &lt;a href=&#34;https://ctftime.org/event/2428&#34;&gt;CyberSpace CTF 2024&lt;/a&gt; added during the second wave.&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -12,10 +12,26 @@
       <pubDate>Mon, 02 Sep 2024 10:59:36 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/cyberspace2024/snake/</guid>
-      <description>Snake Description: Can you slither to the win?
-Link to the binary: Elf file
-Introduction We are faced with a binary file written in Rust (you can see it by simply running strings snake | grep rustc) where we are made to play Snake, the goal is to get PRECISELY to 16525 points.
-Solution The solutions were actually different, some people used tools to analyze the memory of a process in real time, I preferred a &amp;lsquo;slower&amp;rsquo; approach, or rather the first thing that came to mind, so I opened binary ninja despite the file being stripped and looked for a value for constant exactly 0xa (i.</description>
+      <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;Snake&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Can you slither to the win?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Link to the binary&lt;/strong&gt;: &lt;a href=&#34;https://2024.csc.tf/files/263575efcd73ff01d2bf123993065b37/snake?token=eyJ1c2VyX2lkIjo3ODgsInRlYW1faWQiOjM5MCwiZmlsZV9pZCI6MTJ9.ZtWYng.7QVOp_u1X-NXMNS72mApiwM1GqU&#34;&gt;Elf file&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;introduction&#34; class=&#34;header-anchor-wrapper&#34;&gt;Introduction
+  &lt;a href=&#34;#introduction&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
+
+&lt;p&gt;We are faced with a binary file written in Rust (you can see it by simply running &lt;code&gt;strings snake | grep rustc&lt;/code&gt;) where we are made to play Snake, the goal is to get &lt;strong&gt;PRECISELY&lt;/strong&gt; to &lt;code&gt;16525&lt;/code&gt; points.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -24,10 +40,13 @@ Solution The solutions were actually different, some people used tools to analyz
       <pubDate>Mon, 02 Sep 2024 10:59:31 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/cyberspace2024/feature_unlocked/</guid>
-      <description>Feature unlocked Description: The world&amp;rsquo;s coolest app has a brand new feature! Too bad it&amp;rsquo;s not released until after the CTF..
-Link: https://feature-unlocked-web-challs.csc.tf/
-Introduction Feature unlocked is part of the first wave of the web and is one of the first challanges I solved. Made by cryptocat, who we salute, it is a fairly simple challange if you read the code correctly.
-Source # filename: main.py import subprocess import base64 import json import time import requests import os from flask import Flask, request, render_template, make_response, redirect, url_for from Crypto.</description>
+      <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;Feature unlocked&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: The world&amp;rsquo;s coolest app has a brand new feature! Too bad it&amp;rsquo;s not released until after the CTF..&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Link&lt;/strong&gt;: &lt;a href=&#34;https://feature-unlocked-web-challs.csc.tf/&#34;&gt;https://feature-unlocked-web-challs.csc.tf/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;Feature unlocked is part of the first wave of the web and is one of the first challanges I solved. Made by cryptocat, who we salute, it is a fairly simple challange if you read the code correctly.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -36,9 +55,26 @@ Source # filename: main.py import subprocess import base64 import json import ti
       <pubDate>Mon, 02 Sep 2024 10:59:17 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/cyberspace2024/zipzone/</guid>
-      <description>Zipzone Description: I was tired of trying to find a good file server for zip files, so I made my own! It&amp;rsquo;s still a work in progress, but I think it&amp;rsquo;s pretty good so far.
-Link: https://zipzone-web.challs.csc.tf/
-Introduction ZipZone is the only one web in the beginner&amp;rsquo;s category and, as the title suggests, you have to upload zip files that will be unzipped later, so you have to download the extracted files afterwards.</description>
+      <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;Zipzone&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: I was tired of trying to find a good file server for zip files, so I made my own! It&amp;rsquo;s still a work in progress, but I think it&amp;rsquo;s pretty good so far.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Link&lt;/strong&gt;: &lt;a href=&#34;https://zipzone-web.challs.csc.tf/&#34;&gt;https://zipzone-web.challs.csc.tf/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;introduction&#34; class=&#34;header-anchor-wrapper&#34;&gt;Introduction
+  &lt;a href=&#34;#introduction&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
+
+&lt;p&gt;ZipZone is the only one web in the beginner&amp;rsquo;s category and, as the title suggests, you have to upload zip files that will be unzipped later, so you have to download the extracted files afterwards.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -47,7 +83,25 @@ Introduction ZipZone is the only one web in the beginner&amp;rsquo;s category an
       <pubDate>Mon, 02 Sep 2024 10:59:04 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/cyberspace2024/trendz/</guid>
-      <description>Trendz (part 1 &amp; 2) Preamble This challenge is divided into four parts, three webs and a reverse. I&amp;rsquo;m excited to share that I managed to solve the first two webs! I&amp;rsquo;ll insert them all in a write-up, trying to explain them in the way the author thought. I admit I did not solve them in order, but I&amp;rsquo;m eager to see how they fit together. The application was written in Go using templates and a JWT authentication, and it&amp;rsquo;s write well!</description>
+      <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;Trendz (part 1 &amp; 2)&lt;/h1&gt;
+
+&lt;h2 id=&#34;preamble&#34; class=&#34;header-anchor-wrapper&#34;&gt;Preamble
+  &lt;a href=&#34;#preamble&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
+
+&lt;p&gt;This challenge is divided into four parts, three webs and a reverse. I&amp;rsquo;m excited to share that I managed to solve the first two webs! I&amp;rsquo;ll insert them all in a write-up, trying to explain them in the way the author thought. I admit I did not solve them in order, but I&amp;rsquo;m eager to see how they fit together.
+The application was written in Go using templates and a JWT authentication, and it&amp;rsquo;s write well! The application itself has many files, but they are well written and ordered, so a thorough analysis is not difficult but necessary. The application is divided into 5 basic parts.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -56,9 +110,25 @@ Introduction ZipZone is the only one web in the beginner&amp;rsquo;s category an
       <pubDate>Mon, 02 Sep 2024 10:58:30 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/cyberspace2024/trendy_windy_trigonity/</guid>
-      <description>Trendy windy trigonity Description: have you seen Tan challenge before? see maple version pi documentation!
-Introduction trendy windy trigonity was a crypto CTF CyberSpace CTF 2024 added during the second wave.
-from Crypto.Util.number import bytes_to_long flag = REDACTED print(len(flag)) R = RealField(1000) a, b = bytes_to_long(flag[:len(flag)//2]), bytes_to_long(flag[len(flag)//2:]) x = R(0.75872961153339387563860550178464795474547887323678173252494265684893323654606628651427151866818730100357590296863274236719073684620030717141521941211167282170567424114270941542016135979438271439047194028943997508126389603529160316379547558098144713802870753946485296790294770557302303874143106908193100) enc = a*cos(x)+b*sin(x) # 38 # 2.78332652222000091147933689155414792020338527644698903976732528036823470890155538913578083110732846416012108159157421703264608723649277363079905992717518852564589901390988865009495918051490722972227485851595410047572144567706501150041757189923387228097603575500648300998275877439215112961273516978501e45 The challenge uses sagemath to handle high precision floating point numbers, in this case a RealField with 1000 bits of precision.</description>
+      <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;Trendy windy trigonity&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: have you seen Tan challenge before? see maple version pi documentation!&lt;/p&gt;
+
+&lt;h2 id=&#34;introduction&#34; class=&#34;header-anchor-wrapper&#34;&gt;Introduction
+  &lt;a href=&#34;#introduction&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
+
+&lt;p&gt;trendy windy trigonity was a crypto CTF &lt;a href=&#34;https://ctftime.org/event/2428&#34;&gt;CyberSpace CTF 2024&lt;/a&gt; added during the second wave.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -67,8 +137,38 @@ from Crypto.Util.number import bytes_to_long flag = REDACTED print(len(flag)) R 
       <pubDate>Mon, 02 Sep 2024 10:52:16 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/cyberspace2024/</guid>
-      <description> CyberSpace CTF 2024 Description Get ready to dive into the cyberspace and tackle challenges across categories such as Forensics, Reverse Engineering, Cryptography, Jail, and many more, at https://2024.csc.tf!
-Url Discord Performance Summary CTFs: 21/63 Total points: 2032 Position: 83/830 Rating points: ? Writeups Crypto trendy windy trigonity Web ZipZone FeatureUnlocked Trendz (part 1 and 2) Rev Snake </description>
+      <description>&lt;h1 id=&#34;cyberspace-ctf-2024&#34; class=&#34;header-anchor-wrapper&#34;&gt;CyberSpace CTF 2024
+  &lt;a href=&#34;#cyberspace-ctf-2024&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h1&gt;
+
+
+&lt;h2 id=&#34;description&#34; class=&#34;header-anchor-wrapper&#34;&gt;Description
+  &lt;a href=&#34;#description&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
+
+&lt;p&gt;Get ready to dive into the cyberspace and tackle challenges across categories such as Forensics, Reverse Engineering, Cryptography, Jail, and many more, at &lt;a href=&#34;https://2024.csc.tf&#34;&gt;https://2024.csc.tf&lt;/a&gt;!&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -77,10 +177,28 @@ Url Discord Performance Summary CTFs: 21/63 Total points: 2032 Position: 83/830 
       <pubDate>Mon, 26 Aug 2024 17:04:29 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/sekaictf2024/mikuvsmachine/</guid>
-      <description>Miku vs. Machine Description: Time limit is 2 seconds for this challenge.
-Official resources of challenge
-Introduction The goal is to distribute the hours of n singers in m shows. Each show has a number of hours equal to l (unknown) and can only change singers once. We also want that each singer will have the same time on stage.
-Solution To solve this problem, I use a greedy strategy that iteratively divides the available singing time among the singers, ensuring that each singer fulfills their required hours.</description>
+      <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;Miku vs. Machine&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Time limit is 2 seconds for this challenge.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://ppc.chals.sekai.team&#34;&gt;&lt;strong&gt;Official resources of challenge&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;introduction&#34; class=&#34;header-anchor-wrapper&#34;&gt;Introduction
+  &lt;a href=&#34;#introduction&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
+
+&lt;p&gt;The goal is to distribute the hours of &lt;code&gt;n&lt;/code&gt; singers in &lt;code&gt;m&lt;/code&gt; shows.
+Each show has a number of hours equal to &lt;code&gt;l&lt;/code&gt; (unknown) and can only change singers once.
+We also want that each singer will have the same time on stage.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -89,8 +207,26 @@ Solution To solve this problem, I use a greedy strategy that iteratively divides
       <pubDate>Mon, 26 Aug 2024 17:04:19 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/sekaictf2024/crackme/</guid>
-      <description>Crack Me Description: Developed for SekaiCTF 2022 but never got a chance to release it. Can you log in and claim the flag?
-Introduction First rev ctf of Sekai 2024 with an apk attached, so we have a mobile challenge on our hands. The first thing to do (which I strongly advise against in a real environment) is to download and install the app to get a quick overview of what it does.</description>
+      <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;Crack Me&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Developed for SekaiCTF 2022 but never got a chance to release it. Can you log in and claim the flag?&lt;/p&gt;
+
+&lt;h2 id=&#34;introduction&#34; class=&#34;header-anchor-wrapper&#34;&gt;Introduction
+  &lt;a href=&#34;#introduction&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
+
+&lt;p&gt;First rev ctf of Sekai 2024 with an apk attached, so we have a mobile challenge on our hands.
+The first thing to do (which I strongly advise against in a real environment) is to download and install the app to get a quick overview of what it does.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -99,9 +235,25 @@ Introduction First rev ctf of Sekai 2024 with an apk attached, so we have a mobi
       <pubDate>Mon, 26 Aug 2024 17:04:19 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/sekaictf2024/sometrick/</guid>
-      <description>Some Trick Description: Bob and Alice found a futuristic version of opunssl and replaced all their needs for doofy wellmen.
-Introduction Some Trick was the first cryptography challenge in the 2024 edition of SekaiCTF. The challenge implements a key exchange based on a set of permutations and asks us to retrieve the flag that was used as a key in Bob&amp;rsquo;s first encryption.
-import random from secrets import randbelow, randbits from flag import FLAG CIPHER_SUITE = randbelow(2**256) print(f&amp;quot;oPUN_SASS_SASS_l version 4.</description>
+      <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt; Some Trick &lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Bob and Alice found a futuristic version of opunssl and replaced all their needs for doofy wellmen.&lt;/p&gt;
+
+&lt;h2 id=&#34;introduction&#34; class=&#34;header-anchor-wrapper&#34;&gt;Introduction
+  &lt;a href=&#34;#introduction&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
+
+&lt;p&gt;Some Trick was the first cryptography challenge in the 2024 edition of SekaiCTF. The challenge implements a key exchange based on a set of permutations and asks us to retrieve the flag that was used as a key in Bob&amp;rsquo;s first encryption.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -110,8 +262,38 @@ import random from secrets import randbelow, randbits from flag import FLAG CIPH
       <pubDate>Mon, 26 Aug 2024 16:58:34 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/sekaictf2024/</guid>
-      <description>SekaiCTF 2024 Description SekaiCTF is back for its third iteration! This year’s competition will feature various categories designed to test participants’ skills and incentivize learning. Our CTF will have more difficult challenges, and are catered towards intermediate and advanced players—however, there will still be beginner-friendly challenges to welcome players on the newer side.
-Url Discord Performance Summary CTFs: 3/34 Total points: 369 Position: 136/1230 Rating points: 2.721 Writeups Rev CrackMe Crypto Some trick PPC (Professional Programming &amp;amp; Coding) Miku vs.</description>
+      <description>&lt;h1 id=&#34;sekaictf-2024&#34; class=&#34;header-anchor-wrapper&#34;&gt;SekaiCTF 2024
+  &lt;a href=&#34;#sekaictf-2024&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h1&gt;
+
+
+&lt;h2 id=&#34;description&#34; class=&#34;header-anchor-wrapper&#34;&gt;Description
+  &lt;a href=&#34;#description&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
+
+&lt;p&gt;SekaiCTF is back for its third iteration! This year’s competition will feature various categories designed to test participants’ skills and incentivize learning. Our CTF will have more difficult challenges, and are catered towards intermediate and advanced players—however, there will still be beginner-friendly challenges to welcome players on the newer side.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -120,11 +302,25 @@ Url Discord Performance Summary CTFs: 3/34 Total points: 369 Position: 136/1230 
       <pubDate>Sun, 18 Aug 2024 12:58:59 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/idekctf2024/hello/</guid>
-      <description>Hello Description: Just to warm you up for the next Fight :&amp;ldquo;D
-Introduction Then we have an apparently empty page, but where we can via a ?name= parameter enter some text, the page will then respond with hello, {text entered}
-The with an ngix server
-Moreover, ctf in general gives us the possibility of using an admin bot where the flag is set in the cookies
-Source # filename: index.py &amp;lt;?</description>
+      <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;Hello&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Just to warm you up for the next Fight :&amp;ldquo;D&lt;/p&gt;
+
+&lt;h2 id=&#34;introduction&#34; class=&#34;header-anchor-wrapper&#34;&gt;Introduction
+  &lt;a href=&#34;#introduction&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
+
+&lt;p&gt;Then we have an apparently empty page, but where we can via a ?name= parameter enter some text, the page will then respond with hello, {text entered}&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -133,8 +329,38 @@ Source # filename: index.py &amp;lt;?</description>
       <pubDate>Sun, 18 Aug 2024 12:58:37 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/idekctf2024/</guid>
-      <description> IdekCTF 2024 Description idekCTF is an information security CTF competition organized by the idek team and is aimed at the entire spectrum from high school and university students to experienced players. idekCTF will cover the standard Jeopardy-style CTF topics (binary exploitation, reverse engineering, cryptography, web exploitation, and forensics) as well as other, less standard categories.
-Url Discord Performance Summary CTFs: 6/35 Total points: 732 Position: 101/1070 Rating points: 5.405 Writeups Web Hello </description>
+      <description>&lt;h1 id=&#34;idekctf-2024&#34; class=&#34;header-anchor-wrapper&#34;&gt;IdekCTF 2024
+  &lt;a href=&#34;#idekctf-2024&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h1&gt;
+
+
+&lt;h2 id=&#34;description&#34; class=&#34;header-anchor-wrapper&#34;&gt;Description
+  &lt;a href=&#34;#description&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
+
+&lt;p&gt;idekCTF is an information security CTF competition organized by the idek team and is aimed at the entire spectrum from high school and university students to experienced players. idekCTF will cover the standard Jeopardy-style CTF topics (binary exploitation, reverse engineering, cryptography, web exploitation, and forensics) as well as other, less standard categories.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -143,9 +369,25 @@ Url Discord Performance Summary CTFs: 6/35 Total points: 732 Position: 101/1070 
       <pubDate>Tue, 13 Aug 2024 13:01:07 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/litctf2024/kirbytime/</guid>
-      <description>Kirbytime Description: Welcome to Kirby&amp;rsquo;s Website.
-Introduction We find ourselves in front of a very pink Kirby-themed page, where we are asked to enter a password of 7 characters.
-Source # filename: main.py import sqlite3 from flask import Flask, request, redirect, render_template import time app = Flask(__name__) @app.route(&#39;/&#39;, methods=[&#39;GET&#39;, &#39;POST&#39;]) def login(): message = None if request.method == &#39;POST&#39;: password = request.form[&#39;password&#39;] real = &#39;REDACTED&#39; if len(password) != 7: return render_template(&#39;login.</description>
+      <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;Kirbytime&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Welcome to Kirby&amp;rsquo;s Website.&lt;/p&gt;
+
+&lt;h2 id=&#34;introduction&#34; class=&#34;header-anchor-wrapper&#34;&gt;Introduction
+  &lt;a href=&#34;#introduction&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
+
+&lt;p&gt;We find ourselves in front of a very pink Kirby-themed page, where we are asked to enter a password of 7 characters.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -154,8 +396,38 @@ Source # filename: main.py import sqlite3 from flask import Flask, request, redi
       <pubDate>Tue, 13 Aug 2024 12:20:57 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/litctf2024/</guid>
-      <description> Lexington Informatics Tournament CTF Description Lexington Informatics Tournament CTF 2024 is a Jeopardy-style, beginner-friendly online CTF that&amp;rsquo;s open to everyone.
-Url Discord Performance Summary CTFs: 18/32 Total points: 2068 Position: 95/830 Rating points: 19.095 Writeups Web Kirbytime </description>
+      <description>&lt;h1 id=&#34;lexington-informatics-tournament-ctf&#34; class=&#34;header-anchor-wrapper&#34;&gt;Lexington Informatics Tournament CTF
+  &lt;a href=&#34;#lexington-informatics-tournament-ctf&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h1&gt;
+
+
+&lt;h2 id=&#34;description&#34; class=&#34;header-anchor-wrapper&#34;&gt;Description
+  &lt;a href=&#34;#description&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
+
+&lt;p&gt;Lexington Informatics Tournament CTF 2024 is a Jeopardy-style, beginner-friendly online CTF that&amp;rsquo;s open to everyone.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -164,9 +436,25 @@ Url Discord Performance Summary CTFs: 18/32 Total points: 2068 Position: 95/830 
       <pubDate>Tue, 06 Aug 2024 11:27:07 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/noobzctf2024/filesharingportal/</guid>
-      <description>File Sharing Portal Description: Welcome to the file sharing portal! We only support tar files!
-Introduction The ctf has a very simple structure: we have a form in which we are asked to insert a tar file; once the tar file has been inserted, it is unzipped and we are shown the name of files it contains; by clicking on the different files, we can read their contents.
-Source The source has comments added later to allow a better understanding of the code in the writeups</description>
+      <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;File Sharing Portal&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Welcome to the file sharing portal! We only support tar files!&lt;/p&gt;
+
+&lt;h2 id=&#34;introduction&#34; class=&#34;header-anchor-wrapper&#34;&gt;Introduction
+  &lt;a href=&#34;#introduction&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
+
+&lt;p&gt;The ctf has a very simple structure: we have a form in which we are asked to insert a &lt;a href=&#34;https://en.wikipedia.org/wiki/Tar_(computing)&#34;&gt;tar&lt;/a&gt; file; once the tar file has been inserted, it is unzipped and we are shown the &lt;code&gt;name&lt;/code&gt; of files it contains; by clicking on the different files, we can read their contents.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -175,9 +463,25 @@ Source The source has comments added later to allow a better understanding of th
       <pubDate>Tue, 06 Aug 2024 11:27:07 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/noobzctf2024/waas/</guid>
-      <description>Waas Description: Writing as a Service!
-Introduction WaaS (Writing as a Service) allows us to overwrite a file on the system (after some input validation) and insert anything (until a newline is met) we want in it.
-import subprocess from base64 import b64decode as d while True: print(&amp;quot;[1] Write to a file\n[2] Get the flag\n[3] Exit&amp;quot;) try: inp = int(input(&amp;quot;Choice: &amp;quot;).strip()) except: print(&amp;quot;Invalid input!&amp;quot;) exit(0) if inp == 1: file = input(&amp;quot;Enter file name: &amp;quot;).</description>
+      <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;Waas&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Writing as a Service!&lt;/p&gt;
+
+&lt;h2 id=&#34;introduction&#34; class=&#34;header-anchor-wrapper&#34;&gt;Introduction
+  &lt;a href=&#34;#introduction&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
+
+&lt;p&gt;WaaS (Writing as a Service) allows us to overwrite a file on the system (after some input validation) and insert anything (until a newline is met) we want in it.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -186,8 +490,38 @@ import subprocess from base64 import b64decode as d while True: print(&amp;quot;
       <pubDate>Mon, 05 Aug 2024 18:26:54 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/n00bzctf2024/</guid>
-      <description> N00bz CTF 2024 Description A 48 hours CTF hosted by n00bz for n00bz. Organized with beginner friendly challenges (and some hard ones), n00bzCTF is dedicated to make cyber security more friendly and approachable for complete n00bz.
-Url Discord Performance Summary CTFs: 31/32 Total points: 9794.000 Position: 24/967 Rating points: 24.067 Writeups Web File Sharing Portal Misc Waas </description>
+      <description>&lt;h1 id=&#34;n00bz-ctf-2024&#34; class=&#34;header-anchor-wrapper&#34;&gt;N00bz CTF 2024
+  &lt;a href=&#34;#n00bz-ctf-2024&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h1&gt;
+
+
+&lt;h2 id=&#34;description&#34; class=&#34;header-anchor-wrapper&#34;&gt;Description
+  &lt;a href=&#34;#description&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
+
+&lt;p&gt;A 48 hours CTF hosted by n00bz for n00bz. Organized with beginner friendly challenges (and some hard ones), n00bzCTF is dedicated to make cyber security more friendly and approachable for complete n00bz.&lt;/p&gt;</description>
     </item>
     
   </channel>

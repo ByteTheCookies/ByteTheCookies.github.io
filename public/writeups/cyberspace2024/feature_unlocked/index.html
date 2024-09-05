@@ -21,8 +21,7 @@
   <meta property="og:title" content="Feature Unlocked">
   <meta property="og:description" content="Feature unlocked Description: The world’s coolest app has a brand new feature! Too bad it’s not released until after the CTF..
 Link: https://feature-unlocked-web-challs.csc.tf/
-Introduction Feature unlocked is part of the first wave of the web and is one of the first challanges I solved. Made by cryptocat, who we salute, it is a fairly simple challange if you read the code correctly.
-Source # filename: main.py import subprocess import base64 import json import time import requests import os from flask import Flask, request, render_template, make_response, redirect, url_for from Crypto.">
+Introduction Feature unlocked is part of the first wave of the web and is one of the first challanges I solved. Made by cryptocat, who we salute, it is a fairly simple challange if you read the code correctly.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="writeups">
@@ -43,8 +42,7 @@ Source # filename: main.py import subprocess import base64 import json import ti
   <meta name="twitter:title" content="Feature Unlocked">
   <meta name="twitter:description" content="Feature unlocked Description: The world’s coolest app has a brand new feature! Too bad it’s not released until after the CTF..
 Link: https://feature-unlocked-web-challs.csc.tf/
-Introduction Feature unlocked is part of the first wave of the web and is one of the first challanges I solved. Made by cryptocat, who we salute, it is a fairly simple challange if you read the code correctly.
-Source # filename: main.py import subprocess import base64 import json import time import requests import os from flask import Flask, request, render_template, make_response, redirect, url_for from Crypto.">
+Introduction Feature unlocked is part of the first wave of the web and is one of the first challanges I solved. Made by cryptocat, who we salute, it is a fairly simple challange if you read the code correctly.">
 
     <link rel="stylesheet" href="/style.css" integrity="">
 
@@ -285,37 +283,11 @@ Source # filename: main.py import subprocess import base64 import json import ti
 <p><strong>Description</strong>: The world&rsquo;s coolest app has a brand new feature! Too bad it&rsquo;s not released until after the CTF..</p>
 <p><strong>Link</strong>: <a href="https://feature-unlocked-web-challs.csc.tf/">https://feature-unlocked-web-challs.csc.tf/</a></p>
 
-<h2 id="introduction" class="header-anchor-wrapper">Introduction
-  <a href="#introduction" class="header-anchor-link">
-    <svg width="16px" height="16px" viewBox="0 0 24 24">
-<svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24" height="24" viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-    stroke-linejoin="round">
-    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
-</svg>
-
-</svg>
-  </a>
-</h2>
+<h2>Introduction</h2>
 
 <p>Feature unlocked is part of the first wave of the web and is one of the first challanges I solved. Made by cryptocat, who we salute, it is a fairly simple challange if you read the code correctly.</p>
 
-<h2 id="source" class="header-anchor-wrapper">Source
-  <a href="#source" class="header-anchor-link">
-    <svg width="16px" height="16px" viewBox="0 0 24 24">
-<svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24" height="24" viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-    stroke-linejoin="round">
-    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
-</svg>
-
-</svg>
-  </a>
-</h2>
+<h2>Source</h2>
 
 <pre  class="mc-prism hide language-text" ><code class="language-python"># filename: main.py
 
@@ -496,20 +468,7 @@ if __name__ == '__main__':
 </code></pre>
 <p>If the get arguments have the <code>debug=true</code> option, it will take the validation server from our preferences, which we remember to be a simple base64 cookie from a json so easily replicable.</p>
 
-<h2 id="solution" class="header-anchor-wrapper">Solution
-  <a href="#solution" class="header-anchor-link">
-    <svg width="16px" height="16px" viewBox="0 0 24 24">
-<svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24" height="24" viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-    stroke-linejoin="round">
-    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
-</svg>
-
-</svg>
-  </a>
-</h2>
+<h2>Solution</h2>
 
 <p>What we can do is give the application its own validation server, which is simply a copy of our own, except that we can change the date of the server to make the feature.</p>
 <pre  class="mc-prism hide language-text" ><code class="language-python"># filename: evil_validation.py

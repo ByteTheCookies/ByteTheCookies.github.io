@@ -13,9 +13,25 @@
       <pubDate>Tue, 13 Aug 2024 13:01:07 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/litctf2024/kirbytime/</guid>
-      <description>Kirbytime Description: Welcome to Kirby&amp;rsquo;s Website.
-Introduction We find ourselves in front of a very pink Kirby-themed page, where we are asked to enter a password of 7 characters.
-Source # filename: main.py import sqlite3 from flask import Flask, request, redirect, render_template import time app = Flask(__name__) @app.route(&#39;/&#39;, methods=[&#39;GET&#39;, &#39;POST&#39;]) def login(): message = None if request.method == &#39;POST&#39;: password = request.form[&#39;password&#39;] real = &#39;REDACTED&#39; if len(password) != 7: return render_template(&#39;login.</description>
+      <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;Kirbytime&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Welcome to Kirby&amp;rsquo;s Website.&lt;/p&gt;
+
+&lt;h2 id=&#34;introduction&#34; class=&#34;header-anchor-wrapper&#34;&gt;Introduction
+  &lt;a href=&#34;#introduction&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
+
+&lt;p&gt;We find ourselves in front of a very pink Kirby-themed page, where we are asked to enter a password of 7 characters.&lt;/p&gt;</description>
     </item>
     
   </channel>

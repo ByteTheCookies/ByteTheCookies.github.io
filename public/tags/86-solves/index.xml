@@ -13,9 +13,25 @@
       <pubDate>Mon, 02 Sep 2024 10:59:04 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/cyberspace2024/trendz/</guid>
-      <description>Trendz (part 1 &amp; 2) Intro:
-Trendz Part 1 Description: The latest trendz is all about Go and HTMX, but what could possibly go wrong? A secret post has been hidden deep within the application. Your mission is to uncover it.
-Note: This challenge consists of four parts, which can be solved in any order. However, the final part will only be accessible once you&amp;rsquo;ve completed this initial task, and will be released in Wave 3.</description>
+      <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;Trendz (part 1 &amp; 2)&lt;/h1&gt;
+
+&lt;h2 id=&#34;preamble&#34; class=&#34;header-anchor-wrapper&#34;&gt;Preamble
+  &lt;a href=&#34;#preamble&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
+
+&lt;p&gt;This challenge is divided into four parts, three webs and a reverse. I&amp;rsquo;m excited to share that I managed to solve the first two webs! I&amp;rsquo;ll insert them all in a write-up, trying to explain them in the way the author thought. I admit I did not solve them in order, but I&amp;rsquo;m eager to see how they fit together.
+The application was written in Go using templates and a JWT authentication, and it&amp;rsquo;s write well! The application itself has many files, but they are well written and ordered, so a thorough analysis is not difficult but necessary. The application is divided into 5 basic parts.&lt;/p&gt;</description>
     </item>
     
   </channel>
