@@ -16,14 +16,22 @@
 &lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Can you slither to the win?&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Link to the binary&lt;/strong&gt;: &lt;a href=&#34;https://2024.csc.tf/files/263575efcd73ff01d2bf123993065b37/snake?token=eyJ1c2VyX2lkIjo3ODgsInRlYW1faWQiOjM5MCwiZmlsZV9pZCI6MTJ9.ZtWYng.7QVOp_u1X-NXMNS72mApiwM1GqU&#34;&gt;Elf file&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;h2 id=&#34;introduction&#34; class=&#34;header-anchor-wrapper&#34;&gt;Introduction
+  &lt;a href=&#34;#introduction&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
 
-&lt;p&gt;We are faced with a binary file written in Rust (you can see it by simply running &lt;code&gt;strings snake | grep rustc&lt;/code&gt;) where we are made to play Snake, the goal is to get &lt;strong&gt;PRECISELY&lt;/strong&gt; to &lt;code&gt;16525&lt;/code&gt; points.&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;alt text&#34; src=&#34;http://localhost:1313/images/snake/image.png&#34;&gt;&lt;/p&gt;
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
 
-&lt;h2&gt;Solution&lt;/h2&gt;
-
-&lt;p&gt;The solutions were actually different, some people used tools to analyze the memory of a process in real time, I preferred a &amp;lsquo;slower&amp;rsquo; approach, or rather the first thing that came to mind, so I opened binary ninja despite the file being stripped and looked for a value for constant exactly 0xa (i.e. the value that was added every time it ate a &lt;code&gt;#&lt;/code&gt;).&lt;/p&gt;</description>
+&lt;p&gt;We are faced with a binary file written in Rust (you can see it by simply running &lt;code&gt;strings snake | grep rustc&lt;/code&gt;) where we are made to play Snake, the goal is to get &lt;strong&gt;PRECISELY&lt;/strong&gt; to &lt;code&gt;16525&lt;/code&gt; points.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -36,7 +44,20 @@
 &lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: The world&amp;rsquo;s coolest app has a brand new feature! Too bad it&amp;rsquo;s not released until after the CTF..&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Link&lt;/strong&gt;: &lt;a href=&#34;https://feature-unlocked-web-challs.csc.tf/&#34;&gt;https://feature-unlocked-web-challs.csc.tf/&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;h2 id=&#34;introduction&#34; class=&#34;header-anchor-wrapper&#34;&gt;Introduction
+  &lt;a href=&#34;#introduction&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
 
 &lt;p&gt;Feature unlocked is part of the first wave of the web and is one of the first challanges I solved. Made by cryptocat, who we salute, it is a fairly simple challange if you read the code correctly.&lt;/p&gt;</description>
     </item>
@@ -51,7 +72,20 @@
 &lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: I was tired of trying to find a good file server for zip files, so I made my own! It&amp;rsquo;s still a work in progress, but I think it&amp;rsquo;s pretty good so far.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Link&lt;/strong&gt;: &lt;a href=&#34;https://zipzone-web.challs.csc.tf/&#34;&gt;https://zipzone-web.challs.csc.tf/&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;h2 id=&#34;introduction&#34; class=&#34;header-anchor-wrapper&#34;&gt;Introduction
+  &lt;a href=&#34;#introduction&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
 
 &lt;p&gt;ZipZone is the only one web in the beginner&amp;rsquo;s category and, as the title suggests, you have to upload zip files that will be unzipped later, so you have to download the extracted files afterwards.&lt;/p&gt;</description>
     </item>
@@ -64,7 +98,20 @@
       <guid>http://localhost:1313/writeups/cyberspace2024/trendz/</guid>
       <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;Trendz (part 1 &amp; 2)&lt;/h1&gt;
 
-&lt;h2&gt;Preamble&lt;/h2&gt;
+&lt;h2 id=&#34;preamble&#34; class=&#34;header-anchor-wrapper&#34;&gt;Preamble
+  &lt;a href=&#34;#preamble&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
 
 &lt;p&gt;This challenge is divided into four parts, three webs and a reverse. I&amp;rsquo;m excited to share that I managed to solve the first two webs! I&amp;rsquo;ll insert them all in a write-up, trying to explain them in the way the author thought. I admit I did not solve them in order, but I&amp;rsquo;m eager to see how they fit together.
 The application was written in Go using templates and a JWT authentication, and it&amp;rsquo;s write well! The application itself has many files, but they are well written and ordered, so a thorough analysis is not difficult but necessary. The application is divided into 5 basic parts.&lt;/p&gt;</description>
@@ -79,23 +126,22 @@ The application was written in Go using templates and a JWT authentication, and 
       <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;Trendy windy trigonity&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: have you seen Tan challenge before? see maple version pi documentation!&lt;/p&gt;
 
-&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;h2 id=&#34;introduction&#34; class=&#34;header-anchor-wrapper&#34;&gt;Introduction
+  &lt;a href=&#34;#introduction&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
 
-&lt;p&gt;trendy windy trigonity was a crypto CTF &lt;a href=&#34;https://ctftime.org/event/2428&#34;&gt;CyberSpace CTF 2024&lt;/a&gt; added during the second wave.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from Crypto.Util.number import bytes_to_long
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
 
-flag = REDACTED
-print(len(flag))
-
-R = RealField(1000)
-a, b = bytes_to_long(flag[:len(flag)//2]), bytes_to_long(flag[len(flag)//2:])
-x = R(0.75872961153339387563860550178464795474547887323678173252494265684893323654606628651427151866818730100357590296863274236719073684620030717141521941211167282170567424114270941542016135979438271439047194028943997508126389603529160316379547558098144713802870753946485296790294770557302303874143106908193100)
-
-enc = a*cos(x)+b*sin(x)
-
-# 38
-# 2.78332652222000091147933689155414792020338527644698903976732528036823470890155538913578083110732846416012108159157421703264608723649277363079905992717518852564589901390988865009495918051490722972227485851595410047572144567706501150041757189923387228097603575500648300998275877439215112961273516978501e45
-&lt;/code&gt;&lt;/pr</description>
+&lt;p&gt;trendy windy trigonity was a crypto CTF &lt;a href=&#34;https://ctftime.org/event/2428&#34;&gt;CyberSpace CTF 2024&lt;/a&gt; added during the second wave.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -104,48 +150,38 @@ enc = a*cos(x)+b*sin(x)
       <pubDate>Mon, 02 Sep 2024 10:52:16 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/cyberspace2024/</guid>
-      <description>&lt;h1&gt;CyberSpace CTF 2024&lt;/h1&gt;
+      <description>&lt;h1 id=&#34;cyberspace-ctf-2024&#34; class=&#34;header-anchor-wrapper&#34;&gt;CyberSpace CTF 2024
+  &lt;a href=&#34;#cyberspace-ctf-2024&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h1&gt;
 
 
-&lt;h2&gt;Description&lt;/h2&gt;
+&lt;h2 id=&#34;description&#34; class=&#34;header-anchor-wrapper&#34;&gt;Description
+  &lt;a href=&#34;#description&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
 
-&lt;p&gt;Get ready to dive into the cyberspace and tackle challenges across categories such as Forensics, Reverse Engineering, Cryptography, Jail, and many more, at &lt;a href=&#34;https://2024.csc.tf&#34;&gt;https://2024.csc.tf&lt;/a&gt;!&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://2024.csc.tf!&#34;&gt;Url&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://discord.csc.tf/&#34;&gt;Discord&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
 
-&lt;h2&gt;Performance Summary&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;CTFs&lt;/strong&gt;: 21/63&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Total points&lt;/strong&gt;: 2032&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Position&lt;/strong&gt;: 83/830&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Rating points&lt;/strong&gt;: ?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;Writeups&lt;/h2&gt;
-
-
-&lt;h4&gt;Crypto&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/writeups/cyberspace2024/trendy_windy_trigonity/&#34;&gt;trendy windy trigonity&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4&gt;Web&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/writeups/cyberspace2024/zipzone/&#34;&gt;ZipZone&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/writeups/cyberspace2024/feature_unlocked/&#34;&gt;FeatureUnlocked&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/writeups/cyberspace2024/trendz/&#34;&gt;Trendz (part 1 and 2)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4&gt;Rev&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/writeups/cyberspace2024/snake/&#34;&gt;Snake&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
+&lt;p&gt;Get ready to dive into the cyberspace and tackle challenges across categories such as Forensics, Reverse Engineering, Cryptography, Jail, and many more, at &lt;a href=&#34;https://2024.csc.tf&#34;&gt;https://2024.csc.tf&lt;/a&gt;!&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -158,15 +194,24 @@ enc = a*cos(x)+b*sin(x)
 &lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Time limit is 2 seconds for this challenge.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://ppc.chals.sekai.team&#34;&gt;&lt;strong&gt;Official resources of challenge&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;h2 id=&#34;introduction&#34; class=&#34;header-anchor-wrapper&#34;&gt;Introduction
+  &lt;a href=&#34;#introduction&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
 
 &lt;p&gt;The goal is to distribute the hours of &lt;code&gt;n&lt;/code&gt; singers in &lt;code&gt;m&lt;/code&gt; shows.
 Each show has a number of hours equal to &lt;code&gt;l&lt;/code&gt; (unknown) and can only change singers once.
-We also want that each singer will have the same time on stage.&lt;/p&gt;
-
-&lt;h2&gt;Solution&lt;/h2&gt;
-
-&lt;p&gt;To solve this problem, I use a &lt;strong&gt;greedy&lt;/strong&gt; strategy that iteratively divides the available singing time among the singers, ensuring that each singer fulfills their required hours.&lt;/p&gt;</description>
+We also want that each singer will have the same time on stage.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -178,7 +223,20 @@ We also want that each singer will have the same time on stage.&lt;/p&gt;
       <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;Crack Me&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Developed for SekaiCTF 2022 but never got a chance to release it. Can you log in and claim the flag?&lt;/p&gt;
 
-&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;h2 id=&#34;introduction&#34; class=&#34;header-anchor-wrapper&#34;&gt;Introduction
+  &lt;a href=&#34;#introduction&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
 
 &lt;p&gt;First rev ctf of Sekai 2024 with an apk attached, so we have a mobile challenge on our hands.
 The first thing to do (which I strongly advise against in a real environment) is to download and install the app to get a quick overview of what it does.&lt;/p&gt;</description>
@@ -193,7 +251,20 @@ The first thing to do (which I strongly advise against in a real environment) is
       <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt; Some Trick &lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Bob and Alice found a futuristic version of opunssl and replaced all their needs for doofy wellmen.&lt;/p&gt;
 
-&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;h2 id=&#34;introduction&#34; class=&#34;header-anchor-wrapper&#34;&gt;Introduction
+  &lt;a href=&#34;#introduction&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
 
 &lt;p&gt;Some Trick was the first cryptography challenge in the 2024 edition of SekaiCTF. The challenge implements a key exchange based on a set of permutations and asks us to retrieve the flag that was used as a key in Bob&amp;rsquo;s first encryption.&lt;/p&gt;</description>
     </item>
@@ -204,46 +275,38 @@ The first thing to do (which I strongly advise against in a real environment) is
       <pubDate>Mon, 26 Aug 2024 16:58:34 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/sekaictf2024/</guid>
-      <description>&lt;h1&gt;SekaiCTF 2024&lt;/h1&gt;
+      <description>&lt;h1 id=&#34;sekaictf-2024&#34; class=&#34;header-anchor-wrapper&#34;&gt;SekaiCTF 2024
+  &lt;a href=&#34;#sekaictf-2024&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h1&gt;
 
 
-&lt;h2&gt;Description&lt;/h2&gt;
+&lt;h2 id=&#34;description&#34; class=&#34;header-anchor-wrapper&#34;&gt;Description
+  &lt;a href=&#34;#description&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
 
-&lt;p&gt;SekaiCTF is back for its third iteration! This year’s competition will feature various categories designed to test participants’ skills and incentivize learning. Our CTF will have more difficult challenges, and are catered towards intermediate and advanced players—however, there will still be beginner-friendly challenges to welcome players on the newer side.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://ctf.sekai.team/&#34;&gt;Url&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://ctf.sekai.team/&#34;&gt;Discord&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
 
-&lt;h2&gt;Performance Summary&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;CTFs&lt;/strong&gt;: 3/34&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Total points&lt;/strong&gt;: 369&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Position&lt;/strong&gt;: 136/1230&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Rating points&lt;/strong&gt;: 2.721&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;Writeups&lt;/h2&gt;
-
-
-&lt;h4&gt;Rev&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/writeups/sekaictf2024/crackme/&#34;&gt;CrackMe&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4&gt;Crypto&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/writeups/sekaictf2024/sometrick/&#34;&gt;Some trick&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4&gt;PPC (Professional Programming &amp;amp; Coding)&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/writeups/sekaictf2024/mikuvsmachine/&#34;&gt;Miku vs. Machine&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
+&lt;p&gt;SekaiCTF is back for its third iteration! This year’s competition will feature various categories designed to test participants’ skills and incentivize learning. Our CTF will have more difficult challenges, and are catered towards intermediate and advanced players—however, there will still be beginner-friendly challenges to welcome players on the newer side.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -255,11 +318,22 @@ The first thing to do (which I strongly advise against in a real environment) is
       <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;Hello&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Just to warm you up for the next Fight :&amp;ldquo;D&lt;/p&gt;
 
-&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;h2 id=&#34;introduction&#34; class=&#34;header-anchor-wrapper&#34;&gt;Introduction
+  &lt;a href=&#34;#introduction&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
 
-&lt;p&gt;Then we have an apparently empty page, but where we can via a ?name= parameter enter some text, the page will then respond with hello, {text entered}&lt;/p&gt;
-&lt;p&gt;The with an ngix server&lt;/p&gt;
-&lt;p&gt;Moreover, ctf in general gives us the possibility of using an admin bot where the flag is set in the cookies&lt;/p&gt;</description>
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
+
+&lt;p&gt;Then we have an apparently empty page, but where we can via a ?name= parameter enter some text, the page will then respond with hello, {text entered}&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -268,34 +342,38 @@ The first thing to do (which I strongly advise against in a real environment) is
       <pubDate>Sun, 18 Aug 2024 12:58:37 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/idekctf2024/</guid>
-      <description>&lt;h1&gt;IdekCTF 2024&lt;/h1&gt;
+      <description>&lt;h1 id=&#34;idekctf-2024&#34; class=&#34;header-anchor-wrapper&#34;&gt;IdekCTF 2024
+  &lt;a href=&#34;#idekctf-2024&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h1&gt;
 
 
-&lt;h2&gt;Description&lt;/h2&gt;
+&lt;h2 id=&#34;description&#34; class=&#34;header-anchor-wrapper&#34;&gt;Description
+  &lt;a href=&#34;#description&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
 
-&lt;p&gt;idekCTF is an information security CTF competition organized by the idek team and is aimed at the entire spectrum from high school and university students to experienced players. idekCTF will cover the standard Jeopardy-style CTF topics (binary exploitation, reverse engineering, cryptography, web exploitation, and forensics) as well as other, less standard categories.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://ctf.idek.team/&#34;&gt;Url&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://discord.gg/c7w4gKMnAX&#34;&gt;Discord&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
 
-&lt;h2&gt;Performance Summary&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;CTFs&lt;/strong&gt;: 6/35&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Total points&lt;/strong&gt;: 732&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Position&lt;/strong&gt;: 101/1070&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Rating points&lt;/strong&gt;: 5.405&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;Writeups&lt;/h2&gt;
-
-
-&lt;h4&gt;Web&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/writeups/idekctf2024/hello/&#34;&gt;Hello&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
+&lt;p&gt;idekCTF is an information security CTF competition organized by the idek team and is aimed at the entire spectrum from high school and university students to experienced players. idekCTF will cover the standard Jeopardy-style CTF topics (binary exploitation, reverse engineering, cryptography, web exploitation, and forensics) as well as other, less standard categories.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -307,44 +385,22 @@ The first thing to do (which I strongly advise against in a real environment) is
       <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;Kirbytime&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Welcome to Kirby&amp;rsquo;s Website.&lt;/p&gt;
 
-&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;h2 id=&#34;introduction&#34; class=&#34;header-anchor-wrapper&#34;&gt;Introduction
+  &lt;a href=&#34;#introduction&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
 
-&lt;p&gt;We find ourselves in front of a very pink Kirby-themed page, where we are asked to enter a password of 7 characters.&lt;/p&gt;
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
 
-&lt;h2&gt;Source&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# filename: main.py
-
-import sqlite3
-from flask import Flask, request, redirect, render_template
-import time
-app = Flask(__name__)
-
-
-@app.route(&#39;/&#39;, methods=[&#39;GET&#39;, &#39;POST&#39;])
-def login():
-    message = None
-    if request.method == &#39;POST&#39;:
-        password = request.form[&#39;password&#39;]
-        real = &#39;REDACTED&#39;
-        if len(password) != 7:
-            return render_template(&#39;login.html&#39;, message=&amp;quot;you need 7 chars&amp;quot;)
-        for i in range(len(password)):
-            if password[i] != real[i]:
-                message = &amp;quot;incorrect&amp;quot;
-                return render_template(&#39;login.html&#39;, message=message)
-            else:
-                time.sleep(1)
-        if password == real:
-            message = &amp;quot;yayy! hi kirby&amp;quot;
-
-    return render_template(&#39;login.html&#39;, message=message)
-
-
-if __name__ == &#39;__main__&#39;:
-    app.run(host=&#39;0.0.0.0&#39;)
-
-&lt;/code&gt;&lt;/pr</description>
+&lt;p&gt;We find ourselves in front of a very pink Kirby-themed page, where we are asked to enter a password of 7 characters.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -353,34 +409,38 @@ if __name__ == &#39;__main__&#39;:
       <pubDate>Tue, 13 Aug 2024 12:20:57 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/litctf2024/</guid>
-      <description>&lt;h1&gt;Lexington Informatics Tournament CTF&lt;/h1&gt;
+      <description>&lt;h1 id=&#34;lexington-informatics-tournament-ctf&#34; class=&#34;header-anchor-wrapper&#34;&gt;Lexington Informatics Tournament CTF
+  &lt;a href=&#34;#lexington-informatics-tournament-ctf&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h1&gt;
 
 
-&lt;h2&gt;Description&lt;/h2&gt;
+&lt;h2 id=&#34;description&#34; class=&#34;header-anchor-wrapper&#34;&gt;Description
+  &lt;a href=&#34;#description&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
 
-&lt;p&gt;Lexington Informatics Tournament CTF 2024 is a Jeopardy-style, beginner-friendly online CTF that&amp;rsquo;s open to everyone.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://lit.lhsmathcs.org/&#34;&gt;Url&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://discord.gg/k6yzFdZ&#34;&gt;Discord&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
 
-&lt;h2&gt;Performance Summary&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;CTFs&lt;/strong&gt;: 18/32&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Total points&lt;/strong&gt;: 2068&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Position&lt;/strong&gt;: 95/830&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Rating points&lt;/strong&gt;: 19.095&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;Writeups&lt;/h2&gt;
-
-
-&lt;h4&gt;Web&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/writeups/litctf2024/kirbytime/&#34;&gt;Kirbytime&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
+&lt;p&gt;Lexington Informatics Tournament CTF 2024 is a Jeopardy-style, beginner-friendly online CTF that&amp;rsquo;s open to everyone.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -392,7 +452,20 @@ if __name__ == &#39;__main__&#39;:
       <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;File Sharing Portal&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Welcome to the file sharing portal! We only support tar files!&lt;/p&gt;
 
-&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;h2 id=&#34;introduction&#34; class=&#34;header-anchor-wrapper&#34;&gt;Introduction
+  &lt;a href=&#34;#introduction&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
 
 &lt;p&gt;The ctf has a very simple structure: we have a form in which we are asked to insert a &lt;a href=&#34;https://en.wikipedia.org/wiki/Tar_(computing)&#34;&gt;tar&lt;/a&gt; file; once the tar file has been inserted, it is unzipped and we are shown the &lt;code&gt;name&lt;/code&gt; of files it contains; by clicking on the different files, we can read their contents.&lt;/p&gt;</description>
     </item>
@@ -406,38 +479,22 @@ if __name__ == &#39;__main__&#39;:
       <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;Waas&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Writing as a Service!&lt;/p&gt;
 
-&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;h2 id=&#34;introduction&#34; class=&#34;header-anchor-wrapper&#34;&gt;Introduction
+  &lt;a href=&#34;#introduction&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
 
-&lt;p&gt;WaaS (Writing as a Service) allows us to overwrite a file on the system (after some input validation) and insert anything (until a newline is met) we want in it.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import subprocess
-from base64 import b64decode as d
-while True:
-        print(&amp;quot;[1] Write to a file\n[2] Get the flag\n[3] Exit&amp;quot;)
-        try:
-                inp = int(input(&amp;quot;Choice: &amp;quot;).strip())
-        except:
-                print(&amp;quot;Invalid input!&amp;quot;)
-                exit(0)
-        if inp == 1:
-                file = input(&amp;quot;Enter file name: &amp;quot;).strip()
-                assert file.count(&#39;.&#39;) &amp;lt;= 2 # Why do you need more?
-                assert &amp;quot;/proc&amp;quot; not in file # Why do you need to write there?
-                assert &amp;quot;/bin&amp;quot; not in file # Why do you need to write there? 
-                assert &amp;quot;\n&amp;quot; not in file # Why do you need these?
-                assert &amp;quot;chall&amp;quot; not in file # Don&#39;t be overwriting my files!
-                try: 
-                        f = open(file,&#39;w&#39;)
-                except:
-                        print(&amp;quot;Error! Maybe the file does not exist?&amp;quot;)
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
 
-                f.write(input(&amp;quot;Data: &amp;quot;).strip())
-                f.close()
-                print(&amp;quot;Data written sucessfully!&amp;quot;)
-
-        if inp == 2:
-                flag = subprocess.run([&amp;quot;cat&amp;quot;,&amp;quot;fake_flag.txt&amp;quot;],capture_output=True) # You actually thought I would give the flag?
-                print(flag.stdout.strip())
-&lt;/code&gt;&lt;/pr</description>
+&lt;p&gt;WaaS (Writing as a Service) allows us to overwrite a file on the system (after some input validation) and insert anything (until a newline is met) we want in it.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -446,40 +503,38 @@ while True:
       <pubDate>Mon, 05 Aug 2024 18:26:54 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/n00bzctf2024/</guid>
-      <description>&lt;h1&gt;N00bz CTF 2024&lt;/h1&gt;
+      <description>&lt;h1 id=&#34;n00bz-ctf-2024&#34; class=&#34;header-anchor-wrapper&#34;&gt;N00bz CTF 2024
+  &lt;a href=&#34;#n00bz-ctf-2024&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h1&gt;
 
 
-&lt;h2&gt;Description&lt;/h2&gt;
+&lt;h2 id=&#34;description&#34; class=&#34;header-anchor-wrapper&#34;&gt;Description
+  &lt;a href=&#34;#description&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
 
-&lt;p&gt;A 48 hours CTF hosted by n00bz for n00bz. Organized with beginner friendly challenges (and some hard ones), n00bzCTF is dedicated to make cyber security more friendly and approachable for complete n00bz.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://ctf.n00bzunit3d.xyz/&#34;&gt;Url&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://discord.gg/Kze7sjpgf7&#34;&gt;Discord&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
 
-&lt;h2&gt;Performance Summary&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;CTFs&lt;/strong&gt;: 31/32&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Total points&lt;/strong&gt;: 9794.000&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Position&lt;/strong&gt;: 24/967&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Rating points&lt;/strong&gt;: 24.067&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;Writeups&lt;/h2&gt;
-
-
-&lt;h4&gt;Web&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/writeups/noobzctf2024/filesharingportal/&#34;&gt;File Sharing Portal&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4&gt;Misc&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/writeups/noobzctf2024/waas/&#34;&gt;Waas&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
+&lt;p&gt;A 48 hours CTF hosted by n00bz for n00bz. Organized with beginner friendly challenges (and some hard ones), n00bzCTF is dedicated to make cyber security more friendly and approachable for complete n00bz.&lt;/p&gt;</description>
     </item>
     
   </channel>
