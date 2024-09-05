@@ -19,7 +19,7 @@ home = ["HTML", "RSS", "JSON"]
 
 [params.categoryEmojis]
 Web = "🌐"
-Network = "📡"
+Netw = "📡"
 Pwn = "💻"
 Crypto = "🔐"
 Forensic = "🕵️"

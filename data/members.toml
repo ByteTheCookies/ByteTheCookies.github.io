@@ -67,7 +67,7 @@ name = "Walter D'Ambrosio"
 github = "https://github.com/"
 handle = "@wXlter"
 role = "University of Salerno"
-categories = ["Network", "Web"]
+categories = ["Netw", "Web"]
 link_etherscan = ""
 
 [[members]]
