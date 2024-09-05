@@ -365,6 +365,7 @@
             alt="Logo bytethecookies"
             style="display: none"
           />
+          <img src="nft.png" alt="Badge" class="badge-image" />
         </a>
       </div>
       <div class="div-text">
@@ -417,6 +418,7 @@
             alt="Logo bytethecookies"
             style="display: none"
           />
+          <img src="nft.png" alt="Badge" class="badge-image" />
         </a>
       </div>
       <div class="div-text">
@@ -461,6 +463,7 @@
             alt="Logo bytethecookies"
             style="display: none"
           />
+          <img src="nft.png" alt="Badge" class="badge-image" />
         </a>
       </div>
       <div class="div-text">
@@ -505,6 +508,7 @@
             alt="Logo bytethecookies"
             style="display: none"
           />
+          <img src="nft.png" alt="Badge" class="badge-image" />
         </a>
       </div>
       <div class="div-text">
@@ -553,6 +557,7 @@
             alt="Logo bytethecookies"
             style="display: none"
           />
+          <img src="nft.png" alt="Badge" class="badge-image" />
         </a>
       </div>
       <div class="div-text">
@@ -597,6 +602,7 @@
             alt="Logo bytethecookies"
             style="display: none"
           />
+          <img src="nft.png" alt="Badge" class="badge-image" />
         </a>
       </div>
       <div class="div-text">
@@ -645,6 +651,7 @@
             alt="Logo bytethecookies"
             style="display: none"
           />
+          <img src="nft.png" alt="Badge" class="badge-image" />
         </a>
       </div>
       <div class="div-text">
@@ -689,6 +696,7 @@
             alt="Logo bytethecookies"
             style="display: none"
           />
+          <img src="nft.png" alt="Badge" class="badge-image" />
         </a>
       </div>
       <div class="div-text">
@@ -737,6 +745,7 @@
             alt="Logo bytethecookies"
             style="display: none"
           />
+          <img src="nft.png" alt="Badge" class="badge-image" />
         </a>
       </div>
       <div class="div-text">
@@ -781,6 +790,7 @@
             alt="Logo bytethecookies"
             style="display: none"
           />
+          <img src="nft.png" alt="Badge" class="badge-image" />
         </a>
       </div>
       <div class="div-text">
@@ -829,6 +839,7 @@
             alt="Logo bytethecookies"
             style="display: none"
           />
+          <img src="nft.png" alt="Badge" class="badge-image" />
         </a>
       </div>
       <div class="div-text">
@@ -912,7 +923,7 @@
           const uris = await fetchTokenURIs(contractAddress, abi, address);
   
           if (uris && uris.length > 0) {
-            const lastUri = uris[uris.length - 1]; 
+            const lastUri = uris[uris.length - 1];
             let base64String = lastUri.split(",")[1];
   
             try {
@@ -932,9 +943,11 @@
               };
   
               img.src = decodedImageUri;
-  
             } catch (e) {
-              console.error("Errore durante la decodifica o il caricamento dell'immagine:", e);
+              console.error(
+                "Errore durante la decodifica o il caricamento dell'immagine:",
+                e
+              );
               imageElement.src = "/icons/cookie.svg";
               spinner.style.display = "none";
               imageElement.style.display = "block";
@@ -951,7 +964,7 @@
         }
       }
   
-      const promises = Array.from(members).map(member => updateMember(member));
+      const promises = Array.from(members).map((member) => updateMember(member));
   
       await Promise.all(promises);
   
