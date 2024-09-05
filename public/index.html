@@ -867,9 +867,9 @@
       "Jose Sgariglia": "0x523284b365300f44eff3ffe6e243a688b60e3d9f",
       "Marco Santoriello": "0x9a4267d4B1e221f9Cc4c4596367592E5E85F288b",
       "Daniele Migliore": "0x16f87a40142e062d1aceffa4d925114f989f9370",
-      
-      
-      
+      "Salvatore Russo": "0xC39530265b63E7918515e3652c9b5b66D574A4DA",
+      "Daniele Liguori": "0xb87aca2583f69770bd11a913df6cbbdd68b13986",
+      "Walter D'Ambrosio": "0x7070f9d7b99692d0ebea98e5ba85fdb86d04306a",
     };
   
     async function fetchTokenURIs(contractAddress, abi, address) {
@@ -902,8 +902,7 @@
     async function updateAllTokenURIsAndImages() {
       const abi = await loadABI();
       const members = document.querySelectorAll(".card-members");
-  
-      const promises = Array.from(members).map(async (member) => {
+      async function updateMember(member) {
         const name = member.querySelector(".name-members").innerText;
         const imageElement = member.querySelector(".nftImage");
         const spinner = member.querySelector(".spinner");
@@ -911,37 +910,35 @@
         if (name && namesToAddress[name]) {
           const address = namesToAddress[name];
           const uris = await fetchTokenURIs(contractAddress, abi, address);
-          
+  
           if (uris && uris.length > 0) {
-            const lastUri = uris[0];
-            
+            const lastUri = uris[uris.length - 1]; 
             let base64String = lastUri.split(",")[1];
-            if (name === "Alessandro Cavaliere") {
-              decodedImageUri = JSON.parse(atob(base64String)).image;
-            } else {
-              decodedImageUri = JSON.parse(atob(base64String)).image.replace(
-                "svg+xml",
-                "png"
-              );
-            }
-            console.log("Decoded Image for", name, "URI:", decodedImageUri);
-            return new Promise((resolve) => {
+  
+            try {
+              let decodedImageUri = JSON.parse(atob(base64String)).image;
               const img = new Image();
-              console.log("Decoded Image for", name, "URI:", decodedImageUri);
-              img.src = decodedImageUri;
+  
               img.onload = () => {
                 imageElement.src = decodedImageUri;
                 spinner.style.display = "none";
                 imageElement.style.display = "block";
-                resolve();
               };
+  
               img.onerror = () => {
                 imageElement.src = "/icons/cookie.svg";
                 spinner.style.display = "none";
                 imageElement.style.display = "block";
-                resolve();
               };
-            });
+  
+              img.src = decodedImageUri;
+  
+            } catch (e) {
+              console.error("Errore durante la decodifica o il caricamento dell'immagine:", e);
+              imageElement.src = "/icons/cookie.svg";
+              spinner.style.display = "none";
+              imageElement.style.display = "block";
+            }
           } else {
             imageElement.src = "/icons/cookie.svg";
             spinner.style.display = "none";
@@ -952,8 +949,9 @@
           spinner.style.display = "none";
           imageElement.style.display = "block";
         }
-        return Promise.resolve();
-      });
+      }
+  
+      const promises = Array.from(members).map(member => updateMember(member));
   
       await Promise.all(promises);
   
