@@ -67,7 +67,7 @@ name = "Walter D'Ambrosio"
 github = "https://github.com/"
 handle = "@wXlter"
 role = "University of Salerno"
-categories = ["Network", "Web"]
+categories = ["Netw", "Web"]
 link_etherscan = "https://holesky.etherscan.io/tx/0x458335190a60576f9ba8a98c1d7b004371fa73f97e86a55b2ca62800d1f2a533"
 
 [[members]]

@@ -211,7 +211,6 @@
                     <span>Snake Description: Can you slither to the win?
 Link to the binary: Elf file
 Introduction We are faced with a binary file written in Rust (you can see it by simply running strings snake | grep rustc) where we are made to play Snake, the goal is to get PRECISELY to 16525 points.
-Solution The solutions were actually different, some people used tools to analyze the memory of a process in real time, I preferred a &lsquo;slower&rsquo; approach, or rather the first thing that came to mind, so I opened binary ninja despite the file being stripped and looked for a value for constant exactly 0xa (i.e. the value that was added every time it ate a #).
 </span>
                 </div>
                 <div class="postcard-metadata">
