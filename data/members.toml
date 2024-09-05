@@ -5,7 +5,7 @@ github = "https://github.com/Dabi1290"
 handle = "@bl4ck_sky"
 role = "University of Salerno"
 categories = ["Osint", "Crypto", "Web"]
-link_etherscan = "https://holesky.etherscan.io/tx/0x12efa6346f5f341812878a45a9f961503ff7f50d6d3c370f6715fd539309b49e"
+link_etherscan = "https://holesky.etherscan.io/tx/0x5da0ffefda8e0da8221a8bb19fd14e67d212c892eda71138afc72c86d8babf27"
 
 [[members]]
 image = "icons/cookie.svg"
@@ -14,7 +14,7 @@ github = "https://github.com/akiidjk"
 handle = "@akiidjk"
 role = "HighSchool student"
 categories = ["Web"]
-link_etherscan = "https://holesky.etherscan.io/tx/0xe307bc3e76279ca66ef171eebae17f301861b1d242ad8dd5f51918b79a4d5572"
+link_etherscan = "https://holesky.etherscan.io/tx/0x539390b9a6dbea5f1583c52ee2d6aa19c091cd9b6ec1468d472548d84099b91d"
 
 [[members]]
 image = "icons/cookie.svg"
@@ -67,8 +67,8 @@ name = "Walter D'Ambrosio"
 github = "https://github.com/"
 handle = "@wXlter"
 role = "University of Salerno"
-categories = ["Netw", "Web"]
-link_etherscan = ""
+categories = ["Network", "Web"]
+link_etherscan = "https://holesky.etherscan.io/tx/0x458335190a60576f9ba8a98c1d7b004371fa73f97e86a55b2ca62800d1f2a533"
 
 [[members]]
 image = "icons/cookie.svg"
@@ -77,7 +77,7 @@ github = "https://github.com/sasa71"
 handle = "@sasy"
 role = "University of Salerno"
 categories = ["Web"]
-link_etherscan = ""
+link_etherscan = "https://holesky.etherscan.io/tx/0x5d7495405229da6ce2943f049c51b2b3dbbbd83bf084d61847c5fed39db72b3e"
 
 [[members]]
 image = "icons/cookie.svg"
@@ -86,7 +86,7 @@ github = "https://github.com/tatore02"
 handle = "@tatore"
 role = "University of Salerno"
 categories = ["Web", "Pwn"]
-link_etherscan = "https://holesky.etherscan.io/tx/0x3288766a33e00effab68bb0db4c6af85235c2e72b56d9c10226174e779c2e94c"
+link_etherscan = "https://holesky.etherscan.io/tx/0x2319ee9736b266fb20a4476e322467b9d95ffbf33d4fee503bf6218807a7486a"
 
 [[members]]
 image = "icons/cookie.svg"
@@ -95,4 +95,4 @@ github = "https://github.com/danlig"
 handle = "@danlig"
 role = "University of Salerno"
 categories = ["Web"]
-link_etherscan = ""
+link_etherscan = "https://holesky.etherscan.io/tx/0x64e265b0a5442cfc58c0c678fee6fe189dd82389e6ee9b8bf20c3a6e18f67520"
