@@ -5,7 +5,7 @@ github = "https://github.com/Dabi1290"
 handle = "@bl4ck_sky"
 role = "University of Salerno"
 categories = ["Osint", "Crypto", "Web"]
-link_etherscan = ""
+link_etherscan = "https://holesky.etherscan.io/tx/0x12efa6346f5f341812878a45a9f961503ff7f50d6d3c370f6715fd539309b49e"
 
 [[members]]
 image = "icons/cookie.svg"
@@ -14,7 +14,7 @@ github = "https://github.com/akiidjk"
 handle = "@akiidjk"
 role = "HighSchool student"
 categories = ["Web"]
-link_etherscan = ""
+link_etherscan = "https://holesky.etherscan.io/tx/0xe307bc3e76279ca66ef171eebae17f301861b1d242ad8dd5f51918b79a4d5572"
 
 [[members]]
 image = "icons/cookie.svg"
@@ -23,7 +23,7 @@ github = "https://github.com/vympel7"
 handle = "@vympel"
 role = "University of Salerno"
 categories = ["Crypto"]
-link_etherscan = ""
+link_etherscan = "https://holesky.etherscan.io/tx/0xb1d5a30d306a99132d12fccf16832af40c979ff66b4706a459cde1e5babf997f"
 
 [[members]]
 image = "icons/cookie.svg"
@@ -32,7 +32,7 @@ github = "https://github.com/Alessandro-Cavaliere"
 handle = "@galexela"
 role = "University of Salerno"
 categories = ["Web", "Block"]
-link_etherscan = ""
+link_etherscan = "https://holesky.etherscan.io/tx/0x26f9f3fdb43acb0797873c6df56733155a31e88174a05c59d4094a936708b15c"
 
 [[members]]
 image = "icons/cookie.svg"
@@ -41,7 +41,7 @@ github = "https://github.com/marcosantoriello"
 handle = "@marcus"
 role = "University of Salerno"
 categories = ["Web"]
-link_etherscan = ""
+link_etherscan = "https://holesky.etherscan.io/tx/0x5d840ec9fc642aeba6e8cadecbadb3951e115593324c25535d0d16e8efb54caf"
 
 [[members]]
 image = "icons/cookie.svg"
@@ -50,7 +50,7 @@ github = "https://github.com/danmig06"
 handle = "@the_dann"
 role = "HighSchool student"
 categories = ["Rev", "Pwn"]
-link_etherscan = ""
+link_etherscan = "https://holesky.etherscan.io/tx/0xc0020ff75f7c2fda0f00a619248ee815e955ffc12dd8933f1ec876aa02b4916c"
 
 [[members]]
 image = "icons/cookie.svg"
@@ -59,6 +59,15 @@ github = "https://github.com/jose-sgariglia"
 handle = "@josekonpyuta"
 role = "University of Salerno"
 categories = ["Crypto"]
+link_etherscan = "https://holesky.etherscan.io/tx/0xe65416c77415bad27e218c32d8d521e50a81b3167b7d7f49f8a1f72dee6a45db"
+
+[[members]]
+image = "icons/cookie.svg"
+name = "Walter D'Ambrosio"
+github = "https://github.com/"
+handle = "@wXlter"
+role = "University of Salerno"
+categories = ["Network", "Web"]
 link_etherscan = ""
 
 [[members]]
@@ -77,7 +86,7 @@ github = "https://github.com/tatore02"
 handle = "@tatore"
 role = "University of Salerno"
 categories = ["Web", "Pwn"]
-link_etherscan = ""
+link_etherscan = "https://holesky.etherscan.io/tx/0x3288766a33e00effab68bb0db4c6af85235c2e72b56d9c10226174e779c2e94c"
 
 [[members]]
 image = "icons/cookie.svg"
