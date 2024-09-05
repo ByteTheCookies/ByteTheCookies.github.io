@@ -531,21 +531,33 @@ h6 {
     margin: 15px auto; }
   .members-list {
     flex-direction: column;
-    align-items: center; } }
+    align-items: center; }
+  .div-text {
+    margin-right: auto; } }
 
 .content-container {
+  width: 100%;
   display: flex;
-  margin: 0,auto;
-  min-width: 60%; }
+  margin: 0, auto;
+  justify-content: space-between; }
 
 .div-img-members {
   padding: 10px;
   margin: 0px;
   display: inline-block;
-  min-width: 30%; }
+  min-width: 30%;
+  position: relative; }
+
+.badge-image {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 25px;
+  border-radius: 50%; }
 
 .name-members {
   margin: 14px 0 0 0;
+  width: 100%;
   display: inline-block; }
 
 .tag-members {
@@ -574,7 +586,6 @@ h6 {
   opacity: 0.7; }
 
 .categories-container {
-  width: 20%;
   margin-left: auto;
   padding: 8px;
   display: flex;
