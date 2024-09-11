@@ -31,7 +31,7 @@ Get ready to dive into the cyberspace and tackle challenges across categories su
 - **CTFs**: 21/63
 - **Total points**: 2032
 - **Position**: 83/830
-- **Rating points**: ?
+- **Rating points**: 3.355
 
 ## Writeups
 
