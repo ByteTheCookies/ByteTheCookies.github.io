@@ -5,7 +5,6 @@
     <link>http://localhost:1313/contacts/</link>
     <description>Recent content in Contacts on ByteTheCookies</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Mon, 05 Aug 2024 17:54:09 +0200</lastBuildDate><atom:link href="http://localhost:1313/contacts/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language><atom:link href="http://localhost:1313/contacts/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

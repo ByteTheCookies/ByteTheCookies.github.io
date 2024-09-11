@@ -31,7 +31,8 @@
   &lt;/a&gt;
 &lt;/h2&gt;
 
-&lt;p&gt;Then we have an apparently empty page, but where we can via a ?name= parameter enter some text, the page will then respond with hello, {text entered}&lt;/p&gt;</description>
+&lt;p&gt;Then we have an apparently empty page, but where we can via a ?name= parameter enter some text, the page will then respond with hello, {text entered}&lt;/p&gt;
+&lt;p&gt;The with an ngix server&lt;/p&gt;</description>
     </item>
     
   </channel>

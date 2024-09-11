@@ -31,7 +31,56 @@
   &lt;/a&gt;
 &lt;/h2&gt;
 
-&lt;p&gt;We find ourselves in front of a very pink Kirby-themed page, where we are asked to enter a password of 7 characters.&lt;/p&gt;</description>
+&lt;p&gt;We find ourselves in front of a very pink Kirby-themed page, where we are asked to enter a password of 7 characters.&lt;/p&gt;
+
+&lt;h2 id=&#34;source&#34; class=&#34;header-anchor-wrapper&#34;&gt;Source
+  &lt;a href=&#34;#source&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# filename: main.py
+
+import sqlite3
+from flask import Flask, request, redirect, render_template
+import time
+app = Flask(__name__)
+
+
+@app.route(&#39;/&#39;, methods=[&#39;GET&#39;, &#39;POST&#39;])
+def login():
+    message = None
+    if request.method == &#39;POST&#39;:
+        password = request.form[&#39;password&#39;]
+        real = &#39;REDACTED&#39;
+        if len(password) != 7:
+            return render_template(&#39;login.html&#39;, message=&amp;quot;you need 7 chars&amp;quot;)
+        for i in range(len(password)):
+            if password[i] != real[i]:
+                message = &amp;quot;incorrect&amp;quot;
+                return render_template(&#39;login.html&#39;, message=message)
+            else:
+                time.sleep(1)
+        if password == real:
+            message = &amp;quot;yayy! hi kirby&amp;quot;
+
+    return render_template(&#39;login.html&#39;, message=message)
+
+
+if __name__ == &#39;__main__&#39;:
+    app.run(host=&#39;0.0.0.0&#39;)
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;As we can see in the code at the &amp;lsquo;/&amp;rsquo; endpoint, when the method and post, it takes the password value from the form, checks the length to be 7 and starts iterating over each character to check if it is correct, it triggers a time.sleep(1) otherwise it returns an error.&lt;/p&gt;</description>
     </item>
     
   </channel>

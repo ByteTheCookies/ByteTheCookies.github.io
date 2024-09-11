@@ -20,7 +20,8 @@
   <meta property="og:site_name" content="ByteTheCookies">
   <meta property="og:title" content="Kirbytime">
   <meta property="og:description" content="Kirbytime Description: Welcome to Kirby’s Website.
-Introduction We find ourselves in front of a very pink Kirby-themed page, where we are asked to enter a password of 7 characters.">
+Introduction We find ourselves in front of a very pink Kirby-themed page, where we are asked to enter a password of 7 characters.
+Source # filename: main.py import sqlite3 from flask import Flask, request, redirect, render_template import time app = Flask(__name__) @app.route(&#39;/&#39;, methods=[&#39;GET&#39;, &#39;POST&#39;]) def login(): message = None if request.method == &#39;POST&#39;: password = request.form[&#39;password&#39;] real = &#39;REDACTED&#39; if len(password) != 7: return render_template(&#39;login.html&#39;, message=&#34;you need 7 chars&#34;) for i in range(len(password)): if password[i] != real[i]: message = &#34;incorrect&#34; return render_template(&#39;login.html&#39;, message=message) else: time.sleep(1) if password == real: message = &#34;yayy! hi kirby&#34; return render_template(&#39;login.html&#39;, message=message) if __name__ == &#39;__main__&#39;: app.run(host=&#39;0.0.0.0&#39;) As we can see in the code at the ‘/’ endpoint, when the method and post, it takes the password value from the form, checks the length to be 7 and starts iterating over each character to check if it is correct, it triggers a time.sleep(1) otherwise it returns an error.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="writeups">
@@ -39,7 +40,8 @@ Introduction We find ourselves in front of a very pink Kirby-themed page, where 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Kirbytime">
   <meta name="twitter:description" content="Kirbytime Description: Welcome to Kirby’s Website.
-Introduction We find ourselves in front of a very pink Kirby-themed page, where we are asked to enter a password of 7 characters.">
+Introduction We find ourselves in front of a very pink Kirby-themed page, where we are asked to enter a password of 7 characters.
+Source # filename: main.py import sqlite3 from flask import Flask, request, redirect, render_template import time app = Flask(__name__) @app.route(&#39;/&#39;, methods=[&#39;GET&#39;, &#39;POST&#39;]) def login(): message = None if request.method == &#39;POST&#39;: password = request.form[&#39;password&#39;] real = &#39;REDACTED&#39; if len(password) != 7: return render_template(&#39;login.html&#39;, message=&#34;you need 7 chars&#34;) for i in range(len(password)): if password[i] != real[i]: message = &#34;incorrect&#34; return render_template(&#39;login.html&#39;, message=message) else: time.sleep(1) if password == real: message = &#34;yayy! hi kirby&#34; return render_template(&#39;login.html&#39;, message=message) if __name__ == &#39;__main__&#39;: app.run(host=&#39;0.0.0.0&#39;) As we can see in the code at the ‘/’ endpoint, when the method and post, it takes the password value from the form, checks the length to be 7 and starts iterating over each character to check if it is correct, it triggers a time.sleep(1) otherwise it returns an error.">
 
     <link rel="stylesheet" href="/style.css" integrity="">
 

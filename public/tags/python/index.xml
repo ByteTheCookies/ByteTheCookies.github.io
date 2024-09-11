@@ -45,20 +45,7 @@
 &lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: I was tired of trying to find a good file server for zip files, so I made my own! It&amp;rsquo;s still a work in progress, but I think it&amp;rsquo;s pretty good so far.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Link&lt;/strong&gt;: &lt;a href=&#34;https://zipzone-web.challs.csc.tf/&#34;&gt;https://zipzone-web.challs.csc.tf/&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;introduction&#34; class=&#34;header-anchor-wrapper&#34;&gt;Introduction
-  &lt;a href=&#34;#introduction&#34; class=&#34;header-anchor-link&#34;&gt;
-    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
-&lt;svg
-    xmlns=&#34;http://www.w3.org/2000/svg&#34;
-    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
-    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
-    stroke-linejoin=&#34;round&#34;&gt;
-    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
-&lt;/svg&gt;
-
-&lt;/svg&gt;
-  &lt;/a&gt;
-&lt;/h2&gt;
+&lt;h2&gt;Introduction&lt;/h2&gt;
 
 &lt;p&gt;ZipZone is the only one web in the beginner&amp;rsquo;s category and, as the title suggests, you have to upload zip files that will be unzipped later, so you have to download the extracted files afterwards.&lt;/p&gt;</description>
     </item>
@@ -73,24 +60,15 @@
 &lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Time limit is 2 seconds for this challenge.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://ppc.chals.sekai.team&#34;&gt;&lt;strong&gt;Official resources of challenge&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;introduction&#34; class=&#34;header-anchor-wrapper&#34;&gt;Introduction
-  &lt;a href=&#34;#introduction&#34; class=&#34;header-anchor-link&#34;&gt;
-    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
-&lt;svg
-    xmlns=&#34;http://www.w3.org/2000/svg&#34;
-    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
-    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
-    stroke-linejoin=&#34;round&#34;&gt;
-    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
-&lt;/svg&gt;
-
-&lt;/svg&gt;
-  &lt;/a&gt;
-&lt;/h2&gt;
+&lt;h2&gt;Introduction&lt;/h2&gt;
 
 &lt;p&gt;The goal is to distribute the hours of &lt;code&gt;n&lt;/code&gt; singers in &lt;code&gt;m&lt;/code&gt; shows.
 Each show has a number of hours equal to &lt;code&gt;l&lt;/code&gt; (unknown) and can only change singers once.
-We also want that each singer will have the same time on stage.&lt;/p&gt;</description>
+We also want that each singer will have the same time on stage.&lt;/p&gt;
+
+&lt;h2&gt;Solution&lt;/h2&gt;
+
+&lt;p&gt;To solve this problem, I use a &lt;strong&gt;greedy&lt;/strong&gt; strategy that iteratively divides the available singing time among the singers, ensuring that each singer fulfills their required hours.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -102,22 +80,76 @@ We also want that each singer will have the same time on stage.&lt;/p&gt;</descr
       <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt; Some Trick &lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Bob and Alice found a futuristic version of opunssl and replaced all their needs for doofy wellmen.&lt;/p&gt;
 
-&lt;h2 id=&#34;introduction&#34; class=&#34;header-anchor-wrapper&#34;&gt;Introduction
-  &lt;a href=&#34;#introduction&#34; class=&#34;header-anchor-link&#34;&gt;
-    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
-&lt;svg
-    xmlns=&#34;http://www.w3.org/2000/svg&#34;
-    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
-    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
-    stroke-linejoin=&#34;round&#34;&gt;
-    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
-&lt;/svg&gt;
+&lt;h2&gt;Introduction&lt;/h2&gt;
 
-&lt;/svg&gt;
-  &lt;/a&gt;
-&lt;/h2&gt;
+&lt;p&gt;Some Trick was the first cryptography challenge in the 2024 edition of SekaiCTF. The challenge implements a key exchange based on a set of permutations and asks us to retrieve the flag that was used as a key in Bob&amp;rsquo;s first encryption.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import random
+from secrets import randbelow, randbits
+from flag import FLAG
 
-&lt;p&gt;Some Trick was the first cryptography challenge in the 2024 edition of SekaiCTF. The challenge implements a key exchange based on a set of permutations and asks us to retrieve the flag that was used as a key in Bob&amp;rsquo;s first encryption.&lt;/p&gt;</description>
+CIPHER_SUITE = randbelow(2**256)
+print(f&amp;quot;oPUN_SASS_SASS_l version 4.0.{CIPHER_SUITE}&amp;quot;)
+random.seed(CIPHER_SUITE)
+
+GSIZE = 8209
+GNUM = 79
+
+LIM = GSIZE**GNUM
+
+
+def gen(n):
+    p, i = [0] * n, 0
+    for j in random.sample(range(1, n), n - 1):
+        p[i], i = j, j
+    return tuple(p)
+
+
+def gexp(g, e):
+    res = tuple(g)
+    while e:
+        if e &amp;amp; 1:
+            res = tuple(res[i] for i in g)
+        e &amp;gt;&amp;gt;= 1
+        g = tuple(g[i] for i in g)
+    return res
+
+
+def enc(k, m, G):
+    if not G:
+        return m
+    mod = len(G[0])
+    return gexp(G[0], k % mod)[m % mod] + enc(k // mod, m // mod, G[1:]) * mod
+
+
+def inverse(perm):
+    res = list(perm)
+    for i, v in enumerate(perm):
+        res[v] = i
+    return res
+
+
+G = [gen(GSIZE) for i in range(GNUM)]
+
+
+FLAG = int.from_bytes(FLAG, &#39;big&#39;)
+left_pad = randbits(randbelow(LIM.bit_length() - FLAG.bit_length()))
+FLAG = (FLAG &amp;lt;&amp;lt; left_pad.bit_length()) + left_pad
+FLAG = (randbits(randbelow(LIM.bit_length() - FLAG.bit_length()))
+        &amp;lt;&amp;lt; FLAG.bit_length()) + FLAG
+
+bob_key = randbelow(LIM)
+bob_encr = enc(FLAG, bob_key, G)
+print(&amp;quot;bob says&amp;quot;, bob_encr)
+alice_key = randbelow(LIM)
+alice_encr = enc(bob_encr, alice_key, G)
+print(&amp;quot;alice says&amp;quot;, alice_encr)
+bob_decr = enc(alice_encr, bob_key, [inverse(i) for i in G])
+print(&amp;quot;bob says&amp;quot;, bob_decr)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Solution&lt;/h2&gt;
+
+&lt;p&gt;The first thing we do is retrieve the &lt;code&gt;CIPHER_SUITE&lt;/code&gt; variable to set the random seed and reconstruct the set of permutations G, then we care about retrieving &lt;code&gt;bob_key&lt;/code&gt; to ultimately recover the flag.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -144,20 +176,10 @@ We also want that each singer will have the same time on stage.&lt;/p&gt;</descr
   &lt;/a&gt;
 &lt;/h2&gt;
 
-&lt;p&gt;We find ourselves in front of a very pink Kirby-themed page, where we are asked to enter a password of 7 characters.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>File Sharing Portal</title>
-      <link>http://localhost:1313/writeups/noobzctf2024/filesharingportal/</link>
-      <pubDate>Tue, 06 Aug 2024 11:27:07 +0200</pubDate>
-      
-      <guid>http://localhost:1313/writeups/noobzctf2024/filesharingportal/</guid>
-      <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;File Sharing Portal&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Welcome to the file sharing portal! We only support tar files!&lt;/p&gt;
+&lt;p&gt;We find ourselves in front of a very pink Kirby-themed page, where we are asked to enter a password of 7 characters.&lt;/p&gt;
 
-&lt;h2 id=&#34;introduction&#34; class=&#34;header-anchor-wrapper&#34;&gt;Introduction
-  &lt;a href=&#34;#introduction&#34; class=&#34;header-anchor-link&#34;&gt;
+&lt;h2 id=&#34;source&#34; class=&#34;header-anchor-wrapper&#34;&gt;Source
+  &lt;a href=&#34;#source&#34; class=&#34;header-anchor-link&#34;&gt;
     &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
 &lt;svg
     xmlns=&#34;http://www.w3.org/2000/svg&#34;
@@ -170,6 +192,52 @@ We also want that each singer will have the same time on stage.&lt;/p&gt;</descr
 &lt;/svg&gt;
   &lt;/a&gt;
 &lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# filename: main.py
+
+import sqlite3
+from flask import Flask, request, redirect, render_template
+import time
+app = Flask(__name__)
+
+
+@app.route(&#39;/&#39;, methods=[&#39;GET&#39;, &#39;POST&#39;])
+def login():
+    message = None
+    if request.method == &#39;POST&#39;:
+        password = request.form[&#39;password&#39;]
+        real = &#39;REDACTED&#39;
+        if len(password) != 7:
+            return render_template(&#39;login.html&#39;, message=&amp;quot;you need 7 chars&amp;quot;)
+        for i in range(len(password)):
+            if password[i] != real[i]:
+                message = &amp;quot;incorrect&amp;quot;
+                return render_template(&#39;login.html&#39;, message=message)
+            else:
+                time.sleep(1)
+        if password == real:
+            message = &amp;quot;yayy! hi kirby&amp;quot;
+
+    return render_template(&#39;login.html&#39;, message=message)
+
+
+if __name__ == &#39;__main__&#39;:
+    app.run(host=&#39;0.0.0.0&#39;)
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;As we can see in the code at the &amp;lsquo;/&amp;rsquo; endpoint, when the method and post, it takes the password value from the form, checks the length to be 7 and starts iterating over each character to check if it is correct, it triggers a time.sleep(1) otherwise it returns an error.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>File Sharing Portal</title>
+      <link>http://localhost:1313/writeups/noobzctf2024/filesharingportal/</link>
+      <pubDate>Tue, 06 Aug 2024 11:27:07 +0200</pubDate>
+      
+      <guid>http://localhost:1313/writeups/noobzctf2024/filesharingportal/</guid>
+      <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;File Sharing Portal&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Welcome to the file sharing portal! We only support tar files!&lt;/p&gt;
+
+&lt;h2&gt;Introduction&lt;/h2&gt;
 
 &lt;p&gt;The ctf has a very simple structure: we have a form in which we are asked to insert a &lt;a href=&#34;https://en.wikipedia.org/wiki/Tar_(computing)&#34;&gt;tar&lt;/a&gt; file; once the tar file has been inserted, it is unzipped and we are shown the &lt;code&gt;name&lt;/code&gt; of files it contains; by clicking on the different files, we can read their contents.&lt;/p&gt;</description>
     </item>
@@ -198,7 +266,58 @@ We also want that each singer will have the same time on stage.&lt;/p&gt;</descr
   &lt;/a&gt;
 &lt;/h2&gt;
 
-&lt;p&gt;WaaS (Writing as a Service) allows us to overwrite a file on the system (after some input validation) and insert anything (until a newline is met) we want in it.&lt;/p&gt;</description>
+&lt;p&gt;WaaS (Writing as a Service) allows us to overwrite a file on the system (after some input validation) and insert anything (until a newline is met) we want in it.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import subprocess
+from base64 import b64decode as d
+while True:
+        print(&amp;quot;[1] Write to a file\n[2] Get the flag\n[3] Exit&amp;quot;)
+        try:
+                inp = int(input(&amp;quot;Choice: &amp;quot;).strip())
+        except:
+                print(&amp;quot;Invalid input!&amp;quot;)
+                exit(0)
+        if inp == 1:
+                file = input(&amp;quot;Enter file name: &amp;quot;).strip()
+                assert file.count(&#39;.&#39;) &amp;lt;= 2 # Why do you need more?
+                assert &amp;quot;/proc&amp;quot; not in file # Why do you need to write there?
+                assert &amp;quot;/bin&amp;quot; not in file # Why do you need to write there? 
+                assert &amp;quot;\n&amp;quot; not in file # Why do you need these?
+                assert &amp;quot;chall&amp;quot; not in file # Don&#39;t be overwriting my files!
+                try: 
+                        f = open(file,&#39;w&#39;)
+                except:
+                        print(&amp;quot;Error! Maybe the file does not exist?&amp;quot;)
+
+                f.write(input(&amp;quot;Data: &amp;quot;).strip())
+                f.close()
+                print(&amp;quot;Data written sucessfully!&amp;quot;)
+
+        if inp == 2:
+                flag = subprocess.run([&amp;quot;cat&amp;quot;,&amp;quot;fake_flag.txt&amp;quot;],capture_output=True) # You actually thought I would give the flag?
+                print(flag.stdout.strip())
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;solution&#34; class=&#34;header-anchor-wrapper&#34;&gt;Solution
+  &lt;a href=&#34;#solution&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
+
+&lt;p&gt;At first one may think of trying to bypass the input validation to perhaps rewrite the workings of the cat command or the challenge file itself, but this isn&amp;rsquo;t possible.
+Something very bizarre is the imported but unused &lt;code&gt;b64decode&lt;/code&gt; from the &lt;code&gt;base64&lt;/code&gt; module, which is what allows us to solve the challenge.
+When python imports modules it looks in &lt;code&gt;sys.path&lt;/code&gt;, which has a list of valid directories to import modules from. After a quick scan through the &lt;a href=&#34;https://docs.python.org/3/library/sys_path_init.html&#34;&gt;python3 docs&lt;/a&gt; we find out that the first directory it looks through is the same directory the file is in, this means that if we have a &lt;code&gt;base64.py&lt;/code&gt; file in the directory then python will try to import a &lt;code&gt;b64decode&lt;/code&gt; symbol from that file instead of the common known module.
+One more feature of python&amp;rsquo;s import behavior we can use is the that all the code in an imported module will be executed. For example if a file &lt;code&gt;test.py&lt;/code&gt; has &lt;code&gt;print(&#39;Hello, World!&#39;)&lt;/code&gt; and it can be executed (for example if it&amp;rsquo;s at the lowest indentation level) then a file with &lt;code&gt;import test&lt;/code&gt; will indeed see &lt;code&gt;Hello, World!&lt;/code&gt; printed to &lt;code&gt;stdout&lt;/code&gt;.
+Therefore, since the &lt;code&gt;open&lt;/code&gt; function with a &lt;code&gt;&#39;w&#39;&lt;/code&gt; flag will create a file if it does not exist, we can simply create a file named &lt;code&gt;base64.py&lt;/code&gt; and write our malicious code in it.
+Something like this will do the trick:&lt;/p&gt;</description>
     </item>
     
   </channel>

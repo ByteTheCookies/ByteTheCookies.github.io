@@ -21,7 +21,8 @@
   <meta property="og:title" content="Snake">
   <meta property="og:description" content="Snake Description: Can you slither to the win?
 Link to the binary: Elf file
-Introduction We are faced with a binary file written in Rust (you can see it by simply running strings snake | grep rustc) where we are made to play Snake, the goal is to get PRECISELY to 16525 points.">
+Introduction We are faced with a binary file written in Rust (you can see it by simply running strings snake | grep rustc) where we are made to play Snake, the goal is to get PRECISELY to 16525 points.
+Solution The solutions were actually different, some people used tools to analyze the memory of a process in real time, I preferred a ‘slower’ approach, or rather the first thing that came to mind, so I opened binary ninja despite the file being stripped and looked for a value for constant exactly 0xa (i.e. the value that was added every time it ate a #).">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="writeups">
@@ -42,7 +43,8 @@ Introduction We are faced with a binary file written in Rust (you can see it by 
   <meta name="twitter:title" content="Snake">
   <meta name="twitter:description" content="Snake Description: Can you slither to the win?
 Link to the binary: Elf file
-Introduction We are faced with a binary file written in Rust (you can see it by simply running strings snake | grep rustc) where we are made to play Snake, the goal is to get PRECISELY to 16525 points.">
+Introduction We are faced with a binary file written in Rust (you can see it by simply running strings snake | grep rustc) where we are made to play Snake, the goal is to get PRECISELY to 16525 points.
+Solution The solutions were actually different, some people used tools to analyze the memory of a process in real time, I preferred a ‘slower’ approach, or rather the first thing that came to mind, so I opened binary ninja despite the file being stripped and looked for a value for constant exactly 0xa (i.e. the value that was added every time it ate a #).">
 
     <link rel="stylesheet" href="/style.css" integrity="">
 
@@ -282,38 +284,12 @@ Introduction We are faced with a binary file written in Rust (you can see it by 
 <p><strong>Description</strong>: Can you slither to the win?</p>
 <p><strong>Link to the binary</strong>: <a href="https://2024.csc.tf/files/263575efcd73ff01d2bf123993065b37/snake?token=eyJ1c2VyX2lkIjo3ODgsInRlYW1faWQiOjM5MCwiZmlsZV9pZCI6MTJ9.ZtWYng.7QVOp_u1X-NXMNS72mApiwM1GqU">Elf file</a></p>
 
-<h2 id="introduction" class="header-anchor-wrapper">Introduction
-  <a href="#introduction" class="header-anchor-link">
-    <svg width="16px" height="16px" viewBox="0 0 24 24">
-<svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24" height="24" viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-    stroke-linejoin="round">
-    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
-</svg>
-
-</svg>
-  </a>
-</h2>
+<h2>Introduction</h2>
 
 <p>We are faced with a binary file written in Rust (you can see it by simply running <code>strings snake | grep rustc</code>) where we are made to play Snake, the goal is to get <strong>PRECISELY</strong> to <code>16525</code> points.</p>
 <p><img alt="alt text" src="/images/snake/image.png"></p>
 
-<h2 id="solution" class="header-anchor-wrapper">Solution
-  <a href="#solution" class="header-anchor-link">
-    <svg width="16px" height="16px" viewBox="0 0 24 24">
-<svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24" height="24" viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-    stroke-linejoin="round">
-    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
-</svg>
-
-</svg>
-  </a>
-</h2>
+<h2>Solution</h2>
 
 <p>The solutions were actually different, some people used tools to analyze the memory of a process in real time, I preferred a &lsquo;slower&rsquo; approach, or rather the first thing that came to mind, so I opened binary ninja despite the file being stripped and looked for a value for constant exactly 0xa (i.e. the value that was added every time it ate a <code>#</code>).</p>
 <p>In a short time I managed to find this:</p>

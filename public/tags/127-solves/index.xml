@@ -16,22 +16,76 @@
       <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt; Some Trick &lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Bob and Alice found a futuristic version of opunssl and replaced all their needs for doofy wellmen.&lt;/p&gt;
 
-&lt;h2 id=&#34;introduction&#34; class=&#34;header-anchor-wrapper&#34;&gt;Introduction
-  &lt;a href=&#34;#introduction&#34; class=&#34;header-anchor-link&#34;&gt;
-    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
-&lt;svg
-    xmlns=&#34;http://www.w3.org/2000/svg&#34;
-    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
-    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
-    stroke-linejoin=&#34;round&#34;&gt;
-    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
-&lt;/svg&gt;
+&lt;h2&gt;Introduction&lt;/h2&gt;
 
-&lt;/svg&gt;
-  &lt;/a&gt;
-&lt;/h2&gt;
+&lt;p&gt;Some Trick was the first cryptography challenge in the 2024 edition of SekaiCTF. The challenge implements a key exchange based on a set of permutations and asks us to retrieve the flag that was used as a key in Bob&amp;rsquo;s first encryption.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import random
+from secrets import randbelow, randbits
+from flag import FLAG
 
-&lt;p&gt;Some Trick was the first cryptography challenge in the 2024 edition of SekaiCTF. The challenge implements a key exchange based on a set of permutations and asks us to retrieve the flag that was used as a key in Bob&amp;rsquo;s first encryption.&lt;/p&gt;</description>
+CIPHER_SUITE = randbelow(2**256)
+print(f&amp;quot;oPUN_SASS_SASS_l version 4.0.{CIPHER_SUITE}&amp;quot;)
+random.seed(CIPHER_SUITE)
+
+GSIZE = 8209
+GNUM = 79
+
+LIM = GSIZE**GNUM
+
+
+def gen(n):
+    p, i = [0] * n, 0
+    for j in random.sample(range(1, n), n - 1):
+        p[i], i = j, j
+    return tuple(p)
+
+
+def gexp(g, e):
+    res = tuple(g)
+    while e:
+        if e &amp;amp; 1:
+            res = tuple(res[i] for i in g)
+        e &amp;gt;&amp;gt;= 1
+        g = tuple(g[i] for i in g)
+    return res
+
+
+def enc(k, m, G):
+    if not G:
+        return m
+    mod = len(G[0])
+    return gexp(G[0], k % mod)[m % mod] + enc(k // mod, m // mod, G[1:]) * mod
+
+
+def inverse(perm):
+    res = list(perm)
+    for i, v in enumerate(perm):
+        res[v] = i
+    return res
+
+
+G = [gen(GSIZE) for i in range(GNUM)]
+
+
+FLAG = int.from_bytes(FLAG, &#39;big&#39;)
+left_pad = randbits(randbelow(LIM.bit_length() - FLAG.bit_length()))
+FLAG = (FLAG &amp;lt;&amp;lt; left_pad.bit_length()) + left_pad
+FLAG = (randbits(randbelow(LIM.bit_length() - FLAG.bit_length()))
+        &amp;lt;&amp;lt; FLAG.bit_length()) + FLAG
+
+bob_key = randbelow(LIM)
+bob_encr = enc(FLAG, bob_key, G)
+print(&amp;quot;bob says&amp;quot;, bob_encr)
+alice_key = randbelow(LIM)
+alice_encr = enc(bob_encr, alice_key, G)
+print(&amp;quot;alice says&amp;quot;, alice_encr)
+bob_decr = enc(alice_encr, bob_key, [inverse(i) for i in G])
+print(&amp;quot;bob says&amp;quot;, bob_decr)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Solution&lt;/h2&gt;
+
+&lt;p&gt;The first thing we do is retrieve the &lt;code&gt;CIPHER_SUITE&lt;/code&gt; variable to set the random seed and reconstruct the set of permutations G, then we care about retrieving &lt;code&gt;bob_key&lt;/code&gt; to ultimately recover the flag.&lt;/p&gt;</description>
     </item>
     
   </channel>

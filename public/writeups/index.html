@@ -211,6 +211,7 @@
                     <span>Snake Description: Can you slither to the win?
 Link to the binary: Elf file
 Introduction We are faced with a binary file written in Rust (you can see it by simply running strings snake | grep rustc) where we are made to play Snake, the goal is to get PRECISELY to 16525 points.
+Solution The solutions were actually different, some people used tools to analyze the memory of a process in real time, I preferred a &lsquo;slower&rsquo; approach, or rather the first thing that came to mind, so I opened binary ninja despite the file being stripped and looked for a value for constant exactly 0xa (i.e. the value that was added every time it ate a #).
 </span>
                 </div>
                 <div class="postcard-metadata">
@@ -316,6 +317,7 @@ Introduction ZipZone is the only one web in the beginner&rsquo;s category and, a
                 <div class="postcard-summary">
                     <span>Trendy windy trigonity Description: have you seen Tan challenge before? see maple version pi documentation!
 Introduction trendy windy trigonity was a crypto CTF CyberSpace CTF 2024 added during the second wave.
+from Crypto.Util.number import bytes_to_long flag = REDACTED print(len(flag)) R = RealField(1000) a, b = bytes_to_long(flag[:len(flag)//2]), bytes_to_long(flag[len(flag)//2:]) x = R(0.75872961153339387563860550178464795474547887323678173252494265684893323654606628651427151866818730100357590296863274236719073684620030717141521941211167282170567424114270941542016135979438271439047194028943997508126389603529160316379547558098144713802870753946485296790294770557302303874143106908193100) enc = a*cos(x)+b*sin(x) # 38 # 2.78332652222000091147933689155414792020338527644698903976732528036823470890155538913578083110732846416012108159157421703264608723649277363079905992717518852564589901390988865009495918051490722972227485851595410047572144567706501150041757189923387228097603575500648300998275877439215112961273516978501e45 The challenge uses sagemath to handle high precision floating point numbers, in this case a RealField with 1000 bits of precision. The idea behind the challenge is very simple: find a and b to retrieve the flag.
 </span>
                 </div>
                 <div class="postcard-metadata">
