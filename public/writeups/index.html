@@ -48,7 +48,10 @@
         ["\\[", "\\]"],
         ["$$", "$$"],
       ], 
-      inlineMath: [["\\(", "\\)"]], 
+      inlineMath: [
+        ["\\(", "\\)"],
+        ["$", "$"],
+      ], 
     },
   };
 </script>
@@ -229,7 +232,7 @@
                 </div>
                 <div class="postcard-summary">
                     <span>m0leCon CTF 2025 Teaser Description m0leCon CTF 2025 Teaser is an online jeopardy-style CTF organized by pwnthem0le. Top 10 teams will be invited to the final event, that will take place in Spring 2025 at Politecnico di Torino.
-Url Discord Performance Summary CTFs: 1/18 Total points: 100 Position: 71/500 Rating points: ? Writeups Crypto Yet Another OT </span>
+</span>
                 </div>
                 <div class="postcard-metadata">
                     <span>2024/09/15 · 
@@ -247,7 +250,7 @@ Url Discord Performance Summary CTFs: 1/18 Total points: 100 Position: 71/500 Ra
             </div>
         </a>
     
-        <a href="http://localhost:1313/writeups/m0lecon2024/yetanotherot/">
+        <a href="http://localhost:1313/writeups/m0lecon2025teaser/yetanotherot/">
             <div class="postcard-item">
                 <div class="postcard-title">
                     <span>Yet Another OT</span>
@@ -255,8 +258,6 @@ Url Discord Performance Summary CTFs: 1/18 Total points: 100 Position: 71/500 Ra
                 <div class="postcard-summary">
                     <span>Yet Another OT Description: Why do people always want to decrypt both messages?
 Disclaimer I wasn&rsquo;t able to solve this challenge during the competition, but managed to get to the solution after talking on discord to other competitors who very kindly helped me figure it out.
-Introduction Yet Another OT was a crypto CTF from m0leCon 2025 hosted by pwnthem0le.
-import random from hashlib import sha256 import json import os from Crypto.Cipher import AES from Crypto.Util.Padding import pad random = random.SystemRandom() def jacobi(a, n): if n &lt;= 0: raise ValueError(&quot;'n' must be a positive integer.&quot;) if n % 2 == 0: raise ValueError(&quot;'n' must be odd.&quot;) a %= n result = 1 while a != 0: while a % 2 == 0: a //= 2 n_mod_8 = n % 8 if n_mod_8 in (3, 5): result = -result a, n = n, a if a % 4 == 3 and n % 4 == 3: result = -result a %= n if n == 1: return result else: return 0 def sample(start, N): while jacobi(start, N) != 1: start += 1 return start class Challenge: def __init__(self, N): assert N &gt; 2**1024 assert N % 2 != 0 self.N = N self.x = sample(int.from_bytes(sha256((&quot;x&quot;+str(N)).encode()).digest(), &quot;big&quot;), N) ts = [] tts = [] for _ in range(128): t = random.randint(1, self.N) ts.append(t) tts.append(pow(t, N, N)) print(json.dumps({&quot;vals&quot;: tts})) self.key = sha256((&quot;,&quot;.join(map(str, ts))).encode()).digest() def one_round(self): z = sample(random.randint(1, self.N), self.N) r0 = random.randint(1, self.N) r1 = random.randint(1, self.N) m0, m1 = random.getrandbits(1), random.getrandbits(1) c0 = (r0**2 * (z)**m0) % self.N c1 = (r1**2 * (z*self.x)**m1) % self.N print(json.dumps({&quot;c0&quot;: c0, &quot;c1&quot;: c1})) data = json.loads(input()) v0, v1 = data[&quot;m0&quot;], data[&quot;m1&quot;] return v0 == m0 and v1 == m1 def send_flag(self, flag): cipher = AES.new(self.key, AES.MODE_ECB) ct = cipher.encrypt(pad(flag.encode(), 16)) print(ct.hex()) FLAG = os.environ.get(&quot;FLAG&quot;, &quot;ptm{test}&quot;) def main(): print(&quot;Welcome to my guessing game!&quot;) N = int(input(&quot;Send me a number: &quot;)) chall = Challenge(N) for _ in range(128): if not chall.one_round(): exit(1) chall.send_flag(FLAG) if __name__ == &quot;__main__&quot;: main() We can remotely interact with this service to recover the flag.
 </span>
                 </div>
                 <div class="postcard-metadata">
@@ -284,6 +285,7 @@ import random from hashlib import sha256 import json import os from Crypto.Ciphe
                     <span>Snake Description: Can you slither to the win?
 Link to the binary: Elf file
 Introduction We are faced with a binary file written in Rust (you can see it by simply running strings snake | grep rustc) where we are made to play Snake, the goal is to get PRECISELY to 16525 points.
+Solution The solutions were actually different, some people used tools to analyze the memory of a process in real time, I preferred a &lsquo;slower&rsquo; approach, or rather the first thing that came to mind, so I opened binary ninja despite the file being stripped and looked for a value for constant exactly 0xa (i.e. the value that was added every time it ate a #).
 </span>
                 </div>
                 <div class="postcard-metadata">
@@ -311,6 +313,7 @@ Introduction We are faced with a binary file written in Rust (you can see it by 
                     <span>Feature unlocked Description: The world&rsquo;s coolest app has a brand new feature! Too bad it&rsquo;s not released until after the CTF..
 Link: https://feature-unlocked-web-challs.csc.tf/
 Introduction Feature unlocked is part of the first wave of the web and is one of the first challanges I solved. Made by cryptocat, who we salute, it is a fairly simple challange if you read the code correctly.
+Source # filename: main.py import subprocess import base64 import json import time import requests import os from flask import Flask, request, render_template, make_response, redirect, url_for from Crypto.Hash import SHA256 from Crypto.PublicKey import ECC from Crypto.Signature import DSS from itsdangerous import URLSafeTimedSerializer app = Flask(__name__) app.secret_key = os.urandom(16) serializer = URLSafeTimedSerializer(app.secret_key) DEFAULT_VALIDATION_SERVER = 'http://127.0.0.1:1338' NEW_FEATURE_RELEASE = int(time.time()) + 7 * 24 * 60 * 60 DEFAULT_PREFERENCES = base64.b64encode(json.dumps({ 'theme': 'light', 'language': 'en' }).encode()).decode() def get_preferences(): preferences = request.cookies.get('preferences') if not preferences: response = make_response(render_template( 'index.html', new_feature=False)) response.set_cookie('preferences', DEFAULT_PREFERENCES) return json.loads(base64.b64decode(DEFAULT_PREFERENCES)), response return json.loads(base64.b64decode(preferences)), None @app.route('/') def index(): _, response = get_preferences() return response if response else render_template('index.html', new_feature=False) @app.route('/release') def release(): token = request.cookies.get('access_token') if token: try: data = serializer.loads(token) if data == 'access_granted': return redirect(url_for('feature')) except Exception as e: print(f&quot;Token validation error: {e}&quot;) validation_server = DEFAULT_VALIDATION_SERVER if request.args.get('debug') == 'true': preferences, _ = get_preferences() validation_server = preferences.get( 'validation_server', DEFAULT_VALIDATION_SERVER) if validate_server(validation_server): response = make_response(render_template( 'release.html', feature_unlocked=True)) token = serializer.dumps('access_granted') response.set_cookie('access_token', token, httponly=True, secure=True) return response return render_template('release.html', feature_unlocked=False, release_timestamp=NEW_FEATURE_RELEASE) @app.route('/feature', methods=['GET', 'POST']) def feature(): token = request.cookies.get('access_token') if not token: return redirect(url_for('index')) try: data = serializer.loads(token) if data != 'access_granted': return redirect(url_for('index')) if request.method == 'POST': to_process = request.form.get('text') try: word_count = f&quot;echo {to_process} | wc -w&quot; output = subprocess.check_output( word_count, shell=True, text=True) except subprocess.CalledProcessError as e: output = f&quot;Error: {e}&quot; return render_template('feature.html', output=output) return render_template('feature.html') except Exception as e: print(f&quot;Error: {e}&quot;) return redirect(url_for('index')) def get_pubkey(validation_server): try: response = requests.get(f&quot;{validation_server}/pubkey&quot;) response.raise_for_status() return ECC.import_key(response.text) except requests.RequestException as e: raise Exception( f&quot;Error connecting to validation server for public key: {e}&quot;) def validate_access(validation_server): pubkey = get_pubkey(validation_server) try: response = requests.get(validation_server) response.raise_for_status() data = response.json() date = data['date'].encode('utf-8') signature = bytes.fromhex(data['signature']) verifier = DSS.new(pubkey, 'fips-186-3') verifier.verify(SHA256.new(date), signature) return int(date) except requests.RequestException as e: raise Exception(f&quot;Error validating access: {e}&quot;) def validate_server(validation_server): try: date = validate_access(validation_server) return date &gt;= NEW_FEATURE_RELEASE except Exception as e: print(f&quot;Error: {e}&quot;) return False if __name__ == '__main__': app.run(host='0.0.0.0', port=1337) # filename: validation.py from flask import Flask, jsonify import time from Crypto.Hash import SHA256 from Crypto.PublicKey import ECC from Crypto.Signature import DSS app = Flask(__name__) key = ECC.generate(curve='p256') pubkey = key.public_key().export_key(format='PEM') @app.route('/pubkey', methods=['GET']) def get_pubkey(): return pubkey, 200, {'Content-Type': 'text/plain; charset=utf-8'} @app.route('/', methods=['GET']) def index(): date = str(int(time.time())) h = SHA256.new(date.encode('utf-8')) signature = DSS.new(key, 'fips-186-3').sign(h) return jsonify({ 'date': date, 'signature': signature.hex() }) if __name__ == '__main__': app.run(host='127.0.0.1', port=1338) The application is divided into two parts: the main one, where we find the web application, and a server used to validate the access token with the access_garantied parameter for the release of the feature.
 </span>
                 </div>
                 <div class="postcard-metadata">
