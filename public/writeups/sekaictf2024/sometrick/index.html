@@ -20,8 +20,7 @@
   <meta property="og:site_name" content="ByteTheCookies">
   <meta property="og:title" content="Some Trick">
   <meta property="og:description" content=" Some Trick Description: Bob and Alice found a futuristic version of opunssl and replaced all their needs for doofy wellmen.
-Introduction Some Trick was the first cryptography challenge in the 2024 edition of SekaiCTF. The challenge implements a key exchange based on a set of permutations and asks us to retrieve the flag that was used as a key in Bob’s first encryption.
-import random from secrets import randbelow, randbits from flag import FLAG CIPHER_SUITE = randbelow(2**256) print(f&#34;oPUN_SASS_SASS_l version 4.0.{CIPHER_SUITE}&#34;) random.seed(CIPHER_SUITE) GSIZE = 8209 GNUM = 79 LIM = GSIZE**GNUM def gen(n): p, i = [0] * n, 0 for j in random.sample(range(1, n), n - 1): p[i], i = j, j return tuple(p) def gexp(g, e): res = tuple(g) while e: if e &amp; 1: res = tuple(res[i] for i in g) e &gt;&gt;= 1 g = tuple(g[i] for i in g) return res def enc(k, m, G): if not G: return m mod = len(G[0]) return gexp(G[0], k % mod)[m % mod] &#43; enc(k // mod, m // mod, G[1:]) * mod def inverse(perm): res = list(perm) for i, v in enumerate(perm): res[v] = i return res G = [gen(GSIZE) for i in range(GNUM)] FLAG = int.from_bytes(FLAG, &#39;big&#39;) left_pad = randbits(randbelow(LIM.bit_length() - FLAG.bit_length())) FLAG = (FLAG &lt;&lt; left_pad.bit_length()) &#43; left_pad FLAG = (randbits(randbelow(LIM.bit_length() - FLAG.bit_length())) &lt;&lt; FLAG.bit_length()) &#43; FLAG bob_key = randbelow(LIM) bob_encr = enc(FLAG, bob_key, G) print(&#34;bob says&#34;, bob_encr) alice_key = randbelow(LIM) alice_encr = enc(bob_encr, alice_key, G) print(&#34;alice says&#34;, alice_encr) bob_decr = enc(alice_encr, bob_key, [inverse(i) for i in G]) print(&#34;bob says&#34;, bob_decr) Solution The first thing we do is retrieve the CIPHER_SUITE variable to set the random seed and reconstruct the set of permutations G, then we care about retrieving bob_key to ultimately recover the flag.">
+Introduction Some Trick was the first cryptography challenge in the 2024 edition of SekaiCTF. The challenge implements a key exchange based on a set of permutations and asks us to retrieve the flag that was used as a key in Bob’s first encryption.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="writeups">
@@ -40,8 +39,7 @@ import random from secrets import randbelow, randbits from flag import FLAG CIPH
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Some Trick">
   <meta name="twitter:description" content=" Some Trick Description: Bob and Alice found a futuristic version of opunssl and replaced all their needs for doofy wellmen.
-Introduction Some Trick was the first cryptography challenge in the 2024 edition of SekaiCTF. The challenge implements a key exchange based on a set of permutations and asks us to retrieve the flag that was used as a key in Bob’s first encryption.
-import random from secrets import randbelow, randbits from flag import FLAG CIPHER_SUITE = randbelow(2**256) print(f&#34;oPUN_SASS_SASS_l version 4.0.{CIPHER_SUITE}&#34;) random.seed(CIPHER_SUITE) GSIZE = 8209 GNUM = 79 LIM = GSIZE**GNUM def gen(n): p, i = [0] * n, 0 for j in random.sample(range(1, n), n - 1): p[i], i = j, j return tuple(p) def gexp(g, e): res = tuple(g) while e: if e &amp; 1: res = tuple(res[i] for i in g) e &gt;&gt;= 1 g = tuple(g[i] for i in g) return res def enc(k, m, G): if not G: return m mod = len(G[0]) return gexp(G[0], k % mod)[m % mod] &#43; enc(k // mod, m // mod, G[1:]) * mod def inverse(perm): res = list(perm) for i, v in enumerate(perm): res[v] = i return res G = [gen(GSIZE) for i in range(GNUM)] FLAG = int.from_bytes(FLAG, &#39;big&#39;) left_pad = randbits(randbelow(LIM.bit_length() - FLAG.bit_length())) FLAG = (FLAG &lt;&lt; left_pad.bit_length()) &#43; left_pad FLAG = (randbits(randbelow(LIM.bit_length() - FLAG.bit_length())) &lt;&lt; FLAG.bit_length()) &#43; FLAG bob_key = randbelow(LIM) bob_encr = enc(FLAG, bob_key, G) print(&#34;bob says&#34;, bob_encr) alice_key = randbelow(LIM) alice_encr = enc(bob_encr, alice_key, G) print(&#34;alice says&#34;, alice_encr) bob_decr = enc(alice_encr, bob_key, [inverse(i) for i in G]) print(&#34;bob says&#34;, bob_decr) Solution The first thing we do is retrieve the CIPHER_SUITE variable to set the random seed and reconstruct the set of permutations G, then we care about retrieving bob_key to ultimately recover the flag.">
+Introduction Some Trick was the first cryptography challenge in the 2024 edition of SekaiCTF. The challenge implements a key exchange based on a set of permutations and asks us to retrieve the flag that was used as a key in Bob’s first encryption.">
 
     <link rel="stylesheet" href="/style.css" integrity="">
 
@@ -277,7 +275,20 @@ import random from secrets import randbelow, randbits from flag import FLAG CIPH
     <h1 style='text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;'> Some Trick </h1>
 <p><strong>Description</strong>: Bob and Alice found a futuristic version of opunssl and replaced all their needs for doofy wellmen.</p>
 
-<h2>Introduction</h2>
+<h2 id="introduction" class="header-anchor-wrapper">Introduction
+  <a href="#introduction" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
 
 <p>Some Trick was the first cryptography challenge in the 2024 edition of SekaiCTF. The challenge implements a key exchange based on a set of permutations and asks us to retrieve the flag that was used as a key in Bob&rsquo;s first encryption.</p>
 <pre  class="mc-prism hide language-text" ><code class="language-python">import random
@@ -344,7 +355,20 @@ bob_decr = enc(alice_encr, bob_key, [inverse(i) for i in G])
 print(&quot;bob says&quot;, bob_decr)
 </code></pre>
 
-<h2>Solution</h2>
+<h2 id="solution" class="header-anchor-wrapper">Solution
+  <a href="#solution" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
 
 <p>The first thing we do is retrieve the <code>CIPHER_SUITE</code> variable to set the random seed and reconstruct the set of permutations G, then we care about retrieving <code>bob_key</code> to ultimately recover the flag.</p>
 <pre  class="mc-prism hide language-text" ><code class="language-python">s = int(r.recvline().strip().decode().split('.')[-1])

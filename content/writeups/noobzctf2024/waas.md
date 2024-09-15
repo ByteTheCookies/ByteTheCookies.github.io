@@ -33,10 +33,10 @@ while True:
                 file = input("Enter file name: ").strip()
                 assert file.count('.') <= 2 # Why do you need more?
                 assert "/proc" not in file # Why do you need to write there?
-                assert "/bin" not in file # Why do you need to write there? 
+                assert "/bin" not in file # Why do you need to write there?
                 assert "\n" not in file # Why do you need these?
                 assert "chall" not in file # Don't be overwriting my files!
-                try: 
+                try:
                         f = open(file,'w')
                 except:
                         print("Error! Maybe the file does not exist?")
@@ -89,7 +89,7 @@ if __name__ == '__main__':
 ```
 
 ```
-flag: n00bz{0v3rwr1t1ng_py7h0n3_m0dul3s?!!!_f5c63f47af0e}
+$ flag: n00bz{0v3rwr1t1ng_py7h0n3_m0dul3s?!!!_f5c63f47af0e}
 ```
 
 <p align="right">Author: vympel</p>

@@ -21,8 +21,7 @@
   <meta property="og:title" content="Miku vs. Machine">
   <meta property="og:description" content="Miku vs. Machine Description: Time limit is 2 seconds for this challenge.
 Official resources of challenge
-Introduction The goal is to distribute the hours of n singers in m shows. Each show has a number of hours equal to l (unknown) and can only change singers once. We also want that each singer will have the same time on stage.
-Solution To solve this problem, I use a greedy strategy that iteratively divides the available singing time among the singers, ensuring that each singer fulfills their required hours.">
+Introduction The goal is to distribute the hours of n singers in m shows. Each show has a number of hours equal to l (unknown) and can only change singers once. We also want that each singer will have the same time on stage.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="writeups">
@@ -42,8 +41,7 @@ Solution To solve this problem, I use a greedy strategy that iteratively divides
   <meta name="twitter:title" content="Miku vs. Machine">
   <meta name="twitter:description" content="Miku vs. Machine Description: Time limit is 2 seconds for this challenge.
 Official resources of challenge
-Introduction The goal is to distribute the hours of n singers in m shows. Each show has a number of hours equal to l (unknown) and can only change singers once. We also want that each singer will have the same time on stage.
-Solution To solve this problem, I use a greedy strategy that iteratively divides the available singing time among the singers, ensuring that each singer fulfills their required hours.">
+Introduction The goal is to distribute the hours of n singers in m shows. Each show has a number of hours equal to l (unknown) and can only change singers once. We also want that each singer will have the same time on stage.">
 
     <link rel="stylesheet" href="/style.css" integrity="">
 
@@ -289,13 +287,39 @@ Solution To solve this problem, I use a greedy strategy that iteratively divides
 <p><strong>Description</strong>: Time limit is 2 seconds for this challenge.</p>
 <p><a href="https://ppc.chals.sekai.team"><strong>Official resources of challenge</strong></a></p>
 
-<h2>Introduction</h2>
+<h2 id="introduction" class="header-anchor-wrapper">Introduction
+  <a href="#introduction" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
 
 <p>The goal is to distribute the hours of <code>n</code> singers in <code>m</code> shows.
 Each show has a number of hours equal to <code>l</code> (unknown) and can only change singers once.
 We also want that each singer will have the same time on stage.</p>
 
-<h2>Solution</h2>
+<h2 id="solution" class="header-anchor-wrapper">Solution
+  <a href="#solution" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
 
 <p>To solve this problem, I use a <strong>greedy</strong> strategy that iteratively divides the available singing time among the singers, ensuring that each singer fulfills their required hours.</p>
 <pre  class="mc-prism hide language-text" ><code class="language-python">T = int(input())
@@ -321,7 +345,20 @@ for _ in range(T):
             print(f&quot;{show[0][0]} {show[0][1]} {show[1][0]} {show[1][1]}&quot;)
 </code></pre>
 
-<h2>Step-by-Step Explanation</h2>
+<h2 id="step-by-step-explanation" class="header-anchor-wrapper">Step-by-Step Explanation
+  <a href="#step-by-step-explanation" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
 
 <ol>
 <li><strong>Initialization</strong></li>
@@ -371,15 +408,54 @@ for _ in range(T):
 <li>For each show, the specific distribution of hours between the singers is printed.</li>
 </ul>
 
-<h2>Example Execution</h2>
+<h2 id="example-execution" class="header-anchor-wrapper">Example Execution
+  <a href="#example-execution" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
 
 
-<h3>Input</h3>
+<h3 id="input" class="header-anchor-wrapper">Input
+  <a href="#input" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h3>
 
 <p><code>n</code> = 4 <br>
 <code>m</code> = 7</p>
 
-<h3>Execution</h3>
+<h3 id="execution" class="header-anchor-wrapper">Execution
+  <a href="#execution" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h3>
 
 <p><code>l</code> = 4 <br>
 <code>singers</code> = [7, 7, 7, 7]</p>
@@ -432,7 +508,20 @@ for _ in range(T):
 </li>
 </ul>
 
-<h3>Output</h3>
+<h3 id="output" class="header-anchor-wrapper">Output
+  <a href="#output" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h3>
 
 <pre  class="mc-prism hide language-text" ><code class="language-stdout">4
 2 1 2 1
@@ -444,7 +533,20 @@ for _ in range(T):
 2 4 2 4
 </code></pre>
 
-<h2>Conclusion</h2>
+<h2 id="conclusion" class="header-anchor-wrapper">Conclusion
+  <a href="#conclusion" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
 
 <p>I don&rsquo;t consider this challenge difficult, it&rsquo;s just a greedy algorithm (it takes a lot more to scare a LeetCode boy), but it wasn&rsquo;t immediately clear that the output didn&rsquo;t necessarily have to be the same as that shown in the challenge&rsquo;s PDF , but it was enough to fit the constraints of the problem.</p>
 <pre  class="mc-prism hide language-text" ><code class="language-stdout">$ flag: SEKAI{t1nyURL_th1s:_6d696b75766d}

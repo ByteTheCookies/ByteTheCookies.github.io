@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "style.css",
-	"sourceRoot": "/home/akiidjk/WorkSpace/ByteTheCookies.github.io",
+	"sourceRoot": "/home/akiidjk/WorkSpace/Projects/ByteTheCookies.github.io",
 	"sources": [
 		"themes/bytethecookies-theme/assets/scss/core.scss",
 		"themes/bytethecookies-theme/assets/scss/purecss/_base.scss",

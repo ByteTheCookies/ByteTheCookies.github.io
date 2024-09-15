@@ -17,14 +17,22 @@
 &lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Can you slither to the win?&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Link to the binary&lt;/strong&gt;: &lt;a href=&#34;https://2024.csc.tf/files/263575efcd73ff01d2bf123993065b37/snake?token=eyJ1c2VyX2lkIjo3ODgsInRlYW1faWQiOjM5MCwiZmlsZV9pZCI6MTJ9.ZtWYng.7QVOp_u1X-NXMNS72mApiwM1GqU&#34;&gt;Elf file&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;h2 id=&#34;introduction&#34; class=&#34;header-anchor-wrapper&#34;&gt;Introduction
+  &lt;a href=&#34;#introduction&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
 
-&lt;p&gt;We are faced with a binary file written in Rust (you can see it by simply running &lt;code&gt;strings snake | grep rustc&lt;/code&gt;) where we are made to play Snake, the goal is to get &lt;strong&gt;PRECISELY&lt;/strong&gt; to &lt;code&gt;16525&lt;/code&gt; points.&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;alt text&#34; src=&#34;http://localhost:1313/images/snake/image.png&#34;&gt;&lt;/p&gt;
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
 
-&lt;h2&gt;Solution&lt;/h2&gt;
-
-&lt;p&gt;The solutions were actually different, some people used tools to analyze the memory of a process in real time, I preferred a &amp;lsquo;slower&amp;rsquo; approach, or rather the first thing that came to mind, so I opened binary ninja despite the file being stripped and looked for a value for constant exactly 0xa (i.e. the value that was added every time it ate a &lt;code&gt;#&lt;/code&gt;).&lt;/p&gt;</description>
+&lt;p&gt;We are faced with a binary file written in Rust (you can see it by simply running &lt;code&gt;strings snake | grep rustc&lt;/code&gt;) where we are made to play Snake, the goal is to get &lt;strong&gt;PRECISELY&lt;/strong&gt; to &lt;code&gt;16525&lt;/code&gt; points.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -73,46 +81,38 @@
       <pubDate>Mon, 26 Aug 2024 16:58:34 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/sekaictf2024/</guid>
-      <description>&lt;h1&gt;SekaiCTF 2024&lt;/h1&gt;
+      <description>&lt;h1 id=&#34;sekaictf-2024&#34; class=&#34;header-anchor-wrapper&#34;&gt;SekaiCTF 2024
+  &lt;a href=&#34;#sekaictf-2024&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h1&gt;
 
 
-&lt;h2&gt;Description&lt;/h2&gt;
+&lt;h2 id=&#34;description&#34; class=&#34;header-anchor-wrapper&#34;&gt;Description
+  &lt;a href=&#34;#description&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
 
-&lt;p&gt;SekaiCTF is back for its third iteration! This year’s competition will feature various categories designed to test participants’ skills and incentivize learning. Our CTF will have more difficult challenges, and are catered towards intermediate and advanced players—however, there will still be beginner-friendly challenges to welcome players on the newer side.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://ctf.sekai.team/&#34;&gt;Url&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://ctf.sekai.team/&#34;&gt;Discord&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
 
-&lt;h2&gt;Performance Summary&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;CTFs&lt;/strong&gt;: 3/34&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Total points&lt;/strong&gt;: 369&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Position&lt;/strong&gt;: 136/1230&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Rating points&lt;/strong&gt;: 2.721&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;Writeups&lt;/h2&gt;
-
-
-&lt;h4&gt;Rev&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/writeups/sekaictf2024/crackme/&#34;&gt;CrackMe&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4&gt;Crypto&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/writeups/sekaictf2024/sometrick/&#34;&gt;Some trick&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4&gt;PPC (Professional Programming &amp;amp; Coding)&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/writeups/sekaictf2024/mikuvsmachine/&#34;&gt;Miku vs. Machine&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
+&lt;p&gt;SekaiCTF is back for its third iteration! This year’s competition will feature various categories designed to test participants’ skills and incentivize learning. Our CTF will have more difficult challenges, and are catered towards intermediate and advanced players—however, there will still be beginner-friendly challenges to welcome players on the newer side.&lt;/p&gt;</description>
     </item>
     
     <item>

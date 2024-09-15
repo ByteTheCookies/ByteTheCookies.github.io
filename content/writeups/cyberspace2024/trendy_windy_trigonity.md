@@ -64,7 +64,7 @@ print(f'flag: {(a.to_bytes(19) + b.to_bytes(19)).decode()}')
 ```
 
 ```
-flag: CSCTF{Trigo_453_Tr3ndy_FuN_Th35e_D4Y5}
+$ flag: CSCTF{Trigo_453_Tr3ndy_FuN_Th35e_D4Y5}
 ```
 
 <p align="right">Author: vympel</p>

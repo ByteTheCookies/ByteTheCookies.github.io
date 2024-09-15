@@ -289,7 +289,20 @@ Introduction First rev ctf of Sekai 2024 with an apk attached, so we have a mobi
     <h1 style='text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;'>Crack Me</h1>
 <p><strong>Description</strong>: Developed for SekaiCTF 2022 but never got a chance to release it. Can you log in and claim the flag?</p>
 
-<h2>Introduction</h2>
+<h2 id="introduction" class="header-anchor-wrapper">Introduction
+  <a href="#introduction" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
 
 <p>First rev ctf of Sekai 2024 with an apk attached, so we have a mobile challenge on our hands.
 The first thing to do (which I strongly advise against in a real environment) is to download and install the app to get a quick overview of what it does.</p>
@@ -299,12 +312,38 @@ The first thing to do (which I strongly advise against in a real environment) is
 </div>
 <p>As you can see, the app doesn&rsquo;t allow us to do much more than press the button and log in (without being able to register).</p>
 
-<h2>First step</h2>
+<h2 id="first-step" class="header-anchor-wrapper">First step
+  <a href="#first-step" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
 
 <p>The first thing I did was to analyse the apk using an online tool. <a href="https://sisik.eu/apk-tool">SISIK</a></p>
 <p>And two interesting pieces of information came up: the first was that it was a react-native app, which helps us a lot in reverse, and that the app was using firebase to handle the backend and probably authentication as well.</p>
 
-<h2>Second Step</h2>
+<h2 id="second-step" class="header-anchor-wrapper">Second Step
+  <a href="#second-step" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
 
 <p>The apk is actually a compressed set of java files like a zipper and tar, this then allows us to easily extract the contents with any tool like unzip or 7z (in my case I used extract which is a utils of zsh).</p>
 <p>Once we have extracted the contents we should find something like this</p>
@@ -314,12 +353,38 @@ The first thing to do (which I strongly advise against in a real environment) is
 <p>After some research we can find us an obfuscated js file named: index.android.bundle</p>
 <p>After some research we can find there a file named index.android.bundle with some obfuscated javascript inside, knowing that the application is written in react-native and that inside this file there are keywords like: admin,sekai,password, it is definitely an interesting file.</p>
 
-<h2>Third Step</h2>
+<h2 id="third-step" class="header-anchor-wrapper">Third Step
+  <a href="#third-step" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
 
 <p>One possible idea might be a react-native app decompiler, which fortunately exists and is easy to find in the case I used: <a href="https://github.com/numandev1/react-native-decompiler">React Native Decompiler</a></p>
 <p>Once installed, and running the command <code>react-native-decompiler index.android.bundle -o bundle_deobfuscated</code>, we should find about 800 js files, a bit confusing but understandable with a little effort.</p>
 
-<h2>Fourth Step</h2>
+<h2 id="fourth-step" class="header-anchor-wrapper">Fourth Step
+  <a href="#fourth-step" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
 
 <p>We can reuse grep and fzf to search again for the words of interest.</p>
 <p>By searching, we manage to find a really interesting file, in which we find the login system that is done in the application.</p>
@@ -442,16 +507,55 @@ if __name__ == '__main__':
 <img alt="img-app3" style="height:50vh; margin:0px" src="/images/crackme/app-image3.jpeg">
 <p>OR MAYBE NOT 😥&hellip;</p>
 
-<h2>Fifth step</h2>
+<h2 id="fifth-step" class="header-anchor-wrapper">Fifth step
+  <a href="#fifth-step" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
 
 <p>After a moment&rsquo;s panic, I resume checking the code and how the login system works; indeed, we can see that as soon as the login is complete, a request is made to the database (probably the <a href="https://firebase.google.com/docs/database">firebase realtime database</a>)</p>
 <p>So, in a sense, the flag has been given to us, we just have to catch it on the fly, and there are two ways of doing that.</p>
 
-<h2>Unintended solution</h2>
+<h2 id="unintended-solution" class="header-anchor-wrapper">Unintended solution
+  <a href="#unintended-solution" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
 
 <p>The first solution was to intercept the call and answer from the app to the db and vice versa, but using arch with an NVIDIA video card I had trouble with Android emulation, but you can still find a solution. <a href="https://ggcoder.medium.com/solving-crackme-from-sekaictf-9660dc41b0ce">similar solution</a></p>
 
-<h2>Intended solution (The one i performed)</h2>
+<h2 id="intended-solution-the-one-i-performed" class="header-anchor-wrapper">Intended solution (The one i performed)
+  <a href="#intended-solution-the-one-i-performed" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
 
 <p>Given my difficulties with the emulation of the application, I continued my search for code, this time also searching Firebase, and managed to find something very interesting</p>
 <pre  class="mc-prism hide language-text" ><code class="language-javascript">var c = {
@@ -469,7 +573,20 @@ exports.default = c;
 <p>As you can see, we are faced with a firebase configuration file with sensitive information that allows us to connect directly to the firebase database using js.
 So in the end we just need to replicate the functions used in the login to get the flag.</p>
 
-<h2>Solution</h2>
+<h2 id="solution" class="header-anchor-wrapper">Solution
+  <a href="#solution" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
 
 <p>&hellip;</p>
 <pre  class="mc-prism hide language-text" ><code class="language-python"># filename: exploit.py

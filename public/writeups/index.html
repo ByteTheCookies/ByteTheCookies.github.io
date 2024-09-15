@@ -202,6 +202,59 @@
 
 <div class="postcard-layout content-margin">
     
+        <a href="http://localhost:1313/writeups/m0lecon2025teaser/">
+            <div class="postcard-item">
+                <div class="postcard-title">
+                    <span>m0leCon CTF 2025 Teaser</span>
+                </div>
+                <div class="postcard-summary">
+                    <span>m0leCon CTF 2025 Teaser Description m0leCon CTF 2025 Teaser is an online jeopardy-style CTF organized by pwnthem0le. Top 10 teams will be invited to the final event, that will take place in Spring 2025 at Politecnico di Torino.
+</span>
+                </div>
+                <div class="postcard-metadata">
+                    <span>2024/09/15 · 
+    
+        
+    
+
+    
+        
+            <span>Writeup</span>
+        
+    
+</span>
+                </div>
+            </div>
+        </a>
+    
+        <a href="http://localhost:1313/writeups/m0lecon2024/yetanotherot/">
+            <div class="postcard-item">
+                <div class="postcard-title">
+                    <span>Yet Another OT</span>
+                </div>
+                <div class="postcard-summary">
+                    <span>Yet Another OT Description: Why do people always want to decrypt both messages?
+Disclaimer I wasn&rsquo;t able to solve this challenge during the competition, but managed to get to the solution after talking on discord to other competitors who very kindly helped me figure it out.
+Introduction Yet Another OT was a crypto CTF from m0leCon 2025 hosted by pwnthem0le.
+import random from hashlib import sha256 import json import os from Crypto.Cipher import AES from Crypto.Util.Padding import pad random = random.SystemRandom() def jacobi(a, n): if n &lt;= 0: raise ValueError(&quot;'n' must be a positive integer.&quot;) if n % 2 == 0: raise ValueError(&quot;'n' must be odd.&quot;) a %= n result = 1 while a != 0: while a % 2 == 0: a //= 2 n_mod_8 = n % 8 if n_mod_8 in (3, 5): result = -result a, n = n, a if a % 4 == 3 and n % 4 == 3: result = -result a %= n if n == 1: return result else: return 0 def sample(start, N): while jacobi(start, N) != 1: start += 1 return start class Challenge: def __init__(self, N): assert N &gt; 2**1024 assert N % 2 != 0 self.N = N self.x = sample(int.from_bytes(sha256((&quot;x&quot;+str(N)).encode()).digest(), &quot;big&quot;), N) ts = [] tts = [] for _ in range(128): t = random.randint(1, self.N) ts.append(t) tts.append(pow(t, N, N)) print(json.dumps({&quot;vals&quot;: tts})) self.key = sha256((&quot;,&quot;.join(map(str, ts))).encode()).digest() def one_round(self): z = sample(random.randint(1, self.N), self.N) r0 = random.randint(1, self.N) r1 = random.randint(1, self.N) m0, m1 = random.getrandbits(1), random.getrandbits(1) c0 = (r0**2 * (z)**m0) % self.N c1 = (r1**2 * (z*self.x)**m1) % self.N print(json.dumps({&quot;c0&quot;: c0, &quot;c1&quot;: c1})) data = json.loads(input()) v0, v1 = data[&quot;m0&quot;], data[&quot;m1&quot;] return v0 == m0 and v1 == m1 def send_flag(self, flag): cipher = AES.new(self.key, AES.MODE_ECB) ct = cipher.encrypt(pad(flag.encode(), 16)) print(ct.hex()) FLAG = os.environ.get(&quot;FLAG&quot;, &quot;ptm{test}&quot;) def main(): print(&quot;Welcome to my guessing game!&quot;) N = int(input(&quot;Send me a number: &quot;)) chall = Challenge(N) for _ in range(128): if not chall.one_round(): exit(1) chall.send_flag(FLAG) if __name__ == &quot;__main__&quot;: main() We can remotely interact with this service to recover the flag.
+</span>
+                </div>
+                <div class="postcard-metadata">
+                    <span>2024/09/15 · 
+    
+        
+    
+
+    
+        
+            <span>Writeup</span>
+        
+    
+</span>
+                </div>
+            </div>
+        </a>
+    
         <a href="http://localhost:1313/writeups/cyberspace2024/snake/">
             <div class="postcard-item">
                 <div class="postcard-title">
@@ -211,7 +264,6 @@
                     <span>Snake Description: Can you slither to the win?
 Link to the binary: Elf file
 Introduction We are faced with a binary file written in Rust (you can see it by simply running strings snake | grep rustc) where we are made to play Snake, the goal is to get PRECISELY to 16525 points.
-Solution The solutions were actually different, some people used tools to analyze the memory of a process in real time, I preferred a &lsquo;slower&rsquo; approach, or rather the first thing that came to mind, so I opened binary ninja despite the file being stripped and looked for a value for constant exactly 0xa (i.e. the value that was added every time it ate a #).
 </span>
                 </div>
                 <div class="postcard-metadata">
@@ -266,58 +318,6 @@ Introduction Feature unlocked is part of the first wave of the web and is one of
                     <span>Zipzone Description: I was tired of trying to find a good file server for zip files, so I made my own! It&rsquo;s still a work in progress, but I think it&rsquo;s pretty good so far.
 Link: https://zipzone-web.challs.csc.tf/
 Introduction ZipZone is the only one web in the beginner&rsquo;s category and, as the title suggests, you have to upload zip files that will be unzipped later, so you have to download the extracted files afterwards.
-</span>
-                </div>
-                <div class="postcard-metadata">
-                    <span>2024/09/02 · 
-    
-        
-    
-
-    
-        
-            <span>Writeup</span>
-        
-    
-</span>
-                </div>
-            </div>
-        </a>
-    
-        <a href="http://localhost:1313/writeups/cyberspace2024/trendz/">
-            <div class="postcard-item">
-                <div class="postcard-title">
-                    <span>Trendz</span>
-                </div>
-                <div class="postcard-summary">
-                    <span>Trendz (part 1 & 2) Preamble This challenge is divided into four parts, three webs and a reverse. I&rsquo;m excited to share that I managed to solve the first two webs! I&rsquo;ll insert them all in a write-up, trying to explain them in the way the author thought. I admit I did not solve them in order, but I&rsquo;m eager to see how they fit together. The application was written in Go using templates and a JWT authentication, and it&rsquo;s write well! The application itself has many files, but they are well written and ordered, so a thorough analysis is not difficult but necessary. The application is divided into 5 basic parts.
-</span>
-                </div>
-                <div class="postcard-metadata">
-                    <span>2024/09/02 · 
-    
-        
-    
-
-    
-        
-            <span>Writeup</span>
-        
-    
-</span>
-                </div>
-            </div>
-        </a>
-    
-        <a href="http://localhost:1313/writeups/cyberspace2024/trendy_windy_trigonity/">
-            <div class="postcard-item">
-                <div class="postcard-title">
-                    <span>trendy windy trigonity</span>
-                </div>
-                <div class="postcard-summary">
-                    <span>Trendy windy trigonity Description: have you seen Tan challenge before? see maple version pi documentation!
-Introduction trendy windy trigonity was a crypto CTF CyberSpace CTF 2024 added during the second wave.
-from Crypto.Util.number import bytes_to_long flag = REDACTED print(len(flag)) R = RealField(1000) a, b = bytes_to_long(flag[:len(flag)//2]), bytes_to_long(flag[len(flag)//2:]) x = R(0.75872961153339387563860550178464795474547887323678173252494265684893323654606628651427151866818730100357590296863274236719073684620030717141521941211167282170567424114270941542016135979438271439047194028943997508126389603529160316379547558098144713802870753946485296790294770557302303874143106908193100) enc = a*cos(x)+b*sin(x) # 38 # 2.78332652222000091147933689155414792020338527644698903976732528036823470890155538913578083110732846416012108159157421703264608723649277363079905992717518852564589901390988865009495918051490722972227485851595410047572144567706501150041757189923387228097603575500648300998275877439215112961273516978501e45 The challenge uses sagemath to handle high precision floating point numbers, in this case a RealField with 1000 bits of precision. The idea behind the challenge is very simple: find a and b to retrieve the flag.
 </span>
                 </div>
                 <div class="postcard-metadata">

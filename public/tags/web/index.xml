@@ -45,7 +45,20 @@
 &lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: I was tired of trying to find a good file server for zip files, so I made my own! It&amp;rsquo;s still a work in progress, but I think it&amp;rsquo;s pretty good so far.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Link&lt;/strong&gt;: &lt;a href=&#34;https://zipzone-web.challs.csc.tf/&#34;&gt;https://zipzone-web.challs.csc.tf/&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;h2 id=&#34;introduction&#34; class=&#34;header-anchor-wrapper&#34;&gt;Introduction
+  &lt;a href=&#34;#introduction&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
 
 &lt;p&gt;ZipZone is the only one web in the beginner&amp;rsquo;s category and, as the title suggests, you have to upload zip files that will be unzipped later, so you have to download the extracted files afterwards.&lt;/p&gt;</description>
     </item>
@@ -58,7 +71,20 @@
       <guid>http://localhost:1313/writeups/cyberspace2024/trendz/</guid>
       <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;Trendz (part 1 &amp; 2)&lt;/h1&gt;
 
-&lt;h2&gt;Preamble&lt;/h2&gt;
+&lt;h2 id=&#34;preamble&#34; class=&#34;header-anchor-wrapper&#34;&gt;Preamble
+  &lt;a href=&#34;#preamble&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
 
 &lt;p&gt;This challenge is divided into four parts, three webs and a reverse. I&amp;rsquo;m excited to share that I managed to solve the first two webs! I&amp;rsquo;ll insert them all in a write-up, trying to explain them in the way the author thought. I admit I did not solve them in order, but I&amp;rsquo;m eager to see how they fit together.
 The application was written in Go using templates and a JWT authentication, and it&amp;rsquo;s write well! The application itself has many files, but they are well written and ordered, so a thorough analysis is not difficult but necessary. The application is divided into 5 basic parts.&lt;/p&gt;</description>
@@ -110,46 +136,38 @@ The application was written in Go using templates and a JWT authentication, and 
       <pubDate>Mon, 26 Aug 2024 16:58:34 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/sekaictf2024/</guid>
-      <description>&lt;h1&gt;SekaiCTF 2024&lt;/h1&gt;
+      <description>&lt;h1 id=&#34;sekaictf-2024&#34; class=&#34;header-anchor-wrapper&#34;&gt;SekaiCTF 2024
+  &lt;a href=&#34;#sekaictf-2024&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h1&gt;
 
 
-&lt;h2&gt;Description&lt;/h2&gt;
+&lt;h2 id=&#34;description&#34; class=&#34;header-anchor-wrapper&#34;&gt;Description
+  &lt;a href=&#34;#description&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
 
-&lt;p&gt;SekaiCTF is back for its third iteration! This year’s competition will feature various categories designed to test participants’ skills and incentivize learning. Our CTF will have more difficult challenges, and are catered towards intermediate and advanced players—however, there will still be beginner-friendly challenges to welcome players on the newer side.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://ctf.sekai.team/&#34;&gt;Url&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://ctf.sekai.team/&#34;&gt;Discord&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
 
-&lt;h2&gt;Performance Summary&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;CTFs&lt;/strong&gt;: 3/34&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Total points&lt;/strong&gt;: 369&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Position&lt;/strong&gt;: 136/1230&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Rating points&lt;/strong&gt;: 2.721&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;Writeups&lt;/h2&gt;
-
-
-&lt;h4&gt;Rev&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/writeups/sekaictf2024/crackme/&#34;&gt;CrackMe&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4&gt;Crypto&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/writeups/sekaictf2024/sometrick/&#34;&gt;Some trick&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4&gt;PPC (Professional Programming &amp;amp; Coding)&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/writeups/sekaictf2024/mikuvsmachine/&#34;&gt;Miku vs. Machine&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
+&lt;p&gt;SekaiCTF is back for its third iteration! This year’s competition will feature various categories designed to test participants’ skills and incentivize learning. Our CTF will have more difficult challenges, and are catered towards intermediate and advanced players—however, there will still be beginner-friendly challenges to welcome players on the newer side.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -345,7 +363,20 @@ if __name__ == &#39;__main__&#39;:
       <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;File Sharing Portal&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Welcome to the file sharing portal! We only support tar files!&lt;/p&gt;
 
-&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;h2 id=&#34;introduction&#34; class=&#34;header-anchor-wrapper&#34;&gt;Introduction
+  &lt;a href=&#34;#introduction&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
 
 &lt;p&gt;The ctf has a very simple structure: we have a form in which we are asked to insert a &lt;a href=&#34;https://en.wikipedia.org/wiki/Tar_(computing)&#34;&gt;tar&lt;/a&gt; file; once the tar file has been inserted, it is unzipped and we are shown the &lt;code&gt;name&lt;/code&gt; of files it contains; by clicking on the different files, we can read their contents.&lt;/p&gt;</description>
     </item>

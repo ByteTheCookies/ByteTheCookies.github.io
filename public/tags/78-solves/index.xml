@@ -45,10 +45,10 @@ while True:
                 file = input(&amp;quot;Enter file name: &amp;quot;).strip()
                 assert file.count(&#39;.&#39;) &amp;lt;= 2 # Why do you need more?
                 assert &amp;quot;/proc&amp;quot; not in file # Why do you need to write there?
-                assert &amp;quot;/bin&amp;quot; not in file # Why do you need to write there? 
+                assert &amp;quot;/bin&amp;quot; not in file # Why do you need to write there?
                 assert &amp;quot;\n&amp;quot; not in file # Why do you need these?
                 assert &amp;quot;chall&amp;quot; not in file # Don&#39;t be overwriting my files!
-                try: 
+                try:
                         f = open(file,&#39;w&#39;)
                 except:
                         print(&amp;quot;Error! Maybe the file does not exist?&amp;quot;)

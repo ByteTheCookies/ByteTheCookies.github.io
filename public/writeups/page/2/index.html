@@ -202,6 +202,58 @@
 
 <div class="postcard-layout content-margin">
     
+        <a href="http://localhost:1313/writeups/cyberspace2024/trendz/">
+            <div class="postcard-item">
+                <div class="postcard-title">
+                    <span>Trendz</span>
+                </div>
+                <div class="postcard-summary">
+                    <span>Trendz (part 1 & 2) Preamble This challenge is divided into four parts, three webs and a reverse. I&rsquo;m excited to share that I managed to solve the first two webs! I&rsquo;ll insert them all in a write-up, trying to explain them in the way the author thought. I admit I did not solve them in order, but I&rsquo;m eager to see how they fit together. The application was written in Go using templates and a JWT authentication, and it&rsquo;s write well! The application itself has many files, but they are well written and ordered, so a thorough analysis is not difficult but necessary. The application is divided into 5 basic parts.
+</span>
+                </div>
+                <div class="postcard-metadata">
+                    <span>2024/09/02 · 
+    
+        
+    
+
+    
+        
+            <span>Writeup</span>
+        
+    
+</span>
+                </div>
+            </div>
+        </a>
+    
+        <a href="http://localhost:1313/writeups/cyberspace2024/trendy_windy_trigonity/">
+            <div class="postcard-item">
+                <div class="postcard-title">
+                    <span>trendy windy trigonity</span>
+                </div>
+                <div class="postcard-summary">
+                    <span>Trendy windy trigonity Description: have you seen Tan challenge before? see maple version pi documentation!
+Introduction trendy windy trigonity was a crypto CTF CyberSpace CTF 2024 added during the second wave.
+from Crypto.Util.number import bytes_to_long flag = REDACTED print(len(flag)) R = RealField(1000) a, b = bytes_to_long(flag[:len(flag)//2]), bytes_to_long(flag[len(flag)//2:]) x = R(0.75872961153339387563860550178464795474547887323678173252494265684893323654606628651427151866818730100357590296863274236719073684620030717141521941211167282170567424114270941542016135979438271439047194028943997508126389603529160316379547558098144713802870753946485296790294770557302303874143106908193100) enc = a*cos(x)+b*sin(x) # 38 # 2.78332652222000091147933689155414792020338527644698903976732528036823470890155538913578083110732846416012108159157421703264608723649277363079905992717518852564589901390988865009495918051490722972227485851595410047572144567706501150041757189923387228097603575500648300998275877439215112961273516978501e45 The challenge uses sagemath to handle high precision floating point numbers, in this case a RealField with 1000 bits of precision. The idea behind the challenge is very simple: find a and b to retrieve the flag.
+</span>
+                </div>
+                <div class="postcard-metadata">
+                    <span>2024/09/02 · 
+    
+        
+    
+
+    
+        
+            <span>Writeup</span>
+        
+    
+</span>
+                </div>
+            </div>
+        </a>
+    
         <a href="http://localhost:1313/writeups/cyberspace2024/">
             <div class="postcard-item">
                 <div class="postcard-title">
@@ -236,7 +288,6 @@
                     <span>Miku vs. Machine Description: Time limit is 2 seconds for this challenge.
 Official resources of challenge
 Introduction The goal is to distribute the hours of n singers in m shows. Each show has a number of hours equal to l (unknown) and can only change singers once. We also want that each singer will have the same time on stage.
-Solution To solve this problem, I use a greedy strategy that iteratively divides the available singing time among the singers, ensuring that each singer fulfills their required hours.
 </span>
                 </div>
                 <div class="postcard-metadata">
@@ -264,58 +315,6 @@ Solution To solve this problem, I use a greedy strategy that iteratively divides
                     <span>Crack Me Description: Developed for SekaiCTF 2022 but never got a chance to release it. Can you log in and claim the flag?
 Introduction First rev ctf of Sekai 2024 with an apk attached, so we have a mobile challenge on our hands. The first thing to do (which I strongly advise against in a real environment) is to download and install the app to get a quick overview of what it does.
 </span>
-                </div>
-                <div class="postcard-metadata">
-                    <span>2024/08/26 · 
-    
-        
-    
-
-    
-        
-            <span>Writeup</span>
-        
-    
-</span>
-                </div>
-            </div>
-        </a>
-    
-        <a href="http://localhost:1313/writeups/sekaictf2024/sometrick/">
-            <div class="postcard-item">
-                <div class="postcard-title">
-                    <span>Some Trick</span>
-                </div>
-                <div class="postcard-summary">
-                    <span> Some Trick Description: Bob and Alice found a futuristic version of opunssl and replaced all their needs for doofy wellmen.
-Introduction Some Trick was the first cryptography challenge in the 2024 edition of SekaiCTF. The challenge implements a key exchange based on a set of permutations and asks us to retrieve the flag that was used as a key in Bob&rsquo;s first encryption.
-import random from secrets import randbelow, randbits from flag import FLAG CIPHER_SUITE = randbelow(2**256) print(f&quot;oPUN_SASS_SASS_l version 4.0.{CIPHER_SUITE}&quot;) random.seed(CIPHER_SUITE) GSIZE = 8209 GNUM = 79 LIM = GSIZE**GNUM def gen(n): p, i = [0] * n, 0 for j in random.sample(range(1, n), n - 1): p[i], i = j, j return tuple(p) def gexp(g, e): res = tuple(g) while e: if e &amp; 1: res = tuple(res[i] for i in g) e &gt;&gt;= 1 g = tuple(g[i] for i in g) return res def enc(k, m, G): if not G: return m mod = len(G[0]) return gexp(G[0], k % mod)[m % mod] + enc(k // mod, m // mod, G[1:]) * mod def inverse(perm): res = list(perm) for i, v in enumerate(perm): res[v] = i return res G = [gen(GSIZE) for i in range(GNUM)] FLAG = int.from_bytes(FLAG, 'big') left_pad = randbits(randbelow(LIM.bit_length() - FLAG.bit_length())) FLAG = (FLAG &lt;&lt; left_pad.bit_length()) + left_pad FLAG = (randbits(randbelow(LIM.bit_length() - FLAG.bit_length())) &lt;&lt; FLAG.bit_length()) + FLAG bob_key = randbelow(LIM) bob_encr = enc(FLAG, bob_key, G) print(&quot;bob says&quot;, bob_encr) alice_key = randbelow(LIM) alice_encr = enc(bob_encr, alice_key, G) print(&quot;alice says&quot;, alice_encr) bob_decr = enc(alice_encr, bob_key, [inverse(i) for i in G]) print(&quot;bob says&quot;, bob_decr) Solution The first thing we do is retrieve the CIPHER_SUITE variable to set the random seed and reconstruct the set of permutations G, then we care about retrieving bob_key to ultimately recover the flag.
-</span>
-                </div>
-                <div class="postcard-metadata">
-                    <span>2024/08/26 · 
-    
-        
-    
-
-    
-        
-            <span>Writeup</span>
-        
-    
-</span>
-                </div>
-            </div>
-        </a>
-    
-        <a href="http://localhost:1313/writeups/sekaictf2024/">
-            <div class="postcard-item">
-                <div class="postcard-title">
-                    <span>SekaiCTF 2024</span>
-                </div>
-                <div class="postcard-summary">
-                    <span>SekaiCTF 2024 Description SekaiCTF is back for its third iteration! This year’s competition will feature various categories designed to test participants’ skills and incentivize learning. Our CTF will have more difficult challenges, and are catered towards intermediate and advanced players—however, there will still be beginner-friendly challenges to welcome players on the newer side.
-Url Discord Performance Summary CTFs: 3/34 Total points: 369 Position: 136/1230 Rating points: 2.721 Writeups Rev CrackMe Crypto Some trick PPC (Professional Programming &amp; Coding) Miku vs. Machine </span>
                 </div>
                 <div class="postcard-metadata">
                     <span>2024/08/26 · 

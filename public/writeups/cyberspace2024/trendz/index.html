@@ -301,7 +301,20 @@
     
     <h1 style='text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;'>Trendz (part 1 & 2)</h1>
 
-<h2>Preamble</h2>
+<h2 id="preamble" class="header-anchor-wrapper">Preamble
+  <a href="#preamble" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
 
 <p>This challenge is divided into four parts, three webs and a reverse. I&rsquo;m excited to share that I managed to solve the first two webs! I&rsquo;ll insert them all in a write-up, trying to explain them in the way the author thought. I admit I did not solve them in order, but I&rsquo;m eager to see how they fit together.
 The application was written in Go using templates and a JWT authentication, and it&rsquo;s write well! The application itself has many files, but they are well written and ordered, so a thorough analysis is not difficult but necessary. The application is divided into 5 basic parts.</p>
@@ -313,13 +326,39 @@ The application was written in Go using templates and a JWT authentication, and 
 <li><strong>Service</strong>: The various services such as post creation or user validation</li>
 </ul>
 
-<h2>Application flow</h2>
+<h2 id="application-flow" class="header-anchor-wrapper">Application flow
+  <a href="#application-flow" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
 
 <p>The basic application is presented with a login/registration screen where once we are logged in we are assigned an accesstoken and a refreshtoken, a redirect to the standard user dashboard occurs where we can create posts and view them via <code>/posts/post-id</code>,basically more than this we cannot do</p>
 <p><img alt="alt text" src="/images/trendz/image.png">
 <img alt="alt text" src="/images/trendz/image-1.png"></p>
 
-<h2>Path structure</h2>
+<h2 id="path-structure" class="header-anchor-wrapper">Path structure
+  <a href="#path-structure" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
 
 <p>As mentioned before in the main.go we find the path declaration and some very important initialization functions</p>
 <pre  class="mc-prism hide language-text" ><code class="language-go">// filename: main.go
@@ -376,7 +415,20 @@ func main() {
 </code></pre>
 <p>As it is seen the scheme of the paths is very clear and it is well done basically we have the login and registration and then we move to a division by <code>role</code> where we have a user section an admin and a superadmin each of them with their own validation services</p>
 
-<h2>Config files</h2>
+<h2 id="config-files" class="header-anchor-wrapper">Config files
+  <a href="#config-files" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
 
 <pre  class="mc-prism hide language-text" ><code class="language-bash"># filename: run.sh
 
@@ -450,18 +502,57 @@ http {
 <p>Well, once I&rsquo;ve finished presenting the application, I&rsquo;d say you&rsquo;re ready to go&hellip;</p>
 <hr>
 
-<h1>Trendz Part 1</h1>
+<h1 id="trendz-part-1" class="header-anchor-wrapper">Trendz Part 1
+  <a href="#trendz-part-1" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h1>
 
 <p><strong>Description</strong>: The latest trendz is all about Go and HTMX, but what could possibly go wrong? A secret post has been hidden deep within the application. Your mission is to uncover it.</p>
 <blockquote>
 <p>Note: This challenge consists of four parts, which can be solved in any order. However, the final part will only be accessible once you&rsquo;ve completed this initial task, and will be released in Wave 3.</p>
 </blockquote>
 
-<h2>Introduction</h2>
+<h2 id="introduction" class="header-anchor-wrapper">Introduction
+  <a href="#introduction" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
 
 <p>Well, as we saw in the run.sh file, the first flag is inside a record in the post table and it is also called ADMIN_FLAG, so the first thing to see is how admin authentication works and what the admin dashboard can do.</p>
 
-<h2>Source</h2>
+<h2 id="source" class="header-anchor-wrapper">Source
+  <a href="#source" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
 
 <pre  class="mc-prism hide language-text" ><code class="language-go">// filename: AdminDash.go
 
@@ -579,7 +670,20 @@ func ValidateAdmin() gin.HandlerFunc {
 </code></pre>
 <p>Instead, we see here that the role is validated in the JWT by checking that it is at least admin or superadmin.</p>
 
-<h2>Solution</h2>
+<h2 id="solution" class="header-anchor-wrapper">Solution
+  <a href="#solution" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
 
 <p>Mmm authentication seems secure let&rsquo;s take a step back and go to the JWTInit function.</p>
 <pre  class="mc-prism hide language-text" ><code class="language-go">//filename: JWTAuth.go
@@ -608,18 +712,57 @@ func InitJWT() {
 <p>And if we try to type <code>/static../jwt.secret</code>&hellip; NICE WE GOT THE JWT SECRET</p>
 <p>Now just change the role of the jwt and re-sign it but we&rsquo;ll see that later in detail being that the challenge itself is solved&hellip; <strong>(At the end see the #PS)</strong></p>
 
-<h1>Trendz Part 2</h1>
+<h1 id="trendz-part-2" class="header-anchor-wrapper">Trendz Part 2
+  <a href="#trendz-part-2" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h1>
 
 <p><strong>Descripion</strong>: Staying active has its rewards. There&rsquo;s a special gift waiting for you, but it&rsquo;s only available once you&rsquo;ve made more than 12 posts. Keep posting to uncover the surprise!</p>
 <blockquote>
 <p>Note: Use the instancer and source from part one of this challenge, Trendz.</p>
 </blockquote>
 
-<h2>Introduction</h2>
+<h2 id="introduction-1" class="header-anchor-wrapper">Introduction
+  <a href="#introduction-1" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
 
 <p>We are in the second part of the Trendz challenge, so we have exactly the same application, only the target flag has changed.</p>
 
-<h2>Source</h2>
+<h2 id="source-1" class="header-anchor-wrapper">Source
+  <a href="#source-1" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
 
 <p>First thing to figure out is where the flag is located, going back to the run.sh we see that the file is located inside the <code>POST_FLAG</code> environment variable so we presso let&rsquo;s assume that the posts center something, searching the directories with grep or something else we see that the variable is called here:</p>
 <pre  class="mc-prism hide language-text" ><code class="language-go">//filename: Posts.go
@@ -668,14 +811,40 @@ func CreatePost(ctx *gin.Context) {
 <p>As we can see, a function is executed that checks the number of posts, which in itself is not a major problem, the problem lies in the misuse of this function.</p>
 <p>This is because although go is very fast and even postgree actually this doesn&rsquo;t stop us from making a race condition</p>
 
-<h2>Solution</h2>
+<h2 id="solution-1" class="header-anchor-wrapper">Solution
+  <a href="#solution-1" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
 
 <p>The solution itself is very simple just create a large amount of requests simultaneously with the same session and hope to enter more posts than allowed by doing so we will be able to bypass the control and get our flag</p>
 <blockquote>
 <p>Probably the reason it works is much more precise and technical, but to tell you the truth, it came to me as soon as I saw it and tried it, and apparently my hunch was right&hellip;</p>
 </blockquote>
 
-<h2>Final script</h2>
+<h2 id="final-script" class="header-anchor-wrapper">Final script
+  <a href="#final-script" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
 
 <p>This is the final exploit script with the 2 challenge solution</p>
 <pre  class="mc-prism hide language-text" ><code class="language-python"># filename: exploit.py
@@ -805,7 +974,20 @@ if __name__ == &quot;__main__&quot;:
 <pre  class="mc-prism hide language-text" ><code class="language-stdout">$ flag 2: CSCTF{d2426fb5-a93a-4cf2-b353-eac8e0e9cf94}
 </code></pre>
 
-<h5>PS:</h5>
+<h5 id="ps" class="header-anchor-wrapper">PS:
+  <a href="#ps" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h5>
 
 <blockquote>
 <p>In the first flag I skipped a very funny part, in fact it is not enough to log in only as admin because we will not be shown the flag but a post of an ID that if you remember the flag was also in a precise record initialised in run.sh, if through /user/posts/post-id we view the post we can find the flag</p>
