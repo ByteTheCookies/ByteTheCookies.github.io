@@ -53,6 +53,26 @@ Introduction Feature unlocked is part of the first wave of the web and is one of
 
 
     
+        <script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+></script>
+<script>
+  MathJax = {
+    tex: {
+      displayMath: [
+        ["\\[", "\\]"],
+        ["$$", "$$"],
+      ], 
+      inlineMath: [["\\(", "\\)"]], 
+    },
+  };
+</script>
+
+    
+
+    
     <script>
         if (!('theme' in localStorage)) {
             localStorage.theme = 'dark';
