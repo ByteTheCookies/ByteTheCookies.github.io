@@ -29,4 +29,4 @@ m0leCon CTF 2025 Teaser is an online jeopardy-style CTF organized by pwnthem0le.
 
 #### Crypto
 
-- [Yet Another OT](writeups/m0lecon2025Teaser/YetAnotherOT/)
+- [Yet Another OT](/writeups/m0lecon2025Teaser/YetAnotherOT/)
