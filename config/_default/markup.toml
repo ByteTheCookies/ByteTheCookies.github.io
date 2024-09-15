@@ -1,5 +1,16 @@
 [goldmark.renderer]
-unsafe= true
+unsafe = true
+
+[goldmark.extensions]
+definitionList = true
+footnote = true
+linkify = true
+linkifyProtocol = 'https'
+strikethrough = true
+table = true
+taskList = true
+[goldmark.extensions.passthrough]
+enable = true
 
 [highlight]
 anchorLineNos = false
