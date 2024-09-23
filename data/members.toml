@@ -64,7 +64,7 @@ link_etherscan = "https://holesky.etherscan.io/tx/0xe65416c77415bad27e218c32d8d5
 [[members]]
 image = "icons/cookie.svg"
 name = "Walter D'Ambrosio"
-github = "https://github.com/"
+github = "https://github.com/wXlter"
 handle = "@wXlter"
 role = "University of Salerno"
 categories = ["Netw", "Web"]

@@ -64,7 +64,10 @@ Source # filename: main.py import sqlite3 from flask import Flask, request, redi
         ["\\[", "\\]"],
         ["$$", "$$"],
       ], 
-      inlineMath: [["\\(", "\\)"]], 
+      inlineMath: [
+        ["\\(", "\\)"],
+        ["$", "$"],
+      ], 
     },
   };
 </script>

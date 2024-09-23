@@ -9,10 +9,10 @@
     <lastBuildDate>Sun, 15 Sep 2024 10:58:00 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/crypto/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Yet Another OT</title>
-      <link>http://localhost:1313/writeups/m0lecon2024/yetanotherot/</link>
+      <link>http://localhost:1313/writeups/m0lecon2025teaser/yetanotherot/</link>
       <pubDate>Sun, 15 Sep 2024 10:58:00 +0200</pubDate>
       
-      <guid>http://localhost:1313/writeups/m0lecon2024/yetanotherot/</guid>
+      <guid>http://localhost:1313/writeups/m0lecon2025teaser/yetanotherot/</guid>
       <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;Yet Another OT&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Why do people always want to decrypt both messages?&lt;/p&gt;
 
