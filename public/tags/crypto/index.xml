@@ -16,105 +16,22 @@
       <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;Yet Another OT&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Why do people always want to decrypt both messages?&lt;/p&gt;
 
-&lt;h2&gt;Disclaimer&lt;/h2&gt;
+&lt;h2 id=&#34;disclaimer&#34; class=&#34;header-anchor-wrapper&#34;&gt;Disclaimer
+  &lt;a href=&#34;#disclaimer&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
 
-&lt;p&gt;I wasn&amp;rsquo;t able to solve this challenge during the competition, but managed to get to the solution after talking on discord to other competitors who very kindly helped me figure it out.&lt;/p&gt;
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
 
-&lt;h2&gt;Introduction&lt;/h2&gt;
-
-&lt;p&gt;Yet Another OT was a crypto CTF from &lt;a href=&#34;https://ctftime.org/event/2440&#34;&gt;m0leCon 2025&lt;/a&gt; hosted by &lt;a href=&#34;https://pwnthem0le.polito.it/&#34;&gt;pwnthem0le&lt;/a&gt;.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import random
-from hashlib import sha256
-import json
-import os
-from Crypto.Cipher import AES
-from Crypto.Util.Padding import pad
-
-random = random.SystemRandom()
-
-
-def jacobi(a, n):
-    if n &amp;lt;= 0:
-        raise ValueError(&amp;quot;&#39;n&#39; must be a positive integer.&amp;quot;)
-    if n % 2 == 0:
-        raise ValueError(&amp;quot;&#39;n&#39; must be odd.&amp;quot;)
-    a %= n
-    result = 1
-    while a != 0:
-        while a % 2 == 0:
-            a //= 2
-            n_mod_8 = n % 8
-            if n_mod_8 in (3, 5):
-                result = -result
-        a, n = n, a
-        if a % 4 == 3 and n % 4 == 3:
-            result = -result
-        a %= n
-    if n == 1:
-        return result
-    else:
-        return 0
-
-
-def sample(start, N):
-    while jacobi(start, N) != 1:
-        start += 1
-    return start
-
-
-class Challenge:
-    def __init__(self, N):
-        assert N &amp;gt; 2**1024
-        assert N % 2 != 0
-        self.N = N
-        self.x = sample(int.from_bytes(sha256((&amp;quot;x&amp;quot;+str(N)).encode()).digest(), &amp;quot;big&amp;quot;), N)
-        ts = []
-        tts = []
-        for _ in range(128):
-            t = random.randint(1, self.N)
-            ts.append(t)
-            tts.append(pow(t, N, N))
-        print(json.dumps({&amp;quot;vals&amp;quot;: tts}))
-        self.key = sha256((&amp;quot;,&amp;quot;.join(map(str, ts))).encode()).digest()
-
-    def one_round(self):
-        z = sample(random.randint(1, self.N), self.N)
-        r0 = random.randint(1, self.N)
-        r1 = random.randint(1, self.N)
-
-        m0, m1 = random.getrandbits(1), random.getrandbits(1)
-
-        c0 = (r0**2 * (z)**m0) % self.N
-        c1 = (r1**2 * (z*self.x)**m1) % self.N
-
-        print(json.dumps({&amp;quot;c0&amp;quot;: c0, &amp;quot;c1&amp;quot;: c1}))
-        data = json.loads(input())
-        v0, v1 = data[&amp;quot;m0&amp;quot;], data[&amp;quot;m1&amp;quot;]
-        return v0 == m0 and v1 == m1
-
-    def send_flag(self, flag):
-        cipher = AES.new(self.key, AES.MODE_ECB)
-        ct = cipher.encrypt(pad(flag.encode(), 16))
-        print(ct.hex())
-
-
-FLAG = os.environ.get(&amp;quot;FLAG&amp;quot;, &amp;quot;ptm{test}&amp;quot;)
-
-def main():
-    print(&amp;quot;Welcome to my guessing game!&amp;quot;)
-    N = int(input(&amp;quot;Send me a number: &amp;quot;))
-    chall = Challenge(N)
-    for _ in range(128):
-        if not chall.one_round():
-            exit(1)
-    chall.send_flag(FLAG)
-
-
-if __name__ == &amp;quot;__main__&amp;quot;:
-    main()
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;We can remotely interact with this service to recover the flag.&lt;/p&gt;</description>
+&lt;p&gt;I wasn&amp;rsquo;t able to solve this challenge during the competition, but managed to get to the solution after talking on discord to other competitors who very kindly helped me figure it out.&lt;/p&gt;</description>
     </item>
     
     <item>

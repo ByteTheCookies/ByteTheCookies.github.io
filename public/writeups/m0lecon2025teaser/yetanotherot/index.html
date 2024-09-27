@@ -20,9 +20,7 @@
   <meta property="og:site_name" content="ByteTheCookies">
   <meta property="og:title" content="Yet Another OT">
   <meta property="og:description" content="Yet Another OT Description: Why do people always want to decrypt both messages?
-Disclaimer I wasn’t able to solve this challenge during the competition, but managed to get to the solution after talking on discord to other competitors who very kindly helped me figure it out.
-Introduction Yet Another OT was a crypto CTF from m0leCon 2025 hosted by pwnthem0le.
-import random from hashlib import sha256 import json import os from Crypto.Cipher import AES from Crypto.Util.Padding import pad random = random.SystemRandom() def jacobi(a, n): if n &lt;= 0: raise ValueError(&#34;&#39;n&#39; must be a positive integer.&#34;) if n % 2 == 0: raise ValueError(&#34;&#39;n&#39; must be odd.&#34;) a %= n result = 1 while a != 0: while a % 2 == 0: a //= 2 n_mod_8 = n % 8 if n_mod_8 in (3, 5): result = -result a, n = n, a if a % 4 == 3 and n % 4 == 3: result = -result a %= n if n == 1: return result else: return 0 def sample(start, N): while jacobi(start, N) != 1: start &#43;= 1 return start class Challenge: def __init__(self, N): assert N &gt; 2**1024 assert N % 2 != 0 self.N = N self.x = sample(int.from_bytes(sha256((&#34;x&#34;&#43;str(N)).encode()).digest(), &#34;big&#34;), N) ts = [] tts = [] for _ in range(128): t = random.randint(1, self.N) ts.append(t) tts.append(pow(t, N, N)) print(json.dumps({&#34;vals&#34;: tts})) self.key = sha256((&#34;,&#34;.join(map(str, ts))).encode()).digest() def one_round(self): z = sample(random.randint(1, self.N), self.N) r0 = random.randint(1, self.N) r1 = random.randint(1, self.N) m0, m1 = random.getrandbits(1), random.getrandbits(1) c0 = (r0**2 * (z)**m0) % self.N c1 = (r1**2 * (z*self.x)**m1) % self.N print(json.dumps({&#34;c0&#34;: c0, &#34;c1&#34;: c1})) data = json.loads(input()) v0, v1 = data[&#34;m0&#34;], data[&#34;m1&#34;] return v0 == m0 and v1 == m1 def send_flag(self, flag): cipher = AES.new(self.key, AES.MODE_ECB) ct = cipher.encrypt(pad(flag.encode(), 16)) print(ct.hex()) FLAG = os.environ.get(&#34;FLAG&#34;, &#34;ptm{test}&#34;) def main(): print(&#34;Welcome to my guessing game!&#34;) N = int(input(&#34;Send me a number: &#34;)) chall = Challenge(N) for _ in range(128): if not chall.one_round(): exit(1) chall.send_flag(FLAG) if __name__ == &#34;__main__&#34;: main() We can remotely interact with this service to recover the flag.">
+Disclaimer I wasn’t able to solve this challenge during the competition, but managed to get to the solution after talking on discord to other competitors who very kindly helped me figure it out.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="writeups">
@@ -40,9 +38,7 @@ import random from hashlib import sha256 import json import os from Crypto.Ciphe
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Yet Another OT">
   <meta name="twitter:description" content="Yet Another OT Description: Why do people always want to decrypt both messages?
-Disclaimer I wasn’t able to solve this challenge during the competition, but managed to get to the solution after talking on discord to other competitors who very kindly helped me figure it out.
-Introduction Yet Another OT was a crypto CTF from m0leCon 2025 hosted by pwnthem0le.
-import random from hashlib import sha256 import json import os from Crypto.Cipher import AES from Crypto.Util.Padding import pad random = random.SystemRandom() def jacobi(a, n): if n &lt;= 0: raise ValueError(&#34;&#39;n&#39; must be a positive integer.&#34;) if n % 2 == 0: raise ValueError(&#34;&#39;n&#39; must be odd.&#34;) a %= n result = 1 while a != 0: while a % 2 == 0: a //= 2 n_mod_8 = n % 8 if n_mod_8 in (3, 5): result = -result a, n = n, a if a % 4 == 3 and n % 4 == 3: result = -result a %= n if n == 1: return result else: return 0 def sample(start, N): while jacobi(start, N) != 1: start &#43;= 1 return start class Challenge: def __init__(self, N): assert N &gt; 2**1024 assert N % 2 != 0 self.N = N self.x = sample(int.from_bytes(sha256((&#34;x&#34;&#43;str(N)).encode()).digest(), &#34;big&#34;), N) ts = [] tts = [] for _ in range(128): t = random.randint(1, self.N) ts.append(t) tts.append(pow(t, N, N)) print(json.dumps({&#34;vals&#34;: tts})) self.key = sha256((&#34;,&#34;.join(map(str, ts))).encode()).digest() def one_round(self): z = sample(random.randint(1, self.N), self.N) r0 = random.randint(1, self.N) r1 = random.randint(1, self.N) m0, m1 = random.getrandbits(1), random.getrandbits(1) c0 = (r0**2 * (z)**m0) % self.N c1 = (r1**2 * (z*self.x)**m1) % self.N print(json.dumps({&#34;c0&#34;: c0, &#34;c1&#34;: c1})) data = json.loads(input()) v0, v1 = data[&#34;m0&#34;], data[&#34;m1&#34;] return v0 == m0 and v1 == m1 def send_flag(self, flag): cipher = AES.new(self.key, AES.MODE_ECB) ct = cipher.encrypt(pad(flag.encode(), 16)) print(ct.hex()) FLAG = os.environ.get(&#34;FLAG&#34;, &#34;ptm{test}&#34;) def main(): print(&#34;Welcome to my guessing game!&#34;) N = int(input(&#34;Send me a number: &#34;)) chall = Challenge(N) for _ in range(128): if not chall.one_round(): exit(1) chall.send_flag(FLAG) if __name__ == &#34;__main__&#34;: main() We can remotely interact with this service to recover the flag.">
+Disclaimer I wasn’t able to solve this challenge during the competition, but managed to get to the solution after talking on discord to other competitors who very kindly helped me figure it out.">
 
     <link rel="stylesheet" href="/style.css" integrity="">
 
@@ -300,11 +296,37 @@ import random from hashlib import sha256 import json import os from Crypto.Ciphe
     <h1 style='text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;'>Yet Another OT</h1>
 <p><strong>Description</strong>: Why do people always want to decrypt both messages?</p>
 
-<h2>Disclaimer</h2>
+<h2 id="disclaimer" class="header-anchor-wrapper">Disclaimer
+  <a href="#disclaimer" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
 
 <p>I wasn&rsquo;t able to solve this challenge during the competition, but managed to get to the solution after talking on discord to other competitors who very kindly helped me figure it out.</p>
 
-<h2>Introduction</h2>
+<h2 id="introduction" class="header-anchor-wrapper">Introduction
+  <a href="#introduction" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
 
 <p>Yet Another OT was a crypto CTF from <a href="https://ctftime.org/event/2440">m0leCon 2025</a> hosted by <a href="https://pwnthem0le.polito.it/">pwnthem0le</a>.</p>
 <pre  class="mc-prism hide language-text" ><code class="language-python">import random
@@ -400,7 +422,20 @@ if __name__ == &quot;__main__&quot;:
 </code></pre>
 <p>We can remotely interact with this service to recover the flag.</p>
 
-<h2>Analysis</h2>
+<h2 id="analysis" class="header-anchor-wrapper">Analysis
+  <a href="#analysis" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
 
 <p>Let&rsquo;s start with the functions:
 <code>jacobi(a, n)</code>
