@@ -23,7 +23,7 @@ m0leCon CTF 2025 Teaser is an online jeopardy-style CTF organized by pwnthem0le.
 - **CTFs**: 1/18
 - **Total points**: 100
 - **Position**: 71/500
-- **Rating points**: ?
+- **Rating points**: 2.920
 
 ## Writeups
 
