@@ -22,7 +22,7 @@ type = 'list'
 PatriotCTF is an online jeopardy-style CTF hosted by George Mason University's Competitive Cyber Club. All are welcome to participate, including students and security professionals. Challenges will range from beginner to expert, so there should be something for everyone.
 
 - [Url](https://competitivecyber.club/patriotctf/)
-- [Discord](<[discord_link](https://discord.gg/Z8pA43vQcW)>)
+- [Discord](https://discord.gg/Z8pA43vQcW)
 
 ## Performance Summary
 
