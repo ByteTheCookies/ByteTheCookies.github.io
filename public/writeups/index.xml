@@ -7,6 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language><atom:link href="http://localhost:1313/writeups/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>PatriotCTF 2024</title>
+      <link>http://localhost:1313/writeups/patriotctf2024/</link>
+      <pubDate>Fri, 27 Sep 2024 17:24:46 +0200</pubDate>
+      
+      <guid>http://localhost:1313/writeups/patriotctf2024/</guid>
+      <description>&lt;h1&gt;Patrioc CTF 2024&lt;/h1&gt;
+
+
+&lt;h2&gt;Description&lt;/h2&gt;
+
+&lt;p&gt;PatriotCTF is an online jeopardy-style CTF hosted by George Mason University&amp;rsquo;s Competitive Cyber Club. All are welcome to participate, including students and security professionals. Challenges will range from beginner to expert, so there should be something for everyone.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://competitivecyber.club/patriotctf/&#34;&gt;Url&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://discord.gg/Z8pA43vQcW&#34;&gt;Discord&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Performance Summary&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;CTFs&lt;/strong&gt;: 32/65&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Total points&lt;/strong&gt;: 5308&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Position&lt;/strong&gt;: 63/1360&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Rating points&lt;/strong&gt;: 9.735&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Writeups&lt;/h2&gt;
+
+&lt;p&gt;No writeups today&amp;hellip;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>m0leCon CTF 2025 Teaser</title>
       <link>http://localhost:1313/writeups/m0lecon2025teaser/</link>
       <pubDate>Sun, 15 Sep 2024 12:59:51 +0200</pubDate>

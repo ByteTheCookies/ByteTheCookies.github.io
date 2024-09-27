@@ -225,6 +225,32 @@
 
 <div class="postcard-layout content-margin">
     
+        <a href="http://localhost:1313/writeups/sekaictf2024/crackme/">
+            <div class="postcard-item">
+                <div class="postcard-title">
+                    <span>Crack Me</span>
+                </div>
+                <div class="postcard-summary">
+                    <span>Crack Me Description: Developed for SekaiCTF 2022 but never got a chance to release it. Can you log in and claim the flag?
+Introduction First rev ctf of Sekai 2024 with an apk attached, so we have a mobile challenge on our hands. The first thing to do (which I strongly advise against in a real environment) is to download and install the app to get a quick overview of what it does.
+</span>
+                </div>
+                <div class="postcard-metadata">
+                    <span>2024/08/26 · 
+    
+        
+    
+
+    
+        
+            <span>Writeup</span>
+        
+    
+</span>
+                </div>
+            </div>
+        </a>
+    
         <a href="http://localhost:1313/writeups/sekaictf2024/sometrick/">
             <div class="postcard-item">
                 <div class="postcard-title">
@@ -314,33 +340,6 @@ The with an ngix server
                 </div>
                 <div class="postcard-metadata">
                     <span>2024/08/18 · 
-    
-        
-    
-
-    
-        
-            <span>Writeup</span>
-        
-    
-</span>
-                </div>
-            </div>
-        </a>
-    
-        <a href="http://localhost:1313/writeups/litctf2024/kirbytime/">
-            <div class="postcard-item">
-                <div class="postcard-title">
-                    <span>Kirbytime</span>
-                </div>
-                <div class="postcard-summary">
-                    <span>Kirbytime Description: Welcome to Kirby&rsquo;s Website.
-Introduction We find ourselves in front of a very pink Kirby-themed page, where we are asked to enter a password of 7 characters.
-Source # filename: main.py import sqlite3 from flask import Flask, request, redirect, render_template import time app = Flask(__name__) @app.route('/', methods=['GET', 'POST']) def login(): message = None if request.method == 'POST': password = request.form['password'] real = 'REDACTED' if len(password) != 7: return render_template('login.html', message=&quot;you need 7 chars&quot;) for i in range(len(password)): if password[i] != real[i]: message = &quot;incorrect&quot; return render_template('login.html', message=message) else: time.sleep(1) if password == real: message = &quot;yayy! hi kirby&quot; return render_template('login.html', message=message) if __name__ == '__main__': app.run(host='0.0.0.0') As we can see in the code at the &lsquo;/&rsquo; endpoint, when the method and post, it takes the password value from the form, checks the length to be 7 and starts iterating over each character to check if it is correct, it triggers a time.sleep(1) otherwise it returns an error.
-</span>
-                </div>
-                <div class="postcard-metadata">
-                    <span>2024/08/13 · 
     
         
     

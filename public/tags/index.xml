@@ -6,13 +6,67 @@
     <description>Recent content in Tags on ByteTheCookies</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 15 Sep 2024 12:59:51 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 27 Sep 2024 17:24:46 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Crypto</title>
+      <link>http://localhost:1313/tags/crypto/</link>
+      <pubDate>Fri, 27 Sep 2024 17:24:46 +0200</pubDate>
+      
+      <guid>http://localhost:1313/tags/crypto/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>CTF</title>
       <link>http://localhost:1313/tags/ctf/</link>
-      <pubDate>Sun, 15 Sep 2024 12:59:51 +0200</pubDate>
+      <pubDate>Fri, 27 Sep 2024 17:24:46 +0200</pubDate>
       
       <guid>http://localhost:1313/tags/ctf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Misc</title>
+      <link>http://localhost:1313/tags/misc/</link>
+      <pubDate>Fri, 27 Sep 2024 17:24:46 +0200</pubDate>
+      
+      <guid>http://localhost:1313/tags/misc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Osint</title>
+      <link>http://localhost:1313/tags/osint/</link>
+      <pubDate>Fri, 27 Sep 2024 17:24:46 +0200</pubDate>
+      
+      <guid>http://localhost:1313/tags/osint/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pwn</title>
+      <link>http://localhost:1313/tags/pwn/</link>
+      <pubDate>Fri, 27 Sep 2024 17:24:46 +0200</pubDate>
+      
+      <guid>http://localhost:1313/tags/pwn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reverse</title>
+      <link>http://localhost:1313/tags/reverse/</link>
+      <pubDate>Fri, 27 Sep 2024 17:24:46 +0200</pubDate>
+      
+      <guid>http://localhost:1313/tags/reverse/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Web</title>
+      <link>http://localhost:1313/tags/web/</link>
+      <pubDate>Fri, 27 Sep 2024 17:24:46 +0200</pubDate>
+      
+      <guid>http://localhost:1313/tags/web/</guid>
       <description></description>
     </item>
     
@@ -31,15 +85,6 @@
       <pubDate>Sun, 15 Sep 2024 10:58:00 +0200</pubDate>
       
       <guid>http://localhost:1313/tags/29-solves/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Crypto</title>
-      <link>http://localhost:1313/tags/crypto/</link>
-      <pubDate>Sun, 15 Sep 2024 10:58:00 +0200</pubDate>
-      
-      <guid>http://localhost:1313/tags/crypto/</guid>
       <description></description>
     </item>
     
@@ -89,15 +134,6 @@
     </item>
     
     <item>
-      <title>Reverse</title>
-      <link>http://localhost:1313/tags/reverse/</link>
-      <pubDate>Mon, 02 Sep 2024 10:59:36 +0200</pubDate>
-      
-      <guid>http://localhost:1313/tags/reverse/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Rust</title>
       <link>http://localhost:1313/tags/rust/</link>
       <pubDate>Mon, 02 Sep 2024 10:59:36 +0200</pubDate>
@@ -139,15 +175,6 @@
       <pubDate>Mon, 02 Sep 2024 10:59:31 +0200</pubDate>
       
       <guid>http://localhost:1313/tags/ssrf/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Web</title>
-      <link>http://localhost:1313/tags/web/</link>
-      <pubDate>Mon, 02 Sep 2024 10:59:31 +0200</pubDate>
-      
-      <guid>http://localhost:1313/tags/web/</guid>
       <description></description>
     </item>
     
@@ -314,15 +341,6 @@
     </item>
     
     <item>
-      <title>Pwn</title>
-      <link>http://localhost:1313/tags/pwn/</link>
-      <pubDate>Mon, 02 Sep 2024 10:52:16 +0200</pubDate>
-      
-      <guid>http://localhost:1313/tags/pwn/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>100 Points</title>
       <link>http://localhost:1313/tags/100-points/</link>
       <pubDate>Mon, 26 Aug 2024 17:04:29 +0200</pubDate>
@@ -458,15 +476,6 @@
     </item>
     
     <item>
-      <title>Misc</title>
-      <link>http://localhost:1313/tags/misc/</link>
-      <pubDate>Mon, 26 Aug 2024 16:58:34 +0200</pubDate>
-      
-      <guid>http://localhost:1313/tags/misc/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Sekai</title>
       <link>http://localhost:1313/tags/sekai/</link>
       <pubDate>Mon, 26 Aug 2024 16:58:34 +0200</pubDate>
@@ -562,15 +571,6 @@
       <pubDate>Tue, 13 Aug 2024 12:20:57 +0200</pubDate>
       
       <guid>http://localhost:1313/tags/litc/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Osint</title>
-      <link>http://localhost:1313/tags/osint/</link>
-      <pubDate>Tue, 13 Aug 2024 12:20:57 +0200</pubDate>
-      
-      <guid>http://localhost:1313/tags/osint/</guid>
       <description></description>
     </item>
     
