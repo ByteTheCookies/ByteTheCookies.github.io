@@ -44,7 +44,7 @@ Good luck, and happy hacking!
 
 #### Web
 
-- []()
+- [Loan App](/writeups/ironctf2024/loan_app.md)
 
 #### Crypto
 

@@ -1,0 +1,417 @@
+               
+
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href='http://localhost:1313/favicon.ico' type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rivest, Shamir, Adleman 1 - ByteTheCookies</title>
+
+    
+
+    
+
+    
+    <meta name="author" content="ByteTheCookies" />
+    
+
+    
+        <meta property="og:url" content="http://localhost:1313/writeups/ironctf2024/rivest_shamir_adleman_1/">
+  <meta property="og:site_name" content="ByteTheCookies">
+  <meta property="og:title" content="Rivest, Shamir, Adleman 1">
+  <meta property="og:description" content="Rivest, Shamir, Adleman 1 Description: Little John came across an article on RSA encryption. Intrigued but only partially understanding it, he decided to write a script and started using it to communicate with his aunt. Can you figure out what he’s discussing?
+Introduction Rivest, Shamir, Adleman 1 was a crypto CTF from IRON CTF 2024 organized by Team 1nf1n1ty.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="writeups">
+    <meta property="article:published_time" content="2024-10-06T13:49:39+02:00">
+    <meta property="article:modified_time" content="2024-10-06T13:49:39+02:00">
+    <meta property="article:tag" content="Crypto">
+    <meta property="article:tag" content="476 Points">
+    <meta property="article:tag" content="62 Solves">
+    <meta property="article:tag" content="Dope_cat">
+
+    
+
+    
+        
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Rivest, Shamir, Adleman 1">
+  <meta name="twitter:description" content="Rivest, Shamir, Adleman 1 Description: Little John came across an article on RSA encryption. Intrigued but only partially understanding it, he decided to write a script and started using it to communicate with his aunt. Can you figure out what he’s discussing?
+Introduction Rivest, Shamir, Adleman 1 was a crypto CTF from IRON CTF 2024 organized by Team 1nf1n1ty.">
+
+    <link rel="stylesheet" href="/style.css" integrity="">
+
+
+
+    <link rel="stylesheet" href="/lib/css/prism.css" integrity="">
+
+
+
+    
+        <script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+></script>
+<script>
+  MathJax = {
+    tex: {
+      displayMath: [
+        ["\\[", "\\]"],
+        ["$$", "$$"],
+      ], 
+      inlineMath: [
+        ["\\(", "\\)"],
+        ["$", "$"],
+      ], 
+    },
+  };
+</script>
+
+    
+
+    
+    <script>
+        if (!('theme' in localStorage)) {
+            localStorage.theme = 'dark';
+        }
+
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.setAttribute("data-theme", "dark");
+        } else {
+            document.documentElement.setAttribute("data-theme", "light");
+        }
+    </script>
+<script defer src="/js/header.js" integrity=""></script>
+
+
+
+    <script defer src="/js/zooming.js" integrity=""></script>
+
+
+
+
+
+
+
+    
+        
+
+        
+        
+
+        
+        
+            
+        
+
+        <script defer src="/js/prism.js" integrity="" data-manual></script>
+    
+
+
+
+    
+    
+    
+    <script defer src="/js/search-en.js" integrity=""></script>
+
+
+
+
+<link rel="stylesheet" href="http://localhost:1313/user.css">
+
+    
+</head>
+<body><header>
+    <div id="header_left">
+        <div id="sidebar_btn">
+            <input type="checkbox" id="sidebar_btn_input" class="hidden" />
+            <label id="sidebar_btn_label" for="sidebar_btn_input">
+                <svg id="menu_icon" width="26px" height="26px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+</svg>
+
+</svg>
+            </label>
+            <label id="sidebar_canvas_overlay_wrapper" for="sidebar_btn_input">
+                <div id="sidebar_canvas_overlay"></div>
+            </label>
+            <div id="sidebar">
+                <ul><li>
+                            <a href="/">💻 About</a></li><li>
+                            <a href="/news/">📰 News</a></li><li>
+                            <a href="/writeups/">📑 Writeups</a></li><li>
+                            <a href="/contacts/">✉️ Contacts</a></li></ul>
+            </div>
+        </div>
+    
+        <div class="brand">
+            <div>
+                <a href="/">ByteTheCookies</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="toolbox">
+        <div id="theme_tool">
+            <svg id="dark_mode_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+</svg>
+
+</svg>
+            <svg id="light_mode_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+</svg>
+
+</svg>
+        </div>
+
+        
+            <div id="search_tool">
+                <svg id="search_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+</svg>
+
+</svg><div id="search_menu_wrapper" class="hidden">
+    <div id="search_menu">
+        <div id="search_menu_toolbar">
+            <div id="search_menu_input_wrapper">
+                <input id="search_menu_input" type="text" placeholder='Search Posts'>
+            </div>
+            <div id="search_menu_close_btn">
+                <svg width="18px" height="18px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>
+</svg>
+
+</svg>
+            </div>
+        </div>
+        <div id="search_menu_results">
+        </div>
+    </div>
+</div>
+</div>
+        
+
+        
+    </div>
+</header>
+<nav id="navbar" class="pure-menu">
+    <ul class="pure-menu-list"><li class="navbar-item pure-menu-item ">
+                    
+                        <a href="/" class="pure-menu-link">💻 About</a>
+                    
+                </li><li class="navbar-item pure-menu-item ">
+                    
+                        <a href="/news/" class="pure-menu-link">📰 News</a>
+                    
+                </li><li class="navbar-item pure-menu-item insection">
+                    
+                        <a href="/writeups/" class="pure-menu-link">📑 Writeups</a>
+                    
+                </li><li class="navbar-item pure-menu-item ">
+                    
+                        <a href="/contacts/" class="pure-menu-link">✉️ Contacts</a>
+                    
+                </li></ul>
+</nav>
+<main>
+      <div id="content" class="content-margin">
+        
+    
+    <details class="collapsible-menu-wrapper"><summary class="collapsible-menu-type"><span>Table of contents</span></summary><div class="collapsible-menu">
+        
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#solution">Solution</a></li>
+  </ul>
+</nav>
+        
+    </div></details>
+
+
+
+<div class="tags">
+  
+    <div class="badge">Crypto</div>
+
+  
+    <div class="badge">476 points</div>
+
+  
+    <div class="badge">62 solves</div>
+
+  
+    <div class="badge">Dope_cat</div>
+
+  
+</div>
+
+<div>
+  <p class="date">
+    Last edit: Oct 6, 2024
+  </p>
+</div>
+
+
+    <div class="content-margin">
+
+
+
+<article >
+    
+    
+        
+        
+    
+    <h1 style='text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;'>Rivest, Shamir, Adleman 1</h1>
+<p><strong>Description</strong>: Little John came across an article on RSA encryption. Intrigued but only partially understanding it, he decided to write a script and started using it to communicate with his aunt. Can you figure out what he&rsquo;s discussing?</p>
+
+<h2 id="introduction" class="header-anchor-wrapper">Introduction
+  <a href="#introduction" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
+
+<p>Rivest, Shamir, Adleman 1 was a crypto CTF from <a href="https://ctftime.org/event/2497">IRON CTF 2024</a> organized by <a href="https://ctftime.org/team/151859">Team 1nf1n1ty</a>.</p>
+<pre  class="mc-prism hide language-text" ><code class="language-python">from Crypto.Util.number import *
+
+m = open(&quot;flag.txt&quot;,'rb').read()
+
+m = bytes_to_long(m)
+
+p = getPrime(1024)
+q = getPrime(1024)
+N = p*q
+
+e = getRandomNBitInteger(16)
+c = pow(m,e,N)
+p_ = p &gt;&gt; (200)
+
+print(f&quot;{(p_,N,e,c)=}&quot;)
+
+# (p_,N,e,c)=(78251056776113743922781362749830646373211175353656790171039496888342171662458492506297767981353887690931452440620588460424832375197427124943346919084717792877241717599798699596252163346397300952154047511640741738581061446499402444306089020012841936, 19155750974833741583193175954281590563726157170945198297004159460941099410928572559396586603869227741976115617781677050055003534675899765832064973073604801444516483333718433505641277789211533814981212445466591143787572063072012686620553662750418892611152219385262027111838502078590253300365603090810554529475615741997879081475539139083909537636187870144455396293865731172472266214152364966965486064463013169673277547545796210067912520397619279792527485993120983571116599728179232502586378026362114554073310185828511219212318935521752030577150436386831635283297669979721206705401841108223134880706200280776161816742511, 37929, 18360638515927091408323573987243771860358592808066239563037326262998090628041137663795836701638491309626921654806176147983008835235564144131508890188032718841579547621056841653365205374032922110171259908854680569139265494330638365871014755623899496058107812891247359641915061447326195936351276776429612672651699554362477232678286997748513921174452554559807152644265886002820939933142395032126999791934865013547916035484742277215894738953606577594559190553807625082545082802319669474061085974345302655680800297032801212853412563127910754108599054834023083534207306068106714093193341748990945064417347044638122445194693)
+</code></pre>
+<p>It is a typical rsa challenge where you&rsquo;re given a &ldquo;leak&rdquo;: some part of the private key which allows you to retrieve it fully. We&rsquo;re given the most significant bits of <code>p</code> and must figure out the rest.</p>
+
+<h2 id="solution" class="header-anchor-wrapper">Solution
+  <a href="#solution" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
+
+<p>We&rsquo;ll use <a href="https://link.springer.com/chapter/10.1007/3-540-68339-9_14">Coppersmith&rsquo;s method</a> to find the 200 lowermost bits of <code>p</code> (<code>beta</code> has a default value of <code>1</code> which must be tweaked to solve this)</p>
+<pre  class="mc-prism hide language-text" ><code class="language-python">R.&lt;x&gt; = PolynomialRing(Zmod(N))
+
+lsb = (p_*2^200 + x).monic().small_roots(beta=0.4)
+p = Integer(p_*2^200 + lsb[0])
+
+assert is_prime(p)
+</code></pre>
+<p>One more trouble to solve is that $gcd(e, \phi) \ne 1$, so we must generate all possible plaintexts corresponding to our ciphertext (<a href="https://medium.com/@g2f1/bad-rsa-keys-3157bc57528e">source</a>).</p>
+<pre  class="mc-prism hide language-text" ><code class="language-python">q = N // p
+phi = (p - 1) * (q - 1)
+
+k = 1
+while gcd(e, phi/k) != 1:
+    k *= gcd(e, phi/k)
+
+d = inverse_mod(e, phi/k)
+
+roots = [power_mod(a, phi/k, N) for a in range(1, 100)]
+
+g = power_mod(c, d, N)
+
+plaintexts = [r * g % N for r in roots]
+</code></pre>
+<p>This is the full solve script in sagemath.</p>
+<pre  class="mc-prism hide language-text" ><code class="language-python">p_, N, e, c = (78251056776113743922781362749830646373211175353656790171039496888342171662458492506297767981353887690931452440620588460424832375197427124943346919084717792877241717599798699596252163346397300952154047511640741738581061446499402444306089020012841936, 19155750974833741583193175954281590563726157170945198297004159460941099410928572559396586603869227741976115617781677050055003534675899765832064973073604801444516483333718433505641277789211533814981212445466591143787572063072012686620553662750418892611152219385262027111838502078590253300365603090810554529475615741997879081475539139083909537636187870144455396293865731172472266214152364966965486064463013169673277547545796210067912520397619279792527485993120983571116599728179232502586378026362114554073310185828511219212318935521752030577150436386831635283297669979721206705401841108223134880706200280776161816742511, 37929, 18360638515927091408323573987243771860358592808066239563037326262998090628041137663795836701638491309626921654806176147983008835235564144131508890188032718841579547621056841653365205374032922110171259908854680569139265494330638365871014755623899496058107812891247359641915061447326195936351276776429612672651699554362477232678286997748513921174452554559807152644265886002820939933142395032126999791934865013547916035484742277215894738953606577594559190553807625082545082802319669474061085974345302655680800297032801212853412563127910754108599054834023083534207306068106714093193341748990945064417347044638122445194693)
+
+R.&lt;x&gt; = PolynomialRing(Zmod(N))
+
+lsb = (p_*2^200 + x).monic().small_roots(beta=0.4)
+p = Integer(p_*2^200 + lsb[0])
+
+assert is_prime(p)
+
+q = N // p
+phi = (p - 1) * (q - 1)
+
+k = 1
+while gcd(e, phi/k) != 1:
+    k *= gcd(e, phi/k)
+
+d = inverse_mod(e, phi/k)
+
+roots = [power_mod(a, phi/k, N) for a in range(1, 100)]
+
+g = power_mod(c, d, N)
+
+plaintexts = [r * g % N for r in roots]
+
+for pt in plaintexts:
+    bs = pt.to_bytes(pt.bit_length() // 8 + 1)
+    if b'iron' in bs:
+        print('flag:', bs.decode())
+        break
+</code></pre>
+<pre  class="mc-prism hide language-text" ><code>$ flag: ironCTF{@Un7_CaN_yoU_53Nd_me_THOS3_3xp@NSIon_5cREws}
+</code></pre>
+<p align="right">Author: vympel</p>
+
+</article>
+</div>
+   
+      </div>
+    </main>
+<footer>
+    <article>Copyright © 2024 by ByteTheCookies Team | v1.0</article>
+</footer>
+
+</body>
+</html>

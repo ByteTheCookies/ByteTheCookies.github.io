@@ -2,14 +2,74 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/tags/129-solves/</loc>
+    <lastmod>2024-10-06T14:41:13+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/394-points/</loc>
+    <lastmod>2024-10-06T14:41:13+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/writeups/ironctf2024/loan_app/</loc>
+    <lastmod>2024-10-06T14:41:13+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/proxy-bypass/</loc>
+    <lastmod>2024-10-06T14:41:13+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/python/</loc>
+    <lastmod>2024-10-06T14:41:13+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2024-10-06T14:41:13+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/vigneswar/</loc>
+    <lastmod>2024-10-06T14:41:13+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/web/</loc>
+    <lastmod>2024-10-06T14:41:13+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/39-solves/</loc>
+    <lastmod>2024-10-06T13:49:47+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/491-points/</loc>
+    <lastmod>2024-10-06T13:49:47+02:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/crypto/</loc>
-    <lastmod>2024-09-27T17:31:27+02:00</lastmod>
+    <lastmod>2024-10-06T13:49:47+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/dope_cat/</loc>
+    <lastmod>2024-10-06T13:49:47+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/writeups/ironctf2024/rivest_shamir_adleman_2/</loc>
+    <lastmod>2024-10-06T13:49:47+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/476-points/</loc>
+    <lastmod>2024-10-06T13:49:39+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/62-solves/</loc>
+    <lastmod>2024-10-06T13:49:39+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/writeups/ironctf2024/rivest_shamir_adleman_1/</loc>
+    <lastmod>2024-10-06T13:49:39+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/android/</loc>
+    <lastmod>2024-10-06T13:48:21+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/ctf/</loc>
-    <lastmod>2024-09-27T17:31:27+02:00</lastmod>
+    <lastmod>2024-10-06T13:48:21+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/gamehacking/</loc>
+    <lastmod>2024-10-06T13:48:21+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/writeups/ironctf2024/</loc>
+    <lastmod>2024-10-06T13:48:21+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/misc/</loc>
-    <lastmod>2024-09-27T17:31:27+02:00</lastmod>
+    <lastmod>2024-10-06T13:48:21+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/pwn/</loc>
+    <lastmod>2024-10-06T13:48:21+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/rev/</loc>
+    <lastmod>2024-10-06T13:48:21+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/osint/</loc>
     <lastmod>2024-09-27T17:31:27+02:00</lastmod>
@@ -17,16 +77,7 @@
     <loc>http://localhost:1313/writeups/patriotctf2024/</loc>
     <lastmod>2024-09-27T17:31:27+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/pwn/</loc>
-    <lastmod>2024-09-27T17:31:27+02:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/reverse/</loc>
-    <lastmod>2024-09-27T17:31:27+02:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2024-09-27T17:31:27+02:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/web/</loc>
     <lastmod>2024-09-27T17:31:27+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/writeups/m0lecon2025teaser/</loc>
@@ -70,9 +121,6 @@
   </url><url>
     <loc>http://localhost:1313/writeups/cyberspace2024/feature_unlocked/</loc>
     <lastmod>2024-09-02T14:35:32+02:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/python/</loc>
-    <lastmod>2024-09-15T13:16:15+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/ssrf/</loc>
     <lastmod>2024-09-02T14:35:32+02:00</lastmod>
@@ -185,9 +233,6 @@
     <loc>http://localhost:1313/tags/mobile/</loc>
     <lastmod>2024-08-27T15:04:40+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/rev/</loc>
-    <lastmod>2024-08-27T15:04:40+02:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/sahuang/</loc>
     <lastmod>2024-08-27T15:04:40+02:00</lastmod>
   </url><url>
@@ -247,9 +292,6 @@
   </url><url>
     <loc>http://localhost:1313/tags/119-solves/</loc>
     <lastmod>2024-08-18T20:24:55+02:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/491-points/</loc>
-    <lastmod>2024-09-15T13:16:15+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/498-points/</loc>
     <lastmod>2024-08-18T20:24:55+02:00</lastmod>

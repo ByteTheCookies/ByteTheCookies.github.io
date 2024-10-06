@@ -6,7 +6,103 @@
     <description>Recent content in Crypto on ByteTheCookies</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 27 Sep 2024 17:24:46 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/crypto/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 06 Oct 2024 13:49:47 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/crypto/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Rivest, Shamir, Adleman 2</title>
+      <link>http://localhost:1313/writeups/ironctf2024/rivest_shamir_adleman_2/</link>
+      <pubDate>Sun, 06 Oct 2024 13:49:47 +0200</pubDate>
+      
+      <guid>http://localhost:1313/writeups/ironctf2024/rivest_shamir_adleman_2/</guid>
+      <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;Rivest, Shamir, Adleman 2&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Little John has done his homework and tried fixing the issue in his script. Can you still find his secret.&lt;/p&gt;
+
+&lt;h2 id=&#34;introduction&#34; class=&#34;header-anchor-wrapper&#34;&gt;Introduction
+  &lt;a href=&#34;#introduction&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
+
+&lt;p&gt;Rivest, Shamir, Adleman 2 was a crypto CTF from &lt;a href=&#34;https://ctftime.org/event/2497&#34;&gt;IRON CTF 2024&lt;/a&gt; organized by &lt;a href=&#34;https://ctftime.org/team/151859&#34;&gt;Team 1nf1n1ty&lt;/a&gt;.
+It is meant as a sequel to Rivest, Shamir, Adleman 1.
+We&amp;rsquo;re not given a script that generates the parameters, simply the public key and the ciphertext.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Rivest, Shamir, Adleman 1</title>
+      <link>http://localhost:1313/writeups/ironctf2024/rivest_shamir_adleman_1/</link>
+      <pubDate>Sun, 06 Oct 2024 13:49:39 +0200</pubDate>
+      
+      <guid>http://localhost:1313/writeups/ironctf2024/rivest_shamir_adleman_1/</guid>
+      <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;Rivest, Shamir, Adleman 1&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Little John came across an article on RSA encryption. Intrigued but only partially understanding it, he decided to write a script and started using it to communicate with his aunt. Can you figure out what he&amp;rsquo;s discussing?&lt;/p&gt;
+
+&lt;h2 id=&#34;introduction&#34; class=&#34;header-anchor-wrapper&#34;&gt;Introduction
+  &lt;a href=&#34;#introduction&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
+
+&lt;p&gt;Rivest, Shamir, Adleman 1 was a crypto CTF from &lt;a href=&#34;https://ctftime.org/event/2497&#34;&gt;IRON CTF 2024&lt;/a&gt; organized by &lt;a href=&#34;https://ctftime.org/team/151859&#34;&gt;Team 1nf1n1ty&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>IRON CTF 2024</title>
+      <link>http://localhost:1313/writeups/ironctf2024/</link>
+      <pubDate>Sun, 06 Oct 2024 13:48:21 +0200</pubDate>
+      
+      <guid>http://localhost:1313/writeups/ironctf2024/</guid>
+      <description>&lt;h1 id=&#34;iron-ctf-2024&#34; class=&#34;header-anchor-wrapper&#34;&gt;IRON CTF 2024
+  &lt;a href=&#34;#iron-ctf-2024&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h1&gt;
+
+
+&lt;h2 id=&#34;description&#34; class=&#34;header-anchor-wrapper&#34;&gt;Description
+  &lt;a href=&#34;#description&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
+
+&lt;p&gt;Welcome to the inaugural edition of IRON CTF (Intrusion Reconnaissance and Offensive Navigation CTF)!&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>PatriotCTF 2024</title>
       <link>http://localhost:1313/writeups/patriotctf2024/</link>

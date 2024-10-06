@@ -1,0 +1,426 @@
+               
+
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href='http://localhost:1313/favicon.ico' type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IRON CTF 2024 - ByteTheCookies</title>
+
+    
+    <meta name="description" content="Welcome to the inaugural edition of IRON CTF (Intrusion Reconnaissance and Offensive Navigation CTF)!" />
+    
+
+    
+
+    
+    <meta name="author" content="ByteTheCookies" />
+    
+
+    
+        <meta property="og:url" content="http://localhost:1313/writeups/ironctf2024/">
+  <meta property="og:site_name" content="ByteTheCookies">
+  <meta property="og:title" content="IRON CTF 2024">
+  <meta property="og:description" content="Welcome to the inaugural edition of IRON CTF (Intrusion Reconnaissance and Offensive Navigation CTF)!">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="writeups">
+    <meta property="article:published_time" content="2024-10-06T13:48:21+02:00">
+    <meta property="article:modified_time" content="2024-10-06T13:48:21+02:00">
+    <meta property="article:tag" content="CTF">
+    <meta property="article:tag" content="Web">
+    <meta property="article:tag" content="Crypto">
+    <meta property="article:tag" content="Android">
+    <meta property="article:tag" content="GameHacking">
+    <meta property="article:tag" content="Pwn">
+
+    
+
+    
+        
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="IRON CTF 2024">
+  <meta name="twitter:description" content="Welcome to the inaugural edition of IRON CTF (Intrusion Reconnaissance and Offensive Navigation CTF)!">
+
+    <link rel="stylesheet" href="/style.css" integrity="">
+
+
+
+
+
+    
+        <script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+></script>
+<script>
+  MathJax = {
+    tex: {
+      displayMath: [
+        ["\\[", "\\]"],
+        ["$$", "$$"],
+      ], 
+      inlineMath: [
+        ["\\(", "\\)"],
+        ["$", "$"],
+      ], 
+    },
+  };
+</script>
+
+    
+
+    
+    <script>
+        if (!('theme' in localStorage)) {
+            localStorage.theme = 'dark';
+        }
+
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.setAttribute("data-theme", "dark");
+        } else {
+            document.documentElement.setAttribute("data-theme", "light");
+        }
+    </script>
+<script defer src="/js/header.js" integrity=""></script>
+
+
+
+    <script defer src="/js/zooming.js" integrity=""></script>
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    <script defer src="/js/search-en.js" integrity=""></script>
+
+
+
+
+<link rel="stylesheet" href="http://localhost:1313/user.css">
+
+    
+</head>
+<body><header>
+    <div id="header_left">
+        <div id="sidebar_btn">
+            <input type="checkbox" id="sidebar_btn_input" class="hidden" />
+            <label id="sidebar_btn_label" for="sidebar_btn_input">
+                <svg id="menu_icon" width="26px" height="26px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+</svg>
+
+</svg>
+            </label>
+            <label id="sidebar_canvas_overlay_wrapper" for="sidebar_btn_input">
+                <div id="sidebar_canvas_overlay"></div>
+            </label>
+            <div id="sidebar">
+                <ul><li>
+                            <a href="/">💻 About</a></li><li>
+                            <a href="/news/">📰 News</a></li><li>
+                            <a href="/writeups/">📑 Writeups</a></li><li>
+                            <a href="/contacts/">✉️ Contacts</a></li></ul>
+            </div>
+        </div>
+    
+        <div class="brand">
+            <div>
+                <a href="/">ByteTheCookies</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="toolbox">
+        <div id="theme_tool">
+            <svg id="dark_mode_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+</svg>
+
+</svg>
+            <svg id="light_mode_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+</svg>
+
+</svg>
+        </div>
+
+        
+            <div id="search_tool">
+                <svg id="search_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+</svg>
+
+</svg><div id="search_menu_wrapper" class="hidden">
+    <div id="search_menu">
+        <div id="search_menu_toolbar">
+            <div id="search_menu_input_wrapper">
+                <input id="search_menu_input" type="text" placeholder='Search Posts'>
+            </div>
+            <div id="search_menu_close_btn">
+                <svg width="18px" height="18px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>
+</svg>
+
+</svg>
+            </div>
+        </div>
+        <div id="search_menu_results">
+        </div>
+    </div>
+</div>
+</div>
+        
+
+        
+    </div>
+</header>
+<nav id="navbar" class="pure-menu">
+    <ul class="pure-menu-list"><li class="navbar-item pure-menu-item ">
+                    
+                        <a href="/" class="pure-menu-link">💻 About</a>
+                    
+                </li><li class="navbar-item pure-menu-item ">
+                    
+                        <a href="/news/" class="pure-menu-link">📰 News</a>
+                    
+                </li><li class="navbar-item pure-menu-item insection">
+                    
+                        <a href="/writeups/" class="pure-menu-link">📑 Writeups</a>
+                    
+                </li><li class="navbar-item pure-menu-item ">
+                    
+                        <a href="/contacts/" class="pure-menu-link">✉️ Contacts</a>
+                    
+                </li></ul>
+</nav>
+<main>
+      <div id="content" class="content-margin">
+        
+    
+    <details class="collapsible-menu-wrapper"><summary class="collapsible-menu-type"><span>Table of contents</span></summary><div class="collapsible-menu">
+        
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#description">Description</a></li>
+    <li><a href="#performance-summary">Performance Summary</a></li>
+    <li><a href="#writeups">Writeups</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        
+    </div></details>
+
+
+
+<div class="tags">
+  
+    <div class="badge">CTF</div>
+
+  
+    <div class="badge">Web</div>
+
+  
+    <div class="badge">Crypto</div>
+
+  
+    <div class="badge">Android</div>
+
+  
+    <div class="badge">GameHacking</div>
+
+  
+    <div class="badge">Pwn</div>
+
+  
+    <div class="badge">Rev</div>
+
+  
+    <div class="badge">Misc</div>
+
+  
+</div>
+
+<div>
+  <p class="date">
+    Last edit: Oct 6, 2024
+  </p>
+</div>
+
+
+    <div class="content-margin">
+
+
+
+<article >
+    
+    
+        
+        
+    
+    
+<h1 id="iron-ctf-2024" class="header-anchor-wrapper">IRON CTF 2024
+  <a href="#iron-ctf-2024" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h1>
+
+
+<h2 id="description" class="header-anchor-wrapper">Description
+  <a href="#description" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
+
+<p>Welcome to the inaugural edition of IRON CTF (Intrusion Reconnaissance and Offensive Navigation CTF)!</p>
+<p>Team 1nf1n1ty from SASTRA Deemed University invites you to embark on an exciting online Jeopardy-style Capture the Flag challenge. Whether you&rsquo;re just starting out or a seasoned hacker, this event promises the perfect platform to push your limits, hone your skills, and enjoy the thrill of competition.</p>
+<p>Tackle diverse challenges in categories like Web Exploitation, Game Hacking, Reverse Engineering, Cryptography, Forensics, Binary Exploitation, and more.</p>
+<p>Team Size: Maximum of 4 participants per team</p>
+<p>Good luck, and happy hacking!</p>
+<ul>
+<li><a href="https://ctf.1nf1n1ty.team/">Url</a></li>
+<li><a href="https://discord.com/invite/e6yRKphmuU">Discord</a></li>
+</ul>
+
+<h2 id="performance-summary" class="header-anchor-wrapper">Performance Summary
+  <a href="#performance-summary" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
+
+<ul>
+<li><strong>CTFs</strong>: 14/55</li>
+<li><strong>Total points</strong>: 4769</li>
+<li><strong>Position</strong>: 41/1033</li>
+<li><strong>Rating points</strong>: ?</li>
+</ul>
+
+<h2 id="writeups" class="header-anchor-wrapper">Writeups
+  <a href="#writeups" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
+
+
+<h4 id="web" class="header-anchor-wrapper">Web
+  <a href="#web" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h4>
+
+<ul>
+<li><a href="/writeups/ironctf2024/loan_app/">Loan App</a></li>
+</ul>
+
+<h4 id="crypto" class="header-anchor-wrapper">Crypto
+  <a href="#crypto" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h4>
+
+<ul>
+<li><a href="/writeups/ironctf2024/rivest_shamir_adleman_1/">Rivest, Shamir, Adleman 2</a></li>
+<li><a href="/writeups/ironctf2024/rivest_shamir_adleman_2/">Rivest, Shamir, Adleman 1</a></li>
+</ul>
+
+</article>
+</div>
+   
+      </div>
+    </main>
+<footer>
+    <article>Copyright © 2024 by ByteTheCookies Team | v1.0</article>
+</footer>
+
+</body>
+</html>

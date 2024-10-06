@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Android on ByteTheCookies</title>
+    <link>http://localhost:1313/tags/android/</link>
+    <description>Recent content in Android on ByteTheCookies</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 06 Oct 2024 13:48:21 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>IRON CTF 2024</title>
+      <link>http://localhost:1313/writeups/ironctf2024/</link>
+      <pubDate>Sun, 06 Oct 2024 13:48:21 +0200</pubDate>
+      
+      <guid>http://localhost:1313/writeups/ironctf2024/</guid>
+      <description>&lt;h1 id=&#34;iron-ctf-2024&#34; class=&#34;header-anchor-wrapper&#34;&gt;IRON CTF 2024
+  &lt;a href=&#34;#iron-ctf-2024&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h1&gt;
+
+
+&lt;h2 id=&#34;description&#34; class=&#34;header-anchor-wrapper&#34;&gt;Description
+  &lt;a href=&#34;#description&#34; class=&#34;header-anchor-link&#34;&gt;
+    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
+&lt;svg
+    xmlns=&#34;http://www.w3.org/2000/svg&#34;
+    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+    stroke-linejoin=&#34;round&#34;&gt;
+    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
+&lt;/svg&gt;
+
+&lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/h2&gt;
+
+&lt;p&gt;Welcome to the inaugural edition of IRON CTF (Intrusion Reconnaissance and Offensive Navigation CTF)!&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
