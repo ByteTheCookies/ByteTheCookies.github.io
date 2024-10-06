@@ -48,5 +48,5 @@ Good luck, and happy hacking!
 
 #### Crypto
 
-- [Rivest, Shamir, Adleman 2](/writeups/ironctf2024/rivest_shamir_adleman_1.md)
-- [Rivest, Shamir, Adleman 1](/writeups/ironctf2024/rivest_shamir_adleman_2.md)
+- [Rivest, Shamir, Adleman 1](/writeups/ironctf2024/rivest_shamir_adleman_1.md)
+- [Rivest, Shamir, Adleman 2](/writeups/ironctf2024/rivest_shamir_adleman_2.md)
