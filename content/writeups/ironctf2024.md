@@ -26,8 +26,6 @@ Team 1nf1n1ty from SASTRA Deemed University invites you to embark on an exciting
 
 Tackle diverse challenges in categories like Web Exploitation, Game Hacking, Reverse Engineering, Cryptography, Forensics, Binary Exploitation, and more.
 
-Team Size: Maximum of 4 participants per team
-
 Good luck, and happy hacking!
 
 - [Url](https://ctf.1nf1n1ty.team/)
@@ -44,9 +42,9 @@ Good luck, and happy hacking!
 
 #### Web
 
-- [Loan App](/writeups/ironctf2024/loan_app.md)
+- [Loan App](/writeups/ironctf2024/loan_app)
 
 #### Crypto
 
-- [Rivest, Shamir, Adleman 1](/writeups/ironctf2024/rivest_shamir_adleman_1.md)
-- [Rivest, Shamir, Adleman 2](/writeups/ironctf2024/rivest_shamir_adleman_2.md)
+- [Rivest, Shamir, Adleman 1](/writeups/ironctf2024/rivest_shamir_adleman_1)
+- [Rivest, Shamir, Adleman 2](/writeups/ironctf2024/rivest_shamir_adleman_2)
