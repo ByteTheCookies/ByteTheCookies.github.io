@@ -60,7 +60,7 @@ backend gunicorn
 And win function
 
 ```python
-# filename: file.py
+# filename: app.py
 
 @app.route('/admin/loan/<loan_id>', methods=['POST'])
 def admin_approve_loan(loan_id):
@@ -78,8 +78,10 @@ _Comments added by me_
 
 The solution is very simple: just read the source code, register and login, and create a loan. Once this is done, thanks to the `/admin/loan/id` endpoint, the loan is approved by setting the flag
 
+### Exploit
+
 ```python
-# filename: file.py
+# filename: exploit.py
 
 #!/usr/bin/python3
 
