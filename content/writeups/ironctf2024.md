@@ -43,6 +43,7 @@ Good luck, and happy hacking!
 #### Web
 
 - [Loan App](/writeups/ironctf2024/loan_app)
+- [B64SiteViewer](/writeups/ironctf2024/b64siteviewer)
 
 #### Crypto
 
