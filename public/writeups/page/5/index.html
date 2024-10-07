@@ -225,6 +225,33 @@
 
 <div class="postcard-layout content-margin">
     
+        <a href="http://localhost:1313/writeups/litctf2024/kirbytime/">
+            <div class="postcard-item">
+                <div class="postcard-title">
+                    <span>Kirbytime</span>
+                </div>
+                <div class="postcard-summary">
+                    <span>Kirbytime Description: Welcome to Kirby&rsquo;s Website.
+Introduction We find ourselves in front of a very pink Kirby-themed page, where we are asked to enter a password of 7 characters.
+Source # filename: main.py import sqlite3 from flask import Flask, request, redirect, render_template import time app = Flask(__name__) @app.route('/', methods=['GET', 'POST']) def login(): message = None if request.method == 'POST': password = request.form['password'] real = 'REDACTED' if len(password) != 7: return render_template('login.html', message=&quot;you need 7 chars&quot;) for i in range(len(password)): if password[i] != real[i]: message = &quot;incorrect&quot; return render_template('login.html', message=message) else: time.sleep(1) if password == real: message = &quot;yayy! hi kirby&quot; return render_template('login.html', message=message) if __name__ == '__main__': app.run(host='0.0.0.0') As we can see in the code at the &lsquo;/&rsquo; endpoint, when the method and post, it takes the password value from the form, checks the length to be 7 and starts iterating over each character to check if it is correct, it triggers a time.sleep(1) otherwise it returns an error.
+</span>
+                </div>
+                <div class="postcard-metadata">
+                    <span>2024/08/13 · 
+    
+        
+    
+
+    
+        
+            <span>Writeup</span>
+        
+    
+</span>
+                </div>
+            </div>
+        </a>
+    
         <a href="http://localhost:1313/writeups/litctf2024/">
             <div class="postcard-item">
                 <div class="postcard-title">
@@ -232,7 +259,7 @@
                 </div>
                 <div class="postcard-summary">
                     <span>Lexington Informatics Tournament CTF Description Lexington Informatics Tournament CTF 2024 is a Jeopardy-style, beginner-friendly online CTF that&rsquo;s open to everyone.
-</span>
+Url Discord Performance Summary CTFs: 18/32 Total points: 2068 Position: 95/830 Rating points: 19.095 Writeups Web Kirbytime </span>
                 </div>
                 <div class="postcard-metadata">
                     <span>2024/08/13 · 
@@ -310,7 +337,7 @@ import subprocess from base64 import b64decode as d while True: print(&quot;[1] 
                 </div>
                 <div class="postcard-summary">
                     <span>N00bz CTF 2024 Description A 48 hours CTF hosted by n00bz for n00bz. Organized with beginner friendly challenges (and some hard ones), n00bzCTF is dedicated to make cyber security more friendly and approachable for complete n00bz.
-</span>
+Url Discord Performance Summary CTFs: 31/32 Total points: 9794.000 Position: 24/967 Rating points: 24.067 Writeups Web File Sharing Portal Misc Waas </span>
                 </div>
                 <div class="postcard-metadata">
                     <span>2024/08/05 · 

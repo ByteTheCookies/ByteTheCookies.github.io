@@ -225,6 +225,32 @@
 
 <div class="postcard-layout content-margin">
     
+        <a href="http://localhost:1313/writeups/sekaictf2024/crackme/">
+            <div class="postcard-item">
+                <div class="postcard-title">
+                    <span>Crack Me</span>
+                </div>
+                <div class="postcard-summary">
+                    <span>Crack Me Description: Developed for SekaiCTF 2022 but never got a chance to release it. Can you log in and claim the flag?
+Introduction First rev ctf of Sekai 2024 with an apk attached, so we have a mobile challenge on our hands. The first thing to do (which I strongly advise against in a real environment) is to download and install the app to get a quick overview of what it does.
+</span>
+                </div>
+                <div class="postcard-metadata">
+                    <span>2024/08/26 · 
+    
+        
+    
+
+    
+        
+            <span>Writeup</span>
+        
+    
+</span>
+                </div>
+            </div>
+        </a>
+    
         <a href="http://localhost:1313/writeups/sekaictf2024/sometrick/">
             <div class="postcard-item">
                 <div class="postcard-title">
@@ -233,6 +259,7 @@
                 <div class="postcard-summary">
                     <span> Some Trick Description: Bob and Alice found a futuristic version of opunssl and replaced all their needs for doofy wellmen.
 Introduction Some Trick was the first cryptography challenge in the 2024 edition of SekaiCTF. The challenge implements a key exchange based on a set of permutations and asks us to retrieve the flag that was used as a key in Bob&rsquo;s first encryption.
+import random from secrets import randbelow, randbits from flag import FLAG CIPHER_SUITE = randbelow(2**256) print(f&quot;oPUN_SASS_SASS_l version 4.0.{CIPHER_SUITE}&quot;) random.seed(CIPHER_SUITE) GSIZE = 8209 GNUM = 79 LIM = GSIZE**GNUM def gen(n): p, i = [0] * n, 0 for j in random.sample(range(1, n), n - 1): p[i], i = j, j return tuple(p) def gexp(g, e): res = tuple(g) while e: if e &amp; 1: res = tuple(res[i] for i in g) e &gt;&gt;= 1 g = tuple(g[i] for i in g) return res def enc(k, m, G): if not G: return m mod = len(G[0]) return gexp(G[0], k % mod)[m % mod] + enc(k // mod, m // mod, G[1:]) * mod def inverse(perm): res = list(perm) for i, v in enumerate(perm): res[v] = i return res G = [gen(GSIZE) for i in range(GNUM)] FLAG = int.from_bytes(FLAG, 'big') left_pad = randbits(randbelow(LIM.bit_length() - FLAG.bit_length())) FLAG = (FLAG &lt;&lt; left_pad.bit_length()) + left_pad FLAG = (randbits(randbelow(LIM.bit_length() - FLAG.bit_length())) &lt;&lt; FLAG.bit_length()) + FLAG bob_key = randbelow(LIM) bob_encr = enc(FLAG, bob_key, G) print(&quot;bob says&quot;, bob_encr) alice_key = randbelow(LIM) alice_encr = enc(bob_encr, alice_key, G) print(&quot;alice says&quot;, alice_encr) bob_decr = enc(alice_encr, bob_key, [inverse(i) for i in G]) print(&quot;bob says&quot;, bob_decr) Solution The first thing we do is retrieve the CIPHER_SUITE variable to set the random seed and reconstruct the set of permutations G, then we care about retrieving bob_key to ultimately recover the flag.
 </span>
                 </div>
                 <div class="postcard-metadata">
@@ -258,7 +285,7 @@ Introduction Some Trick was the first cryptography challenge in the 2024 edition
                 </div>
                 <div class="postcard-summary">
                     <span>SekaiCTF 2024 Description SekaiCTF is back for its third iteration! This year’s competition will feature various categories designed to test participants’ skills and incentivize learning. Our CTF will have more difficult challenges, and are catered towards intermediate and advanced players—however, there will still be beginner-friendly challenges to welcome players on the newer side.
-</span>
+Url Discord Performance Summary CTFs: 3/34 Total points: 369 Position: 136/1230 Rating points: 2.721 Writeups Rev CrackMe Crypto Some trick PPC (Professional Programming &amp; Coding) Miku vs. Machine </span>
                 </div>
                 <div class="postcard-metadata">
                     <span>2024/08/26 · 
@@ -285,6 +312,8 @@ Introduction Some Trick was the first cryptography challenge in the 2024 edition
                     <span>Hello Description: Just to warm you up for the next Fight :&ldquo;D
 Introduction Then we have an apparently empty page, but where we can via a ?name= parameter enter some text, the page will then respond with hello, {text entered}
 The with an ngix server
+Moreover, ctf in general gives us the possibility of using an admin bot where the flag is set in the cookies
+Source # filename: index.py &lt;?php function Enhanced_Trim($inp) { $trimmed = array(&quot;\r&quot;, &quot;\n&quot;, &quot;\t&quot;, &quot;/&quot;, &quot; &quot;); return str_replace($trimmed, &quot;&quot;, $inp); } if(isset($_GET['name'])) { $name=substr($_GET['name'],0,23); echo &quot;Hello, &quot;.Enhanced_Trim($_GET['name']); } ?&gt; # filename: info.py &lt;?php phpinfo(); ?&gt; # filename: ngix.conf user www-data; worker_processes 1; events { worker_connections 1024; } http { include /etc/nginx/mime.types; default_type application/octet-stream; sendfile on; keepalive_timeout 65; server { listen 80; server_name localhost; location / { root /usr/share/nginx/html; index index.php index.html index.htm; } location = /info.php { allow 127.0.0.1; deny all; } location ~ \.php$ { root /usr/share/nginx/html; fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name; include fastcgi_params; fastcgi_pass unix:/var/run/php/php8.2-fpm.sock; } } } As you can see, there are 3 main files to focus on
 </span>
                 </div>
                 <div class="postcard-metadata">
@@ -310,37 +339,10 @@ The with an ngix server
                 </div>
                 <div class="postcard-summary">
                     <span>IdekCTF 2024 Description idekCTF is an information security CTF competition organized by the idek team and is aimed at the entire spectrum from high school and university students to experienced players. idekCTF will cover the standard Jeopardy-style CTF topics (binary exploitation, reverse engineering, cryptography, web exploitation, and forensics) as well as other, less standard categories.
-</span>
+Url Discord Performance Summary CTFs: 6/35 Total points: 732 Position: 101/1070 Rating points: 5.405 Writeups Web Hello </span>
                 </div>
                 <div class="postcard-metadata">
                     <span>2024/08/18 · 
-    
-        
-    
-
-    
-        
-            <span>Writeup</span>
-        
-    
-</span>
-                </div>
-            </div>
-        </a>
-    
-        <a href="http://localhost:1313/writeups/litctf2024/kirbytime/">
-            <div class="postcard-item">
-                <div class="postcard-title">
-                    <span>Kirbytime</span>
-                </div>
-                <div class="postcard-summary">
-                    <span>Kirbytime Description: Welcome to Kirby&rsquo;s Website.
-Introduction We find ourselves in front of a very pink Kirby-themed page, where we are asked to enter a password of 7 characters.
-Source # filename: main.py import sqlite3 from flask import Flask, request, redirect, render_template import time app = Flask(__name__) @app.route('/', methods=['GET', 'POST']) def login(): message = None if request.method == 'POST': password = request.form['password'] real = 'REDACTED' if len(password) != 7: return render_template('login.html', message=&quot;you need 7 chars&quot;) for i in range(len(password)): if password[i] != real[i]: message = &quot;incorrect&quot; return render_template('login.html', message=message) else: time.sleep(1) if password == real: message = &quot;yayy! hi kirby&quot; return render_template('login.html', message=message) if __name__ == '__main__': app.run(host='0.0.0.0') As we can see in the code at the &lsquo;/&rsquo; endpoint, when the method and post, it takes the password value from the form, checks the length to be 7 and starts iterating over each character to check if it is correct, it triggers a time.sleep(1) otherwise it returns an error.
-</span>
-                </div>
-                <div class="postcard-metadata">
-                    <span>2024/08/13 · 
     
         
     

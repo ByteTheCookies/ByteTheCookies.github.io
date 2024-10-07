@@ -31,7 +31,7 @@
   &lt;/a&gt;
 &lt;/h2&gt;
 
-&lt;p&gt;This is the web with the most ctf solves, which despite this I must say is very nice, my solve is the unintended but also the most common one in fact, the correct approach would have been to do &amp;lsquo;request smuggling&amp;rsquo; which is a much more complex attack to bypass the proxy that consists of splitting a request between proxy and backend in this case&lt;/p&gt;</description>
+&lt;p&gt;This is the challenge web with the most solutions, which I must say is very nice, my solution is the unintended but also the most common one, in fact the correct approach would have been to do &amp;lsquo;request smuggling&amp;rsquo;, which is a much more complex attack to bypass the proxy, which in this case consists of splitting a request between proxy and backend.&lt;/p&gt;</description>
     </item>
     
     <item>
