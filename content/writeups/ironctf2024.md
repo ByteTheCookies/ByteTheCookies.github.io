@@ -13,7 +13,7 @@ tags = [
     "Rev",
     "Misc"
 ]
-type = 'list'
+type = 'blank'
 +++
 
 # IRON CTF 2024
