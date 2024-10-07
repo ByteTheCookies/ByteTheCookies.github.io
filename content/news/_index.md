@@ -1,6 +1,6 @@
 +++
 title = 'News'
-type='Postcard'
+type='postcard'
 +++
 
 <center>
