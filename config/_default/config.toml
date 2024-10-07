@@ -8,6 +8,10 @@ enableEmoji = true
 paginate = 5
 enableGitInfo = true
 
+
+[social]
+twitter = "ByteTheCookies"
+
 [taxonomies]
 category = "categories"
 tag = "tags"
@@ -30,12 +34,12 @@ Block = "🔗"
 
 
 [markup]
-  [markup.goldmark]
-    [markup.goldmark.extensions]
-      [markup.goldmark.extensions.passthrough]
-        enable = true
-        [markup.goldmark.extensions.passthrough.delimiters]
-          block = [['\[', '\]'], ['$$', '$$']]
-          inline = [['\(', '\)'], ['$', '$']]
+[markup.goldmark]
+[markup.goldmark.extensions]
+[markup.goldmark.extensions.passthrough]
+enable = true
+[markup.goldmark.extensions.passthrough.delimiters]
+block = [['\[', '\]'], ['$$', '$$']]
+inline = [['\(', '\)'], ['$', '$']]
 [params]
-  math = true
+math = true
