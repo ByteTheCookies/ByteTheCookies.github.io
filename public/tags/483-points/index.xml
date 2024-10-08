@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>483 Points on ByteTheCookies</title>
+    <link>http://localhost:1313/tags/483-points/</link>
+    <description>Recent content in 483 Points on ByteTheCookies</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 07 Oct 2024 22:50:14 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/483-points/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MovieReviewApp</title>
+      <link>http://localhost:1313/writeups/ironctf2024/moviereviewapp/</link>
+      <pubDate>Mon, 07 Oct 2024 22:50:14 +0200</pubDate>
+      
+      <guid>http://localhost:1313/writeups/ironctf2024/moviereviewapp/</guid>
+      <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;MovieReviewApp&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Last web challenge done in the ctf (unfortunately) also one of the fastest to do if you know the right tools&lt;/p&gt;
+
+&lt;h2&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;The challenge looks like a very simple site in pure html where we see reviews on movies&lt;/p&gt;
+
+&lt;h2&gt;Source&lt;/h2&gt;
+
+&lt;p&gt;Is not present the source BUT&amp;hellip;&lt;/p&gt;
+
+&lt;h2&gt;Solution&lt;/h2&gt;
+
+&lt;p&gt;First thing that stands out is that in the url there are extensions so we understand that probably the system behind it is not very complex in fact going to the root endpoint we notice&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

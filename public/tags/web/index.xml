@@ -6,7 +6,43 @@
     <description>Recent content in Web on ByteTheCookies</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 06 Oct 2024 14:41:13 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 07 Oct 2024 22:50:14 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MovieReviewApp</title>
+      <link>http://localhost:1313/writeups/ironctf2024/moviereviewapp/</link>
+      <pubDate>Mon, 07 Oct 2024 22:50:14 +0200</pubDate>
+      
+      <guid>http://localhost:1313/writeups/ironctf2024/moviereviewapp/</guid>
+      <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;MovieReviewApp&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Last web challenge done in the ctf (unfortunately) also one of the fastest to do if you know the right tools&lt;/p&gt;
+
+&lt;h2&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;The challenge looks like a very simple site in pure html where we see reviews on movies&lt;/p&gt;
+
+&lt;h2&gt;Source&lt;/h2&gt;
+
+&lt;p&gt;Is not present the source BUT&amp;hellip;&lt;/p&gt;
+
+&lt;h2&gt;Solution&lt;/h2&gt;
+
+&lt;p&gt;First thing that stands out is that in the url there are extensions so we understand that probably the system behind it is not very complex in fact going to the root endpoint we notice&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>b64SiteViewer</title>
+      <link>http://localhost:1313/writeups/ironctf2024/b64siteviewer/</link>
+      <pubDate>Mon, 07 Oct 2024 22:24:02 +0200</pubDate>
+      
+      <guid>http://localhost:1313/writeups/ironctf2024/b64siteviewer/</guid>
+      <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;b64SiteViewer&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: This is one of the challenges added later, but despite that it wasn&amp;rsquo;t very complex, in fact the most complex part wasn&amp;rsquo;t even the web part, but despite that the challenge was still really nice&lt;/p&gt;
+
+&lt;h2&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;We are faced with a very simple application in which, given a url, the base64 of the page content is given back to us, plus there is a special endpoint that allows us to execute certain commands&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Loan App</title>
       <link>http://localhost:1313/writeups/ironctf2024/loan_app/</link>
@@ -16,20 +52,7 @@
       <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;Loan app&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: One of the first web challenges solved in ctf, not very complex (at least the unintended solution)&lt;/p&gt;
 
-&lt;h2 id=&#34;introduction&#34; class=&#34;header-anchor-wrapper&#34;&gt;Introduction
-  &lt;a href=&#34;#introduction&#34; class=&#34;header-anchor-link&#34;&gt;
-    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
-&lt;svg
-    xmlns=&#34;http://www.w3.org/2000/svg&#34;
-    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
-    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
-    stroke-linejoin=&#34;round&#34;&gt;
-    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
-&lt;/svg&gt;
-
-&lt;/svg&gt;
-  &lt;/a&gt;
-&lt;/h2&gt;
+&lt;h2&gt;Introduction&lt;/h2&gt;
 
 &lt;p&gt;This is the challenge web with the most solutions, which I must say is very nice, my solution is the unintended but also the most common one, in fact the correct approach would have been to do &amp;lsquo;request smuggling&amp;rsquo;, which is a much more complex attack to bypass the proxy, which in this case consists of splitting a request between proxy and backend.&lt;/p&gt;</description>
     </item>
