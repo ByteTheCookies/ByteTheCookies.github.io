@@ -6,34 +6,40 @@
     <description>Recent content in Crypto on ByteTheCookies</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 06 Oct 2024 13:49:47 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/crypto/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 22 Dec 2024 22:11:36 +0100</lastBuildDate><atom:link href="http://localhost:1313/tags/crypto/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>m0leCon 2025 Beginner CTF</title>
+      <link>http://localhost:1313/writeups/m0lecon2025beginner/</link>
+      <pubDate>Sun, 22 Dec 2024 22:11:36 +0100</pubDate>
+      
+      <guid>http://localhost:1313/writeups/m0lecon2025beginner/</guid>
+      <description> m0leCon 2025 Beginner CTF Description Annual edition of the beginner version of m0leCon CTF, that will happen in spring 2025.
+Challenges are targeted to newcomers and students.
+Team size limit is 4 people per team.
+The m0leCon Beginner CTF will not award rating points on CTFTime.
+Url Discord Performance Summary CTFs: 18/20 Total points: 2700 Position: 2/385 Rating points: 0.0 Writeups Category Crypto </description>
+    </item>
+    
+    <item>
+      <title>SmallAuth</title>
+      <link>http://localhost:1313/writeups/m0lecon2025beginner/smallauth/</link>
+      <pubDate>Sat, 21 Dec 2024 18:23:00 +0200</pubDate>
+      
+      <guid>http://localhost:1313/writeups/m0lecon2025beginner/smallauth/</guid>
+      <description>SmallAuth Description: I am trying to authenticate but I totally forgot the password, I am screwed!!
+Introduction SmallAuth was a crypto CTF from ## m0leCon 2025 Beginner CTF organized by pwnthem0le.
+from secret import flag, password import signal from Crypto.Util.number import ( bytes_to_long, long_to_bytes, getRandomRange, ) from hashlib import sha256 import os p = 5270716116965698502689689671130781219142402682027195438035167686031865721400130496197382604002325978977917823871038888373085118354500422489134429970793096193438377786459821943518301475690713718745453633483219759953295608491564410082912515903134742148257215875373630412689071144760281744294536079770426517968527527493218935968663682019557492826204481612047410320146277333682801905360248457200458458982939490478875010628228329816347137904546340745621643293109290190631986349878770000332829974864263568375989597228583046155053640478805958492876860588535257030218304135983005840752161675722091031537527270835889607480661582626985375282908187505873350960702103509549729997875801557977556414403796543012974965425751833424162010931383924392626875437842811285456196644742198291857617009931030974156758885265756942730260677252867252555430773014258836269996233420470473918801854039549216620237517053340745984578639983387808534554731327 assert len(password) &amp;gt; 64 def timeout_handler(_1, _2): raise TimeoutError class AuthProtocol: def __init__(self, password: bytes): super().</description>
+    </item>
+    
     <item>
       <title>Rivest, Shamir, Adleman 2</title>
       <link>http://localhost:1313/writeups/ironctf2024/rivest_shamir_adleman_2/</link>
       <pubDate>Sun, 06 Oct 2024 13:49:47 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/ironctf2024/rivest_shamir_adleman_2/</guid>
-      <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;Rivest, Shamir, Adleman 2&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Little John has done his homework and tried fixing the issue in his script. Can you still find his secret.&lt;/p&gt;
-
-&lt;h2 id=&#34;introduction&#34; class=&#34;header-anchor-wrapper&#34;&gt;Introduction
-  &lt;a href=&#34;#introduction&#34; class=&#34;header-anchor-link&#34;&gt;
-    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
-&lt;svg
-    xmlns=&#34;http://www.w3.org/2000/svg&#34;
-    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
-    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
-    stroke-linejoin=&#34;round&#34;&gt;
-    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
-&lt;/svg&gt;
-
-&lt;/svg&gt;
-  &lt;/a&gt;
-&lt;/h2&gt;
-
-&lt;p&gt;Rivest, Shamir, Adleman 2 was a crypto CTF from &lt;a href=&#34;https://ctftime.org/event/2497&#34;&gt;IRON CTF 2024&lt;/a&gt; organized by &lt;a href=&#34;https://ctftime.org/team/151859&#34;&gt;Team 1nf1n1ty&lt;/a&gt;.
-It is meant as a sequel to Rivest, Shamir, Adleman 1.
-We&amp;rsquo;re not given a script that generates the parameters, simply the public key and the ciphertext.&lt;/p&gt;</description>
+      <description>Rivest, Shamir, Adleman 2 Description: Little John has done his homework and tried fixing the issue in his script. Can you still find his secret.
+Introduction Rivest, Shamir, Adleman 2 was a crypto CTF from IRON CTF 2024 organized by Team 1nf1n1ty. It is meant as a sequel to Rivest, Shamir, Adleman 1. We&amp;rsquo;re not given a script that generates the parameters, simply the public key and the ciphertext.
+(N,e,c)=(161643423646746552081298841935498903406728484661198088824380120820649408462211320026846900530120533720144166059852036274757176945943476154740893002954181911201068843959015760064479587114460816364946604976937998011320067074515344961776920419207973234413389567508538119203696918037349918054399980346807879167361, 36675, 59237480729804419902249350038380812764615310700084519548754724856780737977857097616843794684178008858466821286387353080178404910815575872547979820848851425285654302196414305127926468908308102733135120774714553727434912025225828846601760761868067655959956674559148988221195055343304319184971182998654695411365) Solution Since N is prime we can just calculate the e-th roots of c to find the plaintext(s)</description>
     </item>
     
     <item>
@@ -42,25 +48,9 @@ We&amp;rsquo;re not given a script that generates the parameters, simply the pub
       <pubDate>Sun, 06 Oct 2024 13:49:39 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/ironctf2024/rivest_shamir_adleman_1/</guid>
-      <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;Rivest, Shamir, Adleman 1&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Little John came across an article on RSA encryption. Intrigued but only partially understanding it, he decided to write a script and started using it to communicate with his aunt. Can you figure out what he&amp;rsquo;s discussing?&lt;/p&gt;
-
-&lt;h2 id=&#34;introduction&#34; class=&#34;header-anchor-wrapper&#34;&gt;Introduction
-  &lt;a href=&#34;#introduction&#34; class=&#34;header-anchor-link&#34;&gt;
-    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
-&lt;svg
-    xmlns=&#34;http://www.w3.org/2000/svg&#34;
-    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
-    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
-    stroke-linejoin=&#34;round&#34;&gt;
-    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
-&lt;/svg&gt;
-
-&lt;/svg&gt;
-  &lt;/a&gt;
-&lt;/h2&gt;
-
-&lt;p&gt;Rivest, Shamir, Adleman 1 was a crypto CTF from &lt;a href=&#34;https://ctftime.org/event/2497&#34;&gt;IRON CTF 2024&lt;/a&gt; organized by &lt;a href=&#34;https://ctftime.org/team/151859&#34;&gt;Team 1nf1n1ty&lt;/a&gt;.&lt;/p&gt;</description>
+      <description>Rivest, Shamir, Adleman 1 Description: Little John came across an article on RSA encryption. Intrigued but only partially understanding it, he decided to write a script and started using it to communicate with his aunt. Can you figure out what he&amp;rsquo;s discussing?
+Introduction Rivest, Shamir, Adleman 1 was a crypto CTF from IRON CTF 2024 organized by Team 1nf1n1ty.
+from Crypto.Util.number import * m = open(&amp;quot;flag.txt&amp;quot;,&#39;rb&#39;).read() m = bytes_to_long(m) p = getPrime(1024) q = getPrime(1024) N = p*q e = getRandomNBitInteger(16) c = pow(m,e,N) p_ = p &amp;gt;&amp;gt; (200) print(f&amp;quot;{(p_,N,e,c)=}&amp;quot;) # (p_,N,e,c)=(78251056776113743922781362749830646373211175353656790171039496888342171662458492506297767981353887690931452440620588460424832375197427124943346919084717792877241717599798699596252163346397300952154047511640741738581061446499402444306089020012841936, 19155750974833741583193175954281590563726157170945198297004159460941099410928572559396586603869227741976115617781677050055003534675899765832064973073604801444516483333718433505641277789211533814981212445466591143787572063072012686620553662750418892611152219385262027111838502078590253300365603090810554529475615741997879081475539139083909537636187870144455396293865731172472266214152364966965486064463013169673277547545796210067912520397619279792527485993120983571116599728179232502586378026362114554073310185828511219212318935521752030577150436386831635283297669979721206705401841108223134880706200280776161816742511, 37929, 18360638515927091408323573987243771860358592808066239563037326262998090628041137663795836701638491309626921654806176147983008835235564144131508890188032718841579547621056841653365205374032922110171259908854680569139265494330638365871014755623899496058107812891247359641915061447326195936351276776429612672651699554362477232678286997748513921174452554559807152644265886002820939933142395032126999791934865013547916035484742277215894738953606577594559190553807625082545082802319669474061085974345302655680800297032801212853412563127910754108599054834023083534207306068106714093193341748990945064417347044638122445194693) It is a typical rsa challenge where you&amp;rsquo;re given a &amp;ldquo;leak&amp;rdquo;: some part of the private key which allows you to retrieve it fully.</description>
     </item>
     
     <item>
@@ -69,38 +59,9 @@ We&amp;rsquo;re not given a script that generates the parameters, simply the pub
       <pubDate>Sun, 06 Oct 2024 13:48:21 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/ironctf2024/</guid>
-      <description>&lt;h1 id=&#34;iron-ctf-2024&#34; class=&#34;header-anchor-wrapper&#34;&gt;IRON CTF 2024
-  &lt;a href=&#34;#iron-ctf-2024&#34; class=&#34;header-anchor-link&#34;&gt;
-    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
-&lt;svg
-    xmlns=&#34;http://www.w3.org/2000/svg&#34;
-    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
-    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
-    stroke-linejoin=&#34;round&#34;&gt;
-    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
-&lt;/svg&gt;
-
-&lt;/svg&gt;
-  &lt;/a&gt;
-&lt;/h1&gt;
-
-
-&lt;h2 id=&#34;description&#34; class=&#34;header-anchor-wrapper&#34;&gt;Description
-  &lt;a href=&#34;#description&#34; class=&#34;header-anchor-link&#34;&gt;
-    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
-&lt;svg
-    xmlns=&#34;http://www.w3.org/2000/svg&#34;
-    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
-    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
-    stroke-linejoin=&#34;round&#34;&gt;
-    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
-&lt;/svg&gt;
-
-&lt;/svg&gt;
-  &lt;/a&gt;
-&lt;/h2&gt;
-
-&lt;p&gt;Welcome to the inaugural edition of IRON CTF (Intrusion Reconnaissance and Offensive Navigation CTF)!&lt;/p&gt;</description>
+      <description>IRON CTF 2024 Description Welcome to the inaugural edition of IRON CTF (Intrusion Reconnaissance and Offensive Navigation CTF)!
+Team 1nf1n1ty from SASTRA Deemed University invites you to embark on an exciting online Jeopardy-style Capture the Flag challenge. Whether you&amp;rsquo;re just starting out or a seasoned hacker, this event promises the perfect platform to push your limits, hone your skills, and enjoy the thrill of competition.
+Tackle diverse challenges in categories like Web Exploitation, Game Hacking, Reverse Engineering, Cryptography, Forensics, Binary Exploitation, and more.</description>
     </item>
     
     <item>
@@ -109,38 +70,8 @@ We&amp;rsquo;re not given a script that generates the parameters, simply the pub
       <pubDate>Fri, 27 Sep 2024 17:24:46 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/patriotctf2024/</guid>
-      <description>&lt;h1 id=&#34;patrioc-ctf-2024&#34; class=&#34;header-anchor-wrapper&#34;&gt;Patrioc CTF 2024
-  &lt;a href=&#34;#patrioc-ctf-2024&#34; class=&#34;header-anchor-link&#34;&gt;
-    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
-&lt;svg
-    xmlns=&#34;http://www.w3.org/2000/svg&#34;
-    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
-    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
-    stroke-linejoin=&#34;round&#34;&gt;
-    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
-&lt;/svg&gt;
-
-&lt;/svg&gt;
-  &lt;/a&gt;
-&lt;/h1&gt;
-
-
-&lt;h2 id=&#34;description&#34; class=&#34;header-anchor-wrapper&#34;&gt;Description
-  &lt;a href=&#34;#description&#34; class=&#34;header-anchor-link&#34;&gt;
-    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
-&lt;svg
-    xmlns=&#34;http://www.w3.org/2000/svg&#34;
-    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
-    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
-    stroke-linejoin=&#34;round&#34;&gt;
-    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
-&lt;/svg&gt;
-
-&lt;/svg&gt;
-  &lt;/a&gt;
-&lt;/h2&gt;
-
-&lt;p&gt;PatriotCTF is an online jeopardy-style CTF hosted by George Mason University&amp;rsquo;s Competitive Cyber Club. All are welcome to participate, including students and security professionals. Challenges will range from beginner to expert, so there should be something for everyone.&lt;/p&gt;</description>
+      <description>Patrioc CTF 2024 Description PatriotCTF is an online jeopardy-style CTF hosted by George Mason University&amp;rsquo;s Competitive Cyber Club. All are welcome to participate, including students and security professionals. Challenges will range from beginner to expert, so there should be something for everyone.
+Url Discord Performance Summary CTFs: 32/65 Total points: 5308 Position: 63/1360 Rating points: 9.735 Writeups No writeups today&amp;hellip;</description>
     </item>
     
     <item>
@@ -149,25 +80,10 @@ We&amp;rsquo;re not given a script that generates the parameters, simply the pub
       <pubDate>Sun, 15 Sep 2024 10:58:00 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/m0lecon2025teaser/yetanotherot/</guid>
-      <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;Yet Another OT&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Why do people always want to decrypt both messages?&lt;/p&gt;
-
-&lt;h2 id=&#34;disclaimer&#34; class=&#34;header-anchor-wrapper&#34;&gt;Disclaimer
-  &lt;a href=&#34;#disclaimer&#34; class=&#34;header-anchor-link&#34;&gt;
-    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
-&lt;svg
-    xmlns=&#34;http://www.w3.org/2000/svg&#34;
-    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
-    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
-    stroke-linejoin=&#34;round&#34;&gt;
-    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
-&lt;/svg&gt;
-
-&lt;/svg&gt;
-  &lt;/a&gt;
-&lt;/h2&gt;
-
-&lt;p&gt;I wasn&amp;rsquo;t able to solve this challenge during the competition, but managed to get to the solution after talking on discord to other competitors who very kindly helped me figure it out.&lt;/p&gt;</description>
+      <description>Yet Another OT Description: Why do people always want to decrypt both messages?
+Disclaimer I wasn&amp;rsquo;t able to solve this challenge during the competition, but managed to get to the solution after talking on discord to other competitors who very kindly helped me figure it out.
+Introduction Yet Another OT was a crypto CTF from m0leCon 2025 hosted by pwnthem0le.
+import random from hashlib import sha256 import json import os from Crypto.</description>
     </item>
     
     <item>
@@ -176,41 +92,9 @@ We&amp;rsquo;re not given a script that generates the parameters, simply the pub
       <pubDate>Mon, 02 Sep 2024 10:58:30 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/cyberspace2024/trendy_windy_trigonity/</guid>
-      <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;Trendy windy trigonity&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: have you seen Tan challenge before? see maple version pi documentation!&lt;/p&gt;
-
-&lt;h2 id=&#34;introduction&#34; class=&#34;header-anchor-wrapper&#34;&gt;Introduction
-  &lt;a href=&#34;#introduction&#34; class=&#34;header-anchor-link&#34;&gt;
-    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
-&lt;svg
-    xmlns=&#34;http://www.w3.org/2000/svg&#34;
-    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
-    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
-    stroke-linejoin=&#34;round&#34;&gt;
-    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
-&lt;/svg&gt;
-
-&lt;/svg&gt;
-  &lt;/a&gt;
-&lt;/h2&gt;
-
-&lt;p&gt;trendy windy trigonity was a crypto CTF &lt;a href=&#34;https://ctftime.org/event/2428&#34;&gt;CyberSpace CTF 2024&lt;/a&gt; added during the second wave.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from Crypto.Util.number import bytes_to_long
-
-flag = REDACTED
-print(len(flag))
-
-R = RealField(1000)
-a, b = bytes_to_long(flag[:len(flag)//2]), bytes_to_long(flag[len(flag)//2:])
-x = R(0.75872961153339387563860550178464795474547887323678173252494265684893323654606628651427151866818730100357590296863274236719073684620030717141521941211167282170567424114270941542016135979438271439047194028943997508126389603529160316379547558098144713802870753946485296790294770557302303874143106908193100)
-
-enc = a*cos(x)+b*sin(x)
-
-# 38
-# 2.78332652222000091147933689155414792020338527644698903976732528036823470890155538913578083110732846416012108159157421703264608723649277363079905992717518852564589901390988865009495918051490722972227485851595410047572144567706501150041757189923387228097603575500648300998275877439215112961273516978501e45
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The challenge uses sagemath to handle high precision floating point numbers, in this case a &lt;code&gt;RealField&lt;/code&gt; with 1000 bits of precision.
-The idea behind the challenge is very simple: find a and b to retrieve the flag.&lt;/p&gt;</description>
+      <description>Trendy windy trigonity Description: have you seen Tan challenge before? see maple version pi documentation!
+Introduction trendy windy trigonity was a crypto CTF CyberSpace CTF 2024 added during the second wave.
+from Crypto.Util.number import bytes_to_long flag = REDACTED print(len(flag)) R = RealField(1000) a, b = bytes_to_long(flag[:len(flag)//2]), bytes_to_long(flag[len(flag)//2:]) x = R(0.75872961153339387563860550178464795474547887323678173252494265684893323654606628651427151866818730100357590296863274236719073684620030717141521941211167282170567424114270941542016135979438271439047194028943997508126389603529160316379547558098144713802870753946485296790294770557302303874143106908193100) enc = a*cos(x)+b*sin(x) # 38 # 2.78332652222000091147933689155414792020338527644698903976732528036823470890155538913578083110732846416012108159157421703264608723649277363079905992717518852564589901390988865009495918051490722972227485851595410047572144567706501150041757189923387228097603575500648300998275877439215112961273516978501e45 The challenge uses sagemath to handle high precision floating point numbers, in this case a RealField with 1000 bits of precision.</description>
     </item>
     
     <item>
@@ -219,38 +103,8 @@ The idea behind the challenge is very simple: find a and b to retrieve the flag.
       <pubDate>Mon, 02 Sep 2024 10:52:16 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/cyberspace2024/</guid>
-      <description>&lt;h1 id=&#34;cyberspace-ctf-2024&#34; class=&#34;header-anchor-wrapper&#34;&gt;CyberSpace CTF 2024
-  &lt;a href=&#34;#cyberspace-ctf-2024&#34; class=&#34;header-anchor-link&#34;&gt;
-    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
-&lt;svg
-    xmlns=&#34;http://www.w3.org/2000/svg&#34;
-    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
-    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
-    stroke-linejoin=&#34;round&#34;&gt;
-    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
-&lt;/svg&gt;
-
-&lt;/svg&gt;
-  &lt;/a&gt;
-&lt;/h1&gt;
-
-
-&lt;h2 id=&#34;description&#34; class=&#34;header-anchor-wrapper&#34;&gt;Description
-  &lt;a href=&#34;#description&#34; class=&#34;header-anchor-link&#34;&gt;
-    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
-&lt;svg
-    xmlns=&#34;http://www.w3.org/2000/svg&#34;
-    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
-    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
-    stroke-linejoin=&#34;round&#34;&gt;
-    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
-&lt;/svg&gt;
-
-&lt;/svg&gt;
-  &lt;/a&gt;
-&lt;/h2&gt;
-
-&lt;p&gt;Get ready to dive into the cyberspace and tackle challenges across categories such as Forensics, Reverse Engineering, Cryptography, Jail, and many more, at &lt;a href=&#34;https://2024.csc.tf&#34;&gt;https://2024.csc.tf&lt;/a&gt;!&lt;/p&gt;</description>
+      <description> CyberSpace CTF 2024 Description Get ready to dive into the cyberspace and tackle challenges across categories such as Forensics, Reverse Engineering, Cryptography, Jail, and many more, at https://2024.csc.tf!
+Url Discord Performance Summary CTFs: 21/63 Total points: 2032 Position: 83/830 Rating points: 3.355 Writeups Crypto trendy windy trigonity Web ZipZone FeatureUnlocked Trendz (part 1 and 2) Rev Snake </description>
     </item>
     
     <item>
@@ -259,38 +113,8 @@ The idea behind the challenge is very simple: find a and b to retrieve the flag.
       <pubDate>Mon, 26 Aug 2024 16:58:34 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/sekaictf2024/</guid>
-      <description>&lt;h1 id=&#34;sekaictf-2024&#34; class=&#34;header-anchor-wrapper&#34;&gt;SekaiCTF 2024
-  &lt;a href=&#34;#sekaictf-2024&#34; class=&#34;header-anchor-link&#34;&gt;
-    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
-&lt;svg
-    xmlns=&#34;http://www.w3.org/2000/svg&#34;
-    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
-    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
-    stroke-linejoin=&#34;round&#34;&gt;
-    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
-&lt;/svg&gt;
-
-&lt;/svg&gt;
-  &lt;/a&gt;
-&lt;/h1&gt;
-
-
-&lt;h2 id=&#34;description&#34; class=&#34;header-anchor-wrapper&#34;&gt;Description
-  &lt;a href=&#34;#description&#34; class=&#34;header-anchor-link&#34;&gt;
-    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
-&lt;svg
-    xmlns=&#34;http://www.w3.org/2000/svg&#34;
-    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
-    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
-    stroke-linejoin=&#34;round&#34;&gt;
-    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
-&lt;/svg&gt;
-
-&lt;/svg&gt;
-  &lt;/a&gt;
-&lt;/h2&gt;
-
-&lt;p&gt;SekaiCTF is back for its third iteration! This year’s competition will feature various categories designed to test participants’ skills and incentivize learning. Our CTF will have more difficult challenges, and are catered towards intermediate and advanced players—however, there will still be beginner-friendly challenges to welcome players on the newer side.&lt;/p&gt;</description>
+      <description>SekaiCTF 2024 Description SekaiCTF is back for its third iteration! This year’s competition will feature various categories designed to test participants’ skills and incentivize learning. Our CTF will have more difficult challenges, and are catered towards intermediate and advanced players—however, there will still be beginner-friendly challenges to welcome players on the newer side.
+Url Discord Performance Summary CTFs: 3/34 Total points: 369 Position: 136/1230 Rating points: 2.721 Writeups Rev CrackMe Crypto Some trick PPC (Professional Programming &amp;amp; Coding) Miku vs.</description>
     </item>
     
     <item>
@@ -299,38 +123,8 @@ The idea behind the challenge is very simple: find a and b to retrieve the flag.
       <pubDate>Sun, 18 Aug 2024 12:58:37 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/idekctf2024/</guid>
-      <description>&lt;h1 id=&#34;idekctf-2024&#34; class=&#34;header-anchor-wrapper&#34;&gt;IdekCTF 2024
-  &lt;a href=&#34;#idekctf-2024&#34; class=&#34;header-anchor-link&#34;&gt;
-    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
-&lt;svg
-    xmlns=&#34;http://www.w3.org/2000/svg&#34;
-    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
-    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
-    stroke-linejoin=&#34;round&#34;&gt;
-    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
-&lt;/svg&gt;
-
-&lt;/svg&gt;
-  &lt;/a&gt;
-&lt;/h1&gt;
-
-
-&lt;h2 id=&#34;description&#34; class=&#34;header-anchor-wrapper&#34;&gt;Description
-  &lt;a href=&#34;#description&#34; class=&#34;header-anchor-link&#34;&gt;
-    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
-&lt;svg
-    xmlns=&#34;http://www.w3.org/2000/svg&#34;
-    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
-    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
-    stroke-linejoin=&#34;round&#34;&gt;
-    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
-&lt;/svg&gt;
-
-&lt;/svg&gt;
-  &lt;/a&gt;
-&lt;/h2&gt;
-
-&lt;p&gt;idekCTF is an information security CTF competition organized by the idek team and is aimed at the entire spectrum from high school and university students to experienced players. idekCTF will cover the standard Jeopardy-style CTF topics (binary exploitation, reverse engineering, cryptography, web exploitation, and forensics) as well as other, less standard categories.&lt;/p&gt;</description>
+      <description> IdekCTF 2024 Description idekCTF is an information security CTF competition organized by the idek team and is aimed at the entire spectrum from high school and university students to experienced players. idekCTF will cover the standard Jeopardy-style CTF topics (binary exploitation, reverse engineering, cryptography, web exploitation, and forensics) as well as other, less standard categories.
+Url Discord Performance Summary CTFs: 6/35 Total points: 732 Position: 101/1070 Rating points: 5.405 Writeups Web Hello </description>
     </item>
     
     <item>
@@ -339,38 +133,8 @@ The idea behind the challenge is very simple: find a and b to retrieve the flag.
       <pubDate>Tue, 13 Aug 2024 12:20:57 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/litctf2024/</guid>
-      <description>&lt;h1 id=&#34;lexington-informatics-tournament-ctf&#34; class=&#34;header-anchor-wrapper&#34;&gt;Lexington Informatics Tournament CTF
-  &lt;a href=&#34;#lexington-informatics-tournament-ctf&#34; class=&#34;header-anchor-link&#34;&gt;
-    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
-&lt;svg
-    xmlns=&#34;http://www.w3.org/2000/svg&#34;
-    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
-    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
-    stroke-linejoin=&#34;round&#34;&gt;
-    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
-&lt;/svg&gt;
-
-&lt;/svg&gt;
-  &lt;/a&gt;
-&lt;/h1&gt;
-
-
-&lt;h2 id=&#34;description&#34; class=&#34;header-anchor-wrapper&#34;&gt;Description
-  &lt;a href=&#34;#description&#34; class=&#34;header-anchor-link&#34;&gt;
-    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
-&lt;svg
-    xmlns=&#34;http://www.w3.org/2000/svg&#34;
-    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
-    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
-    stroke-linejoin=&#34;round&#34;&gt;
-    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
-&lt;/svg&gt;
-
-&lt;/svg&gt;
-  &lt;/a&gt;
-&lt;/h2&gt;
-
-&lt;p&gt;Lexington Informatics Tournament CTF 2024 is a Jeopardy-style, beginner-friendly online CTF that&amp;rsquo;s open to everyone.&lt;/p&gt;</description>
+      <description> Lexington Informatics Tournament CTF Description Lexington Informatics Tournament CTF 2024 is a Jeopardy-style, beginner-friendly online CTF that&amp;rsquo;s open to everyone.
+Url Discord Performance Summary CTFs: 18/32 Total points: 2068 Position: 95/830 Rating points: 19.095 Writeups Web Kirbytime </description>
     </item>
     
     <item>
@@ -379,38 +143,8 @@ The idea behind the challenge is very simple: find a and b to retrieve the flag.
       <pubDate>Mon, 05 Aug 2024 18:26:54 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/n00bzctf2024/</guid>
-      <description>&lt;h1 id=&#34;n00bz-ctf-2024&#34; class=&#34;header-anchor-wrapper&#34;&gt;N00bz CTF 2024
-  &lt;a href=&#34;#n00bz-ctf-2024&#34; class=&#34;header-anchor-link&#34;&gt;
-    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
-&lt;svg
-    xmlns=&#34;http://www.w3.org/2000/svg&#34;
-    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
-    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
-    stroke-linejoin=&#34;round&#34;&gt;
-    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
-&lt;/svg&gt;
-
-&lt;/svg&gt;
-  &lt;/a&gt;
-&lt;/h1&gt;
-
-
-&lt;h2 id=&#34;description&#34; class=&#34;header-anchor-wrapper&#34;&gt;Description
-  &lt;a href=&#34;#description&#34; class=&#34;header-anchor-link&#34;&gt;
-    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
-&lt;svg
-    xmlns=&#34;http://www.w3.org/2000/svg&#34;
-    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
-    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
-    stroke-linejoin=&#34;round&#34;&gt;
-    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
-&lt;/svg&gt;
-
-&lt;/svg&gt;
-  &lt;/a&gt;
-&lt;/h2&gt;
-
-&lt;p&gt;A 48 hours CTF hosted by n00bz for n00bz. Organized with beginner friendly challenges (and some hard ones), n00bzCTF is dedicated to make cyber security more friendly and approachable for complete n00bz.&lt;/p&gt;</description>
+      <description> N00bz CTF 2024 Description A 48 hours CTF hosted by n00bz for n00bz. Organized with beginner friendly challenges (and some hard ones), n00bzCTF is dedicated to make cyber security more friendly and approachable for complete n00bz.
+Url Discord Performance Summary CTFs: 31/32 Total points: 9794.000 Position: 24/967 Rating points: 24.067 Writeups Web File Sharing Portal Misc Waas </description>
     </item>
     
   </channel>

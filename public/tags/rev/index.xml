@@ -6,45 +6,29 @@
     <description>Recent content in Rev on ByteTheCookies</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 06 Oct 2024 13:48:21 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/rev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 22 Dec 2024 22:11:36 +0100</lastBuildDate><atom:link href="http://localhost:1313/tags/rev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>m0leCon 2025 Beginner CTF</title>
+      <link>http://localhost:1313/writeups/m0lecon2025beginner/</link>
+      <pubDate>Sun, 22 Dec 2024 22:11:36 +0100</pubDate>
+      
+      <guid>http://localhost:1313/writeups/m0lecon2025beginner/</guid>
+      <description> m0leCon 2025 Beginner CTF Description Annual edition of the beginner version of m0leCon CTF, that will happen in spring 2025.
+Challenges are targeted to newcomers and students.
+Team size limit is 4 people per team.
+The m0leCon Beginner CTF will not award rating points on CTFTime.
+Url Discord Performance Summary CTFs: 18/20 Total points: 2700 Position: 2/385 Rating points: 0.0 Writeups Category Crypto </description>
+    </item>
+    
     <item>
       <title>IRON CTF 2024</title>
       <link>http://localhost:1313/writeups/ironctf2024/</link>
       <pubDate>Sun, 06 Oct 2024 13:48:21 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/ironctf2024/</guid>
-      <description>&lt;h1 id=&#34;iron-ctf-2024&#34; class=&#34;header-anchor-wrapper&#34;&gt;IRON CTF 2024
-  &lt;a href=&#34;#iron-ctf-2024&#34; class=&#34;header-anchor-link&#34;&gt;
-    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
-&lt;svg
-    xmlns=&#34;http://www.w3.org/2000/svg&#34;
-    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
-    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
-    stroke-linejoin=&#34;round&#34;&gt;
-    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
-&lt;/svg&gt;
-
-&lt;/svg&gt;
-  &lt;/a&gt;
-&lt;/h1&gt;
-
-
-&lt;h2 id=&#34;description&#34; class=&#34;header-anchor-wrapper&#34;&gt;Description
-  &lt;a href=&#34;#description&#34; class=&#34;header-anchor-link&#34;&gt;
-    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
-&lt;svg
-    xmlns=&#34;http://www.w3.org/2000/svg&#34;
-    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
-    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
-    stroke-linejoin=&#34;round&#34;&gt;
-    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
-&lt;/svg&gt;
-
-&lt;/svg&gt;
-  &lt;/a&gt;
-&lt;/h2&gt;
-
-&lt;p&gt;Welcome to the inaugural edition of IRON CTF (Intrusion Reconnaissance and Offensive Navigation CTF)!&lt;/p&gt;</description>
+      <description>IRON CTF 2024 Description Welcome to the inaugural edition of IRON CTF (Intrusion Reconnaissance and Offensive Navigation CTF)!
+Team 1nf1n1ty from SASTRA Deemed University invites you to embark on an exciting online Jeopardy-style Capture the Flag challenge. Whether you&amp;rsquo;re just starting out or a seasoned hacker, this event promises the perfect platform to push your limits, hone your skills, and enjoy the thrill of competition.
+Tackle diverse challenges in categories like Web Exploitation, Game Hacking, Reverse Engineering, Cryptography, Forensics, Binary Exploitation, and more.</description>
     </item>
     
     <item>
@@ -53,26 +37,8 @@
       <pubDate>Mon, 26 Aug 2024 17:04:19 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/sekaictf2024/crackme/</guid>
-      <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;Crack Me&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Developed for SekaiCTF 2022 but never got a chance to release it. Can you log in and claim the flag?&lt;/p&gt;
-
-&lt;h2 id=&#34;introduction&#34; class=&#34;header-anchor-wrapper&#34;&gt;Introduction
-  &lt;a href=&#34;#introduction&#34; class=&#34;header-anchor-link&#34;&gt;
-    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
-&lt;svg
-    xmlns=&#34;http://www.w3.org/2000/svg&#34;
-    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
-    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
-    stroke-linejoin=&#34;round&#34;&gt;
-    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
-&lt;/svg&gt;
-
-&lt;/svg&gt;
-  &lt;/a&gt;
-&lt;/h2&gt;
-
-&lt;p&gt;First rev ctf of Sekai 2024 with an apk attached, so we have a mobile challenge on our hands.
-The first thing to do (which I strongly advise against in a real environment) is to download and install the app to get a quick overview of what it does.&lt;/p&gt;</description>
+      <description>Crack Me Description: Developed for SekaiCTF 2022 but never got a chance to release it. Can you log in and claim the flag?
+Introduction First rev ctf of Sekai 2024 with an apk attached, so we have a mobile challenge on our hands. The first thing to do (which I strongly advise against in a real environment) is to download and install the app to get a quick overview of what it does.</description>
     </item>
     
   </channel>

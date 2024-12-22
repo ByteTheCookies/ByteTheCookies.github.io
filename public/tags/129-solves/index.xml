@@ -13,12 +13,8 @@
       <pubDate>Sun, 06 Oct 2024 14:41:13 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/ironctf2024/loan_app/</guid>
-      <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;Loan app&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: One of the first web challenges solved in ctf, not very complex (at least the unintended solution)&lt;/p&gt;
-
-&lt;h2&gt;Introduction&lt;/h2&gt;
-
-&lt;p&gt;This is the challenge web with the most solutions, which I must say is very nice, my solution is the unintended but also the most common one, in fact the correct approach would have been to do &amp;lsquo;request smuggling&amp;rsquo;, which is a much more complex attack to bypass the proxy, which in this case consists of splitting a request between proxy and backend.&lt;/p&gt;</description>
+      <description>Loan app Description: One of the first web challenges solved in ctf, not very complex (at least the unintended solution)
+Introduction This is the challenge web with the most solutions, which I must say is very nice, my solution is the unintended but also the most common one, in fact the correct approach would have been to do &amp;lsquo;request smuggling&amp;rsquo;, which is a much more complex attack to bypass the proxy, which in this case consists of splitting a request between proxy and backend.</description>
     </item>
     
   </channel>

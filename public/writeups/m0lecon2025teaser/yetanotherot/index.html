@@ -20,7 +20,9 @@
   <meta property="og:site_name" content="ByteTheCookies">
   <meta property="og:title" content="Yet Another OT">
   <meta property="og:description" content="Yet Another OT Description: Why do people always want to decrypt both messages?
-Disclaimer I wasn’t able to solve this challenge during the competition, but managed to get to the solution after talking on discord to other competitors who very kindly helped me figure it out.">
+Disclaimer I wasn’t able to solve this challenge during the competition, but managed to get to the solution after talking on discord to other competitors who very kindly helped me figure it out.
+Introduction Yet Another OT was a crypto CTF from m0leCon 2025 hosted by pwnthem0le.
+import random from hashlib import sha256 import json import os from Crypto.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="writeups">
@@ -38,13 +40,21 @@ Disclaimer I wasn’t able to solve this challenge during the competition, but m
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Yet Another OT">
   <meta name="twitter:description" content="Yet Another OT Description: Why do people always want to decrypt both messages?
-Disclaimer I wasn’t able to solve this challenge during the competition, but managed to get to the solution after talking on discord to other competitors who very kindly helped me figure it out.">
+Disclaimer I wasn’t able to solve this challenge during the competition, but managed to get to the solution after talking on discord to other competitors who very kindly helped me figure it out.
+Introduction Yet Another OT was a crypto CTF from m0leCon 2025 hosted by pwnthem0le.
+import random from hashlib import sha256 import json import os from Crypto.">
 
-    <link rel="stylesheet" href="/style.css" integrity="">
+    <link
+  rel="stylesheet"
+  href="/style.css"
+  integrity=""
+/>
 
-
-
-    <link rel="stylesheet" href="/lib/css/prism.css" integrity="">
+  <link
+  rel="stylesheet"
+  href="/lib/css/prism.css"
+  integrity=""
+/>
 
 
 
@@ -124,11 +134,11 @@ Disclaimer I wasn’t able to solve this challenge during the competition, but m
     
 </head>
 <body><header>
-    <div id="header_left">
-        <div id="sidebar_btn">
-            <input type="checkbox" id="sidebar_btn_input" class="hidden" />
-            <label id="sidebar_btn_label" for="sidebar_btn_input">
-                <svg id="menu_icon" width="26px" height="26px" viewBox="0 0 24 24">
+  <div id="header_left">
+    <div id="sidebar_btn">
+      <input type="checkbox" id="sidebar_btn_input" class="hidden" />
+      <label id="sidebar_btn_label" for="sidebar_btn_input">
+        <svg id="menu_icon" width="26px" height="26px" viewBox="0 0 24 24">
 <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -138,29 +148,35 @@ Disclaimer I wasn’t able to solve this challenge during the competition, but m
 </svg>
 
 </svg>
-            </label>
-            <label id="sidebar_canvas_overlay_wrapper" for="sidebar_btn_input">
-                <div id="sidebar_canvas_overlay"></div>
-            </label>
-            <div id="sidebar">
-                <ul><li>
-                            <a href="/">💻 About</a></li><li>
-                            <a href="/news/">📰 News</a></li><li>
-                            <a href="/writeups/">📑 Writeups</a></li><li>
-                            <a href="/contacts/">✉️ Contacts</a></li></ul>
-            </div>
-        </div>
-    
-        <div class="brand">
-            <div>
-                <a href="/">ByteTheCookies</a>
-            </div>
-        </div>
+      </label>
+      <label id="sidebar_canvas_overlay_wrapper" for="sidebar_btn_input">
+        <div id="sidebar_canvas_overlay"></div>
+      </label>
+      <div id="sidebar">
+        <ul><li>
+            <a href="/">💻 About</a></li><li>
+            <a href="/news/">📰 News</a></li><li>
+            <a href="/writeups/">📑 Writeups</a></li><li>
+            <a href="/contacts/">✉️ Contacts</a></li></ul>
+      </div>
     </div>
 
-    <div class="toolbox">
-        <div id="theme_tool">
-            <svg id="dark_mode_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+    <div class="brand">
+      <div>
+        <a href="/">ByteTheCookies</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="toolbox">
+    <div id="theme_tool">
+      <svg
+        id="dark_mode_btn"
+        class="toolbox-btn"
+        width="18px"
+        height="18px"
+        viewBox="0 0 24 24"
+      >
 <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -170,7 +186,13 @@ Disclaimer I wasn’t able to solve this challenge during the competition, but m
 </svg>
 
 </svg>
-            <svg id="light_mode_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+      <svg
+        id="light_mode_btn"
+        class="toolbox-btn"
+        width="18px"
+        height="18px"
+        viewBox="0 0 24 24"
+      >
 <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -180,11 +202,17 @@ Disclaimer I wasn’t able to solve this challenge during the competition, but m
 </svg>
 
 </svg>
-        </div>
+    </div>
 
-        
-            <div id="search_tool">
-                <svg id="search_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+    
+    <div id="search_tool">
+      <svg
+        id="search_btn"
+        class="toolbox-btn"
+        width="18px"
+        height="18px"
+        viewBox="0 0 24 24"
+      >
 <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -217,10 +245,8 @@ Disclaimer I wasn’t able to solve this challenge during the competition, but m
     </div>
 </div>
 </div>
-        
-
-        
-    </div>
+     
+  </div>
 </header>
 <nav id="navbar" class="pure-menu">
     <ul class="pure-menu-list"><li class="navbar-item pure-menu-item ">
@@ -487,7 +513,8 @@ $$
 	c_0 \equiv r_0^2 \cdot z \pmod N \\
 	c_0 \equiv r_0^2 \pmod N
 \end{cases}
-$$<p>After the end of the CTF I asked on discord for help on figuring out where I went wrong and some competitors who solved it kindly explained it to me.
+$$
+<p>After the end of the CTF I asked on discord for help on figuring out where I went wrong and some competitors who solved it kindly explained it to me.
 The idea is to use a different value for <code>N</code>.
 Recovering the private key requires &ldquo;decrypting&rdquo; the public values which are encrypted using the usual <a href="https://en.wikipedia.org/wiki/RSA_(cryptosystem)">RSA</a> method, we expect this to be hard without knowing the factorization of <code>N</code>, but as we&rsquo;re the ones to choose it we can simply generate some primes, take their product and decrypting is easy as we have the factorization of <code>N</code>.
 Now that <code>N</code> is composite <code>sample</code> won&rsquo;t always generate quadratic residues mod <code>N</code> (there is still a possibility but it&rsquo;s low enough to be ignored) so as soon as the <a href="https://en.wikipedia.org/wiki/Legendre_symbol">Legendre symbol</a> of <code>c0</code> for any of the prime factors of N isn&rsquo;t 1 we know we must be in the case where <code>m0 == 1</code> (same goes for <code>c1</code>and <code>m1</code>).

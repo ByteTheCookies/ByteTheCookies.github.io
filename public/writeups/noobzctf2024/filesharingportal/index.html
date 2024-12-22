@@ -20,7 +20,8 @@
   <meta property="og:site_name" content="ByteTheCookies">
   <meta property="og:title" content="File Sharing Portal">
   <meta property="og:description" content="File Sharing Portal Description: Welcome to the file sharing portal! We only support tar files!
-Introduction The ctf has a very simple structure: we have a form in which we are asked to insert a tar file; once the tar file has been inserted, it is unzipped and we are shown the name of files it contains; by clicking on the different files, we can read their contents.">
+Introduction The ctf has a very simple structure: we have a form in which we are asked to insert a tar file; once the tar file has been inserted, it is unzipped and we are shown the name of files it contains; by clicking on the different files, we can read their contents.
+Source The source has comments added later to allow a better understanding of the code in the writeups">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="writeups">
@@ -40,13 +41,20 @@ Introduction The ctf has a very simple structure: we have a form in which we are
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="File Sharing Portal">
   <meta name="twitter:description" content="File Sharing Portal Description: Welcome to the file sharing portal! We only support tar files!
-Introduction The ctf has a very simple structure: we have a form in which we are asked to insert a tar file; once the tar file has been inserted, it is unzipped and we are shown the name of files it contains; by clicking on the different files, we can read their contents.">
+Introduction The ctf has a very simple structure: we have a form in which we are asked to insert a tar file; once the tar file has been inserted, it is unzipped and we are shown the name of files it contains; by clicking on the different files, we can read their contents.
+Source The source has comments added later to allow a better understanding of the code in the writeups">
 
-    <link rel="stylesheet" href="/style.css" integrity="">
+    <link
+  rel="stylesheet"
+  href="/style.css"
+  integrity=""
+/>
 
-
-
-    <link rel="stylesheet" href="/lib/css/prism.css" integrity="">
+  <link
+  rel="stylesheet"
+  href="/lib/css/prism.css"
+  integrity=""
+/>
 
 
 
@@ -126,11 +134,11 @@ Introduction The ctf has a very simple structure: we have a form in which we are
     
 </head>
 <body><header>
-    <div id="header_left">
-        <div id="sidebar_btn">
-            <input type="checkbox" id="sidebar_btn_input" class="hidden" />
-            <label id="sidebar_btn_label" for="sidebar_btn_input">
-                <svg id="menu_icon" width="26px" height="26px" viewBox="0 0 24 24">
+  <div id="header_left">
+    <div id="sidebar_btn">
+      <input type="checkbox" id="sidebar_btn_input" class="hidden" />
+      <label id="sidebar_btn_label" for="sidebar_btn_input">
+        <svg id="menu_icon" width="26px" height="26px" viewBox="0 0 24 24">
 <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -140,29 +148,35 @@ Introduction The ctf has a very simple structure: we have a form in which we are
 </svg>
 
 </svg>
-            </label>
-            <label id="sidebar_canvas_overlay_wrapper" for="sidebar_btn_input">
-                <div id="sidebar_canvas_overlay"></div>
-            </label>
-            <div id="sidebar">
-                <ul><li>
-                            <a href="/">💻 About</a></li><li>
-                            <a href="/news/">📰 News</a></li><li>
-                            <a href="/writeups/">📑 Writeups</a></li><li>
-                            <a href="/contacts/">✉️ Contacts</a></li></ul>
-            </div>
-        </div>
-    
-        <div class="brand">
-            <div>
-                <a href="/">ByteTheCookies</a>
-            </div>
-        </div>
+      </label>
+      <label id="sidebar_canvas_overlay_wrapper" for="sidebar_btn_input">
+        <div id="sidebar_canvas_overlay"></div>
+      </label>
+      <div id="sidebar">
+        <ul><li>
+            <a href="/">💻 About</a></li><li>
+            <a href="/news/">📰 News</a></li><li>
+            <a href="/writeups/">📑 Writeups</a></li><li>
+            <a href="/contacts/">✉️ Contacts</a></li></ul>
+      </div>
     </div>
 
-    <div class="toolbox">
-        <div id="theme_tool">
-            <svg id="dark_mode_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+    <div class="brand">
+      <div>
+        <a href="/">ByteTheCookies</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="toolbox">
+    <div id="theme_tool">
+      <svg
+        id="dark_mode_btn"
+        class="toolbox-btn"
+        width="18px"
+        height="18px"
+        viewBox="0 0 24 24"
+      >
 <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -172,7 +186,13 @@ Introduction The ctf has a very simple structure: we have a form in which we are
 </svg>
 
 </svg>
-            <svg id="light_mode_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+      <svg
+        id="light_mode_btn"
+        class="toolbox-btn"
+        width="18px"
+        height="18px"
+        viewBox="0 0 24 24"
+      >
 <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -182,11 +202,17 @@ Introduction The ctf has a very simple structure: we have a form in which we are
 </svg>
 
 </svg>
-        </div>
+    </div>
 
-        
-            <div id="search_tool">
-                <svg id="search_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+    
+    <div id="search_tool">
+      <svg
+        id="search_btn"
+        class="toolbox-btn"
+        width="18px"
+        height="18px"
+        viewBox="0 0 24 24"
+      >
 <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -219,10 +245,8 @@ Introduction The ctf has a very simple structure: we have a form in which we are
     </div>
 </div>
 </div>
-        
-
-        
-    </div>
+     
+  </div>
 </header>
 <nav id="navbar" class="pure-menu">
     <ul class="pure-menu-list"><li class="navbar-item pure-menu-item ">

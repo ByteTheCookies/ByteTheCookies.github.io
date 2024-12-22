@@ -21,7 +21,7 @@
   <meta property="og:title" content="WaaS">
   <meta property="og:description" content="Waas Description: Writing as a Service!
 Introduction WaaS (Writing as a Service) allows us to overwrite a file on the system (after some input validation) and insert anything (until a newline is met) we want in it.
-import subprocess from base64 import b64decode as d while True: print(&#34;[1] Write to a file\n[2] Get the flag\n[3] Exit&#34;) try: inp = int(input(&#34;Choice: &#34;).strip()) except: print(&#34;Invalid input!&#34;) exit(0) if inp == 1: file = input(&#34;Enter file name: &#34;).strip() assert file.count(&#39;.&#39;) &lt;= 2 # Why do you need more? assert &#34;/proc&#34; not in file # Why do you need to write there? assert &#34;/bin&#34; not in file # Why do you need to write there? assert &#34;\n&#34; not in file # Why do you need these? assert &#34;chall&#34; not in file # Don&#39;t be overwriting my files! try: f = open(file,&#39;w&#39;) except: print(&#34;Error! Maybe the file does not exist?&#34;) f.write(input(&#34;Data: &#34;).strip()) f.close() print(&#34;Data written sucessfully!&#34;) if inp == 2: flag = subprocess.run([&#34;cat&#34;,&#34;fake_flag.txt&#34;],capture_output=True) # You actually thought I would give the flag? print(flag.stdout.strip()) Solution At first one may think of trying to bypass the input validation to perhaps rewrite the workings of the cat command or the challenge file itself, but this isn’t possible. Something very bizarre is the imported but unused b64decode from the base64 module, which is what allows us to solve the challenge. When python imports modules it looks in sys.path, which has a list of valid directories to import modules from. After a quick scan through the python3 docs we find out that the first directory it looks through is the same directory the file is in, this means that if we have a base64.py file in the directory then python will try to import a b64decode symbol from that file instead of the common known module. One more feature of python’s import behavior we can use is the that all the code in an imported module will be executed. For example if a file test.py has print(&#39;Hello, World!&#39;) and it can be executed (for example if it’s at the lowest indentation level) then a file with import test will indeed see Hello, World! printed to stdout. Therefore, since the open function with a &#39;w&#39; flag will create a file if it does not exist, we can simply create a file named base64.py and write our malicious code in it. Something like this will do the trick:">
+import subprocess from base64 import b64decode as d while True: print(&#34;[1] Write to a file\n[2] Get the flag\n[3] Exit&#34;) try: inp = int(input(&#34;Choice: &#34;).strip()) except: print(&#34;Invalid input!&#34;) exit(0) if inp == 1: file = input(&#34;Enter file name: &#34;).">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="writeups">
@@ -41,13 +41,19 @@ import subprocess from base64 import b64decode as d while True: print(&#34;[1] W
   <meta name="twitter:title" content="WaaS">
   <meta name="twitter:description" content="Waas Description: Writing as a Service!
 Introduction WaaS (Writing as a Service) allows us to overwrite a file on the system (after some input validation) and insert anything (until a newline is met) we want in it.
-import subprocess from base64 import b64decode as d while True: print(&#34;[1] Write to a file\n[2] Get the flag\n[3] Exit&#34;) try: inp = int(input(&#34;Choice: &#34;).strip()) except: print(&#34;Invalid input!&#34;) exit(0) if inp == 1: file = input(&#34;Enter file name: &#34;).strip() assert file.count(&#39;.&#39;) &lt;= 2 # Why do you need more? assert &#34;/proc&#34; not in file # Why do you need to write there? assert &#34;/bin&#34; not in file # Why do you need to write there? assert &#34;\n&#34; not in file # Why do you need these? assert &#34;chall&#34; not in file # Don&#39;t be overwriting my files! try: f = open(file,&#39;w&#39;) except: print(&#34;Error! Maybe the file does not exist?&#34;) f.write(input(&#34;Data: &#34;).strip()) f.close() print(&#34;Data written sucessfully!&#34;) if inp == 2: flag = subprocess.run([&#34;cat&#34;,&#34;fake_flag.txt&#34;],capture_output=True) # You actually thought I would give the flag? print(flag.stdout.strip()) Solution At first one may think of trying to bypass the input validation to perhaps rewrite the workings of the cat command or the challenge file itself, but this isn’t possible. Something very bizarre is the imported but unused b64decode from the base64 module, which is what allows us to solve the challenge. When python imports modules it looks in sys.path, which has a list of valid directories to import modules from. After a quick scan through the python3 docs we find out that the first directory it looks through is the same directory the file is in, this means that if we have a base64.py file in the directory then python will try to import a b64decode symbol from that file instead of the common known module. One more feature of python’s import behavior we can use is the that all the code in an imported module will be executed. For example if a file test.py has print(&#39;Hello, World!&#39;) and it can be executed (for example if it’s at the lowest indentation level) then a file with import test will indeed see Hello, World! printed to stdout. Therefore, since the open function with a &#39;w&#39; flag will create a file if it does not exist, we can simply create a file named base64.py and write our malicious code in it. Something like this will do the trick:">
+import subprocess from base64 import b64decode as d while True: print(&#34;[1] Write to a file\n[2] Get the flag\n[3] Exit&#34;) try: inp = int(input(&#34;Choice: &#34;).strip()) except: print(&#34;Invalid input!&#34;) exit(0) if inp == 1: file = input(&#34;Enter file name: &#34;).">
 
-    <link rel="stylesheet" href="/style.css" integrity="">
+    <link
+  rel="stylesheet"
+  href="/style.css"
+  integrity=""
+/>
 
-
-
-    <link rel="stylesheet" href="/lib/css/prism.css" integrity="">
+  <link
+  rel="stylesheet"
+  href="/lib/css/prism.css"
+  integrity=""
+/>
 
 
 
@@ -127,11 +133,11 @@ import subprocess from base64 import b64decode as d while True: print(&#34;[1] W
     
 </head>
 <body><header>
-    <div id="header_left">
-        <div id="sidebar_btn">
-            <input type="checkbox" id="sidebar_btn_input" class="hidden" />
-            <label id="sidebar_btn_label" for="sidebar_btn_input">
-                <svg id="menu_icon" width="26px" height="26px" viewBox="0 0 24 24">
+  <div id="header_left">
+    <div id="sidebar_btn">
+      <input type="checkbox" id="sidebar_btn_input" class="hidden" />
+      <label id="sidebar_btn_label" for="sidebar_btn_input">
+        <svg id="menu_icon" width="26px" height="26px" viewBox="0 0 24 24">
 <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -141,29 +147,35 @@ import subprocess from base64 import b64decode as d while True: print(&#34;[1] W
 </svg>
 
 </svg>
-            </label>
-            <label id="sidebar_canvas_overlay_wrapper" for="sidebar_btn_input">
-                <div id="sidebar_canvas_overlay"></div>
-            </label>
-            <div id="sidebar">
-                <ul><li>
-                            <a href="/">💻 About</a></li><li>
-                            <a href="/news/">📰 News</a></li><li>
-                            <a href="/writeups/">📑 Writeups</a></li><li>
-                            <a href="/contacts/">✉️ Contacts</a></li></ul>
-            </div>
-        </div>
-    
-        <div class="brand">
-            <div>
-                <a href="/">ByteTheCookies</a>
-            </div>
-        </div>
+      </label>
+      <label id="sidebar_canvas_overlay_wrapper" for="sidebar_btn_input">
+        <div id="sidebar_canvas_overlay"></div>
+      </label>
+      <div id="sidebar">
+        <ul><li>
+            <a href="/">💻 About</a></li><li>
+            <a href="/news/">📰 News</a></li><li>
+            <a href="/writeups/">📑 Writeups</a></li><li>
+            <a href="/contacts/">✉️ Contacts</a></li></ul>
+      </div>
     </div>
 
-    <div class="toolbox">
-        <div id="theme_tool">
-            <svg id="dark_mode_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+    <div class="brand">
+      <div>
+        <a href="/">ByteTheCookies</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="toolbox">
+    <div id="theme_tool">
+      <svg
+        id="dark_mode_btn"
+        class="toolbox-btn"
+        width="18px"
+        height="18px"
+        viewBox="0 0 24 24"
+      >
 <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -173,7 +185,13 @@ import subprocess from base64 import b64decode as d while True: print(&#34;[1] W
 </svg>
 
 </svg>
-            <svg id="light_mode_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+      <svg
+        id="light_mode_btn"
+        class="toolbox-btn"
+        width="18px"
+        height="18px"
+        viewBox="0 0 24 24"
+      >
 <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -183,11 +201,17 @@ import subprocess from base64 import b64decode as d while True: print(&#34;[1] W
 </svg>
 
 </svg>
-        </div>
+    </div>
 
-        
-            <div id="search_tool">
-                <svg id="search_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+    
+    <div id="search_tool">
+      <svg
+        id="search_btn"
+        class="toolbox-btn"
+        width="18px"
+        height="18px"
+        viewBox="0 0 24 24"
+      >
 <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -220,10 +244,8 @@ import subprocess from base64 import b64decode as d while True: print(&#34;[1] W
     </div>
 </div>
 </div>
-        
-
-        
-    </div>
+     
+  </div>
 </header>
 <nav id="navbar" class="pure-menu">
     <ul class="pure-menu-list"><li class="navbar-item pure-menu-item ">

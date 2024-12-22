@@ -13,12 +13,8 @@
       <pubDate>Mon, 07 Oct 2024 22:24:02 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/ironctf2024/b64siteviewer/</guid>
-      <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;b64SiteViewer&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: This is one of the challenges added later, but despite that it wasn&amp;rsquo;t very complex, in fact the most complex part wasn&amp;rsquo;t even the web part, but despite that the challenge was still really nice&lt;/p&gt;
-
-&lt;h2&gt;Introduction&lt;/h2&gt;
-
-&lt;p&gt;We are faced with a very simple application in which, given a url, the base64 of the page content is given back to us, plus there is a special endpoint that allows us to execute certain commands&lt;/p&gt;</description>
+      <description>b64SiteViewer Description: This is one of the challenges added later, but despite that it wasn&amp;rsquo;t very complex, in fact the most complex part wasn&amp;rsquo;t even the web part, but despite that the challenge was still really nice
+Introduction We are faced with a very simple application in which, given a url, the base64 of the page content is given back to us, plus there is a special endpoint that allows us to execute certain commands</description>
     </item>
     
   </channel>

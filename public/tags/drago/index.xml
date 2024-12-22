@@ -13,25 +13,10 @@
       <pubDate>Sun, 15 Sep 2024 10:58:00 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/m0lecon2025teaser/yetanotherot/</guid>
-      <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;Yet Another OT&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Why do people always want to decrypt both messages?&lt;/p&gt;
-
-&lt;h2 id=&#34;disclaimer&#34; class=&#34;header-anchor-wrapper&#34;&gt;Disclaimer
-  &lt;a href=&#34;#disclaimer&#34; class=&#34;header-anchor-link&#34;&gt;
-    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
-&lt;svg
-    xmlns=&#34;http://www.w3.org/2000/svg&#34;
-    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
-    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
-    stroke-linejoin=&#34;round&#34;&gt;
-    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
-&lt;/svg&gt;
-
-&lt;/svg&gt;
-  &lt;/a&gt;
-&lt;/h2&gt;
-
-&lt;p&gt;I wasn&amp;rsquo;t able to solve this challenge during the competition, but managed to get to the solution after talking on discord to other competitors who very kindly helped me figure it out.&lt;/p&gt;</description>
+      <description>Yet Another OT Description: Why do people always want to decrypt both messages?
+Disclaimer I wasn&amp;rsquo;t able to solve this challenge during the competition, but managed to get to the solution after talking on discord to other competitors who very kindly helped me figure it out.
+Introduction Yet Another OT was a crypto CTF from m0leCon 2025 hosted by pwnthem0le.
+import random from hashlib import sha256 import json import os from Crypto.</description>
     </item>
     
   </channel>

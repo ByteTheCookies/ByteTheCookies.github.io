@@ -20,7 +20,8 @@
   <meta property="og:site_name" content="ByteTheCookies">
   <meta property="og:title" content="Rivest, Shamir, Adleman 2">
   <meta property="og:description" content="Rivest, Shamir, Adleman 2 Description: Little John has done his homework and tried fixing the issue in his script. Can you still find his secret.
-Introduction Rivest, Shamir, Adleman 2 was a crypto CTF from IRON CTF 2024 organized by Team 1nf1n1ty. It is meant as a sequel to Rivest, Shamir, Adleman 1. We’re not given a script that generates the parameters, simply the public key and the ciphertext.">
+Introduction Rivest, Shamir, Adleman 2 was a crypto CTF from IRON CTF 2024 organized by Team 1nf1n1ty. It is meant as a sequel to Rivest, Shamir, Adleman 1. We’re not given a script that generates the parameters, simply the public key and the ciphertext.
+(N,e,c)=(161643423646746552081298841935498903406728484661198088824380120820649408462211320026846900530120533720144166059852036274757176945943476154740893002954181911201068843959015760064479587114460816364946604976937998011320067074515344961776920419207973234413389567508538119203696918037349918054399980346807879167361, 36675, 59237480729804419902249350038380812764615310700084519548754724856780737977857097616843794684178008858466821286387353080178404910815575872547979820848851425285654302196414305127926468908308102733135120774714553727434912025225828846601760761868067655959956674559148988221195055343304319184971182998654695411365) Solution Since N is prime we can just calculate the e-th roots of c to find the plaintext(s)">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="writeups">
@@ -38,13 +39,20 @@ Introduction Rivest, Shamir, Adleman 2 was a crypto CTF from IRON CTF 2024 organ
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Rivest, Shamir, Adleman 2">
   <meta name="twitter:description" content="Rivest, Shamir, Adleman 2 Description: Little John has done his homework and tried fixing the issue in his script. Can you still find his secret.
-Introduction Rivest, Shamir, Adleman 2 was a crypto CTF from IRON CTF 2024 organized by Team 1nf1n1ty. It is meant as a sequel to Rivest, Shamir, Adleman 1. We’re not given a script that generates the parameters, simply the public key and the ciphertext.">
+Introduction Rivest, Shamir, Adleman 2 was a crypto CTF from IRON CTF 2024 organized by Team 1nf1n1ty. It is meant as a sequel to Rivest, Shamir, Adleman 1. We’re not given a script that generates the parameters, simply the public key and the ciphertext.
+(N,e,c)=(161643423646746552081298841935498903406728484661198088824380120820649408462211320026846900530120533720144166059852036274757176945943476154740893002954181911201068843959015760064479587114460816364946604976937998011320067074515344961776920419207973234413389567508538119203696918037349918054399980346807879167361, 36675, 59237480729804419902249350038380812764615310700084519548754724856780737977857097616843794684178008858466821286387353080178404910815575872547979820848851425285654302196414305127926468908308102733135120774714553727434912025225828846601760761868067655959956674559148988221195055343304319184971182998654695411365) Solution Since N is prime we can just calculate the e-th roots of c to find the plaintext(s)">
 
-    <link rel="stylesheet" href="/style.css" integrity="">
+    <link
+  rel="stylesheet"
+  href="/style.css"
+  integrity=""
+/>
 
-
-
-    <link rel="stylesheet" href="/lib/css/prism.css" integrity="">
+  <link
+  rel="stylesheet"
+  href="/lib/css/prism.css"
+  integrity=""
+/>
 
 
 
@@ -124,11 +132,11 @@ Introduction Rivest, Shamir, Adleman 2 was a crypto CTF from IRON CTF 2024 organ
     
 </head>
 <body><header>
-    <div id="header_left">
-        <div id="sidebar_btn">
-            <input type="checkbox" id="sidebar_btn_input" class="hidden" />
-            <label id="sidebar_btn_label" for="sidebar_btn_input">
-                <svg id="menu_icon" width="26px" height="26px" viewBox="0 0 24 24">
+  <div id="header_left">
+    <div id="sidebar_btn">
+      <input type="checkbox" id="sidebar_btn_input" class="hidden" />
+      <label id="sidebar_btn_label" for="sidebar_btn_input">
+        <svg id="menu_icon" width="26px" height="26px" viewBox="0 0 24 24">
 <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -138,29 +146,35 @@ Introduction Rivest, Shamir, Adleman 2 was a crypto CTF from IRON CTF 2024 organ
 </svg>
 
 </svg>
-            </label>
-            <label id="sidebar_canvas_overlay_wrapper" for="sidebar_btn_input">
-                <div id="sidebar_canvas_overlay"></div>
-            </label>
-            <div id="sidebar">
-                <ul><li>
-                            <a href="/">💻 About</a></li><li>
-                            <a href="/news/">📰 News</a></li><li>
-                            <a href="/writeups/">📑 Writeups</a></li><li>
-                            <a href="/contacts/">✉️ Contacts</a></li></ul>
-            </div>
-        </div>
-    
-        <div class="brand">
-            <div>
-                <a href="/">ByteTheCookies</a>
-            </div>
-        </div>
+      </label>
+      <label id="sidebar_canvas_overlay_wrapper" for="sidebar_btn_input">
+        <div id="sidebar_canvas_overlay"></div>
+      </label>
+      <div id="sidebar">
+        <ul><li>
+            <a href="/">💻 About</a></li><li>
+            <a href="/news/">📰 News</a></li><li>
+            <a href="/writeups/">📑 Writeups</a></li><li>
+            <a href="/contacts/">✉️ Contacts</a></li></ul>
+      </div>
     </div>
 
-    <div class="toolbox">
-        <div id="theme_tool">
-            <svg id="dark_mode_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+    <div class="brand">
+      <div>
+        <a href="/">ByteTheCookies</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="toolbox">
+    <div id="theme_tool">
+      <svg
+        id="dark_mode_btn"
+        class="toolbox-btn"
+        width="18px"
+        height="18px"
+        viewBox="0 0 24 24"
+      >
 <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -170,7 +184,13 @@ Introduction Rivest, Shamir, Adleman 2 was a crypto CTF from IRON CTF 2024 organ
 </svg>
 
 </svg>
-            <svg id="light_mode_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+      <svg
+        id="light_mode_btn"
+        class="toolbox-btn"
+        width="18px"
+        height="18px"
+        viewBox="0 0 24 24"
+      >
 <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -180,11 +200,17 @@ Introduction Rivest, Shamir, Adleman 2 was a crypto CTF from IRON CTF 2024 organ
 </svg>
 
 </svg>
-        </div>
+    </div>
 
-        
-            <div id="search_tool">
-                <svg id="search_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+    
+    <div id="search_tool">
+      <svg
+        id="search_btn"
+        class="toolbox-btn"
+        width="18px"
+        height="18px"
+        viewBox="0 0 24 24"
+      >
 <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -217,10 +243,8 @@ Introduction Rivest, Shamir, Adleman 2 was a crypto CTF from IRON CTF 2024 organ
     </div>
 </div>
 </div>
-        
-
-        
-    </div>
+     
+  </div>
 </header>
 <nav id="navbar" class="pure-menu">
     <ul class="pure-menu-list"><li class="navbar-item pure-menu-item ">

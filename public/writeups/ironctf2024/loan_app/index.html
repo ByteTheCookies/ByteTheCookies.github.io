@@ -42,11 +42,17 @@ Introduction This is the challenge web with the most solutions, which I must say
   <meta name="twitter:description" content="Loan app Description: One of the first web challenges solved in ctf, not very complex (at least the unintended solution)
 Introduction This is the challenge web with the most solutions, which I must say is very nice, my solution is the unintended but also the most common one, in fact the correct approach would have been to do ‘request smuggling’, which is a much more complex attack to bypass the proxy, which in this case consists of splitting a request between proxy and backend.">
 
-    <link rel="stylesheet" href="/style.css" integrity="">
+    <link
+  rel="stylesheet"
+  href="/style.css"
+  integrity=""
+/>
 
-
-
-    <link rel="stylesheet" href="/lib/css/prism.css" integrity="">
+  <link
+  rel="stylesheet"
+  href="/lib/css/prism.css"
+  integrity=""
+/>
 
 
 
@@ -126,11 +132,11 @@ Introduction This is the challenge web with the most solutions, which I must say
     
 </head>
 <body><header>
-    <div id="header_left">
-        <div id="sidebar_btn">
-            <input type="checkbox" id="sidebar_btn_input" class="hidden" />
-            <label id="sidebar_btn_label" for="sidebar_btn_input">
-                <svg id="menu_icon" width="26px" height="26px" viewBox="0 0 24 24">
+  <div id="header_left">
+    <div id="sidebar_btn">
+      <input type="checkbox" id="sidebar_btn_input" class="hidden" />
+      <label id="sidebar_btn_label" for="sidebar_btn_input">
+        <svg id="menu_icon" width="26px" height="26px" viewBox="0 0 24 24">
 <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -140,29 +146,35 @@ Introduction This is the challenge web with the most solutions, which I must say
 </svg>
 
 </svg>
-            </label>
-            <label id="sidebar_canvas_overlay_wrapper" for="sidebar_btn_input">
-                <div id="sidebar_canvas_overlay"></div>
-            </label>
-            <div id="sidebar">
-                <ul><li>
-                            <a href="/">💻 About</a></li><li>
-                            <a href="/news/">📰 News</a></li><li>
-                            <a href="/writeups/">📑 Writeups</a></li><li>
-                            <a href="/contacts/">✉️ Contacts</a></li></ul>
-            </div>
-        </div>
-    
-        <div class="brand">
-            <div>
-                <a href="/">ByteTheCookies</a>
-            </div>
-        </div>
+      </label>
+      <label id="sidebar_canvas_overlay_wrapper" for="sidebar_btn_input">
+        <div id="sidebar_canvas_overlay"></div>
+      </label>
+      <div id="sidebar">
+        <ul><li>
+            <a href="/">💻 About</a></li><li>
+            <a href="/news/">📰 News</a></li><li>
+            <a href="/writeups/">📑 Writeups</a></li><li>
+            <a href="/contacts/">✉️ Contacts</a></li></ul>
+      </div>
     </div>
 
-    <div class="toolbox">
-        <div id="theme_tool">
-            <svg id="dark_mode_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+    <div class="brand">
+      <div>
+        <a href="/">ByteTheCookies</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="toolbox">
+    <div id="theme_tool">
+      <svg
+        id="dark_mode_btn"
+        class="toolbox-btn"
+        width="18px"
+        height="18px"
+        viewBox="0 0 24 24"
+      >
 <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -172,7 +184,13 @@ Introduction This is the challenge web with the most solutions, which I must say
 </svg>
 
 </svg>
-            <svg id="light_mode_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+      <svg
+        id="light_mode_btn"
+        class="toolbox-btn"
+        width="18px"
+        height="18px"
+        viewBox="0 0 24 24"
+      >
 <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -182,11 +200,17 @@ Introduction This is the challenge web with the most solutions, which I must say
 </svg>
 
 </svg>
-        </div>
+    </div>
 
-        
-            <div id="search_tool">
-                <svg id="search_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+    
+    <div id="search_tool">
+      <svg
+        id="search_btn"
+        class="toolbox-btn"
+        width="18px"
+        height="18px"
+        viewBox="0 0 24 24"
+      >
 <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -219,10 +243,8 @@ Introduction This is the challenge web with the most solutions, which I must say
     </div>
 </div>
 </div>
-        
-
-        
-    </div>
+     
+  </div>
 </header>
 <nav id="navbar" class="pure-menu">
     <ul class="pure-menu-list"><li class="navbar-item pure-menu-item ">
@@ -307,12 +329,38 @@ Introduction This is the challenge web with the most solutions, which I must say
     <h1 style='text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;'>Loan app</h1>
 <p><strong>Description</strong>: One of the first web challenges solved in ctf, not very complex (at least the unintended solution)</p>
 
-<h2>Introduction</h2>
+<h2 id="introduction" class="header-anchor-wrapper">Introduction
+  <a href="#introduction" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
 
 <p>This is the challenge web with the most solutions, which I must say is very nice, my solution is the unintended but also the most common one, in fact the correct approach would have been to do &lsquo;request smuggling&rsquo;, which is a much more complex attack to bypass the proxy, which in this case consists of splitting a request between proxy and backend.</p>
 <p>Solve intended: <a href="https://grenfeldt.dev/2021/04/01/gunicorn-20.0.4-request-smuggling/">Something like this</a></p>
 
-<h2>Source</h2>
+<h2 id="source" class="header-anchor-wrapper">Source
+  <a href="#source" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
 
 <p>We focus on the proxy config</p>
 <pre  class="mc-prism hide language-text" ><code class="language-python"># filename: file.py
@@ -358,11 +406,37 @@ def admin_approve_loan(loan_id):
 </code></pre>
 <p><em>Comments added by me</em></p>
 
-<h2>Solution</h2>
+<h2 id="solution" class="header-anchor-wrapper">Solution
+  <a href="#solution" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
 
 <p>The solution is very simple: just read the source code, register and login, and create a loan. Once this is done, thanks to the <code>/admin/loan/id</code> endpoint, the loan is approved by setting the flag</p>
 
-<h3>Exploit</h3>
+<h3 id="exploit" class="header-anchor-wrapper">Exploit
+  <a href="#exploit" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h3>
 
 <pre  class="mc-prism hide language-text" ><code class="language-python"># filename: exploit.py
 

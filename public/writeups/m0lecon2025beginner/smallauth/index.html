@@ -1,0 +1,481 @@
+               
+
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href='http://localhost:1313/favicon.ico' type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SmallAuth - ByteTheCookies</title>
+
+    
+
+    
+
+    
+    <meta name="author" content="ByteTheCookies" />
+    
+
+    
+        <meta property="og:url" content="http://localhost:1313/writeups/m0lecon2025beginner/smallauth/">
+  <meta property="og:site_name" content="ByteTheCookies">
+  <meta property="og:title" content="SmallAuth">
+  <meta property="og:description" content="SmallAuth Description: I am trying to authenticate but I totally forgot the password, I am screwed!!
+Introduction SmallAuth was a crypto CTF from ## m0leCon 2025 Beginner CTF organized by pwnthem0le.
+from secret import flag, password import signal from Crypto.Util.number import ( bytes_to_long, long_to_bytes, getRandomRange, ) from hashlib import sha256 import os p = 5270716116965698502689689671130781219142402682027195438035167686031865721400130496197382604002325978977917823871038888373085118354500422489134429970793096193438377786459821943518301475690713718745453633483219759953295608491564410082912515903134742148257215875373630412689071144760281744294536079770426517968527527493218935968663682019557492826204481612047410320146277333682801905360248457200458458982939490478875010628228329816347137904546340745621643293109290190631986349878770000332829974864263568375989597228583046155053640478805958492876860588535257030218304135983005840752161675722091031537527270835889607480661582626985375282908187505873350960702103509549729997875801557977556414403796543012974965425751833424162010931383924392626875437842811285456196644742198291857617009931030974156758885265756942730260677252867252555430773014258836269996233420470473918801854039549216620237517053340745984578639983387808534554731327 assert len(password) &gt; 64 def timeout_handler(_1, _2): raise TimeoutError class AuthProtocol: def __init__(self, password: bytes): super().">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="writeups">
+    <meta property="article:published_time" content="2024-12-21T18:23:00+02:00">
+    <meta property="article:modified_time" content="2024-12-21T18:23:00+02:00">
+    <meta property="article:tag" content="Crypto">
+    <meta property="article:tag" content="286 Points">
+    <meta property="article:tag" content="9 Solves">
+    <meta property="article:tag" content="Rising">
+
+    
+
+    
+        
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="SmallAuth">
+  <meta name="twitter:description" content="SmallAuth Description: I am trying to authenticate but I totally forgot the password, I am screwed!!
+Introduction SmallAuth was a crypto CTF from ## m0leCon 2025 Beginner CTF organized by pwnthem0le.
+from secret import flag, password import signal from Crypto.Util.number import ( bytes_to_long, long_to_bytes, getRandomRange, ) from hashlib import sha256 import os p = 5270716116965698502689689671130781219142402682027195438035167686031865721400130496197382604002325978977917823871038888373085118354500422489134429970793096193438377786459821943518301475690713718745453633483219759953295608491564410082912515903134742148257215875373630412689071144760281744294536079770426517968527527493218935968663682019557492826204481612047410320146277333682801905360248457200458458982939490478875010628228329816347137904546340745621643293109290190631986349878770000332829974864263568375989597228583046155053640478805958492876860588535257030218304135983005840752161675722091031537527270835889607480661582626985375282908187505873350960702103509549729997875801557977556414403796543012974965425751833424162010931383924392626875437842811285456196644742198291857617009931030974156758885265756942730260677252867252555430773014258836269996233420470473918801854039549216620237517053340745984578639983387808534554731327 assert len(password) &gt; 64 def timeout_handler(_1, _2): raise TimeoutError class AuthProtocol: def __init__(self, password: bytes): super().">
+
+    <link
+  rel="stylesheet"
+  href="/style.css"
+  integrity=""
+/>
+
+  <link
+  rel="stylesheet"
+  href="/lib/css/prism.css"
+  integrity=""
+/>
+
+
+
+    
+        <script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+></script>
+<script>
+  MathJax = {
+    tex: {
+      displayMath: [
+        ["\\[", "\\]"],
+        ["$$", "$$"],
+      ], 
+      inlineMath: [
+        ["\\(", "\\)"],
+        ["$", "$"],
+      ], 
+    },
+  };
+</script>
+
+    
+
+    
+    <script>
+        if (!('theme' in localStorage)) {
+            localStorage.theme = 'dark';
+        }
+
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.setAttribute("data-theme", "dark");
+        } else {
+            document.documentElement.setAttribute("data-theme", "light");
+        }
+    </script>
+<script defer src="/js/header.js" integrity=""></script>
+
+
+
+    <script defer src="/js/zooming.js" integrity=""></script>
+
+
+
+
+
+
+
+    
+        
+
+        
+        
+
+        
+        
+            
+        
+
+        <script defer src="/js/prism.js" integrity="" data-manual></script>
+    
+
+
+
+    
+    
+    
+    <script defer src="/js/search-en.js" integrity=""></script>
+
+
+
+
+<link rel="stylesheet" href="http://localhost:1313/user.css">
+
+    
+</head>
+<body><header>
+  <div id="header_left">
+    <div id="sidebar_btn">
+      <input type="checkbox" id="sidebar_btn_input" class="hidden" />
+      <label id="sidebar_btn_label" for="sidebar_btn_input">
+        <svg id="menu_icon" width="26px" height="26px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+</svg>
+
+</svg>
+      </label>
+      <label id="sidebar_canvas_overlay_wrapper" for="sidebar_btn_input">
+        <div id="sidebar_canvas_overlay"></div>
+      </label>
+      <div id="sidebar">
+        <ul><li>
+            <a href="/">💻 About</a></li><li>
+            <a href="/news/">📰 News</a></li><li>
+            <a href="/writeups/">📑 Writeups</a></li><li>
+            <a href="/contacts/">✉️ Contacts</a></li></ul>
+      </div>
+    </div>
+
+    <div class="brand">
+      <div>
+        <a href="/">ByteTheCookies</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="toolbox">
+    <div id="theme_tool">
+      <svg
+        id="dark_mode_btn"
+        class="toolbox-btn"
+        width="18px"
+        height="18px"
+        viewBox="0 0 24 24"
+      >
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+</svg>
+
+</svg>
+      <svg
+        id="light_mode_btn"
+        class="toolbox-btn"
+        width="18px"
+        height="18px"
+        viewBox="0 0 24 24"
+      >
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+</svg>
+
+</svg>
+    </div>
+
+    
+    <div id="search_tool">
+      <svg
+        id="search_btn"
+        class="toolbox-btn"
+        width="18px"
+        height="18px"
+        viewBox="0 0 24 24"
+      >
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+</svg>
+
+</svg><div id="search_menu_wrapper" class="hidden">
+    <div id="search_menu">
+        <div id="search_menu_toolbar">
+            <div id="search_menu_input_wrapper">
+                <input id="search_menu_input" type="text" placeholder='Search Posts'>
+            </div>
+            <div id="search_menu_close_btn">
+                <svg width="18px" height="18px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>
+</svg>
+
+</svg>
+            </div>
+        </div>
+        <div id="search_menu_results">
+        </div>
+    </div>
+</div>
+</div>
+     
+  </div>
+</header>
+<nav id="navbar" class="pure-menu">
+    <ul class="pure-menu-list"><li class="navbar-item pure-menu-item ">
+                    
+                        <a href="/" class="pure-menu-link">💻 About</a>
+                    
+                </li><li class="navbar-item pure-menu-item ">
+                    
+                        <a href="/news/" class="pure-menu-link">📰 News</a>
+                    
+                </li><li class="navbar-item pure-menu-item insection">
+                    
+                        <a href="/writeups/" class="pure-menu-link">📑 Writeups</a>
+                    
+                </li><li class="navbar-item pure-menu-item ">
+                    
+                        <a href="/contacts/" class="pure-menu-link">✉️ Contacts</a>
+                    
+                </li></ul>
+</nav>
+<main>
+      <div id="content" class="content-margin">
+        
+    
+    <details class="collapsible-menu-wrapper"><summary class="collapsible-menu-type"><span>Table of contents</span></summary><div class="collapsible-menu">
+        
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#solution">Solution</a></li>
+  </ul>
+</nav>
+        
+    </div></details>
+
+
+
+<div class="tags">
+  
+    <div class="badge">Crypto</div>
+
+  
+    <div class="badge">286 points</div>
+
+  
+    <div class="badge">9 solves</div>
+
+  
+    <div class="badge">Rising</div>
+
+  
+</div>
+
+<div>
+  <p class="date">
+    Last edit: Dec 21, 2024
+  </p>
+</div>
+
+
+    <div class="content-margin">
+
+
+
+<article >
+    
+    
+        
+        
+    
+    <h1 style='text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;'>SmallAuth</h1>
+<p><strong>Description</strong>: I am trying to authenticate but I totally forgot the password, I am screwed!!</p>
+
+<h2>Introduction</h2>
+
+<p>SmallAuth was a crypto CTF from <a href="https://ctftime.org/event/2578/">## m0leCon 2025 Beginner CTF</a> organized by <a href="https://ctftime.org/team/60467">pwnthem0le</a>.</p>
+<pre  class="mc-prism hide language-text" ><code class="language-python">from secret import flag, password
+import signal
+from Crypto.Util.number import (
+    bytes_to_long,
+    long_to_bytes,
+    getRandomRange,
+)
+from hashlib import sha256
+import os
+
+p = 5270716116965698502689689671130781219142402682027195438035167686031865721400130496197382604002325978977917823871038888373085118354500422489134429970793096193438377786459821943518301475690713718745453633483219759953295608491564410082912515903134742148257215875373630412689071144760281744294536079770426517968527527493218935968663682019557492826204481612047410320146277333682801905360248457200458458982939490478875010628228329816347137904546340745621643293109290190631986349878770000332829974864263568375989597228583046155053640478805958492876860588535257030218304135983005840752161675722091031537527270835889607480661582626985375282908187505873350960702103509549729997875801557977556414403796543012974965425751833424162010931383924392626875437842811285456196644742198291857617009931030974156758885265756942730260677252867252555430773014258836269996233420470473918801854039549216620237517053340745984578639983387808534554731327
+assert len(password) &gt; 64
+
+def timeout_handler(_1, _2):
+    raise TimeoutError
+
+
+class AuthProtocol:
+    def __init__(self, password: bytes):
+        super().__init__()
+        self.p = p
+        self.g = pow(bytes_to_long(password), 2, self.p)
+
+    def gen_pub_key(self):
+        self.a = getRandomRange(2, self.p)
+        self.A = pow(self.g, self.a, self.p)
+        return self.A
+
+    def gen_shared_key(self, B):
+        assert 1 &lt; B &lt; self.p
+        k = pow(B, self.a, self.p)
+        self.s = sha256(long_to_bytes(k)).digest()
+        return self.s
+
+    def confirm_key(self):
+        signal.signal(signal.SIGALRM, timeout_handler)
+        signal.alarm(5)
+        try:
+            challenge = input(&quot;Give me the challenge (hex): &quot;).strip()
+            challenge = bytes.fromhex(challenge.strip())
+            (opad, ipad, challenge) = challenge[:16], challenge[16:32], challenge[32:]
+            if challenge == sha256(opad + sha256(ipad + self.s).digest()).digest():
+                pad = bytes([x^y for x, y in zip(ipad, opad)])
+                print(&quot;Response:&quot;, sha256(pad + self.s).hexdigest())
+            else:
+                print(&quot;Mmm, cannot understand this challenge.&quot;)
+        except TimeoutError:
+            ipad = os.urandom(16)
+            opad = os.urandom(16)
+            print(&quot;\nI got bored waiting for your response.&quot;)
+            print(&quot;I will start then.&quot;)
+            print(
+                f&quot;Here is your challenge: {opad.hex()}{ipad.hex()}{sha256(opad + sha256(ipad + self.s).digest()).hexdigest()}&quot;
+            )
+            response = input(&quot;Response? (hex): &quot;)
+            try:
+                response = bytes.fromhex(response.strip())
+                pad = bytes([x^y for x, y in zip(ipad, opad)])
+                if response == sha256(pad + self.s).digest():
+                    return True
+                else:
+                    print(&quot;Nope sorry.&quot;)
+            except Exception as e:
+                print(&quot;Ops, error&quot;)
+        except Exception as e:
+            print(&quot;Ops, error&quot;)
+        return False
+
+
+def main():
+    print(
+        &quot;Welcome! Please authenticate to get the flag. You should know the password, right?&quot;
+    )
+    auth = AuthProtocol(password)
+
+    print(&quot;Here is my public key:&quot;, auth.gen_pub_key())
+    B = int(input(&quot;Give me your public key: &quot;))
+    auth.gen_shared_key(B)
+
+    if auth.confirm_key():
+        print(&quot;Welcome!&quot;, flag)
+
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+<p>The server simulates an authentication protocol: first it generates a secret shared key via a modified version of the Diffie-Hellman protocol where the generator isn&rsquo;t public, then we have a 5 second window where we can interact with the verifier to check our sent challenges, finally it asks for a &ldquo;challenge&rdquo; which should be constructed from a <code>sha256</code> hash involving the previously generated key.</p>
+
+<h2>Solution</h2>
+
+<p>Without the generator it seems impossible to generate the secret key but a faulty check in <code>gen_shared_key</code> lets us generate it $50\%$ of the time:</p>
+<pre  class="mc-prism hide language-text" ><code class="language-python">def gen_shared_key(self, B):
+    assert 1 &lt; B &lt; self.p
+    k = pow(B, self.a, self.p)
+    self.s = sha256(long_to_bytes(k)).digest()
+    return self.s
+</code></pre>
+<p>The <code>assert</code> wants to prevent values such as <code>0</code> and multiples of <code>self.p</code>, but allows <code>self.p - 1</code>, which once raised to the <code>self.a</code>th power will be <code>1</code>, when <code>self.a</code> is even, or <code>self.p - 1</code> when <code>self.a</code> is odd.
+We can therefore just guess one of the two possibilities and retry until we&rsquo;re right.</p>
+<pre  class="mc-prism hide language-text" ><code class="language-python">from pwn import *
+from hashlib import sha256
+from time import sleep
+
+
+p = 5270716116965698502689689671130781219142402682027195438035167686031865721400130496197382604002325978977917823871038888373085118354500422489134429970793096193438377786459821943518301475690713718745453633483219759953295608491564410082912515903134742148257215875373630412689071144760281744294536079770426517968527527493218935968663682019557492826204481612047410320146277333682801905360248457200458458982939490478875010628228329816347137904546340745621643293109290190631986349878770000332829974864263568375989597228583046155053640478805958492876860588535257030218304135983005840752161675722091031537527270835889607480661582626985375282908187505873350960702103509549729997875801557977556414403796543012974965425751833424162010931383924392626875437842811285456196644742198291857617009931030974156758885265756942730260677252867252555430773014258836269996233420470473918801854039549216620237517053340745984578639983387808534554731327
+
+def main():
+    r = remote('smallauth.challs.m0lecon.it', 5102)
+
+    r.recvuntil(b': ')
+    A = int(r.recvline().rstrip().decode())
+
+    B = p - 1
+    r.sendlineafter(b': ', str(B).encode())
+
+    s = sha256(b'\1').digest()
+
+    sleep(5)
+
+    r.recvuntil(b'challenge: ')
+    challenge = bytes.fromhex(r.recvline().rstrip().decode())
+
+    opad = challenge[:16]
+    ipad = challenge[16:32]
+    chal = challenge[32:]
+
+    pad = bytes([x^y for x, y in zip(ipad, opad)])
+    resp = sha256(pad + s).hexdigest()
+
+    r.sendlineafter(b'): ', resp.encode())
+
+    resp = r.recvline()
+    r.close()
+
+    if b'Nope' in resp:
+        main()
+    else:
+        print('flag:', resp.rstrip().decode().split(' ')[1])
+
+
+if __name__ == '__main__':
+    main()
+</code></pre>
+<pre  class="mc-prism hide language-text" ><code>$ flag: ptm{y0u_4r3_a_j3d1_0f_pr0t0c0l5}
+</code></pre>
+<p align="right">Author: vympel</p>
+
+</article>
+</div>
+   
+      </div>
+    </main>
+<footer>
+    <article>Copyright © 2024 by ByteTheCookies Team | v1.0</article>
+</footer>
+
+</body>
+</html>

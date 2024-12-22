@@ -20,12 +20,14 @@
   <meta property="og:site_name" content="ByteTheCookies">
   <meta property="og:title" content="MovieReviewApp">
   <meta property="og:description" content="MovieReviewApp Description: Last web challenge done in the ctf (unfortunately) also one of the fastest to do if you know the right tools
-Introduction The challenge looks like a very simple site in pure html where we see reviews on movies">
+Introduction The challenge looks like a very simple site in pure html where we see reviews on movies
+Source Is not present the source BUT…
+Solution The first thing that stands out is that in the URL there are extensions, so we understand that probably the system behind it is not very complex, in fact, going to the root endpoint we notice">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="writeups">
     <meta property="article:published_time" content="2024-10-07T22:50:14+02:00">
-    <meta property="article:modified_time" content="2024-10-07T22:50:14+02:00">
+    <meta property="article:modified_time" content="2024-10-08T10:49:02+02:00">
     <meta property="article:tag" content="Web">
     <meta property="article:tag" content="Python">
     <meta property="article:tag" content="Information Leak">
@@ -40,13 +42,21 @@ Introduction The challenge looks like a very simple site in pure html where we s
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="MovieReviewApp">
   <meta name="twitter:description" content="MovieReviewApp Description: Last web challenge done in the ctf (unfortunately) also one of the fastest to do if you know the right tools
-Introduction The challenge looks like a very simple site in pure html where we see reviews on movies">
+Introduction The challenge looks like a very simple site in pure html where we see reviews on movies
+Source Is not present the source BUT…
+Solution The first thing that stands out is that in the URL there are extensions, so we understand that probably the system behind it is not very complex, in fact, going to the root endpoint we notice">
 
-    <link rel="stylesheet" href="/style.css" integrity="">
+    <link
+  rel="stylesheet"
+  href="/style.css"
+  integrity=""
+/>
 
-
-
-    <link rel="stylesheet" href="/lib/css/prism.css" integrity="">
+  <link
+  rel="stylesheet"
+  href="/lib/css/prism.css"
+  integrity=""
+/>
 
 
 
@@ -126,11 +136,11 @@ Introduction The challenge looks like a very simple site in pure html where we s
     
 </head>
 <body><header>
-    <div id="header_left">
-        <div id="sidebar_btn">
-            <input type="checkbox" id="sidebar_btn_input" class="hidden" />
-            <label id="sidebar_btn_label" for="sidebar_btn_input">
-                <svg id="menu_icon" width="26px" height="26px" viewBox="0 0 24 24">
+  <div id="header_left">
+    <div id="sidebar_btn">
+      <input type="checkbox" id="sidebar_btn_input" class="hidden" />
+      <label id="sidebar_btn_label" for="sidebar_btn_input">
+        <svg id="menu_icon" width="26px" height="26px" viewBox="0 0 24 24">
 <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -140,29 +150,35 @@ Introduction The challenge looks like a very simple site in pure html where we s
 </svg>
 
 </svg>
-            </label>
-            <label id="sidebar_canvas_overlay_wrapper" for="sidebar_btn_input">
-                <div id="sidebar_canvas_overlay"></div>
-            </label>
-            <div id="sidebar">
-                <ul><li>
-                            <a href="/">💻 About</a></li><li>
-                            <a href="/news/">📰 News</a></li><li>
-                            <a href="/writeups/">📑 Writeups</a></li><li>
-                            <a href="/contacts/">✉️ Contacts</a></li></ul>
-            </div>
-        </div>
-    
-        <div class="brand">
-            <div>
-                <a href="/">ByteTheCookies</a>
-            </div>
-        </div>
+      </label>
+      <label id="sidebar_canvas_overlay_wrapper" for="sidebar_btn_input">
+        <div id="sidebar_canvas_overlay"></div>
+      </label>
+      <div id="sidebar">
+        <ul><li>
+            <a href="/">💻 About</a></li><li>
+            <a href="/news/">📰 News</a></li><li>
+            <a href="/writeups/">📑 Writeups</a></li><li>
+            <a href="/contacts/">✉️ Contacts</a></li></ul>
+      </div>
     </div>
 
-    <div class="toolbox">
-        <div id="theme_tool">
-            <svg id="dark_mode_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+    <div class="brand">
+      <div>
+        <a href="/">ByteTheCookies</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="toolbox">
+    <div id="theme_tool">
+      <svg
+        id="dark_mode_btn"
+        class="toolbox-btn"
+        width="18px"
+        height="18px"
+        viewBox="0 0 24 24"
+      >
 <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -172,7 +188,13 @@ Introduction The challenge looks like a very simple site in pure html where we s
 </svg>
 
 </svg>
-            <svg id="light_mode_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+      <svg
+        id="light_mode_btn"
+        class="toolbox-btn"
+        width="18px"
+        height="18px"
+        viewBox="0 0 24 24"
+      >
 <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -182,11 +204,17 @@ Introduction The challenge looks like a very simple site in pure html where we s
 </svg>
 
 </svg>
-        </div>
+    </div>
 
-        
-            <div id="search_tool">
-                <svg id="search_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+    
+    <div id="search_tool">
+      <svg
+        id="search_btn"
+        class="toolbox-btn"
+        width="18px"
+        height="18px"
+        viewBox="0 0 24 24"
+      >
 <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -219,10 +247,8 @@ Introduction The challenge looks like a very simple site in pure html where we s
     </div>
 </div>
 </div>
-        
-
-        
-    </div>
+     
+  </div>
 </header>
 <nav id="navbar" class="pure-menu">
     <ul class="pure-menu-list"><li class="navbar-item pure-menu-item ">

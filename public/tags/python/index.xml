@@ -13,20 +13,10 @@
       <pubDate>Mon, 07 Oct 2024 22:50:14 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/ironctf2024/moviereviewapp/</guid>
-      <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;MovieReviewApp&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Last web challenge done in the ctf (unfortunately) also one of the fastest to do if you know the right tools&lt;/p&gt;
-
-&lt;h2&gt;Introduction&lt;/h2&gt;
-
-&lt;p&gt;The challenge looks like a very simple site in pure html where we see reviews on movies&lt;/p&gt;
-
-&lt;h2&gt;Source&lt;/h2&gt;
-
-&lt;p&gt;Is not present the source BUT&amp;hellip;&lt;/p&gt;
-
-&lt;h2&gt;Solution&lt;/h2&gt;
-
-&lt;p&gt;First thing that stands out is that in the url there are extensions so we understand that probably the system behind it is not very complex in fact going to the root endpoint we notice&lt;/p&gt;</description>
+      <description>MovieReviewApp Description: Last web challenge done in the ctf (unfortunately) also one of the fastest to do if you know the right tools
+Introduction The challenge looks like a very simple site in pure html where we see reviews on movies
+Source Is not present the source BUT&amp;hellip;
+Solution The first thing that stands out is that in the URL there are extensions, so we understand that probably the system behind it is not very complex, in fact, going to the root endpoint we notice</description>
     </item>
     
     <item>
@@ -35,12 +25,8 @@
       <pubDate>Mon, 07 Oct 2024 22:24:02 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/ironctf2024/b64siteviewer/</guid>
-      <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;b64SiteViewer&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: This is one of the challenges added later, but despite that it wasn&amp;rsquo;t very complex, in fact the most complex part wasn&amp;rsquo;t even the web part, but despite that the challenge was still really nice&lt;/p&gt;
-
-&lt;h2&gt;Introduction&lt;/h2&gt;
-
-&lt;p&gt;We are faced with a very simple application in which, given a url, the base64 of the page content is given back to us, plus there is a special endpoint that allows us to execute certain commands&lt;/p&gt;</description>
+      <description>b64SiteViewer Description: This is one of the challenges added later, but despite that it wasn&amp;rsquo;t very complex, in fact the most complex part wasn&amp;rsquo;t even the web part, but despite that the challenge was still really nice
+Introduction We are faced with a very simple application in which, given a url, the base64 of the page content is given back to us, plus there is a special endpoint that allows us to execute certain commands</description>
     </item>
     
     <item>
@@ -49,12 +35,8 @@
       <pubDate>Sun, 06 Oct 2024 14:41:13 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/ironctf2024/loan_app/</guid>
-      <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;Loan app&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: One of the first web challenges solved in ctf, not very complex (at least the unintended solution)&lt;/p&gt;
-
-&lt;h2&gt;Introduction&lt;/h2&gt;
-
-&lt;p&gt;This is the challenge web with the most solutions, which I must say is very nice, my solution is the unintended but also the most common one, in fact the correct approach would have been to do &amp;lsquo;request smuggling&amp;rsquo;, which is a much more complex attack to bypass the proxy, which in this case consists of splitting a request between proxy and backend.&lt;/p&gt;</description>
+      <description>Loan app Description: One of the first web challenges solved in ctf, not very complex (at least the unintended solution)
+Introduction This is the challenge web with the most solutions, which I must say is very nice, my solution is the unintended but also the most common one, in fact the correct approach would have been to do &amp;lsquo;request smuggling&amp;rsquo;, which is a much more complex attack to bypass the proxy, which in this case consists of splitting a request between proxy and backend.</description>
     </item>
     
     <item>
@@ -63,26 +45,10 @@
       <pubDate>Mon, 02 Sep 2024 10:59:31 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/cyberspace2024/feature_unlocked/</guid>
-      <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;Feature unlocked&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: The world&amp;rsquo;s coolest app has a brand new feature! Too bad it&amp;rsquo;s not released until after the CTF..&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Link&lt;/strong&gt;: &lt;a href=&#34;https://feature-unlocked-web-challs.csc.tf/&#34;&gt;https://feature-unlocked-web-challs.csc.tf/&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;introduction&#34; class=&#34;header-anchor-wrapper&#34;&gt;Introduction
-  &lt;a href=&#34;#introduction&#34; class=&#34;header-anchor-link&#34;&gt;
-    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
-&lt;svg
-    xmlns=&#34;http://www.w3.org/2000/svg&#34;
-    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
-    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
-    stroke-linejoin=&#34;round&#34;&gt;
-    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
-&lt;/svg&gt;
-
-&lt;/svg&gt;
-  &lt;/a&gt;
-&lt;/h2&gt;
-
-&lt;p&gt;Feature unlocked is part of the first wave of the web and is one of the first challanges I solved. Made by cryptocat, who we salute, it is a fairly simple challange if you read the code correctly.&lt;/p&gt;</description>
+      <description>Feature unlocked Description: The world&amp;rsquo;s coolest app has a brand new feature! Too bad it&amp;rsquo;s not released until after the CTF..
+Link: https://feature-unlocked-web-challs.csc.tf/
+Introduction Feature unlocked is part of the first wave of the web and is one of the first challanges I solved. Made by cryptocat, who we salute, it is a fairly simple challange if you read the code correctly.
+Source # filename: main.py import subprocess import base64 import json import time import requests import os from flask import Flask, request, render_template, make_response, redirect, url_for from Crypto.</description>
     </item>
     
     <item>
@@ -91,26 +57,9 @@
       <pubDate>Mon, 02 Sep 2024 10:59:17 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/cyberspace2024/zipzone/</guid>
-      <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;Zipzone&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: I was tired of trying to find a good file server for zip files, so I made my own! It&amp;rsquo;s still a work in progress, but I think it&amp;rsquo;s pretty good so far.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Link&lt;/strong&gt;: &lt;a href=&#34;https://zipzone-web.challs.csc.tf/&#34;&gt;https://zipzone-web.challs.csc.tf/&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;introduction&#34; class=&#34;header-anchor-wrapper&#34;&gt;Introduction
-  &lt;a href=&#34;#introduction&#34; class=&#34;header-anchor-link&#34;&gt;
-    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
-&lt;svg
-    xmlns=&#34;http://www.w3.org/2000/svg&#34;
-    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
-    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
-    stroke-linejoin=&#34;round&#34;&gt;
-    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
-&lt;/svg&gt;
-
-&lt;/svg&gt;
-  &lt;/a&gt;
-&lt;/h2&gt;
-
-&lt;p&gt;ZipZone is the only one web in the beginner&amp;rsquo;s category and, as the title suggests, you have to upload zip files that will be unzipped later, so you have to download the extracted files afterwards.&lt;/p&gt;</description>
+      <description>Zipzone Description: I was tired of trying to find a good file server for zip files, so I made my own! It&amp;rsquo;s still a work in progress, but I think it&amp;rsquo;s pretty good so far.
+Link: https://zipzone-web.challs.csc.tf/
+Introduction ZipZone is the only one web in the beginner&amp;rsquo;s category and, as the title suggests, you have to upload zip files that will be unzipped later, so you have to download the extracted files afterwards.</description>
     </item>
     
     <item>
@@ -119,28 +68,10 @@
       <pubDate>Mon, 26 Aug 2024 17:04:29 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/sekaictf2024/mikuvsmachine/</guid>
-      <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;Miku vs. Machine&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Time limit is 2 seconds for this challenge.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://ppc.chals.sekai.team&#34;&gt;&lt;strong&gt;Official resources of challenge&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;introduction&#34; class=&#34;header-anchor-wrapper&#34;&gt;Introduction
-  &lt;a href=&#34;#introduction&#34; class=&#34;header-anchor-link&#34;&gt;
-    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
-&lt;svg
-    xmlns=&#34;http://www.w3.org/2000/svg&#34;
-    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
-    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
-    stroke-linejoin=&#34;round&#34;&gt;
-    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
-&lt;/svg&gt;
-
-&lt;/svg&gt;
-  &lt;/a&gt;
-&lt;/h2&gt;
-
-&lt;p&gt;The goal is to distribute the hours of &lt;code&gt;n&lt;/code&gt; singers in &lt;code&gt;m&lt;/code&gt; shows.
-Each show has a number of hours equal to &lt;code&gt;l&lt;/code&gt; (unknown) and can only change singers once.
-We also want that each singer will have the same time on stage.&lt;/p&gt;</description>
+      <description>Miku vs. Machine Description: Time limit is 2 seconds for this challenge.
+Official resources of challenge
+Introduction The goal is to distribute the hours of n singers in m shows. Each show has a number of hours equal to l (unknown) and can only change singers once. We also want that each singer will have the same time on stage.
+Solution To solve this problem, I use a greedy strategy that iteratively divides the available singing time among the singers, ensuring that each singer fulfills their required hours.</description>
     </item>
     
     <item>
@@ -149,25 +80,9 @@ We also want that each singer will have the same time on stage.&lt;/p&gt;</descr
       <pubDate>Mon, 26 Aug 2024 17:04:19 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/sekaictf2024/sometrick/</guid>
-      <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt; Some Trick &lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Bob and Alice found a futuristic version of opunssl and replaced all their needs for doofy wellmen.&lt;/p&gt;
-
-&lt;h2 id=&#34;introduction&#34; class=&#34;header-anchor-wrapper&#34;&gt;Introduction
-  &lt;a href=&#34;#introduction&#34; class=&#34;header-anchor-link&#34;&gt;
-    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
-&lt;svg
-    xmlns=&#34;http://www.w3.org/2000/svg&#34;
-    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
-    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
-    stroke-linejoin=&#34;round&#34;&gt;
-    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
-&lt;/svg&gt;
-
-&lt;/svg&gt;
-  &lt;/a&gt;
-&lt;/h2&gt;
-
-&lt;p&gt;Some Trick was the first cryptography challenge in the 2024 edition of SekaiCTF. The challenge implements a key exchange based on a set of permutations and asks us to retrieve the flag that was used as a key in Bob&amp;rsquo;s first encryption.&lt;/p&gt;</description>
+      <description>Some Trick Description: Bob and Alice found a futuristic version of opunssl and replaced all their needs for doofy wellmen.
+Introduction Some Trick was the first cryptography challenge in the 2024 edition of SekaiCTF. The challenge implements a key exchange based on a set of permutations and asks us to retrieve the flag that was used as a key in Bob&amp;rsquo;s first encryption.
+import random from secrets import randbelow, randbits from flag import FLAG CIPHER_SUITE = randbelow(2**256) print(f&amp;quot;oPUN_SASS_SASS_l version 4.</description>
     </item>
     
     <item>
@@ -176,74 +91,9 @@ We also want that each singer will have the same time on stage.&lt;/p&gt;</descr
       <pubDate>Tue, 13 Aug 2024 13:01:07 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/litctf2024/kirbytime/</guid>
-      <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;Kirbytime&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Welcome to Kirby&amp;rsquo;s Website.&lt;/p&gt;
-
-&lt;h2 id=&#34;introduction&#34; class=&#34;header-anchor-wrapper&#34;&gt;Introduction
-  &lt;a href=&#34;#introduction&#34; class=&#34;header-anchor-link&#34;&gt;
-    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
-&lt;svg
-    xmlns=&#34;http://www.w3.org/2000/svg&#34;
-    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
-    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
-    stroke-linejoin=&#34;round&#34;&gt;
-    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
-&lt;/svg&gt;
-
-&lt;/svg&gt;
-  &lt;/a&gt;
-&lt;/h2&gt;
-
-&lt;p&gt;We find ourselves in front of a very pink Kirby-themed page, where we are asked to enter a password of 7 characters.&lt;/p&gt;
-
-&lt;h2 id=&#34;source&#34; class=&#34;header-anchor-wrapper&#34;&gt;Source
-  &lt;a href=&#34;#source&#34; class=&#34;header-anchor-link&#34;&gt;
-    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
-&lt;svg
-    xmlns=&#34;http://www.w3.org/2000/svg&#34;
-    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
-    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
-    stroke-linejoin=&#34;round&#34;&gt;
-    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
-&lt;/svg&gt;
-
-&lt;/svg&gt;
-  &lt;/a&gt;
-&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# filename: main.py
-
-import sqlite3
-from flask import Flask, request, redirect, render_template
-import time
-app = Flask(__name__)
-
-
-@app.route(&#39;/&#39;, methods=[&#39;GET&#39;, &#39;POST&#39;])
-def login():
-    message = None
-    if request.method == &#39;POST&#39;:
-        password = request.form[&#39;password&#39;]
-        real = &#39;REDACTED&#39;
-        if len(password) != 7:
-            return render_template(&#39;login.html&#39;, message=&amp;quot;you need 7 chars&amp;quot;)
-        for i in range(len(password)):
-            if password[i] != real[i]:
-                message = &amp;quot;incorrect&amp;quot;
-                return render_template(&#39;login.html&#39;, message=message)
-            else:
-                time.sleep(1)
-        if password == real:
-            message = &amp;quot;yayy! hi kirby&amp;quot;
-
-    return render_template(&#39;login.html&#39;, message=message)
-
-
-if __name__ == &#39;__main__&#39;:
-    app.run(host=&#39;0.0.0.0&#39;)
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;As we can see in the code at the &amp;lsquo;/&amp;rsquo; endpoint, when the method and post, it takes the password value from the form, checks the length to be 7 and starts iterating over each character to check if it is correct, it triggers a time.sleep(1) otherwise it returns an error.&lt;/p&gt;</description>
+      <description>Kirbytime Description: Welcome to Kirby&amp;rsquo;s Website.
+Introduction We find ourselves in front of a very pink Kirby-themed page, where we are asked to enter a password of 7 characters.
+Source # filename: main.py import sqlite3 from flask import Flask, request, redirect, render_template import time app = Flask(__name__) @app.route(&#39;/&#39;, methods=[&#39;GET&#39;, &#39;POST&#39;]) def login(): message = None if request.method == &#39;POST&#39;: password = request.form[&#39;password&#39;] real = &#39;REDACTED&#39; if len(password) != 7: return render_template(&#39;login.</description>
     </item>
     
     <item>
@@ -252,25 +102,9 @@ if __name__ == &#39;__main__&#39;:
       <pubDate>Tue, 06 Aug 2024 11:27:07 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/noobzctf2024/filesharingportal/</guid>
-      <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;File Sharing Portal&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Welcome to the file sharing portal! We only support tar files!&lt;/p&gt;
-
-&lt;h2 id=&#34;introduction&#34; class=&#34;header-anchor-wrapper&#34;&gt;Introduction
-  &lt;a href=&#34;#introduction&#34; class=&#34;header-anchor-link&#34;&gt;
-    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
-&lt;svg
-    xmlns=&#34;http://www.w3.org/2000/svg&#34;
-    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
-    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
-    stroke-linejoin=&#34;round&#34;&gt;
-    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
-&lt;/svg&gt;
-
-&lt;/svg&gt;
-  &lt;/a&gt;
-&lt;/h2&gt;
-
-&lt;p&gt;The ctf has a very simple structure: we have a form in which we are asked to insert a &lt;a href=&#34;https://en.wikipedia.org/wiki/Tar_(computing)&#34;&gt;tar&lt;/a&gt; file; once the tar file has been inserted, it is unzipped and we are shown the &lt;code&gt;name&lt;/code&gt; of files it contains; by clicking on the different files, we can read their contents.&lt;/p&gt;</description>
+      <description>File Sharing Portal Description: Welcome to the file sharing portal! We only support tar files!
+Introduction The ctf has a very simple structure: we have a form in which we are asked to insert a tar file; once the tar file has been inserted, it is unzipped and we are shown the name of files it contains; by clicking on the different files, we can read their contents.
+Source The source has comments added later to allow a better understanding of the code in the writeups</description>
     </item>
     
     <item>
@@ -279,76 +113,9 @@ if __name__ == &#39;__main__&#39;:
       <pubDate>Tue, 06 Aug 2024 11:27:07 +0200</pubDate>
       
       <guid>http://localhost:1313/writeups/noobzctf2024/waas/</guid>
-      <description>&lt;h1 style=&#39;text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;&#39;&gt;Waas&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Writing as a Service!&lt;/p&gt;
-
-&lt;h2 id=&#34;introduction&#34; class=&#34;header-anchor-wrapper&#34;&gt;Introduction
-  &lt;a href=&#34;#introduction&#34; class=&#34;header-anchor-link&#34;&gt;
-    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
-&lt;svg
-    xmlns=&#34;http://www.w3.org/2000/svg&#34;
-    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
-    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
-    stroke-linejoin=&#34;round&#34;&gt;
-    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
-&lt;/svg&gt;
-
-&lt;/svg&gt;
-  &lt;/a&gt;
-&lt;/h2&gt;
-
-&lt;p&gt;WaaS (Writing as a Service) allows us to overwrite a file on the system (after some input validation) and insert anything (until a newline is met) we want in it.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import subprocess
-from base64 import b64decode as d
-while True:
-        print(&amp;quot;[1] Write to a file\n[2] Get the flag\n[3] Exit&amp;quot;)
-        try:
-                inp = int(input(&amp;quot;Choice: &amp;quot;).strip())
-        except:
-                print(&amp;quot;Invalid input!&amp;quot;)
-                exit(0)
-        if inp == 1:
-                file = input(&amp;quot;Enter file name: &amp;quot;).strip()
-                assert file.count(&#39;.&#39;) &amp;lt;= 2 # Why do you need more?
-                assert &amp;quot;/proc&amp;quot; not in file # Why do you need to write there?
-                assert &amp;quot;/bin&amp;quot; not in file # Why do you need to write there?
-                assert &amp;quot;\n&amp;quot; not in file # Why do you need these?
-                assert &amp;quot;chall&amp;quot; not in file # Don&#39;t be overwriting my files!
-                try:
-                        f = open(file,&#39;w&#39;)
-                except:
-                        print(&amp;quot;Error! Maybe the file does not exist?&amp;quot;)
-
-                f.write(input(&amp;quot;Data: &amp;quot;).strip())
-                f.close()
-                print(&amp;quot;Data written sucessfully!&amp;quot;)
-
-        if inp == 2:
-                flag = subprocess.run([&amp;quot;cat&amp;quot;,&amp;quot;fake_flag.txt&amp;quot;],capture_output=True) # You actually thought I would give the flag?
-                print(flag.stdout.strip())
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;solution&#34; class=&#34;header-anchor-wrapper&#34;&gt;Solution
-  &lt;a href=&#34;#solution&#34; class=&#34;header-anchor-link&#34;&gt;
-    &lt;svg width=&#34;16px&#34; height=&#34;16px&#34; viewBox=&#34;0 0 24 24&#34;&gt;
-&lt;svg
-    xmlns=&#34;http://www.w3.org/2000/svg&#34;
-    width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
-    stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
-    stroke-linejoin=&#34;round&#34;&gt;
-    &lt;line x1=&#34;4&#34; y1=&#34;9&#34; x2=&#34;20&#34; y2=&#34;9&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4&#34; y1=&#34;15&#34; x2=&#34;20&#34; y2=&#34;15&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;10&#34; y1=&#34;3&#34; x2=&#34;8&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;16&#34; y1=&#34;3&#34; x2=&#34;14&#34; y2=&#34;21&#34;&gt;&lt;/line&gt;
-&lt;/svg&gt;
-
-&lt;/svg&gt;
-  &lt;/a&gt;
-&lt;/h2&gt;
-
-&lt;p&gt;At first one may think of trying to bypass the input validation to perhaps rewrite the workings of the cat command or the challenge file itself, but this isn&amp;rsquo;t possible.
-Something very bizarre is the imported but unused &lt;code&gt;b64decode&lt;/code&gt; from the &lt;code&gt;base64&lt;/code&gt; module, which is what allows us to solve the challenge.
-When python imports modules it looks in &lt;code&gt;sys.path&lt;/code&gt;, which has a list of valid directories to import modules from. After a quick scan through the &lt;a href=&#34;https://docs.python.org/3/library/sys_path_init.html&#34;&gt;python3 docs&lt;/a&gt; we find out that the first directory it looks through is the same directory the file is in, this means that if we have a &lt;code&gt;base64.py&lt;/code&gt; file in the directory then python will try to import a &lt;code&gt;b64decode&lt;/code&gt; symbol from that file instead of the common known module.
-One more feature of python&amp;rsquo;s import behavior we can use is the that all the code in an imported module will be executed. For example if a file &lt;code&gt;test.py&lt;/code&gt; has &lt;code&gt;print(&#39;Hello, World!&#39;)&lt;/code&gt; and it can be executed (for example if it&amp;rsquo;s at the lowest indentation level) then a file with &lt;code&gt;import test&lt;/code&gt; will indeed see &lt;code&gt;Hello, World!&lt;/code&gt; printed to &lt;code&gt;stdout&lt;/code&gt;.
-Therefore, since the &lt;code&gt;open&lt;/code&gt; function with a &lt;code&gt;&#39;w&#39;&lt;/code&gt; flag will create a file if it does not exist, we can simply create a file named &lt;code&gt;base64.py&lt;/code&gt; and write our malicious code in it.
-Something like this will do the trick:&lt;/p&gt;</description>
+      <description>Waas Description: Writing as a Service!
+Introduction WaaS (Writing as a Service) allows us to overwrite a file on the system (after some input validation) and insert anything (until a newline is met) we want in it.
+import subprocess from base64 import b64decode as d while True: print(&amp;quot;[1] Write to a file\n[2] Get the flag\n[3] Exit&amp;quot;) try: inp = int(input(&amp;quot;Choice: &amp;quot;).strip()) except: print(&amp;quot;Invalid input!&amp;quot;) exit(0) if inp == 1: file = input(&amp;quot;Enter file name: &amp;quot;).</description>
     </item>
     
   </channel>

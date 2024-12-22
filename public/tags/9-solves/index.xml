@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>9 Solves on ByteTheCookies</title>
+    <link>http://localhost:1313/tags/9-solves/</link>
+    <description>Recent content in 9 Solves on ByteTheCookies</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 21 Dec 2024 18:23:00 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/9-solves/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SmallAuth</title>
+      <link>http://localhost:1313/writeups/m0lecon2025beginner/smallauth/</link>
+      <pubDate>Sat, 21 Dec 2024 18:23:00 +0200</pubDate>
+      
+      <guid>http://localhost:1313/writeups/m0lecon2025beginner/smallauth/</guid>
+      <description>SmallAuth Description: I am trying to authenticate but I totally forgot the password, I am screwed!!
+Introduction SmallAuth was a crypto CTF from ## m0leCon 2025 Beginner CTF organized by pwnthem0le.
+from secret import flag, password import signal from Crypto.Util.number import ( bytes_to_long, long_to_bytes, getRandomRange, ) from hashlib import sha256 import os p = 5270716116965698502689689671130781219142402682027195438035167686031865721400130496197382604002325978977917823871038888373085118354500422489134429970793096193438377786459821943518301475690713718745453633483219759953295608491564410082912515903134742148257215875373630412689071144760281744294536079770426517968527527493218935968663682019557492826204481612047410320146277333682801905360248457200458458982939490478875010628228329816347137904546340745621643293109290190631986349878770000332829974864263568375989597228583046155053640478805958492876860588535257030218304135983005840752161675722091031537527270835889607480661582626985375282908187505873350960702103509549729997875801557977556414403796543012974965425751833424162010931383924392626875437842811285456196644742198291857617009931030974156758885265756942730260677252867252555430773014258836269996233420470473918801854039549216620237517053340745984578639983387808534554731327 assert len(password) &amp;gt; 64 def timeout_handler(_1, _2): raise TimeoutError class AuthProtocol: def __init__(self, password: bytes): super().</description>
+    </item>
+    
+  </channel>
+</rss>
