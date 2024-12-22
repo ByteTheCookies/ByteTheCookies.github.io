@@ -43,17 +43,11 @@ from Crypto.Util.number import bytes_to_long flag = REDACTED print(len(flag)) R 
 Introduction trendy windy trigonity was a crypto CTF CyberSpace CTF 2024 added during the second wave.
 from Crypto.Util.number import bytes_to_long flag = REDACTED print(len(flag)) R = RealField(1000) a, b = bytes_to_long(flag[:len(flag)//2]), bytes_to_long(flag[len(flag)//2:]) x = R(0.75872961153339387563860550178464795474547887323678173252494265684893323654606628651427151866818730100357590296863274236719073684620030717141521941211167282170567424114270941542016135979438271439047194028943997508126389603529160316379547558098144713802870753946485296790294770557302303874143106908193100) enc = a*cos(x)&#43;b*sin(x) # 38 # 2.78332652222000091147933689155414792020338527644698903976732528036823470890155538913578083110732846416012108159157421703264608723649277363079905992717518852564589901390988865009495918051490722972227485851595410047572144567706501150041757189923387228097603575500648300998275877439215112961273516978501e45 The challenge uses sagemath to handle high precision floating point numbers, in this case a RealField with 1000 bits of precision.">
 
-    <link
-  rel="stylesheet"
-  href="/style.css"
-  integrity=""
-/>
+    <link rel="stylesheet" href="/style.css" integrity="">
 
-  <link
-  rel="stylesheet"
-  href="/lib/css/prism.css"
-  integrity=""
-/>
+
+
+    <link rel="stylesheet" href="/lib/css/prism.css" integrity="">
 
 
 
@@ -133,11 +127,11 @@ from Crypto.Util.number import bytes_to_long flag = REDACTED print(len(flag)) R 
     
 </head>
 <body><header>
-  <div id="header_left">
-    <div id="sidebar_btn">
-      <input type="checkbox" id="sidebar_btn_input" class="hidden" />
-      <label id="sidebar_btn_label" for="sidebar_btn_input">
-        <svg id="menu_icon" width="26px" height="26px" viewBox="0 0 24 24">
+    <div id="header_left">
+        <div id="sidebar_btn">
+            <input type="checkbox" id="sidebar_btn_input" class="hidden" />
+            <label id="sidebar_btn_label" for="sidebar_btn_input">
+                <svg id="menu_icon" width="26px" height="26px" viewBox="0 0 24 24">
 <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -147,35 +141,29 @@ from Crypto.Util.number import bytes_to_long flag = REDACTED print(len(flag)) R 
 </svg>
 
 </svg>
-      </label>
-      <label id="sidebar_canvas_overlay_wrapper" for="sidebar_btn_input">
-        <div id="sidebar_canvas_overlay"></div>
-      </label>
-      <div id="sidebar">
-        <ul><li>
-            <a href="/">💻 About</a></li><li>
-            <a href="/news/">📰 News</a></li><li>
-            <a href="/writeups/">📑 Writeups</a></li><li>
-            <a href="/contacts/">✉️ Contacts</a></li></ul>
-      </div>
+            </label>
+            <label id="sidebar_canvas_overlay_wrapper" for="sidebar_btn_input">
+                <div id="sidebar_canvas_overlay"></div>
+            </label>
+            <div id="sidebar">
+                <ul><li>
+                            <a href="/">💻 About</a></li><li>
+                            <a href="/news/">📰 News</a></li><li>
+                            <a href="/writeups/">📑 Writeups</a></li><li>
+                            <a href="/contacts/">✉️ Contacts</a></li></ul>
+            </div>
+        </div>
+    
+        <div class="brand">
+            <div>
+                <a href="/">ByteTheCookies</a>
+            </div>
+        </div>
     </div>
 
-    <div class="brand">
-      <div>
-        <a href="/">ByteTheCookies</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="toolbox">
-    <div id="theme_tool">
-      <svg
-        id="dark_mode_btn"
-        class="toolbox-btn"
-        width="18px"
-        height="18px"
-        viewBox="0 0 24 24"
-      >
+    <div class="toolbox">
+        <div id="theme_tool">
+            <svg id="dark_mode_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
 <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -185,13 +173,7 @@ from Crypto.Util.number import bytes_to_long flag = REDACTED print(len(flag)) R 
 </svg>
 
 </svg>
-      <svg
-        id="light_mode_btn"
-        class="toolbox-btn"
-        width="18px"
-        height="18px"
-        viewBox="0 0 24 24"
-      >
+            <svg id="light_mode_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
 <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -201,17 +183,11 @@ from Crypto.Util.number import bytes_to_long flag = REDACTED print(len(flag)) R 
 </svg>
 
 </svg>
-    </div>
+        </div>
 
-    
-    <div id="search_tool">
-      <svg
-        id="search_btn"
-        class="toolbox-btn"
-        width="18px"
-        height="18px"
-        viewBox="0 0 24 24"
-      >
+        
+            <div id="search_tool">
+                <svg id="search_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
 <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -244,8 +220,10 @@ from Crypto.Util.number import bytes_to_long flag = REDACTED print(len(flag)) R 
     </div>
 </div>
 </div>
-     
-  </div>
+        
+
+        
+    </div>
 </header>
 <nav id="navbar" class="pure-menu">
     <ul class="pure-menu-list"><li class="navbar-item pure-menu-item ">

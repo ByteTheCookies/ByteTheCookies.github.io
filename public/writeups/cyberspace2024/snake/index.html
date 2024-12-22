@@ -46,17 +46,11 @@ Link to the binary: Elf file
 Introduction We are faced with a binary file written in Rust (you can see it by simply running strings snake | grep rustc) where we are made to play Snake, the goal is to get PRECISELY to 16525 points.
 Solution The solutions were actually different, some people used tools to analyze the memory of a process in real time, I preferred a ‘slower’ approach, or rather the first thing that came to mind, so I opened binary ninja despite the file being stripped and looked for a value for constant exactly 0xa (i.">
 
-    <link
-  rel="stylesheet"
-  href="/style.css"
-  integrity=""
-/>
+    <link rel="stylesheet" href="/style.css" integrity="">
 
-  <link
-  rel="stylesheet"
-  href="/lib/css/prism.css"
-  integrity=""
-/>
+
+
+    <link rel="stylesheet" href="/lib/css/prism.css" integrity="">
 
 
 
@@ -136,11 +130,11 @@ Solution The solutions were actually different, some people used tools to analyz
     
 </head>
 <body><header>
-  <div id="header_left">
-    <div id="sidebar_btn">
-      <input type="checkbox" id="sidebar_btn_input" class="hidden" />
-      <label id="sidebar_btn_label" for="sidebar_btn_input">
-        <svg id="menu_icon" width="26px" height="26px" viewBox="0 0 24 24">
+    <div id="header_left">
+        <div id="sidebar_btn">
+            <input type="checkbox" id="sidebar_btn_input" class="hidden" />
+            <label id="sidebar_btn_label" for="sidebar_btn_input">
+                <svg id="menu_icon" width="26px" height="26px" viewBox="0 0 24 24">
 <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -150,35 +144,29 @@ Solution The solutions were actually different, some people used tools to analyz
 </svg>
 
 </svg>
-      </label>
-      <label id="sidebar_canvas_overlay_wrapper" for="sidebar_btn_input">
-        <div id="sidebar_canvas_overlay"></div>
-      </label>
-      <div id="sidebar">
-        <ul><li>
-            <a href="/">💻 About</a></li><li>
-            <a href="/news/">📰 News</a></li><li>
-            <a href="/writeups/">📑 Writeups</a></li><li>
-            <a href="/contacts/">✉️ Contacts</a></li></ul>
-      </div>
+            </label>
+            <label id="sidebar_canvas_overlay_wrapper" for="sidebar_btn_input">
+                <div id="sidebar_canvas_overlay"></div>
+            </label>
+            <div id="sidebar">
+                <ul><li>
+                            <a href="/">💻 About</a></li><li>
+                            <a href="/news/">📰 News</a></li><li>
+                            <a href="/writeups/">📑 Writeups</a></li><li>
+                            <a href="/contacts/">✉️ Contacts</a></li></ul>
+            </div>
+        </div>
+    
+        <div class="brand">
+            <div>
+                <a href="/">ByteTheCookies</a>
+            </div>
+        </div>
     </div>
 
-    <div class="brand">
-      <div>
-        <a href="/">ByteTheCookies</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="toolbox">
-    <div id="theme_tool">
-      <svg
-        id="dark_mode_btn"
-        class="toolbox-btn"
-        width="18px"
-        height="18px"
-        viewBox="0 0 24 24"
-      >
+    <div class="toolbox">
+        <div id="theme_tool">
+            <svg id="dark_mode_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
 <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -188,13 +176,7 @@ Solution The solutions were actually different, some people used tools to analyz
 </svg>
 
 </svg>
-      <svg
-        id="light_mode_btn"
-        class="toolbox-btn"
-        width="18px"
-        height="18px"
-        viewBox="0 0 24 24"
-      >
+            <svg id="light_mode_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
 <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -204,17 +186,11 @@ Solution The solutions were actually different, some people used tools to analyz
 </svg>
 
 </svg>
-    </div>
+        </div>
 
-    
-    <div id="search_tool">
-      <svg
-        id="search_btn"
-        class="toolbox-btn"
-        width="18px"
-        height="18px"
-        viewBox="0 0 24 24"
-      >
+        
+            <div id="search_tool">
+                <svg id="search_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
 <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -247,8 +223,10 @@ Solution The solutions were actually different, some people used tools to analyz
     </div>
 </div>
 </div>
-     
-  </div>
+        
+
+        
+    </div>
 </header>
 <nav id="navbar" class="pure-menu">
     <ul class="pure-menu-list"><li class="navbar-item pure-menu-item ">
