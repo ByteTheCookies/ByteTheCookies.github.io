@@ -40,4 +40,4 @@ The m0leCon Beginner CTF will not award rating points on CTFTime.
 
 #### Category
 
-- [Crypto](/writeups/m0lecon2025beginner/smallauth.md)
+- [Crypto](/writeups/m0lecon2025beginner/smallauth)
