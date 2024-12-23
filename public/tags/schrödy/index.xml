@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Schrödy on ByteTheCookies</title>
+    <link>http://localhost:1313/tags/schr%C3%B6dy/</link>
+    <description>Recent content in Schrödy on ByteTheCookies</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 23 Dec 2024 16:49:40 +0100</lastBuildDate><atom:link href="http://localhost:1313/tags/schr%C3%B6dy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GoSecureIt</title>
+      <link>http://localhost:1313/writeups/m0lecon2025beginner/gosecureit/</link>
+      <pubDate>Mon, 23 Dec 2024 16:49:40 +0100</pubDate>
+      
+      <guid>http://localhost:1313/writeups/m0lecon2025beginner/gosecureit/</guid>
+      <description>GoSecureIt Description: I&amp;rsquo;ve found this website under construction, at the moment you can only register, but I think there&amp;rsquo;s something strange in the cookie
+Introduction &amp;hellip;
+Source &amp;hellip;
+# filename: file.py &amp;hellip;
+Solution &amp;hellip;
+# filename: file.py $ flag: flag{redacted} Author: ... </description>
+    </item>
+    
+  </channel>
+</rss>

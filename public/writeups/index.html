@@ -225,6 +225,116 @@
 
 <div class="postcard-layout content-margin">
     
+        <a href="http://localhost:1313/writeups/m0lecon2025beginner/lockeddoor/">
+            <div class="postcard-item">
+                <div class="postcard-title">
+                    <span>Locked Door</span>
+                </div>
+                <div class="postcard-summary">
+                    <span>Locked Door Description: In front of you stands a door with a digital terminal. Will you be able to open it?
+Introduction &amp;hellip;
+Source &amp;hellip;
+# filename: file.py &amp;hellip;
+Solution &amp;hellip;
+# filename: file.py $ flag: flag{redacted} Author: ... </span>
+                </div>
+                <div class="postcard-metadata">
+                    <span>2024/12/23 · 
+    
+        
+    
+
+    
+        
+            <span>Writeup</span>
+        
+    
+</span>
+                </div>
+            </div>
+        </a>
+    
+        <a href="http://localhost:1313/writeups/m0lecon2025beginner/droidcryptor/">
+            <div class="postcard-item">
+                <div class="postcard-title">
+                    <span>DroidCryptor</span>
+                </div>
+                <div class="postcard-summary">
+                    <span>DroidCryptor Description: One of my friends told me about this application that promised to keep your data safe. When I tried to encrypt the data I found out later that there is no way to decrypt it! Can you retrieve my message?
+Introduction &amp;hellip;
+Source &amp;hellip;
+# filename: file.py &amp;hellip;
+Solution &amp;hellip;
+# filename: file.py $ flag: flag{redacted} Author: ... </span>
+                </div>
+                <div class="postcard-metadata">
+                    <span>2024/12/23 · 
+    
+        
+    
+
+    
+        
+            <span>Writeup</span>
+        
+    
+</span>
+                </div>
+            </div>
+        </a>
+    
+        <a href="http://localhost:1313/writeups/m0lecon2025beginner/gosecureit/">
+            <div class="postcard-item">
+                <div class="postcard-title">
+                    <span>GoSecureIt</span>
+                </div>
+                <div class="postcard-summary">
+                    <span>GoSecureIt Description: I&amp;rsquo;ve found this website under construction, at the moment you can only register, but I think there&amp;rsquo;s something strange in the cookie
+Introduction We are faced with an application written in go, not very complex with several files, but already looking at the folder tree we see the secret folder with secret.go inside and this code
+Source // filename: secret.go package secret var JwtSecretKey = []byte(&amp;quot;schrody_is_always_watching&amp;quot;) // I don&#39;t know why it&#39;s called secret, I&#39;ll just leave it here :) Obviously this is the cookie secret, but interacting with the web application there is not much to do, so it is worth checking other files, especially in Golang, when using the Gin framework it is often used to define routes in the main.</span>
+                </div>
+                <div class="postcard-metadata">
+                    <span>2024/12/23 · 
+    
+        
+    
+
+    
+        
+            <span>Writeup</span>
+        
+    
+</span>
+                </div>
+            </div>
+        </a>
+    
+        <a href="http://localhost:1313/writeups/m0lecon2025beginner/imgplace/">
+            <div class="postcard-item">
+                <div class="postcard-title">
+                    <span>ImgPlace</span>
+                </div>
+                <div class="postcard-summary">
+                    <span>ImgPlace Description: Are you a photographer but have no reputation? Join ImgPlace! Share your photos&amp;hellip; and become popular!
+Introduction We have a very simple application where we are allowed to register and log in and then we can upload images via url and associated description
+Source The source is only parsable by devtools from the browser, and we can see that in the pic.js file we have a function that sanitizes the image description</span>
+                </div>
+                <div class="postcard-metadata">
+                    <span>2024/12/23 · 
+    
+        
+    
+
+    
+        
+            <span>Writeup</span>
+        
+    
+</span>
+                </div>
+            </div>
+        </a>
+    
         <a href="http://localhost:1313/writeups/m0lecon2025beginner/">
             <div class="postcard-item">
                 <div class="postcard-title">
@@ -239,109 +349,6 @@ Url Discord Performance Summary CTFs: 18/20 Total points: 2700 Position: 2/385 R
                 </div>
                 <div class="postcard-metadata">
                     <span>2024/12/22 · 
-    
-        
-    
-
-    
-        
-            <span>Writeup</span>
-        
-    
-</span>
-                </div>
-            </div>
-        </a>
-    
-        <a href="http://localhost:1313/writeups/m0lecon2025beginner/smallauth/">
-            <div class="postcard-item">
-                <div class="postcard-title">
-                    <span>SmallAuth</span>
-                </div>
-                <div class="postcard-summary">
-                    <span>SmallAuth Description: I am trying to authenticate but I totally forgot the password, I am screwed!!
-Introduction SmallAuth was a crypto CTF from ## m0leCon 2025 Beginner CTF organized by pwnthem0le.
-from secret import flag, password import signal from Crypto.Util.number import ( bytes_to_long, long_to_bytes, getRandomRange, ) from hashlib import sha256 import os p = 5270716116965698502689689671130781219142402682027195438035167686031865721400130496197382604002325978977917823871038888373085118354500422489134429970793096193438377786459821943518301475690713718745453633483219759953295608491564410082912515903134742148257215875373630412689071144760281744294536079770426517968527527493218935968663682019557492826204481612047410320146277333682801905360248457200458458982939490478875010628228329816347137904546340745621643293109290190631986349878770000332829974864263568375989597228583046155053640478805958492876860588535257030218304135983005840752161675722091031537527270835889607480661582626985375282908187505873350960702103509549729997875801557977556414403796543012974965425751833424162010931383924392626875437842811285456196644742198291857617009931030974156758885265756942730260677252867252555430773014258836269996233420470473918801854039549216620237517053340745984578639983387808534554731327 assert len(password) &amp;gt; 64 def timeout_handler(_1, _2): raise TimeoutError class AuthProtocol: def __init__(self, password: bytes): super().</span>
-                </div>
-                <div class="postcard-metadata">
-                    <span>2024/12/21 · 
-    
-        
-    
-
-    
-        
-            <span>Writeup</span>
-        
-    
-</span>
-                </div>
-            </div>
-        </a>
-    
-        <a href="http://localhost:1313/writeups/ironctf2024/moviereviewapp/">
-            <div class="postcard-item">
-                <div class="postcard-title">
-                    <span>MovieReviewApp</span>
-                </div>
-                <div class="postcard-summary">
-                    <span>MovieReviewApp Description: Last web challenge done in the ctf (unfortunately) also one of the fastest to do if you know the right tools
-Introduction The challenge looks like a very simple site in pure html where we see reviews on movies
-Source Is not present the source BUT&amp;hellip;
-Solution The first thing that stands out is that in the URL there are extensions, so we understand that probably the system behind it is not very complex, in fact, going to the root endpoint we notice</span>
-                </div>
-                <div class="postcard-metadata">
-                    <span>2024/10/07 · 
-    
-        
-    
-
-    
-        
-            <span>Writeup</span>
-        
-    
-</span>
-                </div>
-            </div>
-        </a>
-    
-        <a href="http://localhost:1313/writeups/ironctf2024/b64siteviewer/">
-            <div class="postcard-item">
-                <div class="postcard-title">
-                    <span>b64SiteViewer</span>
-                </div>
-                <div class="postcard-summary">
-                    <span>b64SiteViewer Description: This is one of the challenges added later, but despite that it wasn&amp;rsquo;t very complex, in fact the most complex part wasn&amp;rsquo;t even the web part, but despite that the challenge was still really nice
-Introduction We are faced with a very simple application in which, given a url, the base64 of the page content is given back to us, plus there is a special endpoint that allows us to execute certain commands</span>
-                </div>
-                <div class="postcard-metadata">
-                    <span>2024/10/07 · 
-    
-        
-    
-
-    
-        
-            <span>Writeup</span>
-        
-    
-</span>
-                </div>
-            </div>
-        </a>
-    
-        <a href="http://localhost:1313/writeups/ironctf2024/loan_app/">
-            <div class="postcard-item">
-                <div class="postcard-title">
-                    <span>Loan App</span>
-                </div>
-                <div class="postcard-summary">
-                    <span>Loan app Description: One of the first web challenges solved in ctf, not very complex (at least the unintended solution)
-Introduction This is the challenge web with the most solutions, which I must say is very nice, my solution is the unintended but also the most common one, in fact the correct approach would have been to do &amp;lsquo;request smuggling&amp;rsquo;, which is a much more complex attack to bypass the proxy, which in this case consists of splitting a request between proxy and backend.</span>
-                </div>
-                <div class="postcard-metadata">
-                    <span>2024/10/06 · 
     
         
     
@@ -383,7 +390,7 @@ Introduction This is the challenge web with the most solutions, which I must say
         <a href="/writeups/page/2/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
       </li>
       <li class="page-item">
-        <a href="/writeups/page/6/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        <a href="/writeups/page/7/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
       </li>
     </ul>
 </div>

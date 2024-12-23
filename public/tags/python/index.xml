@@ -6,7 +6,35 @@
     <description>Recent content in Python on ByteTheCookies</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 07 Oct 2024 22:50:14 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Dec 2024 16:55:16 +0100</lastBuildDate><atom:link href="http://localhost:1313/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Locked Door</title>
+      <link>http://localhost:1313/writeups/m0lecon2025beginner/lockeddoor/</link>
+      <pubDate>Mon, 23 Dec 2024 16:55:16 +0100</pubDate>
+      
+      <guid>http://localhost:1313/writeups/m0lecon2025beginner/lockeddoor/</guid>
+      <description>Locked Door Description: In front of you stands a door with a digital terminal. Will you be able to open it?
+Introduction &amp;hellip;
+Source &amp;hellip;
+# filename: file.py &amp;hellip;
+Solution &amp;hellip;
+# filename: file.py $ flag: flag{redacted} Author: ... </description>
+    </item>
+    
+    <item>
+      <title>ImgPlace</title>
+      <link>http://localhost:1313/writeups/m0lecon2025beginner/imgplace/</link>
+      <pubDate>Mon, 23 Dec 2024 16:48:55 +0100</pubDate>
+      
+      <guid>http://localhost:1313/writeups/m0lecon2025beginner/imgplace/</guid>
+      <description>ImgPlace Description: Are you a photographer but have no reputation? Join ImgPlace! Share your photos&amp;hellip; and become popular!
+Introduction We have a very simple application that allows us to register and log in, and then we can upload images with an associated description and title.
+Source &amp;hellip;
+# filename: file.py &amp;hellip;
+Solution &amp;hellip;
+# filename: file.py $ flag: flag{redacted} Author: ... </description>
+    </item>
+    
     <item>
       <title>MovieReviewApp</title>
       <link>http://localhost:1313/writeups/ironctf2024/moviereviewapp/</link>

