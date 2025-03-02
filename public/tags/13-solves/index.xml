@@ -14,11 +14,8 @@
       
       <guid>http://localhost:1313/writeups/m0lecon2025beginner/imgplace/</guid>
       <description>ImgPlace Description: Are you a photographer but have no reputation? Join ImgPlace! Share your photos&amp;hellip; and become popular!
-Introduction We have a very simple application that allows us to register and log in, and then we can upload images with an associated description and title.
-Source &amp;hellip;
-# filename: file.py &amp;hellip;
-Solution &amp;hellip;
-# filename: file.py $ flag: flag{redacted} Author: ... </description>
+Introduction We have a very simple application where we are allowed to register and log in and then we can upload images via url and associated description
+Source The source is only parsable by devtools from the browser, and we can see that in the pic.js file we have a function that sanitizes the image description</description>
     </item>
     
   </channel>
