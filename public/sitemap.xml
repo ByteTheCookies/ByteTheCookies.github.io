@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/tags/ctf/</loc>
+    <lastmod>2025-03-10T18:57:11+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-03-10T18:57:11+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/writeups/trx2025/</loc>
+    <lastmod>2025-03-10T18:57:11+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/cybercup-2025/</loc>
+    <lastmod>2025-03-10T18:56:14+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/italy/</loc>
+    <lastmod>2025-03-10T18:56:14+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/writeups/srdnlen2025/</loc>
+    <lastmod>2025-03-10T18:56:14+01:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/50-points/</loc>
     <lastmod>2024-12-23T17:59:33+01:00</lastmod>
   </url><url>
@@ -16,9 +34,6 @@
   </url><url>
     <loc>http://localhost:1313/tags/python/</loc>
     <lastmod>2024-12-23T17:59:33+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2025-01-01T00:30:03+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/web/</loc>
     <lastmod>2025-01-01T00:30:03+01:00</lastmod>
@@ -69,9 +84,6 @@
     <lastmod>2024-12-23T17:59:29+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/crypto/</loc>
-    <lastmod>2025-01-01T00:30:03+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/ctf/</loc>
     <lastmod>2025-01-01T00:30:03+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/writeups/m0lecon2025beginner/</loc>
