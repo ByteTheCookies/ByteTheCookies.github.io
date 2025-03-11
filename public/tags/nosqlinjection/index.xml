@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NosqlInjection on ByteTheCookies</title>
+    <link>http://localhost:1313/tags/nosqlinjection/</link>
+    <description>Recent content in NosqlInjection on ByteTheCookies</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 11 Mar 2025 17:20:39 +0100</lastBuildDate><atom:link href="http://localhost:1313/tags/nosqlinjection/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Speed</title>
+      <link>http://localhost:1313/writeups/srdnlen2025/speed/</link>
+      <pubDate>Tue, 11 Mar 2025 17:20:39 +0100</pubDate>
+      
+      <guid>http://localhost:1313/writeups/srdnlen2025/speed/</guid>
+      <description>Speed Description: &amp;hellip;
+Introduction &amp;hellip;
+Source &amp;hellip;
+# filename: file.py &amp;hellip;
+Solution &amp;hellip;
+# filename: file.py $ flag: flag{redacted} Author: ... </description>
+    </item>
+    
+  </channel>
+</rss>

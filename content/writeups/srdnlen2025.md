@@ -35,4 +35,5 @@ For the best 10 teams, in-person finals will be organized in Sardinia (date to b
 
 #### Web
 
-- [Soon](#)
+- [Speed](/writeups/srdnlen2025/speed)
+- [Web](/writeups/srdnlen2025/ben10)

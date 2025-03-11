@@ -6,7 +6,19 @@
     <description>Recent content in Cybercup 2025 on ByteTheCookies</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 10 Mar 2025 18:56:14 +0100</lastBuildDate><atom:link href="http://localhost:1313/tags/cybercup-2025/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 10 Mar 2025 18:57:11 +0100</lastBuildDate><atom:link href="http://localhost:1313/tags/cybercup-2025/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TRX CTF 2025</title>
+      <link>http://localhost:1313/writeups/trx2025/</link>
+      <pubDate>Mon, 10 Mar 2025 18:57:11 +0100</pubDate>
+      
+      <guid>http://localhost:1313/writeups/trx2025/</guid>
+      <description>TRX CTF 2025 Description TheRomanXpl0it is pleased to announce TRX CTF 2025!
+TRX CTF will be a jeopardy style CTF and last a whole day (24-hours), from the 22nd of February 14:00 UTC, to the 23rd of February 2025 14:00 UTC.
+The team has made a humongous effort developing interesting challenges in every classic CTF category such as Web, Pwn, Rev and Crypto!
+We hope you&amp;rsquo;ll have fun playing the competition!</description>
+    </item>
+    
     <item>
       <title>Srdnlen CTF 2025</title>
       <link>http://localhost:1313/writeups/srdnlen2025/</link>

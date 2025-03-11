@@ -6,7 +6,43 @@
     <description>Recent content in Tags on ByteTheCookies</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 10 Mar 2025 18:57:11 +0100</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 11 Mar 2025 16:52:02 +0100</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Business Logic Vulnerability</title>
+      <link>http://localhost:1313/tags/business-logic-vulnerability/</link>
+      <pubDate>Tue, 11 Mar 2025 16:52:02 +0100</pubDate>
+      
+      <guid>http://localhost:1313/tags/business-logic-vulnerability/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gheddus</title>
+      <link>http://localhost:1313/tags/gheddus/</link>
+      <pubDate>Tue, 11 Mar 2025 16:52:02 +0100</pubDate>
+      
+      <guid>http://localhost:1313/tags/gheddus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>http://localhost:1313/tags/python/</link>
+      <pubDate>Tue, 11 Mar 2025 16:52:02 +0100</pubDate>
+      
+      <guid>http://localhost:1313/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Web</title>
+      <link>http://localhost:1313/tags/web/</link>
+      <pubDate>Tue, 11 Mar 2025 16:52:02 +0100</pubDate>
+      
+      <guid>http://localhost:1313/tags/web/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>CTF</title>
       <link>http://localhost:1313/tags/ctf/</link>
@@ -19,7 +55,7 @@
     <item>
       <title>Cybercup 2025</title>
       <link>http://localhost:1313/tags/cybercup-2025/</link>
-      <pubDate>Mon, 10 Mar 2025 18:56:14 +0100</pubDate>
+      <pubDate>Mon, 10 Mar 2025 18:57:11 +0100</pubDate>
       
       <guid>http://localhost:1313/tags/cybercup-2025/</guid>
       <description></description>
@@ -28,7 +64,7 @@
     <item>
       <title>Italy</title>
       <link>http://localhost:1313/tags/italy/</link>
-      <pubDate>Mon, 10 Mar 2025 18:56:14 +0100</pubDate>
+      <pubDate>Mon, 10 Mar 2025 18:57:11 +0100</pubDate>
       
       <guid>http://localhost:1313/tags/italy/</guid>
       <description></description>
@@ -58,24 +94,6 @@
       <pubDate>Mon, 23 Dec 2024 16:55:16 +0100</pubDate>
       
       <guid>http://localhost:1313/tags/meni/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Python</title>
-      <link>http://localhost:1313/tags/python/</link>
-      <pubDate>Mon, 23 Dec 2024 16:55:16 +0100</pubDate>
-      
-      <guid>http://localhost:1313/tags/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Web</title>
-      <link>http://localhost:1313/tags/web/</link>
-      <pubDate>Mon, 23 Dec 2024 16:55:16 +0100</pubDate>
-      
-      <guid>http://localhost:1313/tags/web/</guid>
       <description></description>
     </item>
     
