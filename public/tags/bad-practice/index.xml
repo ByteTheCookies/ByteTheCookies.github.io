@@ -14,11 +14,10 @@
       
       <guid>http://localhost:1313/writeups/trx2025/onlinepythoneditor/</guid>
       <description>Online Python Editor Description: If you&amp;rsquo;re tired of fast and good-looking editors, try this. Now with extra crispiness!
-Introduction &amp;hellip;
-Source &amp;hellip;
-# filename: file.py &amp;hellip;
-Solution &amp;hellip;
-# filename: file.py $ flag: TRX{4ll_y0u_h4v3_t0_d0_1s_l00k_4t_th3_s0urc3_c0d3} Author: akiidjk </description>
+Introduction This is the first web in the TRX2025 CTF. And it&amp;rsquo;s basically a simple online Python editor with a syntax checker.
+Source Go to the source code and we can immediately see two things:
+In a file called secret.py, which is never called, read or otherwise used.
+The main app.py file</description>
     </item>
     
   </channel>

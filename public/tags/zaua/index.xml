@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Zaua on ByteTheCookies</title>
+    <link>http://localhost:1313/tags/zaua/</link>
+    <description>Recent content in Zaua on ByteTheCookies</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 12 Mar 2025 22:04:00 +0100</lastBuildDate><atom:link href="http://localhost:1313/tags/zaua/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Confusion</title>
+      <link>http://localhost:1313/writeups/srdnlen2025/confusion/</link>
+      <pubDate>Wed, 12 Mar 2025 22:04:00 +0100</pubDate>
+      
+      <guid>http://localhost:1313/writeups/srdnlen2025/confusion/</guid>
+      <description>Confusion Looks like our cryptographers had one too many glasses of mirto! Can you sober up their sloppy AES scheme, or will the confusion keep you spinning?
+Introduction Confusion was a crypto CTF from Srdnlen CTF 2025.
+#!/usr/bin/env python3 from Crypto.Cipher import AES from Crypto.Util.Padding import pad, unpad import os # Local imports FLAG = os.getenv(&amp;quot;FLAG&amp;quot;, &amp;quot;srdnlen{REDACTED}&amp;quot;).encode() # Server encryption function def encrypt(msg, key): pad_msg = pad(msg, 16) blocks = [os.</description>
+    </item>
+    
+  </channel>
+</rss>

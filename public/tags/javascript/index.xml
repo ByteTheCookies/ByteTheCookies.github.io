@@ -13,12 +13,9 @@
       <pubDate>Tue, 11 Mar 2025 17:20:39 +0100</pubDate>
       
       <guid>http://localhost:1313/writeups/srdnlen2025/speed/</guid>
-      <description>Speed Description: &amp;hellip;
-Introduction &amp;hellip;
-Source &amp;hellip;
-# filename: file.py &amp;hellip;
-Solution &amp;hellip;
-# filename: file.py $ flag: flag{redacted} Author: ... </description>
+      <description>Speed Description: Welcome to Radiator Springs&amp;rsquo; finest store, where every car enthusiast&amp;rsquo;s dream comes true! But remember, in the world of racing, precision matters—so tread carefully as you navigate this high-octane experience. Ka-chow!
+Introduction For the second web challenge of srdnlen2025 we have a very interesting but not particularly complicated challenge.
+The challenge is presented as a simple shop, so the goal is to buy the flag, which has a very high price.</description>
     </item>
     
     <item>
