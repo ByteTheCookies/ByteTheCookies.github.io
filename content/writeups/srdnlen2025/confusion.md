@@ -140,6 +140,6 @@ def main():
     r.close()
 ```
 ```
-flag: CSCTF{I_h0p3_th15_Gl4ss_0f_M1rt0_w4rm3d_y0u_3n0ugh}
+flag: srdnlen{I_h0p3_th15_Gl4ss_0f_M1rt0_w4rm3d_y0u_3n0ugh}
 ```
 <p align="right">Author: vympel</p>
