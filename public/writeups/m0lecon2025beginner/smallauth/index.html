@@ -300,7 +300,20 @@ from secret import flag, password import signal from Crypto.Util.number import (
     <h1 style='text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;'>SmallAuth</h1>
 <p><strong>Description</strong>: I am trying to authenticate but I totally forgot the password, I am screwed!!</p>
 
-<h2>Introduction</h2>
+<h2 id="introduction" class="header-anchor-wrapper">Introduction
+  <a href="#introduction" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
 
 <p>SmallAuth was a crypto CTF from <a href="https://ctftime.org/event/2578/">## m0leCon 2025 Beginner CTF</a> organized by <a href="https://ctftime.org/team/60467">pwnthem0le</a>.</p>
 <pre  class="mc-prism hide language-text" ><code class="language-python">from secret import flag, password
@@ -391,7 +404,20 @@ if __name__ == &quot;__main__&quot;:
 </code></pre>
 <p>The server simulates an authentication protocol: first it generates a secret shared key via a modified version of the Diffie-Hellman protocol where the generator isn&rsquo;t public, then we have a 5 second window where we can interact with the verifier to check our sent challenges, finally it asks for a &ldquo;challenge&rdquo; which should be constructed from a <code>sha256</code> hash involving the previously generated key.</p>
 
-<h2>Solution</h2>
+<h2 id="solution" class="header-anchor-wrapper">Solution
+  <a href="#solution" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
 
 <p>Without the generator it seems impossible to generate the secret key but a faulty check in <code>gen_shared_key</code> lets us generate it $50\%$ of the time:</p>
 <pre  class="mc-prism hide language-text" ><code class="language-python">def gen_shared_key(self, B):
