@@ -64,9 +64,9 @@ while True:
     print(f"|\n|   {ciphertext.hex()}")
 ```
 The challenge acts as an encryption oracle in 3 steps:
-1. $\quad b_0 \coloneqq R \\\quad b_i \coloneqq E(m_i) \oplus m_{i-1} \quad i \ge 1$
-2. $\quad c_0 \coloneqq R \\\quad c_i \coloneqq D(b_i) \quad i \ge 1$
-3. $\quad ct_0 \coloneqq R \\\quad ct_i \coloneqq E(c_i) \oplus c_{i-1} \quad i \ge 1$
+1. $\quad b_0 := R \\\quad b_i := E(m_i) \oplus m_{i-1} \quad i \ge 1$
+2. $\quad c_0 := R \\\quad c_i := D(b_i) \quad i \ge 1$
+3. $\quad ct_0 := R \\\quad ct_i := E(c_i) \oplus c_{i-1} \quad i \ge 1$
 
 Where $m$ is our input message, padded, split into blocks and prefixed with the random block $R$, meanwhile $D$ and $E$ are AES decryption and encryption.
 Notice how $ct_i = b_i \oplus c_{i-1}$ since $E(c_i) = E(D(b_i)) = b_i$.
@@ -100,14 +100,14 @@ def dec0(r):
 Also notice how the second block the oracle gives us is a plain encryption of the first block of input.
 
 Let's call the output of `dec0` simply $D(0)$ and set $F_i$ to be the $i$th block of the flag, with $F_0$ being the random block at the start, we can write each block of the flag's ciphertext we received at the start as:
-$C_i \coloneqq E(F_i) \oplus F_{i-1} \oplus D(E(F_{i-1}) \oplus F_{i-2})$
+$C_i := E(F_i) \oplus F_{i-1} \oplus D(E(F_{i-1}) \oplus F_{i-2})$
 
 Let's take a look at the fourth block after asking the oracle to encrypt $\ F_0 \mid F_1 \mid D(0)$:
 $ct_3 = b_3 \oplus D(b_2) =E(D(0)) \oplus F_1 \oplus D(E(F_1) \oplus F_0) = F_1 \oplus D(E(F_1) \oplus F_0)$
-$T \coloneqq ct_3 \oplus C_2 = F_1 \oplus D(E(F_1) \oplus F_0) \oplus E(F_2) \oplus F_1 \oplus D(E(F_1) \oplus F_0) = E(F_2)$
+$T := ct_3 \oplus C_2 = F_1 \oplus D(E(F_1) \oplus F_0) \oplus E(F_2) \oplus F_1 \oplus D(E(F_1) \oplus F_0) = E(F_2)$
 
 Let's then generate a random block $V$ and ask for the encryption of $\ T \mid D(0) \mid V$:
-$ct_3 = b_3 \oplus D(b_2) = E(V) \oplus D(0) \oplus D(E(D(0)) \oplus T) = E(V) \oplus D(0) \oplus D(T) = E(V) \oplus D(0) \oplus D(F_2) = E(V) \oplus D(0) \oplus F_2$
+$ct_3 = b_3 \oplus D(b_2) = E(V) \oplus D(0) \oplus D(E(D(0)) \oplus T) = E(V) \oplus D(0) \oplus D(T) = E(V) \oplus D(0) \oplus D(E(F_2)) = E(V) \oplus D(0) \oplus F_2$
 
 We know both $E(V)$ and $D(0)$ and can therefore recover $F_2$. The process can then be repeated for successive blocks:
 ```python
