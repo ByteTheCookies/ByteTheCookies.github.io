@@ -2,17 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/writeups/srdnlen2025/confusion/</loc>
-    <lastmod>2025-03-14T21:09:48+01:00</lastmod>
+    <loc>http://localhost:1313/tags/17-solves/</loc>
+    <lastmod>2025-03-24T16:25:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/428-points/</loc>
+    <lastmod>2025-03-24T16:25:00+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/crypto/</loc>
-    <lastmod>2025-03-14T21:09:48+01:00</lastmod>
+    <lastmod>2025-03-24T16:25:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/writeups/k1ndasus2025/keyinthehaystack/</loc>
+    <lastmod>2025-03-24T16:25:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/pietro-lepori/</loc>
+    <lastmod>2025-03-24T16:25:00+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2025-03-15T13:26:55+01:00</lastmod>
+    <lastmod>2025-03-24T16:25:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/ctf/</loc>
+    <lastmod>2025-03-24T12:58:37+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/writeups/k1ndasus2025/</loc>
+    <lastmod>2025-03-24T12:58:37+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/k1ndasus/</loc>
+    <lastmod>2025-03-24T12:58:37+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/misc/</loc>
+    <lastmod>2025-03-24T12:58:37+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/pwn/</loc>
+    <lastmod>2025-03-24T12:58:37+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/reverse/</loc>
+    <lastmod>2025-03-24T12:58:37+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/web/</loc>
+    <lastmod>2025-03-24T12:58:37+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/writeups/srdnlen2025/confusion/</loc>
+    <lastmod>2025-03-16T14:13:14+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/zaua/</loc>
-    <lastmod>2025-03-14T21:09:48+01:00</lastmod>
+    <lastmod>2025-03-16T14:13:14+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/bad-practice/</loc>
     <lastmod>2025-03-11T18:29:57+01:00</lastmod>
@@ -24,9 +57,6 @@
     <lastmod>2025-03-11T18:29:57+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/salvatore-abello/</loc>
-    <lastmod>2025-03-11T18:29:57+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/web/</loc>
     <lastmod>2025-03-11T18:29:57+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/javascript/</loc>
@@ -52,9 +82,6 @@
   </url><url>
     <loc>http://localhost:1313/tags/gheddus/</loc>
     <lastmod>2025-03-11T18:29:57+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/ctf/</loc>
-    <lastmod>2025-03-15T13:26:55+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/cybercup-2025/</loc>
     <lastmod>2025-03-15T13:26:55+01:00</lastmod>
@@ -95,9 +122,6 @@
     <loc>http://localhost:1313/tags/kotlin/</loc>
     <lastmod>2024-12-23T17:59:22+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/reverse/</loc>
-    <lastmod>2024-12-23T17:59:22+01:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/95-solves/</loc>
     <lastmod>2024-12-23T17:59:26+01:00</lastmod>
   </url><url>
@@ -126,12 +150,6 @@
     <lastmod>2024-12-23T17:59:29+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/writeups/m0lecon2025beginner/</loc>
-    <lastmod>2025-01-01T00:30:03+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/misc/</loc>
-    <lastmod>2025-01-01T00:30:03+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/pwn/</loc>
     <lastmod>2025-01-01T00:30:03+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/rev/</loc>
