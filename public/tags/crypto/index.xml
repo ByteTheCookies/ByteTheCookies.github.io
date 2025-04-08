@@ -25,16 +25,6 @@ from Crypto.Util import number from base64 import b64encode prime = lambda: numb
     </item>
     
     <item>
-      <title>K!nd4SUS CTF 2025</title>
-      <link>http://localhost:1313/writeups/k1ndasus2025/</link>
-      <pubDate>Mon, 24 Mar 2025 12:58:37 +0200</pubDate>
-      
-      <guid>http://localhost:1313/writeups/k1ndasus2025/</guid>
-      <description> K!nd4SUS CTF 2025 Description K!nd4SUS CTF is a Jeopardy-style Capture-The-Flag competition created with love by the K!nd4SUS Team, from the University of Milan. The challenges topics include binary exploitation, web security, reverse engineering, web3, forensics, OSINT, cryptography, and creative miscellaneous challenges!
-Url Performance Summary CTFs: 10/? Total points: 2462 Position: 16/207 Rating points: 6.059 Writeups Crypto Key in the haystack </description>
-    </item>
-    
-    <item>
       <title>Confusion</title>
       <link>http://localhost:1313/writeups/srdnlen2025/confusion/</link>
       <pubDate>Wed, 12 Mar 2025 22:04:00 +0100</pubDate>

@@ -7,6 +7,43 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>StackBank 1</title>
+      <link>http://localhost:1313/writeups/ulisse2025/stackbank1/</link>
+      <pubDate>Tue, 08 Apr 2025 18:05:15 +0200</pubDate>
+      
+      <guid>http://localhost:1313/writeups/ulisse2025/stackbank1/</guid>
+      <description>⚠️ WORKING IN PROGRESS
+StackBank 1 Description: This bank🏦 will let you legally launder your dirty money, so you can live the high life in Dubai 🤑.
+Give it a try — for now, it only lets you send and receive money for your oh-so-reputable Ponzi scheme💸.
+Introduction &amp;hellip;
+Source &amp;hellip;
+# filename: file.py &amp;hellip;
+Solution &amp;hellip;
+# filename: file.py Author: akiidjk </description>
+    </item>
+    
+    <item>
+      <title>Telemetry</title>
+      <link>http://localhost:1313/writeups/ulisse2025/telemetry/</link>
+      <pubDate>Tue, 08 Apr 2025 18:05:04 +0200</pubDate>
+      
+      <guid>http://localhost:1313/writeups/ulisse2025/telemetry/</guid>
+      <description>Telemetry Description: Elia has just developed a brand-new website to analyze logs at runtime 🧻. Confident in his security skills, he bet his entire house that you won&amp;rsquo;t find the hidden flag&amp;hellip; Will you prove him wrong? 🏠🔍
+Introduction Fourth round of the Cybercup 2025 ulisseCTF I want to show the writeup of the first web, a really interesting challenge.
+Source The application is a simple Flask app with 0 css (we almost like it).</description>
+    </item>
+    
+    <item>
+      <title>Ulisse CTF 2025</title>
+      <link>http://localhost:1313/writeups/ulisse2025/</link>
+      <pubDate>Tue, 08 Apr 2025 17:54:49 +0200</pubDate>
+      
+      <guid>http://localhost:1313/writeups/ulisse2025/</guid>
+      <description> Ulisse CTF 2025 Description Ulisse CTF is the first edition of the annual competition hosted by the Ulisse CTF Team at the University of Bologna. Open to participants of all skill levels, it aims to provide a learning experience for everyone!
+Url Discord Performance Summary CTFs: 12/29 Total points: 1923.000 Position: 11/169 Rating points: ? Writeups Web Telemetry StackBank 1 </description>
+    </item>
+    
+    <item>
       <title>Key in the haystack</title>
       <link>http://localhost:1313/writeups/k1ndasus2025/keyinthehaystack/</link>
       <pubDate>Mon, 24 Mar 2025 16:25:00 +0100</pubDate>

@@ -6,15 +6,34 @@
     <description>Recent content in Web on ByteTheCookies</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 24 Mar 2025 12:58:37 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 08 Apr 2025 18:05:15 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/web/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>K!nd4SUS CTF 2025</title>
-      <link>http://localhost:1313/writeups/k1ndasus2025/</link>
-      <pubDate>Mon, 24 Mar 2025 12:58:37 +0200</pubDate>
+      <title>StackBank 1</title>
+      <link>http://localhost:1313/writeups/ulisse2025/stackbank1/</link>
+      <pubDate>Tue, 08 Apr 2025 18:05:15 +0200</pubDate>
       
-      <guid>http://localhost:1313/writeups/k1ndasus2025/</guid>
-      <description> K!nd4SUS CTF 2025 Description K!nd4SUS CTF is a Jeopardy-style Capture-The-Flag competition created with love by the K!nd4SUS Team, from the University of Milan. The challenges topics include binary exploitation, web security, reverse engineering, web3, forensics, OSINT, cryptography, and creative miscellaneous challenges!
-Url Performance Summary CTFs: 10/? Total points: 2462 Position: 16/207 Rating points: 6.059 Writeups Crypto Key in the haystack </description>
+      <guid>http://localhost:1313/writeups/ulisse2025/stackbank1/</guid>
+      <description>StackBank 1 Description: This bank🏦 will let you legally launder your dirty money, so you can live the high life in Dubai 🤑.
+Give it a try — for now, it only lets you send and receive money for your oh-so-reputable Ponzi scheme💸.
+Introduction &amp;hellip;
+Source &amp;hellip;
+# filename: file.py &amp;hellip;
+Solution &amp;hellip;
+# filename: file.py Author: akiidjk </description>
+    </item>
+    
+    <item>
+      <title>Telemetry</title>
+      <link>http://localhost:1313/writeups/ulisse2025/telemetry/</link>
+      <pubDate>Tue, 08 Apr 2025 18:05:04 +0200</pubDate>
+      
+      <guid>http://localhost:1313/writeups/ulisse2025/telemetry/</guid>
+      <description>Telemetry Description: Elia has just developed a brand-new website to analyze logs at runtime 🧻. Confident in his security skills, he bet his entire house that you won&amp;rsquo;t find the hidden flag&amp;hellip; Will you prove him wrong? 🏠🔍
+Introduction &amp;hellip;
+Source &amp;hellip;
+# filename: file.py &amp;hellip;
+Solution &amp;hellip;
+# filename: file.py $ flag: UlisseCTF{n3x7_T1m3_st1ck_t0_your_l0g5!} Author: akiidjk </description>
     </item>
     
     <item>

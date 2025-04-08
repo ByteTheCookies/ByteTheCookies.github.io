@@ -6,7 +6,8 @@ date = 2025-03-10T18:56:14+01:00
 tags = [
     "CTF",
     "Italy",
-    "Cybercup 2025"
+    "Cybercup 2025",
+    "Team Srdnlen"
 ]
 type = 'list'
 +++

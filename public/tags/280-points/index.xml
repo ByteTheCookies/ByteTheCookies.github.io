@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>280 Points on ByteTheCookies</title>
+    <link>http://localhost:1313/tags/280-points/</link>
+    <description>Recent content in 280 Points on ByteTheCookies</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 08 Apr 2025 18:05:04 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/280-points/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Telemetry</title>
+      <link>http://localhost:1313/writeups/ulisse2025/telemetry/</link>
+      <pubDate>Tue, 08 Apr 2025 18:05:04 +0200</pubDate>
+      
+      <guid>http://localhost:1313/writeups/ulisse2025/telemetry/</guid>
+      <description>Telemetry Description: Elia has just developed a brand-new website to analyze logs at runtime 🧻. Confident in his security skills, he bet his entire house that you won&amp;rsquo;t find the hidden flag&amp;hellip; Will you prove him wrong? 🏠🔍
+Introduction &amp;hellip;
+Source &amp;hellip;
+# filename: file.py &amp;hellip;
+Solution &amp;hellip;
+# filename: file.py $ flag: UlisseCTF{n3x7_T1m3_st1ck_t0_your_l0g5!} Author: akiidjk </description>
+    </item>
+    
+  </channel>
+</rss>

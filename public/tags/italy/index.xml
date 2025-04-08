@@ -6,7 +6,27 @@
     <description>Recent content in Italy on ByteTheCookies</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 10 Mar 2025 18:57:11 +0100</lastBuildDate><atom:link href="http://localhost:1313/tags/italy/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 08 Apr 2025 17:54:49 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/italy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ulisse CTF 2025</title>
+      <link>http://localhost:1313/writeups/ulisse2025/</link>
+      <pubDate>Tue, 08 Apr 2025 17:54:49 +0200</pubDate>
+      
+      <guid>http://localhost:1313/writeups/ulisse2025/</guid>
+      <description> Ulisse CTF 2025 Description Ulisse CTF is the first edition of the annual competition hosted by the Ulisse CTF Team at the University of Bologna. Open to participants of all skill levels, it aims to provide a learning experience for everyone!
+Url Discord Performance Summary CTFs: 12/29 Total points: 1923.000 Position: 11/169 Rating points: ? Writeups Web Telemetry StackBank 1 </description>
+    </item>
+    
+    <item>
+      <title>K!nd4SUS CTF 2025</title>
+      <link>http://localhost:1313/writeups/k1ndasus2025/</link>
+      <pubDate>Mon, 24 Mar 2025 12:58:37 +0200</pubDate>
+      
+      <guid>http://localhost:1313/writeups/k1ndasus2025/</guid>
+      <description> K!nd4SUS CTF 2025 Description K!nd4SUS CTF is a Jeopardy-style Capture-The-Flag competition created with love by the K!nd4SUS Team, from the University of Milan. The challenges topics include binary exploitation, web security, reverse engineering, web3, forensics, OSINT, cryptography, and creative miscellaneous challenges!
+Url Performance Summary CTFs: 10/? Total points: 2462 Position: 16/207 Rating points: 6.059 Writeups Crypto Key in the haystack </description>
+    </item>
+    
     <item>
       <title>TRX CTF 2025</title>
       <link>http://localhost:1313/writeups/trx2025/</link>

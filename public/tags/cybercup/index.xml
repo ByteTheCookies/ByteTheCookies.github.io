@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cybercup on ByteTheCookies</title>
+    <link>http://localhost:1313/tags/cybercup/</link>
+    <description>Recent content in Cybercup on ByteTheCookies</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 08 Apr 2025 17:54:49 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/cybercup/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ulisse CTF 2025</title>
+      <link>http://localhost:1313/writeups/ulisse2025/</link>
+      <pubDate>Tue, 08 Apr 2025 17:54:49 +0200</pubDate>
+      
+      <guid>http://localhost:1313/writeups/ulisse2025/</guid>
+      <description> Name ctf Description &amp;hellip;
+Url Discord Performance Summary CTFs: n/M Total points: &amp;hellip; Position: n/M Rating points: &amp;hellip; Writeups Category Name challange </description>
+    </item>
+    
+  </channel>
+</rss>

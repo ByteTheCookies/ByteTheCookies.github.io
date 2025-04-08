@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Team Srdnlen on ByteTheCookies</title>
+    <link>http://localhost:1313/tags/team-srdnlen/</link>
+    <description>Recent content in Team Srdnlen on ByteTheCookies</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 10 Mar 2025 18:56:14 +0100</lastBuildDate><atom:link href="http://localhost:1313/tags/team-srdnlen/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Srdnlen CTF 2025</title>
+      <link>http://localhost:1313/writeups/srdnlen2025/</link>
+      <pubDate>Mon, 10 Mar 2025 18:56:14 +0100</pubDate>
+      
+      <guid>http://localhost:1313/writeups/srdnlen2025/</guid>
+      <description>Srdnlen CTF 2025 Description Srdnlen CTF is a Jeopardy-style Capture-The-Flag competition hosted by the members of Srdnlen, an italian team based in Sardinia.
+This CTF welcomes both beginners and advanced players. The challenges topics include reverse engineering, binary exploitation, web security, cryptography, forensics.
+For the best 10 teams, in-person finals will be organized in Sardinia (date to be decided)
+Url Discord Performance Summary CTFs: n/M Total points: 270.0 Position: 98/848 Rating points: 2.</description>
+    </item>
+    
+  </channel>
+</rss>

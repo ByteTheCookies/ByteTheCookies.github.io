@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AlBovo on ByteTheCookies</title>
+    <link>http://localhost:1313/tags/albovo/</link>
+    <description>Recent content in AlBovo on ByteTheCookies</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 08 Apr 2025 18:05:15 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/albovo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>StackBank 1</title>
+      <link>http://localhost:1313/writeups/ulisse2025/stackbank1/</link>
+      <pubDate>Tue, 08 Apr 2025 18:05:15 +0200</pubDate>
+      
+      <guid>http://localhost:1313/writeups/ulisse2025/stackbank1/</guid>
+      <description>StackBank 1 Description: This bank🏦 will let you legally launder your dirty money, so you can live the high life in Dubai 🤑.
+Give it a try — for now, it only lets you send and receive money for your oh-so-reputable Ponzi scheme💸.
+Introduction &amp;hellip;
+Source &amp;hellip;
+# filename: file.py &amp;hellip;
+Solution &amp;hellip;
+# filename: file.py Author: akiidjk </description>
+    </item>
+    
+    <item>
+      <title>Telemetry</title>
+      <link>http://localhost:1313/writeups/ulisse2025/telemetry/</link>
+      <pubDate>Tue, 08 Apr 2025 18:05:04 +0200</pubDate>
+      
+      <guid>http://localhost:1313/writeups/ulisse2025/telemetry/</guid>
+      <description>Telemetry Description: Elia has just developed a brand-new website to analyze logs at runtime 🧻. Confident in his security skills, he bet his entire house that you won&amp;rsquo;t find the hidden flag&amp;hellip; Will you prove him wrong? 🏠🔍
+Introduction &amp;hellip;
+Source &amp;hellip;
+# filename: file.py &amp;hellip;
+Solution &amp;hellip;
+# filename: file.py $ flag: UlisseCTF{n3x7_T1m3_st1ck_t0_your_l0g5!} Author: akiidjk </description>
+    </item>
+    
+  </channel>
+</rss>

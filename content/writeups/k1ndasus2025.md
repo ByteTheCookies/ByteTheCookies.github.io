@@ -5,12 +5,9 @@ description = "K!nd4SUS CTF is a Jeopardy-style Capture-The-Flag competition cre
 date = 2025-03-24T12:58:37+02:00
 tags = [
     "CTF",
-    "K1ndasus",
-    "Web",
-    "Crypto",
-    "Misc",
-    "Reverse",
-    "Pwn",
+    "Italy",
+    "Team K1ndasus",
+    "Cybercup 2025"
 ]
 type = 'list'
 +++
