@@ -43,4 +43,4 @@ CookieFarm is a hybrid Go + Python A/D CTF framework inspired by DestructiveFarm
 
 ## ❤️ Special Thanks
 
-Huge shoutout to the ByteTheCookie team for building a performance-driven, distraction-free environment tailored for real CTF scenarios in particular to @akiidjk @suga @vympel7 @Dabi1290.
+Huge shoutout to the ByteTheCookies team for building a performance-driven, distraction-free environment tailored for real CTF scenarios in particular to @akiidjk @suga @vympel7 @Dabi1290.
