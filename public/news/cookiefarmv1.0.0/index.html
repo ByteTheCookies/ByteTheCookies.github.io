@@ -8,10 +8,8 @@
 
     
 
-    <title>K!nd4SUS CTF 2025 - ByteTheCookies</title>
+    <title>CookieFarm v1.0.1 🍪 - ByteTheCookies</title>
 
-    
-    <meta name="description" content="K!nd4SUS CTF is a Jeopardy-style Capture-The-Flag competition created with love by the K!nd4SUS Team, from the University of Milan. The challenges topics include binary exploitation, web security, reverse engineering, web3, forensics, OSINT, cryptography, and creative miscellaneous challenges!" />
     
 
     
@@ -21,27 +19,25 @@
     
 
     
-        <meta property="og:url" content="http://localhost:1313/writeups/k1ndasus2025/">
+        <meta property="og:url" content="http://localhost:1313/news/cookiefarmv1.0.0/">
   <meta property="og:site_name" content="ByteTheCookies">
-  <meta property="og:title" content="K!nd4SUS CTF 2025">
-  <meta property="og:description" content="K!nd4SUS CTF is a Jeopardy-style Capture-The-Flag competition created with love by the K!nd4SUS Team, from the University of Milan. The challenges topics include binary exploitation, web security, reverse engineering, web3, forensics, OSINT, cryptography, and creative miscellaneous challenges!">
+  <meta property="og:title" content="CookieFarm v1.0.1 🍪">
+  <meta property="og:description" content="🎉 CookieFarm v1.0.1 is available 🍪🐮 – Initial Stable Release! We are excited to announce the release of version v1.0.1 of CookieFarm, our Attack/Defense CTF framework designed to make life easier for teams during A/D.
+🧠 What is CookieFarm? CookieFarm is a hybrid Go &#43; Python A/D CTF framework inspired by DestructiveFarm, but with a significantly leaner approach in terms of RAM and CPU consumption. Our philosophy is “zero distractions”: You just write the exploit logic; we take care of the rest.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
-    <meta property="article:section" content="writeups">
-    <meta property="article:published_time" content="2025-03-24T12:58:37+02:00">
-    <meta property="article:modified_time" content="2025-04-08T21:14:20+02:00">
-    <meta property="article:tag" content="CTF">
-    <meta property="article:tag" content="Italy">
-    <meta property="article:tag" content="Team K1ndasus">
-    <meta property="article:tag" content="Cybercup 2025">
+    <meta property="article:section" content="news">
+    <meta property="article:published_time" content="2025-05-16T00:00:00+02:00">
+    <meta property="article:modified_time" content="2025-05-16T00:00:00+02:00">
 
     
 
     
         
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="K!nd4SUS CTF 2025">
-  <meta name="twitter:description" content="K!nd4SUS CTF is a Jeopardy-style Capture-The-Flag competition created with love by the K!nd4SUS Team, from the University of Milan. The challenges topics include binary exploitation, web security, reverse engineering, web3, forensics, OSINT, cryptography, and creative miscellaneous challenges!">
+  <meta name="twitter:title" content="CookieFarm v1.0.1 🍪">
+  <meta name="twitter:description" content="🎉 CookieFarm v1.0.1 is available 🍪🐮 – Initial Stable Release! We are excited to announce the release of version v1.0.1 of CookieFarm, our Attack/Defense CTF framework designed to make life easier for teams during A/D.
+🧠 What is CookieFarm? CookieFarm is a hybrid Go &#43; Python A/D CTF framework inspired by DestructiveFarm, but with a significantly leaner approach in terms of RAM and CPU consumption. Our philosophy is “zero distractions”: You just write the exploit logic; we take care of the rest.">
 
     <link rel="stylesheet" href="/style.css" integrity="">
 
@@ -215,11 +211,11 @@
                     
                         <a href="/" class="pure-menu-link">💻 About</a>
                     
-                </li><li class="navbar-item pure-menu-item ">
+                </li><li class="navbar-item pure-menu-item insection">
                     
                         <a href="/news/" class="pure-menu-link">📰 News</a>
                     
-                </li><li class="navbar-item pure-menu-item insection">
+                </li><li class="navbar-item pure-menu-item ">
                     
                         <a href="/writeups/" class="pure-menu-link">📑 Writeups</a>
                     
@@ -237,13 +233,12 @@
         
             <nav id="TableOfContents">
   <ul>
-    <li><a href="#description">Description</a></li>
-    <li><a href="#performance-summary">Performance Summary</a></li>
-    <li><a href="#writeups">Writeups</a>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
+    <li><a href="#-what-is-cookiefarm">🧠 What is CookieFarm?</a></li>
+    <li><a href="#-whats-new-in-v101">🚀 What&rsquo;s new in v1.0.1?</a></li>
+    <li><a href="#-how-it-works">🛠️ How it works</a></li>
+    <li><a href="#-try-it-now">🔗 Try it now!</a></li>
+    <li><a href="#-why-choose-cookiefarm">🍪 Why choose CookieFarm?</a></li>
+    <li><a href="#-special-thanks">❤️ Special Thanks</a></li>
   </ul>
 </nav>
         
@@ -253,23 +248,11 @@
 
 <div class="tags">
   
-    <div class="badge">CTF</div>
-
-  
-    <div class="badge">Italy</div>
-
-  
-    <div class="badge">Team K1ndasus</div>
-
-  
-    <div class="badge">Cybercup 2025</div>
-
-  
 </div>
 
 <div>
   <p class="date">
-    Last edit: Mar 24, 2025
+    Last edit: May 16, 2025
   </p>
 </div>
 
@@ -285,8 +268,8 @@
         
     
     
-<h1 id="knd4sus-ctf-2025" class="header-anchor-wrapper">K!nd4SUS CTF 2025
-  <a href="#knd4sus-ctf-2025" class="header-anchor-link">
+<h1 id="-cookiefarm-v101-is-available---initial-stable-release" class="header-anchor-wrapper">🎉 CookieFarm v1.0.1 is available 🍪🐮 – Initial Stable Release!
+  <a href="#-cookiefarm-v101-is-available---initial-stable-release" class="header-anchor-link">
     <svg width="16px" height="16px" viewBox="0 0 24 24">
 <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -300,9 +283,11 @@
   </a>
 </h1>
 
+<img src="https://github.com/ByteTheCookies/CookieFarm/blob/main/assets/logo_mucca.png?raw=true" width="300" height="300" alt="CookieFarm Logo" style="float: right; margin-left: 20px; margin-bottom: 20px;"/>
+<p>We are excited to announce the release of version v1.0.1 of CookieFarm, our Attack/Defense CTF framework designed to make life easier for teams during A/D.</p>
 
-<h2 id="description" class="header-anchor-wrapper">Description
-  <a href="#description" class="header-anchor-link">
+<h2 id="-what-is-cookiefarm" class="header-anchor-wrapper">🧠 What is CookieFarm?
+  <a href="#-what-is-cookiefarm" class="header-anchor-link">
     <svg width="16px" height="16px" viewBox="0 0 24 24">
 <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -316,14 +301,10 @@
   </a>
 </h2>
 
-<p>K!nd4SUS CTF is a Jeopardy-style Capture-The-Flag competition created with love by the K!nd4SUS Team, from the University of Milan.
-The challenges topics include binary exploitation, web security, reverse engineering, web3, forensics, OSINT, cryptography, and creative miscellaneous challenges!</p>
-<ul>
-<li><a href="https://ctf.k1nd4sus.it/">Url</a></li>
-</ul>
+<p>CookieFarm is a hybrid Go + Python A/D CTF framework inspired by DestructiveFarm, but with a significantly leaner approach in terms of RAM and CPU consumption. Our philosophy is &ldquo;zero distractions&rdquo;: You just write the exploit logic; we take care of the rest.</p>
 
-<h2 id="performance-summary" class="header-anchor-wrapper">Performance Summary
-  <a href="#performance-summary" class="header-anchor-link">
+<h2 id="-whats-new-in-v101" class="header-anchor-wrapper">🚀 What&rsquo;s new in v1.0.1?
+  <a href="#-whats-new-in-v101" class="header-anchor-link">
     <svg width="16px" height="16px" viewBox="0 0 24 24">
 <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -338,14 +319,18 @@ The challenges topics include binary exploitation, web security, reverse enginee
 </h2>
 
 <ul>
-<li><strong>CTFs</strong>: 10/?</li>
-<li><strong>Total points</strong>: 2462</li>
-<li><strong>Position</strong>: 16/207</li>
-<li><strong>Rating points</strong>: 6.059</li>
+<li>Responsive dashboard in HTMX and tailwindcss</li>
+<li>Backend in golang with Fiber framework</li>
+<li>Dynamic protocol loader</li>
+<li>Shared configuration</li>
+<li>Client golang with python exploiter manager integration</li>
+<li>Backend authentication for make sure to not have snitch</li>
+<li>Docker configuration for fast and easy server deploy</li>
+<li>Sqlite3 database for portability and efficiency</li>
 </ul>
 
-<h2 id="writeups" class="header-anchor-wrapper">Writeups
-  <a href="#writeups" class="header-anchor-link">
+<h2 id="-how-it-works" class="header-anchor-wrapper">🛠️ How it works
+  <a href="#-how-it-works" class="header-anchor-link">
     <svg width="16px" height="16px" viewBox="0 0 24 24">
 <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -359,9 +344,10 @@ The challenges topics include binary exploitation, web security, reverse enginee
   </a>
 </h2>
 
+<p><img alt="SCHEMA" src="https://github.com/ByteTheCookies/CookieFarm/blob/main/assets/arch_farm.png?raw=true"></p>
 
-<h4 id="crypto" class="header-anchor-wrapper">Crypto
-  <a href="#crypto" class="header-anchor-link">
+<h2 id="-try-it-now" class="header-anchor-wrapper">🔗 Try it now!
+  <a href="#-try-it-now" class="header-anchor-link">
     <svg width="16px" height="16px" viewBox="0 0 24 24">
 <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -373,11 +359,48 @@ The challenges topics include binary exploitation, web security, reverse enginee
 
 </svg>
   </a>
-</h4>
+</h2>
+
+<p>👉 ByteTheCookies/Cookiefarm on GitHub: <a href="https://github.com/ByteTheCookies/Cookiefarm">https://github.com/ByteTheCookies/Cookiefarm</a></p>
+
+<h2 id="-why-choose-cookiefarm" class="header-anchor-wrapper">🍪 Why choose CookieFarm?
+  <a href="#-why-choose-cookiefarm" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
 
 <ul>
-<li><a href="/writeups/k1ndasus2025/keyinthehaystack/">Key in the haystack</a></li>
+<li>Hybrid Go + Python architecture.</li>
+<li>Automatic handling of exploits, flags, and scores.</li>
+<li>Total focus on writing exploits.</li>
+<li>Open source with an MIT license.</li>
 </ul>
+
+<h2 id="-special-thanks" class="header-anchor-wrapper">❤️ Special Thanks
+  <a href="#-special-thanks" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
+
+<p>Huge shoutout to the ByteTheCookie team for building a performance-driven, distraction-free environment tailored for real CTF scenarios in particular to @akiidjk @suga @vympel7 @Dabi1290.</p>
 
 </article>
 </div>
