@@ -22,7 +22,7 @@ CookieFarm is a hybrid Go + Python A/D CTF framework inspired by DestructiveFarm
 - Dynamic protocol loader
 - Shared configuration
 - Client golang with python exploiter manager integration
-- Backend authentication for make sure to not have snitch
+- Backend authentication ensures that there is no snitch.
 - Docker configuration for fast and easy server deploy
 - Sqlite3 database for portability and efficiency
 
