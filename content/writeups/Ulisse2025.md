@@ -27,7 +27,7 @@ Open to participants of all skill levels, it aims to provide a learning experien
 - **CTFs**: 12/29
 - **Total points**: 1923.000
 - **Position**: 11/169
-- **Rating points**: ?
+- **Rating points**: 8.533
 
 ## Writeups
 

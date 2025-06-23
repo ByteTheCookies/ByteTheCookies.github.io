@@ -36,7 +36,7 @@ Good luck, and happy hacking!
 - **CTFs**: 14/55
 - **Total points**: 4769
 - **Position**: 41/1033
-- **Rating points**: ?
+- **Rating points**: 7.644
 
 ## Writeups
 
