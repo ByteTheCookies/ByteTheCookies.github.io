@@ -229,6 +229,57 @@
 
 <div class="postcard-layout content-margin">
     
+        <a href="http://localhost:1313/writeups/cornctf2025/">
+            <div class="postcard-item">
+                <div class="postcard-title">
+                    <span>CornCTF 2025</span>
+                </div>
+                <div class="postcard-summary">
+                    <span> CornCTF 2025 Description A CTF by a friendly team of farmers. Includes challenges of the following categories:
+Url Discord Performance Summary CTFs: 8/22 Total points: 1966 Position: 9/270 Rating points: ? Writeups Category ECRSA </span>
+                </div>
+                <div class="postcard-metadata">
+                    <span>2025/06/23 · 
+    
+        
+    
+
+    
+        
+            <span>Writeup</span>
+        
+    
+</span>
+                </div>
+            </div>
+        </a>
+    
+        <a href="http://localhost:1313/writeups/cornctf2025/ecrsa/">
+            <div class="postcard-item">
+                <div class="postcard-title">
+                    <span>ECRSA</span>
+                </div>
+                <div class="postcard-summary">
+                    <span>ECRSA RSA or Elliptic Curves? Why not both?
+Introduction ECRSA was a crypto CTF from cornCTF 2025.
+#!/usr/bin/env python3 from secret_params import curve_p, a, b, order, secret_point_x, secret_point_y import os FLAG = os.getenv(&amp;quot;FLAG&amp;quot;, &amp;quot;corn{__redacted_redacted_redacted__redacted_redacted_redacted__}&amp;quot;).encode() assert FLAG.startswith(b&amp;quot;corn{&amp;quot;) and FLAG.endswith(b&amp;quot;}&amp;quot;) assert len(FLAG) == 64 def sign(m, x): if m == 0 or m == 1 or m == n-1: print(&amp;quot;No weak messages allowed here&amp;quot;) return None try: user_point = E.lift_x(x) except ValueError: print(f&amp;quot;Invalid point: {x} does not describe any point on the curve&amp;quot;) return None sig = pow(m, d, n) sig = sig * user_point &#43; secret_point return sig.</span>
+                </div>
+                <div class="postcard-metadata">
+                    <span>2025/06/23 · 
+    
+        
+    
+
+    
+        
+            <span>Writeup</span>
+        
+    
+</span>
+                </div>
+            </div>
+        </a>
+    
         <a href="http://localhost:1313/writeups/ulisse2025/stackbank1/">
             <div class="postcard-item">
                 <div class="postcard-title">
@@ -297,63 +348,6 @@ Url Discord Performance Summary CTFs: 12/29 Total points: 1923.000 Position: 11/
                 </div>
                 <div class="postcard-metadata">
                     <span>2025/04/08 · 
-    
-        
-    
-
-    
-        
-            <span>Writeup</span>
-        
-    
-</span>
-                </div>
-            </div>
-        </a>
-    
-        <a href="http://localhost:1313/writeups/k1ndasus2025/keyinthehaystack/">
-            <div class="postcard-item">
-                <div class="postcard-title">
-                    <span>Key in the haystack</span>
-                </div>
-                <div class="postcard-summary">
-                    <span>Confusion I&amp;rsquo;ve encrypted my secret message with RSA.
-Easy stuff, right?
-Well, I&amp;rsquo;m not giving you the key outright&amp;hellip;
-I&amp;rsquo;ve hidden it in a haystack!
-Sure, a key is not a needle, and this haystack is not that big.
-It shouldn&amp;rsquo;t take more than 10&amp;rsquo; to find it, if you have an half-decent metal detector.
-Good luck!
-Introduction Confusion was a crypto CTF from K!nd4SUS CTF 2025.
-from Crypto.Util import number from base64 import b64encode prime = lambda: number.</span>
-                </div>
-                <div class="postcard-metadata">
-                    <span>2025/03/24 · 
-    
-        
-    
-
-    
-        
-            <span>Writeup</span>
-        
-    
-</span>
-                </div>
-            </div>
-        </a>
-    
-        <a href="http://localhost:1313/writeups/k1ndasus2025/">
-            <div class="postcard-item">
-                <div class="postcard-title">
-                    <span>K!nd4SUS CTF 2025</span>
-                </div>
-                <div class="postcard-summary">
-                    <span> K!nd4SUS CTF 2025 Description K!nd4SUS CTF is a Jeopardy-style Capture-The-Flag competition created with love by the K!nd4SUS Team, from the University of Milan. The challenges topics include binary exploitation, web security, reverse engineering, web3, forensics, OSINT, cryptography, and creative miscellaneous challenges!
-Url Performance Summary CTFs: 10/? Total points: 2462 Position: 16/207 Rating points: 6.059 Writeups Crypto Key in the haystack </span>
-                </div>
-                <div class="postcard-metadata">
-                    <span>2025/03/24 · 
     
         
     

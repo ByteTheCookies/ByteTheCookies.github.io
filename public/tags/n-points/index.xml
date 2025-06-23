@@ -5,21 +5,6 @@
     <link>http://localhost:1313/tags/n-points/</link>
     <description>Recent content in N Points on ByteTheCookies</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Tue, 08 Apr 2025 18:05:04 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/n-points/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title></title>
-      <link>http://localhost:1313/writeups/ulisse2025/telemetry/</link>
-      <pubDate>Tue, 08 Apr 2025 18:05:04 +0200</pubDate>
-      
-      <guid>http://localhost:1313/writeups/ulisse2025/telemetry/</guid>
-      <description>Telemetry Description: &amp;hellip;
-Introduction &amp;hellip;
-Source &amp;hellip;
-# filename: file.py &amp;hellip;
-Solution &amp;hellip;
-# filename: file.py $ flag: flag{redacted} Author: ... </description>
-    </item>
-    
+    <language>en</language><atom:link href="http://localhost:1313/tags/n-points/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
