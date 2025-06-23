@@ -176,9 +176,9 @@ def solve_curve_parameters(r):
 ### Getting the flag
 The idea is to use an LSB-Oracle:
 
-> $c \equiv m^e \pmod n$
-> $(2^ec)^d \equiv 2m \pmod n$
-> the previous value is even if $m \leq n/2$, odd otherwise (because $n$ is odd)
+> $c \equiv m^e \pmod n$ <br>
+> $(2^ec)^d \equiv 2m \pmod n$ <br>
+> the previous value is even if $m \leq n/2$, odd otherwise (because $n$ is odd) <br>
 > so we can construct bit by bit the value of $m$ by multiplying $c$ by $2^e$ each time
 
 In the context of the challenge we need a way to distinguish odd and even values of `pow(m, d, n)`. This can be achieved with a point of order $2$ on the curve, since when `pow(m, d, n)` is even, multiplying it with our given point $P$ will give the identity, which added to `secret_point` will give this one back, otherwise we'll get $P$ plus `secret_point`.
