@@ -34,6 +34,11 @@ A CTF by a friendly team of farmers. Includes challenges of the following catego
 
 ## Writeups
 
-#### Category
+#### Crypto
 
 - [ECRSA](/writeups/cornctf2025/ecrsa/)
+
+#### Web
+
+- [Aeronaut](/writeups/cornctf2025/aeronaut/)
+- [Simple-chat](/writeups/cornctf2025/simple-chat/)

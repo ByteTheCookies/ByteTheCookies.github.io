@@ -6,7 +6,17 @@
     <description>Recent content in 17 Solves on ByteTheCookies</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 24 Mar 2025 16:25:00 +0100</lastBuildDate><atom:link href="http://localhost:1313/tags/17-solves/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 08 Jul 2025 20:33:23 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/17-solves/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>aeronaut</title>
+      <link>http://localhost:1313/writeups/cornctf2025/aeronaut/</link>
+      <pubDate>Tue, 08 Jul 2025 20:33:23 +0200</pubDate>
+      
+      <guid>http://localhost:1313/writeups/cornctf2025/aeronaut/</guid>
+      <description>Aeronaut Description: Aeronaut is a gambling game in which you bet on a multiplier. The goal is to get 100.000.000$. Good luck!
+Introduction The last round of the CyberCup2025 competition was very good, with a challenging CTF. The challenge is a gambling game in which you bet on a multiplier. The goal is to earn 100,000,000 dollars. The game is implemented in Python using WebSocket and uses insecure randomness to generate multipliers.</description>
+    </item>
+    
     <item>
       <title>Key in the haystack</title>
       <link>http://localhost:1313/writeups/k1ndasus2025/keyinthehaystack/</link>

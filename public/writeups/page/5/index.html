@@ -229,6 +229,59 @@
 
 <div class="postcard-layout content-margin">
     
+        <a href="http://localhost:1313/writeups/m0lecon2025beginner/smallauth/">
+            <div class="postcard-item">
+                <div class="postcard-title">
+                    <span>SmallAuth</span>
+                </div>
+                <div class="postcard-summary">
+                    <span>SmallAuth Description: I am trying to authenticate but I totally forgot the password, I am screwed!!
+Introduction SmallAuth was a crypto CTF from ## m0leCon 2025 Beginner CTF organized by pwnthem0le.
+from secret import flag, password import signal from Crypto.Util.number import ( bytes_to_long, long_to_bytes, getRandomRange, ) from hashlib import sha256 import os p = 5270716116965698502689689671130781219142402682027195438035167686031865721400130496197382604002325978977917823871038888373085118354500422489134429970793096193438377786459821943518301475690713718745453633483219759953295608491564410082912515903134742148257215875373630412689071144760281744294536079770426517968527527493218935968663682019557492826204481612047410320146277333682801905360248457200458458982939490478875010628228329816347137904546340745621643293109290190631986349878770000332829974864263568375989597228583046155053640478805958492876860588535257030218304135983005840752161675722091031537527270835889607480661582626985375282908187505873350960702103509549729997875801557977556414403796543012974965425751833424162010931383924392626875437842811285456196644742198291857617009931030974156758885265756942730260677252867252555430773014258836269996233420470473918801854039549216620237517053340745984578639983387808534554731327 assert len(password) &amp;gt; 64 def timeout_handler(_1, _2): raise TimeoutError class AuthProtocol: def __init__(self, password: bytes): super().</span>
+                </div>
+                <div class="postcard-metadata">
+                    <span>2024/12/21 · 
+    
+        
+    
+
+    
+        
+            <span>Writeup</span>
+        
+    
+</span>
+                </div>
+            </div>
+        </a>
+    
+        <a href="http://localhost:1313/writeups/ironctf2024/moviereviewapp/">
+            <div class="postcard-item">
+                <div class="postcard-title">
+                    <span>MovieReviewApp</span>
+                </div>
+                <div class="postcard-summary">
+                    <span>MovieReviewApp Description: Last web challenge done in the ctf (unfortunately) also one of the fastest to do if you know the right tools
+Introduction The challenge looks like a very simple site in pure html where we see reviews on movies
+Source Is not present the source BUT&amp;hellip;
+Solution The first thing that stands out is that in the URL there are extensions, so we understand that probably the system behind it is not very complex, in fact, going to the root endpoint we notice</span>
+                </div>
+                <div class="postcard-metadata">
+                    <span>2024/10/07 · 
+    
+        
+    
+
+    
+        
+            <span>Writeup</span>
+        
+    
+</span>
+                </div>
+            </div>
+        </a>
+    
         <a href="http://localhost:1313/writeups/ironctf2024/b64siteviewer/">
             <div class="postcard-item">
                 <div class="postcard-title">
@@ -305,58 +358,6 @@ Introduction Rivest, Shamir, Adleman 2 was a crypto CTF from IRON CTF 2024 organ
             </div>
         </a>
     
-        <a href="http://localhost:1313/writeups/ironctf2024/rivest_shamir_adleman_1/">
-            <div class="postcard-item">
-                <div class="postcard-title">
-                    <span>Rivest, Shamir, Adleman 1</span>
-                </div>
-                <div class="postcard-summary">
-                    <span>Rivest, Shamir, Adleman 1 Description: Little John came across an article on RSA encryption. Intrigued but only partially understanding it, he decided to write a script and started using it to communicate with his aunt. Can you figure out what he&amp;rsquo;s discussing?
-Introduction Rivest, Shamir, Adleman 1 was a crypto CTF from IRON CTF 2024 organized by Team 1nf1n1ty.
-from Crypto.Util.number import * m = open(&amp;quot;flag.txt&amp;quot;,&#39;rb&#39;).read() m = bytes_to_long(m) p = getPrime(1024) q = getPrime(1024) N = p*q e = getRandomNBitInteger(16) c = pow(m,e,N) p_ = p &amp;gt;&amp;gt; (200) print(f&amp;quot;{(p_,N,e,c)=}&amp;quot;) # (p_,N,e,c)=(78251056776113743922781362749830646373211175353656790171039496888342171662458492506297767981353887690931452440620588460424832375197427124943346919084717792877241717599798699596252163346397300952154047511640741738581061446499402444306089020012841936, 19155750974833741583193175954281590563726157170945198297004159460941099410928572559396586603869227741976115617781677050055003534675899765832064973073604801444516483333718433505641277789211533814981212445466591143787572063072012686620553662750418892611152219385262027111838502078590253300365603090810554529475615741997879081475539139083909537636187870144455396293865731172472266214152364966965486064463013169673277547545796210067912520397619279792527485993120983571116599728179232502586378026362114554073310185828511219212318935521752030577150436386831635283297669979721206705401841108223134880706200280776161816742511, 37929, 18360638515927091408323573987243771860358592808066239563037326262998090628041137663795836701638491309626921654806176147983008835235564144131508890188032718841579547621056841653365205374032922110171259908854680569139265494330638365871014755623899496058107812891247359641915061447326195936351276776429612672651699554362477232678286997748513921174452554559807152644265886002820939933142395032126999791934865013547916035484742277215894738953606577594559190553807625082545082802319669474061085974345302655680800297032801212853412563127910754108599054834023083534207306068106714093193341748990945064417347044638122445194693) It is a typical rsa challenge where you&amp;rsquo;re given a &amp;ldquo;leak&amp;rdquo;: some part of the private key which allows you to retrieve it fully.</span>
-                </div>
-                <div class="postcard-metadata">
-                    <span>2024/10/06 · 
-    
-        
-    
-
-    
-        
-            <span>Writeup</span>
-        
-    
-</span>
-                </div>
-            </div>
-        </a>
-    
-        <a href="http://localhost:1313/writeups/ironctf2024/">
-            <div class="postcard-item">
-                <div class="postcard-title">
-                    <span>IRON CTF 2024</span>
-                </div>
-                <div class="postcard-summary">
-                    <span>IRON CTF 2024 Description Welcome to the inaugural edition of IRON CTF (Intrusion Reconnaissance and Offensive Navigation CTF)!
-Team 1nf1n1ty from SASTRA Deemed University invites you to embark on an exciting online Jeopardy-style Capture the Flag challenge. Whether you&amp;rsquo;re just starting out or a seasoned hacker, this event promises the perfect platform to push your limits, hone your skills, and enjoy the thrill of competition.
-Tackle diverse challenges in categories like Web Exploitation, Game Hacking, Reverse Engineering, Cryptography, Forensics, Binary Exploitation, and more.</span>
-                </div>
-                <div class="postcard-metadata">
-                    <span>2024/10/06 · 
-    
-        
-    
-
-    
-        
-            <span>Writeup</span>
-        
-    
-</span>
-                </div>
-            </div>
-        </a>
-    
     
     <ul class="pagination pagination-default">
       <li class="page-item">
@@ -384,7 +385,7 @@ Tackle diverse challenges in categories like Web Exploitation, Game Hacking, Rev
         <a href="/writeups/page/6/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
       </li>
       <li class="page-item">
-        <a href="/writeups/page/9/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        <a href="/writeups/page/10/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
       </li>
     </ul>
 </div>

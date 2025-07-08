@@ -229,6 +229,58 @@
 
 <div class="postcard-layout content-margin">
     
+        <a href="http://localhost:1313/writeups/ironctf2024/rivest_shamir_adleman_1/">
+            <div class="postcard-item">
+                <div class="postcard-title">
+                    <span>Rivest, Shamir, Adleman 1</span>
+                </div>
+                <div class="postcard-summary">
+                    <span>Rivest, Shamir, Adleman 1 Description: Little John came across an article on RSA encryption. Intrigued but only partially understanding it, he decided to write a script and started using it to communicate with his aunt. Can you figure out what he&amp;rsquo;s discussing?
+Introduction Rivest, Shamir, Adleman 1 was a crypto CTF from IRON CTF 2024 organized by Team 1nf1n1ty.
+from Crypto.Util.number import * m = open(&amp;quot;flag.txt&amp;quot;,&#39;rb&#39;).read() m = bytes_to_long(m) p = getPrime(1024) q = getPrime(1024) N = p*q e = getRandomNBitInteger(16) c = pow(m,e,N) p_ = p &amp;gt;&amp;gt; (200) print(f&amp;quot;{(p_,N,e,c)=}&amp;quot;) # (p_,N,e,c)=(78251056776113743922781362749830646373211175353656790171039496888342171662458492506297767981353887690931452440620588460424832375197427124943346919084717792877241717599798699596252163346397300952154047511640741738581061446499402444306089020012841936, 19155750974833741583193175954281590563726157170945198297004159460941099410928572559396586603869227741976115617781677050055003534675899765832064973073604801444516483333718433505641277789211533814981212445466591143787572063072012686620553662750418892611152219385262027111838502078590253300365603090810554529475615741997879081475539139083909537636187870144455396293865731172472266214152364966965486064463013169673277547545796210067912520397619279792527485993120983571116599728179232502586378026362114554073310185828511219212318935521752030577150436386831635283297669979721206705401841108223134880706200280776161816742511, 37929, 18360638515927091408323573987243771860358592808066239563037326262998090628041137663795836701638491309626921654806176147983008835235564144131508890188032718841579547621056841653365205374032922110171259908854680569139265494330638365871014755623899496058107812891247359641915061447326195936351276776429612672651699554362477232678286997748513921174452554559807152644265886002820939933142395032126999791934865013547916035484742277215894738953606577594559190553807625082545082802319669474061085974345302655680800297032801212853412563127910754108599054834023083534207306068106714093193341748990945064417347044638122445194693) It is a typical rsa challenge where you&amp;rsquo;re given a &amp;ldquo;leak&amp;rdquo;: some part of the private key which allows you to retrieve it fully.</span>
+                </div>
+                <div class="postcard-metadata">
+                    <span>2024/10/06 · 
+    
+        
+    
+
+    
+        
+            <span>Writeup</span>
+        
+    
+</span>
+                </div>
+            </div>
+        </a>
+    
+        <a href="http://localhost:1313/writeups/ironctf2024/">
+            <div class="postcard-item">
+                <div class="postcard-title">
+                    <span>IRON CTF 2024</span>
+                </div>
+                <div class="postcard-summary">
+                    <span>IRON CTF 2024 Description Welcome to the inaugural edition of IRON CTF (Intrusion Reconnaissance and Offensive Navigation CTF)!
+Team 1nf1n1ty from SASTRA Deemed University invites you to embark on an exciting online Jeopardy-style Capture the Flag challenge. Whether you&amp;rsquo;re just starting out or a seasoned hacker, this event promises the perfect platform to push your limits, hone your skills, and enjoy the thrill of competition.
+Tackle diverse challenges in categories like Web Exploitation, Game Hacking, Reverse Engineering, Cryptography, Forensics, Binary Exploitation, and more.</span>
+                </div>
+                <div class="postcard-metadata">
+                    <span>2024/10/06 · 
+    
+        
+    
+
+    
+        
+            <span>Writeup</span>
+        
+    
+</span>
+                </div>
+            </div>
+        </a>
+    
         <a href="http://localhost:1313/writeups/patriotctf2024/">
             <div class="postcard-item">
                 <div class="postcard-title">
@@ -306,60 +358,6 @@ import random from hashlib import sha256 import json import os from Crypto.</spa
             </div>
         </a>
     
-        <a href="http://localhost:1313/writeups/cyberspace2024/snake/">
-            <div class="postcard-item">
-                <div class="postcard-title">
-                    <span>Snake</span>
-                </div>
-                <div class="postcard-summary">
-                    <span>Snake Description: Can you slither to the win?
-Link to the binary: Elf file
-Introduction We are faced with a binary file written in Rust (you can see it by simply running strings snake | grep rustc) where we are made to play Snake, the goal is to get PRECISELY to 16525 points.
-Solution The solutions were actually different, some people used tools to analyze the memory of a process in real time, I preferred a &amp;lsquo;slower&amp;rsquo; approach, or rather the first thing that came to mind, so I opened binary ninja despite the file being stripped and looked for a value for constant exactly 0xa (i.</span>
-                </div>
-                <div class="postcard-metadata">
-                    <span>2024/09/02 · 
-    
-        
-    
-
-    
-        
-            <span>Writeup</span>
-        
-    
-</span>
-                </div>
-            </div>
-        </a>
-    
-        <a href="http://localhost:1313/writeups/cyberspace2024/feature_unlocked/">
-            <div class="postcard-item">
-                <div class="postcard-title">
-                    <span>Feature Unlocked</span>
-                </div>
-                <div class="postcard-summary">
-                    <span>Feature unlocked Description: The world&amp;rsquo;s coolest app has a brand new feature! Too bad it&amp;rsquo;s not released until after the CTF..
-Link: https://feature-unlocked-web-challs.csc.tf/
-Introduction Feature unlocked is part of the first wave of the web and is one of the first challanges I solved. Made by cryptocat, who we salute, it is a fairly simple challange if you read the code correctly.
-Source # filename: main.py import subprocess import base64 import json import time import requests import os from flask import Flask, request, render_template, make_response, redirect, url_for from Crypto.</span>
-                </div>
-                <div class="postcard-metadata">
-                    <span>2024/09/02 · 
-    
-        
-    
-
-    
-        
-            <span>Writeup</span>
-        
-    
-</span>
-                </div>
-            </div>
-        </a>
-    
     
     <ul class="pagination pagination-default">
       <li class="page-item">
@@ -387,7 +385,7 @@ Source # filename: main.py import subprocess import base64 import json import ti
         <a href="/writeups/page/7/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
       </li>
       <li class="page-item">
-        <a href="/writeups/page/9/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        <a href="/writeups/page/10/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
       </li>
     </ul>
 </div>

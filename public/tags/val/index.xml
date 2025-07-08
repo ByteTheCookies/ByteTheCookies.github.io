@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Val on ByteTheCookies</title>
+    <link>http://localhost:1313/tags/val/</link>
+    <description>Recent content in Val on ByteTheCookies</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 08 Jul 2025 20:33:28 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/val/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Simple Chat</title>
+      <link>http://localhost:1313/writeups/cornctf2025/simple-chat/</link>
+      <pubDate>Tue, 08 Jul 2025 20:33:28 +0200</pubDate>
+      
+      <guid>http://localhost:1313/writeups/cornctf2025/simple-chat/</guid>
+      <description>Simple-Chat Description: Simple web application to chat with your friends! Sometimes it does funny things and it&amp;rsquo;s ok like that
+Introduction &amp;hellip;
+Source &amp;hellip;
+# filename: file.py &amp;hellip;
+Solution &amp;hellip;
+# filename: exploit.py $ flag: corn{d0ubl3_uns4n1t1z4tion_d4mnnnn_f45a85f9d6346d8b} Author: akiidjk </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,7 +6,31 @@
     <description>Recent content in Web on ByteTheCookies</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 23 Jun 2025 18:30:32 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 08 Jul 2025 20:33:28 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Simple Chat</title>
+      <link>http://localhost:1313/writeups/cornctf2025/simple-chat/</link>
+      <pubDate>Tue, 08 Jul 2025 20:33:28 +0200</pubDate>
+      
+      <guid>http://localhost:1313/writeups/cornctf2025/simple-chat/</guid>
+      <description>Simple-Chat Description: Simple web application to chat with your friends! Sometimes it does funny things and it&amp;rsquo;s ok like that
+Introduction &amp;hellip;
+Source &amp;hellip;
+# filename: file.py &amp;hellip;
+Solution &amp;hellip;
+# filename: exploit.py $ flag: corn{d0ubl3_uns4n1t1z4tion_d4mnnnn_f45a85f9d6346d8b} Author: akiidjk </description>
+    </item>
+    
+    <item>
+      <title>aeronaut</title>
+      <link>http://localhost:1313/writeups/cornctf2025/aeronaut/</link>
+      <pubDate>Tue, 08 Jul 2025 20:33:23 +0200</pubDate>
+      
+      <guid>http://localhost:1313/writeups/cornctf2025/aeronaut/</guid>
+      <description>Aeronaut Description: Aeronaut is a gambling game in which you bet on a multiplier. The goal is to get 100.000.000$. Good luck!
+Introduction The last round of the CyberCup2025 competition was very good, with a challenging CTF. The challenge is a gambling game in which you bet on a multiplier. The goal is to earn 100,000,000 dollars. The game is implemented in Python using WebSocket and uses insecure randomness to generate multipliers.</description>
+    </item>
+    
     <item>
       <title>CornCTF 2025</title>
       <link>http://localhost:1313/writeups/cornctf2025/</link>
@@ -14,7 +38,7 @@
       
       <guid>http://localhost:1313/writeups/cornctf2025/</guid>
       <description> CornCTF 2025 Description A CTF by a friendly team of farmers. Includes challenges of the following categories:
-Url Discord Performance Summary CTFs: 8/22 Total points: 1966 Position: 9/270 Rating points: ? Writeups Category ECRSA </description>
+Url Discord Performance Summary CTFs: 8/22 Total points: 1966 Position: 9/270 Rating points: ? Writeups Crypto ECRSA Web Aeronaut Simple-chat </description>
     </item>
     
     <item>
