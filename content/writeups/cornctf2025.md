@@ -30,7 +30,7 @@ A CTF by a friendly team of farmers. Includes challenges of the following catego
 - **CTFs**: 8/22
 - **Total points**: 1966
 - **Position**: 9/270
-- **Rating points**: ?
+- **Rating points**: 8.811
 
 ## Writeups
 

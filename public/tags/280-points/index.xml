@@ -14,11 +14,9 @@
       
       <guid>http://localhost:1313/writeups/cornctf2025/simple-chat/</guid>
       <description>Simple-Chat Description: Simple web application to chat with your friends! Sometimes it does funny things and it&amp;rsquo;s ok like that
-Introduction &amp;hellip;
-Source &amp;hellip;
-# filename: file.py &amp;hellip;
-Solution &amp;hellip;
-# filename: exploit.py $ flag: corn{d0ubl3_uns4n1t1z4tion_d4mnnnn_f45a85f9d6346d8b} Author: akiidjk </description>
+Introduction Okay, this is a really nice challenge. This is a pretty second CTF web challenge. It&amp;rsquo;s a simple XSS with a twist.
+Source Let&amp;rsquo;s look at two parts of the FUNDAMENTAL code
+// filename: app.js app.post(&#39;/api/v1/insertChat&#39;, async (req, res) =&amp;gt; { const sender = req.body.sender; const receiver = req.body.receiver; var message = req.</description>
     </item>
     
     <item>

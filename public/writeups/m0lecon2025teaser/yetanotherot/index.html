@@ -304,37 +304,11 @@ import random from hashlib import sha256 import json import os from Crypto.">
     <h1 style='text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;'>Yet Another OT</h1>
 <p><strong>Description</strong>: Why do people always want to decrypt both messages?</p>
 
-<h2 id="disclaimer" class="header-anchor-wrapper">Disclaimer
-  <a href="#disclaimer" class="header-anchor-link">
-    <svg width="16px" height="16px" viewBox="0 0 24 24">
-<svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24" height="24" viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-    stroke-linejoin="round">
-    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
-</svg>
-
-</svg>
-  </a>
-</h2>
+<h2>Disclaimer</h2>
 
 <p>I wasn&rsquo;t able to solve this challenge during the competition, but managed to get to the solution after talking on discord to other competitors who very kindly helped me figure it out.</p>
 
-<h2 id="introduction" class="header-anchor-wrapper">Introduction
-  <a href="#introduction" class="header-anchor-link">
-    <svg width="16px" height="16px" viewBox="0 0 24 24">
-<svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24" height="24" viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-    stroke-linejoin="round">
-    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
-</svg>
-
-</svg>
-  </a>
-</h2>
+<h2>Introduction</h2>
 
 <p>Yet Another OT was a crypto CTF from <a href="https://ctftime.org/event/2440">m0leCon 2025</a> hosted by <a href="https://pwnthem0le.polito.it/">pwnthem0le</a>.</p>
 <pre  class="mc-prism hide language-text" ><code class="language-python">import random
@@ -430,20 +404,7 @@ if __name__ == &quot;__main__&quot;:
 </code></pre>
 <p>We can remotely interact with this service to recover the flag.</p>
 
-<h2 id="analysis" class="header-anchor-wrapper">Analysis
-  <a href="#analysis" class="header-anchor-link">
-    <svg width="16px" height="16px" viewBox="0 0 24 24">
-<svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24" height="24" viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-    stroke-linejoin="round">
-    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
-</svg>
-
-</svg>
-  </a>
-</h2>
+<h2>Analysis</h2>
 
 <p>Let&rsquo;s start with the functions:
 <code>jacobi(a, n)</code>
@@ -472,20 +433,7 @@ returns the first <code>s &gt;= start</code> such that <code>sample(s, N) == 1</
 <li>encrypts the flag with <code>AES</code> using <code>self.key</code> and sends it to the user</li>
 </ul>
 
-<h2 id="solution" class="header-anchor-wrapper">Solution
-  <a href="#solution" class="header-anchor-link">
-    <svg width="16px" height="16px" viewBox="0 0 24 24">
-<svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24" height="24" viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-    stroke-linejoin="round">
-    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
-</svg>
-
-</svg>
-  </a>
-</h2>
+<h2>Solution</h2>
 
 <p>The first objective is retrieving the <code>AES</code> key, so from each <code>pow(t, N, N)</code> I had to get <code>t</code>.
 My idea was to use <a href="https://en.wikipedia.org/wiki/Fermat%27s_little_theorem">Fermat&rsquo;s little theorem</a>, therefore setting <code>N</code> to be prime would make it so <code>tts == ts</code>. This allows easy recovery of <code>self.key</code> but it&rsquo;s also a grave mistake&hellip;

@@ -6,7 +6,17 @@
     <description>Recent content in Web on ByteTheCookies</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 08 Jul 2025 20:33:28 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 17 Jul 2025 17:51:20 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>L3akCTF 2025</title>
+      <link>http://localhost:1313/writeups/l3akctf2025/</link>
+      <pubDate>Thu, 17 Jul 2025 17:51:20 +0200</pubDate>
+      
+      <guid>http://localhost:1313/writeups/l3akctf2025/</guid>
+      <description> L3akCTF 2025 Description Beginner-friendly CTF. Challenge difficulty will range from beginner to expert. 10 categories: crypto, web, rev, pwn, forensics, osint, mobile, hardware/rf, hash cracking, and misc.
+Url Discord Performance Summary CTFs: 19/65 Total points: 950 Position: 201/1587 Rating points: 1.725 Writeups Hardware Beneath the Surface </description>
+    </item>
+    
     <item>
       <title>Simple Chat</title>
       <link>http://localhost:1313/writeups/cornctf2025/simple-chat/</link>
@@ -14,11 +24,9 @@
       
       <guid>http://localhost:1313/writeups/cornctf2025/simple-chat/</guid>
       <description>Simple-Chat Description: Simple web application to chat with your friends! Sometimes it does funny things and it&amp;rsquo;s ok like that
-Introduction &amp;hellip;
-Source &amp;hellip;
-# filename: file.py &amp;hellip;
-Solution &amp;hellip;
-# filename: exploit.py $ flag: corn{d0ubl3_uns4n1t1z4tion_d4mnnnn_f45a85f9d6346d8b} Author: akiidjk </description>
+Introduction Okay, this is a really nice challenge. This is a pretty second CTF web challenge. It&amp;rsquo;s a simple XSS with a twist.
+Source Let&amp;rsquo;s look at two parts of the FUNDAMENTAL code
+// filename: app.js app.post(&#39;/api/v1/insertChat&#39;, async (req, res) =&amp;gt; { const sender = req.body.sender; const receiver = req.body.receiver; var message = req.</description>
     </item>
     
     <item>
@@ -38,7 +46,7 @@ Introduction The last round of the CyberCup2025 competition was very good, with 
       
       <guid>http://localhost:1313/writeups/cornctf2025/</guid>
       <description> CornCTF 2025 Description A CTF by a friendly team of farmers. Includes challenges of the following categories:
-Url Discord Performance Summary CTFs: 8/22 Total points: 1966 Position: 9/270 Rating points: ? Writeups Crypto ECRSA Web Aeronaut Simple-chat </description>
+Url Discord Performance Summary CTFs: 8/22 Total points: 1966 Position: 9/270 Rating points: 8.811 Writeups Crypto ECRSA Web Aeronaut Simple-chat </description>
     </item>
     
     <item>

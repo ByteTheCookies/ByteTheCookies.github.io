@@ -304,20 +304,7 @@ import random from secrets import randbelow, randbits from flag import FLAG CIPH
     <h1 style='text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;'> Some Trick </h1>
 <p><strong>Description</strong>: Bob and Alice found a futuristic version of opunssl and replaced all their needs for doofy wellmen.</p>
 
-<h2 id="introduction" class="header-anchor-wrapper">Introduction
-  <a href="#introduction" class="header-anchor-link">
-    <svg width="16px" height="16px" viewBox="0 0 24 24">
-<svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24" height="24" viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-    stroke-linejoin="round">
-    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
-</svg>
-
-</svg>
-  </a>
-</h2>
+<h2>Introduction</h2>
 
 <p>Some Trick was the first cryptography challenge in the 2024 edition of SekaiCTF. The challenge implements a key exchange based on a set of permutations and asks us to retrieve the flag that was used as a key in Bob&rsquo;s first encryption.</p>
 <pre  class="mc-prism hide language-text" ><code class="language-python">import random
@@ -384,20 +371,7 @@ bob_decr = enc(alice_encr, bob_key, [inverse(i) for i in G])
 print(&quot;bob says&quot;, bob_decr)
 </code></pre>
 
-<h2 id="solution" class="header-anchor-wrapper">Solution
-  <a href="#solution" class="header-anchor-link">
-    <svg width="16px" height="16px" viewBox="0 0 24 24">
-<svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24" height="24" viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-    stroke-linejoin="round">
-    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
-</svg>
-
-</svg>
-  </a>
-</h2>
+<h2>Solution</h2>
 
 <p>The first thing we do is retrieve the <code>CIPHER_SUITE</code> variable to set the random seed and reconstruct the set of permutations G, then we care about retrieving <code>bob_key</code> to ultimately recover the flag.</p>
 <pre  class="mc-prism hide language-text" ><code class="language-python">s = int(r.recvline().strip().decode().split('.')[-1])

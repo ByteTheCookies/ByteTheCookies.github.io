@@ -6,7 +6,17 @@
     <description>Recent content in Misc on ByteTheCookies</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 23 Jun 2025 18:30:32 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/misc/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 17 Jul 2025 17:51:20 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/misc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>L3akCTF 2025</title>
+      <link>http://localhost:1313/writeups/l3akctf2025/</link>
+      <pubDate>Thu, 17 Jul 2025 17:51:20 +0200</pubDate>
+      
+      <guid>http://localhost:1313/writeups/l3akctf2025/</guid>
+      <description> L3akCTF 2025 Description Beginner-friendly CTF. Challenge difficulty will range from beginner to expert. 10 categories: crypto, web, rev, pwn, forensics, osint, mobile, hardware/rf, hash cracking, and misc.
+Url Discord Performance Summary CTFs: 19/65 Total points: 950 Position: 201/1587 Rating points: 1.725 Writeups Hardware Beneath the Surface </description>
+    </item>
+    
     <item>
       <title>CornCTF 2025</title>
       <link>http://localhost:1313/writeups/cornctf2025/</link>
@@ -14,7 +24,7 @@
       
       <guid>http://localhost:1313/writeups/cornctf2025/</guid>
       <description> CornCTF 2025 Description A CTF by a friendly team of farmers. Includes challenges of the following categories:
-Url Discord Performance Summary CTFs: 8/22 Total points: 1966 Position: 9/270 Rating points: ? Writeups Crypto ECRSA Web Aeronaut Simple-chat </description>
+Url Discord Performance Summary CTFs: 8/22 Total points: 1966 Position: 9/270 Rating points: 8.811 Writeups Crypto ECRSA Web Aeronaut Simple-chat </description>
     </item>
     
     <item>
