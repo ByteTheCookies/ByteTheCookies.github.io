@@ -4,6 +4,10 @@
 
 Utils section for those developing the pages
 
+### Setup
+- `git clone --recurse-submodules git@github.com:ByteTheCookies/ByteTheCookies.github.io.git`
+- Install hugo v0.131.0
+
 ### Configuration
 
 - The file to edit for the navbar is in /config/params
