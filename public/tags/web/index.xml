@@ -6,7 +6,18 @@
     <description>Recent content in Web on ByteTheCookies</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 17 Jul 2025 17:51:20 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Jul 2025 09:09:33 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Word Wide Flag CTF 2025</title>
+      <link>http://localhost:1313/writeups/wwfctf2025/</link>
+      <pubDate>Tue, 29 Jul 2025 09:09:33 +0200</pubDate>
+      
+      <guid>http://localhost:1313/writeups/wwfctf2025/</guid>
+      <description> World Wide CTF 2025 Description Hack, solve, and conquer — a CTF designed to challenge minds of all levels. World Wide Flags is back this year with World Wide CTF 2025!
+More Prizes, More Categories, and Much More Fun!
+Url Discord Performance Summary CTFs: 20/57 Total points: 6537 Position: 24/850 Rating points: 12.510 Writeups Category Blank Login </description>
+    </item>
+    
     <item>
       <title>L3akCTF 2025</title>
       <link>http://localhost:1313/writeups/l3akctf2025/</link>
@@ -328,6 +339,17 @@ Source The source has comments added later to allow a better understanding of th
       <guid>http://localhost:1313/writeups/n00bzctf2024/</guid>
       <description> N00bz CTF 2024 Description A 48 hours CTF hosted by n00bz for n00bz. Organized with beginner friendly challenges (and some hard ones), n00bzCTF is dedicated to make cyber security more friendly and approachable for complete n00bz.
 Url Discord Performance Summary CTFs: 31/32 Total points: 9794.000 Position: 24/967 Rating points: 24.067 Writeups Web File Sharing Portal Misc Waas </description>
+    </item>
+    
+    <item>
+      <title>Blank Login</title>
+      <link>http://localhost:1313/writeups/wwfctf2025/blank-login/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/writeups/wwfctf2025/blank-login/</guid>
+      <description>Blank Login Description: Hm, I don&amp;rsquo;t remember, probably something about three databases.
+Introduction This is the third web application I&amp;rsquo;ve exploited. It&amp;rsquo;s a very cool challenge, not too complex, and very fun. There&amp;rsquo;s a not-very-easy race condition to spot. In fact, I think that&amp;rsquo;s the most difficult part. So, let&amp;rsquo;s start.
+We have a small Flask application with about 200 lines of code, so it&amp;rsquo;s not too bad. The first page is a login page without a register page.</description>
     </item>
     
   </channel>

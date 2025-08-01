@@ -7,6 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Word Wide Flag CTF 2025</title>
+      <link>http://localhost:1313/writeups/wwfctf2025/</link>
+      <pubDate>Tue, 29 Jul 2025 09:09:33 +0200</pubDate>
+      
+      <guid>http://localhost:1313/writeups/wwfctf2025/</guid>
+      <description> World Wide CTF 2025 Description Hack, solve, and conquer — a CTF designed to challenge minds of all levels. World Wide Flags is back this year with World Wide CTF 2025!
+More Prizes, More Categories, and Much More Fun!
+Url Discord Performance Summary CTFs: 20/57 Total points: 6537 Position: 24/850 Rating points: 12.510 Writeups Category Blank Login </description>
+    </item>
+    
+    <item>
       <title>L3akCTF 2025</title>
       <link>http://localhost:1313/writeups/l3akctf2025/</link>
       <pubDate>Thu, 17 Jul 2025 17:51:20 +0200</pubDate>
@@ -566,6 +577,17 @@ Url Discord Performance Summary CTFs: 31/32 Total points: 9794.000 Position: 24/
       <guid>http://localhost:1313/writeups/l3akctf2025/beneath-the-surface/</guid>
       <description>Beneath the Surface Description: On the surface, this signal is nothing but meaningless noise — a mere whisper of the wind. But dive deeper into this transmission, and a storm begins to take shape, with gray skies gathering on the horizon. Can you navigate through the static and uncover what lurks beneath the surface of the wav — before it’s too late?
 File Your browser does not support the audio element.</description>
+    </item>
+    
+    <item>
+      <title>Blank Login</title>
+      <link>http://localhost:1313/writeups/wwfctf2025/blank-login/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/writeups/wwfctf2025/blank-login/</guid>
+      <description>Blank Login Description: Hm, I don&amp;rsquo;t remember, probably something about three databases.
+Introduction This is the third web application I&amp;rsquo;ve exploited. It&amp;rsquo;s a very cool challenge, not too complex, and very fun. There&amp;rsquo;s a not-very-easy race condition to spot. In fact, I think that&amp;rsquo;s the most difficult part. So, let&amp;rsquo;s start.
+We have a small Flask application with about 200 lines of code, so it&amp;rsquo;s not too bad. The first page is a login page without a register page.</description>
     </item>
     
   </channel>

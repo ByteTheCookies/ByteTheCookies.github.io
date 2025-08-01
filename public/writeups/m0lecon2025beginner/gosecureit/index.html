@@ -309,11 +309,37 @@ Source // filename: secret.go package secret var JwtSecretKey = []byte(&#34;schr
     <h1 style='text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;'>GoSecureIt</h1>
 <p><strong>Description</strong>: I&rsquo;ve found this website under construction, at the moment you can only register, but I think there&rsquo;s something strange in the cookie</p>
 
-<h2>Introduction</h2>
+<h2 id="introduction" class="header-anchor-wrapper">Introduction
+  <a href="#introduction" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
 
 <p>We are faced with an application written in go, not very complex with several files, but already looking at the folder tree we see the secret folder with secret.go inside and this code</p>
 
-<h2>Source</h2>
+<h2 id="source" class="header-anchor-wrapper">Source
+  <a href="#source" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
 
 <pre  class="mc-prism hide language-text" ><code class="language-go">// filename: secret.go
 package secret
@@ -333,7 +359,20 @@ r.GET(&quot;/flag&quot;, handler.AuthMiddleware(), func(c *gin.Context) {
 </code></pre>
 <p>We can see that the role value is checked to see if it is admin, in which case the flag is printed, even though with c.GET it looks like it takes a get parameter it actually takes the value from the cookie we need to re-sign.</p>
 
-<h2>Solution</h2>
+<h2 id="solution" class="header-anchor-wrapper">Solution
+  <a href="#solution" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
 
 <p>So to solve the challenge, all we have to do is modify the cookie we get when we log in by changing the role to admin and signing it with the leaked key.</p>
 <pre  class="mc-prism hide language-text" ><code class="language-python"># filename: exploit.py

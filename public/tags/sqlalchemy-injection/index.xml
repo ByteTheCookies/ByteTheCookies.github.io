@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SqlAlchemy Injection on ByteTheCookies</title>
+    <link>http://localhost:1313/tags/sqlalchemy-injection/</link>
+    <description>Recent content in SqlAlchemy Injection on ByteTheCookies</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="http://localhost:1313/tags/sqlalchemy-injection/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blank Login</title>
+      <link>http://localhost:1313/writeups/wwfctf2025/blank-login/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/writeups/wwfctf2025/blank-login/</guid>
+      <description>Blank Login Description: Hm, I don&amp;rsquo;t remember, probably something about three databases.
+Introduction This is the third web application I&amp;rsquo;ve exploited. It&amp;rsquo;s a very cool challenge, not too complex, and very fun. There&amp;rsquo;s a not-very-easy race condition to spot. In fact, I think that&amp;rsquo;s the most difficult part. So, let&amp;rsquo;s start.
+We have a small Flask application with about 200 lines of code, so it&amp;rsquo;s not too bad. The first page is a login page without a register page.</description>
+    </item>
+    
+  </channel>
+</rss>
