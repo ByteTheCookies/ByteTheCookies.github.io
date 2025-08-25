@@ -1,5 +1,5 @@
 +++
-title = {{File.BaseFileName}}
+title = ''
 tags = [
   "category",
   "language",
