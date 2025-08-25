@@ -37,7 +37,7 @@ More Prizes, More Categories, and Much More Fun!
 
 ## Writeups
 
-#### Category
+#### Web & Web3
 
 - [Blank Login](/writeups/wwfctf2025/blank-login/)
 - [Solidity Jail 1](/writeups/wwfctf2025/solidity-jail1/)

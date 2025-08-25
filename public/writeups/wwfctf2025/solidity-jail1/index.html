@@ -5,6 +5,9 @@
     <meta charset="utf-8">
     <link rel="shortcut icon" href='http://localhost:1313/favicon.ico' type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+
     <title>Solidity Jail 1 - ByteTheCookies</title>
 
     
@@ -27,7 +30,7 @@ In this challenge, we interacted with a remote server that executed Solidity fun
   <meta property="og:type" content="article">
     <meta property="article:section" content="writeups">
     <meta property="article:published_time" content="2025-08-25T19:13:04+02:00">
-    <meta property="article:modified_time" content="2025-08-25T19:13:04+02:00">
+    <meta property="article:modified_time" content="2025-08-25T20:22:29+02:00">
     <meta property="article:tag" content="Blockchain">
     <meta property="article:tag" content="Solidity">
     <meta property="article:tag" content="460 Points">
@@ -52,6 +55,29 @@ In this challenge, we interacted with a remote server that executed Solidity fun
     <link rel="stylesheet" href="/lib/css/prism.css" integrity="">
 
 
+
+    
+        <script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+></script>
+<script>
+  MathJax = {
+    tex: {
+      displayMath: [
+        ["\\[", "\\]"],
+        ["$$", "$$"],
+      ], 
+      inlineMath: [
+        ["\\(", "\\)"],
+        ["$", "$"],
+      ], 
+    },
+  };
+</script>
+
+    
 
     
     <script>
@@ -104,6 +130,7 @@ In this challenge, we interacted with a remote server that executed Solidity fun
 <link rel="stylesheet" href="http://localhost:1313/user.css">
 
     
+
 </head>
 <body><header>
     <div id="header_left">
@@ -282,39 +309,13 @@ In this challenge, we interacted with a remote server that executed Solidity fun
 <p>Introducing for the first time, Solidity Jail!
 Make a contract to read the flag!</p>
 
-<h2 id="introduction" class="header-anchor-wrapper">Introduction
-  <a href="#introduction" class="header-anchor-link">
-    <svg width="16px" height="16px" viewBox="0 0 24 24">
-<svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24" height="24" viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-    stroke-linejoin="round">
-    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
-</svg>
-
-</svg>
-  </a>
-</h2>
+<h2>Introduction</h2>
 
 <p>Jail challenges are always a thrill. You’re thrown into a restricted environment with a single mission: escape and claim the flag. While bash, Python, and even NodeJS jails are familiar territory, running into one in Solidity is a rare treat.</p>
 <p>In this challenge, we interacted with a remote server that executed Solidity function code we submitted. The goal? Extract a flag from another contract on the same blockchain. But there was a twist: a blacklist carefully crafted to block obvious approaches.</p>
 <p>Navigating this puzzle felt like exploring the EVM itself. Dead ends and misleading paths were everywhere. Yet the final solution emerged smoothly, clever in its simplicity, proving that even the trickiest Solidity jail can be cracked with the right insight.</p>
 
-<h2 id="analysis-of-the-challange" class="header-anchor-wrapper">Analysis of the challange
-  <a href="#analysis-of-the-challange" class="header-anchor-link">
-    <svg width="16px" height="16px" viewBox="0 0 24 24">
-<svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24" height="24" viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-    stroke-linejoin="round">
-    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
-</svg>
-
-</svg>
-  </a>
-</h2>
+<h2>Analysis of the challange</h2>
 
 <p>First off, let’s scope out the setup. We were provided with two key files:</p>
 <ul>
@@ -475,20 +476,7 @@ print(contr.functions.run(bytecode_bytes, salt_bytes).call())
 Since <code>main()</code> is executed by <code>BytecodeRunner</code>, the contract&rsquo;s address is simply <code>msg.sender</code>.<br>
 The challenge comes down to circumventing these blacklist limitations basically.</p>
 
-<h2 id="my-solve" class="header-anchor-wrapper">My Solve
-  <a href="#my-solve" class="header-anchor-link">
-    <svg width="16px" height="16px" viewBox="0 0 24 24">
-<svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24" height="24" viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-    stroke-linejoin="round">
-    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
-</svg>
-
-</svg>
-  </a>
-</h2>
+<h2>My Solve</h2>
 
 <p>Looking at other write-ups for this challenge, it’s clear that there were a variety of approaches to solving it. Some solutions focused heavily on the Python side, manipulating the server-side logic (like sub-stringing the &ldquo;flag&rdquo; keyword), while others leaned more on Solidity, crafting intricate contracts to bypass restrictions (like the definition of an interface with the same function name and type signature, then cast the contract’s address to that interface). In my case, I believe I tackled the challenge using the simplest and most straightforward method possible. In fact:</p>
 <p>I executed the function via a low-level call, specifically using the <code>.call()</code> method on an address and supplying the calldata manually. But how can you calculate a calldata?</p>
