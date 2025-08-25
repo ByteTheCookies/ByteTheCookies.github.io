@@ -2,35 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/tags/10-solves/</loc>
+    <lastmod>2025-08-25T19:13:04+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/460-points/</loc>
+    <lastmod>2025-08-25T19:13:04+02:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/blockchain/</loc>
-    <lastmod>2025-07-29T09:09:33+02:00</lastmod>
+    <lastmod>2025-08-25T19:13:04+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/crypto/</loc>
-    <lastmod>2025-07-29T09:09:33+02:00</lastmod>
+    <loc>http://localhost:1313/tags/solidity/</loc>
+    <lastmod>2025-08-25T19:13:04+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/ctf/</loc>
-    <lastmod>2025-07-29T09:09:33+02:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/forensics/</loc>
-    <lastmod>2025-07-29T09:09:33+02:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/misc/</loc>
-    <lastmod>2025-07-29T09:09:33+02:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/pwn/</loc>
-    <lastmod>2025-07-29T09:09:33+02:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/reversing/</loc>
-    <lastmod>2025-07-29T09:09:33+02:00</lastmod>
+    <loc>http://localhost:1313/writeups/wwfctf2025/solidity-jail1/</loc>
+    <lastmod>2025-08-25T19:13:04+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2025-07-29T09:09:33+02:00</lastmod>
+    <lastmod>2025-08-25T19:13:04+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/zeptoide/</loc>
+    <lastmod>2025-08-25T19:13:04+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/crypto/</loc>
+    <lastmod>2025-08-01T22:23:03+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/ctf/</loc>
+    <lastmod>2025-08-01T22:23:03+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/forensics/</loc>
+    <lastmod>2025-08-01T22:23:03+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/misc/</loc>
+    <lastmod>2025-08-01T22:23:03+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/pwn/</loc>
+    <lastmod>2025-08-01T22:23:03+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/reversing/</loc>
+    <lastmod>2025-08-01T22:23:03+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/web/</loc>
-    <lastmod>2025-07-29T09:09:33+02:00</lastmod>
+    <lastmod>2025-08-01T22:23:03+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/writeups/wwfctf2025/</loc>
-    <lastmod>2025-07-29T09:09:33+02:00</lastmod>
+    <lastmod>2025-08-01T22:23:03+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/hardware/rf/</loc>
     <lastmod>2025-07-17T19:23:33+02:00</lastmod>
@@ -57,7 +72,7 @@
     <lastmod>2025-07-08T22:40:18+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/python/</loc>
-    <lastmod>2025-07-08T22:40:18+02:00</lastmod>
+    <lastmod>2025-08-01T22:23:03+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/writeups/cornctf2025/simple-chat/</loc>
     <lastmod>2025-07-08T22:40:18+02:00</lastmod>
@@ -69,7 +84,7 @@
     <lastmod>2025-07-08T22:40:18+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/17-solves/</loc>
-    <lastmod>2025-07-08T22:40:18+02:00</lastmod>
+    <lastmod>2025-08-01T22:23:03+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/300-points/</loc>
     <lastmod>2025-07-08T22:40:18+02:00</lastmod>
@@ -109,9 +124,6 @@
   </url><url>
     <loc>http://localhost:1313/news/cookiefarmv1.0.1/</loc>
     <lastmod>2025-05-19T10:51:04+02:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/10-solves/</loc>
-    <lastmod>2025-04-08T21:14:20+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/388-points/</loc>
     <lastmod>2025-04-08T21:14:20+02:00</lastmod>
@@ -180,13 +192,13 @@
     <lastmod>2025-03-11T18:29:57+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/nosqli/</loc>
-    <lastmod>2025-03-11T18:29:57+01:00</lastmod>
+    <lastmod>2025-08-01T22:23:03+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/octaviusss/</loc>
     <lastmod>2025-03-11T18:29:57+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/race-condition/</loc>
-    <lastmod>2025-03-11T18:29:57+01:00</lastmod>
+    <lastmod>2025-08-01T22:23:03+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/writeups/srdnlen2025/speed/</loc>
     <lastmod>2025-03-11T18:29:57+01:00</lastmod>
@@ -588,8 +600,10 @@
     <lastmod>2025-07-17T19:23:33+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/499-points/</loc>
+    <lastmod>2025-08-01T22:23:03+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/writeups/wwfctf2025/blank-login/</loc>
+    <lastmod>2025-08-01T22:23:03+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
   </url><url>
@@ -602,8 +616,10 @@
     <loc>http://localhost:1313/series/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/spipm/</loc>
+    <lastmod>2025-08-01T22:23:03+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/sqlalchemy-injection/</loc>
+    <lastmod>2025-08-01T22:23:03+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/writeups/</loc>
     <lastmod>2024-08-12T21:34:10+02:00</lastmod>

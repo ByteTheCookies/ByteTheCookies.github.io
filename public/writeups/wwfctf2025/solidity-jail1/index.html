@@ -1,0 +1,526 @@
+               
+
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href='http://localhost:1313/favicon.ico' type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Solidity Jail 1 - ByteTheCookies</title>
+
+    
+
+    
+
+    
+    <meta name="author" content="ByteTheCookies" />
+    
+
+    
+        <meta property="og:url" content="http://localhost:1313/writeups/wwfctf2025/solidity-jail1/">
+  <meta property="og:site_name" content="ByteTheCookies">
+  <meta property="og:title" content="Solidity Jail 1">
+  <meta property="og:description" content="Solidity Jail 1 Description: Bash Jail? Boring. PyJail? Too Common.
+Introducing for the first time, Solidity Jail! Make a contract to read the flag!
+Introduction Jail challenges are always a thrill. You’re thrown into a restricted environment with a single mission: escape and claim the flag. While bash, Python, and even NodeJS jails are familiar territory, running into one in Solidity is a rare treat.
+In this challenge, we interacted with a remote server that executed Solidity function code we submitted.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="writeups">
+    <meta property="article:published_time" content="2025-08-25T19:13:04+02:00">
+    <meta property="article:modified_time" content="2025-08-25T19:13:04+02:00">
+    <meta property="article:tag" content="Blockchain">
+    <meta property="article:tag" content="Solidity">
+    <meta property="article:tag" content="460 Points">
+    <meta property="article:tag" content="10 Solves">
+    <meta property="article:tag" content="Zeptoide">
+
+    
+
+    
+        
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Solidity Jail 1">
+  <meta name="twitter:description" content="Solidity Jail 1 Description: Bash Jail? Boring. PyJail? Too Common.
+Introducing for the first time, Solidity Jail! Make a contract to read the flag!
+Introduction Jail challenges are always a thrill. You’re thrown into a restricted environment with a single mission: escape and claim the flag. While bash, Python, and even NodeJS jails are familiar territory, running into one in Solidity is a rare treat.
+In this challenge, we interacted with a remote server that executed Solidity function code we submitted.">
+
+    <link rel="stylesheet" href="/style.css" integrity="">
+
+
+
+    <link rel="stylesheet" href="/lib/css/prism.css" integrity="">
+
+
+
+    
+    <script>
+        if (!('theme' in localStorage)) {
+            localStorage.theme = 'dark';
+        }
+
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.setAttribute("data-theme", "dark");
+        } else {
+            document.documentElement.setAttribute("data-theme", "light");
+        }
+    </script>
+<script defer src="/js/header.js" integrity=""></script>
+
+
+
+    <script defer src="/js/zooming.js" integrity=""></script>
+
+
+
+
+
+
+
+    
+        
+
+        
+        
+
+        
+        
+            
+        
+
+        <script defer src="/js/prism.js" integrity="" data-manual></script>
+    
+
+
+
+    
+    
+    
+    <script defer src="/js/search-en.js" integrity=""></script>
+
+
+
+
+<link rel="stylesheet" href="http://localhost:1313/user.css">
+
+    
+</head>
+<body><header>
+    <div id="header_left">
+        <div id="sidebar_btn">
+            <input type="checkbox" id="sidebar_btn_input" class="hidden" />
+            <label id="sidebar_btn_label" for="sidebar_btn_input">
+                <svg id="menu_icon" width="26px" height="26px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+</svg>
+
+</svg>
+            </label>
+            <label id="sidebar_canvas_overlay_wrapper" for="sidebar_btn_input">
+                <div id="sidebar_canvas_overlay"></div>
+            </label>
+            <div id="sidebar">
+                <ul><li>
+                            <a href="/">💻 About</a></li><li>
+                            <a href="/news/">📰 News</a></li><li>
+                            <a href="/writeups/">📑 Writeups</a></li><li>
+                            <a href="/contacts/">✉️ Contacts</a></li></ul>
+            </div>
+        </div>
+    
+        <div class="brand">
+            <div>
+                <a href="/">ByteTheCookies</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="toolbox">
+        <div id="theme_tool">
+            <svg id="dark_mode_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+</svg>
+
+</svg>
+            <svg id="light_mode_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+</svg>
+
+</svg>
+        </div>
+
+        
+            <div id="search_tool">
+                <svg id="search_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+</svg>
+
+</svg><div id="search_menu_wrapper" class="hidden">
+    <div id="search_menu">
+        <div id="search_menu_toolbar">
+            <div id="search_menu_input_wrapper">
+                <input id="search_menu_input" type="text" placeholder='Search Posts'>
+            </div>
+            <div id="search_menu_close_btn">
+                <svg width="18px" height="18px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>
+</svg>
+
+</svg>
+            </div>
+        </div>
+        <div id="search_menu_results">
+        </div>
+    </div>
+</div>
+</div>
+        
+
+        
+    </div>
+</header>
+<nav id="navbar" class="pure-menu">
+    <ul class="pure-menu-list"><li class="navbar-item pure-menu-item ">
+                    
+                        <a href="/" class="pure-menu-link">💻 About</a>
+                    
+                </li><li class="navbar-item pure-menu-item ">
+                    
+                        <a href="/news/" class="pure-menu-link">📰 News</a>
+                    
+                </li><li class="navbar-item pure-menu-item insection">
+                    
+                        <a href="/writeups/" class="pure-menu-link">📑 Writeups</a>
+                    
+                </li><li class="navbar-item pure-menu-item ">
+                    
+                        <a href="/contacts/" class="pure-menu-link">✉️ Contacts</a>
+                    
+                </li></ul>
+</nav>
+<main>
+      <div id="content" class="content-margin">
+        
+    
+    <details class="collapsible-menu-wrapper"><summary class="collapsible-menu-type"><span>Table of contents</span></summary><div class="collapsible-menu">
+        
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#analysis-of-the-challange">Analysis of the challange</a></li>
+    <li><a href="#my-solve">My Solve</a></li>
+  </ul>
+</nav>
+        
+    </div></details>
+
+
+
+<div class="tags">
+  
+    <div class="badge">Blockchain</div>
+
+  
+    <div class="badge">Solidity</div>
+
+  
+    <div class="badge">460 points</div>
+
+  
+    <div class="badge">10 solves</div>
+
+  
+    <div class="badge">zeptoide</div>
+
+  
+</div>
+
+<div>
+  <p class="date">
+    Last edit: Aug 25, 2025
+  </p>
+</div>
+
+
+    <div class="content-margin">
+
+
+
+<article >
+    
+    
+        
+        
+    
+    <h1 style='text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;'>Solidity Jail 1</h1>
+<p><strong>Description</strong>: Bash Jail? Boring. PyJail? Too Common.</p>
+<p>Introducing for the first time, Solidity Jail!
+Make a contract to read the flag!</p>
+
+<h2 id="introduction" class="header-anchor-wrapper">Introduction
+  <a href="#introduction" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
+
+<p>Jail challenges are always a thrill. You’re thrown into a restricted environment with a single mission: escape and claim the flag. While bash, Python, and even NodeJS jails are familiar territory, running into one in Solidity is a rare treat.</p>
+<p>In this challenge, we interacted with a remote server that executed Solidity function code we submitted. The goal? Extract a flag from another contract on the same blockchain. But there was a twist: a blacklist carefully crafted to block obvious approaches.</p>
+<p>Navigating this puzzle felt like exploring the EVM itself. Dead ends and misleading paths were everywhere. Yet the final solution emerged smoothly, clever in its simplicity, proving that even the trickiest Solidity jail can be cracked with the right insight.</p>
+
+<h2 id="analysis-of-the-challange" class="header-anchor-wrapper">Analysis of the challange
+  <a href="#analysis-of-the-challange" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
+
+<p>First off, let’s scope out the setup. We were provided with two key files:</p>
+<ul>
+<li><strong>Jail.sol</strong>: The target contract, named in the solidity as <em>BytecodeRunner</em>, which features a public variable called <code>flag</code> and a <code>run()</code> function.</li>
+</ul>
+<pre  class="mc-prism hide language-text" ><code class="language-javascript">// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract BytecodeRunner {
+
+    string public flag = &quot;wwf{REDACTED}&quot;;
+
+    function run(bytes memory _bytecode, bytes32 _salt) public
+    returns (bool success, bytes memory result)
+    {
+        address newContract;
+        assembly {
+            newContract := create2(
+                0,
+                add(_bytecode, 0x20),
+                mload(_bytecode),
+                _salt
+            )
+            if iszero(newContract) {
+                revert(0, 0)
+            }
+        }
+
+        bytes memory callData = abi.encodeWithSelector(
+            bytes4(keccak256(&quot;main()&quot;))
+        );
+
+        (success, result) = newContract.call(callData);
+        require(success, &quot;Execution of main() failed.&quot;);
+    }
+}
+</code></pre>
+<p>As you can see, the <code>run()</code> function takes our bytecode, deploys it using create2, and then calls our main() function.</p>
+<ul>
+<li><strong>jailTalk.py</strong>: The server-side helper. It wraps whatever we submit inside a Solution contract, compiles it, and sends the resulting bytecode to the run function of <em>BytecodeRunner</em>.</li>
+</ul>
+<pre  class="mc-prism hide language-text" ><code class="language-python">
+#!/usr/local/bin/python
+import signal
+from solcx import compile_standard
+import os
+from web3 import Web3
+import string
+import requests
+from urllib.parse import urlparse
+
+contr_add = os.environ.get(&quot;CONTRACT_ADDDR&quot;)
+rpc_url = os.environ.get(&quot;RPC_URL&quot;)
+
+try:
+    parsed = urlparse(rpc_url)
+    resp = requests.get(f&quot;{parsed.scheme}://{parsed.netloc}&quot;)
+    if resp.text != &quot;ok&quot;:
+        print(&quot;Contact admins challenge not working...&quot;)
+        exit()
+except Exception as e:
+    print(&quot;Contact admins challenge not working...&quot;)
+    exit()
+
+
+print(&quot;Enter the body of main() (end with three blank lines):&quot;)
+lines = []
+empty_count = 0
+while True:
+    try:
+        line = input()
+    except EOFError:
+        break
+    if line.strip() == &quot;&quot;:
+        empty_count += 1
+    else:
+        empty_count = 0
+    if empty_count &gt;= 3:
+        lines = lines[:-2]
+        break
+    lines.append(line)
+
+body = &quot;\n&quot;.join(f&quot;        {l}&quot; for l in lines)
+
+if not all(ch in string.printable for ch in body):
+    raise ValueError(&quot;Non-printable characters detected in contract.&quot;)
+
+blacklist = [
+    &quot;flag&quot;,
+    &quot;transfer&quot;,
+    &quot;address&quot;,
+    &quot;this&quot;,
+    &quot;block&quot;,
+    &quot;tx&quot;,
+    &quot;origin&quot;,
+    &quot;gas&quot;,
+    &quot;fallback&quot;,
+    &quot;receive&quot;,
+    &quot;selfdestruct&quot;,
+    &quot;suicide&quot;
+]
+if any(banned in body for banned in blacklist):
+    raise ValueError(f&quot;Blacklisted string found in contract.&quot;)
+
+
+source = f&quot;&quot;&quot;// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract Solution {{
+    function main() external returns (string memory) {{
+{body}
+    }}
+}}
+&quot;&quot;&quot;
+
+print(&quot;Final contract with inserted main() body:&quot;)
+print(source)
+
+compiled = compile_standard(
+    {
+        &quot;language&quot;: &quot;Solidity&quot;,
+        &quot;sources&quot;: {&quot;Solution.sol&quot;: {&quot;content&quot;: source}},
+        &quot;settings&quot;: {
+            &quot;outputSelection&quot;: {
+                &quot;*&quot;: {
+                    &quot;*&quot;: [&quot;evm.bytecode.object&quot;]
+                }
+            }
+        },
+    },
+    solc_version=&quot;0.8.20&quot;,
+)
+
+
+bytecode_hex = &quot;0x&quot; + compiled[&quot;contracts&quot;][&quot;Solution.sol&quot;][&quot;Solution&quot;][&quot;evm&quot;][&quot;bytecode&quot;][&quot;object&quot;]
+salt_hex = &quot;0x&quot; + os.urandom(32).hex()
+
+web3 = Web3(Web3.HTTPProvider(rpc_url))
+
+contr_abi = [{&quot;inputs&quot;:[],&quot;name&quot;:&quot;flag&quot;,&quot;outputs&quot;:[{&quot;internalType&quot;:&quot;string&quot;,&quot;name&quot;:&quot;&quot;,&quot;type&quot;:&quot;string&quot;}],&quot;stateMutability&quot;:&quot;view&quot;,&quot;type&quot;:&quot;function&quot;},{&quot;inputs&quot;:[{&quot;internalType&quot;:&quot;bytes&quot;,&quot;name&quot;:&quot;_bytecode&quot;,&quot;type&quot;:&quot;bytes&quot;},{&quot;internalType&quot;:&quot;bytes32&quot;,&quot;name&quot;:&quot;_salt&quot;,&quot;type&quot;:&quot;bytes32&quot;}],&quot;name&quot;:&quot;run&quot;,&quot;outputs&quot;:[{&quot;internalType&quot;:&quot;bool&quot;,&quot;name&quot;:&quot;success&quot;,&quot;type&quot;:&quot;bool&quot;},{&quot;internalType&quot;:&quot;bytes&quot;,&quot;name&quot;:&quot;result&quot;,&quot;type&quot;:&quot;bytes&quot;}],&quot;stateMutability&quot;:&quot;nonpayable&quot;,&quot;type&quot;:&quot;function&quot;}]
+contr = web3.eth.contract(address=contr_add, abi=contr_abi)
+
+bytecode_bytes = Web3.to_bytes(hexstr=bytecode_hex)
+salt_bytes = Web3.to_bytes(hexstr=salt_hex)
+print(contr.functions.run(bytecode_bytes, salt_bytes).call())
+
+</code></pre>
+<p>Here, the most crucial part is obv the blacklist.</p>
+<hr>
+<p>This blacklist effectively blocks the most straightforward exploits:</p>
+<ul>
+<li><strong>flag</strong>: Directly calling <code>target.flag()</code> is prohibited.</li>
+<li><strong>address</strong>: We cannot declare an <code>address</code> variable to hold the target contract&rsquo;s location.</li>
+<li><strong>gas</strong>: Access to the <code>gas()</code> opcode is restricted, which is often needed for low-level calls.</li>
+<li><strong>this</strong>: Retrieving our own contract&rsquo;s address is also disallowed.</li>
+</ul>
+<p>The goal is clear: invoke the <code>flag()</code> function on the <code>BytecodeRunner</code> contract.<br>
+Since <code>main()</code> is executed by <code>BytecodeRunner</code>, the contract&rsquo;s address is simply <code>msg.sender</code>.<br>
+The challenge comes down to circumventing these blacklist limitations basically.</p>
+
+<h2 id="my-solve" class="header-anchor-wrapper">My Solve
+  <a href="#my-solve" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
+
+<p>Looking at other write-ups for this challenge, it’s clear that there were a variety of approaches to solving it. Some solutions focused heavily on the Python side, manipulating the server-side logic (like sub-stringing the &ldquo;flag&rdquo; keyword), while others leaned more on Solidity, crafting intricate contracts to bypass restrictions (like the definition of an interface with the same function name and type signature, then cast the contract’s address to that interface). In my case, I believe I tackled the challenge using the simplest and most straightforward method possible. In fact:</p>
+<p>I executed the function via a low-level call, specifically using the <code>.call()</code> method on an address and supplying the calldata manually. But how can you calculate a calldata?</p>
+<p>There are multiple techniques to construct the calldata in Solidity for a function invocation. Common methods include:</p>
+<ul>
+<li><code>abi.encodeWithSignature(&quot;functionName(types...)&quot;)</code></li>
+<li><code>abi.encodeCall(ContractName.functionName, (args...))</code></li>
+<li><code>abi.encodeWithSelector(bytes4Selector, (args...))</code></li>
+</ul>
+<p>The first two methods rely on providing the function name as a string, which is explicitly blacklisted, so we can&rsquo;t use them. Therefore, using the last one: <code>abi.encodeWithSelector</code>, it allows us to bypass this restriction using a <em>function selector</em>.</p>
+<p>A <em>function selector</em> is derived as the first 4 bytes of the Keccak-256 hash of its canonical signature -&gt; $ \text{bytes4}(\text{keccak256}("functionName(inputTypes)")) $. In our case flag() has no input types, so it will be empty.</p>
+<p>The selector for <code>flag()</code> is <code>0x890eba68</code>. I used Foundry’s <code>cast sig</code> command to compute this easily.</p>
+<p>We also need to bypass the restriction on using the <code>address</code> keyword. Because the <code>main()</code> function is executed by the target contract itself, its address is inherently available via <code>msg.sender</code>. This removes the necessity of defining a separate <code>address</code> variable. By combining the appropriate function selector with <code>msg.sender</code> as the destination, a conventional low-level <code>.call()</code> invocation suffices to execute the target function, thereby resolving the challenge.</p>
+<p><strong>The Payload:</strong></p>
+<pre  class="mc-prism hide language-text" ><code>(bool ok, bytes memory res) = msg.sender.staticcall(
+    abi.encodeWithSelector(0x890eba68)
+);
+require(ok, &quot;failed&quot;);
+return string(res);
+</code></pre>
+<pre  class="mc-prism hide language-text" ><code class="language-stdout">$ flag:  wwf{y0u_4r3_7h3_7ru3_m4573r_0f_s0l1d17y}
+</code></pre>
+<p align='right'>Author: galexela <p>
+
+</article>
+</div>
+   
+      </div>
+    </main>
+<footer>
+    <article>Copyright © 2024 by ByteTheCookies Team | v1.0</article>
+</footer>
+
+</body>
+</html>
