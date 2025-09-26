@@ -36,15 +36,6 @@ link_etherscan = "https://holesky.etherscan.io/tx/0x26f9f3fdb43acb0797873c6df567
 
 [[members]]
 image = "icons/cookie.svg"
-name = "Marco Santoriello"
-github = "https://github.com/marcosantoriello"
-handle = "@marcus"
-role = "University of Salerno"
-categories = ["OG"]
-link_etherscan = "https://holesky.etherscan.io/tx/0x5d840ec9fc642aeba6e8cadecbadb3951e115593324c25535d0d16e8efb54caf"
-
-[[members]]
-image = "icons/cookie.svg"
 name = "Daniele Migliore"
 github = "https://github.com/danmig06"
 handle = "@the_dann"
@@ -63,31 +54,12 @@ link_etherscan = "https://holesky.etherscan.io/tx/0xe65416c77415bad27e218c32d8d5
 
 [[members]]
 image = "icons/cookie.svg"
-name = "Walter D'Ambrosio"
-github = "https://github.com/wXlter"
-handle = "@wXlter"
-role = "University of Salerno"
-categories = ["OG"]
-link_etherscan = "https://holesky.etherscan.io/tx/0x458335190a60576f9ba8a98c1d7b004371fa73f97e86a55b2ca62800d1f2a533"
-
-[[members]]
-image = "icons/cookie.svg"
-name = "Salvatore Russo"
-github = "https://github.com/sasa71"
-handle = "@sasy"
-role = "University of Salerno"
-categories = ["OG"]
-link_etherscan = "https://holesky.etherscan.io/tx/0x5d7495405229da6ce2943f049c51b2b3dbbbd83bf084d61847c5fed39db72b3e"
-
-[[members]]
-image = "icons/cookie.svg"
 name = "Salvatore Ruocco"
 github = "https://github.com/tatore02"
 handle = "@tatore"
 role = "University of Salerno"
 categories = ["Web", "Pwn","OG"]
 link_etherscan = "https://holesky.etherscan.io/tx/0x2319ee9736b266fb20a4476e322467b9d95ffbf33d4fee503bf6218807a7486a"
-
 
 [[members]]
 image = "icons/cookie.svg"
@@ -137,9 +109,38 @@ link_etherscan = "https://holesky.etherscan.io/tx/0x6e285a4a04271402955de47371d7
 
 [[members]]
 image = "icons/cookie.svg"
+name = "Walter D'Ambrosio"
+github = "https://github.com/wXlter"
+handle = "@wXlter"
+role = "University of Salerno"
+categories = ["OG"]
+link_etherscan = "https://holesky.etherscan.io/tx/0x458335190a60576f9ba8a98c1d7b004371fa73f97e86a55b2ca62800d1f2a533"
+
+[[members]]
+image = "icons/cookie.svg"
+name = "Salvatore Russo"
+github = "https://github.com/sasa71"
+handle = "@sasy"
+role = "University of Salerno"
+categories = ["OG"]
+link_etherscan = "https://holesky.etherscan.io/tx/0x5d7495405229da6ce2943f049c51b2b3dbbbd83bf084d61847c5fed39db72b3e"
+
+
+[[members]]
+image = "icons/cookie.svg"
 name = "Daniele Liguori"
 github = "https://github.com/danlig"
 handle = "@danlig"
 role = "University of Salerno"
 categories = ["OG"]
 link_etherscan = "https://holesky.etherscan.io/tx/0x64e265b0a5442cfc58c0c678fee6fe189dd82389e6ee9b8bf20c3a6e18f67520"
+
+
+[[members]]
+image = "icons/cookie.svg"
+name = "Marco Santoriello"
+github = "https://github.com/marcosantoriello"
+handle = "@marcus"
+role = "University of Salerno"
+categories = ["OG"]
+link_etherscan = "https://holesky.etherscan.io/tx/0x5d840ec9fc642aeba6e8cadecbadb3951e115593324c25535d0d16e8efb54caf"
