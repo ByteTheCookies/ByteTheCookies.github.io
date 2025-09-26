@@ -1,9 +1,9 @@
 // USER
 @font-face {
-  font-family: "JetBrainsMonoNerd";
-  src: url("/fonts/JetBrainsMonoNLNerdFont-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
+    font-family: "JetBrainsMonoNerd";
+    src: url("/fonts/JetBrainsMonoNLNerdFont-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
 }
 
 h1,
@@ -12,153 +12,158 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "JetBrainsMonoNerd", sans-serif;
+    font-family: "JetBrainsMonoNerd", sans-serif;
 }
 
 .badge {
-  background-color: #9e8c6c;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 12px;
-  font-size: 0.8em;
-  font-weight: 200;
-  font-family: "JetBrainsMonoNerd", sans-serif;
-  display: inline-block;
-  margin-right: 5px;
-  margin-top: 5px;
+    background-color: #9e8c6c;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 0.8em;
+    font-weight: 200;
+    font-family: "JetBrainsMonoNerd", sans-serif;
+    display: inline-block;
+    margin-right: 5px;
+    margin-top: 5px;
 }
 
 .date {
-  padding-top: 6px;
-  font-family: "JetBrainsMonoNerd", sans-serif;
-  font-size: 0.8em;
+    padding-top: 6px;
+    font-family: "JetBrainsMonoNerd", sans-serif;
+    font-size: 0.8em;
 }
 
 .icon_contacts {
-  list-style: none;
-  margin: 0 10px;
+    list-style: none;
+    margin: 0 10px;
 }
 
 // * MEMBERS
 
 .members-list {
-  display: flex;
-  flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .card-members {
-  display: flex;
-  width: calc(45% - 12px);
-  margin: 16px auto;
-  max-height: 24hv;
-  max-width: 56vh;
-  border-radius: 12px;
-  background-color: #9e8c6c00;
-  border: #292929 dashed 4px;
+    display: flex;
+    width: calc(45% - 12px);
+    margin: 16px auto;
+    max-height: 24hv;
+    max-width: 56vh;
+    border-radius: 12px;
+    background-color: #9e8c6c00;
+    border: #292929 dashed 4px;
 }
 
 @media (max-width: 1350px) {
-  .card-members {
-    width: 100%;
-    margin: 15px auto;
-  }
-  .members-list {
-    flex-direction: column;
-    align-items: center;
-  }
+    .card-members {
+        width: 100%;
+        margin: 15px auto;
+    }
+
+    .members-list {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .content-container {
-  display: flex;
-  margin: 0, auto;
-  min-width: 60%;
+    display: flex;
+    margin: 0, auto;
+    min-width: 60%;
 }
 
 .div-img-members {
-  padding: 10px;
-  margin: 0px;
+    padding: 10px;
+    margin: 0px;
 }
 
 .name-members {
-  margin: 14px 0 0 0;
-  display: inline-block;
+    margin: 14px 0 0 0;
+    display: inline-block;
 }
 
 .tag-members {
-  display: inline-block;
-  margin: 0px;
-  padding: 0px;
-  font-weight: bold;
-  text-decoration: underline;
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 .div-text {
-  width: 100%;
-  margin-right: auto;
+    width: 100%;
+    margin-right: auto;
 }
 
 .div-img-members {
-  display: inline-block;
-  width: 20%;
-  height: auto;
+    display: inline-block;
+    width: 20%;
+    height: auto;
 }
 
 .tag-members:hover {
-  color: #39e6ec;
-  cursor: pointer;
+    color: #39e6ec;
+    cursor: pointer;
 }
 
 .tag-school {
-  display: inline-block;
-  margin: 0px;
-  padding: 4px;
-  padding-left: 0;
-  opacity: 0.7;
+    display: inline-block;
+    margin: 0px;
+    padding: 4px;
+    padding-left: 0;
+    opacity: 0.7;
 }
 
 .categories-container {
-  width: 60%;
-  margin-left: auto;
-  padding: 8px;
+    width: 60%;
+    margin-left: auto;
+    padding: 8px;
 }
 
 .categories-members {
-  padding: 2px 8px;
-  font-size: 12px;
-  display: inline-block;
-  margin: 3px auto;
-  border-radius: 6px;
-  color: white;
+    padding: 2px 8px;
+    font-size: 12px;
+    display: inline-block;
+    margin: 3px auto;
+    border-radius: 6px;
+    color: white;
 }
 
 .categories-color-web {
-  background-color: #8bbada;
+    background-color: #8bbada;
 }
 
 .categories-color-pwn {
-  background-color: #e74c3c;
+    background-color: #e74c3c;
 }
 
 .categories-color-crypto {
-  background-color: #219b54;
+    background-color: #219b54;
 }
 
 .categories-color-rev {
-  background-color: #19703d;
+    background-color: #19703d;
 }
 
 .categories-color-misc {
-  background-color: #d6d318;
+    background-color: #d6d318;
 }
 
 .categories-color-forensic {
-  background-color: #f39c12;
+    background-color: #f39c12;
 }
 
 .categories-color-osint {
-  background-color: #8e44ad;
+    background-color: #8e44ad;
 }
 
 .categories-color-block {
-  background-color: #8f22ce;
+    background-color: #8f22ce;
+}
+
+.categories-color-og {
+    background-color: #C39953;
 }

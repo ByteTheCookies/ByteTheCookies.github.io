@@ -1,5 +1,5 @@
 navbar_title = 'ByteTheCookies'
-footer = "Copyright © 2024 by ByteTheCookies Team | v1.0"
+footer = "Copyright © 2025 by ByteTheCookies Team | v1.0.5"
 author = "ByteTheCookies"
 color_scheme = "dark"
 
@@ -32,5 +32,3 @@ enable_code_copy = true
 [syntax_highlight.prism]
 enable_code_copy = true
 enable_line_no = false
-
-
