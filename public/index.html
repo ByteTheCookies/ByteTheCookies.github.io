@@ -1222,8 +1222,10 @@
             try {
               let decodedImageUri = JSON.parse(atob(base64String)).image;
               const img = new Image();
-              decodedImageUri = decodedImageUri.replace("svg+xml","png")
-  
+              if (name !== "Alessandro Cavaliere"){
+                decodedImageUri = decodedImageUri.replace("svg+xml","png")
+              }
+              console.log(decodedImageUri,name)
               img.onload = () => {
                 imageElement.src = decodedImageUri;
                 spinner.style.display = "none";
