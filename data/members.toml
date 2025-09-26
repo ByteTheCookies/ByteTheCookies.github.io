@@ -49,7 +49,7 @@ name = "Jose Sgariglia"
 github = "https://github.com/jose-sgariglia"
 handle = "@josekonpyuta"
 role = "University of Salerno"
-categories = ["Crypto","OG"]
+categories = ["Crypto","Misc","OG"]
 link_etherscan = "https://holesky.etherscan.io/tx/0xe65416c77415bad27e218c32d8d521e50a81b3167b7d7f49f8a1f72dee6a45db"
 
 [[members]]
