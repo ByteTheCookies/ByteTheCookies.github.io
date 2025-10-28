@@ -22,17 +22,17 @@ home = ["HTML", "RSS", "JSON"]
 
 
 [params.categoryEmojis]
-Web = "🌐"
-Netw = "📡"
-Pwn = "💻"
-Crypto = "🔐"
-Forensic = "🕵️"
-Osint = "🔍"
-Misc = "🔧"
-Rev = "🔨"
-Block = "🔗"
-Hardware = "⚙"
-OG = "🍪"
+Web = "https://img.shields.io/badge/%F0%9F%8C%90%20-web-%238bbada?style=flat"
+Netw = "https://img.shields.io/badge/%F0%9F%93%A1%20-netw-blue?style=flat"
+Pwn = "https://img.shields.io/badge/%F0%9F%92%BB%20-pwn-%23e74c3c?style=flat"
+Crypto = "https://img.shields.io/badge/%F0%9F%94%90%20-crypto-%23219b54?style=flat"
+Forensic = "https://img.shields.io/badge/%F0%9F%95%B5%EF%B8%8F%20-forensic-%23f39c12?style=flat"
+Osint = "https://img.shields.io/badge/%F0%9F%94%8D%20-osint-%238e44ad?style=flat"
+Misc = "https://img.shields.io/badge/%F0%9F%94%A7%20-misc-%23d6d318?style=flat"
+Rev = "https://img.shields.io/badge/%F0%9F%94%A8%20-rev-%2319703d?style=flat"
+Block = "https://img.shields.io/badge/%F0%9F%94%97%20-block-%238f22ce?style=flat"
+Hardware = "https://img.shields.io/badge/%E2%9A%99%20-hardware-orange?style=flat"
+OG = "https://img.shields.io/badge/%F0%9F%8D%AA-og-%23C39953?style=flat&logoSize=2"
 
 [markup]
 [markup.goldmark]

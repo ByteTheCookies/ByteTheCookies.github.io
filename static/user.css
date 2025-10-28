@@ -117,12 +117,6 @@ h6 {
     opacity: 0.7;
 }
 
-.categories-container {
-    width: 60%;
-    margin-left: auto;
-    padding: 8px;
-}
-
 .categories-members {
     padding: 2px 8px;
     font-size: 12px;
@@ -130,40 +124,4 @@ h6 {
     margin: 3px auto;
     border-radius: 6px;
     color: white;
-}
-
-.categories-color-web {
-    background-color: #8bbada;
-}
-
-.categories-color-pwn {
-    background-color: #e74c3c;
-}
-
-.categories-color-crypto {
-    background-color: #219b54;
-}
-
-.categories-color-rev {
-    background-color: #19703d;
-}
-
-.categories-color-misc {
-    background-color: #d6d318;
-}
-
-.categories-color-forensic {
-    background-color: #f39c12;
-}
-
-.categories-color-osint {
-    background-color: #8e44ad;
-}
-
-.categories-color-block {
-    background-color: #8f22ce;
-}
-
-.categories-color-og {
-    background-color: #C39953;
 }
