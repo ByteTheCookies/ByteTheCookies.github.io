@@ -106,6 +106,14 @@ role = "HighSchool student"
 categories = ["Pwn"]
 link_etherscan = "https://holesky.etherscan.io/tx/0x6e285a4a04271402955de47371d782fe5e19161c183dcfd478d87887cdc456c7"
 
+[[members]]
+image = "icons/cookie.svg"
+name = "Dennis"
+github = "https://github.com/demr64"
+handle = "@demr"
+role = "University of Salerno"
+categories = ["Crypto"]
+link_etherscan = "https://holesky.etherscan.io/tx/0x6e285a4a04271402955de47371d782fe5e19161c183dcfd478d87887cdc456c7"
 
 [[members]]
 image = "icons/cookie.svg"
