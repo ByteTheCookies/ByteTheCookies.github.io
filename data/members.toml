@@ -108,7 +108,7 @@ link_etherscan = "https://holesky.etherscan.io/tx/0x6e285a4a04271402955de47371d7
 
 [[members]]
 image = "icons/cookie.svg"
-name = "Dennis"
+name = "Dennis Amiranda"
 github = "https://github.com/demr64"
 handle = "@demr"
 role = "University of Salerno"
