@@ -311,37 +311,11 @@ Source Let’s look at two parts of the FUNDAMENTAL code
     <h1 style='text-decoration: underline;text-decoration-color: #9e8c6c;font-size: 3em;'>Simple-Chat</h1>
 <p><strong>Description</strong>: Simple web application to chat with your friends! Sometimes it does funny things and it&rsquo;s ok like that</p>
 
-<h2 id="introduction" class="header-anchor-wrapper">Introduction
-  <a href="#introduction" class="header-anchor-link">
-    <svg width="16px" height="16px" viewBox="0 0 24 24">
-<svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24" height="24" viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-    stroke-linejoin="round">
-    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
-</svg>
-
-</svg>
-  </a>
-</h2>
+<h2>Introduction</h2>
 
 <p>Okay, this is a really nice challenge. This is a pretty second CTF web challenge. It&rsquo;s a simple XSS with a twist.</p>
 
-<h2 id="source" class="header-anchor-wrapper">Source
-  <a href="#source" class="header-anchor-link">
-    <svg width="16px" height="16px" viewBox="0 0 24 24">
-<svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24" height="24" viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-    stroke-linejoin="round">
-    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
-</svg>
-
-</svg>
-  </a>
-</h2>
+<h2>Source</h2>
 
 <p>Let&rsquo;s look at two parts of the <strong>FUNDAMENTAL</strong> code</p>
 <pre  class="mc-prism hide language-text" ><code class="language-javascript">// filename: app.js
@@ -392,20 +366,7 @@ async insertChat(sender, receiver, message) {
 </code></pre>
 <p>Upon analyzing the DB calls, we see that a direct query insert is made. Therefore, we can exploit an SQLi to bypass the replace check. There are also SQLi&rsquo;s in every db query, so we can do whatever we want, like logging in as an admin, but that wasn&rsquo;t really necessary.</p>
 
-<h2 id="solution" class="header-anchor-wrapper">Solution
-  <a href="#solution" class="header-anchor-link">
-    <svg width="16px" height="16px" viewBox="0 0 24 24">
-<svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24" height="24" viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-    stroke-linejoin="round">
-    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
-</svg>
-
-</svg>
-  </a>
-</h2>
+<h2>Solution</h2>
 
 <pre  class="mc-prism hide language-text" ><code class="language-python"># filename: exploit.py
 
