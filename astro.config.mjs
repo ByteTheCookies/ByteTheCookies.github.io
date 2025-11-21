@@ -32,7 +32,7 @@ export default defineConfig({
   base: "/",
   trailingSlash: "always",
   server: {
-    allowedHosts: true, // Change to bytethecookies.org
+    allowedHosts: ["bytethecookies.org"], // Change to bytethecookies.org
   },
   integrations: [tailwind({
     nesting: true,
