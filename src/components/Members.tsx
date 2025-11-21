@@ -1,5 +1,5 @@
 import { contractAddress, memberCategories, members } from "@utils/team-utils";
-import { JsonRpcProvider, Contract } from "ethers";
+import { Contract, JsonRpcProvider } from "ethers";
 import { useEffect, useState } from "react";
 
 type ContractFunctionFragment = {
@@ -44,7 +44,7 @@ async function loadABI(): Promise<ContractFunctionFragment[]> {
 function parseUriToImage(uris: string[] | null, name: string) {
 	if (uris && uris.length > 0) {
 		const lastUri = uris[uris.length - 1];
-		let base64String = lastUri.split(",")[1];
+		const base64String = lastUri.split(",")[1];
 
 		try {
 			let decodedImageUri = JSON.parse(atob(base64String)).image as string;
@@ -62,9 +62,9 @@ function parseUriToImage(uris: string[] | null, name: string) {
 
 ("use client");
 
+import { getAuthorUrl } from "@utils/url-utils";
 import { ExternalLink, Github } from "lucide-react";
 import { Badge } from "./ui/babdge";
-import { getAuthorUrl } from "@utils/url-utils";
 
 export type Member = {
 	name: string;
@@ -141,13 +141,15 @@ export function MemberCard({ member, imageUrl }: MemberCardProps) {
 				<div>
 					<p className="mb-2 text-sm font-medium text-white">Categories</p>
 					<div className="flex flex-wrap gap-2">
-						{member.categories.map((category, index) => {
+						{member.categories.map((category) => {
 							const bg = memberCategories[category] || "var(--btn-regular-bg)";
 							return (
 								<Badge
-									key={index}
+									key={category}
 									variant="secondary"
-									className={`text-[color:var(--btn-content)] transition-colors hover:bg-[color:var(--btn-regular-bg-hover)]`}
+									className={
+										"text-[color:var(--btn-content)] transition-colors hover:bg-[color:var(--btn-regular-bg-hover)]"
+									}
 									style={{ backgroundColor: bg }}
 								>
 									{category}
