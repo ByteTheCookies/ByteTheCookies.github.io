@@ -3,14 +3,14 @@ title: CornCTF2025 | ECRSA
 published: 2025-11-21
 description: RSA or Elliptic Curves? Why not both?
 image: ''
-tags: ["crypto","misc"]
+tags: ["crypto"]
 authors: ["vympel"]
 solves: 4
 points: 496
 firstblood: true
 category: CornCTF2025
 draft: false
-lang: en
+
 ---
 
 ## Introduction
