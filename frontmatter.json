@@ -47,6 +47,11 @@
           "type": "list"
         },
         {
+          "title": "authors",
+          "name": "authors",
+          "type": "list"
+        },
+        {
           "title": "category",
           "name": "category",
           "type": "string"
