@@ -11,6 +11,10 @@ const postsCollection = defineCollection({
 		tags: z.array(z.string()).optional().default([]),
 		category: z.string().optional().nullable().default(""),
 		lang: z.string().optional().default(""),
+		authors: z.array(z.string()).optional().default([]),
+		solves: z.number().optional().default(-1),
+		points: z.number().optional().default(-1),
+		firstblood: z.boolean().optional().default(false),
 
 		/* For internal use */
 		prevTitle: z.string().default(""),

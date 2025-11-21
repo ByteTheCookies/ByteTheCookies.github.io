@@ -5,17 +5,23 @@ export const en: Translation = {
 	[Key.home]: "Home",
 	[Key.about]: "About",
 	[Key.archive]: "Archive",
+	[Key.team]: "Team",
 	[Key.search]: "Search",
 
 	[Key.tags]: "Tags",
 	[Key.categories]: "Categories",
 	[Key.recentPosts]: "Recent Posts",
 
+	[Key.solves]: "Solves",
+	[Key.points]: "Points",
+	[Key.firstblood]: "First Blood",
+
 	[Key.comments]: "Comments",
 
 	[Key.untitled]: "Untitled",
 	[Key.uncategorized]: "Uncategorized",
 	[Key.noTags]: "No Tags",
+	[Key.noAuthors]: "Anonymous",
 
 	[Key.wordCount]: "word",
 	[Key.wordsCount]: "words",
