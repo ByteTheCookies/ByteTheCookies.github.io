@@ -1,0 +1,16 @@
+---
+import MembersGrid from "@components/Members.tsx";
+import I18nKey from "@i18n/i18nKey";
+import { i18n } from "@i18n/translation";
+import MainGridLayout from "@layouts/MainGridLayout.astro";
+---
+
+<MainGridLayout title={i18n(I18nKey.team)} description={i18n(I18nKey.team)}>
+    <div
+        class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative min-h-32"
+    >
+        <div class="card-base z-10 px-9 py-6 relative w-full">
+            <MembersGrid client:only="react" />
+        </div>
+    </div>
+</MainGridLayout>

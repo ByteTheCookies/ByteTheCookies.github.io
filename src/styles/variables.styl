@@ -1,0 +1,98 @@
+/* utils */
+white(a)
+  rgba(255, 255, 255, a)
+
+black(a)
+  rgba(0, 0, 0, a)
+
+rainbow-light = linear-gradient(to right, #ffe5e5, #fff4e5, #fbffe5, #e5ffe5, #d4ffe5, #e5fffb, #e5ecff, #f5e5ff, #ffe5f7, #ffe5ee, #ffe5e5, #ffe5e5, #ffe5e5)
+rainbow-dark = linear-gradient(to right, #f0b6b6, #f0d7b6, #e9f0b6, #c2f0b6, #b6f0cf, #b6ecf0, #b6c4f0, #d9b6f0, #f0b6dd, #f0b6c3, #f0b6b6, #f0b6b6, #f0b6b6)
+
+:root
+  --radius-large 1rem
+  --content-delay 150ms
+
+/* An util to define variables that vary with light and dark mode */
+define(vars)
+  :root
+    for key, value in vars
+      {key}: value[0]
+  :root.dark
+    for key, value in vars
+      if length(value) > 1
+        {key}: value[1]
+
+define({
+  --primary: #d88537 #f0b472
+  --page-bg: #f4f7ea #1a1a1a
+  --card-bg: white #2e2e2e
+
+  --btn-content: #c86e2a #ffc380
+
+  --btn-regular-bg: #f8f3ee #74502e
+  --btn-regular-bg-hover: #f3e8dc #81572f
+  --btn-regular-bg-active: #ecddcd #8d6134
+
+  --btn-plain-bg-hover: #f8f3ee #60401f
+  --btn-plain-bg-active: #fbf6f1 #563619
+
+  --btn-card-bg-hover: #fcf6f1 #704621
+  --btn-card-bg-active: #f3e5d3 #7c4f26
+
+  --enter-btn-bg: var(--btn-regular-bg)
+  --enter-btn-bg-hover: var(--btn-regular-bg-hover)
+  --enter-btn-bg-active: var(--btn-regular-bg-active)
+
+  --deep-text: #4a3323
+
+  --title-active: #e08a32
+
+  --line-divider: rgba(0, 0, 0, 0.05) rgba(255, 255, 255, 0.12)
+
+  --line-color: rgba(0, 0, 0, 0.07) rgba(255, 255, 255, 0.15)
+  --meta-divider: rgba(0, 0, 0, 0.14) rgba(255, 255, 255, 0.25)
+
+  --inline-code-bg: var(--btn-regular-bg)
+  --inline-code-color: var(--btn-content)
+  --selection-bg: #f6e9dc #93582a
+  --codeblock-selection: #93582a
+  --codeblock-bg: #28261f #28261f
+  --codeblock-topbar-bg: #4a3a28 #221d1a
+
+  --license-block-bg: rgba(0, 0, 0, 0.02) var(--codeblock-bg)
+
+  --link-underline: #f6efe7 #93582a
+  --link-hover: #faf3eb #93582a
+  --link-active: #f2e3d6 #804320
+
+  --float-panel-bg: white #2c2419
+
+  --scrollbar-bg-light: rgba(0, 0, 0, 0.3)
+  --scrollbar-bg-hover-light: rgba(0, 0, 0, 0.4)
+  --scrollbar-bg-active-light: rgba(0, 0, 0, 0.5)
+
+  --scrollbar-bg-dark: rgba(255, 255, 255, 0.3)
+  --scrollbar-bg-hover-dark: rgba(255, 255, 255, 0.4)
+  --scrollbar-bg-active-dark: rgba(255, 255, 255, 0.5)
+
+  --scrollbar-bg: var(--scrollbar-bg-light) var(--scrollbar-bg-dark)
+  --scrollbar-bg-hover: var(--scrollbar-bg-hover-light) var(--scrollbar-bg-hover-dark)
+  --scrollbar-bg-active: var(--scrollbar-bg-active-light) var(--scrollbar-bg-active-dark)
+
+  --color-selection-bar: rainbow-light rainbow-dark
+
+  --display-light-icon: 1 0
+  --display-dark-icon: 0 1
+
+  --admonitions-color-tip: oklch(0.7 0.14 180) oklch(0.75 0.14 180)
+  --admonitions-color-note: oklch(0.7 0.14 250) oklch(0.75 0.14 250)
+  --admonitions-color-important: oklch(0.7 0.14 310) oklch(0.75 0.14 310)
+  --admonitions-color-warning: oklch(0.7 0.14 60) oklch(0.75 0.14 60)
+  --admonitions-color-caution: oklch(0.6 0.2 25) oklch(0.65 0.2 25)
+
+  --toc-badge-bg: #f6f8ea var(--btn-regular-bg)
+  --toc-btn-hover: #f4ebdf #48301a
+  --toc-btn-active: #ecdecd #50351d
+  --toc-width: calc((100vw - var(--page-width)) / 2 - 1rem)
+  --toc-item-active: #e08a32 #c06a26
+})
