@@ -3,7 +3,7 @@ import { i18n } from "@i18n/translation";
 import { LinkPreset, type NavBarLink } from "@/types/config";
 
 export const LinkPresets: { [key in LinkPreset]: NavBarLink } = {
- 	[LinkPreset.About]: {
+	[LinkPreset.About]: {
 		name: i18n(I18nKey.about),
 		url: "/",
 	},
