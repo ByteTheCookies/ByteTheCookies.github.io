@@ -3,7 +3,7 @@ title: Backdoorctf 2025 | Gamble
 published: 2025-12-18
 description: My friends and I planned a trip to Gokarna and heard about a famous casino with a machine that almost never lets anyone win, only the truly lucky. I’ve replicated it. Let’s see if you are one of them!
 image: ''
-tags: ["rev"]
+tags: ["pwn"]
 authors: ["ebreo"]
 solves: 44
 points: 100
@@ -28,7 +28,7 @@ The program initializes srand with seed **time(0)**. We can login, place a bet, 
 Analyzing the program, there are two vulnerabilities:
 1. A logic error in the loop of **bet()** allows to overflow **buf** to reach **local_98** and achieve a format string vulnerability with the printf
 
-![bet](/images/bet.png)
+![bet](/images/gamble/bet.png)
 2. In **gamble()** after losing, instead of setting the user money to 0, money is treated as a pointer and 8 bytes at the pointed location are set to 0. This achieves a **write 0 where** vulnerability.
 ![gamble](/images/gamble/gamble.png)
 The user money is a variable whose size happens to be 8 bytes, and we can set it during the login.
