@@ -63,23 +63,23 @@ function parseUriToImage(uris: string[] | null, name: string) {
 function getFallBackImage(name: string) {
   const fallBackImages: Record<string, string> = {
     "Alessandro Cavaliere":
-      "https://cdn.discordapp.com/avatars/592812629316337677/80fecad0e18d30d9749f41ca593f99fc.png?size=512",
-    "Francesco Memoli": "https://avatars.githubusercontent.com/u/95577457?v=4",
-    "Davide Amoruso": "https://cdn.discordapp.com/avatars/304632737631961088/25941d64e09c4b5c168a79ce82487be1.png?size=512",
-    "Vito Altieri": "https://avatars.githubusercontent.com/u/48801897?v=4",
-    "Daniele Migliore": "https://cdn.discordapp.com/avatars/616626917214388246/d3122bc29630f2df41333c295f232035.png?size=512",
-    "Jose Sgariglia": "https://avatars.githubusercontent.com/u/81258035?&v=4",
-    "Salvatore Ruocco": "https://avatars.githubusercontent.com/u/114869138?v=4",
+      "/pfp/galaxea.png",
+    "Francesco Memoli": "/pfp/akiidjk.png",
+    "Davide Amoruso": "/pfp/dabi.png",
+    "Vito Altieri": "/pfp/vympel.png",
+    "Daniele Migliore": "/pfp/danmig.png",
+    "Jose Sgariglia": "/pfp/suga.png",
+    "Salvatore Ruocco": "/pfp/tatore.png",
     "Antonio Facchiano": "/pfp/simplesso.png",
     "Giulio Incoronato": "/pfp/shackwove.jpg",
     "Giorgio": "/pfp/ebreo.jpg",
-    "Alessandro Manfredi": "https://avatars.githubusercontent.com/u/105046992?v=4",
-    "Luigi Landi": "https://avatars.githubusercontent.com/u/151780431?&v=4",
+    "Alessandro Manfredi": "/pfp/manfredi.png",
+    "Luigi Landi": "/pfp/gigi.png",
     "Dennis Amiranda": "/pfp/demr.png",
     "Walter D'Ambrosio": "",
     "Salvatore Russo": "",
-    "Daniele Liguori": "https://avatars.githubusercontent.com/u/69346419?&v=4",
-    "Marco Santoriello": "https://cdn.discordapp.com/avatars/347789528154505217/715d45e98bbcf4f42cbee823a25e7921.png?size=512",
+    "Daniele Liguori": "/pfp/danlig.png",
+    "Marco Santoriello": "/pfp/marco.png",
   };
   return fallBackImages[name] || "/logo.png";
 }
@@ -113,7 +113,7 @@ export function MemberCard({ member, imageUrl }: MemberCardProps) {
         <div className="flex items-start gap-2">
           {/* Avatar */}
           <a
-            href={member.link_etherscan}
+            href={member.github}
             target="_blank"
             rel="noopener noreferrer"
             className="relative flex-shrink-0 overflow-hidden rounded-xl ring-2 ring-[color:var(--line-color)] transition-all duration-300 hover:ring-4 hover:ring-[color:var(--primary-custom)]"
@@ -133,7 +133,7 @@ export function MemberCard({ member, imageUrl }: MemberCardProps) {
           {/* Name and Handle */}
           <div className="flex-1 min-w-0">
             <a
-              href={getAuthorUrl(member.handle)}
+              href={getAuthorUrl(member.github)}
               target="_blank"
               rel="noopener noreferrer"
             >
