@@ -99,7 +99,7 @@ async function main() {
     categoryDefault = ''
   }
 
-  const title = await ask(`Title (default: ${args[0]}): `) || args[0]
+  const title = await ask(`Title (default: ${args[0]} il nome deve essere del formato <ctf_name>-<challenge_name>): `) || args[0]
   const description = await ask("Description: ") || "''"
   const image = await ask("Image: ") || "''"
   const tagsInput = await ask("Tags (comma separated eg: web,crypto,rev): ") || ""
