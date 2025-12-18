@@ -4,7 +4,7 @@ published: 2025-08-25
 description: Bash Jail? Boring. PyJail? Too Common. Introducing for the first time, Solidity Jail! Make a contract to read the flag!
 image: ''
 tags: ["blockchain"]
-authors: ["akiidjk"]
+authors: ["galaxea"]
 solves: 10
 points: 460
 firstblood: false

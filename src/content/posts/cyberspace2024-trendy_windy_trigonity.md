@@ -4,7 +4,7 @@ published: 2024-09-02
 description: have you seen Tan challenge before? see maple version pi documentation!
 image: ''
 tags: ["crypto"]
-authors: ["akiidjk"]
+authors: ["vympel"]
 solves: 44
 points: 417
 firstblood: false

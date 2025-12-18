@@ -4,7 +4,7 @@ published: 2024-12-21
 description: I am trying to authenticate but I totally forgot the password, I am screwed!!
 image: ''
 tags: ["crypto"]
-authors: ["akiidjk"]
+authors: ["vympel"]
 solves: 9
 points: 286
 firstblood: false

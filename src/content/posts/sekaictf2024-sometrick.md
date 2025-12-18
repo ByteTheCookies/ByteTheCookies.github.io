@@ -4,7 +4,7 @@ published: 2024-08-26
 description: Bob and Alice found a futuristic version of opunssl and replaced all their needs for doofy wellmen.
 image: ''
 tags: ["crypto"]
-authors: ["akiidjk"]
+authors: ["vympel"]
 solves: 127
 points: 100
 firstblood: false

@@ -4,7 +4,7 @@ published: 2025-03-12
 description: Looks like our cryptographers had one too many glasses of mirto! Can you sober up their sloppy AES scheme, or will the confusion keep you spinning?
 image: ''
 tags: ["crypto"]
-authors: ["akiidjk"]
+authors: ["vympel"]
 solves: -1
 points: -1
 firstblood: false

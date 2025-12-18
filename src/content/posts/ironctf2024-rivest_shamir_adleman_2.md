@@ -4,7 +4,7 @@ published: 2024-10-06
 description: Little John has done his homework and tried fixing the issue in his script. Can you still find his secret.
 image: ''
 tags: ["crypto"]
-authors: ["akiidjk"]
+authors: ["vympel"]
 solves: 39
 points: 491
 firstblood: false

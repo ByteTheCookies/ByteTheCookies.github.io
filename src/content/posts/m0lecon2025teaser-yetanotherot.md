@@ -4,7 +4,7 @@ published: 2024-09-15
 description: Why do people always want to decrypt both messages?
 image: ''
 tags: ["crypto"]
-authors: ["akiidjk"]
+authors: ["vympel"]
 solves: 29
 points: 127
 firstblood: false

@@ -4,7 +4,7 @@ published: 2024-08-26
 description: Time limit is 2 seconds for this challenge.
 image: ''
 tags: ["ppc"]
-authors: ["akiidjk"]
+authors: ["tatore"]
 solves: 176
 points: 100
 firstblood: false
