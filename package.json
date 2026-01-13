@@ -50,7 +50,7 @@
     "lucide-react": "^0.554.0",
     "markdown-it": "^14.1.0",
     "mdast-util-to-string": "^4.0.0",
-    "overlayscrollbars": "^2.12.0",
+    "overlayscrollbars": "^2.13.0",
     "pagefind": "^1.4.0",
     "photoswipe": "^5.4.4",
     "prettier-plugin-astro": "^0.14.1",
