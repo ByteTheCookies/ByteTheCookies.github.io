@@ -13,25 +13,9 @@ draft: false
 
 ---
 
-# Confusion
-I've encrypted my secret message with RSA.
-
-Easy stuff, right?
-
-Well, I'm not giving you the key outright...
-
-I've hidden it in a haystack!
-
-Sure, a key is not a needle, and this haystack is not that big.
-
-It shouldn't take more than 10' to find it, if you have an half-decent metal detector.
-
-Good luck!
-
-
 ## Introduction
 
-Confusion was a crypto CTF from [K!nd4SUS CTF 2025](https://ctftime.org/event/2703).
+Haystack was a crypto CTF from [K!nd4SUS CTF 2025](https://ctftime.org/event/2703).
 
 ```python
 from Crypto.Util import number

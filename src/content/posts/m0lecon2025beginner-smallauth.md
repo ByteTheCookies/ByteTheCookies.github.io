@@ -17,7 +17,7 @@ draft: false
 
 ## Introduction
 
-SmallAuth was a crypto CTF from [## m0leCon 2025 Beginner CTF](https://ctftime.org/event/2578/) organized by [pwnthem0le](https://ctftime.org/team/60467).
+SmallAuth was a crypto CTF from [m0leCon 2025 Beginner CTF](https://ctftime.org/event/2578/) organized by [pwnthem0le](https://ctftime.org/team/60467).
 
 ```python
 from secret import flag, password
