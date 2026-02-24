@@ -79,7 +79,7 @@ function getFallBackImage(name: string) {
     "Salvatore Russo": "",
     "Daniele Liguori": "/pfp/danlig.png",
     "Marco Santoriello": "/pfp/marco.png",
-    "Giovanni Iannaccone": "/pfp/giovanni.jpeg",
+    "Giovanni Iannaccone": "/pfp/giovanni.jpg",
   };
   return fallBackImages[name] || "/logo.png";
 }
