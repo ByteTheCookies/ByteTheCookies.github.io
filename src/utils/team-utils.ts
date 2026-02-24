@@ -183,7 +183,7 @@ export const members: Member[] = [
 	},
 	{
 		name: "Giovanni Iannaccone",
-		github: "https://github.com/giovanni-iannacone",
+		github: "https://github.com/giovanni-iannaccone",
 		handle: "giovanni",
 		university: "University of Salerno",
 		categories: ["Web", "Pwn"],
