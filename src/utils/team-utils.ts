@@ -180,6 +180,16 @@ export const members: Member[] = [
 		address: "0x9a4267d4B1e221f9Cc4c4596367592E5E85F288b",
 		link_etherscan:
 			"https://holesky.etherscan.io/tx/0x5d840ec9fc642aeba6e8cadecbadb3951e115593324c25535d0d16e8efb54caf",
+  },
+  {
+		name: "Giovanni Iannaccone",
+		github: "https://github.com/giovanni-iannacone",
+		handle: "giovanni",
+		university: "University of Salerno",
+		categories: ["Web","Pwn"],
+		address: "",
+		link_etherscan:
+			"",
 	},
 ];
 
