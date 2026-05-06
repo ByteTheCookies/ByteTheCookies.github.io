@@ -3,22 +3,29 @@ import I18nKey from "@i18n/i18nKey";
 import { i18n } from "@i18n/translation";
 import { getCategoryUrl } from "@utils/url-utils.ts";
 
-// // Retrieve posts and sort them by publication date
-async function getRawSortedPosts() {
-	const allBlogPosts = await getCollection("posts", ({ data }) => {
+type TimelineCollection = "posts" | "news";
+type TimelineEntry<T extends TimelineCollection> = CollectionEntry<T>;
+
+async function getRawSortedEntries<T extends TimelineCollection>(
+	collection: T,
+): Promise<TimelineEntry<T>[]> {
+	const allEntries = await getCollection(collection, ({ data }) => {
+		if (collection === "news") return data.draft !== true;
 		return import.meta.env.PROD ? data.draft !== true : true;
 	});
 
-	const sorted = allBlogPosts.sort((a, b) => {
+	const sorted = allEntries.sort((a, b) => {
 		const dateA = new Date(a.data.published);
 		const dateB = new Date(b.data.published);
 		return dateA > dateB ? -1 : 1;
 	});
-	return sorted;
+	return sorted as TimelineEntry<T>[];
 }
 
-export async function getSortedPosts() {
-	const sorted = await getRawSortedPosts();
+async function getSortedEntries<T extends TimelineCollection>(
+	collection: T,
+): Promise<TimelineEntry<T>[]> {
+	const sorted = await getRawSortedEntries(collection);
 
 	for (let i = 1; i < sorted.length; i++) {
 		sorted[i].data.nextSlug = sorted[i - 1].id;
@@ -31,12 +38,21 @@ export async function getSortedPosts() {
 
 	return sorted;
 }
+
+export async function getSortedPosts() {
+	return getSortedEntries("posts");
+}
+
+export async function getSortedNews() {
+	return getSortedEntries("news");
+}
+
 export type PostForList = {
 	slug: string;
 	data: CollectionEntry<"posts">["data"];
 };
 export async function getSortedPostsList(): Promise<PostForList[]> {
-	const sortedFullPosts = await getRawSortedPosts();
+	const sortedFullPosts = await getRawSortedEntries("posts");
 
 	// delete post.body
 	const sortedPostsList = sortedFullPosts.map((post) => ({

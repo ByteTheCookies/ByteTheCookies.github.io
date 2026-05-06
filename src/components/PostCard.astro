@@ -10,7 +10,7 @@ import PostMetadata from "./PostMeta.astro";
 import { render } from "astro:content";
 interface Props {
     class?: string;
-    entry: CollectionEntry<"posts">;
+    entry: CollectionEntry<"posts"> | CollectionEntry<"news">;
     title: string;
     url: string;
     published: Date;
@@ -153,7 +153,7 @@ const { remarkPluginFrontmatter } = await render(entry);
                 </div>
                 <ImageWrapper
                     src={image}
-                    basePath={path.join("content/posts/", getDir(entry.id))}
+                    basePath={path.join("content", entry.collection, getDir(entry.id))}
                     alt="Cover Image of the Post"
                     class="w-full h-full"
                 />

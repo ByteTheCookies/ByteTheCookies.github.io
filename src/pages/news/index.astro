@@ -1,0 +1,58 @@
+---
+import Pagination from "../../components/control/Pagination.astro";
+import PostPage from "../../components/PostPage.astro";
+import { PAGE_SIZE } from "../../constants/constants";
+import MainGridLayout from "../../layouts/MainGridLayout.astro";
+import { getSortedNews } from "../../utils/content-utils";
+import { getNewsUrlBySlug, url } from "../../utils/url-utils";
+
+const allNews = await getSortedNews();
+const firstPageData = allNews.slice(0, PAGE_SIZE);
+const lastPage = Math.max(1, Math.ceil(allNews.length / PAGE_SIZE));
+const page = {
+	data: firstPageData,
+	start: 0,
+	end: firstPageData.length,
+	total: allNews.length,
+	size: PAGE_SIZE,
+	currentPage: 1,
+	lastPage,
+	url: {
+		current: url("/news/"),
+		prev: undefined,
+		next: lastPage > 1 ? url("/news/page/2/") : undefined,
+		first: undefined,
+		last: lastPage > 1 ? url(`/news/page/${lastPage}/`) : undefined,
+	},
+};
+
+const len = page.data.length;
+---
+
+<MainGridLayout title="News" description="News">
+    {
+        page.data.length > 0 ? (
+            <PostPage page={page} getEntryUrl={getNewsUrlBySlug} />
+        ) : (
+            <div class="card-base rounded-[var(--radius-large)] px-9 py-6 mb-4 onload-animation">
+                <div class="transition w-full block font-bold mb-3 text-3xl text-90">
+                    No news yet
+                </div>
+                <div class="transition text-75">
+                    News updates will appear here.
+                </div>
+            </div>
+        )
+    }
+    {
+        lastPage > 1 && (
+            <Pagination
+                class="mx-auto onload-animation"
+                page={page}
+                firstPagePath="/news/"
+                pagePath="/news/page/"
+                style={`animation-delay: calc(var(--content-delay) + ${len * 50}ms)`}
+            />
+        )
+    }
+</MainGridLayout>
