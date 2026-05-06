@@ -17,6 +17,8 @@ We pushed the project into a new stage: cleaner architecture, stronger backend s
 A completely new dashboard is now in place.
 Centralized control, better visibility, and a real interface for managing the system instead of relying only on CLI flows.
 
+![Dashboard Screenshot](https://github.com/ByteTheCookies/CookieFarm/raw/main/assets/dashboard/dashboard.png)
+
 ### Exploit Management System
 
 One of the biggest additions in this release.
@@ -66,6 +68,10 @@ v1.3.0 is not just a feature drop.
 It’s a foundation shift.
 
 We moved from a set of tools to a structured platform with proper workflows, collaboration, and scalability.
+
+## New DOCSSS
+
+We also launched a new documentation site with detailed guides, API references, and tutorials to help teams get the most out of [CookieFarm](https://cookiefarm.bytethecookies.org).
 
 ## Full changelog
 
