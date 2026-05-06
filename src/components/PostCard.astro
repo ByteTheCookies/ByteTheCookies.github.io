@@ -7,33 +7,33 @@ import { i18n } from "../i18n/translation";
 import { getDir } from "../utils/url-utils";
 import ImageWrapper from "./misc/ImageWrapper.astro";
 import PostMetadata from "./PostMeta.astro";
-
+import { render } from "astro:content";
 interface Props {
-	class?: string;
-	entry: CollectionEntry<"posts">;
-	title: string;
-	url: string;
-	published: Date;
-	updated?: Date;
-	tags: string[];
-	authors: string[];
-	category: string | null;
-	image: string;
-	description: string;
-	draft: boolean;
-	style: string;
+    class?: string;
+    entry: CollectionEntry<"posts">;
+    title: string;
+    url: string;
+    published: Date;
+    updated?: Date;
+    tags: string[];
+    authors: string[];
+    category: string | null;
+    image: string;
+    description: string;
+    draft: boolean;
+    style: string;
 }
 const {
-	entry,
-	title,
-	url,
-	published,
-	updated,
-	tags,
-	category,
-	image,
-	description,
-	style,
+    entry,
+    title,
+    url,
+    published,
+    updated,
+    tags,
+    category,
+    image,
+    description,
+    style,
 } = Astro.props;
 const className = Astro.props.class;
 
@@ -41,7 +41,7 @@ const hasCover = image !== undefined && image !== null && image !== "";
 
 const coverWidth = "28%";
 
-const { remarkPluginFrontmatter } = await entry.render();
+const { remarkPluginFrontmatter } = await render(entry);
 ---
 
 <div

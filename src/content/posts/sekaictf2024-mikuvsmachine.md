@@ -121,7 +121,7 @@ for _ in range(T):
 
 ### Output
 
-```stdout
+```txt
 4
 2 1 2 1
 3 1 1 2

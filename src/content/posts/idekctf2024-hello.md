@@ -56,7 +56,7 @@ phpinfo();
 
 ```
 
-```conf
+```txt
 # filename: ngix.conf
 
 
@@ -132,7 +132,7 @@ By sending this in the URL, we can make the payload work without any problems. D
 
 No, because analysing the nginx configuration we notice an important detail
 
-```ngix
+```txt
 location = /info.php {
         allow 127.0.0.1;
         deny all;
@@ -141,9 +141,9 @@ location = /info.php {
 
 As we can see, /info.php is only accessible from localhost, and spoiler, our bot is not on the same server as the challenge.
 
-This may seem like a big obstacle, but in reality, if we search the web for ngix workarounds, we can find something very [interesting](https://book.hacktricks.xyz/pentesting-web/proxy-waf-protections-bypass#php-fpm).
+This may seem like a big obstacle, but in reality, if we search the web for nginx workarounds, we can find something very [interesting](https://book.hacktricks.xyz/pentesting-web/proxy-waf-protections-bypass#php-fpm).
 
-As we can see on Hacktricks, if we insert an accessible page immediately after a non-accessible page in the ngix URL, it will redirect us correctly to the non-accessible page, which is exactly what we need.
+As we can see on Hacktricks, if we insert an accessible page immediately after a non-accessible page in the nginx URL, it will redirect us correctly to the non-accessible page, which is exactly what we need.
 
 So the final solution becomes:
 

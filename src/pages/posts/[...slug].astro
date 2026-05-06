@@ -13,37 +13,38 @@ import ImageWrapper from "../../components/misc/ImageWrapper.astro";
 import PostMetadata from "../../components/PostMeta.astro";
 import { profileConfig, siteConfig } from "../../config";
 import { formatDateToYYYYMMDD } from "../../utils/date-utils";
+import { getEntry, render } from "astro:content";
 
 export async function getStaticPaths() {
-	const blogEntries = await getSortedPosts();
-	return blogEntries.map((entry) => ({
-		params: { slug: entry.slug },
-		props: { entry },
-	}));
+    const blogEntries = await getSortedPosts();
+    return blogEntries.map((entry) => ({
+        params: { slug: entry.id },
+        props: { entry },
+    }));
 }
 
 const { entry } = Astro.props;
-const { Content, headings } = await entry.render();
+const { Content, headings } = await render(entry);
 
-const { remarkPluginFrontmatter } = await entry.render();
+const { remarkPluginFrontmatter } = await render(entry);
 
 const jsonLd = {
-	"@context": "https://schema.org",
-	"@type": "BlogPosting",
-	headline: entry.data.title,
-	description: entry.data.description || entry.data.title,
-	keywords: entry.data.tags,
-	author: {
-		"@type": "Person",
-		name: profileConfig.name,
-		url: Astro.site,
-	},
-	authors: entry.data.authors,
-	datePublished: formatDateToYYYYMMDD(entry.data.published),
-	inLanguage: entry.data.lang
-		? entry.data.lang.replace("_", "-")
-		: siteConfig.lang.replace("_", "-"),
-	// TODO include cover image here
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: entry.data.title,
+    description: entry.data.description || entry.data.title,
+    keywords: entry.data.tags,
+    author: {
+        "@type": "Person",
+        name: profileConfig.name,
+        url: Astro.site,
+    },
+    authors: entry.data.authors,
+    datePublished: formatDateToYYYYMMDD(entry.data.published),
+    inLanguage: entry.data.lang
+        ? entry.data.lang.replace("_", "-")
+        : siteConfig.lang.replace("_", "-"),
+    // TODO include cover image here
 };
 ---
 
@@ -175,7 +176,7 @@ const jsonLd = {
                 licenseConfig.enable && (
                     <License
                         title={entry.data.title}
-                        slug={entry.slug}
+                        slug={entry.id}
                         authors={entry.data.authors}
                         pubDate={entry.data.published}
                         class="mb-6 rounded-xl license-container onload-animation"
