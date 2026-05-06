@@ -1,4 +1,5 @@
 ---
+import { getEntry, render } from "astro:content";
 import path from "node:path";
 import License from "@components/misc/License.astro";
 import Markdown from "@components/misc/Markdown.astro";
@@ -13,14 +14,13 @@ import ImageWrapper from "../../components/misc/ImageWrapper.astro";
 import PostMetadata from "../../components/PostMeta.astro";
 import { profileConfig, siteConfig } from "../../config";
 import { formatDateToYYYYMMDD } from "../../utils/date-utils";
-import { getEntry, render } from "astro:content";
 
 export async function getStaticPaths() {
-    const blogEntries = await getSortedPosts();
-    return blogEntries.map((entry) => ({
-        params: { slug: entry.id },
-        props: { entry },
-    }));
+	const blogEntries = await getSortedPosts();
+	return blogEntries.map((entry) => ({
+		params: { slug: entry.id },
+		props: { entry },
+	}));
 }
 
 const { entry } = Astro.props;
@@ -29,22 +29,22 @@ const { Content, headings } = await render(entry);
 const { remarkPluginFrontmatter } = await render(entry);
 
 const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    headline: entry.data.title,
-    description: entry.data.description || entry.data.title,
-    keywords: entry.data.tags,
-    author: {
-        "@type": "Person",
-        name: profileConfig.name,
-        url: Astro.site,
-    },
-    authors: entry.data.authors,
-    datePublished: formatDateToYYYYMMDD(entry.data.published),
-    inLanguage: entry.data.lang
-        ? entry.data.lang.replace("_", "-")
-        : siteConfig.lang.replace("_", "-"),
-    // TODO include cover image here
+	"@context": "https://schema.org",
+	"@type": "BlogPosting",
+	headline: entry.data.title,
+	description: entry.data.description || entry.data.title,
+	keywords: entry.data.tags,
+	author: {
+		"@type": "Person",
+		name: profileConfig.name,
+		url: Astro.site,
+	},
+	authors: entry.data.authors,
+	datePublished: formatDateToYYYYMMDD(entry.data.published),
+	inLanguage: entry.data.lang
+		? entry.data.lang.replace("_", "-")
+		: siteConfig.lang.replace("_", "-"),
+	// TODO include cover image here
 };
 ---
 

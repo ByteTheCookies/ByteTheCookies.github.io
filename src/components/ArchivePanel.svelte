@@ -1,93 +1,88 @@
 <script lang="ts">
-    import { onMount } from "svelte";
+import type { PostForList } from "@utils/content-utils";
+import { onMount } from "svelte";
+import I18nKey from "../i18n/i18nKey";
+import { i18n } from "../i18n/translation";
+import { getPostUrlBySlug } from "../utils/url-utils";
 
-    import I18nKey from "../i18n/i18nKey";
-    import { i18n } from "../i18n/translation";
-    import { getPostUrlBySlug } from "../utils/url-utils";
-    import type { PostForList } from "@utils/content-utils";
+export let tags: string[];
+export let categories: string[];
+export let authors: string[];
+export let sortedPosts: PostForList[] = [];
 
-    export let tags: string[];
-    export let categories: string[];
-    export let authors: string[];
-    export let sortedPosts: PostForList[] = [];
+const params = new URLSearchParams(window.location.search);
+tags = params.has("tag") ? params.getAll("tag") : [];
+categories = params.has("category") ? params.getAll("category") : [];
+authors = params.get("author") ? params.getAll("author") : [];
+const uncategorized = params.get("uncategorized");
 
-    const params = new URLSearchParams(window.location.search);
-    tags = params.has("tag") ? params.getAll("tag") : [];
-    categories = params.has("category") ? params.getAll("category") : [];
-    authors = params.get("author") ? params.getAll("author") : [];
-    const uncategorized = params.get("uncategorized");
+interface Group {
+	year: number;
+	posts: PostForList[];
+}
 
-    interface Group {
-        year: number;
-        posts: PostForList[];
-    }
+let groups: Group[] = [];
 
-    let groups: Group[] = [];
+function formatDate(date: Date) {
+	const month = (date.getMonth() + 1).toString().padStart(2, "0");
+	const day = date.getDate().toString().padStart(2, "0");
+	return `${month}-${day}`;
+}
 
-    function formatDate(date: Date) {
-        const month = (date.getMonth() + 1).toString().padStart(2, "0");
-        const day = date.getDate().toString().padStart(2, "0");
-        return `${month}-${day}`;
-    }
+function formatTag(tagList: string[]) {
+	return tagList.map((t) => `#${t}`).join(" ");
+}
 
-    function formatTag(tagList: string[]) {
-        return tagList.map((t) => `#${t}`).join(" ");
-    }
+onMount(async () => {
+	let filteredPosts: PostForList[] = sortedPosts;
 
-    onMount(async () => {
-        let filteredPosts: PostForList[] = sortedPosts;
+	if (tags.length > 0) {
+		filteredPosts = filteredPosts.filter(
+			(post) =>
+				Array.isArray(post.data.tags) &&
+				post.data.tags.some((tag) => tags.includes(tag)),
+		);
+	}
 
-        if (tags.length > 0) {
-            filteredPosts = filteredPosts.filter(
-                (post) =>
-                    Array.isArray(post.data.tags) &&
-                    post.data.tags.some((tag) => tags.includes(tag)),
-            );
-        }
+	if (categories.length > 0) {
+		filteredPosts = filteredPosts.filter(
+			(post) => post.data.category && categories.includes(post.data.category),
+		);
+	}
 
-        if (categories.length > 0) {
-            filteredPosts = filteredPosts.filter(
-                (post) =>
-                    post.data.category &&
-                    categories.includes(post.data.category),
-            );
-        }
+	if (authors.length > 0) {
+		filteredPosts = filteredPosts.filter(
+			(post) =>
+				Array.isArray(post.data.authors) &&
+				post.data.authors.some((author) => authors.includes(author)),
+		);
+	}
 
-        if (authors.length > 0) {
-            filteredPosts = filteredPosts.filter(
-                (post) =>
-                    Array.isArray(post.data.authors) &&
-                    post.data.authors.some((author) =>
-                        authors.includes(author),
-                    ),
-            );
-        }
+	if (uncategorized) {
+		filteredPosts = filteredPosts.filter((post) => !post.data.category);
+	}
 
-        if (uncategorized) {
-            filteredPosts = filteredPosts.filter((post) => !post.data.category);
-        }
+	const grouped = filteredPosts.reduce(
+		(acc, post) => {
+			const year = post.data.published.getFullYear();
+			if (!acc[year]) {
+				acc[year] = [];
+			}
+			acc[year].push(post);
+			return acc;
+		},
+		{} as Record<number, PostForList[]>,
+	);
 
-        const grouped = filteredPosts.reduce(
-            (acc, post) => {
-                const year = post.data.published.getFullYear();
-                if (!acc[year]) {
-                    acc[year] = [];
-                }
-                acc[year].push(post);
-                return acc;
-            },
-            {} as Record<number, PostForList[]>,
-        );
+	const groupedPostsArray = Object.keys(grouped).map((yearStr) => ({
+		year: Number.parseInt(yearStr, 10),
+		posts: grouped[Number.parseInt(yearStr, 10)],
+	}));
 
-        const groupedPostsArray = Object.keys(grouped).map((yearStr) => ({
-            year: Number.parseInt(yearStr, 10),
-            posts: grouped[Number.parseInt(yearStr, 10)],
-        }));
+	groupedPostsArray.sort((a, b) => b.year - a.year);
 
-        groupedPostsArray.sort((a, b) => b.year - a.year);
-
-        groups = groupedPostsArray;
-    });
+	groups = groupedPostsArray;
+});
 </script>
 
 <div class="card-base px-8 py-6">

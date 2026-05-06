@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from "astro:content";
+import { render } from "astro:content";
 import path from "node:path";
 import { Icon } from "astro-icon/components";
 import I18nKey from "../i18n/i18nKey";
@@ -7,33 +8,33 @@ import { i18n } from "../i18n/translation";
 import { getDir } from "../utils/url-utils";
 import ImageWrapper from "./misc/ImageWrapper.astro";
 import PostMetadata from "./PostMeta.astro";
-import { render } from "astro:content";
+
 interface Props {
-    class?: string;
-    entry: CollectionEntry<"posts"> | CollectionEntry<"news">;
-    title: string;
-    url: string;
-    published: Date;
-    updated?: Date;
-    tags: string[];
-    authors: string[];
-    category: string | null;
-    image: string;
-    description: string;
-    draft: boolean;
-    style: string;
+	class?: string;
+	entry: CollectionEntry<"posts"> | CollectionEntry<"news">;
+	title: string;
+	url: string;
+	published: Date;
+	updated?: Date;
+	tags: string[];
+	authors: string[];
+	category: string | null;
+	image: string;
+	description: string;
+	draft: boolean;
+	style: string;
 }
 const {
-    entry,
-    title,
-    url,
-    published,
-    updated,
-    tags,
-    category,
-    image,
-    description,
-    style,
+	entry,
+	title,
+	url,
+	published,
+	updated,
+	tags,
+	category,
+	image,
+	description,
+	style,
 } = Astro.props;
 const className = Astro.props.class;
 
