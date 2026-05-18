@@ -1,14 +1,12 @@
 ---
 title: NDIAS NDIAS Automotive/IoT CTF | Seed-Key Leak
 published: 2026-05-18
-description: A dealer tool has been leaked: dealer_unlock.pyc
-image: Sessions are terminated after 5 minutes, and reconnected automatically.
+description: A dealer tool has been leaked dealer_unlock.pyc SecurityAccess guards the ECU's secrets. Break in and read the flag.
+image: ''
 tags: ["can"]
 authors: ["ShackWove"]
 solves: 96
-
 points: 100
-
 category: NDIASAutomotive/IoTCTF
 firstblood: false
 draft: false
