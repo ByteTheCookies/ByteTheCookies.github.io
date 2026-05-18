@@ -133,7 +133,7 @@ export function MemberCard({ member, imageUrl }: MemberCardProps) {
 					{/* Name and Handle */}
 					<div className="flex-1 min-w-0">
 						<a
-							href={getAuthorUrl(member.github)}
+							href={getAuthorUrl(member.handle)}
 							target="_blank"
 							rel="noopener noreferrer"
 						>
