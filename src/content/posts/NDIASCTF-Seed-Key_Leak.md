@@ -114,7 +114,7 @@ But we receive:
 ```bash
 7f 11 11
 ```
-At least we got a response. But what are these hex values? I try to search it and I found this docs https://ramn.readthedocs.io/en/latest/userguide/diag_tutorial.html where is written:
+At least we got a response. But what are these hex values? I try to search it and I found these docs [RAMN](https://ramn.readthedocs.io/en/latest/userguide/diag_tutorial.html) where is written:
 ```
 - 0x11 - “Service not supported”.
 - 0x7F - “Service not supported in active session”: same as above, but for services instead of sub-functions.
@@ -123,7 +123,7 @@ On the same page, you can see that these codes refer to the UDS protocol, which 
 
 Another useful information is that an ECU uses 0x7E0 to receive command and 0x7E8 to send response, this is the reason why we set with the flag `-s` the hex value 7e0 and with the flag `-d` 7e8.
 
-Perhaps our hexadecimal value doesn't correspond to an available service. We need to figure out which service we can use, and a UDS scanner might be just what we need. The same banner tell us about `caringcaribou` a tool for car security that integrates an UDS scanner. OOne way to search for services is to use this command: `caringcaribou uds services 0x7E0 0x7E8`.
+Perhaps our hexadecimal value doesn't correspond to an available service. We need to figure out which service we can use, and a UDS scanner might be just what we need. The same banner tell us about `caringcaribou` a tool for car security that integrates an UDS scanner. One way to search for services is to use this command: `caringcaribou uds services 0x7E0 0x7E8`.
 It found **0x22 (READ DATA BY IDENTIFIER)**
 
 We can now craft a payload with first byte 22, but what should we send next? Maybe we could ask about the Serial Hardware of ECUwith F1 8C?
@@ -152,10 +152,10 @@ From now we define our idea to solve this challenge:
 3. Send the key to the service
 
 We can't see the source code of the binary file, so we have to decompile it. There are many decompilers for Python bytecode, but not all of them are useful. I found a decompiler online that might make our job easier:
-https://pylingual.io/
+[Pylingual](https://pylingual.io/)
 
 
-The python code decompiled is the following:
+The decompiled python code is the following:
 ```python
 # Decompiled with PyLingual (https://pylingual.io)
 # Internal filename: '/tmp/dealer_unlock.py'
@@ -239,13 +239,13 @@ root@c37f42bb4c89:/# 67 01 46 2D 8C 6E
 ```
 
 Just to clarify: we couldn’t send the `27 01` payload directly because the ECU is in a Default (`10 01`) or Programming (`10 02`) session, which are types of Diagnostic Session Controls, and might reject our authentication request. We need to switch it to an Extended Diagnostic Session (`10 03`) before we send `27 01` :
-```
+```bash
 root@c37f42bb4c89:/# isotprecv -s 7e0 -d 7e8 vcan0 &
 root@c37f42bb4c89:/# echo "10 03" | isotpsend -s 7e0 -d 7e8 vcan0
 root@c37f42bb4c89:/# 50 03 00 32 01 F4 
 ```
 
-Using the key in our python script:
+Using the seed in our python script:
 
 ```bash
 [shackwove@pwned automotive]$ python3 exploit.py 462D8C6E
@@ -274,6 +274,6 @@ root@c37f42bb4c89:/# 62 13 37 66 6C 61 67 7B 73 33 33 64 6B 33 79 5F 72 33 76 33
 
 `66 6C 61 67 7B 73 33 33 64 6B 33 79 5F 72 33 76 33 72 73 33 64 7D ` is our flag!
 
-Flag: spoiler[flag{s33dk3y_r3v3rs3d}]
+Flag: :spoiler[flag{s33dk3y_r3v3rs3d}]
 
 
